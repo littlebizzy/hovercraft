@@ -1,4 +1,4 @@
-# Throwaway Theme
+# Starter Theme
 
 Description here
 
