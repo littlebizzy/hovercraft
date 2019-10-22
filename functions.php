@@ -3,7 +3,7 @@
 // WooCommerce support
 add_theme_support('woocommerce');
 
-// disable Customizer
+// disable Customizer (menu)
 // ref: https://stackoverflow.com/a/50912719/1718491
 add_action( 'admin_menu', function () {
 global $submenu;
@@ -17,6 +17,14 @@ if ( isset( $submenu[ 'themes.php' ] ) ) {
     }
 }
 });
+
+// disable Customize link (admin bar)
+// ref: https://wordpress.stackexchange.com/a/200304/152624
+add_action( 'wp_before_admin_bar_render', 'wpse200296_before_admin_bar_render' ); 
+function wpse200296_before_admin_bar_render() {
+    global $wp_admin_bar;
+    $wp_admin_bar->remove_menu('customize');
+}
 
 // featured image
 function post_image_large() {
