@@ -21,3 +21,19 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, hr, bl
 	font: inherit;
 	vertical-align: baseline;
 }
+
+
+/* scrollup */
+
+#scrollup {
+	position: fixed;
+	bottom: 20px;
+	right: 30px;
+	cursor: pointer;
+}
+
+#scrollup i {
+	color: #E0E0E0;
+	font-size: 24px;
+	opacity: 0.8;
+}
