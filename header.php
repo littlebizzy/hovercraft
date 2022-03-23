@@ -33,3 +33,14 @@
 	</head>
 	<body>
 	
+		<div id="welcome">
+		<div class="inner">
+        	<span class="mobile"><strong>This will be visible for mobile users &raquo;</strong></span>
+        	<span class="desktop">
+				<span class="welcome-left"><strong>This will float left for desktop users &raquo;</strong></span>
+				<span class="welcome-right">This will float right for desktop users</span>
+			</span>
+		<div class="clear"></div>
+		</div><!-- inner -->
+    	</div><!-- welcome -->
+		
