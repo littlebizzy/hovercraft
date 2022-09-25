@@ -5,4 +5,5 @@ An extremely lightweight, simple, and SEO-friendly starter theme for WordPress o
 ## Changelog
 
 ### 1.0.0
+- added support for Git Updater
 - initial release
