@@ -1,6 +1,6 @@
 # HoverCraft
 
-An extremely lightweight, simple, and SEO-friendly starter theme for WordPress or WooCommerce than can easily be customized, extended, or used as-is.
+A lightweight and SEO-friendly theme for WordPress with no database queries, that can be easily customized using PHP snippets for ultimate stability.
 
 ## Changelog
 
