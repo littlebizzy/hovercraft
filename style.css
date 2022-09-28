@@ -6,7 +6,7 @@ Release Asset: true
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 Description: A lightweight and SEO-friendly theme for WordPress with no database queries, that can be easily customized using PHP snippets for ultimate stability.
-Version: 0.0.1
+Version: 0.0.3
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
@@ -21,6 +21,12 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, hr, bl
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+}
+
+/* general */
+
+html, body {
+	background:#ECEFF1;
 }
 
 
