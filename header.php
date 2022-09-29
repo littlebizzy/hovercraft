@@ -35,14 +35,37 @@
 	</head>
 	<body>
 	
-		<div id="welcome">
-		<div class="inner">
-        	<span class="mobile"><strong>This will be visible for mobile users &raquo;</strong></span>
-        	<span class="desktop">
-				<span class="welcome-left"><strong>This will float left for desktop users &raquo;</strong></span>
-				<span class="welcome-right">This will float right for desktop users</span>
-			</span>
-		<div class="clear"></div>
-		</div><!-- inner -->
-    	</div><!-- welcome -->
+<div id="topbar">
+<div class="inner">
+        <span class="mobile"><strong>This will be visible for mobile users &raquo;</strong></span>
+        <span class="desktop">
+			<span class="welcome-left"><strong>This will float left for desktop users &raquo;</strong></span>
+			<span class="welcome-right">This will float right for desktop users</span>
+		</span>
+<div class="clear"></div>
+</div><!-- inner -->
+</div><!-- topbar -->
+		
+<div id="header">
+<div class="inner">
+	<div id="branding">
+	<div id="logo">
+		HoverCraft
+	</div>
+	<div id="tagline">
+		WordPress theme with no queries
+	</div>
+		</div><!-- branding -->
+	
+	<div id="menu">
+		<ul>
+			<li>Home</li>
+			<li>About Us</li>
+			<li>Services</li>
+			<li>Contact</li>
+		</ul>
+	</div>
+<div class="clear"></div>
+</div><!-- inner -->
+</div>
 		
