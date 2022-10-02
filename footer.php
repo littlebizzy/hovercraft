@@ -1,11 +1,11 @@
+<div id="footer">
+<div class="inner">
+<div id="scrollup"><i class="fa-solid fa-circle-arrow-up"></i></div>
 
-    			
-        <div id="scrollup"><i class="fa-solid fa-circle-arrow-up"></i></div>
+<div class="clear"></div>
 
-		<div class="clear"></div>
-
-		</div><!--inner -->
-	  </div><!-- footer -->
+</div><!--inner -->
+</div><!-- footer -->
 
 <?php wp_footer(); ?>
 
