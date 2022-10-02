@@ -1,5 +1,7 @@
 <?php
 
+$welcome = "Stop fixing your WordPress theme, and focus on your business.";
+
 // WooCommerce support
 add_theme_support('woocommerce');
 
@@ -38,3 +40,22 @@ function post_image_large() {
             }
     }
 }
+
+
+/**
+ * Register our sidebars and widgetized areas.
+ *
+ */
+function hovercraft_register_sidebar() {
+
+	register_sidebar( array(
+		'name'          => 'Sidebar',
+		'id'            => 'hovercraft_sidebar',
+		'before_widget' => '<div>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="rounded">',
+		'after_title'   => '</h3>',
+	) );
+
+}
+add_action( 'widgets_init', 'hovercraft_register_sidebar' );
