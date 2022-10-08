@@ -48,24 +48,21 @@
 		
 <div id="header">
 <div class="inner">
+	<div class="header-left">
 	<div id="branding">
-	<div id="logo">
-		HoverCraft
-	</div>
-	<div id="tagline">
-		WordPress theme with no queries
-	</div>
-		</div><!-- branding -->
+		<div class="logo"><?php echo get_bloginfo( 'name' ); ?></div>
+		<div class="tagline"><?php echo get_bloginfo( 'description' ); ?></div>
+	</div><!-- branding -->
+	<div class="clear"></div>
+	</div><!-- header-left -->
 	
-	<div id="menu">
-		<ul>
-			<li>Home</li>
-			<li>About Us</li>
-			<li>Services</li>
-			<li>Contact</li>
-		</ul>
-	</div>
+	<div class="header-right">
+	<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class'	=> 'menu-wrapper' ) ); ?>
+	<?php wp_nav_menu( array( 'theme_location' => 'cta-header', 'container_class'	=> 'cta-header' ) ); ?>
+	
+	<div class="clear"></div>
+	</div><!-- header-right -->
+		
 <div class="clear"></div>
 </div><!-- inner -->
-</div>
-		
+</div><!-- header -->
