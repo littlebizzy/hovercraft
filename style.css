@@ -5,7 +5,7 @@ GitHub Theme URI: littlebizzy/hovercraft
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 Description: A lightweight and SEO-friendly theme for WordPress with no database queries, that can be easily customized using PHP snippets for ultimate stability.
-Version: 0.0.6
+Version: 0.0.7
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
@@ -26,10 +26,12 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, hr, bl
 
 html, body {
 	background:#ECEFF1;
+	background:#fff;
 	font-family:Lato,sans-serif;
 	font-size:16px;
 	color:#263238;
 	height:100%;
+	line-height:1.5;
 }
 
 .inner {
@@ -47,12 +49,18 @@ h3 {
 	font-size:24px;
 }
 
+a {
+	color:#00838F;
+	text-decoration:underline;
+}
+
 /* topbar */
 
 #topbar {
 	width:100%;
 	background:#263238;
 	font-size:14px;
+	line-height:1.5;
 	padding:10px 0px;
 	color:#fff;
 	text-align:center;
@@ -62,49 +70,102 @@ h3 {
 
 #header {
 	width:100%;
-	padding:20px 0px;
+padding: 30px 0px;
+	 display: table;
 	background:#fff;
 }
 
-#branding {
-	float:left;
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/min-width */
+
+.header-left {
+	display:table-cell;
+    vertical-align:middle;
+	height:inherit;
+	min-width: auto;
+	white-space: nowrap;
+
 }
 
-#logo {
-	font-size:24px;
+.header-right {
+	display:table-cell;
+    vertical-align:middle;
+	height:inherit;
+	text-align:right;
+	width:100%;
+}
+
+#branding {
+
+}
+
+.logo {
+	font-size:36px;
 	font-weight:700;
 	line-height:1.5;
 }
 
-#tagline {
-	display:block;
+.tagline {
 	font-size:16px;
 	line-height:1.5;
 }
 
-#menu {
-	float:right;
+.menu-wrapper {
+	display:inline-block;
 }
 
-#menu li {
+ul.menu {
+	text-align:right;
+}
+
+ul.menu li {
 	font-size:20px;
 	list-style-type:none;
-	float:left;
 	padding-left:30px;
+ 	vertical-align: middle;
+	display:inline-block;
+}
+
+ul.menu li a {
+	text-decoration:none;
+}
+
+.cta-header {
+	display:inline-block;
+	margin-left:30px;
+}
+
+.cta-header ul li {
+	font-size:20px;
+	font-weight:700;
+	padding:10px 20px;
+	background:#00838F;
+}
+
+.cta-header ul li a {
+	color:#fff !important;
+	text-decoration:none !important;
 }
 
 /* splash */
 
 #splash {
 	width:100%;
-	padding: 100px 0px 100px 0px;
+	padding: 100px 0px;
 	background-repeat:no-repeat;
-	background-size: cover;
+	/* background-size: cover;
+	 background: #00838F; */
+	
+	
+}
 
-background: #74ebd5;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to top, #ACB6E5, #74ebd5);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to top, #ACB6E5, #74ebd5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
+.cta-splash {
+	margin:40px 0px 0px 0px;
+	font-size:24px;
+	font-weight:700;
+	padding:10px 20px;
+	background:#263238;
+	color:#fff;
+	border:0px;
 }
 
 #welcome {
@@ -113,16 +174,6 @@ background: linear-gradient(to top, #ACB6E5, #74ebd5); /* W3C, IE 10+/ Edge, Fir
 	font-weight:700;
 	color:#fff;
 	padding:0px;
-}
-
-button.cta-home {
-	margin:40px 0px 0px 0px;
-	font-size:24px;
-	font-weight:700;
-	padding:10px 20px;
-	background:#263238;
-	color:#fff;
-	border:0px;
 }
 
 /* main */
@@ -156,17 +207,57 @@ button.cta-home {
 
 #footer {
 	margin:0px auto;
-	max-width:1200px;
-	background:#607D8B;
+	background:#37474F;
 	color:#fff;
-	min-height:300px;
+	padding: 100px 0px;
+}
+
+.footer-section-left {
+	width:360px;
+	box-sizing:border-box;
+	padding:0px 30px 0px 0px;
 }
 
 #copyright {
-	background:#546E7A;
+	width:100%;
+	background:#263238;
 	font-size:14px;
-	text-align:center;
+	padding:30px 0px;
 	color:#fff;
+	box-sizing:border-box;
+	display: table;
+}
+
+.copyright-left {
+	display:table-cell;
+    vertical-align:middle;
+	height:inherit;
+	min-width: auto;
+	white-space: nowrap;
+
+}
+
+.copyright-right {
+	display:table-cell;
+    vertical-align:middle;
+	height:inherit;
+	text-align:right;
+	width:100%;
+}
+
+#copyright ul {
+	text-align:right;
+}
+
+#copyright ul li {;
+	list-style-type:none;
+	padding-left:30px;
+ 	vertical-align: middle;
+	display:inline-block;
+}
+
+#copyright ul li a {
+	text-decoration:none;
 }
 
 /* scrollup */
