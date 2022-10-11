@@ -34,14 +34,24 @@
 	<?php wp_head(); ?>
 	</head>
 	<body>
-	
+
+<div id="container">
 <div id="topbar">
 <div class="inner">
-        <span class="mobile"><strong>This will be visible for mobile users &raquo;</strong></span>
-        <span class="desktop">
-			<span class="welcome-left"><strong>This will float left for desktop users &raquo;</strong></span>
-			<span class="welcome-right">This will float right for desktop users</span>
-		</span>
+	<?php if ( is_active_sidebar('hovercraft_topbar_right')) { ?>
+	<div class="topbar-left">
+	<?php } else { ?>
+	<div class="topbar-center">
+	<?php } ?>
+			<?php add_filter ( 'widget_title' , 'my_widget_title', 10, 1); //we use the default priority and 3 arguments in the callback function
+		dynamic_sidebar( 'hovercraft_topbar_left' ); remove_filter('widget_title', 'my_widget_title'); ?>
+	</div>
+	<?php if ( is_active_sidebar('hovercraft_topbar_right')) { ?>
+	<div class="topbar-right">
+		<?php add_filter ( 'widget_title' , 'my_widget_title', 10, 1); //we use the default priority and 3 arguments in the callback function
+		dynamic_sidebar( 'hovercraft_topbar_right' ); remove_filter('widget_title', 'my_widget_title'); ?>
+	</div>
+	<?php } ?>
 <div class="clear"></div>
 </div><!-- inner -->
 </div><!-- topbar -->
