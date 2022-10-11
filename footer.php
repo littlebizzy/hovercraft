@@ -35,7 +35,6 @@
 	
 	<div class="copyright-right">
 	
-		
 	<?php add_filter ( 'widget_title' , 'my_widget_title', 10, 1); //we use the default priority and 3 arguments in the callback function
 		dynamic_sidebar( 'hovercraft_copyright' ); remove_filter('widget_title', 'my_widget_title'); ?>
 		
@@ -45,10 +44,11 @@
 	<div class="clear"></div>
 	</div><!--inner -->
 </div><!-- copyright -->
-
-<div id="scrollup"><i class="fa-solid fa-circle-arrow-up"></i></div>
+</div><!-- container -->
 
 <?php wp_footer(); ?>
+
+<div id="scrollup"><i class="fa-solid fa-circle-arrow-up"></i></div>
 
 </body><!-- body -->
 </html><!-- html -->
