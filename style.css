@@ -5,7 +5,7 @@ GitHub Theme URI: littlebizzy/hovercraft
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 Description: A lightweight and SEO-friendly theme for WordPress with no database queries, that can be easily customized using PHP snippets for ultimate stability.
-Version: 0.0.8
+Version: 0.0.9
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
@@ -27,7 +27,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, hr, bl
 html, body {
 	background:#ECEFF1;
 	background:#fff;
-	font-family:Lato,sans-serif;
+	font-family:Open Sans,sans-serif;
 	font-size:16px;
 	color:#263238;
 	height: 100%;
@@ -56,7 +56,7 @@ h3 {
 }
 
 a {
-	color:#1CB5E0;
+	color:#0288D1;
 	text-decoration:underline;
 }
 
@@ -64,7 +64,8 @@ a {
 
 #topbar {
 	width:100%;
-	background:#263238;
+	min-height:14px;
+	background:#0288D1;
 	font-size:14px;
 	line-height:1.5;
 	padding:10px 0px;
@@ -77,7 +78,9 @@ a {
 	display:table-cell;
     vertical-align:middle;
 	height:inherit;
-	min-width: auto;
+	white-space:nowrap;
+	width:auto;
+	text-align:left;
 }
 
 .topbar-center {
@@ -103,7 +106,7 @@ a {
 
 #header {
 	width:100%;
-padding: 30px 0px;
+padding: 20px 0px;
 	 display: table;
 	background:#fff;
 }
@@ -131,13 +134,13 @@ padding: 30px 0px;
 }
 
 .logo {
-	font-size:36px;
+	font-size:24px;
 	font-weight:700;
 	line-height:1.5;
 }
 
 .tagline {
-	font-size:16px;
+	font-size:14px;
 	line-height:1.5;
 }
 
@@ -150,7 +153,7 @@ padding: 30px 0px;
 }
 
 .menu-wrapper ul li {
-	font-size:20px;
+	font-size:16px;
 	list-style-type:none;
 	padding-left:30px;
  	vertical-align: middle;
@@ -160,6 +163,10 @@ padding: 30px 0px;
 .menu-wrapper ul li a {
 	text-decoration:none;
 	color:#263238;
+}
+
+.menu-wrapper ul li a:hover {
+	text-decoration:underline;
 }
 
 .cta-header {
@@ -185,15 +192,20 @@ padding: 30px 0px;
 
 /* splash */
 
-#splash {
+.splash-wide {
 	width:100%;
-	height:100%;
-	padding: 130px 0px;
-	background-repeat:no-repeat;
-	/* background-size: cover;
+	padding: 100px 0px;
+	/*  background-repeat:no-repeat;
+	background-size: cover;
 	 background: #00838F; */
-	
-	
+}
+
+.splash-fixed {
+	margin:0px auto;
+	max-width:1200px;
+	padding: 100px 0px;
+	background-repeat:no-repeat;
+	text-align:center;
 }
 
 .cta-splash {
@@ -202,16 +214,19 @@ padding: 30px 0px;
 }
 
 .cta-splash ul li {
-	font-size:24px;
+	font-size:16px;
 	font-weight:700;
 	list-style-type:none;
 	display:inline-block;
-	padding:10px 20px;
-	background:#263238;
-	border-radius:4px;
+	padding:10px 0px;
+	width:200px;
+	background:#0288D1;
+	border-radius:2px;
 	box-sizing:border-box;
-	border:1px solid #263238;
+	border:1px solid transparent;
 	vertical-align: middle;
+	text-align:center;
+	text-transform:uppercase;
 }
 
 .cta-splash ul li a {
@@ -226,31 +241,49 @@ padding: 30px 0px;
 }
 
 .cta-splash-minor ul li {
-	font-size:24px;
-	font-weight:700;
+	font-size:16px;
+	font-weight:400;
 	list-style-type:none;
 	display:inline-block;
-	padding:10px 20px;
+	padding:10px 0px;
+	width:200px;
 	background:transparent;
-	border-radius:4px;
+	border-radius:2px;
 	box-sizing:border-box;
 	border:1px solid #fff;
 	vertical-align: middle;
+	text-align:center;
 }
 
 .cta-splash-minor ul li a {
-	color:#fff !important;
-	text-decoration:none !important;
+	color:#fff;
+	text-decoration:none;
 }
 
+.cta-splash-minor ul li:hover {
+color:#263238;
+	background:#fff;
+}
 
+.cta-splash-minor ul li:hover a {
+color:#263238;
+}
 
-#welcome {
-	text-align:left;
-	font-size:72px;
+.welcome-wrapper {
+	width:900px;
+}
+
+.welcome {
+	font-size:48px;
 	font-weight:700;
 	color:#fff;
 	padding:0px;
+	margin-bottom:30px;
+}
+
+.welcome-text {
+	font-size:18px;
+	color:#fff;
 }
 
 /* main */
