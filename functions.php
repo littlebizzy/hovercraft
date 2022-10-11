@@ -6,6 +6,9 @@ $welcome = "Stop fixing your WordPress theme, and focus on your business.";
 // WooCommerce support
 add_theme_support('woocommerce');
 
+// page excerpts
+add_post_type_support( 'page', 'excerpt' );
+
 // featured image support
 add_theme_support( 'post-thumbnails' );
 
@@ -144,12 +147,12 @@ add_action( 'widgets_init', 'hovercraft_register_footer_four' );
 
 
 
-// enable topbar left widget
-function hovercraft_register_topbar_left() {
+// topbar widget (major)
+function hovercraft_widget_topbar_major() {
 
 	register_sidebar( array(
-		'name'          => 'Topbar Left',
-		'id'            => 'hovercraft_topbar_left',
+		'name'          => 'Topbar (Major)',
+		'id'            => 'hovercraft_topbar_major',
 		'before_widget' => '<div class="widget-wrapper">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="widget-title">',
@@ -157,14 +160,14 @@ function hovercraft_register_topbar_left() {
 	) );
 
 }
-add_action( 'widgets_init', 'hovercraft_register_topbar_left' );
+add_action( 'widgets_init', 'hovercraft_widget_topbar_major' );
 
-// enable topbar right widget
-function hovercraft_register_topbar_right() {
+// topbar widget (minor)
+function hovercraft_widget_topbar_minor() {
 
 	register_sidebar( array(
-		'name'          => 'Topbar Right',
-		'id'            => 'hovercraft_topbar_right',
+		'name'          => 'Topbar (Minor)',
+		'id'            => 'hovercraft_topbar_minor',
 		'before_widget' => '<div class="widget-wrapper">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="widget-title">',
@@ -172,7 +175,7 @@ function hovercraft_register_topbar_right() {
 	) );
 
 }
-add_action( 'widgets_init', 'hovercraft_register_topbar_right' );
+add_action( 'widgets_init', 'hovercraft_widget_topbar_minor' );
 
 
 
