@@ -11,26 +11,26 @@ add_theme_support( 'post-thumbnails' );
 
 // disable Customizer (menu)
 // ref: https://stackoverflow.com/a/50912719/1718491
-add_action( 'admin_menu', function () {
-global $submenu;
-if ( isset( $submenu[ 'themes.php' ] ) ) {
-    foreach ( $submenu[ 'themes.php' ] as $index => $menu_item ) {
-        foreach ($menu_item as $value) {
-            if (strpos($value,'customize') !== false) {
-                unset( $submenu[ 'themes.php' ][ $index ] );
-            }
-        }
-    }
-}
-});
+// add_action( 'admin_menu', function () {
+// global $submenu;
+// if ( isset( $submenu[ 'themes.php' ] ) ) {
+//    foreach ( $submenu[ 'themes.php' ] as $index => $menu_item ) {
+//        foreach ($menu_item as $value) {
+//            if (strpos($value,'customize') !== false) {
+//                unset( $submenu[ 'themes.php' ][ $index ] );
+//            }
+//        }
+//    }
+// }
+// });
 
 // disable Customize link (admin bar)
 // ref: https://wordpress.stackexchange.com/a/200304/152624
 // add_action( 'wp_before_admin_bar_render', 'wpse200296_before_admin_bar_render' ); 
-function wpse200296_before_admin_bar_render() {
-    global $wp_admin_bar;
-    $wp_admin_bar->remove_menu('customize');
-}
+// function wpse200296_before_admin_bar_render() {
+//    global $wp_admin_bar;
+//    $wp_admin_bar->remove_menu('customize');
+// }
 
 // featured image
 function post_image_large() {
@@ -143,6 +143,39 @@ add_action( 'widgets_init', 'hovercraft_register_footer_four' );
 
 
 
+
+// enable topbar left widget
+function hovercraft_register_topbar_left() {
+
+	register_sidebar( array(
+		'name'          => 'Topbar Left',
+		'id'            => 'hovercraft_topbar_left',
+		'before_widget' => '<div class="widget-wrapper">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+}
+add_action( 'widgets_init', 'hovercraft_register_topbar_left' );
+
+// enable topbar right widget
+function hovercraft_register_topbar_right() {
+
+	register_sidebar( array(
+		'name'          => 'Topbar Right',
+		'id'            => 'hovercraft_topbar_right',
+		'before_widget' => '<div class="widget-wrapper">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+}
+add_action( 'widgets_init', 'hovercraft_register_topbar_right' );
+
+
+
 // register header menu
 function hovercraft_main_menu() {
 	register_nav_menu('main-menu',__( 'Main Menu' ));
@@ -156,6 +189,18 @@ function hovercraft_cta_header() {
 	register_nav_menu('cta-header',__( 'Header CTA' ));
 }
 add_action( 'init', 'hovercraft_cta_header' );
+
+// register splash cta menu
+function hovercraft_cta_splash() {
+	register_nav_menu('cta-splash',__( 'Splash CTA' ));
+}
+add_action( 'init', 'hovercraft_cta_splash' );
+
+// register splash cta minor
+function hovercraft_cta_splash_minor() {
+	register_nav_menu('cta-splash-minor',__( 'Splash CTA (Minor)' ));
+}
+add_action( 'init', 'hovercraft_cta_splash_minor' );
 
 
 // llimit header cta to single item
