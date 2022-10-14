@@ -193,13 +193,13 @@ function hovercraft_cta_header() {
 }
 add_action( 'init', 'hovercraft_cta_header' );
 
-// register splash cta menu
-function hovercraft_cta_splash() {
-	register_nav_menu('cta-splash',__( 'Splash CTA' ));
+// menu splash cta major
+function hovercraft_cta_splash_major() {
+	register_nav_menu('cta-splash-major',__( 'Splash CTA (Major)' ));
 }
-add_action( 'init', 'hovercraft_cta_splash' );
+add_action( 'init', 'hovercraft_cta_splash_major' );
 
-// register splash cta minor
+// menu splash cta minor
 function hovercraft_cta_splash_minor() {
 	register_nav_menu('cta-splash-minor',__( 'Splash CTA (Minor)' ));
 }
