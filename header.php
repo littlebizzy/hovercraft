@@ -7,6 +7,13 @@
 		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,700">
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+		
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
 	
 	<style>
 	<?php include 'style.css'; ?>
@@ -38,7 +45,7 @@
 	<body>
 
 <div id="container">
-<div id="topbar">
+<?php if ( is_active_sidebar('hovercraft_topbar_major')) { ?><div id="topbar">
 <div class="inner">
 	<?php if ( is_active_sidebar('hovercraft_topbar_minor')) { ?>
 	<div class="topbar-left">
@@ -56,9 +63,9 @@
 	<?php } ?>
 <div class="clear"></div>
 </div><!-- inner -->
-</div><!-- topbar -->
+</div><!-- topbar --><?php } ?>
 		
-<div id="header">
+<?php if (is_front_page()) { ?><div class="splash-wide"><div id="header-home"><?php } else { ?><div id="header-page"><?php } ?>
 <div class="inner">
 	<div class="header-left">
 	<div id="branding">
@@ -71,6 +78,10 @@
 	<div class="header-right">
 	<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class'	=> 'menu-wrapper' ) ); ?>
 	<?php wp_nav_menu( array( 'theme_location' => 'cta-header', 'container_class'	=> 'cta-header' ) ); ?>
+		
+		<?php if ( class_exists( 'WooCommerce' ) ) { ?>
+		<div class="cart"><i class="material-icons cart">shopping_cart</i></div>
+		<?php } ?>
 	
 	<div class="clear"></div>
 	</div><!-- header-right -->
