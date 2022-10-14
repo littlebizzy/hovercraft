@@ -1,3 +1,11 @@
+<div id="footer-early">
+	<div class="clear"></div>
+</div><!-- footer-early -->
+
+<div id="footer-before">
+	<div class="clear"></div>
+</div><!-- footer-before -->
+
 <div id="footer">
 <div class="inner">
 	
@@ -6,17 +14,17 @@
 	<div class="clear"></div>
 	</div><!-- footer-section-left -->
 	
-		<div class="footer-section-two">
+		<div class="footer-section-right">
 		<?php dynamic_sidebar( 'hovercraft_footer_two' ); ?>
 	<div class="clear"></div>
 	</div><!-- footer-section-left -->
 	
-		<div class="footer-section-three">
+		<div class="footer-section-right">
 		<?php dynamic_sidebar( 'hovercraft_footer_three' ); ?>
 	<div class="clear"></div>
 	</div><!-- footer-section-left -->
 	
-		<div class="footer-section-four">
+		<div class="footer-section-right">
 		<?php dynamic_sidebar( 'hovercraft_footer_four' ); ?>
 	<div class="clear"></div>
 	</div><!-- footer-section-left -->
