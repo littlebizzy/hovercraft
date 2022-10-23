@@ -5,7 +5,7 @@ GitHub Theme URI: littlebizzy/hovercraft
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 Description: A lightweight and SEO-friendly theme for WordPress with no database queries, that can be easily customized using PHP snippets for ultimate stability.
-Version: 0.1.0
+Version: 0.1.1
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
@@ -27,15 +27,25 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, hr, bl
 html, body {
 	font-family: 'Noto Sans', sans-serif;
 	font-size:16px;
-	color:#212121;
+	color:#263238; /* correct */
 	height: 100%;
 	line-height:1.5;
 	margin:0;
 }
 
+@media screen and (max-width: 1200px) {
 #container {
-  height: 100%;
-  width: 100%;
+	width:100%;
+	height:100%;
+	overflow-x:hidden;
+}
+}
+
+@media screen and (min-width: 1200px) {
+#container {
+	width:100%;
+	height:100%;
+}
 }
 
 .inner {
@@ -126,12 +136,18 @@ a {
 
 /* header home */
 
+#header-home-wrapper {
+
+}
+
 @media screen and (max-width: 1200px) {
 #header-home {
 	width:100%;
 padding: 20px 20px;
 	 display: table;
 	box-sizing:border-box;
+	border-bottom: 1px solid rgba(255,255,255, 0.2);
+	background: rgba(55, 71, 79, 0.2);
 }
 }
 
@@ -140,22 +156,42 @@ padding: 20px 20px;
 	width:100%;
 padding: 24px 0px;
 	 display: table;
-	background:transparent;
-	border-bottom: 1px solid rgba(255,255,255, 0.3);
+	border-bottom: 1px solid rgba(255,255,255, 0.2);
+	background: rgba(55, 71, 79, 0.2);
+	margin:0px auto;
 }
 }
 
+@media screen and (max-width: 1200px) {
 #header-home .logo {
 	font-size:24px;
 	font-weight:700;
 	line-height:1.5;
 	color:#fff;
 }
+}
 
+@media screen and (min-width: 1200px) {
+#header-home .logo {
+	font-size:24px;
+	font-weight:700;
+	line-height:1.5;
+	color:#fff;
+}
+}
+
+@media screen and (max-width: 1200px) {
+#header-home .tagline {
+	display:none;
+}
+}
+
+@media screen and (min-width: 1200px) {
 #header-home .tagline {
 	font-size:14px;
 	line-height:1.5;
 	color:#fff;
+}
 }
 
 #header-home .menu-wrapper ul li a {
@@ -221,6 +257,37 @@ padding: 20px 0px;
 	color:#212121;
 }
 
+/* menu mobile */
+
+@media screen and (max-width: 1200px) {
+.menu-mobile {
+	display:inline-block;
+	text-align:right;
+ 	vertical-align: middle;
+}
+}
+	
+@media screen and (min-width: 1200px) {
+.menu-mobile {
+ display:none;	
+}
+}
+
+.menu-mobile i {
+	color:#fff;
+	text-decoration:none;
+	font-size:24px;
+	padding:0px;
+}
+
+/* menu desktop */
+
+@media screen and (max-width: 1200px) {
+.menu-desktop {
+ display:none;	
+}
+}
+
 .menu-wrapper {
 	display:inline-block;
 }
@@ -267,6 +334,22 @@ padding: 20px 0px;
 	text-decoration:none;
 }
 
+/* search */
+
+.search {
+	display:inline-block;
+	text-align:right;
+	padding-left:15px;
+ 	vertical-align: middle;
+}
+
+.search i {
+	color:#fff;
+	text-decoration:none;
+	font-size:22px;
+	padding:0px;
+}
+
 /* shopping cart */
 
 .cart {
@@ -279,35 +362,58 @@ padding: 20px 0px;
 .cart i {
 	color:#fff;
 	text-decoration:none;
-	font-size:20px;
+	font-size:22px;
 	padding:0px;
 }
+
 
 /* splash */
 
 @media screen and (max-width: 1200px) {
-.splash-wide {
+#splash-wrapper {
 	width:100%;
-	padding: 0px 20px 30px 20px;
-	box-sizing:border-box;
-	
-		background: linear-gradient(170deg, rgba(55, 71, 79, 0.5) 50%, rgba(255, 196, 0, 0.3) 100%), url(https://source.unsplash.com/featured/640x360);			
-	background-position: center center;
-background-size:cover;
-background-repeat:no-repeat;
+	height:100%;
+	display:table;
+}
+}
+
+@media screen and (min-width: 1200px) {
+#splash-wrapper {
+	width:100%;
+	height:100%;
+
+}
+}
+
+@media screen and (max-width: 1200px) {
+.splash-main {
+	padding:30px 20px;
+}
+}
+
+@media screen and (min-width: 1200px) {
+.splash-main {
+	padding:0px;
+	display:table-row;
+	vertical-align:middle;
+}
+}
+
+@media screen and (max-width: 1200px) {
+.splash-wide {
+	padding: 0px;
+	box-sizing:border-box;	
+	display:table;
 }
 }
 
 @media screen and (min-width: 1200px) {
 .splash-wide {
 	width:100%;
-	height:700px;
-	padding: 0px 0px 100px 0px;
-	
-	background: linear-gradient(170deg, rgba(55, 71, 79, 0.5) 50%, rgba(255, 196, 0, 0.3) 100%), url(https://source.unsplash.com/featured/640x360);				
-	background-position: center center;
-background-size:cover;
-background-repeat:no-repeat;
+	height:100%;
+	padding: 0px;			
+	box-sizing:border-box;
+display:table;
 }
 }
 
@@ -379,6 +485,8 @@ background-repeat:no-repeat;
 
 @media screen and (min-width: 1200px) {
 .cta-splash-major ul li a {
+	font-size:16px;
+	font-weight:700;
 	color:#fff;
 	padding:10px 0px;
 	text-decoration:none;
@@ -397,7 +505,7 @@ background-repeat:no-repeat;
 
 @media screen and (max-width: 1200px) {
 .cta-splash-minor {
-	margin:20px 0px 0px 0px;
+	margin:10px 0px 0px 0px;
 	display:block;
 	width:100%;
 }
@@ -474,13 +582,20 @@ color:#263238;
 @media screen and (max-width: 1200px) {
 .welcome-wrapper {
 	width:100%;
+	padding:0px;
+	box-sizing:border-box;
 }
+}
+
+.welcome-super-wrapper {
+	display:table;
 }
 
 @media screen and (min-width: 1200px) {
 .welcome-wrapper {
-	width:900px;
-	padding-top:100px;
+	max-width:900px;
+	vertical-align:middle;
+  display: table-cell;
 }
 }
 
@@ -700,6 +815,7 @@ color:#263238;
 	padding:30px 0px;
 	box-sizing:border-box;
 	display: table;
+	border-top: 1px solid rgba(38, 50, 56, 0.2);
 }
 }
 
@@ -758,6 +874,52 @@ color:#263238;
 
 #copyright ul li a {
 	text-decoration:none;
+}
+
+/* select menu bottom */
+
+.select li {
+  display: none;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-top: 1px solid black;
+  min-width: 150px;
+}
+
+.select li:first-child {
+  display: block;
+  border-top: 0px;
+}
+
+.select {
+  border: 1px solid black;
+  display: inline-block;
+  padding: 0;
+  border-radius: 4px;
+  position: relative;
+}
+
+.select li:hover {
+  background-color: #ddd;
+}
+
+.select li:first-child:hover {
+  background-color: transparent;
+}
+
+.select.open li {
+  display: block;
+}
+
+.select span:before {
+  position: absolute;
+  top: 5px;
+  right: 15px;
+  content: "\2193";
+}
+
+.select.open span:before {
+  content: "\2191";
 }
 
 /* scrollup */
