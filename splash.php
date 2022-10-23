@@ -1,3 +1,5 @@
+<!-- <div <?php // if (is_front_page()) { echo 'class="splash-wide-off"'; } else { echo 'class="splash-fixed-off"'; } ?> > -->
+
 <div class="splash-main">
 <div class="inner">
 	<?php if (is_front_page()) { ?>
