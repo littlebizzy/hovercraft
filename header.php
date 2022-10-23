@@ -65,7 +65,15 @@
 </div><!-- inner -->
 </div><!-- topbar --><?php } ?>
 		
-<?php if (is_front_page()) { ?><div class="splash-wide"><div id="header-home"><?php } else { ?><div id="header-page"><?php } ?>
+<?php if (is_front_page()) { ?><div id="splash-wrapper"><div class="splash-wide" style="background: linear-gradient(to bottom right, rgba(55, 71, 79, 0.8), rgba(255, 196, 0, 0.2)), url(<?php 
+$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' ); 
+if (empty($url)){ echo "https://source.unsplash.com/featured/1024x768"; } else { echo $url; } ?>);		
+background-position: center center;
+background-size:cover;
+background-repeat:no-repeat;
+">
+
+<div id="header-home"><?php } else { ?><div id="header-page"><?php } ?>
 <div class="inner">
 	<div class="header-left">
 	<div id="branding">
@@ -76,16 +84,20 @@
 	</div><!-- header-left -->
 	
 	<div class="header-right">
-	<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class'	=> 'menu-wrapper' ) ); ?>
-	<?php wp_nav_menu( array( 'theme_location' => 'cta-header', 'container_class'	=> 'cta-header' ) ); ?>
-		
-		<?php if ( class_exists( 'WooCommerce' ) ) { ?>
-		<div class="cart"><i class="material-icons cart">shopping_cart</i></div>
+	<div class="menu-choose">
+		<div class="menu-desktop">
+			<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class'	=> 'menu-wrapper' ) ); ?>
+			<?php wp_nav_menu( array( 'theme_location' => 'cta-header', 'container_class'	=> 'cta-header' ) ); ?>
+			<?php if ( class_exists( 'WooCommerce' ) ) { ?>
+			<div class="cart"><a href="/cart/"><i class="material-icons cart">shopping_cart</i></a></div>
+			<div class="search"><i class="material-icons search">search</i></div>
 		<?php } ?>
-	
+		</div><!-- menu-desktop -->
+		<div class="menu-mobile"><i class="material-icons menu">menu</i></div>
+		</div><!--menu-choose -->
 	<div class="clear"></div>
 	</div><!-- header-right -->
 		
 <div class="clear"></div>
 </div><!-- inner -->
-</div><!-- header -->
+</div><!-- header-home -->
