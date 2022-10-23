@@ -1,7 +1,21 @@
 <?php
 
+// load jquery scripts
+add_action( 'wp_enqueue_scripts', 'add_my_script' );
+
+function add_my_script() {
+wp_enqueue_script(
+    'hovercraft_select_menu', // your script unique name 
+    get_template_directory_uri().'/js/select-menu.js', //script file location
+    array('jquery') //lists the scripts upon which your script depends
+);
+}
+
 // variables
 $welcome = "Stop fixing your WordPress theme, and focus on your business.";
+
+global $hovercraft_excerpt;
+$hovercraft_excerpt = "HoverCraft is a WordPress theme focused on saving you time and avoiding maintenance tasks. Instead of messing with page builders, DOM elements, and settings, HoverCraft is largely hardcoded, with only a handful of menus, widgets, and CSS classes that you can lightly customize for new projects or clients. Future-proof WordPress designs, like never before...";
 
 // WooCommerce support
 add_theme_support('woocommerce');
