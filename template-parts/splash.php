@@ -3,7 +3,6 @@
 <div class="splash-main">
 <div class="inner">
 	<?php if (is_front_page()) { ?>
-	<div class="welcome-super-wrapper">
 	<div class="welcome-wrapper">
 	<?php } else { ?>
 		<div class="title-wrapper">
@@ -22,8 +21,7 @@
 		<?php wp_nav_menu( array( 'theme_location' => 'cta-splash-major', 'container_class'	=> 'cta-splash-major' ) ); ?>
 		<?php wp_nav_menu( array( 'theme_location' => 'cta-splash-minor', 'container_class'	=> 'cta-splash-minor' ) ); ?>
 		<?php endif; ?>
-			</div><!-- welcome-wrapper -->
-		</div><!-- welcome-super-wrapper -->
+		</div><!-- welcome-wrapper -->
 		
 <div class="clear"></div>
 </div><!-- inner -->
