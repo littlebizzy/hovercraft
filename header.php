@@ -45,8 +45,10 @@
 	<body>
 
 <div id="container">
-<?php if ( is_active_sidebar('hovercraft_topbar_major')) { ?><div id="topbar">
-<div class="inner">
+	
+	<?php if ( is_active_sidebar('hovercraft_topbar_major')) { ?>
+	<div id="topbar">
+	<div class="inner">
 	<?php if ( is_active_sidebar('hovercraft_topbar_minor')) { ?>
 	<div class="topbar-left">
 	<?php } else { ?>
@@ -61,13 +63,14 @@
 		dynamic_sidebar( 'hovercraft_topbar_minor' ); remove_filter('widget_title', 'my_widget_title'); ?>
 	</div>
 	<?php } ?>
-<div class="clear"></div>
-</div><!-- inner -->
-</div><!-- topbar --><?php } ?>
+	<div class="clear"></div>
+	</div><!-- inner -->
+	</div><!-- topbar -->
+	<?php } ?>
 		
-<?php if (is_front_page()) { ?><div id="splash-wrapper"><div class="splash-wide" style="background: linear-gradient(to bottom right, rgba(55, 71, 79, 0.8), rgba(255, 196, 0, 0.2)), url(<?php 
+	<?php if (is_front_page()) { ?><div id="splash-wrapper"><div class="splash-wide" style="background: linear-gradient(to bottom right, rgba(55, 71, 79, 0.8), rgba(255, 196, 0, 0.2)), url(<?php 
 $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' ); 
-if (empty($url)){ echo "https://source.unsplash.com/featured/1024x768"; } else { echo $url; } ?>);		
+if (empty($url)){ echo "https://source.unsplash.com/featured/1600x900?nature"; } else { echo $url; } ?>);		
 background-position: center center;
 background-size:cover;
 background-repeat:no-repeat;
