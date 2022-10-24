@@ -6,7 +6,7 @@ add_action( 'wp_enqueue_scripts', 'add_my_script' );
 function add_my_script() {
 wp_enqueue_script(
     'hovercraft_select_menu', // your script unique name 
-    get_template_directory_uri().'/js/select-menu.js', //script file location
+    get_template_directory_uri().'/assets/js/select-menu.js', //script file location
     array('jquery') //lists the scripts upon which your script depends
 );
 }
@@ -252,5 +252,3 @@ function my_widget_title($id_base) {
         return $title;
       }
     }
-
-
