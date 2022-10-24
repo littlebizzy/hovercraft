@@ -7,12 +7,12 @@ jQuery(".menu").click(function() {
   }
 });
 
-jQuery(".select li").click(function() {
+jQuery(".menu li").click(function() {
 
   var selected_value = jQuery(this).html();
-  var first_li = jQuery(".select li:first-child").html();
+  var first_li = jQuery(".menu li:first-child").html();
 
-  jQuery(".select li:first-child").html(selected_value);
+  jQuery(".menu li:first-child").html(selected_value);
   jQuery(this).html(first_li);
 
 });
@@ -20,7 +20,7 @@ jQuery(".select li").click(function() {
 jQuery(document).mouseup(function(event) {
 
   var target = event.target;
-  var select = jQuery(".select");
+  var select = jQuery(".menu");
 
   if (!select.is(target) && select.has(target).length === 0) {
     select.removeClass("open");
