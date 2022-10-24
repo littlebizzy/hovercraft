@@ -1,3 +1,5 @@
+<?php
+
 function hovercraft_select_menu() {
     wp_enqueue_script(
         'hovercraft_select_menu', // unique name 
