@@ -1,15 +1,7 @@
 <?php
 
-// load jquery scripts
-add_action( 'wp_enqueue_scripts', 'add_my_script' );
-
-function add_my_script() {
-wp_enqueue_script(
-    'hovercraft_select_menu', // your script unique name 
-    get_template_directory_uri().'/assets/js/select-menu.js', //script file location
-    array('jquery') //lists the scripts upon which your script depends
-);
-}
+// select menu
+require get_template_directory() . '/inc/select-menu.php';
 
 // variables
 $welcome = "Stop fixing your WordPress theme, and focus on your business.";
