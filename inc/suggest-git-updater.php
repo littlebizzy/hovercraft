@@ -4,7 +4,7 @@ function hovercraft_suggest_git_updater_plugin() {
 
     if ( ! in_array( 'git-updater/git-updater.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) { ?>
 
-        <div class="notice notice-info">
+        <div class="notice notice-warning">
         <p><strong>Git Updater</strong></p>
         <p>HoverCraft requires the free Git Updater plugin to receive automatic updates via GitHub.</p>
         </div>
