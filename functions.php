@@ -3,6 +3,9 @@
 // select menu
 require get_template_directory() . '/inc/select-menu.php';
 
+// suggest git updater
+require get_template_directory() . '/inc/suggest-git-updater.php';
+
 // variables
 $welcome = "Stop fixing your WordPress theme, and focus on your business.";
 
