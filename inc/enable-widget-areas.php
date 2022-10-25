@@ -1,3 +1,5 @@
+<?php
+
 // enable sidebar widgets
 function hovercraft_register_sidebar() {
 
