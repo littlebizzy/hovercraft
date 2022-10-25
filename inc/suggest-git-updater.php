@@ -1,3 +1,5 @@
+<?php
+
 function hovercraft_suggest_git_updater_plugin() {
 
     if ( ! in_array( 'git-updater/git-updater.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) { ?>
