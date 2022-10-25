@@ -1,3 +1,5 @@
+<?php
+
 // register header menu
 function hovercraft_main_menu() {
 	register_nav_menu('main-menu',__( 'Main Menu' ));
