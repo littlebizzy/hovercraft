@@ -12,6 +12,9 @@ require get_template_directory() . '/inc/enable-widget-areas.php';
 // enable menu locations
 require get_template_directory() . '/inc/enable-menu-locations.php';
 
+// featured images
+require get_template_directory() . '/inc/featured-images.php';
+
 // variables
 $welcome = "Stop fixing your WordPress theme, and focus on your business.";
 global $hovercraft_excerpt;
@@ -23,21 +26,6 @@ add_theme_support('woocommerce');
 // page excerpts
 add_post_type_support( 'page', 'excerpt' );
 
-// featured image support
-add_theme_support( 'post-thumbnails' );
-
-// featured image
-function post_image_large() {
-    global $post;
-    $args = array( 'post_type' => 'attachment', 'post_mime_type' => 'image', 'numberposts' => 1, 'orderby' => 'menu_order', 'order' => 'ASC', 'post_status' => null, 'post_parent' => $post->ID ); 
-    $attachments = get_posts($args);
-    if ($attachments) {
-            foreach ( $attachments as $attachment ) {
-                    $src = wp_get_attachment_image_src( $attachment->ID, 'large');
-                    if ($src) {echo $src[0];}
-            }
-    }
-}
 
 // disable copyright widget title
 // https://presscustomizr.com/snippet/dynamically-changing-the-widget-title-depending-on-the-context/
