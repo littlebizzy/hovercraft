@@ -10,10 +10,7 @@
 		
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-		
-		<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Noto+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans<?php if (get_locale() == 'ko_KR') { echo "+KR"; } ?>:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
 	
 	<style>
 	<?php include 'style.css'; ?>
@@ -68,7 +65,10 @@
 	</div><!-- topbar -->
 	<?php } ?>
 		
-	<?php if (is_front_page()) { ?><div id="splash-wrapper"><div class="splash-wide" style="background: linear-gradient(to bottom right, rgba(55, 71, 79, 0.8), rgba(255, 196, 0, 0.2)), url(<?php 
+	<?php if (is_front_page()) { ?><div id="splash-wrapper"><div class="splash-wide" style="background: 
+		linear-gradient(60deg,
+    rgba(55, 71, 79, 0.7777485994397759) 30%,
+    rgba(255, 255, 255, 0) 100%), url(<?php 
 $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' ); 
 if (empty($url)){ echo "https://source.unsplash.com/featured/1600x900?nature"; } else { echo $url; } ?>);		
 background-position: center center;
@@ -80,8 +80,20 @@ background-repeat:no-repeat;
 <div class="inner">
 	<div class="header-left">
 	<div id="branding">
-		<div class="logo"><?php echo get_bloginfo( 'name' ); ?></div>
-		<div class="tagline"><?php echo get_bloginfo( 'description' ); ?></div>
+		<div class="branding-left">
+		<div class="site-logo" style="background:url(<?php 
+								 $custom_logo_id = get_theme_mod( 'custom_logo' );
+$logourl = wp_get_attachment_image_src( $custom_logo_id , 'full' );
+								// if ( function_exists( 'the_custom_logo' ) ) { the_custom_logo(); } 
+								echo esc_url( $logourl[0]); ?>);
+background-position: center center;
+background-size:contain;
+background-repeat:no-repeat;"></div>
+		</div><!-- branding-left -->
+		<div class="branding-right">
+		<div class="site-title"><?php echo get_bloginfo( 'name' ); ?></div>
+		<div class="site-tagline"><?php echo get_bloginfo( 'description' ); ?></div>
+		</div><!-- branding-right -->
 	</div><!-- branding -->
 	<div class="clear"></div>
 	</div><!-- header-left -->
@@ -91,9 +103,9 @@ background-repeat:no-repeat;
 		<div class="menu-desktop">
 			<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class'	=> 'menu-wrapper' ) ); ?>
 			<?php wp_nav_menu( array( 'theme_location' => 'cta-header', 'container_class'	=> 'cta-header' ) ); ?>
-			<?php if ( class_exists( 'WooCommerce' ) ) { ?>
-			<div class="cart"><a href="/cart/"><i class="material-icons cart">shopping_cart</i></a></div>
 			<div class="search"><i class="material-icons search">search</i></div>
+			<?php if ( class_exists( 'WooCommerce' ) ) { ?>
+			<div class="cart"><a href="/cart/"><i class="material-icons cart">shopping_cart</i></a><div class="notification-dot"><?php echo WC()->cart->get_cart_contents_count(); ?><div class="clear"></div></div></div>
 		<?php } ?>
 		</div><!-- menu-desktop -->
 		<div class="menu-mobile"><i class="material-icons menu">menu</i></div>
