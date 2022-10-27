@@ -1,3 +1,6 @@
+  var winwidth = $(window).width();
+  if (winwidth <= 480) {
+      
 jQuery(".menu").click(function() {
   var is_open = jQuery(this).hasClass("open");
   if (is_open) {
@@ -27,3 +30,5 @@ jQuery(document).mouseup(function(event) {
   }
 
 });
+      
+}
