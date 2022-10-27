@@ -5,12 +5,12 @@ GitHub Theme URI: littlebizzy/hovercraft
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 Description: A lightweight and SEO-friendly theme for WordPress with no database queries, that can be easily customized using PHP snippets for ultimate stability.
-Version: 0.1.6
+Version: 0.1.7
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
 
-
+r
 /* css reset */
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, hr, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -162,38 +162,6 @@ a {
 	}
 }
 
-@media screen and (max-width: 1200px) {
-#header-home .logo {
-	font-size:24px;
-	font-weight:700;
-	line-height:1.5;
-	color:#fff;
-}
-}
-
-@media screen and (min-width: 1200px) {
-#header-home .logo {
-	font-size:24px;
-	font-weight:700;
-	line-height:1.5;
-	color:#fff;
-}
-}
-
-@media screen and (max-width: 1200px) {
-#header-home .tagline {
-	display:none;
-}
-}
-
-@media screen and (min-width: 1200px) {
-#header-home .tagline {
-	font-size:14px;
-	line-height:1.5;
-	color:#fff;
-}
-}
-
 #header-home .menu-wrapper ul li a {
 	text-decoration:none;
 	color:#fff;
@@ -209,18 +177,6 @@ padding: 20px 0px;
 	background:#ECEFF1;
 }
 
-#header-page .logo {
-	font-size:24px;
-	font-weight:700;
-	line-height:1.5;
-	color:#fff;
-}
-
-#header-page .tagline {
-	font-size:14px;
-	line-height:1.5;
-	color:#fff;
-}
 
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/min-width */
 
@@ -240,21 +196,49 @@ padding: 20px 0px;
 	width:100%;
 }
 
-#branding {
 
+/* branding */
+
+#branding {
+	display: table;
+	color: #fff;
 }
 
-#header-page .logo {
+.branding-left {
+	display:table-cell;
+    vertical-align:middle;
+	height:inherit;
+	min-width: auto;
+	white-space: nowrap;
+}
+
+.site-logo {
+	width:80px;
+	height:80px;
+	margin-right:20px;
+	display:inline-block;
+	float:left;
+}
+
+.branding-right {
+	display:table-cell;
+    vertical-align:middle;
+	height:inherit;
+	text-align:left;
+	width:100%;
+}
+
+.site-title {
 	font-size:24px;
 	font-weight:700;
 	line-height:1.5;
-	color:#212121;
+	display:block;
 }
 
-#header-page .tagline {
+.site-tagline {
 	font-size:14px;
 	line-height:1.5;
-	color:#212121;
+	display:block;
 }
 
 /* menu mobile */
@@ -339,7 +323,7 @@ padding: 20px 0px;
 .search {
 	display:inline-block;
 	text-align:right;
-	padding-left:15px;
+	padding-left:30px;
  	vertical-align: middle;
 }
 
@@ -364,6 +348,21 @@ padding: 20px 0px;
 	text-decoration:none;
 	font-size:22px;
 	padding:0px;
+	position:relative;
+}
+
+.notification-dot {
+  background-color: #F44336;
+  border-radius: 50%;
+  display: inline-block;
+  top: -10px;
+  left: -1px;
+	position:relative;
+	line-height:1;
+	font-size:10px;
+	font-weight:700;
+	color:#fff;
+	padding:2px 4px;
 }
 
 
@@ -795,6 +794,7 @@ color:#263238;
 	font-size:14px;
 	padding:30px 20px;
 	box-sizing:border-box;
+	border-top:1px solid #B0BEC5;
 }
 }
 
@@ -807,6 +807,7 @@ color:#263238;
 	box-sizing:border-box;
 	display: table;
 	border-top: 1px solid rgba(38, 50, 56, 0.2);
+	border-top:1px solid #B0BEC5;
 }
 }
 
@@ -861,7 +862,7 @@ color:#263238;
 	box-sizing:border-box;
 	text-align:left;
 	background: #fff;
-	border: 1px solid #263238;
+	border: 1px solid #37474F;
   	display: block;
  	padding: 0;
   	border-radius: 4px;
@@ -873,11 +874,13 @@ color:#263238;
 #copyright ul {
 	text-align:left;
 	background: #fff;
-	border: 1px solid #263238;
+	border: 1px solid #37474F;
   	display: inline-block;
  	padding: 0;
   	border-radius: 4px;
   	position: relative;
+	min-width:300px;
+	box-sizing:border-box;
 }
 }
 
