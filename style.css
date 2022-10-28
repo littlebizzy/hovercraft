@@ -5,12 +5,12 @@ GitHub Theme URI: littlebizzy/hovercraft
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 Description: A lightweight and SEO-friendly theme for WordPress with no database queries, that can be easily customized using PHP snippets for ultimate stability.
-Version: 0.1.7
+Version: 0.1.8
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
 
-r
+
 /* css reset */
 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, hr, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
@@ -159,6 +159,8 @@ a {
 	border-bottom: 1px solid rgba(255,255,255, 0.2);
 	background: rgba(55, 71, 79, 0.2);
 	margin:0px auto;
+	
+	position:relative; /* required when using video background on splash-wide */
 	}
 }
 
@@ -213,11 +215,10 @@ padding: 20px 0px;
 }
 
 .site-logo {
-	width:80px;
-	height:80px;
 	margin-right:20px;
 	display:inline-block;
-	float:left;
+	width:150px;
+  	height: 100px;
 }
 
 .branding-right {
@@ -281,7 +282,7 @@ padding: 20px 0px;
 }
 
 .menu-wrapper ul li {
-	font-size:16px;
+	font-size:18px;
 	list-style-type:none;
 	padding-left:30px;
  	vertical-align: middle;
@@ -330,7 +331,7 @@ padding: 20px 0px;
 .search i {
 	color:#fff;
 	text-decoration:none;
-	font-size:22px;
+	font-size:24px;
 	padding:0px;
 }
 
@@ -346,7 +347,7 @@ padding: 20px 0px;
 .cart i {
 	color:#fff;
 	text-decoration:none;
-	font-size:22px;
+	font-size:24px;
 	padding:0px;
 	position:relative;
 }
@@ -402,6 +403,22 @@ padding: 20px 0px;
 	}
 }
 
+video::after {
+  position:absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+background: 
+		linear-gradient(60deg,
+    rgba(55, 71, 79, 0.7777485994397759) 30%,
+    rgba(255, 255, 255, 0) 100%);		
+background-position: center center;
+background-size:cover;
+background-repeat:no-repeat;
+}
+
 @media screen and (max-width: 1200px) {
 .splash-main {
 	padding:30px 20px; /* correct */
@@ -412,6 +429,8 @@ padding: 20px 0px;
 .splash-main {
 	padding:0px; /* correct */
 	display:table-row; /* correct */
+	
+	position:relative; /* required when using video background on splash-wide */
 	}
 }
 
