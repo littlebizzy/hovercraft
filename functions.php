@@ -15,20 +15,23 @@ require get_template_directory() . '/inc/enable-menu-locations.php';
 // featured images
 require get_template_directory() . '/inc/featured-images.php';
 
-// logo
-function hovercraft_logo() {
- $defaults = array(
- 'height'      => 150,
- 'width'       => 150,
- 'flex-height' => false, // <-- setting both flex-height and flex-width to false maintains an aspect ratio
- 'flex-width'  => false
- );
- add_theme_support( 'custom-logo', $defaults );
-}
+// default logo
+require get_template_directory() . '/inc/logo-default.php';
 
-// call the function in the hook
-add_action( 'after_setup_theme', 'hovercraft_logo' );
+// alternative logo
+require get_template_directory() . '/inc/logo-alternative.php';
 
+// custom header
+require get_template_directory() . '/inc/custom-header.php';
+
+// customizer settings
+require get_template_directory() . '/inc/customizer-settings.php';
+
+// video uploader
+require get_template_directory() . '/inc/header-video.php';
+
+// video uploader
+require get_template_directory() . '/inc/widget-titles.php';
 
 // variables
 $welcome = "Stop fixing your WordPress theme, and focus on your business.";
@@ -40,15 +43,3 @@ add_theme_support('woocommerce');
 
 // page excerpts
 add_post_type_support( 'page', 'excerpt' );
-
-
-// disable copyright widget title
-// https://presscustomizr.com/snippet/dynamically-changing-the-widget-title-depending-on-the-context/
-function my_widget_title($id_base) {
-      if ('hovercraft_copyright' == $id_base) {
-      		return '';
-      }
-      else {
-        return $title;
-      }
-    }
