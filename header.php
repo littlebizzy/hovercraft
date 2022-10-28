@@ -67,14 +67,26 @@
 		
 	<?php if (is_front_page()) { ?><div id="splash-wrapper"><div class="splash-wide" style="background: 
 		linear-gradient(60deg,
-    rgba(55, 71, 79, 0.7777485994397759) 30%,
+	rgba(38, 50, 56, 0.7777485994397759) 30%,
+    /* rgba(55, 71, 79, 0.7777485994397759) 30%, */
     rgba(255, 255, 255, 0) 100%), url(<?php 
+$url_header_image = esc_url( get_header_image() );
 $url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' ); 
-if (empty($url)){ echo "https://source.unsplash.com/featured/1600x900?nature"; } else { echo $url; } ?>);		
+if (empty($url_header_image)){ echo "https://source.unsplash.com/featured/1600x900?nature"; } else { echo $url_header_image; } ?>);		
 background-position: center center;
 background-size:cover;
 background-repeat:no-repeat;
 ">
+		
+		<?php  ?>
+<?php 
+	$url_hovercraft_video = wp_get_attachment_url(get_theme_mod('hovercraft_video'));
+	if (!empty($url_hovercraft_video)){ echo 
+		'<video playsinline autoplay muted loop poster="cake.jpg" >
+    <source src="'.$url_hovercraft_video.'" type="video/mp4">
+    Your browser does not support the video tag.
+</video>';
+	} ?>
 
 <div id="header-home"><?php } else { ?><div id="header-page"><?php } ?>
 <div class="inner">
@@ -82,17 +94,27 @@ background-repeat:no-repeat;
 	<div id="branding">
 		<div class="branding-left">
 		<div class="site-logo" style="background:url(<?php 
-								 $custom_logo_id = get_theme_mod( 'custom_logo' );
+								 $custom_logo_id = get_theme_mod( 'hovercraft_logo_transparent' );
 $logourl = wp_get_attachment_image_src( $custom_logo_id , 'full' );
 								// if ( function_exists( 'the_custom_logo' ) ) { the_custom_logo(); } 
-								echo esc_url( $logourl[0]); ?>);
+								echo $custom_logo_id; esc_url( $logourl[0]); ?>);
 background-position: center center;
 background-size:contain;
 background-repeat:no-repeat;"></div>
 		</div><!-- branding-left -->
 		<div class="branding-right">
-		<div class="site-title"><?php echo get_bloginfo( 'name' ); ?></div>
-		<div class="site-tagline"><?php echo get_bloginfo( 'description' ); ?></div>
+		<div class="site-title"><?php 
+			if ( (get_theme_mod('header_text') != 0) && (get_bloginfo('name') != '') ) {
+  echo '<div class="site-name">' . get_bloginfo('name') . '</div>';
+}
+			// echo get_bloginfo( 'name' ); 
+			?></div>
+		<div class="site-tagline"><?php 
+			if ( (get_theme_mod('header_text') != 0) && (get_bloginfo('description') != '') ) {
+  echo '<div class="site-description">' . get_bloginfo('description') . '</div>';
+}
+			// echo get_bloginfo( 'description' ); 
+			?></div>
 		</div><!-- branding-right -->
 	</div><!-- branding -->
 	<div class="clear"></div>
