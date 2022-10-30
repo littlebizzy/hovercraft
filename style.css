@@ -231,6 +231,10 @@ padding: 20px 0px;
 	color: #fff;
 }
 
+#branding a {
+	text-decoration: none !important;
+}
+
 .branding-left {
 	display:table-cell;
     vertical-align:middle;
