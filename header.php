@@ -65,76 +65,9 @@
 	</div><!-- topbar -->
 	<?php } ?>
 		
-	<?php if (is_front_page()) { ?><div id="splash-wrapper"><div class="splash-wide" style="background: 
-		linear-gradient(60deg,
-	rgba(38, 50, 56, 0.7777485994397759) 30%,
-    /* rgba(55, 71, 79, 0.7777485994397759) 30%, */
-    rgba(255, 255, 255, 0) 100%), url(<?php 
-$url_header_image = esc_url( get_header_image() );
-$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' ); 
-if (empty($url_header_image)){ echo "https://source.unsplash.com/featured/1600x900?nature"; } else { echo $url_header_image; } ?>);		
-background-position: center center;
-background-size:cover;
-background-repeat:no-repeat;
-">
+<?php if (is_front_page()) { 
+	get_template_part('template-parts/header-home'); 
+} else { 
+	// get_template_part('template-parts/header-page'); 
+} ?>
 		
-		<?php  ?>
-<?php 
-	$url_hovercraft_video = wp_get_attachment_url(get_theme_mod('hovercraft_video'));
-	if (!empty($url_hovercraft_video)){ echo 
-		'<video playsinline autoplay muted loop poster="cake.jpg" >
-    <source src="'.$url_hovercraft_video.'" type="video/mp4">
-    Your browser does not support the video tag.
-</video>';
-	} ?>
-
-<div id="header-home"><?php } else { ?><div id="header-page"><?php } ?>
-<div class="inner">
-	<div class="header-left">
-	<div id="branding">
-		<div class="branding-left">
-		<div class="site-logo" style="background:url(<?php 
-								 $custom_logo_id = get_theme_mod( 'hovercraft_logo_transparent' );
-$logourl = wp_get_attachment_image_src( $custom_logo_id , 'full' );
-								// if ( function_exists( 'the_custom_logo' ) ) { the_custom_logo(); } 
-								echo $custom_logo_id; esc_url( $logourl[0]); ?>);
-background-position: center center;
-background-size:contain;
-background-repeat:no-repeat;"></div>
-		</div><!-- branding-left -->
-		<div class="branding-right">
-		<div class="site-title"><?php 
-			if ( (get_theme_mod('header_text') != 0) && (get_bloginfo('name') != '') ) {
-  echo '<div class="site-name">' . get_bloginfo('name') . '</div>';
-}
-			// echo get_bloginfo( 'name' ); 
-			?></div>
-		<div class="site-tagline"><?php 
-			if ( (get_theme_mod('header_text') != 0) && (get_bloginfo('description') != '') ) {
-  echo '<div class="site-description">' . get_bloginfo('description') . '</div>';
-}
-			// echo get_bloginfo( 'description' ); 
-			?></div>
-		</div><!-- branding-right -->
-	</div><!-- branding -->
-	<div class="clear"></div>
-	</div><!-- header-left -->
-	
-	<div class="header-right">
-	<div class="menu-choose">
-		<div class="menu-desktop">
-			<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class'	=> 'menu-wrapper' ) ); ?>
-			<?php wp_nav_menu( array( 'theme_location' => 'cta-header', 'container_class'	=> 'cta-header' ) ); ?>
-			<div class="search"><i class="material-icons search">search</i></div>
-			<?php if ( class_exists( 'WooCommerce' ) ) { ?>
-			<div class="cart"><a href="/cart/"><i class="material-icons cart">shopping_cart</i></a><div class="notification-dot"><?php echo WC()->cart->get_cart_contents_count(); ?><div class="clear"></div></div></div>
-		<?php } ?>
-		</div><!-- menu-desktop -->
-		<div class="menu-mobile"><i class="material-icons menu">menu</i></div>
-		</div><!--menu-choose -->
-	<div class="clear"></div>
-	</div><!-- header-right -->
-		
-<div class="clear"></div>
-</div><!-- inner -->
-</div><!-- header-home -->
