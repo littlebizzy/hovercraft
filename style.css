@@ -5,7 +5,7 @@ GitHub Theme URI: littlebizzy/hovercraft
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 Description: A lightweight and SEO-friendly theme for WordPress with no database queries, that can be easily customized using PHP snippets for ultimate stability.
-Version: 0.1.8
+Version: 0.1.9
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
@@ -55,6 +55,12 @@ html, body {
 
 .clear {
 	clear:both;
+}
+
+h1 {
+	margin-bottom:20px;
+	font-weight:700;
+	font-size:36px;
 }
 
 h3 {
@@ -170,13 +176,32 @@ a {
 	font-weight:600;
 }
 
+#header-home a {
+	color:#fff;
+}
+
 /* header page */
 
 #header-page {
 	width:100%;
 padding: 20px 0px;
 	 display: table;
-	background:#ECEFF1;
+	background:#fff;
+}
+
+#header-page-no-splash {
+	width:100%;
+padding: 20px 0px;
+	 display: table;
+	background:#ECEFF1; /* correct gray */
+}
+
+#header-page a {
+	color:#263238 !important; /* correct */
+}
+
+#header-page-no-splash a {
+	color:#263238 !important; /* correct */
 }
 
 
@@ -291,7 +316,12 @@ padding: 20px 0px;
 
 #header-page .menu-wrapper ul li a {
 	text-decoration:none;
-	color:black;
+	color:#263238; /* correct */
+}
+
+#header-page-no-splash .menu-wrapper ul li a {
+	text-decoration:none;
+	color:#263238; /* correct */
 }
 
 .menu-wrapper ul li a:hover {
@@ -329,7 +359,6 @@ padding: 20px 0px;
 }
 
 .search i {
-	color:#fff;
 	text-decoration:none;
 	font-size:24px;
 	padding:0px;
@@ -345,7 +374,6 @@ padding: 20px 0px;
 }
 
 .cart i {
-	color:#fff;
 	text-decoration:none;
 	font-size:24px;
 	padding:0px;
@@ -360,7 +388,7 @@ padding: 20px 0px;
   left: -1px;
 	position:relative;
 	line-height:1;
-	font-size:10px;
+	font-size:11px;
 	font-weight:700;
 	color:#fff;
 	padding:2px 4px;
@@ -661,6 +689,7 @@ color:#263238;
 	width:800px;
 	background: #fff;
 	min-height:600px;
+	overflow-x:hidden;
 }
 
 /* sidebar */
