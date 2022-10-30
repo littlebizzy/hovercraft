@@ -250,6 +250,8 @@ padding: 20px 0px;
   	height: 100px;
 }
 
+/* branding right... site name and tagline */
+
 .branding-right {
 	display:table-cell;
     vertical-align:middle;
@@ -258,7 +260,7 @@ padding: 20px 0px;
 	width:100%;
 }
 
-.site-title {
+.site-name {
 	font-size:24px;
 	font-weight:700;
 	line-height:1.5;
