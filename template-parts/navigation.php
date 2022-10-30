@@ -1,35 +1,9 @@
 <div class="inner">
 	<div class="header-left">
-		<a href="<?php echo home_url(); ?>">
 		<div id="branding">
-		<div class="branding-left">
-		<div class="site-logo" style="background:url(<?php 
-$hovercraft_default_logo_id = get_theme_mod( 'custom_logo' );
-$logo_default_url = wp_get_attachment_image_src( $hovercraft_default_logo_id , 'full' );
-$logo_alternative_url = get_theme_mod( 'hovercraft_logo_transparent' );
-// $logo_alternative_url = wp_get_attachment_image_src( $hovercraft_alternative_logo_id , 'full' );
-// if ( function_exists( 'the_custom_logo' ) ) { the_custom_logo(); } 
-if (is_front_page()) { echo $logo_alternative_url; } else { echo esc_url( $logo_default_url[0]); }
-?>);
-background-position: center center;
-background-size:contain;
-background-repeat:no-repeat;"></div>
-		</div><!-- branding-left -->
-		<div class="branding-right">
-		<div class="site-title"><?php 
-			if ( (get_theme_mod('header_text') != 0) && (get_bloginfo('name') != '') ) {
-  echo '<div class="site-name">' . get_bloginfo('name') . '</div>';
-}
-			// echo get_bloginfo( 'name' ); 
-			?></div>
-		<div class="site-tagline"><?php 
-			if ( (get_theme_mod('header_text') != 0) && (get_bloginfo('description') != '') ) {
-  echo '<div class="site-description">' . get_bloginfo('description') . '</div>';
-}
-			// echo get_bloginfo( 'description' ); 
-			?></div>
-		</div><!-- branding-right -->
-	</div></a><!-- branding -->
+		<?php if (get_theme_mod( 'custom_logo', true)) { get_template_part('template-parts/custom-logo'); } ?>
+		<?php if (display_header_text()==true) { get_template_part('template-parts/header-text'); } ?>
+	</div><!-- branding -->
 	<div class="clear"></div>
 	</div><!-- header-left -->
 	
