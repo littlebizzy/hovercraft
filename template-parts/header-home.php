@@ -4,20 +4,21 @@
     rgba(55, 71, 79, 0.7777485994397759) 30%, 
     rgba(255, 255, 255, 0) 100%), url(<?php 
 $url_header_image = esc_url( get_header_image() );
-if (empty($url_header_image)){ echo "https://source.unsplash.com/featured/1600x900?mountains,people,city"; } else { echo $url_header_image; } ?>);		
+$url_hovercraft_video = wp_get_attachment_url(get_theme_mod('hovercraft_video'));
+if (empty($url_header_image)) { 
+	echo "https://source.unsplash.com/featured/1600x900?mountains,people,city"; 
+} else { echo $url_header_image; } ?>);		
 background-position: center center;
 background-size:cover;
 background-repeat:no-repeat;
 ">
-		
-		<?php  ?>
+
 <?php 
 	$url_hovercraft_video = wp_get_attachment_url(get_theme_mod('hovercraft_video'));
 	if (!empty($url_hovercraft_video)){ echo 
-		'<video playsinline autoplay muted loop poster="cake.jpg" >
-    <source src="'.$url_hovercraft_video.'" type="video/mp4">
-    Your browser does not support the video tag.
-</video>';
+		'<video playsinline autoplay muted loop poster="'.$url_header_image.'">
+    	<source src="'.$url_hovercraft_video.'" type="video/mp4">
+    	Your browser does not support the video tag.</video>';
 	} ?>
 
 <div id="header-home">
@@ -42,8 +43,28 @@ background-repeat:no-repeat;
 	
 		<?php if (is_front_page()) : ?>
 		<div class="clear"></div>
-		<?php wp_nav_menu( array( 'theme_location' => 'cta-splash-major', 'container_class'	=> 'cta-splash-major' ) ); ?>
-		<?php wp_nav_menu( array( 'theme_location' => 'cta-splash-minor', 'container_class'	=> 'cta-splash-minor' ) ); ?>
+		<?php
+			if ( has_nav_menu( 'cta-splash-major' ) ) {
+    		// User has assigned menu to this location;
+    		// https://wordpress.stackexchange.com/questions/32739/wp-nav-menu-show-menu-only-if-one-exists-otherwise-show-nothing
+    		wp_nav_menu( array( 
+        	'theme_location' => 'cta-splash-major', 
+        	'menu_class' => 'cta', 
+        	'container_class' => 'cta-splash-major'
+    		) );
+			}
+		?>
+		<?php
+			if ( has_nav_menu( 'cta-splash-minor' ) ) {
+    		// User has assigned menu to this location;
+    		// https://wordpress.stackexchange.com/questions/32739/wp-nav-menu-show-menu-only-if-one-exists-otherwise-show-nothing
+    		wp_nav_menu( array( 
+        	'theme_location' => 'cta-splash-minor', 
+        	'menu_class' => 'cta', 
+        	'container_class' => 'cta-splash-minor'
+    		) );
+			}
+		?>
 		<?php endif; ?>
 		</div><!-- welcome-wrapper -->
 		
@@ -53,4 +74,3 @@ background-repeat:no-repeat;
 	
 </div><!-- splash-wide -->
 </div><!-- splash-wrapper -->
-
