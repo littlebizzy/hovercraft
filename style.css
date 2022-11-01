@@ -5,7 +5,7 @@ GitHub Theme URI: littlebizzy/hovercraft
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 Description: A lightweight and SEO-friendly theme for WordPress with no database queries, that can be easily customized using PHP snippets for ultimate stability.
-Version: 0.1.9
+Version: 0.1.10
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
@@ -170,7 +170,7 @@ a {
 	}
 }
 
-#header-home .menu-wrapper ul li a {
+#header-home .main-menu ul li a {
 	text-decoration:none;
 	color:#fff;
 	font-weight:600;
@@ -304,15 +304,15 @@ padding: 20px 0px;
 }
 }
 
-.menu-wrapper {
+.main-menu {
 	display:inline-block;
 }
 
-.menu-wrapper ul {
+.main-menu ul {
 	text-align:right;
 }
 
-.menu-wrapper ul li {
+.main-menu ul li {
 	font-size:18px;
 	list-style-type:none;
 	padding-left:30px;
@@ -320,17 +320,17 @@ padding: 20px 0px;
 	display:inline-block;
 }
 
-#header-page .menu-wrapper ul li a {
+#header-page .main-menu ul li a {
 	text-decoration:none;
 	color:#263238; /* correct */
 }
 
-#header-page-no-splash .menu-wrapper ul li a {
+#header-page-no-splash .main-menu ul li a {
 	text-decoration:none;
 	color:#263238; /* correct */
 }
 
-.menu-wrapper ul li a:hover {
+.main-menu ul li a:hover {
 	text-decoration:underline;
 }
 
@@ -435,6 +435,16 @@ padding: 20px 0px;
 	padding:0px; /* correct */
 	display:table; /* correct */
 	}
+}
+
+video {
+  /** Simulationg background-size: cover */
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 video::after {
@@ -777,7 +787,7 @@ color:#263238;
 	margin:0px auto;
 	background:#ECEFF1;
 	color:#263238;
-	padding: 100px 0px;
+	padding: 60px 0px;
 	box-sizing:border-box;
 	display: table;
 }
@@ -802,6 +812,13 @@ color:#263238;
 	display:table-cell;
     vertical-align:top;
 }
+}
+
+#footer .widget-wrapper{
+    margin-bottom: 30px;
+}
+#footer .widget-wrapper:last-child{
+    margin-bottom: 0;
 }
 
 @media screen and (max-width: 1200px) {
@@ -983,6 +1000,11 @@ color:#263238;
 #copyright ul li a {
 	color:#263238;
 	text-decoration:none;
+}
+
+#copyright i {
+	font-size:20px;
+	padding-left:20px;
 }
 
 /* select menu bottom */
