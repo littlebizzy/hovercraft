@@ -10,8 +10,31 @@
 	<div class="header-right">
 	<div class="menu-choose">
 		<div class="menu-desktop">
-			<?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class'	=> 'menu-wrapper' ) ); ?>
-			<?php wp_nav_menu( array( 'theme_location' => 'cta-header', 'container_class'	=> 'cta-header' ) ); ?>
+			<?php // wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'main-menu' ) ); ?>
+			<?php 
+        	if ( has_nav_menu( 'main-menu' ) ) {
+            wp_nav_menu(array(
+                'theme_location' => 'main-menu', 
+				'menu_class' => 'menu', 
+        		'container_class' => 'main-menu'
+                ));
+        	}else{
+            echo "<ul>";
+            wp_list_pages( array( 'title_li' => '' ) );
+            echo "</ul>";
+        	}
+        	?>
+			<?php
+			if ( has_nav_menu( 'cta-header' ) ) {
+    		// User has assigned menu to this location;
+    		// https://wordpress.stackexchange.com/questions/32739/wp-nav-menu-show-menu-only-if-one-exists-otherwise-show-nothing
+    		wp_nav_menu( array( 
+        	'theme_location' => 'cta-header', 
+        	'menu_class' => 'cta', 
+        	'container_class' => 'cta-header'
+    		) );
+			}
+			?>
 			<div class="search"><a href="#"><i class="material-icons search">search</i></a></div>
 			<?php if ( class_exists( 'WooCommerce' ) ) { ?>
 			<div class="cart"><a href="/cart/"><i class="material-icons cart">shopping_cart</i></a><div class="notification-dot"><?php echo WC()->cart->get_cart_contents_count(); ?><div class="clear"></div></div></div>
