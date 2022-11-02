@@ -19,9 +19,9 @@
         		'container_class' => 'main-menu'
                 ));
         	}else{
-            echo "<ul>";
+            echo '<div class="main-menu"><ul class="menu">';
             wp_list_pages( array( 'title_li' => '' ) );
-            echo "</ul>";
+            echo '</ul></div>';
         	}
         	?>
 			<?php
