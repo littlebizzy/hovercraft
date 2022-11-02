@@ -45,17 +45,18 @@
 	<div class="clear"></div>
 	</div><!-- copyright-left -->
 	
+	<?php if ( is_active_sidebar('hovercraft_copyright')) { ?>
 	<div class="copyright-right">
-	
 	<?php add_filter ( 'widget_title' , 'my_widget_title', 10, 1); //we use the default priority and 3 arguments in the callback function
 		dynamic_sidebar( 'hovercraft_copyright' ); remove_filter('widget_title', 'my_widget_title'); ?>
-		
 	<div class="clear"></div>
 	</div><!-- copyright-right -->
-		
-	<div class="clear"></div>
-	</div><!--inner -->
+	<?php } ?>
+
+<div class="clear"></div>
+</div><!--inner -->
 </div><!-- copyright -->
+
 </div><!-- container -->
 
 <?php wp_footer(); ?>
