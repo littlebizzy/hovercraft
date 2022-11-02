@@ -194,6 +194,7 @@ padding: 20px 0px;
 padding: 20px 0px;
 	 display: table;
 	background:#ECEFF1; /* correct gray */
+	color:#263238 !important; /* correct */
 }
 
 #header-page a {
@@ -228,7 +229,6 @@ padding: 20px 0px;
 
 #branding {
 	display: table;
-	color: #fff;
 }
 
 #branding a {
