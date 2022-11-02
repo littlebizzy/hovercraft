@@ -1,7 +1,7 @@
 <div class="inner">
 	<div class="header-left">
 		<div id="branding">
-		<?php if (get_theme_mod( 'custom_logo', true)) { get_template_part('template-parts/custom-logo'); } ?>
+		<?php if(get_theme_mod('custom_logo', '') != '') { get_template_part('template-parts/custom-logo'); } ?>
 		<?php if (display_header_text()==true) { get_template_part('template-parts/header-text'); } ?>
 	</div><!-- branding -->
 	<div class="clear"></div>
