@@ -1,10 +1,14 @@
-<div id="footer-early">
-	<div class="clear"></div>
-</div><!-- footer-early -->
+<?php if ( is_active_sidebar('hovercraft_footer_top')) { ?>
+<div id="footer-top">
+<div class="clear"></div>
+</div><!-- footer-top -->
+<?php } ?>
 
-<div id="footer-before">
-	<div class="clear"></div>
-</div><!-- footer-before -->
+<?php if ( is_active_sidebar('hovercraft_footer_middle')) { ?>
+<div id="footer-middle">
+<div class="clear"></div>
+</div><!-- footer-middle -->
+<?php } ?>
 
 <div id="footer">
 <div class="inner">
