@@ -1,11 +1,12 @@
 <?php
 
+// homepage background image
 function hovercraft_custom_header_setup() {
     $args = array(
         // 'default-image'      => get_template_directory_uri() . 'img/default-image.jpg',
         // 'default-text-color' => '000',
-        'width'              => 1600,
-        'height'             => 900,
+        'width'              => 1920,
+        'height'             => 1080,
         'flex-width'         => true,
         'flex-height'        => true,
     );
