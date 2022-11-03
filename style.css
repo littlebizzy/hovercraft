@@ -365,8 +365,8 @@ padding: 20px 0px;
 }
 
 .cta-header ul li a {
-	color:#fff;
-	text-decoration:none;
+	color:#fff !important;
+	text-decoration:none !important;
 }
 
 /* search */
