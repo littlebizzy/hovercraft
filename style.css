@@ -136,6 +136,20 @@ a {
 }
 }
 
+@media screen and (max-width: 1200px) {
+.topbar-center {
+	text-align: center;
+}
+}
+
+@media screen and (min-width: 1200px) {
+.topbar-center {
+    vertical-align: middle;
+	height: inherit;
+	text-align: center;
+}
+}
+
 #topbar a {
 	color:#fff;
 }
