@@ -2,7 +2,7 @@
 	<div class="header-left">
 		<div id="branding">
 		<?php if(get_theme_mod('custom_logo', '') != '') { get_template_part('template-parts/custom-logo'); } ?>
-		<?php if (display_header_text()==true) { get_template_part('template-parts/header-text'); } ?>
+		<?php if (display_header_text()==true) { get_template_part('template-parts/header/header-text'); } ?>
 	</div><!-- branding -->
 	<div class="clear"></div>
 	</div><!-- header-left -->
