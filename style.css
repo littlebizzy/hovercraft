@@ -5,7 +5,7 @@ GitHub Theme URI: littlebizzy/hovercraft
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 Description: A lightweight and SEO-friendly theme for WordPress with no database queries, that can be easily customized using PHP snippets for ultimate stability.
-Version: 0.1.12
+Version: 0.1.13
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
@@ -162,25 +162,26 @@ a {
 
 @media screen and (max-width: 1200px) {
 #header-home {
-	width:100%;
-	padding: 20px 20px;
-	 display: table;
+	width: 100%;
 	box-sizing:border-box;
+	display: table;
+	padding: 20px 20px;
 	border-bottom: 1px solid rgba(255,255,255, 0.2);
 	background: rgba(55, 71, 79, 0.2);
+	color: #fff;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 #header-home {
-	width:100%;
+	width: 100%;
+	display: table;
+	margin: 0px auto;
 	padding: 24px 0px;
-	 display: table;
 	border-bottom: 1px solid rgba(255,255,255, 0.2);
 	background: rgba(55, 71, 79, 0.2);
-	margin:0px auto;
-	
-	position:relative; /* required when using video background on splash-wide */
+	position: relative; /* required when using video background on splash-wide */
+	color: #fff;
 	}
 }
 
