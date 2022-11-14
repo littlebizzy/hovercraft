@@ -3,6 +3,9 @@
 // select menu
 // disabled // require get_template_directory() . '/inc/select-menu.php';
 
+// back to top
+require get_template_directory() . '/inc/back-to-top.php';
+
 // suggest git updater
 require get_template_directory() . '/inc/suggest-git-updater.php';
 
