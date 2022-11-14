@@ -61,7 +61,9 @@
 
 <?php wp_footer(); ?>
 
-<?php get_template_part('template-parts/button-back-to-top'); ?>
+<?php if( get_theme_mod( 'hovercraft_settings[hovercraft_back_to_top]' ) == '1') {
+	get_template_part('template-parts/button-back-to-top'); 
+} ?>
 
 </body><!-- body -->
 </html><!-- html -->
