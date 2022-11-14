@@ -1,4 +1,4 @@
-<div id="splash-wrapper"><div class="splash-wide" style="background: 
+<div id="splash-wrapper"><div class="splash-mini" style="background: 
 		linear-gradient(60deg,
 	/* rgba(38, 50, 56, 0.7777485994397759) 30%, */
     rgba(55, 71, 79, 0.7777485994397759) 30%, 
@@ -11,7 +11,7 @@ background-size:cover;
 background-repeat:no-repeat;
 ">
 
-<div id="header-half-splash">
+<div id="header-mini-splash">
 <?php get_template_part('template-parts/navigation'); ?>
 </div>
 	
