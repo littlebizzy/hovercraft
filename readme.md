@@ -1,9 +1,13 @@
 # HoverCraft
 
-A lightweight and SEO-friendly theme for WordPress with no database queries, that can be easily customized using PHP snippets for ultimate stability.
+No maintenance WordPress theme
 
 ## Changelog
 
-### 1.0.0
-- added support for Git Updater
-- initial release
+### 0.1.x
+- alpha branch
+- more messing around
+
+### 0.0.x
+- support for Git Updater
+- messing around
