@@ -1080,18 +1080,6 @@ color:#263238;
 
 /* scrollup */
 
-#scrollupOLD {
-	position: fixed;
-	bottom: 20px;
-	right: 30px;
-	cursor: pointer;
-}
-
-#scrollupOLD i {
-	color: #E0E0E0;
-	font-size: 24px;
-	opacity: 0.8;
-}
 
 #scrollup {
   display: inline-block;
@@ -1112,7 +1100,9 @@ color:#263238;
 
 #scrollup::after {
   content: "\f077";
+content: "\e316";
   font-family: FontAwesome;
+	font-family: 'Material Icons';
   font-weight: normal;
   font-style: normal;
   font-size: 2em;
