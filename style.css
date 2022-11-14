@@ -1080,15 +1080,56 @@ color:#263238;
 
 /* scrollup */
 
-#scrollup {
+#scrollupOLD {
 	position: fixed;
 	bottom: 20px;
 	right: 30px;
 	cursor: pointer;
 }
 
-#scrollup i {
+#scrollupOLD i {
 	color: #E0E0E0;
 	font-size: 24px;
 	opacity: 0.8;
+}
+
+#scrollup {
+  display: inline-block;
+  background-color: #FF9800;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color .3s, 
+    opacity .5s, visibility .5s;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+}
+
+#scrollup::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+
+#scrollup:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+
+#scrollup:active {
+  background-color: #555;
+}
+
+#scrollup.show {
+  opacity: 1;
+  visibility: visible;
 }
