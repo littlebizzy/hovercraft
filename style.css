@@ -5,7 +5,7 @@ GitHub Theme URI: littlebizzy/hovercraft
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 Description: A lightweight and SEO-friendly theme for WordPress with no database queries, that can be easily customized using PHP snippets for ultimate stability.
-Version: 0.1.18
+Version: 0.1.19
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
@@ -226,6 +226,43 @@ a {
 }
 
 #header-half-splash a {
+	color: #263238 !important; /* correct */
+}
+
+
+/* header-mini-splash */
+
+@media screen and (max-width: 1200px) {
+#header-mini-splash {
+	width: 100%;
+	box-sizing: border-box;
+	display: table;
+	padding: 20px 0px;
+	border-bottom: 1px solid transparent;
+	background: #FFF;
+	color: #263238 !important; /* correct */
+	}
+}
+
+@media screen and (min-width: 1200px) {
+#header-mini-splash {
+	width: 100%;
+	display: table;
+	margin: 0px auto;
+	padding: 20px 0px;
+	border-bottom: 1px solid transparent;
+	background: #FFF;
+	color: #263238 !important; /* correct */
+	}
+}
+
+#header-mini-splash .main-menu ul li a {
+	text-decoration: none;
+	color: #263238 !important; /* correct */
+	font-weight: 600;
+}
+
+#header-mini-splash a {
 	color: #263238 !important; /* correct */
 }
 
@@ -498,6 +535,23 @@ a {
 	}
 }
 
+@media screen and (max-width: 1200px) {
+.splash-mini {
+	width:100%; /* correct */
+	padding:0px; /* correct */
+	display:table; /* correct */
+	box-sizing:border-box;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+.splash-mini {
+	width:100%; /* correct */
+	padding:0px; /* correct */
+	display:table; /* correct */
+	}
+}
+
 video {
   /** Simulationg background-size: cover */
   object-fit: cover;
@@ -536,6 +590,18 @@ background-repeat:no-repeat;
 	display:table-row; /* correct */
 	
 	position:relative; /* required when using video background on splash-wide */
+	}
+}
+
+@media screen and (max-width: 1200px) {
+.splash-main-mini {
+	padding:30px 20px; /* correct */
+	}
+}
+
+@media screen and (min-width: 1200px) {
+.splash-main-mini {
+	padding:60px 0px;
 	}
 }
 
