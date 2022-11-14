@@ -1,4 +1,4 @@
-<div id="splash-wrapper"><div class="splash-mini" style="background: 
+<div class="splash-mini" style="background: 
 		linear-gradient(60deg,
 	/* rgba(38, 50, 56, 0.7777485994397759) 30%, */
     rgba(55, 71, 79, 0.7777485994397759) 30%, 
@@ -15,13 +15,9 @@ background-repeat:no-repeat;
 <?php get_template_part('template-parts/navigation'); ?>
 </div>
 	
-<div class="splash-main">
+<div class="splash-main-mini">
 <div class="inner">
-	<?php if (is_front_page()) { ?>
-	<div class="welcome-wrapper">
-	<?php } else { ?>
 		<div class="title-wrapper">
-	<?php } ?>
 		<div class="welcome"><?php single_post_title(); ?></div>
 		<div class="welcome-text"><?php 
 			 $my_excerpt = get_the_excerpt();
@@ -43,4 +39,4 @@ background-repeat:no-repeat;
 </div><!-- splash-main -->
 	
 </div><!-- splash-wide -->
-</div><!-- splash-wrapper -->
+	
