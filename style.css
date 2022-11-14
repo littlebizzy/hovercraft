@@ -5,7 +5,7 @@ GitHub Theme URI: littlebizzy/hovercraft
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 Description: A lightweight and SEO-friendly theme for WordPress with no database queries, that can be easily customized using PHP snippets for ultimate stability.
-Version: 0.1.16
+Version: 0.1.17
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
@@ -154,16 +154,13 @@ a {
 	color:#fff;
 }
 
-/* header home */
 
-#header-home-wrapper {
-
-}
+/* header-splash */
 
 @media screen and (max-width: 1200px) {
-#header-home {
+#header-splash {
 	width: 100%;
-	box-sizing:border-box;
+	box-sizing: border-box;
 	display: table;
 	padding: 20px 20px;
 	border-bottom: 1px solid rgba(255,255,255, 0.2);
@@ -173,7 +170,7 @@ a {
 }
 
 @media screen and (min-width: 1200px) {
-#header-home {
+#header-splash {
 	width: 100%;
 	display: table;
 	margin: 0px auto;
@@ -185,58 +182,64 @@ a {
 	}
 }
 
-#header-home .main-menu ul li a {
-	text-decoration:none;
-	color:#fff;
-	font-weight:600;
+#header-splash .main-menu ul li a {
+	text-decoration: none;
+	color: #fff;
+	font-weight: 600;
 }
 
-#header-home a {
-	color:#fff;
+#header-splash a {
+	color: #fff;
 }
 
-/* header page */
 
-#header-page {
-	width:100%;
-padding: 20px 0px;
-	 display: table;
-	background:#fff;
+/* header-basic */
+
+@media screen and (max-width: 1200px) {
+#header-basic {
+	width: 100%;
+	box-sizing: border-box;
+	display: table;
+	padding: 20px 0px;
+	border-bottom: 1px solid transparent;
+	background: #ECEFF1; /* correct gray */
+	color: #263238 !important; /* correct */
+	}
 }
 
-#header-page-no-splash {
-	width:100%;
-padding: 20px 0px;
-	 display: table;
-	background:#ECEFF1; /* correct gray */
+@media screen and (min-width: 1200px) {
+#header-basic {
+	width: 100%;
+	display: table;
+	margin: 0px auto;
+	padding: 20px 0px;
+	border-bottom: 1px solid transparent;
+	background: #ECEFF1; /* correct gray */
+	color: #263238 !important; /* correct */
+	}
+}
+
+#header-basic a {
 	color:#263238 !important; /* correct */
 }
 
-#header-page a {
-	color:#263238 !important; /* correct */
-}
 
-#header-page-no-splash a {
-	color:#263238 !important; /* correct */
-}
-
-
-/* https://developer.mozilla.org/en-US/docs/Web/CSS/min-width */
+/* header elements */
 
 .header-left {
-	display:table-cell;
-    vertical-align:middle;
-	height:inherit;
-	min-width: auto;
+	display: table-cell;
+    vertical-align: middle;
+	height: inherit;
+	min-width: auto; /* https://developer.mozilla.org/en-US/docs/Web/CSS/min-width */
 	white-space: nowrap;
 }
 
 .header-right {
-	display:table-cell;
-    vertical-align:middle;
-	height:inherit;
-	text-align:right;
-	width:100%;
+	display: table-cell;
+    vertical-align: middle;
+	height: inherit;
+	text-align: right;
+	width: 100%;
 }
 
 
