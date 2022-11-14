@@ -1121,48 +1121,43 @@ color:#263238;
 }
 
 
-/* scrollup */
-
+/* back-to-top */
 
 #scrollup {
-  display: inline-block;
-  background-color: #FF9800;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  border-radius: 4px;
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  transition: background-color .3s, 
+  	display: inline-block;
+  	background-color: #FF9800;
+  	width: 50px;
+  	height: 50px;
+  	text-align: center;
+  	border-radius: 4px;
+  	position: fixed;
+  	bottom: 30px;
+  	right: 30px;
+  	transition: background-color .3s, 
     opacity .5s, visibility .5s;
-  opacity: 0;
-  visibility: hidden;
-  z-index: 1000;
+  	opacity: 0;
+  	visibility: hidden;
+  	z-index: 1000;
 }
 
 #scrollup::after {
-  content: "\f077";
-content: "\e316";
-  font-family: FontAwesome;
+	content: "\e316";
 	font-family: 'Material Icons';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 2em;
-  line-height: 50px;
-  color: #fff;
+  	font-size: 2em;
+  	line-height: 50px;
+  	color: #fff;
 }
 
 #scrollup:hover {
-  cursor: pointer;
-  background-color: #333;
+  	cursor: pointer;
+  	background-color: #333;
 }
 
 #scrollup:active {
-  background-color: #555;
+  	background-color: #555;
 }
 
 #scrollup.show {
-  opacity: 1;
-  visibility: visible;
+  	opacity: 1;
+  	visibility: visible;
 }
