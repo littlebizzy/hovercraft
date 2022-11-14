@@ -61,7 +61,7 @@
 
 <?php wp_footer(); ?>
 
-<div id="scrollup"><i class="fa-solid fa-circle-arrow-up"></i></div>
+<?php get_template_part('template-parts/button-back-to-top'); ?>
 
 </body><!-- body -->
 </html><!-- html -->
