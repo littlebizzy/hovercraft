@@ -1,11 +1,11 @@
 <div class="splash-mini" style="background: 
-		linear-gradient(60deg,
-	/* rgba(38, 50, 56, 0.7777485994397759) 30%, */
+	linear-gradient(60deg,
     rgba(55, 71, 79, 0.7777485994397759) 30%, 
     rgba(255, 255, 255, 0) 100%), url(<?php 
-$url_header_image = esc_url( get_header_image() );
-$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' ); 
-if (empty($url_header_image)){ echo "https://source.unsplash.com/featured/1600x900?mountains,people,city"; } else { echo $url_header_image; } ?>);		
+	$url_header_image = esc_url( get_header_image() );
+	$url_featured_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' ); 
+	$url_random_unsplash = "https://source.unsplash.com/featured/1600x900?mountains,people,city";
+	if (!empty($url_featured_image)){ echo $url_featured_image; } else { echo $url_random_unsplash; } ?>);		
 background-position: center center;
 background-size:cover;
 background-repeat:no-repeat;
@@ -20,11 +20,10 @@ background-repeat:no-repeat;
 		<div class="title-wrapper">
 		<div class="welcome"><?php single_post_title(); ?></div>
 		<div class="welcome-text"><?php 
-			 $my_excerpt = get_the_excerpt();
-     // if($my_excerpt !='') {
-	if (strlen($my_excerpt) >= 5){
-         the_excerpt();
-     } else { global $hovercraft_excerpt; echo $hovercraft_excerpt; } ?></div><!-- welcome-text -->
+			$my_excerpt = get_the_excerpt();
+			if (strlen($my_excerpt) >= 10000){
+         	the_excerpt();
+     		} ?></div><!-- welcome-text -->
 		
 	
 		<?php if (is_front_page()) : ?>
