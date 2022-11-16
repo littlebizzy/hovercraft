@@ -28,6 +28,25 @@ $wp_customize->add_control(
         )
     )
 );
+
+// search setting
+$wp_customize->add_setting('hovercraft_search', array(
+    'default'    => '1'
+));
+
+// search control
+$wp_customize->add_control(
+    new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_search',
+        array(
+            'label'     => __('Enable site-wide search', 'hovercraft'),
+            'section'   => 'hovercraft_general',
+            'settings'  => 'hovercraft_search',
+            'type'      => 'checkbox',
+        )
+    )
+);
 	
 }
 
