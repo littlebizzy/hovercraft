@@ -184,6 +184,7 @@ a {
 	padding: 20px 20px;
 	border-bottom: 1px solid rgba(255,255,255, 0.2);
 	background: rgba(55, 71, 79, 0.2);
+	position: relative; /* required when using video background on splash-wide */
 	color: #fff;
 	}
 }
@@ -599,16 +600,17 @@ background-repeat:no-repeat;
 
 @media screen and (max-width: 1200px) {
 .splash-main {
-	padding:30px 20px; /* correct */
+	padding: 0px; /* 0px correct because ignored per table-row */
+	display: table-row; /* correct */
+	position: relative; /* required when using video background on splash-wide */
 	}
 }
 
 @media screen and (min-width: 1200px) {
 .splash-main {
-	padding:0px; /* correct */
-	display:table-row; /* correct */
-	
-	position:relative; /* required when using video background on splash-wide */
+	padding: 0px; /* correct */
+	display: table-row; /* correct */
+	position: relative; /* required when using video background on splash-wide */
 	}
 }
 
@@ -792,15 +794,20 @@ color:#263238;
 color:#263238;
 }
 
+
+/* welcome splash text */
+
 @media screen and (max-width: 1200px) {
 .welcome-wrapper {
-	vertical-align:middle;
+	width: 100%;
+	box-sizing: border-box;
+	padding: 30px 20px;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 .welcome-wrapper {
-	max-width:900px;
+	max-width: 900px;
 	}
 }
 
