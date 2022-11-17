@@ -33,8 +33,11 @@ require get_template_directory() . '/inc/customizer-settings.php';
 // video uploader
 require get_template_directory() . '/inc/header-video.php';
 
-// video uploader
+// widget titles
 require get_template_directory() . '/inc/widget-titles.php';
+
+// breadcrumbs
+require get_template_directory() . '/inc/breadcrumbs.php';
 
 // variables
 $welcome = "Stop fixing your WordPress theme, and focus on your business.";
