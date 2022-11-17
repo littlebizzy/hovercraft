@@ -1,4 +1,8 @@
 <div id="primary">
+
+<div class="breadcrumbs">
+	<?php ah_breadcrumb(); ?>
+</div><!-- breadcrumbs -->
 	
 	<?php // if (is_singular('post')) { ?>
 	<?php if (is_single()) { ?>
