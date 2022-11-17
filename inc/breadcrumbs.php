@@ -1,3 +1,5 @@
+<?php
+
 // https://torquemag.io/2020/09/wordpress-breadcrumbs/
 function ah_breadcrumb() {
 
