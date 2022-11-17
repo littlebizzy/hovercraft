@@ -165,6 +165,10 @@ a {
 }
 }
 
+#topbar p {
+	margin-bottom: 0;
+}
+
 #topbar a {
 	color:#fff;
 }
