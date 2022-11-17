@@ -35,7 +35,9 @@
     		) );
 			}
 			?>
-			<div class="search"><a href="#"><i class="material-icons search">search</i></a></div>
+			<?php if( get_theme_mod( 'hovercraft_search' ) != '0') {
+			get_template_part('template-parts/search-icon'); 
+			} ?>
 			<?php if ( class_exists( 'WooCommerce' ) ) { ?>
 			<div class="cart"><a href="/cart/"><i class="material-icons cart">shopping_cart</i></a><div class="notification-dot"><?php echo WC()->cart->get_cart_contents_count(); ?><div class="clear"></div></div></div>
 		<?php } ?>
