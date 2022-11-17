@@ -84,6 +84,11 @@ a {
 	text-decoration:underline;
 }
 
+.last-modified {
+	font-size: 14px;
+	color: #607D8B;
+}
+
 /* topbar */
 
 @media screen and (max-width: 1200px) {
