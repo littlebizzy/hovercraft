@@ -18,7 +18,7 @@ background-repeat:no-repeat;
 <div class="splash-main-mini">
 <div class="inner">
 		<div class="title-wrapper">
-		<div class="welcome"><?php single_post_title(); ?></div>
+		<div class="welcome-title"><?php single_post_title(); ?></div>
 		<div class="welcome-text"><?php 
 			$my_excerpt = get_the_excerpt();
 			if (strlen($my_excerpt) >= 10000){
