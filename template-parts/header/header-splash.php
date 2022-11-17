@@ -32,7 +32,7 @@ background-repeat:no-repeat;
 	<?php } else { ?>
 		<div class="title-wrapper">
 	<?php } ?>
-		<div class="welcome"><?php single_post_title(); ?></div>
+		<div class="welcome-title"><?php single_post_title(); ?></div>
 		<div class="welcome-text"><?php 
 			 $my_excerpt = get_the_excerpt();
      // if($my_excerpt !='') {
