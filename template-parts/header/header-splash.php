@@ -43,6 +43,7 @@ background-repeat:no-repeat;
 	
 		<?php if (is_front_page()) : ?>
 		<div class="clear"></div>
+		<div class="cta-splash-wrapper">
 		<?php
 			if ( has_nav_menu( 'cta-splash-major' ) ) {
     		// User has assigned menu to this location;
@@ -66,6 +67,7 @@ background-repeat:no-repeat;
 			}
 		?>
 		<?php endif; ?>
+		</div><!-- cta-splash-wrapper -->
 		</div><!-- welcome-wrapper -->
 		
 <div class="clear"></div>
@@ -74,4 +76,3 @@ background-repeat:no-repeat;
 	
 </div><!-- splash-wide -->
 </div><!-- splash-wrapper -->
-  
