@@ -4,10 +4,10 @@
 
 function hovercraft_logo() {
     $defaults = array(
-    // 'height'      => 512,
-    // 'width'       => 512,
-    'flex-height' => false, // setting both flex-height and flex-width to false maintains aspect ratio
-    'flex-width'  => false
+    'height'      => 100,
+    'width'       => 250,
+    'flex-height' => true,
+    'flex-width'  => true
     );
     add_theme_support( 'custom-logo', $defaults );
 }
