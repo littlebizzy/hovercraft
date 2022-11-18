@@ -22,7 +22,7 @@ background-repeat:no-repeat;
 	} ?>
 
 <div id="header-splash">
-<?php get_template_part('template-parts/navigation'); ?>
+<?php get_template_part('template-parts/header/navigation'); ?>
 </div>
 	
 <div class="splash-main">
