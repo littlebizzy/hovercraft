@@ -96,13 +96,34 @@ h3 {
 	font-size: 24px;
 }
 
+
+/* misc */
+
+blockquote {
+	margin: 30px 0px 30px 30px;
+	padding: 20px 30px;
+	border-left: 5px solid #ECEFF1;
+	color: #607D8B;
+}
+
+blockquote p {
+	font-size: 18px;
+	line-height: 2;
+	margin: 0px !important;
+	padding: 0px !important;
+}
+
+strong {
+	font-weight: 700;
+}
+
 p {
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 }
 
 a {
-	color:#0288D1;
-	text-decoration:underline;
+	color: #0288D1;
+	text-decoration: underline;
 }
 
 
@@ -906,16 +927,13 @@ color:#263238;
 	float: left;
 	width: 800px;
 	background: #fff;
-	min-height: 600px;
 	overflow-x: hidden;
-	position: relative;
 }
 
 .last-modified {
-	bottom: 0;
+	padding-top: 30px;
 	font-size: 14px;
 	color: #607D8B;
-	position: absolute;
 }
 
 
