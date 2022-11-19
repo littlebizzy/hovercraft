@@ -20,6 +20,12 @@
             echo '</ul></div>';
         	}
         	?>
+			<?php if( get_theme_mod( 'hovercraft_search' ) != '0') {
+			get_template_part('template-parts/search-icon'); 
+			} ?>
+			<?php if ( class_exists( 'WooCommerce' ) ) { ?>
+			<div class="cart"><a href="/cart/"><i class="material-icons cart">shopping_cart</i></a><div class="notification-dot"><?php echo WC()->cart->get_cart_contents_count(); ?><div class="clear"></div></div></div>
+			<?php } ?>
 			<?php
 			if ( has_nav_menu( 'cta-header-secondary' ) ) {
     		// User has assigned menu to this location;
@@ -42,12 +48,6 @@
     		) );
 			}
 			?>
-			<?php if( get_theme_mod( 'hovercraft_search' ) != '0') {
-			get_template_part('template-parts/search-icon'); 
-			} ?>
-			<?php if ( class_exists( 'WooCommerce' ) ) { ?>
-			<div class="cart"><a href="/cart/"><i class="material-icons cart">shopping_cart</i></a><div class="notification-dot"><?php echo WC()->cart->get_cart_contents_count(); ?><div class="clear"></div></div></div>
-		<?php } ?>
 		</div><!-- menu-desktop -->
 		<div class="menu-mobile"><i class="material-icons menu">menu</i></div>
 		</div><!--menu-choose -->
