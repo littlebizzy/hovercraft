@@ -1,13 +1,15 @@
-<?php if ( is_active_sidebar('hovercraft_footer_top')) { ?>
-<div id="footer-top">
+<?php if ( is_active_sidebar( 'hovercraft_prefooter_top' ) ) { ?>
+<div id="prefooter-top">
+	<?php dynamic_sidebar( 'hovercraft_prefooter_top' ); ?>
 <div class="clear"></div>
-</div><!-- footer-top -->
+</div><!-- prefooter-top -->
 <?php } ?>
 
-<?php if ( is_active_sidebar('hovercraft_footer_middle')) { ?>
-<div id="footer-middle">
+<?php if ( is_active_sidebar( 'hovercraft_prefooter_bottom' ) ) { ?>
+<div id="prefooter-bottom">
+	<?php dynamic_sidebar( 'hovercraft_prefooter_bottom' ); ?>
 <div class="clear"></div>
-</div><!-- footer-middle -->
+</div><!-- prefooter-bottom -->
 <?php } ?>
 
 <div id="footer">
