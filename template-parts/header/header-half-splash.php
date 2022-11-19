@@ -32,7 +32,7 @@ background-repeat:no-repeat;
 		
 	
 		<?php if (is_front_page()) : ?>
-		<div class="clear"></div>
+		<div class="cta-hero-wrapper">
 		<?php
 			if ( has_nav_menu( 'cta-hero-primary' ) ) {
     		// User has assigned menu to this location;
@@ -55,8 +55,10 @@ background-repeat:no-repeat;
     		) );
 			}
 		?>
+		</div><!-- cta-hero-wrapper -->
 		<?php endif; ?>
-		</div><!-- welcome-wrapper -->
+			
+	</div><!-- welcome-wrapper -->
 		
 <div class="clear"></div>
 </div><!-- inner -->
