@@ -39,21 +39,21 @@
 
 <div id="container">
 	
-	<?php if ( is_active_sidebar('hovercraft_topbar_major')) { ?>
+	<?php if ( is_active_sidebar( 'hovercraft_topbar_primary' ) ) { ?>
 	<div id="topbar">
 	<div class="inner">
-	<?php if ( is_active_sidebar('hovercraft_topbar_minor')) { ?>
+	<?php if ( is_active_sidebar( 'hovercraft_topbar_secondary' ) ) { ?>
 	<div class="topbar-left">
 	<?php } else { ?>
 	<div class="topbar-center">
 	<?php } ?>
-			<?php add_filter ( 'widget_title' , 'my_widget_title', 10, 1); //we use the default priority and 3 arguments in the callback function
-		dynamic_sidebar( 'hovercraft_topbar_major' ); remove_filter('widget_title', 'my_widget_title'); ?>
+			<?php add_filter( 'widget_title' , 'my_widget_title', 10, 1 ); //we use the default priority and 3 arguments in the callback function
+		dynamic_sidebar( 'hovercraft_topbar_primary' ); remove_filter( 'widget_title', 'my_widget_title' ); ?>
 	</div>
-	<?php if ( is_active_sidebar('hovercraft_topbar_minor')) { ?>
+	<?php if ( is_active_sidebar( 'hovercraft_topbar_secondary' )) { ?>
 	<div class="topbar-right">
-		<?php add_filter ( 'widget_title' , 'my_widget_title', 10, 1); //we use the default priority and 3 arguments in the callback function
-		dynamic_sidebar( 'hovercraft_topbar_minor' ); remove_filter('widget_title', 'my_widget_title'); ?>
+		<?php add_filter( 'widget_title' , 'my_widget_title', 10, 1 ); //we use the default priority and 3 arguments in the callback function
+		dynamic_sidebar( 'hovercraft_topbar_secondary' ); remove_filter( 'widget_title', 'my_widget_title' ); ?>
 	</div>
 	<?php } ?>
 	<div class="clear"></div>
