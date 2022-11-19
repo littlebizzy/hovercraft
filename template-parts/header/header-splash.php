@@ -43,7 +43,7 @@ background-repeat:no-repeat;
 	
 		<?php if (is_front_page()) : ?>
 		<div class="clear"></div>
-		<div class="cta-splash-wrapper">
+		<div class="cta-hero-wrapper">
 		<?php
 			if ( has_nav_menu( 'cta-hero-primary' ) ) {
     		// User has assigned menu to this location;
