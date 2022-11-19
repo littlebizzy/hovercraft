@@ -12,8 +12,8 @@ require get_template_directory() . '/inc/suggest-git-updater.php';
 // enable widget areas
 require get_template_directory() . '/inc/enable-widget-areas.php';
 
-// enable menu locations
-require get_template_directory() . '/inc/enable-menu-locations.php';
+// menu locations
+require get_template_directory() . '/inc/menu-locations.php';
 
 // featured images
 require get_template_directory() . '/inc/featured-images.php';
