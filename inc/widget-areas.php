@@ -1,5 +1,37 @@
 <?php
 
+// topbar primary widgets
+function hovercraft_topbar_primary() {
+
+	register_sidebar( array(
+		'name'          => 'Topbar Primary',
+		'id'            => 'hovercraft_topbar_primary',
+		'before_widget' => '<div class="widgets-topbar-primary-wrapper">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+}
+add_action( 'widgets_init', 'hovercraft_topbar_primary' );
+
+
+// topbar secondary widgets
+function hovercraft_topbar_secondary() {
+
+	register_sidebar( array(
+		'name'          => 'Topbar Secondary',
+		'id'            => 'hovercraft_topbar_secondary',
+		'before_widget' => '<div class="widgets-topbar-secondary-wrapper">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+}
+add_action( 'widgets_init', 'hovercraft_topbar_secondary' );
+
+
 // sidebar widgets
 function hovercraft_sidebar() {
 
@@ -14,22 +46,6 @@ function hovercraft_sidebar() {
 
 }
 add_action( 'widgets_init', 'hovercraft_sidebar' );
-
-
-// copyright widgets
-function hovercraft_copyright() {
-
-	register_sidebar( array(
-		'name'          => 'Copyright',
-		'id'            => 'hovercraft_copyright',
-		'before_widget' => '<div class="widgets-copyright-wrapper">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
-	) );
-
-}
-add_action( 'widgets_init', 'hovercraft_copyright' );
 
 
 // prefooter top widgets
@@ -128,34 +144,17 @@ function hovercraft_footer_four() {
 add_action( 'widgets_init', 'hovercraft_footer_four' );
 
 
-// topbar primary widgets
-function hovercraft_topbar_primary() {
+// copyright widgets
+function hovercraft_copyright() {
 
 	register_sidebar( array(
-		'name'          => 'Topbar Primary',
-		'id'            => 'hovercraft_topbar_primary',
-		'before_widget' => '<div class="widgets-topbar-primary-wrapper">',
+		'name'          => 'Copyright',
+		'id'            => 'hovercraft_copyright',
+		'before_widget' => '<div class="widgets-copyright-wrapper">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
 
 }
-add_action( 'widgets_init', 'hovercraft_topbar_primary' );
-
-
-// topbar secondary widgets
-function hovercraft_topbar_secondary() {
-
-	register_sidebar( array(
-		'name'          => 'Topbar Secondary',
-		'id'            => 'hovercraft_topbar_secondary',
-		'before_widget' => '<div class="widgets-topbar-secondary-wrapper">',
-		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
-	) );
-
-}
-add_action( 'widgets_init', 'hovercraft_topbar_secondary' );
-
+add_action( 'widgets_init', 'hovercraft_copyright' );
