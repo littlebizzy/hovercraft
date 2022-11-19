@@ -41,7 +41,7 @@
 	<div class="inner">
 		
 	<div class="copyright-left">
-		&copy; <?php echo date("Y"); ?> <?php echo get_bloginfo( 'name' ); ?>. All rights reserved.
+		&copy; <?php echo date("Y"); ?> <?php echo get_bloginfo( 'name' ); ?>. All rights reserved. Powered by <a rel="nofollow" href="https://hovercraft.vip/">HoverCraft</a>.
 	<div class="clear"></div>
 	</div><!-- copyright-left -->
 	
