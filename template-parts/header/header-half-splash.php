@@ -33,8 +33,28 @@ background-repeat:no-repeat;
 	
 		<?php if (is_front_page()) : ?>
 		<div class="clear"></div>
-		<?php wp_nav_menu( array( 'theme_location' => 'cta-splash-major', 'container_class'	=> 'cta-splash-major' ) ); ?>
-		<?php wp_nav_menu( array( 'theme_location' => 'cta-splash-minor', 'container_class'	=> 'cta-splash-minor' ) ); ?>
+		<?php
+			if ( has_nav_menu( 'cta-hero-primary' ) ) {
+    		// User has assigned menu to this location;
+    		// https://wordpress.stackexchange.com/questions/32739/wp-nav-menu-show-menu-only-if-one-exists-otherwise-show-nothing
+    		wp_nav_menu( array( 
+        	'theme_location' => 'cta-hero-primary', 
+        	'menu_class' => 'cta', 
+        	'container_class' => 'cta-hero-primary'
+    		) );
+			}
+		?>
+		<?php
+			if ( has_nav_menu( 'cta-hero-secondary' ) ) {
+    		// User has assigned menu to this location;
+    		// https://wordpress.stackexchange.com/questions/32739/wp-nav-menu-show-menu-only-if-one-exists-otherwise-show-nothing
+    		wp_nav_menu( array( 
+        	'theme_location' => 'cta-hero-secondary', 
+        	'menu_class' => 'cta', 
+        	'container_class' => 'cta-hero-secondary'
+    		) );
+			}
+		?>
 		<?php endif; ?>
 		</div><!-- welcome-wrapper -->
 		
