@@ -21,13 +21,24 @@
         	}
         	?>
 			<?php
-			if ( has_nav_menu( 'cta-header' ) ) {
+			if ( has_nav_menu( 'cta-header-secondary' ) ) {
     		// User has assigned menu to this location;
     		// https://wordpress.stackexchange.com/questions/32739/wp-nav-menu-show-menu-only-if-one-exists-otherwise-show-nothing
     		wp_nav_menu( array( 
-        	'theme_location' => 'cta-header', 
+        	'theme_location' => 'cta-header-secondary', 
         	'menu_class' => 'cta', 
-        	'container_class' => 'cta-header'
+        	'container_class' => 'cta-header-secondary'
+    		) );
+			}
+			?>
+			<?php
+			if ( has_nav_menu( 'cta-header-primary' ) ) {
+    		// User has assigned menu to this location;
+    		// https://wordpress.stackexchange.com/questions/32739/wp-nav-menu-show-menu-only-if-one-exists-otherwise-show-nothing
+    		wp_nav_menu( array( 
+        	'theme_location' => 'cta-header-primary', 
+        	'menu_class' => 'cta', 
+        	'container_class' => 'cta-header-primary'
     		) );
 			}
 			?>
