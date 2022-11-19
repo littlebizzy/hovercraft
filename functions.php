@@ -9,8 +9,8 @@ require get_template_directory() . '/inc/back-to-top.php';
 // suggest git updater
 require get_template_directory() . '/inc/suggest-git-updater.php';
 
-// enable widget areas
-require get_template_directory() . '/inc/enable-widget-areas.php';
+// widget areas
+require get_template_directory() . '/inc/widget-areas.php';
 
 // menu locations
 require get_template_directory() . '/inc/menu-locations.php';
