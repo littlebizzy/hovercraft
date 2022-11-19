@@ -1262,9 +1262,13 @@ color:#263238;
 }
 
 #copyright i {
-	font-size:20px;
-	padding-left:20px;
+	margin-left: 20px;
 }
+
+#copyright i:first-child {
+	margin-left: 0px;
+}
+
 
 /* select menu bottom */
 
