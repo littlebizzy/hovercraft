@@ -21,7 +21,7 @@ background-repeat:no-repeat;
     	Your browser does not support the video tag.</video>';
 	} ?>
 
-<div id="header-splash">
+<div id="header-full-hero">
 <?php get_template_part('template-parts/header/navigation'); ?>
 </div>
 	
