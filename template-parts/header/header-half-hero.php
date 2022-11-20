@@ -11,7 +11,7 @@ background-size:cover;
 background-repeat:no-repeat;
 ">
 
-<div id="header-half-splash">
+<div id="header-half-hero">
 <?php get_template_part('template-parts/header/navigation'); ?>
 </div>
 	
