@@ -5,7 +5,7 @@ GitHub Theme URI: littlebizzy/hovercraft
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 Description: No maintenance WordPress theme
-Version: 0.1.35
+Version: 0.1.36
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
@@ -453,27 +453,31 @@ img.site-logo {
 	display:block;
 }
 
-/* menu mobile */
+
+/* mobile menu */
 
 @media screen and (max-width: 1200px) {
 .menu-mobile {
-	display:inline-block;
-	text-align:right;
+	display: inline-block;
+	text-align: right;
  	vertical-align: middle;
-}
+	}
 }
 	
 @media screen and (min-width: 1200px) {
 .menu-mobile {
- display:none;	
-}
+ 	display: none;	
+	}
 }
 
-.menu-mobile i {
-	color:#fff;
-	text-decoration:none;
-	font-size:24px;
-	padding:0px;
+#header-full-hero .menu-mobile i, #header-half-hero .menu-mobile i, #header-mini-hero .menu-mobile i {
+	font-size: 30px;
+	color: #fff;
+}
+
+#header-basic .menu-mobile i {
+	font-size: 30px;
+	color: #263238; /* correct */
 }
 
 /* menu desktop */
@@ -542,25 +546,36 @@ img.site-logo {
 /* header secondary cta */
 
 .cta-header-secondary {
-	display:inline-block;
-	margin-left:30px;
+	display: inline-block;
+	margin-left: 30px;
 }
 
-.cta-header-secondary ul li {
+#header-full-hero .cta-header-secondary ul li, #header-half-hero .cta-header-secondary ul li, #header-mini-hero .cta-header-secondary ul li {
 	font-size: 18px;
 	font-weight: 400;
 	list-style-type: none;
 	vertical-align: middle;
 	display: inline-block;
-	padding:10px 20px;
+	padding: 10px 20px;
 	background: transparent;
 	border-radius: 4px;
 	border: 1px solid #FFF;
 }
 
+#header-basic .cta-header-secondary ul li {
+	font-size: 18px;
+	font-weight: 400;
+	list-style-type: none;
+	vertical-align: middle;
+	display: inline-block;
+	padding: 10px 20px;
+	background: transparent;
+	border-radius: 4px;
+	border: 1px solid #263238;
+}
+
 .cta-header-secondary ul li a {
-	color: #FFF !important;
-	text-decoration: none !important;
+	text-decoration: none;
 }
 
 
@@ -943,11 +958,20 @@ color:#263238;
 }
 }
 
+
 /* main */
 /* main refers to everything between header/splash and footer */
 
+@media screen and (max-width: 1200px) {
 #main {
-	padding:30px 0px;
+	padding: 20px 20px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+#main {
+	padding: 30px 0px;
+	}
 }
 
 
@@ -956,24 +980,28 @@ color:#263238;
 #primary {
 	float: left;
 	width: 800px;
+	min-height: 500px;
 	background: #fff;
 	overflow-x: hidden;
-}
-
-#primary ul {
-	margin-left: 30px;
-	margin-bottom: 30px;
-}
-
-#primary ol {
-	margin-left: 30px;
-	margin-bottom: 30px;
 }
 
 .last-modified {
 	padding-top: 30px;
 	font-size: 14px;
 	color: #607D8B;
+}
+
+
+/* content */
+
+#content ul {
+	margin-left: 30px;
+	margin-bottom: 30px;
+}
+
+#content ol {
+	margin-left: 30px;
+	margin-bottom: 30px;
 }
 
 
@@ -1150,177 +1178,55 @@ color:#263238;
 
 @media screen and (max-width: 1200px) {
 .copyright-left {
-	width:100%;
-	box-sizing:border-box;
-	display:block;
-    vertical-align:top;
-	text-align:center;
-	margin-bottom:30px;
-}
+	width: 100%;
+	box-sizing: border-box;
+	display: block;
+    vertical-align: top;
+	text-align: center;
+	}
 }
 
 @media screen and (min-width: 1200px) {
 .copyright-left {
-	display:table-cell;
-    vertical-align:middle;
-	height:inherit;
+	display: table-cell;
+    vertical-align: middle;
+	height: inherit;
 	min-width: auto;
 	white-space: nowrap;
-
-}
+	}
 }
 
 @media screen and (max-width: 1200px) {
 .copyright-right {
-	display:block;
-    vertical-align:top;
-	text-align:center;
-	width:100%;
-	box-sizing:border-box;
-}
+	width: 100%;
+	box-sizing: border-box;
+	margin-top: 30px;
+	display: block;
+    vertical-align: top;
+	text-align: center;
+	}
 }
 
 @media screen and (min-width: 1200px) {
 .copyright-right {
-	display:table-cell;
-    vertical-align:middle;
-	height:inherit;
-	text-align:right;
-	width:100%;
-}
-}
-
-
-/* copyright select menu */
-
-@media screen and (max-width: 1200px) {
-#copyright ul {
-	width:100%;
-	box-sizing:border-box;
-	text-align:left;
-	background: #fff;
-	border: 1px solid #37474F;
-  	display: block;
- 	padding: 0;
-  	border-radius: 4px;
-  	position: relative;
-}
+	width: 100%;
+	display: table-cell;
+    vertical-align: middle;
+	height: inherit;
+	text-align: right;
+	}
 }
 
-@media screen and (min-width: 1200px) {
-#copyright ul {
-	text-align:left;
-	background: #fff;
-	border: 1px solid #37474F;
-  	display: inline-block;
- 	padding: 0;
-  	border-radius: 4px;
-  	position: relative;
-	min-width:300px;
-	box-sizing:border-box;
-}
-}
 
-#copyright ul span:before {
-  position: absolute;
-  top: 5px;
-  right: 15px;
-  content: "\2193";
-}
-
-#copyright ul.open span:before {
-  content: "\2191";
-}
-
-#copyright ul.open li {
-  display: block;
-}
-
-#copyright ul li {;
-	list-style-type:none;
-	padding-left:30px;
- 	vertical-align: middle;
-	display:inline-block;
-	
-	display: none;
-  cursor: pointer;
-  padding: 5px 10px;
-  border-top: 1px solid black;
-  min-width: 150px;
-}
-
-#copyright ul li:first-child {
-  display: block;
-  border-top: 0px;
-}
-
-#copyright ul li:first-child:hover {
-  background-color: transparent;
-}
-
-#copyright ul li:hover {
-  background-color: #ddd;
-	
-}
-
-#copyright ul li a {
-	color:#263238;
-	text-decoration:none;
-}
+/* icons */
 
 #copyright i {
+	font-size: 24px;
 	margin-left: 20px;
 }
 
 #copyright i:first-child {
 	margin-left: 0px;
-}
-
-
-/* select menu bottom */
-
-.select li {
-  display: none;
-  cursor: pointer;
-  padding: 5px 10px;
-  border-top: 1px solid black;
-  min-width: 150px;
-}
-
-.select li:first-child {
-  display: block;
-  border-top: 0px;
-}
-
-.select {
-  border: 1px solid black;
-  display: inline-block;
-  padding: 0;
-  border-radius: 4px;
-  position: relative;
-}
-
-.select li:hover {
-  background-color: #ddd;
-}
-
-.select li:first-child:hover {
-  background-color: transparent;
-}
-
-.select.open li {
-  display: block;
-}
-
-.select span:before {
-  position: absolute;
-  top: 5px;
-  right: 15px;
-  content: "\2193";
-}
-
-.select.open span:before {
-  content: "\2191";
 }
 
 
