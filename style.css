@@ -5,7 +5,7 @@ GitHub Theme URI: littlebizzy/hovercraft
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 Description: No maintenance WordPress theme
-Version: 0.1.32
+Version: 0.1.33
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
@@ -234,10 +234,10 @@ a {
 }
 
 
-/* header-splash */
+/* full hero header */
 
 @media screen and (max-width: 1200px) {
-#header-splash {
+#header-full-hero {
 	width: 100%;
 	box-sizing: border-box;
 	display: table;
@@ -250,7 +250,7 @@ a {
 }
 
 @media screen and (min-width: 1200px) {
-#header-splash {
+#header-full-hero {
 	width: 100%;
 	display: table;
 	margin: 0px auto;
@@ -262,21 +262,21 @@ a {
 	}
 }
 
-#header-splash .main-menu ul li a {
+#header-full-hero .main-menu ul li a {
 	text-decoration: none;
 	color: #fff;
 	font-weight: 600;
 }
 
-#header-splash a {
+#header-full-hero a {
 	color: #fff;
 }
 
 
-/* header-half-splash */
+/* half hero header */
 
 @media screen and (max-width: 1200px) {
-#header-half-splash {
+#header-half-hero {
 	width: 100%;
 	box-sizing: border-box;
 	display: table;
@@ -288,7 +288,7 @@ a {
 }
 
 @media screen and (min-width: 1200px) {
-#header-half-splash {
+#header-half-hero {
 	width: 100%;
 	display: table;
 	margin: 0px auto;
@@ -299,13 +299,13 @@ a {
 	}
 }
 
-#header-half-splash .main-menu ul li a {
+#header-half-hero .main-menu ul li a {
 	text-decoration: none;
 	color: #263238 !important; /* correct */
 	font-weight: 600;
 }
 
-#header-half-splash a {
+#header-half-hero a {
 	color: #263238 !important; /* correct */
 }
 
@@ -357,7 +357,7 @@ a {
 	padding: 20px 0px;
 	border-bottom: 1px solid transparent;
 	background: #ECEFF1; /* correct gray */
-	color: #263238 !important; /* correct */
+	color: #263238; /* correct */
 	}
 }
 
@@ -369,13 +369,13 @@ a {
 	padding: 30px 0px;
 	border-bottom: 1px solid transparent;
 	background: #ECEFF1; /* correct gray */
-	color: #263238 !important; /* correct */
+	color: #263238; /* correct */
 	}
 }
 
 #header-basic .main-menu ul li a {
 	text-decoration: none;
-	color: #fff;
+	color: #263238;
 	font-weight: 600;
 }
 
