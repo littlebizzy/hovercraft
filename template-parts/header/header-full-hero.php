@@ -1,16 +1,14 @@
-<div id="splash-wrapper"><div class="splash-wide" style="background: 
-		linear-gradient(60deg,
-	/* rgba(38, 50, 56, 0.7777485994397759) 30%, */
+<div id="splash-wrapper">
+<div class="splash-wide" style="background: 
+	linear-gradient(60deg,
     rgba(55, 71, 79, 0.7777485994397759) 30%, 
     rgba(255, 255, 255, 0) 100%), url(<?php 
-$url_header_image = esc_url( get_header_image() );
-$url_hovercraft_video = wp_get_attachment_url(get_theme_mod('hovercraft_video'));
-if (empty($url_header_image)) { 
-	echo "https://source.unsplash.com/featured/1600x900?mountains,people,city"; 
-} else { echo $url_header_image; } ?>);		
-background-position: center center;
-background-size:cover;
-background-repeat:no-repeat;
+	$url_header_image = esc_url( get_header_image() );
+	$url_featured_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' ); 
+	if (!empty($url_featured_image)){ echo $url_featured_image; } else { echo $url_header_image; } ?>);		
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
 ">
 
 <?php 
