@@ -121,16 +121,6 @@ p {
 	margin-bottom: 30px;
 }
 
-ul {
-	margin-left: 30px;
-	margin-bottom: 30px;
-}
-
-ol {
-	margin-left: 30px;
-	margin-bottom: 30px;
-}
-
 a {
 	color: #0288D1;
 	text-decoration: underline;
@@ -968,6 +958,16 @@ color:#263238;
 	width: 800px;
 	background: #fff;
 	overflow-x: hidden;
+}
+
+#primary ul {
+	margin-left: 30px;
+	margin-bottom: 30px;
+}
+
+#primary ol {
+	margin-left: 30px;
+	margin-bottom: 30px;
 }
 
 .last-modified {
