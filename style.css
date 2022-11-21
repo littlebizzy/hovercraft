@@ -5,7 +5,7 @@ GitHub Theme URI: littlebizzy/hovercraft
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 Description: No maintenance WordPress theme
-Version: 0.1.37
+Version: 0.1.38
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
@@ -58,6 +58,33 @@ html, body {
 }
 
 
+/* devices */
+
+@media screen and (max-width: 1200px) {
+	.desktop {
+		display: none;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.desktop {
+		display: initial;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.mobile {
+		display: initial;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.mobile {
+		display: none;
+	}
+}
+
+
 /* titles */
 
 h1 {
@@ -82,6 +109,26 @@ h1.splash-mini-title {
 	margin-bottom: 0;
 	color: #FFF;
 }
+}
+
+@media screen and (max-width: 1200px) {
+h1.full-hero-title {
+	font-size: 24px;
+	font-weight: 700;
+	margin-bottom: 30px;
+	padding: 0px;
+	color: #FFF;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+h1.full-hero-title {
+	font-size: 48px;
+	font-weight: 700;
+	margin-bottom: 30px;
+	padding: 0px;
+	color: #FFF;
+	}
 }
 
 h2 {
@@ -130,7 +177,7 @@ ol {
 }
 
 li {
-	line-height: 2;
+	margin-bottom: 5px;
 }
 
 a {
@@ -639,35 +686,35 @@ img.site-logo {
 
 @media screen and (max-width: 1200px) {
 #splash-wrapper {
-	width:100%;
-	height:100%;
-}
+	width: 100%;
+	height: 100%;
+	}
 }
 
 @media screen and (min-width: 1200px) {
 #splash-wrapper {
-	width:100%;
-	height:100%;
-
-}
+	width: 100%;
+	height: 100%;
+	}
 }
 
 @media screen and (max-width: 1200px) {
 .splash-wide {
-	width:100%; /* correct */
-	height:100%; /* correct */
-	padding:0px; /* correct */
-	display:table; /* correct */
-	box-sizing:border-box;
+	width: 100%; /* correct */
+	height: 100%; /* correct */
+	padding: 0; /* correct */
+	display: table; /* correct */
+	position: relative; /* required to keep video background from escaping esp on mobile */
 	}
 }
 
 @media screen and (min-width: 1200px) {
 .splash-wide {
-	width:100%; /* correct */
-	height:100%; /* correct */
-	padding:0px; /* correct */
-	display:table; /* correct */
+	width: 100%; /* correct */
+	height: 100%; /* correct */
+	padding: 0; /* correct */
+	display: table; /* correct */
+	position: relative; /* required to keep video background from escaping esp on mobile */
 	}
 }
 
@@ -687,36 +734,36 @@ img.site-logo {
 	display:table; /* correct */
 	}
 }
+
+/* video background for full hero header */
 
 video {
-  /** Simulationg background-size: cover */
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover; /** simulates background-size: cover */
+  	position: absolute;
+  	top: 0;
+  	left: 0;
 }
 
 video::after {
-  position:absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  content: '';
-background: 
-		linear-gradient(60deg,
+	width: 100%;
+  	height: 100%;
+  	position: absolute;
+  	top: 0;
+  	left: 0;
+  	content: '';
+	background: linear-gradient(60deg,
     rgba(55, 71, 79, 0.7777485994397759) 30%,
     rgba(255, 255, 255, 0) 100%);		
-background-position: center center;
-background-size:cover;
-background-repeat:no-repeat;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 @media screen and (max-width: 1200px) {
 .splash-main {
-	padding: 0px; /* 0px correct because ignored per table-row */
+	padding: 0; /* 0 correct because ignored per table-row */
 	display: table-row; /* correct */
 	position: relative; /* required when using video background on splash-wide */
 	}
@@ -724,7 +771,7 @@ background-repeat:no-repeat;
 
 @media screen and (min-width: 1200px) {
 .splash-main {
-	padding: 0px; /* correct */
+	padding: 0; /* 0 correct because ignored per table-row */
 	display: table-row; /* correct */
 	position: relative; /* required when using video background on splash-wide */
 	}
@@ -919,7 +966,7 @@ color:#263238;
 .welcome-wrapper {
 	width: 100%;
 	box-sizing: border-box;
-	padding: 30px 20px;
+	padding: 0px 20px;
 	}
 }
 
@@ -932,26 +979,6 @@ color:#263238;
 .title-wrapper {
 	width:100%;
 	text-align:center;
-}
-
-@media screen and (max-width: 1200px) {
-.welcome-title {
-	font-size: 30px;
-	font-weight: 700;
-	margin-bottom: 30px;
-	padding: 0px;
-	color: #FFF;
-}
-}
-
-@media screen and (min-width: 1200px) {
-.welcome-title {
-	font-size: 48px;
-	font-weight: 700;
-	margin-bottom: 30px;
-	padding: 0px;
-	color: #FFF;
-}
 }
 
 @media screen and (max-width: 1200px) {
@@ -1063,6 +1090,7 @@ color:#263238;
 	background: #263238;
 	color: #FFF;
 	padding: 30px 20px;
+	text-align: center;
 	}
 }
 
@@ -1073,6 +1101,7 @@ color:#263238;
 	background: #263238;
 	color: #FFF;
 	padding: 60px 0px;
+	text-align: center;
 	}
 }
 
@@ -1086,7 +1115,7 @@ color:#263238;
 	background: #263238;
 	color: #FFF;
 	padding: 30px 20px;
-	
+	text-align: center;
 	}
 }
 
@@ -1097,6 +1126,7 @@ color:#263238;
 	background: #263238;
 	color: #FFF;
 	padding: 60px 0px;
+	text-align: center;
 	}
 }
 
