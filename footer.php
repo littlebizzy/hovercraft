@@ -1,3 +1,5 @@
+<div class="clear"></div>
+
 <?php if ( is_active_sidebar( 'hovercraft_prefooter_top' ) ) { ?>
 <div id="prefooter-top">
 <div class="inner">
