@@ -5,7 +5,7 @@ GitHub Theme URI: littlebizzy/hovercraft
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 Description: No maintenance WordPress theme
-Version: 0.1.43
+Version: 0.1.44
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
@@ -205,6 +205,11 @@ li {
 a {
 	color: #0288D1;
 	text-decoration: underline;
+}
+
+iframe {
+    display: block;
+    width: 100%;
 }
 
 
@@ -1150,50 +1155,47 @@ color:#263238;
 	}
 }
 
+
 /* footer */
 
 @media screen and (max-width: 1200px) {
 #footer {
-	width:100%;
-	margin:0px auto;
-	background:#ECEFF1;
-	color:#263238;
-	padding:30px 20px;
-	box-sizing:border-box;
-}
+	width: 100%;
+	box-sizing: border-box;
+	background: #ECEFF1;
+	padding: 30px 20px;
+	}
 }
 
 @media screen and (min-width: 1200px) {
 #footer {
-	width:100%;
-	margin:0px auto;
-	background:#ECEFF1;
-	color:#263238;
+	width: 100%;
+	margin: 0px auto;
+	background: #ECEFF1;
 	padding: 60px 0px;
-	box-sizing:border-box;
-	display: table;
 }
 }
 
 @media screen and (max-width: 1200px) {
 .footer-section-left {
-	width:100%;
-	box-sizing:border-box;
-	padding:0px;
-	display:block;
-    vertical-align:top;
-	margin-bottom:30px;
-}
+	width: 100%;
+	box-sizing: border-box;
+	display: block;
+    vertical-align: top;
+	margin-bottom: 30px;
+	padding: 0;
+	}
 }
 
 @media screen and (min-width: 1200px) {
 .footer-section-left {
-	width:420px;
-	box-sizing:border-box;
-	padding:0px 60px 0px 0px;
-	display:table-cell;
-    vertical-align:top;
-}
+	float: left;
+	width: 420px;
+	box-sizing: border-box;
+	display: inline-block;
+    vertical-align: top;
+	padding-right: 30px;
+	}
 }
 
 #footer .widget-wrapper{
@@ -1205,38 +1207,38 @@ color:#263238;
 
 @media screen and (max-width: 1200px) {
 .footer-section-right {
-	width:100%;
-	box-sizing:border-box;
-	padding:0px;
-	display:block;
-    vertical-align:top;
-	margin-bottom:30px;
-}
+	width: 100%;
+	box-sizing: border-box;
+	display: block;
+    vertical-align: top;
+	margin-bottom: 30px;
+	}
 }
 
 @media screen and (min-width: 1200px) {
 .footer-section-right {
-	width:260px;
-	box-sizing:border-box;
-	padding:0px 30px;
-	display:table-cell;
-    vertical-align:top;
-}
+	float: left;
+	width: 260px;
+	box-sizing: border-box;
+	display: inline-block;
+	vertical-align: top;
+	padding-left: 60px;
+	}
 }
 
 #footer ul {
-	text-align:left;
+	margin-left: 10px;
 }
 
 #footer ul li {
-	list-style-type:disc;
-	margin-left:20px;
-	line-height:2;
+	list-style-type: disc;
+	line-height: 2;
 }
 
 #footer ul li a {
-	text-decoration:none;
+	text-decoration: none;
 }
+
 
 /* copyright */
 
