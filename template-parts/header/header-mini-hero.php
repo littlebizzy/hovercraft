@@ -17,7 +17,7 @@
 <div class="splash-main-mini">
 <div class="inner">
 		<div class="title-wrapper">
-		<h1 class="splash-mini-title"><?php single_post_title(); ?></h1>
+		<h1 class="mini-hero-title"><?php single_post_title(); ?></h1>
 		<div class="welcome-text"><?php 
 			$my_excerpt = get_the_excerpt();
 			if (strlen($my_excerpt) >= 10000){
