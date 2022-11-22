@@ -94,29 +94,10 @@ h1 {
 }
 
 @media screen and (max-width: 1200px) {
-h1.splash-mini-title {
-	font-size: 30px;
-	font-weight: 700;
-	margin-bottom: 0;
-	color: #FFF;
-}
-}
-
-@media screen and (min-width: 1200px) {
-h1.splash-mini-title {
-	font-size: 48px;
-	font-weight: 700;
-	margin-bottom: 0;
-	color: #FFF;
-}
-}
-
-@media screen and (max-width: 1200px) {
 h1.full-hero-title {
 	font-size: 24px;
 	font-weight: 700;
 	margin-bottom: 30px;
-	padding: 0px;
 	color: #FFF;
 	}
 }
@@ -126,7 +107,42 @@ h1.full-hero-title {
 	font-size: 48px;
 	font-weight: 700;
 	margin-bottom: 30px;
-	padding: 0px;
+	color: #FFF;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+h1.half-hero-title {
+	font-size: 24px;
+	font-weight: 700;
+	margin-bottom: 30px;
+	color: #FFF;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+h1.half-hero-title {
+	font-size: 48px;
+	font-weight: 700;
+	margin-bottom: 30px;
+	color: #FFF;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+h1.mini-hero-title {
+	font-size: 24px;
+	font-weight: 700;
+	margin-bottom: 0;
+	color: #FFF;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+h1.mini-hero-title {
+	font-size: 48px;
+	font-weight: 700;
+	margin-bottom: 0;
 	color: #FFF;
 	}
 }
