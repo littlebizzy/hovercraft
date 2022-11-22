@@ -26,8 +26,10 @@
 	<?php } ?><!-- home page -->
 
 	<!-- page -->
-	<?php if (is_page() && !is_page('home')) { ?>
+	<?php if ( is_page() ) { ?>
+	<?php if ( is_page_template( 'page-templates/template-basic.php' ) ) { ?>
 	<h1><?php the_title(); ?></h1>
+	<?php } ?>
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<?php the_content(); ?>
 		<div class="clear"></div>
