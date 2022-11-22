@@ -22,7 +22,7 @@
 	<?php } else { ?>
 		<div class="title-wrapper">
 	<?php } ?>
-		<div class="welcome-title"><?php single_post_title(); ?></div>
+		<h1 class="half-hero-title"><?php single_post_title(); ?></h1>
 		<div class="welcome-text"><?php 
 			 $my_excerpt = get_the_excerpt();
      // if($my_excerpt !='') {
