@@ -5,17 +5,28 @@
 </div><!-- breadcrumbs -->
 	
 	<div id="content">
-	<?php // if (is_singular('post')) { ?>
-	<?php if (is_single()) { ?>
-	<img width="800" height="450" src="<?php 
-	// wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' );
-	echo get_the_post_thumbnail_url( get_the_ID(), 'large' ); ?>" />
+	
+	<!-- posts -->	
+	<?php if ( is_single() && 'post' == get_post_type() ) { ?>
+	<?php 
+	$url_featured_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' ); 
+	if (!empty( $url_featured_image ) ) { ?>
+	<img width="800" height="450" src="<?php echo $url_featured_image; ?>" />
+	<?php } ?>
 	<h1><?php single_post_title(); ?></h1>
 	<?php the_time(get_option('date_format')); ?><br><br>
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		<?php the_content(); ?>
 	<?php endwhile; endif; ?>
-	<?php } ?><!-- singular -->
+	<?php } ?><!-- posts -->
+		
+	<!-- products -->	
+	<?php if ( is_single() && 'product' == get_post_type() ) { ?>
+	<h1><?php single_post_title(); ?></h1>
+	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+		<?php the_content(); ?>
+	<?php endwhile; endif; ?>
+	<?php } ?><!-- products -->
 	
 	<!-- home page -->
 	<?php if (is_page('home')) { ?>
