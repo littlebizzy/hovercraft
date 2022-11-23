@@ -158,3 +158,19 @@ function hovercraft_copyright() {
 
 }
 add_action( 'widgets_init', 'hovercraft_copyright' );
+
+
+// tile one widgets
+function hovercraft_tile_one() {
+
+	register_sidebar( array(
+		'name'          => 'Tile #1',
+		'id'            => 'hovercraft_tile_one',
+		'before_widget' => '<div class="widgets-tile-one-wrapper">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+}
+add_action( 'widgets_init', 'hovercraft_tile_one' );
