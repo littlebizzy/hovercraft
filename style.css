@@ -1404,3 +1404,43 @@ color:#263238;
   	opacity: 1;
   	visibility: visible;
 }
+
+
+/* tiles */
+
+@media screen and (max-width: 1200px) {
+#tiles {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 30px 20px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+#tiles {
+	width: 100%;
+	margin: 0px auto;
+	padding: 0;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+.tile {
+	width: 100%;
+	box-sizing: border-box;
+	border: 1px solid #263238;
+	padding: 30px;
+	border-radius: 4px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+.tile {
+	width: 400px;
+	float: left;
+	border: 1px solid #263238;
+	padding: 30px;
+	box-sizing: border-box;
+	border-radius: 4px;
+	}
+}
