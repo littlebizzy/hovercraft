@@ -5,7 +5,7 @@ GitHub Theme URI: littlebizzy/hovercraft
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 Description: No maintenance WordPress theme
-Version: 0.1.44
+Version: 0.1.45
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
@@ -202,6 +202,10 @@ li {
 	margin-bottom: 5px;
 }
 
+ol > li::marker {
+  font-weight: 700;
+}
+
 a {
 	color: #0288D1;
 	text-decoration: underline;
@@ -210,6 +214,40 @@ a {
 iframe {
     display: block;
     width: 100%;
+}
+
+code {
+	font-family: monospace;
+	background: #ECEFF1;
+	padding: 0px 5px;
+}
+
+pre {
+	width: 100%;
+	box-sizing: border-box;
+	font-family: monospace;
+	background: #ECEFF1;
+	padding: 10px;
+	overflow-x: scroll;
+	white-space: pre;
+	margin-bottom: 30px;
+}
+
+
+/* buttons */
+
+.button-wide-dark {
+	width: 100%;
+	box-sizing: border-box;
+	text-align: center;
+	font-size: 20px;
+	font-weight: 700;
+	color: #FFF;
+	padding: 10px 0px;
+	text-decoration: none;
+	display: block;
+	background: #263238;
+	border-radius: 4px;
 }
 
 
@@ -634,7 +672,7 @@ img.site-logo {
 	margin-left: 30px;
 }
 
-#header-full-hero .cta-header-secondary ul li, #header-half-hero .cta-header-secondary ul li, #header-mini-hero .cta-header-secondary ul li {
+#header-full-hero .cta-header-secondary ul li {
 	font-size: 18px;
 	font-weight: 400;
 	list-style-type: none;
@@ -646,7 +684,7 @@ img.site-logo {
 	border: 1px solid #FFF;
 }
 
-#header-basic .cta-header-secondary ul li {
+#header-half-hero .cta-header-secondary ul li, #header-mini-hero .cta-header-secondary ul li, #header-basic .cta-header-secondary ul li {
 	font-size: 18px;
 	font-weight: 400;
 	list-style-type: none;
@@ -1232,6 +1270,12 @@ color:#263238;
 
 #footer ul li {
 	list-style-type: disc;
+	line-height: 2;
+}
+
+#footer ul li li {
+	margin-left: 10px;
+	list-style-type: circle;
 	line-height: 2;
 }
 
