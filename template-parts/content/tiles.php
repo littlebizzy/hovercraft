@@ -2,7 +2,6 @@
 <div class="inner">
 	
 	<div id="tiles">
-    <?php get_template_part( 'template-parts/content/primary' ); ?>
 	
 	<?php if ( is_active_sidebar( 'hovercraft_tile_one' ) ) { ?>
 	<div class="tile">
@@ -14,8 +13,10 @@
 	<div class="clear"></div>
 	</div><!-- tiles -->
     
+	<?php get_template_part( 'template-parts/content/primary' ); ?>
     
     <?php get_template_part( 'template-parts/pagination' ); ?>
+	
     <div class="clear"></div>
 </div><!-- inner -->
 </div><!-- main -->
