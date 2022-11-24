@@ -4,10 +4,10 @@
 // disabled // require get_template_directory() . '/inc/select-menu.php';
 
 // back to top
-require get_template_directory() . '/inc/back-to-top.php';
+// require get_template_directory() . '/inc/back-to-top.php';
 
 // suggest git updater
-require get_template_directory() . '/inc/suggest-git-updater.php';
+require get_template_directory() . '/inc/git-updater.php';
 
 // widget areas
 require get_template_directory() . '/inc/widget-areas.php';
