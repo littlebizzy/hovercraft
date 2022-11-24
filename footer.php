@@ -21,6 +21,18 @@
 <div id="footer">
 <div class="inner">
 	
+	<?php if ( get_theme_mod( 'hovercraft_footer_columns' ) == 'four_equal') { ?>
+	<div class="footer-columns-four-equal">
+	<?php } elseif ( get_theme_mod( 'hovercraft_footer_columns' ) == 'four_weighted') { ?>
+	<div class="footer-columns-four-weighted">
+	<?php } elseif ( get_theme_mod( 'hovercraft_footer_columns' ) == 'three_equal') { ?>
+	<div class="footer-columns-three-equal">
+	<?php } elseif ( get_theme_mod( 'hovercraft_footer_columns' ) == 'three_weighted') { ?>
+	<div class="footer-columns-three-weighted">
+	<?php } else { ?>
+	<div class="footer-columns-four-weighted">
+	<?php } ?>
+	
 	<div class="footer-section-left">
 		<?php dynamic_sidebar( 'hovercraft_footer_one' ); ?>
 	<div class="clear"></div>
@@ -42,6 +54,7 @@
 	</div><!-- footer-section-left -->
 	
 	<div class="clear"></div>
+</div><!-- footer-columns -->
 </div><!--inner -->
 </div><!-- footer -->
 
