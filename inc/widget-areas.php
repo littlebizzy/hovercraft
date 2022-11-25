@@ -32,6 +32,22 @@ function hovercraft_topbar_secondary() {
 add_action( 'widgets_init', 'hovercraft_topbar_secondary' );
 
 
+// main begin widgets
+function hovercraft_main_begin() {
+
+	register_sidebar( array(
+		'name'          => 'Main Begin',
+		'id'            => 'hovercraft_main_begin',
+		'before_widget' => '<div class="widget-main-begin widget-wrapper">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+}
+add_action( 'widgets_init', 'hovercraft_main_begin' );
+
+
 // sidebar widgets
 function hovercraft_sidebar() {
 
