@@ -34,7 +34,6 @@
 	} ?>
 	
 	<div class="clear"></div>
-</div><!-- footer-columns -->
 </div><!--inner -->
 </div><!-- footer -->
 
