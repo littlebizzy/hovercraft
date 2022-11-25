@@ -21,37 +21,17 @@
 <div id="footer">
 <div class="inner">
 	
-	<?php if ( get_theme_mod( 'hovercraft_footer_columns' ) == 'four_equal') { ?>
-	<div class="footer-columns-four-equal">
-	<?php } elseif ( get_theme_mod( 'hovercraft_footer_columns' ) == 'four_weighted') { ?>
-	<div class="footer-columns-four-weighted">
-	<?php } elseif ( get_theme_mod( 'hovercraft_footer_columns' ) == 'three_equal') { ?>
-	<div class="footer-columns-three-equal">
-	<?php } elseif ( get_theme_mod( 'hovercraft_footer_columns' ) == 'three_weighted') { ?>
-	<div class="footer-columns-three-weighted">
-	<?php } else { ?>
-	<div class="footer-columns-four-weighted">
-	<?php } ?>
-	
-	<div class="footer-section-left">
-		<?php dynamic_sidebar( 'hovercraft_footer_one' ); ?>
-	<div class="clear"></div>
-	</div><!-- footer-section-left -->
-	
-		<div class="footer-section-right">
-		<?php dynamic_sidebar( 'hovercraft_footer_two' ); ?>
-	<div class="clear"></div>
-	</div><!-- footer-section-left -->
-	
-		<div class="footer-section-right">
-		<?php dynamic_sidebar( 'hovercraft_footer_three' ); ?>
-	<div class="clear"></div>
-	</div><!-- footer-section-left -->
-	
-		<div class="footer-section-right">
-		<?php dynamic_sidebar( 'hovercraft_footer_four' ); ?>
-	<div class="clear"></div>
-	</div><!-- footer-section-left -->
+	<?php if ( get_theme_mod( 'hovercraft_footer_columns' ) == 'four_equal') { 
+		get_template_part( 'template-parts/footer/footer-four-columns-equal' );
+	} elseif ( get_theme_mod( 'hovercraft_footer_columns' ) == 'four_weighted') {
+		get_template_part( 'template-parts/footer/footer-four-columns-unequal' );
+	} elseif ( get_theme_mod( 'hovercraft_footer_columns' ) == 'three_equal') {
+		get_template_part( 'template-parts/footer/footer-three-columns-equal' );
+	} elseif ( get_theme_mod( 'hovercraft_footer_columns' ) == 'three_weighted') {
+		get_template_part( 'template-parts/footer/footer-three-columns-unequal' );
+	} else {
+		get_template_part( 'template-parts/footer/footer-four-columns-unequal' );
+	} ?>
 	
 	<div class="clear"></div>
 </div><!-- footer-columns -->
