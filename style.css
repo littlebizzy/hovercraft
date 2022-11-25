@@ -5,7 +5,7 @@ GitHub Theme URI: littlebizzy/hovercraft
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 Description: No maintenance WordPress theme
-Version: 0.1.49
+Version: 0.1.50
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
@@ -1087,6 +1087,25 @@ color:#263238;
 }
 
 
+/* main begin */
+
+@media screen and (max-width: 1200px) {
+.main-begin {
+	width: 100%;
+	box-sizing: border-box;
+	padding: 30px 20px;
+	background: #FFF;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+.main-begin {
+	padding: 30px 0px;
+	background: #FFF;
+	}
+}
+
+
 /* primary */
 
 @media screen and (max-width: 1200px) {
@@ -1222,7 +1241,7 @@ color:#263238;
 }
 
 @media screen and (max-width: 1200px) {
-.footer-section-left {
+.footer-column-one-four-unequal {
 	width: 100%;
 	box-sizing: border-box;
 	display: block;
@@ -1233,7 +1252,7 @@ color:#263238;
 }
 
 @media screen and (min-width: 1200px) {
-.footer-section-left {
+.footer-column-one-four-unequal {
 	float: left;
 	width: 420px;
 	box-sizing: border-box;
@@ -1251,7 +1270,7 @@ color:#263238;
 }
 
 @media screen and (max-width: 1200px) {
-.footer-section-right {
+.footer-column-two-four-unequal, .footer-column-three-four-unequal, .footer-column-four-four-unequal {
 	width: 100%;
 	box-sizing: border-box;
 	display: block;
@@ -1261,7 +1280,7 @@ color:#263238;
 }
 
 @media screen and (min-width: 1200px) {
-.footer-section-right {
+.footer-column-two-four-unequal, .footer-column-three-four-unequal, .footer-column-four-four-unequal {
 	float: left;
 	width: 260px;
 	box-sizing: border-box;
