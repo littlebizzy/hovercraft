@@ -23,13 +23,21 @@
 		<div class="title-wrapper">
 	<?php } ?>
 		<h1 class="half-hero-title"><?php single_post_title(); ?></h1>
-		<div class="welcome-text"><?php 
-			 $my_excerpt = get_the_excerpt();
-     // if($my_excerpt !='') {
-	if (strlen($my_excerpt) >= 5){
-         the_excerpt();
-     } else { global $hovercraft_excerpt; echo $hovercraft_excerpt; } ?></div><!-- welcome-text -->
-		
+			
+		<div class="welcome-text">
+			
+			<?php $my_excerpt = get_the_excerpt();
+				if ( is_active_sidebar( 'hovercraft_full_hero' ) ) { ?>
+				<div class="full-hero-snippet">
+					<?php dynamic_sidebar( 'hovercraft_full_hero' ); ?>
+				</div><!--full-hero-snippet -->
+			<?php } elseif ( strlen($my_excerpt) >= 5 ) { ?>
+					<div class="full-hero-snippet">
+			 			<?php the_excerpt(); ?>
+					</div><!--full-hero-snippet -->
+			<?php } ?>
+			
+		</div><!-- welcome-text -->
 	
 		<?php if (is_front_page()) : ?>
 		<div class="cta-hero-wrapper">
