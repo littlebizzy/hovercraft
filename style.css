@@ -598,13 +598,13 @@ img.site-logo {
 	}
 }
 
-#header-full-hero .menu-mobile i, #header-half-hero .menu-mobile i, #header-mini-hero .menu-mobile i {
-	font-size: 30px;
-	color: #fff;
+#header-full-hero .menu-mobile i {
+	font-size: 36px; /* correct */
+	color: #FFF; /* correct */
 }
 
-#header-basic .menu-mobile i {
-	font-size: 30px;
+#header-half-hero .menu-mobile i, #header-mini-hero .menu-mobile i, #header-basic .menu-mobile i {
+	font-size: 36px; /* correct */
 	color: #263238; /* correct */
 }
 
@@ -851,13 +851,13 @@ img.site-logo {
 
 @media screen and (max-width: 1200px) {
 .splash-main-mini {
-	padding:30px 20px; /* correct */
+	padding: 60px 20px; /* correct */
 	}
 }
 
 @media screen and (min-width: 1200px) {
 .splash-main-mini {
-	padding:60px 0px;
+	padding: 60px 0px;
 	}
 }
 
@@ -1038,7 +1038,7 @@ color:#263238;
 .welcome-wrapper {
 	width: 100%;
 	box-sizing: border-box;
-	padding: 0px 20px;
+	padding: 30px 20px;
 	}
 }
 
