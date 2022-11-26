@@ -13,7 +13,7 @@ $wp_customize->add_section( 'hovercraft_general', array(
 
 // back to top setting
 $wp_customize->add_setting('hovercraft_back_to_top', array(
-    'default'    => '0'
+    'default' => 0,
 ));
 
 // back to top control
@@ -32,7 +32,7 @@ $wp_customize->add_control(
 
 // search setting
 $wp_customize->add_setting('hovercraft_search', array(
-    'default'    => '1'
+    'default' => 1,
 ));
 
 // search control
