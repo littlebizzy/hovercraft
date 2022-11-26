@@ -26,16 +26,17 @@
 			
 		<div class="welcome-text">
 			
-			<?php $my_excerpt = get_the_excerpt();
-				if ( is_active_sidebar( 'hovercraft_full_hero' ) ) { ?>
-				<div class="full-hero-snippet">
-					<?php dynamic_sidebar( 'hovercraft_full_hero' ); ?>
-				</div><!--full-hero-snippet -->
-			<?php } elseif ( strlen($my_excerpt) >= 5 ) { ?>
+			<div class="welcome-text">
+			
+			<?php if ( has_excerpt() ) { ?>
 					<div class="full-hero-snippet">
 			 			<?php the_excerpt(); ?>
 					</div><!--full-hero-snippet -->
-			<?php } ?>
+				<?php } elseif ( is_active_sidebar( 'hovercraft_full_hero' ) ) { ?>
+					<div class="full-hero-snippet">
+					<?php dynamic_sidebar( 'hovercraft_full_hero' ); ?>
+				</div><!--full-hero-snippet -->
+				<?php } ?>
 			
 		</div><!-- welcome-text -->
 	
