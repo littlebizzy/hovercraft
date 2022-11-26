@@ -2,7 +2,7 @@
 <div class="inner">
     <?php get_template_part( 'template-parts/content/primary' ); ?>
     <?php get_template_part( 'sidebar' ); ?>
-    <?php get_template_part( 'template-parts/pagination' ); ?>
+    <?php get_template_part( 'template-parts/content/pagination' ); ?>
     <div class="clear"></div>
 </div><!-- inner -->
 </div><!-- main -->
