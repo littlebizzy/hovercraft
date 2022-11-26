@@ -27,7 +27,8 @@
 					</div><!--full-hero-snippet -->
 				<?php } elseif ( is_active_sidebar( 'hovercraft_full_hero' ) ) { ?>
 					<div class="full-hero-snippet">
-					<?php dynamic_sidebar( 'hovercraft_full_hero' ); ?>
+						<?php add_filter( 'widget_title' , 'my_widget_title', 10, 1 );
+							dynamic_sidebar( 'hovercraft_full_hero' ); remove_filter( 'widget_title', 'my_widget_title' ); ?>
 				</div><!--full-hero-snippet -->
 				<?php } ?>
 			
