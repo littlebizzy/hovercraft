@@ -61,9 +61,9 @@
 
 <?php wp_footer(); ?>
 
-<?php if( get_theme_mod( 'hovercraft_back_to_top' ) == '1') {
-	get_template_part('template-parts/button-back-to-top'); 
-} ?>
+<?php if ( get_theme_mod( 'hovercraft_back_to_top' ) == 1 ) { ?>
+	<a id="scrollup"></a>
+<?php } ?>
 
 </body><!-- body -->
 </html><!-- html -->
