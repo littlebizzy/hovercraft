@@ -32,7 +32,7 @@ $wp_customize->add_control(
 
 // search setting
 $wp_customize->add_setting('hovercraft_search', array(
-    'default' => 1,
+    'default' => 0,
 ));
 
 // search control
