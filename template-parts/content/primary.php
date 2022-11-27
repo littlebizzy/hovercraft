@@ -37,14 +37,14 @@
 	<?php } ?><!-- home page -->
 
 	<!-- page -->
-	<?php if ( is_page() ) { ?>
-	<?php if ( is_page_template( 'page-templates/template-basic.php' ) ) { ?>
-	<h1><?php the_title(); ?></h1>
-	<?php } ?>
-	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		<?php the_content(); ?>
+	<?php if ( is_singular() && 'page' == get_post_type() ) { ?>
+		<?php if ( is_page_template( 'page-templates/template-basic.php' ) || !is_page_template() ) { ?>
+		<h1><?php the_title(); ?></h1>
+		<?php } ?>
+		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+			<?php the_content(); ?>
+		<?php endwhile; endif; ?>
 		<div class="clear"></div>
-	<?php endwhile; endif; ?>	
 	<?php } ?><!-- page -->
 	
 	<!-- archive -->
