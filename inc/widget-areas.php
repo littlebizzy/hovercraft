@@ -32,20 +32,20 @@ function hovercraft_topbar_secondary() {
 add_action( 'widgets_init', 'hovercraft_topbar_secondary' );
 
 
-// full hero widgets
-function hovercraft_full_hero() {
+// hero snippet widgets
+function hovercraft_hero_snippet() {
 
 	register_sidebar( array(
-		'name'          => 'Full Hero',
-		'id'            => 'hovercraft_full_hero',
-		'before_widget' => '<div class="widget-full-hero widget-wrapper">',
+		'name'          => 'Hero Snippet',
+		'id'            => 'hovercraft_hero_snippet',
+		'before_widget' => '<div class="widget-hero-snippet widget-wrapper">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
 
 }
-add_action( 'widgets_init', 'hovercraft_full_hero' );
+add_action( 'widgets_init', 'hovercraft_hero_snippet' );
 
 
 // main begin widgets
