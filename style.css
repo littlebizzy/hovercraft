@@ -242,6 +242,17 @@ pre {
 
 /* buttons */
 
+button {
+	font-size: 16px;
+	font-weight: 400;
+	padding: 10px 20px;
+	text-decoration: none;
+	background: #ECEFF1;
+	border-radius: 4px;
+	border: 0;
+	cursor: pointer;
+}
+
 .button-wide-dark {
 	width: 100%;
 	box-sizing: border-box;
