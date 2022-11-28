@@ -4,9 +4,9 @@
 function ah_breadcrumb() {
 
   // Check if is front/home page, return
-  if ( is_front_page() ) {
-    return;
-  }
+  //if ( is_front_page() ) {
+    //return;
+  //}
 
   // Define
   global $post;
