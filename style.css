@@ -1818,3 +1818,9 @@ color:#263238;
 	display: block;
 }
 
+
+/* bbpress */
+
+.bbp-template-notice {
+	display: none;
+}
