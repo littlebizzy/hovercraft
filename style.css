@@ -1824,3 +1824,7 @@ color:#263238;
 .bbp-template-notice {
 	display: none;
 }
+
+.bbp-pagination-count {
+	display: none;
+}
