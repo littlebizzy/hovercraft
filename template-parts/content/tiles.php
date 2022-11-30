@@ -90,7 +90,7 @@
 	<div class="clear"></div>
 	</div><!-- tiles -->
     
-	<?php get_template_part( 'template-parts/content/primary' ); ?>
+	<?php // get_template_part( 'template-parts/content/primary' ); ?>
     
     <?php get_template_part( 'template-parts/content/pagination' ); ?>
 	
