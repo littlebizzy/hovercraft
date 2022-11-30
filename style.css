@@ -5,7 +5,7 @@ GitHub Theme URI: littlebizzy/hovercraft
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 Description: No maintenance WordPress theme
-Version: 0.1.56
+Version: 0.1.57
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
@@ -1838,4 +1838,48 @@ color:#263238;
 
 .bbp-pagination-count {
 	display: none;
+}
+
+.bbp-header {
+	background: #ECEFF1 !important;
+	color: #263238 !important;
+}
+
+.bbp-body {
+	background: #FFF !important;
+	color: #263238 !important;
+}
+
+.bbp-footer {
+	display: none;
+}
+
+.bbp-topic-title {
+	font-size: 16px !important;
+}
+
+.bbp-reply-content {
+	font-size: 16px !important;
+	line-height: 1.5 !important;
+}
+
+ul.forum {
+	background: #FFF !important;
+}
+
+ul.topic {
+	background: #FFF !important;
+	padding: 20px !important;
+}
+
+ul.forum-titles {
+	font-size: 16px !important;
+}
+
+.bbp-topic-voice-count {
+visibility: hidden;
+}
+
+.bbp-topics-widget div {
+	color: #607D8B;
 }
