@@ -382,3 +382,67 @@ function hovercraft_tile_twelve() {
 
 }
 add_action( 'widgets_init', 'hovercraft_tile_twelve' );
+
+
+// column one widgets
+function hovercraft_column_one() {
+
+	register_sidebar( array(
+		'name'          => 'Column #1',
+		'id'            => 'hovercraft_column_one',
+		'before_widget' => '<div class="widget-column-one widget-wrapper">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+}
+add_action( 'widgets_init', 'hovercraft_column_one' );
+
+
+// column two widgets
+function hovercraft_column_two() {
+
+	register_sidebar( array(
+		'name'          => 'Column #2',
+		'id'            => 'hovercraft_column_two',
+		'before_widget' => '<div class="widget-column-two widget-wrapper">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+}
+add_action( 'widgets_init', 'hovercraft_column_two' );
+
+
+// column three widgets
+function hovercraft_column_three() {
+
+	register_sidebar( array(
+		'name'          => 'Column #3',
+		'id'            => 'hovercraft_column_three',
+		'before_widget' => '<div class="widget-column-three widget-wrapper">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+}
+add_action( 'widgets_init', 'hovercraft_column_three' );
+
+
+// column four widgets
+function hovercraft_column_four() {
+
+	register_sidebar( array(
+		'name'          => 'Column #4',
+		'id'            => 'hovercraft_column_four',
+		'before_widget' => '<div class="widget-column-four widget-wrapper">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+}
+add_action( 'widgets_init', 'hovercraft_column_four' );
