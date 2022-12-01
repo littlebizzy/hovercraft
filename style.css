@@ -1126,6 +1126,21 @@ color:#263238;
 	}
 }
 
+@media screen and (max-width: 1200px) {
+.welcome-text-mini-hero {
+	font-size: 16px;
+	color: #FFF;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+.welcome-text-mini-hero {
+	margin-top: 30px;
+	font-size: 18px;
+	color: #FFF;
+	}
+}
+
 
 /* main */
 /* main refers to everything between header/splash and footer */
