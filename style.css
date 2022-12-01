@@ -602,12 +602,21 @@ img.site-logo {
 	display:block;
 }
 
+@media screen and (max-width: 1200px) {
 .site-tagline {
-	font-size:14px;
-	line-height:1.5;
-	display:block;
+	font-size: 14px;
+	line-height: 1.5;
+	display: none;
+	}
 }
 
+@media screen and (min-width: 1200px) {
+.site-tagline {
+	font-size: 14px;
+	line-height: 1.5;
+	display: block;
+	}
+}
 
 /* mobile menu */
 
