@@ -24,10 +24,8 @@
 	<?php } ?>
 		<h1 class="half-hero-title"><?php single_post_title(); ?></h1>
 			
+		<?php if (is_front_page()) : ?>
 		<div class="welcome-text">
-			
-			<div class="welcome-text">
-			
 			<?php if ( has_excerpt() ) { ?>
 					<div class="full-hero-snippet">
 			 			<?php the_excerpt(); ?>
@@ -38,8 +36,8 @@
 							dynamic_sidebar( 'hovercraft_hero_snippet' ); remove_filter( 'widget_title', 'my_widget_title' ); ?>
 				</div><!--full-hero-snippet -->
 				<?php } ?>
-			
 		</div><!-- welcome-text -->
+		<?php endif; ?><!-- is_front_page -->
 	
 		<?php if (is_front_page()) : ?>
 		<div class="cta-hero-wrapper">
