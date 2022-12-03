@@ -315,6 +315,7 @@ button {
 	}
 }
 
+@media screen and (max-width: 1200px) {
 .button-wide-dark {
 	width: 100%;
 	box-sizing: border-box;
@@ -327,6 +328,23 @@ button {
 	display: block;
 	background: #263238;
 	border-radius: 4px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+.button-wide-dark {
+	width: 100%;
+	box-sizing: border-box;
+	text-align: center;
+	font-size: 20px;
+	font-weight: 700;
+	color: #FFF;
+	padding: 10px 0px;
+	text-decoration: none;
+	display: block;
+	background: #263238;
+	border-radius: 4px;
+	}
 }
 
 
