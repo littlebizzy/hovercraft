@@ -4,7 +4,7 @@ function hovercraft_customizer($wp_customize) {
 	
 $wp_customize->get_section('header_image')->title = __( 'Header Media' );
 
-// general options
+// general options section
 $wp_customize->add_section( 'hovercraft_general', array(
     'title'      => 'General Options',
     'priority'   => 30,
@@ -30,6 +30,7 @@ $wp_customize->add_control(
     )
 );
 
+
 // search setting
 $wp_customize->add_setting('hovercraft_search', array(
     'default' => 0,
@@ -44,6 +45,26 @@ $wp_customize->add_control(
             'label'     => __('Enable site-wide search', 'hovercraft'),
             'section'   => 'hovercraft_general',
             'settings'  => 'hovercraft_search',
+            'type'      => 'checkbox',
+        )
+    )
+);
+
+
+// breadcrumbs setting
+$wp_customize->add_setting('hovercraft_breadcrumbs', array(
+    'default' => 0,
+));
+
+// breadcrumbs control
+$wp_customize->add_control(
+    new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_breadcrumbs',
+        array(
+            'label'     => __('Enable breadcrumbs', 'hovercraft'),
+            'section'   => 'hovercraft_general',
+            'settings'  => 'hovercraft_breadcrumbs',
             'type'      => 'checkbox',
         )
     )
