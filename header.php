@@ -5,8 +5,17 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans<?php if (get_locale() == 'ko_KR') { echo "+KR"; } ?>:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+	<?php 
+	$wp_locale = get_locale();
+	if (strpos($wp_locale, 'en') === false) { ?>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+<?php
+		$wp_locale = get_locale();
+		$wp_locale_trimmed = strstr($wp_locale, '_');
+		$wp_locale_final = str_replace('_', '', $wp_locale_trimmed);
+		echo rtrim($wp_locale_final); ?>:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+	<?php } ?>
 	
 	<style>
 	<?php include 'style.css'; ?>
