@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	
 	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons&family=Material+Icons+Outlined&family=Material+Icons+Two+Tone">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap">
 	<?php 
 	$wp_locale = get_locale();
