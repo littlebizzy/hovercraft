@@ -45,6 +45,12 @@
 	<?php wp_head(); ?>
 	</head>
 	<body>
+	
+<input type="checkbox" id="togglebox" />
+	
+<nav id="offcanvas-menu">
+	Menu contents to be added
+</nav><!-- offcanvas-menu -->
 
 <div id="container">
 	
