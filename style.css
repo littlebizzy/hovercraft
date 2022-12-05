@@ -5,7 +5,7 @@ GitHub Theme URI: littlebizzy/hovercraft
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 Description: No maintenance WordPress theme
-Version: 0.1.62
+Version: 0.1.63
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
@@ -38,6 +38,9 @@ html, body {
 	width: 100%;
 	height: 100%;
 	box-sizing: border-box;
+	position: relative; /* required for mobile menu transform */
+	transform: translate3d(0, 0, 0);
+  	transition: transform 0.5s;
 	}
 }
 
@@ -723,6 +726,54 @@ img.site-logo {
 	font-size: 36px; /* correct */
 	color: #263238; /* correct */
 }
+
+input[type="checkbox"]#togglebox {
+  	position: absolute;
+	top: 0;
+  	right: 0;
+  	visibility: hidden;
+}
+
+label#navtoggler {
+	z-index: 9;
+	display: block;
+	position: relative;
+	top: 0;
+  	right: 0;
+  	cursor: pointer;
+}
+
+nav#offcanvas-menu {
+  /* Full screen nav menu */
+  width: 250px;
+  	height: 100%;
+  	top: 0;
+  	right: 0;
+  	z-index: 100;
+  	visibility: hidden; /* this is for browsers that don't support CSS3 translate3d */
+  transform: translate3d(250px, 0, 0);
+  	box-sizing: border-box;
+  	background: #263238; /* correct */
+	color: #FFF;
+  	display: block;
+  	position: fixed;
+  text-align: center;
+  overflow: auto;
+  	transition: transform 0.5s, visibility 0s 0.5s;
+}
+
+input[type="checkbox"]#togglebox:checked ~ div#container {
+  margin-right: 20px;
+  transform: translate3d(-250px, 0, 0);
+}
+
+input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
+  /* nav state when corresponding checkbox is checked */
+  transform: translate3d(0, 0, 0);
+  visibility: visible; /* this is for browsers that don't support CSS3 translate3d in showing the menu */
+  transition-delay: 0s; /* No delay for applying "visibility:visible" property when menu is going from "closed" to "open" */
+}
+
 
 /* menu desktop */
 
