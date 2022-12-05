@@ -701,10 +701,11 @@ img.site-logo {
 	}
 }
 
+
 /* mobile menu */
 
 @media screen and (max-width: 1200px) {
-.menu-mobile {
+.menu-mobile-wrapper {
 	display: inline-block;
 	text-align: right;
  	vertical-align: middle;
@@ -712,19 +713,50 @@ img.site-logo {
 }
 	
 @media screen and (min-width: 1200px) {
-.menu-mobile {
+.menu-mobile-wrapper {
  	display: none;	
 	}
 }
 
-#header-full-hero .menu-mobile i {
+#header-full-hero .menu-mobile-wrapper i {
 	font-size: 36px; /* correct */
 	color: #FFF; /* correct */
 }
 
-#header-half-hero .menu-mobile i, #header-mini-hero .menu-mobile i, #header-basic .menu-mobile i {
+#header-half-hero .menu-mobile-wrapper i, #header-mini-hero .menu-mobile-wrapper i, #header-basic .menu-mobile-wrapper i {
 	font-size: 36px; /* correct */
 	color: #263238; /* correct */
+}
+
+.offcanvas-menu {
+	display: block;
+}
+
+.offcanvas-menu ul {
+	text-align: left;
+}
+
+.offcanvas-menu ul li {
+	font-size: 18px;
+	list-style-type: none;
+ 	vertical-align: middle;
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	border-bottom: 1px solid rgba(255,255,255, 0.2);
+}
+
+.offcanvas-menu ul li:last-child {
+	border-bottom: 0;
+}
+
+.offcanvas-menu ul li a {
+	width: 100%;
+	box-sizing: border-box;
+	display: block;
+	padding: 10px 20px;
+	text-decoration: none;
+	color: #FFF; /* correct */
 }
 
 input[type="checkbox"]#togglebox {
@@ -749,7 +781,7 @@ nav#offcanvas-menu {
   	height: 100%;
   	top: 0;
   	right: 0;
-	padding: 30px 20px;
+	padding: 30px 0px;
 	box-sizing: border-box;
   	z-index: 100;
   	visibility: hidden; /* this is for browsers that don't support CSS3 translate3d */
