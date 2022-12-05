@@ -49,9 +49,9 @@
 			}
 			?>
 		</div><!-- menu-desktop -->
-		<div class="menu-mobile">
+		<div class="menu-mobile-wrapper">
 			<label for="togglebox" id="navtoggler"><i class="material-icons menu">menu</i></label>
-		</div><!--menu-mobile -->
+		</div><!--menu-mobile-wrapper -->
 		</div><!--menu-choose -->
 	<div class="clear"></div>
 	</div><!-- header-right -->
