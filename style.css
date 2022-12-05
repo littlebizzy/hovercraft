@@ -745,26 +745,27 @@ label#navtoggler {
 
 nav#offcanvas-menu {
   /* Full screen nav menu */
-  width: 250px;
+  	width: 250px;
   	height: 100%;
   	top: 0;
   	right: 0;
+	padding: 30px 20px;
+	box-sizing: border-box;
   	z-index: 100;
   	visibility: hidden; /* this is for browsers that don't support CSS3 translate3d */
-  transform: translate3d(250px, 0, 0);
+  	transform: translate3d(250px, 0, 0);
   	box-sizing: border-box;
   	background: #263238; /* correct */
 	color: #FFF;
   	display: block;
   	position: fixed;
-  text-align: center;
+  	text-align: center;
   overflow: auto;
   	transition: transform 0.5s, visibility 0s 0.5s;
 }
 
 input[type="checkbox"]#togglebox:checked ~ div#container {
-  margin-right: 20px;
-  transform: translate3d(-250px, 0, 0);
+	transform: translate3d(-250px, 0, 0);
 }
 
 input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
