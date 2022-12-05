@@ -49,7 +49,19 @@
 <input type="checkbox" id="togglebox" />
 	
 <nav id="offcanvas-menu">
-	Menu contents to be added
+	<?php 
+    if ( has_nav_menu( 'main-menu' ) ) {
+    	wp_nav_menu(array(
+        	'theme_location' => 'main-menu', 
+			'menu_class' => 'menu', 
+        	'container_class' => 'offcanvas-menu'
+            ));
+	} else {
+    	echo '<div class="offcanvas-menu"><ul class="menu">';
+		wp_list_pages( array( 'title_li' => '' ) );
+        echo '</ul></div>';
+    }
+	?>
 </nav><!-- offcanvas-menu -->
 
 <div id="container">
