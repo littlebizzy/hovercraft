@@ -227,7 +227,8 @@ iframe {
 }
 
 code {
-	font-family: monospace;
+	font-family: 'Noto Sans Mono', monospace;
+	font-weight: 400;
 	background: #ECEFF1;
 	padding: 0px 5px;
 }
@@ -235,12 +236,13 @@ code {
 pre {
 	width: 100%;
 	box-sizing: border-box;
-	font-family: monospace;
+	font-family: 'Noto Sans Mono', monospace;
+	font-weight: 400;
 	background: #ECEFF1;
 	padding: 10px;
+	margin-bottom: 30px;
 	overflow-x: scroll;
 	white-space: pre;
-	margin-bottom: 30px;
 }
 
 
