@@ -5,10 +5,10 @@
     rgba(255, 255, 255, 0) 100%), url(<?php 
 	$url_header_image = esc_url( get_header_image() );
 	$url_featured_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' ); 
-	if (!empty($url_featured_image)){ echo $url_featured_image; } else { echo $url_header_image; } ?>);		
-	background-position: center center;
-	background-size: cover;
-	background-repeat: no-repeat;
+	if (!empty($url_featured_image)){ echo $url_featured_image; } else { echo $url_header_image; } ?>) !important;		
+	background-position: center center !important;
+	background-size: cover !important;
+	background-repeat: no-repeat !important;
 ">
 
 <?php 
