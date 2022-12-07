@@ -233,16 +233,34 @@ code {
 	padding: 0px 5px;
 }
 
+@media screen and (max-width: 1200px) {
+pre {
+	width: calc(100% - 40px) !important;
+	box-sizing: border-box;
+	font-family: 'Noto Sans Mono', monospace;
+	font-weight: 400;
+	background: #ECEFF1; /* correct */
+	padding: 10px;
+	margin-bottom: 30px;
+	overflow-x: scroll;
+	white-space: pre;
+	color: #263238; /* correct */
+	}
+}
+
+@media screen and (min-width: 1200px) {
 pre {
 	width: 100%;
 	box-sizing: border-box;
 	font-family: 'Noto Sans Mono', monospace;
 	font-weight: 400;
-	background: #ECEFF1;
+	background: #ECEFF1; /* correct */
 	padding: 10px;
 	margin-bottom: 30px;
 	overflow-x: scroll;
 	white-space: pre;
+	color: #263238; /* correct */
+	}
 }
 
 
@@ -1066,15 +1084,6 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 	display: table-row; /* correct */
 	position: relative; /* required when using video background on splash-wide */
 	}
-}
-
-.splash-main pre {
-	width: 100%;
-	box-sizing: border-box;
-	font-size: 16px;
-	line-height: 3;
-	padding: 0px 20px;
-	color: #263238; /* correct */
 }
 
 @media screen and (max-width: 1200px) {
