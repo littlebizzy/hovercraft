@@ -39,11 +39,8 @@ require get_template_directory() . '/inc/widget-titles.php';
 // breadcrumbs
 require get_template_directory() . '/inc/breadcrumbs.php';
 
-// disable bbpress breadcrumbs
-function bm_bbp_no_breadcrumb ($param) {
-	return true;
-}
-add_filter ('bbp_no_breadcrumb', 'bm_bbp_no_breadcrumb');
+// pagination
+require get_template_directory() . '/inc/pagination.php';
 
 // variables
 $welcome = "Stop fixing your WordPress theme, and focus on your business.";
