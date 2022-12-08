@@ -28,6 +28,7 @@
 			<?php the_content(); ?>
 		<?php endwhile; endif; ?><!-- the loop -->
 	
+	<div class="clear"></div>
 	<?php hovercraft_pagination_nav(); ?>	
 	
 	<div class="clear"></div>
