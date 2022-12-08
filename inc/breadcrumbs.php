@@ -1,5 +1,12 @@
 <?php
 
+// disable bbpress breadcrumbs
+function bm_bbp_no_breadcrumb ($param) {
+	return true;
+}
+add_filter ('bbp_no_breadcrumb', 'bm_bbp_no_breadcrumb');
+
+
 // https://torquemag.io/2020/09/wordpress-breadcrumbs/
 function ah_breadcrumb() {
 
