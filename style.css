@@ -1160,7 +1160,7 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 	display: block;
 	width: 100%;
 	box-sizing: border-box;
-	background: #0288D1;
+	background: #5C6BC0; /* correct indigo */
 	margin-bottom: 20px;
 	border-radius: 4px;
 }
@@ -1174,7 +1174,7 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 	padding: 10px 0px;
 	text-decoration: none;
 	display: inline-block;
-	background: #00B0FF;
+	background: #5C6BC0; /* correct indigo */
 	border-radius: 4px;
 	width: 200px;
 }
