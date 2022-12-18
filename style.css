@@ -5,7 +5,7 @@ GitHub Theme URI: littlebizzy/hovercraft
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 Description: No maintenance WordPress theme
-Version: 0.1.67
+Version: 0.1.68
 License: GPLv3
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 */
@@ -22,6 +22,14 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, hr, bl
 	vertical-align: baseline;
 }
 
+
+/* universal */
+
+* {
+    box-sizing: border-box;
+  }
+
+
 /* general */
 
 html, body {
@@ -37,7 +45,6 @@ html, body {
 #container {
 	width: 100%;
 	height: 100%;
-	box-sizing: border-box;
 	position: relative; /* required for mobile menu transform */
 	transform: translate3d(0, 0, 0);
   	transition: transform 0.5s;
@@ -48,7 +55,6 @@ html, body {
 #container {
 	width: 100%;
 	height: 100%;
-	box-sizing: border-box;
 	}
 }
 
@@ -236,7 +242,6 @@ code {
 @media screen and (max-width: 1200px) {
 pre {
 	width: calc(100% - 40px) !important;
-	box-sizing: border-box;
 	font-family: 'Noto Sans Mono', monospace;
 	font-weight: 400;
 	background: #ECEFF1; /* correct */
@@ -251,7 +256,6 @@ pre {
 @media screen and (min-width: 1200px) {
 pre {
 	width: 100%;
-	box-sizing: border-box;
 	font-family: 'Noto Sans Mono', monospace;
 	font-weight: 400;
 	background: #ECEFF1; /* correct */
@@ -280,7 +284,6 @@ button {
 @media screen and (max-width: 1200px) {
 .button-link {
 	width: 100%;
-	box-sizing: border-box;
 	text-align: center;
 	font-size: 20px;
 	font-weight: 700;
@@ -310,7 +313,6 @@ button {
 @media screen and (max-width: 1200px) {
 .button-outline {
 	width: 100%;
-	box-sizing: border-box;
 	display: block;
 	font-size: 18px;
 	font-weight: 600;
@@ -341,7 +343,6 @@ button {
 @media screen and (max-width: 1200px) {
 .button-wide-dark {
 	width: 100%;
-	box-sizing: border-box;
 	text-align: center;
 	font-size: 20px;
 	font-weight: 700;
@@ -357,7 +358,6 @@ button {
 @media screen and (min-width: 1200px) {
 .button-wide-dark {
 	width: 100%;
-	box-sizing: border-box;
 	text-align: center;
 	font-size: 20px;
 	font-weight: 700;
@@ -376,7 +376,6 @@ button {
 @media screen and (max-width: 1200px) {
 .breadcrumbs {
 	width: 100%;
-	box-sizing: border-box;
 	font-size: 14px;
 	margin-bottom: 30px;
 	color: #607D8B;
@@ -414,7 +413,6 @@ button {
 @media screen and (max-width: 1200px) {
 #topbar {
 	width: 100%;
-	box-sizing: border-box;
 	padding: 10px 20px;
 	font-size: 14px;
 	line-height: 1.5;
@@ -497,7 +495,6 @@ button {
 @media screen and (max-width: 1200px) {
 #header-full-hero {
 	width: 100%;
-	box-sizing: border-box;
 	display: table;
 	padding: 20px 20px;
 	border-bottom: 1px solid rgba(255,255,255, 0.2);
@@ -536,7 +533,6 @@ button {
 @media screen and (max-width: 1200px) {
 #header-half-hero {
 	width: 100%;
-	box-sizing: border-box;
 	display: table;
 	padding: 20px 20px;
 	border-bottom: 1px solid transparent;
@@ -573,7 +569,6 @@ button {
 @media screen and (max-width: 1200px) {
 #header-mini-hero {
 	width: 100%;
-	box-sizing: border-box;
 	display: table;
 	padding: 20px 20px;
 	border-bottom: 1px solid transparent;
@@ -610,7 +605,6 @@ button {
 @media screen and (max-width: 1200px) {
 #header-basic {
 	width: 100%;
-	box-sizing: border-box;
 	display: table;
 	padding: 20px 20px;
 	border-bottom: 1px solid transparent;
@@ -789,7 +783,6 @@ button {
 
 .offcanvas-menu ul li a {
 	width: 100%;
-	box-sizing: border-box;
 	display: block;
 	padding: 10px 20px;
 	text-decoration: none;
@@ -819,11 +812,9 @@ nav#offcanvas-menu {
   	top: 0;
   	right: 0;
 	padding: 30px 0px;
-	box-sizing: border-box;
   	z-index: 100;
   	visibility: hidden; /* this is for browsers that don't support CSS3 translate3d */
   	transform: translate3d(250px, 0, 0);
-  	box-sizing: border-box;
   	background: #263238; /* correct */
 	color: #FFF;
   	display: block;
@@ -1031,7 +1022,6 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 	width:100%; /* correct */
 	padding:0px; /* correct */
 	display:table; /* correct */
-	box-sizing:border-box;
 	}
 }
 
@@ -1112,7 +1102,6 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 .cta-hero-primary {
 	display: block;
 	width: 100%;
-	box-sizing: border-box;
 	}
 }
 
@@ -1129,7 +1118,6 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 	display:block;
 	padding:0px;
 	border-radius:2px;
-	box-sizing:border-box;
 	border:1px solid transparent;
 	vertical-align: middle;
 	text-align:center;
@@ -1143,7 +1131,6 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 	display:inline-block;
 	padding:0px;
 	border-radius:2px;
-	box-sizing:border-box;
 	border:1px solid transparent;
 	vertical-align: middle;
 	text-align:center;
@@ -1159,7 +1146,6 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 	text-decoration: none;
 	display: block;
 	width: 100%;
-	box-sizing: border-box;
 	background: #5C6BC0; /* correct indigo */
 	margin-bottom: 20px;
 	border-radius: 4px;
@@ -1191,7 +1177,6 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 .cta-hero-secondary {
 	display: block;
 	width: 100%;
-	box-sizing: border-box;
 }
 }
 
@@ -1210,7 +1195,6 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 	padding:0px;
 	background:transparent;
 	border-radius:2px;
-	box-sizing:border-box;
 	border:1px solid #fff;
 	vertical-align: middle;
 	text-align:center;
@@ -1226,7 +1210,6 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 	padding:0px;
 	background:transparent;
 	border-radius:2px;
-	box-sizing:border-box;
 	border:1px solid #fff;
 	vertical-align: middle;
 	text-align:center;
@@ -1241,7 +1224,6 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 	text-decoration: none;
 	display: block;
 	width: 100%;
-	box-sizing: border-box;
 	margin-bottom: 0;
 	border-radius: 4px;
 }
@@ -1274,7 +1256,6 @@ color:#263238;
 @media screen and (max-width: 1200px) {
 .welcome-wrapper {
 	width: 100%;
-	box-sizing: border-box;
 	padding: 30px 20px;
 	}
 }
@@ -1288,7 +1269,6 @@ color:#263238;
 @media screen and (max-width: 1200px) {
 .title-wrapper {
 	width: 100%;
-	box-sizing: border-box;
 	padding: 0px 20px;
 	text-align: center;
 	}
@@ -1340,7 +1320,6 @@ color:#263238;
 @media screen and (max-width: 1200px) {
 #main {
 	width: 100%;
-	box-sizing: border-box;
 	padding: 0px 0px;
 	background: #FFF;
 	}
@@ -1359,7 +1338,6 @@ color:#263238;
 @media screen and (max-width: 1200px) {
 .main-begin {
 	width: 100%;
-	box-sizing: border-box;
 	padding: 30px 20px;
 	background: #ECEFF1;
 	text-align: center;
@@ -1382,7 +1360,6 @@ color:#263238;
 @media screen and (max-width: 1200px) {
 #primary {
 	width: 100%;
-	box-sizing: border-box;
 	padding: 20px 20px;
 	background: #FFF;
 	}
@@ -1392,7 +1369,6 @@ color:#263238;
 #primary {
 	float: left;
 	width: 800px;
-	box-sizing: border-box;
 	padding-right: 30px;
 	background: #FFF;
 	}
@@ -1427,7 +1403,6 @@ color:#263238;
 @media screen and (max-width: 1200px) {
 #sidebar {
 	width: 100%;
-	box-sizing: border-box;
 	padding: 30px 20px;
 	background: #FFF;
 	}
@@ -1437,7 +1412,6 @@ color:#263238;
 #sidebar {
 	float: right;
 	width: 400px;
-	box-sizing: border-box;
 	padding-left: 30px;
 	background: #FFF;
 	}
@@ -1465,7 +1439,6 @@ color:#263238;
 @media screen and (max-width: 1200px) {
 #prefooter-top {
 	width: 100%;
-	box-sizing: border-box;
 	background: #263238;
 	color: #FFF;
 	padding: 30px 20px;
@@ -1490,7 +1463,6 @@ color:#263238;
 @media screen and (max-width: 1200px) {
 #prefooter-bottom {
 	width: 100%;
-	box-sizing: border-box;
 	background: #263238;
 	color: #FFF;
 	padding: 30px 20px;
@@ -1515,7 +1487,6 @@ color:#263238;
 @media screen and (max-width: 1200px) {
 #footer {
 	width: 100%;
-	box-sizing: border-box;
 	background: #ECEFF1;
 	padding: 30px 20px;
 	}
@@ -1543,7 +1514,6 @@ color:#263238;
 @media screen and (max-width: 1200px) {
 .footer-column-one-four-unequal {
 	width: 100%;
-	box-sizing: border-box;
 	display: block;
     vertical-align: top;
 	margin-bottom: 30px;
@@ -1555,7 +1525,6 @@ color:#263238;
 .footer-column-one-four-unequal {
 	float: left;
 	width: 420px;
-	box-sizing: border-box;
 	display: inline-block;
     vertical-align: top;
 	padding-right: 30px;
@@ -1568,7 +1537,6 @@ color:#263238;
 @media screen and (max-width: 1200px) {
 .footer-column-two-four-unequal, .footer-column-three-four-unequal, .footer-column-four-four-unequal {
 	width: 100%;
-	box-sizing: border-box;
 	display: block;
     vertical-align: top;
 	margin-bottom: 30px;
@@ -1579,7 +1547,6 @@ color:#263238;
 .footer-column-two-four-unequal, .footer-column-three-four-unequal, .footer-column-four-four-unequal {
 	float: left;
 	width: 260px;
-	box-sizing: border-box;
 	display: inline-block;
 	vertical-align: top;
 	padding-left: 60px;
@@ -1592,7 +1559,6 @@ color:#263238;
 @media screen and (max-width: 1200px) {
 .footer-column-one-four-equal {
 	width: 100%;
-	box-sizing: border-box;
 	display: block;
     vertical-align: top;
 	margin-bottom: 30px;
@@ -1616,7 +1582,6 @@ color:#263238;
 @media screen and (max-width: 1200px) {
 .footer-column-two-four-equal {
 	width: 100%;
-	box-sizing: border-box;
 	display: block;
     vertical-align: top;
 	margin-bottom: 30px;
@@ -1640,7 +1605,6 @@ color:#263238;
 @media screen and (max-width: 1200px) {
 .footer-column-three-four-equal {
 	width: 100%;
-	box-sizing: border-box;
 	display: block;
     vertical-align: top;
 	margin-bottom: 30px;
@@ -1664,7 +1628,6 @@ color:#263238;
 @media screen and (max-width: 1200px) {
 .footer-column-four-four-equal {
 	width: 100%;
-	box-sizing: border-box;
 	display: block;
     vertical-align: top;
 	margin-bottom: 30px;
@@ -1688,7 +1651,6 @@ color:#263238;
 @media screen and (max-width: 1200px) {
 .footer-column-one-three-unequal {
 	width: 100%;
-	box-sizing: border-box;
 	display: block;
     vertical-align: top;
 	margin-bottom: 30px;
@@ -1712,7 +1674,6 @@ color:#263238;
 @media screen and (max-width: 1200px) {
 .footer-column-two-three-unequal {
 	width: 100%;
-	box-sizing: border-box;
 	display: block;
     vertical-align: top;
 	margin-bottom: 30px;
@@ -1735,7 +1696,6 @@ color:#263238;
 @media screen and (max-width: 1200px) {
 .footer-column-three-three-unequal {
 	width: 100%;
-	box-sizing: border-box;
 	display: block;
     vertical-align: top;
 	margin-bottom: 30px;
@@ -1758,7 +1718,6 @@ color:#263238;
 @media screen and (max-width: 1200px) {
 .footer-column-one-three-equal {
 	width: 100%;
-	box-sizing: border-box;
 	display: block;
     vertical-align: top;
 	margin-bottom: 30px;
@@ -1782,7 +1741,6 @@ color:#263238;
 @media screen and (max-width: 1200px) {
 .footer-column-two-three-equal {
 	width: 100%;
-	box-sizing: border-box;
 	display: block;
     vertical-align: top;
 	margin-bottom: 30px;
@@ -1806,7 +1764,6 @@ color:#263238;
 @media screen and (max-width: 1200px) {
 .footer-column-three-three-equal {
 	width: 100%;
-	box-sizing: border-box;
 	display: block;
     vertical-align: top;
 	margin-bottom: 30px;
@@ -1855,7 +1812,6 @@ color:#263238;
 	background:#ECEFF1;
 	font-size:14px;
 	padding:30px 20px;
-	box-sizing:border-box;
 	border-top:1px solid #B0BEC5;
 }
 }
@@ -1866,7 +1822,6 @@ color:#263238;
 	background:#ECEFF1;
 	font-size:14px;
 	padding:30px 0px;
-	box-sizing:border-box;
 	display: table;
 	border-top: 1px solid rgba(38, 50, 56, 0.2);
 	border-top:1px solid #B0BEC5;
@@ -1876,7 +1831,6 @@ color:#263238;
 @media screen and (max-width: 1200px) {
 .copyright-left {
 	width: 100%;
-	box-sizing: border-box;
 	display: block;
     vertical-align: top;
 	text-align: center;
@@ -1896,7 +1850,6 @@ color:#263238;
 @media screen and (max-width: 1200px) {
 .copyright-right {
 	width: 100%;
-	box-sizing: border-box;
 	margin-top: 30px;
 	display: block;
     vertical-align: top;
@@ -1983,7 +1936,6 @@ color:#263238;
 @media screen and (max-width: 1200px) {
 #tiles {
 	width: 100%;
-	box-sizing: border-box;
 	padding: 30px 20px;
 	}
 }
@@ -2004,7 +1956,6 @@ color:#263238;
 @media screen and (max-width: 1200px) {
 .tile {
 	width: 100%;
-	box-sizing: border-box;
 	margin-bottom: 30px;
 	padding: 30px;
 	text-align: center;
@@ -2041,7 +1992,6 @@ color:#263238;
 @media screen and (max-width: 1200px) {
 #columns {
 	width: 100%;
-	box-sizing: border-box;
 	padding: 30px 20px;
 	}
 }
@@ -2062,7 +2012,6 @@ color:#263238;
 @media screen and (max-width: 1200px) {
 .column {
 	width: 100%;
-	box-sizing: border-box;
 	border: 1px solid #263238;
 	padding: 30px;
 	border-radius: 4px;
@@ -2076,7 +2025,6 @@ color:#263238;
 	float: left;
 	border: 1px solid #263238;
 	padding: 30px;
-	box-sizing: border-box;
 	border-radius: 4px; */
 	
 	border: 1px solid #263238;
@@ -2200,4 +2148,3 @@ visibility: hidden;
 	background-color: #263238;
 	color: #FFF;
 }
-
