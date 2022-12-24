@@ -55,12 +55,30 @@
         	'theme_location' => 'main-menu', 
 			'menu_class' => 'menu', 
         	'container_class' => 'offcanvas-menu'
-            ));
+		) );
 	} else {
     	echo '<div class="offcanvas-menu"><ul class="menu">';
 		wp_list_pages( array( 'title_li' => '' ) );
         echo '</ul></div>';
     }
+	?>
+	<?php
+	if ( has_nav_menu( 'cta-header-secondary' ) ) {
+    	wp_nav_menu( array( 
+        	'theme_location' => 'cta-header-secondary', 
+        	'menu_class' => 'cta', 
+        	'container_class' => 'cta-offcanvas-secondary'
+    	) );
+	}
+	?>
+	<?php
+	if ( has_nav_menu( 'cta-header-primary' ) ) {
+    	wp_nav_menu( array( 
+        	'theme_location' => 'cta-header-primary', 
+        	'menu_class' => 'cta', 
+        	'container_class' => 'cta-offcanvas-primary'
+    	) );
+	}
 	?>
 </nav><!-- offcanvas-menu -->
 
