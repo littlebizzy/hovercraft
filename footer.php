@@ -18,6 +18,7 @@
 </div><!-- prefooter-bottom -->
 <?php } ?>
 
+<?php if ( is_active_sidebar( 'hovercraft_footer_one' ) || is_active_sidebar( 'hovercraft_footer_two' ) || is_active_sidebar( 'hovercraft_footer_three' ) ) { ?>
 <div id="footer">
 <div class="inner">
 	
@@ -36,6 +37,7 @@
 	<div class="clear"></div>
 </div><!--inner -->
 </div><!-- footer -->
+<?php } ?>
 
 <div id="copyright">
 	<div class="inner">
