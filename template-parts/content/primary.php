@@ -1,4 +1,4 @@
-<div id="primary">
+<?php if ( get_theme_mod( 'hovercraft_sidebar_status' ) == 1 ) { ?><div id="primary"><?php } else { ?><div id="primary-wide"><?php } ?>
 
 	<?php if ( get_theme_mod( 'hovercraft_breadcrumbs' ) == 1 ) { ?>
 		<div class="breadcrumbs">
