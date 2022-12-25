@@ -1,8 +1,11 @@
 <?php
 
 function hovercraft_customizer($wp_customize) {
-	
+
+
+// header media section
 $wp_customize->get_section('header_image')->title = __( 'Header Media' );
+
 
 // general options section
 $wp_customize->add_section( 'hovercraft_general', array(
@@ -15,6 +18,7 @@ $wp_customize->add_section( 'hovercraft_general', array(
 $wp_customize->add_setting('hovercraft_back_to_top', array(
     'default' => 0,
 ));
+
 
 // back to top control
 $wp_customize->add_control(
@@ -69,12 +73,37 @@ $wp_customize->add_control(
         )
     )
 );
-	
+
+
+// sidebar section
+$wp_customize->add_section( 'hovercraft_sidebar', array(
+    'title'      => 'Sidebar',
+    'priority'   => 120,
+) );
+
+// sidebar padding setting
+$wp_customize->add_setting( 'hovercraft_sidebar_padding', array(
+    'default' => 0,
+) );
+
+// sidebar padding control
+$wp_customize->add_control(
+    new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_sidebar_padding',
+        array(
+            'label'     => __('Enable sidebar padding', 'hovercraft'),
+            'section'   => 'hovercraft_sidebar',
+            'settings'  => 'hovercraft_sidebar_padding',
+            'type'      => 'checkbox',
+        )
+    )
+);
 
 // footer section
 $wp_customize->add_section( 'hovercraft_footer', array(
 	'title'      => 'Footer',
-    'priority'    => 120,
+    'priority'    => 130,
     'description' => 'Allows you to customize how many footer columns',
  	) 
 );
