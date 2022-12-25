@@ -10,7 +10,7 @@
 	
 		<?php if ( is_singular() ) { ?>
 				<?php if ( is_page_template( 'page-templates/template-basic.php' ) || !is_page_template() ) { ?>
-					<h1><?php the_title(); ?></h1>
+					<?php if(!is_front_page() ) { ?><h1><?php the_title(); ?></h1><?php } ?>
 					<?php $url_featured_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' ); 
 					if ( !empty( $url_featured_image ) && ( !is_singular('product') ) ) { ?>
 					<img width="800" height="450" src="<?php echo $url_featured_image; ?>" />
