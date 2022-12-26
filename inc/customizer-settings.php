@@ -80,10 +80,10 @@ $wp_customize->add_section( 'hovercraft_sidebar', array(
     'title'      => 'Sidebar',
     'priority'   => 120,
 ) );
-	
+
 // sidebar status setting
 $wp_customize->add_setting( 'hovercraft_sidebar_status', array(
-    'default' => 0,
+    'default' => 1,
 ) );
 
 // sidebar padding setting
