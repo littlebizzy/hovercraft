@@ -22,25 +22,25 @@
 	</style>
 	
 	<title><?php
-		if (is_home() || is_front_page()) {
-			echo get_option('blogname');
+		if ( is_front_page() ) {
+			echo get_option( 'blogname' );
 			echo ' | ';
-			echo get_option('blogdescription');
+			echo get_option( 'blogdescription' );
 		}
-		elseif (is_category()) {
-			echo single_cat_title();
+		elseif ( is_archive() ) {
+			echo the_archive_title();
 			echo ' - ';
-			echo get_option('blogname');
+			echo get_option( 'blogname' );
 		}
-		elseif (is_404()){
+		elseif ( is_404() ) {
 			echo '404 Error (Page Not Found)';
 			echo ' - ';
-			echo get_option('blogname');
+			echo get_option( 'blogname' );
 		}
 		else {
-			echo trim(wp_title('', false));
+			echo trim( wp_title('', false) );
 			echo ' - ';
-			echo get_option('blogname');
+			echo get_option( 'blogname' );
 		} ?></title>
 	<?php wp_head(); ?>
 	</head>
