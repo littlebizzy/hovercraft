@@ -74,6 +74,19 @@ $wp_customize->add_control(
     )
 );
 
+	
+// copyright background color setting
+$wp_customize->add_setting( 'hovercraft_copyright_background_color', array(
+        'default' => '#ECEFF1',
+		));
+ 
+// copyright background color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_copyright_background_color', array(
+	'label' => 'Copyright Background Color',
+	'section' => 'colors',
+	'settings' => 'hovercraft_color_copyright_background'
+    )));
+
 
 // sidebar section
 $wp_customize->add_section( 'hovercraft_sidebar', array(
