@@ -14,19 +14,19 @@ function hovercraft_generate_css(){
     <style type="text/css" id="hovercraft_custom_css">
         
         #prefooter-top {
-            background:<?php echo $prefooter_top_background_color; ?>;
+            background: <?php echo $prefooter_top_background_color; ?>;
         }
         
         #prefooter-bottom {
-            background:<?php echo $prefooter_bottom_background_color; ?>;
+            background: <?php echo $prefooter_bottom_background_color; ?>;
         }
         
         #footer {
-            background:<?php echo $footer_background_color; ?>;
+            background: <?php echo $footer_background_color; ?>;
         }
         
         #copyright {
-            background:<?php echo $color_copyright_background; ?>;
+            background: <?php echo $copyright_background_color; ?>;
         }
      
     </style>    
