@@ -87,7 +87,7 @@ $wp_customize->add_setting( 'hovercraft_copyright_background_color', array(
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_copyright_background_color', array(
 	'label' => 'Copyright Background Color',
 	'section' => 'colors',
-	'settings' => 'hovercraft_color_copyright_background'
+	'settings' => 'hovercraft_copyright_background_color'
     )));
 
 
