@@ -9,6 +9,9 @@
 // suggest git updater
 require get_template_directory() . '/inc/git-updater.php';
 
+// css generator
+require get_template_directory() . '/inc/css-generator.php';
+
 // widget areas
 require get_template_directory() . '/inc/widget-areas.php';
 
@@ -42,13 +45,8 @@ require get_template_directory() . '/inc/breadcrumbs.php';
 // pagination
 require get_template_directory() . '/inc/pagination.php';
 
-// variables
-$welcome = "Stop fixing your WordPress theme, and focus on your business.";
-global $hovercraft_excerpt;
-$hovercraft_excerpt = "HoverCraft is a WordPress theme focused on saving you time and avoiding maintenance tasks. Instead of messing with page builders, DOM elements, and settings, HoverCraft is largely hardcoded, with only a handful of menus, widgets, and CSS classes that you can lightly customize for new projects or clients. Future-proof WordPress designs, like never before...";
-
 // WooCommerce support
-// add_theme_support('woocommerce');
+//// add_theme_support('woocommerce');
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
 add_action('woocommerce_before_main_content', 'hovercraft_main_start', 10);
