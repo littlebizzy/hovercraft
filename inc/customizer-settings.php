@@ -2,7 +2,10 @@
 
 function hovercraft_customizer($wp_customize) {
 
-
+// remove header text color control
+$wp_customize->remove_control( 'header_textcolor' );
+	
+	
 // header media section
 $wp_customize->get_section('header_image')->title = __( 'Header Media' );
 
