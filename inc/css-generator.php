@@ -33,7 +33,7 @@ function hovercraft_generate_css(){
  
     <?php
  
-    endif;    
+    // endif;    
 }
  
 add_action( 'wp_head', 'hovercraft_generate_css' );
