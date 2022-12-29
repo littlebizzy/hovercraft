@@ -2,7 +2,7 @@
 Theme Name: HoverCraft
 Theme URI: https://www.littlebizzy.com/themes/hovercraft
 Description: No maintenance WordPress theme
-Version: 0.1.76
+Version: 0.1.77
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 License: GPLv3
@@ -1566,7 +1566,7 @@ color:#263238;
 @media screen and (max-width: 1200px) {
 #prefooter-top {
 	width: 100%;
-	background: #263238;
+	background: #263238; /* can be overriden in customizer via !important */
 	color: #FFF;
 	padding: 30px 20px;
 	text-align: center;
@@ -1577,7 +1577,7 @@ color:#263238;
 #prefooter-top {
 	width: 100%;
 	margin: 0px auto;
-	background: #263238;
+	background: #263238; /* can be overriden in customizer via !important */
 	color: #FFF;
 	padding: 60px 0px;
 	text-align: center;
@@ -1590,7 +1590,7 @@ color:#263238;
 @media screen and (max-width: 1200px) {
 #prefooter-bottom {
 	width: 100%;
-	background: #263238;
+	background: #263238; /* can be overriden in customizer via !important */
 	color: #FFF;
 	padding: 30px 20px;
 	text-align: center;
@@ -1601,7 +1601,7 @@ color:#263238;
 #prefooter-bottom {
 	width: 100%;
 	margin: 0px auto;
-	background: #263238;
+	background: #263238; /* can be overriden in customizer via !important */
 	color: #FFF;
 	padding: 60px 0px;
 	text-align: center;
@@ -1614,7 +1614,7 @@ color:#263238;
 @media screen and (max-width: 1200px) {
 #footer {
 	width: 100%;
-	background: #ECEFF1;
+	background: #ECEFF1; /* can be overriden in customizer via !important */
 	padding: 30px 20px;
 	border-bottom: 1px solid #B0BEC5;
 	}
@@ -1624,7 +1624,7 @@ color:#263238;
 #footer {
 	width: 100%;
 	margin: 0px auto;
-	background: #ECEFF1;
+	background: #ECEFF1; /* can be overriden in customizer via !important */
 	padding: 60px 0px;
 	border-bottom: 1px solid #B0BEC5;
 }
