@@ -101,11 +101,6 @@ $wp_customize->add_section( 'hovercraft_sidebar', array(
 $wp_customize->add_setting( 'hovercraft_sidebar_status', array(
     'default' => 1,
 ) );
-
-// sidebar padding setting
-$wp_customize->add_setting( 'hovercraft_sidebar_padding', array(
-    'default' => 0,
-) );
 	
 // sidebar status control
 $wp_customize->add_control(
@@ -120,6 +115,11 @@ $wp_customize->add_control(
         )
     )
 );
+
+// sidebar padding setting
+$wp_customize->add_setting( 'hovercraft_sidebar_padding', array(
+    'default' => 0,
+) );
 
 // sidebar padding control
 $wp_customize->add_control(
@@ -168,11 +168,36 @@ $wp_customize->add_control( new WP_Customize_Control(
     			)
 			)
 ) );
-	
+
 // hover effects section
 $wp_customize->add_section( 'hovercraft_effects', array(
     'title'      => 'Hover Effects',
     'priority'   => 140,
+) );
+
+// hover effects main menu links setting
+$wp_customize->add_setting( 'hovercraft_main_menu_links_effect', array(
+    'default'    => 'default',
+	) 
+);
+
+// hover effects main menu links control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_main_menu_links_effect',
+        array(
+            'label'     => __('Main menu links effect', 'hovercraft'),
+			'description' => __( 'CSS hover effect for main menu links in the header' ),
+            'section'   => 'hovercraft_effects',
+            'settings'  => 'hovercraft_main_menu_links_effect',
+            'type'      => 'select',
+			'choices' => array(
+        		'default' => 'Default',
+        		'cerulean' => 'Cerulean',
+        		'cosmo' => 'Cosmo',
+        		'cyborg' => 'cyborg',
+    			)
+        )
 ) );
 
 // end function hovercraft_customizer
