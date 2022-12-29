@@ -77,7 +77,45 @@ $wp_customize->add_control(
     )
 );
 
-	
+// prefooter top background color setting
+$wp_customize->add_setting( 'hovercraft_prefooter_top_background_color', array(
+	'default' => '#263238',
+) );
+ 
+// prefooter top background color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_prefooter_top_background_color', array(
+	'label' => 'Prefooter Top Background Color',
+	'section' => 'colors',
+	'settings' => 'hovercraft_prefooter_top_background_color'
+	)
+) );
+
+// prefooter bottom background color setting
+$wp_customize->add_setting( 'hovercraft_prefooter_bottom_background_color', array(
+	'default' => '#263238',
+) );
+ 
+// prefooter bottom background color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_prefooter_bottom_background_color', array(
+	'label' => 'Prefooter Bottom Background Color',
+	'section' => 'colors',
+	'settings' => 'hovercraft_prefooter_bottom_background_color'
+	)
+) );
+
+// footer background color setting
+$wp_customize->add_setting( 'hovercraft_footer_background_color', array(
+	'default' => '#ECEFF1',
+) );
+ 
+// footer background color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_footer_background_color', array(
+	'label' => 'Footer Background Color',
+	'section' => 'colors',
+	'settings' => 'hovercraft_footer_background_color'
+	)
+) );
+
 // copyright background color setting
 $wp_customize->add_setting( 'hovercraft_copyright_background_color', array(
         'default' => '#ECEFF1',
