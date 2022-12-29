@@ -77,6 +77,46 @@ $wp_customize->add_control(
     )
 );
 
+
+// header half hero background color setting
+$wp_customize->add_setting( 'hovercraft_header_half_hero_background_color', array(
+	'default' => '#FFF',
+) );
+ 
+// header half hero background color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_header_half_hero_background_color', array(
+	'label' => 'Header Half Hero Background Color',
+	'section' => 'colors',
+	'settings' => 'hovercraft_header_half_hero_background_color'
+	)
+) );
+	
+// header mini hero background color setting
+$wp_customize->add_setting( 'hovercraft_header_mini_hero_background_color', array(
+	'default' => '#FFF',
+) );
+ 
+// header mini hero background color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_header_mini_hero_background_color', array(
+	'label' => 'Header Mini Hero Background Color',
+	'section' => 'colors',
+	'settings' => 'hovercraft_header_mini_hero_background_color'
+	)
+) );
+	
+// header basic background color setting
+$wp_customize->add_setting( 'hovercraft_header_basic_background_color', array(
+	'default' => '#ECEFF1',
+) );
+ 
+// header basic background color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_header_basic_background_color', array(
+	'label' => 'Header Basic Background Color',
+	'section' => 'colors',
+	'settings' => 'hovercraft_header_basic_background_color'
+	)
+) );
+
 // prefooter top background color setting
 $wp_customize->add_setting( 'hovercraft_prefooter_top_background_color', array(
 	'default' => '#263238',
