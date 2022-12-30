@@ -1,8 +1,21 @@
 <?php
 
+
+
 // css from customizer
 function hovercraft_generate_css(){
+	
+	$url_header_image = esc_url( get_header_image() );
+	$url_featured_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' ); 
+	
+	if (!empty( $url_featured_image )) { 
+		$hero_image = $url_featured_image; 
+	} else { 
+		$hero_image = $url_header_image; 
+	}
     
+	$hero_gradient_start_color = get_theme_mod( 'hovercraft_hero_gradient_start_color' );
+	$hero_gradient_stop_color = get_theme_mod( 'hovercraft_hero_gradient_stop_color' );
     $header_half_hero_background_color = get_theme_mod( 'hovercraft_header_half_hero_background_color' );
     $header_mini_hero_background_color = get_theme_mod( 'hovercraft_header_mini_hero_background_color' );
     $header_basic_background_color = get_theme_mod( 'hovercraft_header_basic_background_color' );
@@ -14,6 +27,21 @@ function hovercraft_generate_css(){
     ?>
 
 <style type="text/css" id="hovercraft_custom_css">
+
+<?php if( !empty($hero_gradient_start_color) ) { ?>
+.splash-wide {
+	background: linear-gradient(60deg, <?php 
+		list($r1, $g1, $b1) = sscanf($hero_gradient_start_color, "#%02x%02x%02x");
+		echo "rgba($r1, $g1, $b1, 0.7777485994397759)"; 
+		?> 30%, <?php 
+		list($r2, $g2, $b2) = sscanf($hero_gradient_stop_color, "#%02x%02x%02x");
+		echo "rgba($r2, $g2, $b2, 0)"; 
+		?> 100%), url(<?php echo $hero_image; ?>);
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+<?php } ?>
 
 <?php if( !empty($header_half_hero_background_color) ) { ?>
 #header-half-hero {
