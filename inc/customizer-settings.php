@@ -77,6 +77,34 @@ $wp_customize->add_control(
     )
 );
 
+// hero gradient color start setting
+$wp_customize->add_setting( 'hovercraft_hero_gradient_start_color', array(
+	'default' => '#37474F',
+) );
+ 
+// hero gradient color start control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_hero_gradient_start_color', array(
+	'label' => 'Hero Gradient Start Color',
+	'description' => 'This is a description',
+	'section' => 'colors',
+	'settings' => 'hovercraft_hero_gradient_start_color'
+	)
+) );
+	
+// hero gradient color stop setting
+$wp_customize->add_setting( 'hovercraft_hero_gradient_stop_color', array(
+	'default' => '#FFF',
+) );
+ 
+// hero gradient color stop control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_hero_gradient_stop_color', array(
+	'label' => 'Hero Gradient Stop Color',
+	'description' => 'This is a description',
+	'section' => 'colors',
+	'settings' => 'hovercraft_hero_gradient_stop_color'
+	)
+) );
+	
 
 // header half hero background color setting
 $wp_customize->add_setting( 'hovercraft_header_half_hero_background_color', array(
@@ -86,6 +114,7 @@ $wp_customize->add_setting( 'hovercraft_header_half_hero_background_color', arra
 // header half hero background color control
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_header_half_hero_background_color', array(
 	'label' => 'Header Half Hero Background Color',
+	'description' => 'This is a description',
 	'section' => 'colors',
 	'settings' => 'hovercraft_header_half_hero_background_color'
 	)
@@ -99,6 +128,7 @@ $wp_customize->add_setting( 'hovercraft_header_mini_hero_background_color', arra
 // header mini hero background color control
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_header_mini_hero_background_color', array(
 	'label' => 'Header Mini Hero Background Color',
+	'description' => 'This is a description',
 	'section' => 'colors',
 	'settings' => 'hovercraft_header_mini_hero_background_color'
 	)
@@ -112,6 +142,7 @@ $wp_customize->add_setting( 'hovercraft_header_basic_background_color', array(
 // header basic background color control
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_header_basic_background_color', array(
 	'label' => 'Header Basic Background Color',
+	'description' => 'This is a description',
 	'section' => 'colors',
 	'settings' => 'hovercraft_header_basic_background_color'
 	)
@@ -125,6 +156,7 @@ $wp_customize->add_setting( 'hovercraft_prefooter_top_background_color', array(
 // prefooter top background color control
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_prefooter_top_background_color', array(
 	'label' => 'Prefooter Top Background Color',
+	'description' => 'This is a description',
 	'section' => 'colors',
 	'settings' => 'hovercraft_prefooter_top_background_color'
 	)
@@ -138,6 +170,7 @@ $wp_customize->add_setting( 'hovercraft_prefooter_bottom_background_color', arra
 // prefooter bottom background color control
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_prefooter_bottom_background_color', array(
 	'label' => 'Prefooter Bottom Background Color',
+	'description' => 'This is a description',
 	'section' => 'colors',
 	'settings' => 'hovercraft_prefooter_bottom_background_color'
 	)
@@ -151,6 +184,7 @@ $wp_customize->add_setting( 'hovercraft_footer_background_color', array(
 // footer background color control
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_footer_background_color', array(
 	'label' => 'Footer Background Color',
+	'description' => 'This is a description',
 	'section' => 'colors',
 	'settings' => 'hovercraft_footer_background_color'
 	)
@@ -164,6 +198,7 @@ $wp_customize->add_setting( 'hovercraft_copyright_background_color', array(
 // copyright background color control
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_copyright_background_color', array(
 	'label' => 'Copyright Background Color',
+	'description' => 'This is a description',
 	'section' => 'colors',
 	'settings' => 'hovercraft_copyright_background_color'
     )));
