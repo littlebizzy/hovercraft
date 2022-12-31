@@ -1,14 +1,4 @@
-<div class="splash-mini" style="background: 
-	linear-gradient(60deg,
-    rgba(55, 71, 79, 0.7777485994397759) 30%, 
-    rgba(255, 255, 255, 0) 100%), url(<?php 
-	$url_header_image = esc_url( get_header_image() );
-	$url_featured_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' ); 
-	if (!empty($url_featured_image)){ echo $url_featured_image; } else { echo $url_header_image; } ?>);		
-	background-position: center center;
-	background-size: cover;
-	background-repeat: no-repeat;
-">
+<div class="splash-mini">
 
 <div id="header-mini-hero">
 <?php get_template_part('template-parts/header/navigation'); ?>
