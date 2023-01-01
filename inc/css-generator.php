@@ -1,7 +1,5 @@
 <?php
 
-
-
 // css from customizer
 function hovercraft_generate_css(){
 	
@@ -28,7 +26,7 @@ function hovercraft_generate_css(){
 
 <style type="text/css" id="hovercraft_custom_css">
 
-<?php if( !empty($hero_gradient_start_color) ) { ?>
+<?php if( !empty($hero_image) && !empty($hero_gradient_start_color) ) { ?>
 .splash-wide {
 	background: linear-gradient(60deg, <?php 
 		list($r1, $g1, $b1) = sscanf($hero_gradient_start_color, "#%02x%02x%02x");
@@ -41,7 +39,7 @@ function hovercraft_generate_css(){
 	background-size: cover;
 	background-repeat: no-repeat;
 }
-	
+
 .splash-mini {
 	background: linear-gradient(60deg, <?php 
 		list($r1, $g1, $b1) = sscanf($hero_gradient_start_color, "#%02x%02x%02x");
@@ -50,6 +48,46 @@ function hovercraft_generate_css(){
 		list($r2, $g2, $b2) = sscanf($hero_gradient_stop_color, "#%02x%02x%02x");
 		echo "rgba($r2, $g2, $b2, 0)"; 
 		?> 100%), url(<?php echo $hero_image; ?>);
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+<?php } elseif( !empty($hero_image) && empty($hero_gradient_start_color) ) { ?>
+.splash-wide {
+	background: linear-gradient(60deg, rgba(55, 71, 79, 0.7777485994397759) 30%, rgba(255, 255, 255, 0) 100%), url(<?php echo $hero_image; ?>);
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.splash-mini {
+	background: linear-gradient(60deg, rgba(55, 71, 79, 0.7777485994397759) 30%, rgba(255, 255, 255, 0) 100%), url(<?php echo $hero_image; ?>);
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+<?php } elseif( empty($hero_image) && !empty($hero_gradient_start_color) ) { ?>
+.splash-wide {
+	background: linear-gradient(60deg, <?php 
+		list($r1, $g1, $b1) = sscanf($hero_gradient_start_color, "#%02x%02x%02x");
+		echo "rgba($r1, $g1, $b1, 0.7777485994397759)"; 
+		?> 30%, <?php 
+		list($r2, $g2, $b2) = sscanf($hero_gradient_stop_color, "#%02x%02x%02x");
+		echo "rgba($r2, $g2, $b2, 0)"; 
+		?> 100%);
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.splash-mini {
+	background: linear-gradient(60deg, <?php 
+		list($r1, $g1, $b1) = sscanf($hero_gradient_start_color, "#%02x%02x%02x");
+		echo "rgba($r1, $g1, $b1, 0.7777485994397759)"; 
+		?> 30%, <?php 
+		list($r2, $g2, $b2) = sscanf($hero_gradient_stop_color, "#%02x%02x%02x");
+		echo "rgba($r2, $g2, $b2, 0)"; 
+		?> 100%);
 	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
