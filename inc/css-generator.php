@@ -12,6 +12,9 @@ function hovercraft_generate_css(){
 		$hero_image = $url_header_image; 
 	}
     
+	$topbar_background_color = get_theme_mod( 'hovercraft_topbar_background_color' );
+	$topbar_font_color = get_theme_mod( 'hovercraft_topbar_font_color' );
+	$topbar_link_color = get_theme_mod( 'hovercraft_topbar_link_color' );
 	$hero_gradient_start_color = get_theme_mod( 'hovercraft_hero_gradient_start_color' );
 	$hero_gradient_stop_color = get_theme_mod( 'hovercraft_hero_gradient_stop_color' );
     $header_half_hero_background_color = get_theme_mod( 'hovercraft_header_half_hero_background_color' );
@@ -25,6 +28,16 @@ function hovercraft_generate_css(){
     ?>
 
 <style type="text/css" id="hovercraft_custom_css">
+<?php if( !empty($topbar_background_color) && !empty($topbar_font_color) && !empty($topbar_link_color) ) { ?>
+#topbar {
+	background: <?php echo $topbar_background_color; ?>;
+	color: <?php echo $topbar_font_color; ?>;
+}
+
+#topbar a {
+	color: <?php echo $topbar_link_color; ?>;
+}
+<?php } ?>
 
 <?php if( !empty($hero_image) && !empty($hero_gradient_start_color) ) { ?>
 .splash-wide {
