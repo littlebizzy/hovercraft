@@ -76,6 +76,48 @@ $wp_customize->add_control(
         )
     )
 );
+	
+// topbar background color setting
+$wp_customize->add_setting( 'hovercraft_topbar_background_color', array(
+	'default' => '#263238',
+) );
+ 
+// topbar background color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_topbar_background_color', array(
+	'label' => 'Topbar Background Color',
+	'description' => 'This is a description',
+	'section' => 'colors',
+	'settings' => 'hovercraft_topbar_background_color'
+	)
+) );
+	
+// topbar font color setting
+$wp_customize->add_setting( 'hovercraft_topbar_font_color', array(
+	'default' => '#FFF',
+) );
+ 
+// topbar font color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_topbar_font_color', array(
+	'label' => 'Topbar Font Color',
+	'description' => 'This is a description',
+	'section' => 'colors',
+	'settings' => 'hovercraft_topbar_font_color'
+	)
+) );
+	
+// topbar link color setting
+$wp_customize->add_setting( 'hovercraft_topbar_link_color', array(
+	'default' => '#FFF',
+) );
+ 
+// topbar link color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_topbar_link_color', array(
+	'label' => 'Topbar Link Color',
+	'description' => 'This is a description',
+	'section' => 'colors',
+	'settings' => 'hovercraft_topbar_link_color'
+	)
+) );
 
 // hero gradient color start setting
 $wp_customize->add_setting( 'hovercraft_hero_gradient_start_color', array(
