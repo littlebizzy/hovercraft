@@ -33,7 +33,7 @@ function hovercraft_generate_css(){
 		echo "rgba($r1, $g1, $b1, 0.7777485994397759)"; 
 		?> 30%, <?php 
 		list($r2, $g2, $b2) = sscanf($hero_gradient_stop_color, "#%02x%02x%02x");
-		echo "rgba($r2, $g2, $b2, 0)"; 
+		echo "rgba($r2, $g2, $b2, 0.1)"; 
 		?> 100%), url(<?php echo $hero_image; ?>);
 	background-position: center center;
 	background-size: cover;
@@ -46,7 +46,7 @@ function hovercraft_generate_css(){
 		echo "rgba($r1, $g1, $b1, 0.7777485994397759)"; 
 		?> 30%, <?php 
 		list($r2, $g2, $b2) = sscanf($hero_gradient_stop_color, "#%02x%02x%02x");
-		echo "rgba($r2, $g2, $b2, 0)"; 
+		echo "rgba($r2, $g2, $b2, 0.1)"; 
 		?> 100%), url(<?php echo $hero_image; ?>);
 	background-position: center center;
 	background-size: cover;
