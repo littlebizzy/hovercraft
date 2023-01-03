@@ -15,6 +15,7 @@ function hovercraft_generate_css(){
 	$hero_gradient_angle = get_theme_mod( 'hovercraft_hero_gradient_angle', '60deg' );
 	$hero_gradient_start_color_transparency = get_theme_mod( 'hovercraft_hero_gradient_start_color_transparency', '0.50' );
 	$hero_gradient_stop_color_transparency = get_theme_mod( 'hovercraft_hero_gradient_stop_color_transparency', '0.50' );
+	$hero_content_width_desktop = get_theme_mod( 'hovercraft_hero_content_width_desktop', '900px' );
 	$hero_gradient_start_color_length = get_theme_mod( 'hovercraft_hero_gradient_start_color_length', '30%' );
 	$hero_gradient_stop_color_length = get_theme_mod( 'hovercraft_hero_gradient_stop_color_length', '100%' );
 	$topbar_background_color = get_theme_mod( 'hovercraft_topbar_background_color', '#263238' );
@@ -78,6 +79,12 @@ function hovercraft_generate_css(){
 
 #header-basic {
 	background: <?php echo $header_basic_background_color; ?>;
+}
+
+@media screen and (min-width: 1200px) {
+.welcome-wrapper {
+	max-width: <?php echo $hero_content_width_desktop; ?>;
+	}
 }
 
 #prefooter-top {
