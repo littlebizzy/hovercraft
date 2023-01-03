@@ -466,6 +466,68 @@ $wp_customize->add_control( new WP_Customize_Control(
     			)
         )
 ) );
+	
+// hero gradient start color length setting
+$wp_customize->add_setting( 'hovercraft_hero_gradient_start_color_length', array(
+    'default'    => '30%',
+	) 
+);
+
+// hero gradient start color length control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_hero_gradient_start_color_length',
+        array(
+            'label'     => __('Start color length', 'hovercraft'),
+			'description' => __( 'Length of the start color' ),
+            'section'   => 'hovercraft_hero_styling',
+            'settings'  => 'hovercraft_hero_gradient_start_color_length',
+            'type'      => 'select',
+			'choices' => array(
+				'10%' => '10%',
+				'15%' => '15%',
+				'20%' => '20%',
+        		'25%' => '25%',
+				'30%' => '30%',
+				'40%' => '40%',
+        		'50%' => '50%',
+				'60%' => '55%',
+        		'75%' => '75%',
+        		'100%' => '100%',
+    			)
+        )
+) );
+	
+// hero gradient stop color length setting
+$wp_customize->add_setting( 'hovercraft_hero_gradient_stop_color_length', array(
+    'default'    => '100%',
+	) 
+);
+
+// hero gradient stop color length control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_hero_gradient_stop_color_length',
+        array(
+            'label'     => __('Stop color length', 'hovercraft'),
+			'description' => __( 'Length of the stop color' ),
+            'section'   => 'hovercraft_hero_styling',
+            'settings'  => 'hovercraft_hero_gradient_stop_color_length',
+            'type'      => 'select',
+			'choices' => array(
+				'10%' => '10%',
+				'15%' => '15%',
+				'20%' => '20%',
+        		'25%' => '25%',
+				'30%' => '30%',
+				'40%' => '40%',
+        		'50%' => '50%',
+				'60%' => '55%',
+        		'75%' => '75%',
+        		'100%' => '100%',
+    			)
+        )
+) );
 
 // end function hovercraft_customizer
 }
