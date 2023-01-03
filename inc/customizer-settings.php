@@ -164,7 +164,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	
 // header mini hero background color setting
 $wp_customize->add_setting( 'hovercraft_header_mini_hero_background_color', array(
-	'default' => '#FFF',
+	'default' => '#ffffff',
 ) );
  
 // header mini hero background color control
@@ -178,7 +178,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	
 // header basic background color setting
 $wp_customize->add_setting( 'hovercraft_header_basic_background_color', array(
-	'default' => '#ECEFF1',
+	'default' => '#eceff1',
 ) );
  
 // header basic background color control
@@ -192,7 +192,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 
 // prefooter top background color setting
 $wp_customize->add_setting( 'hovercraft_prefooter_top_background_color', array(
-	'default' => '#263238',
+	'default' => '#eceff1',
 ) );
  
 // prefooter top background color control
@@ -220,7 +220,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 
 // footer background color setting
 $wp_customize->add_setting( 'hovercraft_footer_background_color', array(
-	'default' => '#ECEFF1',
+	'default' => '#eceff1',
 ) );
  
 // footer background color control
@@ -234,7 +234,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 
 // copyright background color setting
 $wp_customize->add_setting( 'hovercraft_copyright_background_color', array(
-        'default' => '#ECEFF1',
+        'default' => '#eceff1',
 		));
  
 // copyright background color control
