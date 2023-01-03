@@ -380,6 +380,37 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// hero styling section
+$wp_customize->add_section( 'hovercraft_hero_styling', array(
+    'title'      => 'Hero Styling',
+    'priority'   => 105,
+) );
+
+// hero gradient angle setting
+$wp_customize->add_setting( 'hovercraft_hero_gradient_angle', array(
+    'default'    => 'default',
+	) 
+);
+
+// hero gradient angle control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_hero_gradient_angle',
+        array(
+            'label'     => __('Gradient angle', 'hovercraft'),
+			'description' => __( 'Choose the angle of the hero gradient.' ),
+            'section'   => 'hovercraft_hero_styling',
+            'settings'  => 'hovercraft_hero_gradient_angle',
+            'type'      => 'select',
+			'choices' => array(
+        		'default' => 'Default',
+        		'cerulean' => 'Cerulean',
+        		'cosmo' => 'Cosmo',
+        		'cyborg' => 'cyborg',
+    			)
+        )
+) );
+
 // end function hovercraft_customizer
 }
 
