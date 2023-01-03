@@ -15,6 +15,8 @@ function hovercraft_generate_css(){
 	$hero_gradient_angle = get_theme_mod( 'hovercraft_hero_gradient_angle' );
 	$hero_gradient_start_color_transparency = get_theme_mod( 'hovercraft_hero_gradient_start_color_transparency' );
 	$hero_gradient_stop_color_transparency = get_theme_mod( 'hovercraft_hero_gradient_stop_color_transparency' );
+	$hero_gradient_start_color_length = get_theme_mod( 'hovercraft_hero_gradient_start_color_length' );
+	$hero_gradient_stop_color_length = get_theme_mod( 'hovercraft_hero_gradient_stop_color_length' );
 	$topbar_background_color = get_theme_mod( 'hovercraft_topbar_background_color' );
 	$topbar_font_color = get_theme_mod( 'hovercraft_topbar_font_color' );
 	$topbar_link_color = get_theme_mod( 'hovercraft_topbar_link_color' );
@@ -47,10 +49,10 @@ function hovercraft_generate_css(){
 	background: linear-gradient(<?php echo $hero_gradient_angle; ?>, <?php 
 		list($r1, $g1, $b1) = sscanf($hero_gradient_start_color, "#%02x%02x%02x");
 		echo "rgba($r1, $g1, $b1, $hero_gradient_start_color_transparency)"; 
-		?> 30%, <?php 
+		?> <?php echo $hero_gradient_start_color_length; ?>, <?php 
 		list($r2, $g2, $b2) = sscanf($hero_gradient_stop_color, "#%02x%02x%02x");
 		echo "rgba($r2, $g2, $b2, $hero_gradient_stop_color_transparency)"; 
-		?> 100%), url(<?php echo $hero_image; ?>);
+		?> <?php echo $hero_gradient_stop_color_length; ?>), url(<?php echo $hero_image; ?>);
 	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -60,24 +62,24 @@ function hovercraft_generate_css(){
 	background: linear-gradient(<?php echo $hero_gradient_angle; ?>, <?php 
 		list($r1, $g1, $b1) = sscanf($hero_gradient_start_color, "#%02x%02x%02x");
 		echo "rgba($r1, $g1, $b1, $hero_gradient_start_color_transparency)"; 
-		?> 30%, <?php 
+		?> <?php echo $hero_gradient_start_color_length; ?>, <?php 
 		list($r2, $g2, $b2) = sscanf($hero_gradient_stop_color, "#%02x%02x%02x");
 		echo "rgba($r2, $g2, $b2, $hero_gradient_stop_color_transparency)"; 
-		?> 100%), url(<?php echo $hero_image; ?>);
+		?> <?php echo $hero_gradient_stop_color_length; ?>), url(<?php echo $hero_image; ?>);
 	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 <?php } elseif( !empty($hero_image) && empty($hero_gradient_start_color) ) { ?>
 .splash-wide {
-	background: linear-gradient(<?php echo $hero_gradient_angle; ?>, rgba(55, 71, 79, <?php echo $hero_gradient_start_color_transparency; ?>) 30%, rgba(255, 255, 255, <?php echo $hero_gradient_stop_color_transparency; ?>) 100%), url(<?php echo $hero_image; ?>);
+	background: linear-gradient(<?php echo $hero_gradient_angle; ?>, rgba(55, 71, 79, <?php echo $hero_gradient_start_color_transparency; ?>) <?php echo $hero_gradient_start_color_length; ?>, rgba(255, 255, 255, <?php echo $hero_gradient_stop_color_transparency; ?>) <?php echo $hero_gradient_stop_color_length; ?>), url(<?php echo $hero_image; ?>);
 	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
 .splash-mini {
-	background: linear-gradient(<?php echo $hero_gradient_angle; ?>, rgba(55, 71, 79, <?php echo $hero_gradient_start_color_transparency; ?>) 30%, rgba(255, 255, 255, <?php echo $hero_gradient_stop_color_transparency; ?>) 100%), url(<?php echo $hero_image; ?>);
+	background: linear-gradient(<?php echo $hero_gradient_angle; ?>, rgba(55, 71, 79, <?php echo $hero_gradient_start_color_transparency; ?>) <?php echo $hero_gradient_start_color_length; ?>, rgba(255, 255, 255, <?php echo $hero_gradient_stop_color_transparency; ?>) <?php echo $hero_gradient_stop_color_length; ?>), url(<?php echo $hero_image; ?>);
 	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -87,10 +89,10 @@ function hovercraft_generate_css(){
 	background: linear-gradient(<?php echo $hero_gradient_angle; ?>, <?php 
 		list($r1, $g1, $b1) = sscanf($hero_gradient_start_color, "#%02x%02x%02x");
 		echo "rgba($r1, $g1, $b1, $hero_gradient_start_color_transparency)"; 
-		?> 30%, <?php 
+		?> <?php echo $hero_gradient_start_color_length; ?>, <?php 
 		list($r2, $g2, $b2) = sscanf($hero_gradient_stop_color, "#%02x%02x%02x");
 		echo "rgba($r2, $g2, $b2, $hero_gradient_stop_color_transparency)"; 
-		?> 100%);
+		?> <?php echo $hero_gradient_stop_color_length; ?>);
 	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -100,10 +102,10 @@ function hovercraft_generate_css(){
 	background: linear-gradient(<?php echo $hero_gradient_angle; ?>, <?php 
 		list($r1, $g1, $b1) = sscanf($hero_gradient_start_color, "#%02x%02x%02x");
 		echo "rgba($r1, $g1, $b1, $hero_gradient_start_color_transparency)"; 
-		?> 30%, <?php 
+		?> <?php echo $hero_gradient_start_color_length; ?>, <?php 
 		list($r2, $g2, $b2) = sscanf($hero_gradient_stop_color, "#%02x%02x%02x");
 		echo "rgba($r2, $g2, $b2, $hero_gradient_stop_color_transparency)"; 
-		?> 100%);
+		?> <?php echo $hero_gradient_stop_color_length; ?>);
 	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
