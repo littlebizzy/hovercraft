@@ -386,6 +386,30 @@ $wp_customize->add_section( 'hovercraft_hero_styling', array(
     'priority'   => 105,
 ) );
 
+// hero content width (desktop) setting
+$wp_customize->add_setting( 'hovercraft_hero_content_width_desktop', array(
+    'default'    => '900px',
+	) 
+);
+
+// hero content width (desktop) control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_hero_content_width_desktop',
+        array(
+            'label'     => __('Hero content width', 'hovercraft'),
+			'description' => __( 'Width of hero content (desktop)' ),
+            'section'   => 'hovercraft_hero_styling',
+            'settings'  => 'hovercraft_hero_content_width_desktop',
+            'type'      => 'select',
+			'choices' => array(
+				'600px' => '600px',
+				'900px' => '900px',
+				'1200px' => 'Full width (1200px)',
+    			)
+        )
+) );	
+
 // hero gradient angle setting
 $wp_customize->add_setting( 'hovercraft_hero_gradient_angle', array(
     'default'    => '60deg',
