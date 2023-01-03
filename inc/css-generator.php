@@ -13,6 +13,7 @@ function hovercraft_generate_css(){
 	}
     
 	$hero_gradient_angle = get_theme_mod( 'hovercraft_hero_gradient_angle' );
+	$hero_gradient_start_color_transparency = get_theme_mod( 'hovercraft_hero_gradient_start_color_transparency' );
 	$topbar_background_color = get_theme_mod( 'hovercraft_topbar_background_color' );
 	$topbar_font_color = get_theme_mod( 'hovercraft_topbar_font_color' );
 	$topbar_link_color = get_theme_mod( 'hovercraft_topbar_link_color' );
@@ -42,9 +43,9 @@ function hovercraft_generate_css(){
 
 <?php if( !empty($hero_image) && !empty($hero_gradient_start_color) ) { ?>
 .splash-wide {
-	background: linear-gradient(<?php echo $hero_gradient_angle; ?>;, <?php 
+	background: linear-gradient(<?php echo $hero_gradient_angle; ?>, <?php 
 		list($r1, $g1, $b1) = sscanf($hero_gradient_start_color, "#%02x%02x%02x");
-		echo "rgba($r1, $g1, $b1, 0.7777485994397759)"; 
+		echo "rgba($r1, $g1, $b1, $hero_gradient_start_color_transparency)"; 
 		?> 30%, <?php 
 		list($r2, $g2, $b2) = sscanf($hero_gradient_stop_color, "#%02x%02x%02x");
 		echo "rgba($r2, $g2, $b2, 0.1)"; 
@@ -57,7 +58,7 @@ function hovercraft_generate_css(){
 .splash-mini {
 	background: linear-gradient(<?php echo $hero_gradient_angle; ?>, <?php 
 		list($r1, $g1, $b1) = sscanf($hero_gradient_start_color, "#%02x%02x%02x");
-		echo "rgba($r1, $g1, $b1, 0.7777485994397759)"; 
+		echo "rgba($r1, $g1, $b1, $hero_gradient_start_color_transparency)"; 
 		?> 30%, <?php 
 		list($r2, $g2, $b2) = sscanf($hero_gradient_stop_color, "#%02x%02x%02x");
 		echo "rgba($r2, $g2, $b2, 0.1)"; 
@@ -84,7 +85,7 @@ function hovercraft_generate_css(){
 .splash-wide {
 	background: linear-gradient(<?php echo $hero_gradient_angle; ?>, <?php 
 		list($r1, $g1, $b1) = sscanf($hero_gradient_start_color, "#%02x%02x%02x");
-		echo "rgba($r1, $g1, $b1, 0.7777485994397759)"; 
+		echo "rgba($r1, $g1, $b1, $hero_gradient_start_color_transparency)"; 
 		?> 30%, <?php 
 		list($r2, $g2, $b2) = sscanf($hero_gradient_stop_color, "#%02x%02x%02x");
 		echo "rgba($r2, $g2, $b2, 0.1)"; 
@@ -97,7 +98,7 @@ function hovercraft_generate_css(){
 .splash-mini {
 	background: linear-gradient(<?php echo $hero_gradient_angle; ?>, <?php 
 		list($r1, $g1, $b1) = sscanf($hero_gradient_start_color, "#%02x%02x%02x");
-		echo "rgba($r1, $g1, $b1, 0.7777485994397759)"; 
+		echo "rgba($r1, $g1, $b1, $hero_gradient_start_color_transparency)"; 
 		?> 30%, <?php 
 		list($r2, $g2, $b2) = sscanf($hero_gradient_stop_color, "#%02x%02x%02x");
 		echo "rgba($r2, $g2, $b2, 0.1)"; 
