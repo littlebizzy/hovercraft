@@ -85,7 +85,7 @@ $wp_customize->add_setting( 'hovercraft_topbar_background_color', array(
 // topbar background color control
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_topbar_background_color', array(
 	'label' => 'Topbar Background Color',
-	'description' => 'This is a description',
+	'description' => 'Applies to the site-wide topbar element.',
 	'section' => 'colors',
 	'settings' => 'hovercraft_topbar_background_color'
 	)
@@ -99,7 +99,7 @@ $wp_customize->add_setting( 'hovercraft_topbar_font_color', array(
 // topbar font color control
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_topbar_font_color', array(
 	'label' => 'Topbar Font Color',
-	'description' => 'This is a description',
+	'description' => 'Applies to any plain text inside the topbar.',
 	'section' => 'colors',
 	'settings' => 'hovercraft_topbar_font_color'
 	)
@@ -113,7 +113,7 @@ $wp_customize->add_setting( 'hovercraft_topbar_link_color', array(
 // topbar link color control
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_topbar_link_color', array(
 	'label' => 'Topbar Link Color',
-	'description' => 'This is a description',
+	'description' => 'Applies to any links inside the topbar.',
 	'section' => 'colors',
 	'settings' => 'hovercraft_topbar_link_color'
 	)
