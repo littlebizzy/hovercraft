@@ -93,7 +93,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	
 // topbar font color setting
 $wp_customize->add_setting( 'hovercraft_topbar_font_color', array(
-	'default' => '#FFF',
+	'default' => '#ffffff',
 ) );
  
 // topbar font color control
@@ -107,7 +107,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	
 // topbar link color setting
 $wp_customize->add_setting( 'hovercraft_topbar_link_color', array(
-	'default' => '#FFF',
+	'default' => '#ffffff',
 ) );
  
 // topbar link color control
@@ -121,7 +121,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 
 // hero gradient color start setting
 $wp_customize->add_setting( 'hovercraft_hero_gradient_start_color', array(
-	'default' => '#37474F',
+	'default' => '#37474f',
 ) );
  
 // hero gradient color start control
@@ -135,7 +135,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	
 // hero gradient color stop setting
 $wp_customize->add_setting( 'hovercraft_hero_gradient_stop_color', array(
-	'default' => '#FFF',
+	'default' => '#ffffff',
 ) );
  
 // hero gradient color stop control
