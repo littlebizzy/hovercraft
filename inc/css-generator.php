@@ -22,13 +22,13 @@ function hovercraft_generate_css(){
 	$topbar_link_color = get_theme_mod( 'hovercraft_topbar_link_color' );
 	$hero_gradient_start_color = get_theme_mod( 'hovercraft_hero_gradient_start_color' );
 	$hero_gradient_stop_color = get_theme_mod( 'hovercraft_hero_gradient_stop_color' );
-    $header_half_hero_background_color = get_theme_mod( 'hovercraft_header_half_hero_background_color' );
-    $header_mini_hero_background_color = get_theme_mod( 'hovercraft_header_mini_hero_background_color' );
-    $header_basic_background_color = get_theme_mod( 'hovercraft_header_basic_background_color' );
-    $prefooter_top_background_color = get_theme_mod( 'hovercraft_prefooter_top_background_color' );
-    $prefooter_bottom_background_color = get_theme_mod( 'hovercraft_prefooter_bottom_background_color' );
-    $footer_background_color = get_theme_mod( 'hovercraft_footer_background_color' );
-    $copyright_background_color = get_theme_mod( 'hovercraft_copyright_background_color' );
+    $header_half_hero_background_color = get_theme_mod( 'hovercraft_header_half_hero_background_color', '#ffffff' ); 
+    $header_mini_hero_background_color = get_theme_mod( 'hovercraft_header_mini_hero_background_color', '#ffffff' );
+    $header_basic_background_color = get_theme_mod( 'hovercraft_header_basic_background_color', '#eceff1' );
+    $prefooter_top_background_color = get_theme_mod( 'hovercraft_prefooter_top_background_color', '#eceff1' );
+    $prefooter_bottom_background_color = get_theme_mod( 'hovercraft_prefooter_bottom_background_color', '#263238' );
+    $footer_background_color = get_theme_mod( 'hovercraft_footer_background_color', '#eceff1' );
+    $copyright_background_color = get_theme_mod( 'hovercraft_copyright_background_color', '#eceff1' );
      
     ?>
 
@@ -112,23 +112,17 @@ function hovercraft_generate_css(){
 }
 <?php } ?>
 
-<?php if( !empty($header_half_hero_background_color) ) { ?>
 #header-half-hero {
 	background: <?php echo $header_half_hero_background_color; ?>;
 }
-<?php } ?>
 
-<?php if( !empty($header_mini_hero_background_color) ) { ?>
 #header-mini-hero {
 	background: <?php echo $header_mini_hero_background_color; ?>;
 }
-<?php } ?>
 
-<?php if( !empty($header_basic_background_color) ) { ?>
 #header-basic {
 	background: <?php echo $header_basic_background_color; ?>;
 }
-<?php } ?>
 
 <?php if( !empty($prefooter_top_background_color) ) { ?>
 #prefooter-top {
