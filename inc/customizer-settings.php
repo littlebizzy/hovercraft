@@ -248,7 +248,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	
 // footer link color setting
 $wp_customize->add_setting( 'hovercraft_footer_link_color', array(
-	'default' => '#263238',
+	'default' => '#5C6BC0',
 ) );
  
 // footer link color control
@@ -289,7 +289,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	
 // copyright link color setting
 $wp_customize->add_setting( 'hovercraft_copyright_link_color', array(
-	'default' => '#263238',
+	'default' => '#5C6BC0',
 ) );
 
 // copyright link color control
