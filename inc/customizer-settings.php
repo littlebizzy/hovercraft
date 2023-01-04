@@ -303,7 +303,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 ) );
 	
 // prefooter (bottom) link color setting
-$wp_customize->add_setting( 'hovercraft_prefooter_bottom_text_color', array(
+$wp_customize->add_setting( 'hovercraft_prefooter_bottom_link_color', array(
 	'default' => '#5C6BC0',
 ) );
 
