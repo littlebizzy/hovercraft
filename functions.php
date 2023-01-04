@@ -62,3 +62,7 @@ function hovercraft_main_end() {
 
 // page excerpts
 add_post_type_support( 'page', 'excerpt' );
+
+// rss feeds meta
+add_theme_support( 'automatic-feed-links' );
+
