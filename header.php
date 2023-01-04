@@ -45,6 +45,8 @@
 	<?php wp_head(); ?>
 	</head>
 	<body>
+		
+	<?php wp_body_open(); ?>
 	
 <input type="checkbox" id="togglebox" />
 	
