@@ -528,6 +528,7 @@ $wp_customize->add_section( 'hovercraft_effects', array(
 // hover effects logo setting
 $wp_customize->add_setting( 'hovercraft_logo_effect', array(
     'default'    => 'default',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
 	) 
 );
 
@@ -553,6 +554,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 // hover effects main menu links setting
 $wp_customize->add_setting( 'hovercraft_main_menu_links_effect', array(
     'default'    => 'default',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
 	) 
 );
 
@@ -584,6 +586,7 @@ $wp_customize->add_section( 'hovercraft_link_styling', array(
 // default link decoration setting
 $wp_customize->add_setting( 'hovercraft_default_link_decoration', array(
     'default'    => 'underline',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
 	) 
 );
 
@@ -607,6 +610,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 // topbar link decoration setting
 $wp_customize->add_setting( 'hovercraft_topbar_link_decoration', array(
     'default'    => 'underline',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
 	) 
 );
 
@@ -630,6 +634,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 // main (begin) link decoration setting
 $wp_customize->add_setting( 'hovercraft_main_begin_link_decoration', array(
     'default'    => 'underline',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
 	) 
 );
 
@@ -653,6 +658,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 // prefooter (top) link decoration setting
 $wp_customize->add_setting( 'hovercraft_prefooter_top_link_decoration', array(
     'default'    => 'underline',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
 	) 
 );
 
@@ -676,6 +682,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 // prefooter (bottom) link decoration setting
 $wp_customize->add_setting( 'hovercraft_prefooter_bottom_link_decoration', array(
     'default'    => 'underline',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
 	) 
 );
 
@@ -699,6 +706,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 // footer link decoration setting
 $wp_customize->add_setting( 'hovercraft_footer_link_decoration', array(
     'default'    => 'underline',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
 	) 
 );
 
@@ -722,6 +730,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 // copyright link decoration setting
 $wp_customize->add_setting( 'hovercraft_copyright_link_decoration', array(
     'default'    => 'underline',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
 	) 
 );
 
@@ -751,6 +760,7 @@ $wp_customize->add_section( 'hovercraft_hero_styling', array(
 // hero content width (desktop) setting
 $wp_customize->add_setting( 'hovercraft_hero_content_width_desktop', array(
     'default'    => '900px',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
 	) 
 );
 
@@ -775,6 +785,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 // hero gradient angle setting
 $wp_customize->add_setting( 'hovercraft_hero_gradient_angle', array(
     'default'    => '60deg',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
 	) 
 );
 
@@ -800,6 +811,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 // hero gradient start color transparency setting
 $wp_customize->add_setting( 'hovercraft_hero_gradient_start_color_transparency', array(
     'default'    => '0.50',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
 	) 
 );
 
@@ -828,6 +840,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 // hero gradient stop color transparency setting
 $wp_customize->add_setting( 'hovercraft_hero_gradient_stop_color_transparency', array(
     'default'    => '0.50',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
 	) 
 );
 
@@ -856,6 +869,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 // hero gradient start color length setting
 $wp_customize->add_setting( 'hovercraft_hero_gradient_start_color_length', array(
     'default'    => '30%',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
 	) 
 );
 
@@ -887,6 +901,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 // hero gradient stop color length setting
 $wp_customize->add_setting( 'hovercraft_hero_gradient_stop_color_length', array(
     'default'    => '100%',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
 	) 
 );
 
@@ -919,3 +934,16 @@ $wp_customize->add_control( new WP_Customize_Control(
 }
 
 add_action('customize_register', 'hovercraft_customizer');
+
+// sanitize select function
+function hovercraft_sanitize_select( $input, $setting ){
+		//input must be a slug: lowercase alphanumeric characters, dashes and underscores are allowed only
+		$input = sanitize_key($input);
+		//get the list of possible select options 
+		$choices = $setting->manager->get_control( $setting->id )->choices;           
+		//return input if valid or return default option
+		return ( array_key_exists( $input, $choices ) ? $input : $setting->default );                
+}
+
+// https://themeshaper.com/2013/04/29/validation-sanitization-in-customizer/
+// https://divpusher.com/blog/wordpress-customizer-sanitization-examples/
