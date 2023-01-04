@@ -78,15 +78,11 @@ $wp_customize->add_control(
         )
     )
 );
-	
-// topbar background color setting
-$wp_customize->add_setting( 'hovercraft_topbar_background_color', array(
-	'default' => '#263238',
-) );
-	
+
 // default text color setting
 $wp_customize->add_setting( 'hovercraft_default_text_color', array(
 	'default' => '#263238',
+	'sanitize_callback' => 'sanitize_hex_color',
 ) );
  
 // default text color control
@@ -101,6 +97,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 // default link color setting
 $wp_customize->add_setting( 'hovercraft_default_link_color', array(
 	'default' => '#5C6BC0',
+	'sanitize_callback' => 'sanitize_hex_color',
 ) );
  
 // default link color control
@@ -115,6 +112,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 // default hover color setting
 $wp_customize->add_setting( 'hovercraft_default_hover_color', array(
 	'default' => '#283593',
+	'sanitize_callback' => 'sanitize_hex_color',
 ) );
  
 // default hover color control
@@ -126,6 +124,12 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	)
 ) );
  
+// topbar background color setting
+$wp_customize->add_setting( 'hovercraft_topbar_background_color', array(
+	'default' => '#263238',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+
 // topbar background color control
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_topbar_background_color', array(
 	'label' => 'Topbar Background Color',
@@ -138,6 +142,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 // topbar text color setting
 $wp_customize->add_setting( 'hovercraft_topbar_text_color', array(
 	'default' => '#ffffff',
+	'sanitize_callback' => 'sanitize_hex_color',
 ) );
  
 // topbar text color control
@@ -152,6 +157,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 // topbar link color setting
 $wp_customize->add_setting( 'hovercraft_topbar_link_color', array(
 	'default' => '#ffffff',
+	'sanitize_callback' => 'sanitize_hex_color',
 ) );
  
 // topbar link color control
@@ -166,6 +172,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 // hero gradient color start setting
 $wp_customize->add_setting( 'hovercraft_hero_gradient_start_color', array(
 	'default' => '#37474f',
+	'sanitize_callback' => 'sanitize_hex_color',
 ) );
  
 // hero gradient color start control
@@ -180,6 +187,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 // hero gradient color stop setting
 $wp_customize->add_setting( 'hovercraft_hero_gradient_stop_color', array(
 	'default' => '#ffffff',
+	'sanitize_callback' => 'sanitize_hex_color',
 ) );
  
 // hero gradient color stop control
@@ -195,6 +203,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 // header half hero background color setting
 $wp_customize->add_setting( 'hovercraft_header_half_hero_background_color', array(
 	'default' => '#ffffff',
+	'sanitize_callback' => 'sanitize_hex_color',
 ) );
  
 // header half hero background color control
@@ -209,6 +218,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 // header mini hero background color setting
 $wp_customize->add_setting( 'hovercraft_header_mini_hero_background_color', array(
 	'default' => '#ffffff',
+	'sanitize_callback' => 'sanitize_hex_color',
 ) );
  
 // header mini hero background color control
@@ -223,6 +233,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 // header basic background color setting
 $wp_customize->add_setting( 'hovercraft_header_basic_background_color', array(
 	'default' => '#eceff1',
+	'sanitize_callback' => 'sanitize_hex_color',
 ) );
  
 // header basic background color control
@@ -237,6 +248,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 // main (begin) background color setting
 $wp_customize->add_setting( 'hovercraft_main_begin_background_color', array(
 	'default' => '#eceff1',
+	'sanitize_callback' => 'sanitize_hex_color',
 ) );
  
 // main (begin) background color control
@@ -251,6 +263,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 // main (begin) text color setting
 $wp_customize->add_setting( 'hovercraft_main_begin_text_color', array(
 	'default' => '#263238',
+	'sanitize_callback' => 'sanitize_hex_color',
 ) );
  
 // main (begin) text color control
@@ -265,6 +278,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 // main (begin) link color setting
 $wp_customize->add_setting( 'hovercraft_main_begin_link_color', array(
 	'default' => '#5C6BC0',
+	'sanitize_callback' => 'sanitize_hex_color',
 ) );
 
 // main (begin) link color control
@@ -279,6 +293,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 // prefooter (top) background color setting
 $wp_customize->add_setting( 'hovercraft_prefooter_top_background_color', array(
 	'default' => '#eceff1',
+	'sanitize_callback' => 'sanitize_hex_color',
 ) );
  
 // prefooter (top) background color control
@@ -293,6 +308,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 // prefooter (top) text color setting
 $wp_customize->add_setting( 'hovercraft_prefooter_top_text_color', array(
 	'default' => '#263238',
+	'sanitize_callback' => 'sanitize_hex_color',
 ) );
 
 // prefooter (top) text color control
@@ -307,6 +323,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 // prefooter (top) link color setting
 $wp_customize->add_setting( 'hovercraft_prefooter_top_link_color', array(
 	'default' => '#5C6BC0',
+	'sanitize_callback' => 'sanitize_hex_color',
 ) );
 
 // prefooter (top) link color control
@@ -321,6 +338,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 // prefooter (bottom) background color setting
 $wp_customize->add_setting( 'hovercraft_prefooter_bottom_background_color', array(
 	'default' => '#263238',
+	'sanitize_callback' => 'sanitize_hex_color',
 ) );
  
 // prefooter (bottom) background color control
@@ -335,6 +353,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 // prefooter (bottom) text color setting
 $wp_customize->add_setting( 'hovercraft_prefooter_bottom_text_color', array(
 	'default' => '#ffffff',
+	'sanitize_callback' => 'sanitize_hex_color',
 ) );
 
 // prefooter (bottom) text color control
@@ -349,6 +368,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 // prefooter (bottom) link color setting
 $wp_customize->add_setting( 'hovercraft_prefooter_bottom_link_color', array(
 	'default' => '#5C6BC0',
+	'sanitize_callback' => 'sanitize_hex_color',
 ) );
 
 // prefooter (bottom) link color control
@@ -363,6 +383,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 // footer background color setting
 $wp_customize->add_setting( 'hovercraft_footer_background_color', array(
 	'default' => '#eceff1',
+	'sanitize_callback' => 'sanitize_hex_color',
 ) );
  
 // footer background color control
@@ -377,6 +398,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 // footer text color setting
 $wp_customize->add_setting( 'hovercraft_footer_text_color', array(
 	'default' => '#263238',
+	'sanitize_callback' => 'sanitize_hex_color',
 ) );
  
 // footer text color control
@@ -391,6 +413,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 // footer link color setting
 $wp_customize->add_setting( 'hovercraft_footer_link_color', array(
 	'default' => '#5C6BC0',
+	'sanitize_callback' => 'sanitize_hex_color',
 ) );
  
 // footer link color control
@@ -405,6 +428,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 // copyright background color setting
 $wp_customize->add_setting( 'hovercraft_copyright_background_color', array(
         'default' => '#eceff1',
+	'sanitize_callback' => 'sanitize_hex_color',
 		));
  
 // copyright background color control
@@ -418,6 +442,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 // copyright text color setting
 $wp_customize->add_setting( 'hovercraft_copyright_text_color', array(
 	'default' => '#263238',
+	'sanitize_callback' => 'sanitize_hex_color',
 ) );
 
 // copyright text color control
@@ -432,6 +457,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 // copyright link color setting
 $wp_customize->add_setting( 'hovercraft_copyright_link_color', array(
 	'default' => '#5C6BC0',
+	'sanitize_callback' => 'sanitize_hex_color',
 ) );
 
 // copyright link color control
@@ -452,6 +478,7 @@ $wp_customize->add_section( 'hovercraft_sidebar', array(
 // sidebar status setting
 $wp_customize->add_setting( 'hovercraft_sidebar_status', array(
     'default' => 1,
+	'sanitize_callback' => 'hovercraft_sanitize_checkbox',
 ) );
 	
 // sidebar status control
@@ -471,6 +498,7 @@ $wp_customize->add_control(
 // sidebar padding setting
 $wp_customize->add_setting( 'hovercraft_sidebar_padding', array(
     'default' => 0,
+	'sanitize_callback' => 'hovercraft_sanitize_checkbox',
 ) );
 
 // sidebar padding control
