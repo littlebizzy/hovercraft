@@ -20,7 +20,7 @@ if ( post_password_required() ) {
 					'%1$s thoughts on "%2$s"',
 					get_comments_number(),
 					'comments title',
-					'twentythirteen'
+					'hovercraft'
 				),
 				number_format_i18n( get_comments_number() ),
 				'<span>' . get_the_title() . '</span>'
