@@ -81,6 +81,48 @@ $wp_customize->add_control(
 $wp_customize->add_setting( 'hovercraft_topbar_background_color', array(
 	'default' => '#263238',
 ) );
+	
+// default text color setting
+$wp_customize->add_setting( 'hovercraft_default_text_color', array(
+	'default' => '#263238',
+) );
+ 
+// default text color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_default_text_color', array(
+	'label' => 'Default Text Color',
+	'description' => 'Default text color site-wide',
+	'section' => 'colors',
+	'settings' => 'hovercraft_default_text_color'
+	)
+) );
+	
+// default link color setting
+$wp_customize->add_setting( 'hovercraft_default_link_color', array(
+	'default' => '#5C6BC0',
+) );
+ 
+// default link color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_default_link_color', array(
+	'label' => 'Default Link Color',
+	'description' => 'Default link color site-wide',
+	'section' => 'colors',
+	'settings' => 'hovercraft_default_link_color'
+	)
+) );
+	
+// default hover color setting
+$wp_customize->add_setting( 'hovercraft_default_hover_color', array(
+	'default' => '#283593',
+) );
+ 
+// default hover color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_default_hover_color', array(
+	'label' => 'Default Hover Color',
+	'description' => 'Default hover color site-wide',
+	'section' => 'colors',
+	'settings' => 'hovercraft_default_hover_color'
+	)
+) );
  
 // topbar background color control
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_topbar_background_color', array(
@@ -98,7 +140,7 @@ $wp_customize->add_setting( 'hovercraft_topbar_text_color', array(
  
 // topbar text color control
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_topbar_text_color', array(
-	'label' => 'Topbar Font Color',
+	'label' => 'Topbar Text Color',
 	'description' => 'Applies to any plain text inside the topbar.',
 	'section' => 'colors',
 	'settings' => 'hovercraft_topbar_text_color'
