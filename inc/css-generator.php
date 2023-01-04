@@ -19,24 +19,35 @@ function hovercraft_generate_css(){
 	$hero_gradient_start_color_length = get_theme_mod( 'hovercraft_hero_gradient_start_color_length', '30%' );
 	$hero_gradient_stop_color_length = get_theme_mod( 'hovercraft_hero_gradient_stop_color_length', '100%' );
 	$topbar_background_color = get_theme_mod( 'hovercraft_topbar_background_color', '#263238' );
-	$topbar_font_color = get_theme_mod( 'hovercraft_topbar_font_color', '#ffffff' );
+	$topbar_text_color = get_theme_mod( 'hovercraft_topbar_text_color', '#ffffff' );
 	$topbar_link_color = get_theme_mod( 'hovercraft_topbar_link_color', '#ffffff' );
 	$hero_gradient_start_color = get_theme_mod( 'hovercraft_hero_gradient_start_color', '#37474f' );
 	$hero_gradient_stop_color = get_theme_mod( 'hovercraft_hero_gradient_stop_color', '#ffffff' );
     $header_half_hero_background_color = get_theme_mod( 'hovercraft_header_half_hero_background_color', '#ffffff' ); 
     $header_mini_hero_background_color = get_theme_mod( 'hovercraft_header_mini_hero_background_color', '#ffffff' );
     $header_basic_background_color = get_theme_mod( 'hovercraft_header_basic_background_color', '#eceff1' );
+	$main_begin_background_color = get_theme_mod( 'hovercraft_main_begin_background_color', '#eceff1' );
+	$main_begin_text_color = get_theme_mod( 'hovercraft_main_begin_text_color', '#263238' );
+	$main_begin_link_color = get_theme_mod( 'hovercraft_main_begin_link_color', '#5C6BC0' );
     $prefooter_top_background_color = get_theme_mod( 'hovercraft_prefooter_top_background_color', '#eceff1' );
+	$prefooter_top_text_color = get_theme_mod( 'hovercraft_prefooter_top_text_color', '#263238' );
+	$prefooter_top_link_color = get_theme_mod( 'hovercraft_prefooter_top_link_color', '#5C6BC0' );
     $prefooter_bottom_background_color = get_theme_mod( 'hovercraft_prefooter_bottom_background_color', '#263238' );
+	$prefooter_bottom_text_color = get_theme_mod( 'hovercraft_prefooter_bottom_text_color', '#ffffff' );
+	$prefooter_bottom_link_color = get_theme_mod( 'hovercraft_prefooter_bottom_link_color', '#5C6BC0' );
     $footer_background_color = get_theme_mod( 'hovercraft_footer_background_color', '#eceff1' );
+	$footer_text_color = get_theme_mod( 'hovercraft_footer_text_color', '#263238' );
+	$footer_link_color = get_theme_mod( 'hovercraft_footer_link_color', '#5C6BC0' );
     $copyright_background_color = get_theme_mod( 'hovercraft_copyright_background_color', '#eceff1' );
+	$copyright_text_color = get_theme_mod( 'hovercraft_copyright_text_color', '#263238' );
+	$copyright_link_color = get_theme_mod( 'hovercraft_copyright_link_color', '#5C6BC0' );
      
     ?>
 
 <style type="text/css" id="hovercraft_custom_css">
 #topbar {
 	background: <?php echo $topbar_background_color; ?>;
-	color: <?php echo $topbar_font_color; ?>;
+	color: <?php echo $topbar_text_color; ?>;
 }
 
 #topbar a {
@@ -86,21 +97,50 @@ function hovercraft_generate_css(){
 	max-width: <?php echo $hero_content_width_desktop; ?>;
 	}
 }
+	
+.main-begin {
+	background: <?php echo $main_begin_background_color; ?>;
+	color: <?php echo $main_begin_text_color; ?>;
+}
+
+.main-begin a {
+	color: <?php echo $main_begin_link_color; ?>;
+}
 
 #prefooter-top {
 	background: <?php echo $prefooter_top_background_color; ?>;
+	color: <?php echo $prefooter_top_color_color; ?>;
+}
+	
+#prefooter-top a {
+	color: <?php echo $prefooter_top_link_color; ?>;
 }
 
 #prefooter-bottom {
 	background: <?php echo $prefooter_bottom_background_color; ?>;
+	color: <?php echo $prefooter_bottom_text_color; ?>;
+}
+	
+#prefooter-bottom a {
+	color: <?php echo $prefooter_bottom_link_color; ?>;
 }
 
 #footer {
 	background: <?php echo $footer_background_color; ?>;
+	color: <?php echo $footer_text_color; ?>;
+}
+
+#footer a {
+	color: <?php echo $footer_link_color; ?>;
 }
 
 #copyright {
 	background: <?php echo $copyright_background_color; ?>;
+	color: <?php echo $copyright_text_color; ?>;
+}
+
+#copyright a {
+	color: <?php echo $copyright_link_color; ?>;
 }
 </style>
 
