@@ -136,7 +136,7 @@ a:hover {
 
 #prefooter-top {
 	background: <?php echo $prefooter_top_background_color; ?>;
-	color: <?php echo $prefooter_top_color_color; ?>;
+	color: <?php echo $prefooter_top_text_color; ?>;
 }
 	
 #prefooter-top a {
