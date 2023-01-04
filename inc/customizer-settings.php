@@ -91,17 +91,17 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	)
 ) );
 	
-// topbar font color setting
-$wp_customize->add_setting( 'hovercraft_topbar_font_color', array(
+// topbar text color setting
+$wp_customize->add_setting( 'hovercraft_topbar_text_color', array(
 	'default' => '#ffffff',
 ) );
  
-// topbar font color control
-$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_topbar_font_color', array(
+// topbar text color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_topbar_text_color', array(
 	'label' => 'Topbar Font Color',
 	'description' => 'Applies to any plain text inside the topbar.',
 	'section' => 'colors',
-	'settings' => 'hovercraft_topbar_font_color'
+	'settings' => 'hovercraft_topbar_text_color'
 	)
 ) );
 	
@@ -155,7 +155,7 @@ $wp_customize->add_setting( 'hovercraft_header_half_hero_background_color', arra
  
 // header half hero background color control
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_header_half_hero_background_color', array(
-	'label' => 'Header Half Hero Background Color',
+	'label' => 'Header (Half Hero) Background Color',
 	'description' => 'This is a description',
 	'section' => 'colors',
 	'settings' => 'hovercraft_header_half_hero_background_color'
@@ -169,7 +169,7 @@ $wp_customize->add_setting( 'hovercraft_header_mini_hero_background_color', arra
  
 // header mini hero background color control
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_header_mini_hero_background_color', array(
-	'label' => 'Header Mini Hero Background Color',
+	'label' => 'Header (Mini Hero) Background Color',
 	'description' => 'This is a description',
 	'section' => 'colors',
 	'settings' => 'hovercraft_header_mini_hero_background_color'
@@ -183,7 +183,7 @@ $wp_customize->add_setting( 'hovercraft_header_basic_background_color', array(
  
 // header basic background color control
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_header_basic_background_color', array(
-	'label' => 'Header Basic Background Color',
+	'label' => 'Header (Basic) Background Color',
 	'description' => 'This is a description',
 	'section' => 'colors',
 	'settings' => 'hovercraft_header_basic_background_color'
@@ -197,7 +197,7 @@ $wp_customize->add_setting( 'hovercraft_prefooter_top_background_color', array(
  
 // prefooter top background color control
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_prefooter_top_background_color', array(
-	'label' => 'Prefooter Top Background Color',
+	'label' => 'Prefooter (Top) Background Color',
 	'description' => 'This is a description',
 	'section' => 'colors',
 	'settings' => 'hovercraft_prefooter_top_background_color'
@@ -211,7 +211,7 @@ $wp_customize->add_setting( 'hovercraft_prefooter_bottom_background_color', arra
  
 // prefooter bottom background color control
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_prefooter_bottom_background_color', array(
-	'label' => 'Prefooter Bottom Background Color',
+	'label' => 'Prefooter (Bottom) Background Color',
 	'description' => 'This is a description',
 	'section' => 'colors',
 	'settings' => 'hovercraft_prefooter_bottom_background_color'
@@ -231,6 +231,34 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	'settings' => 'hovercraft_footer_background_color'
 	)
 ) );
+	
+// footer text color setting
+$wp_customize->add_setting( 'hovercraft_footer_text_color', array(
+	'default' => '#263238',
+) );
+ 
+// footer text color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_footer_text_color', array(
+	'label' => 'Footer Text Color',
+	'description' => 'This is a description',
+	'section' => 'colors',
+	'settings' => 'hovercraft_footer_text_color'
+	)
+) );
+	
+// footer link color setting
+$wp_customize->add_setting( 'hovercraft_footer_link_color', array(
+	'default' => '#263238',
+) );
+ 
+// footer link color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_footer_link_color', array(
+	'label' => 'Footer Link Color',
+	'description' => 'This is a description',
+	'section' => 'colors',
+	'settings' => 'hovercraft_footer_link_color'
+	)
+) );
 
 // copyright background color setting
 $wp_customize->add_setting( 'hovercraft_copyright_background_color', array(
@@ -245,6 +273,33 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	'settings' => 'hovercraft_copyright_background_color'
     )));
 
+// copyright text color setting
+$wp_customize->add_setting( 'hovercraft_copyright_text_color', array(
+	'default' => '#263238',
+) );
+
+// copyright text color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_copyright_text_color', array(
+	'label' => 'Copyright Text Color',
+	'description' => 'This is a description',
+	'section' => 'colors',
+	'settings' => 'hovercraft_copyright_text_color'
+	)
+) );
+	
+// copyright link color setting
+$wp_customize->add_setting( 'hovercraft_copyright_link_color', array(
+	'default' => '#263238',
+) );
+
+// copyright link color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_copyright_link_color', array(
+	'label' => 'Copyright Link Color',
+	'description' => 'This is a description',
+	'section' => 'colors',
+	'settings' => 'hovercraft_copyright_link_color'
+	)
+) );
 
 // sidebar section
 $wp_customize->add_section( 'hovercraft_sidebar', array(
