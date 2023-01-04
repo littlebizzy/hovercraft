@@ -4,8 +4,7 @@ function hovercraft_customizer($wp_customize) {
 
 // remove header text color control
 $wp_customize->remove_control( 'header_textcolor' );
-	
-	
+
 // header media section
 $wp_customize->get_section('header_image')->title = __( 'Header Media' );
 
@@ -20,6 +19,7 @@ $wp_customize->add_section( 'hovercraft_general', array(
 // back to top setting
 $wp_customize->add_setting('hovercraft_back_to_top', array(
     'default' => 0,
+	'sanitize_callback' => 'hovercraft_sanitize_checkbox',
 ));
 
 
@@ -41,6 +41,7 @@ $wp_customize->add_control(
 // search setting
 $wp_customize->add_setting('hovercraft_search', array(
     'default' => 0,
+	'sanitize_callback' => 'hovercraft_sanitize_checkbox',
 ));
 
 // search control
@@ -61,6 +62,7 @@ $wp_customize->add_control(
 // breadcrumbs setting
 $wp_customize->add_setting('hovercraft_breadcrumbs', array(
     'default' => 0,
+	'sanitize_callback' => 'hovercraft_sanitize_checkbox',
 ));
 
 // breadcrumbs control
@@ -497,6 +499,7 @@ $wp_customize->add_section( 'hovercraft_footer', array(
 $wp_customize->add_setting( 'hovercraft_footer_columns', array(
     'default'    => 'four_weighted',
     'type'       => 'theme_mod',
+	'sanitize_callback' => 'hovercraft_sanitize_radio',
  	) 
 );
 
@@ -942,7 +945,23 @@ function hovercraft_sanitize_select( $input, $setting ){
 		//get the list of possible select options 
 		$choices = $setting->manager->get_control( $setting->id )->choices;           
 		//return input if valid or return default option
-		return ( array_key_exists( $input, $choices ) ? $input : $setting->default );                
+		return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
+}
+
+// sanitize radio function
+function hovercraft_sanitize_radio( $input, $setting ){
+	//input must be a slug: lowercase alphanumeric characters, dashes and underscores are allowed only
+	$input = sanitize_key($input);
+	//get the list of possible radio box options 
+	$choices = $setting->manager->get_control( $setting->id )->choices;
+	//return input if valid or return default option
+	return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
+}
+
+// sanitize checkbox function
+function hovercraft_sanitize_checkbox( $input ){
+	//returns true if checkbox is checked
+	return ( isset( $input ) ? true : false );
 }
 
 // https://themeshaper.com/2013/04/29/validation-sanitization-in-customizer/
