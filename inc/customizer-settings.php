@@ -6,7 +6,7 @@ function hovercraft_customizer($wp_customize) {
 $wp_customize->remove_control( 'header_textcolor' );
 
 // header media section
-$wp_customize->get_section('header_image')->title = __( 'Header Media' );
+$wp_customize->get_section('header_image')->title = __( 'Header Media', 'hovercraft' );
 
 
 // general options section
@@ -569,7 +569,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_logo_effect',
         array(
             'label'     => __('Logo effect', 'hovercraft'),
-			'description' => __( 'CSS hover effect for logos in the header' ),
+			'description' => __( 'CSS hover effect for logos in the header', 'hovercraft' ),
             'section'   => 'hovercraft_effects',
             'settings'  => 'hovercraft_logo_effect',
             'type'      => 'select',
@@ -595,7 +595,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_main_menu_links_effect',
         array(
             'label'     => __('Main menu links effect', 'hovercraft'),
-			'description' => __( 'CSS hover effect for main menu links in the header' ),
+			'description' => __( 'CSS hover effect for main menu links in the header', 'hovercraft' ),
             'section'   => 'hovercraft_effects',
             'settings'  => 'hovercraft_main_menu_links_effect',
             'type'      => 'select',
@@ -627,7 +627,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_default_link_decoration',
         array(
             'label'     => __('Default link decoration', 'hovercraft'),
-			'description' => __( 'What type of link decoration' ),
+			'description' => __( 'What type of link decoration', 'hovercraft' ),
             'section'   => 'hovercraft_link_styling',
             'settings'  => 'hovercraft_default_link_decoration',
             'type'      => 'select',
@@ -651,7 +651,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_topbar_link_decoration',
         array(
             'label'     => __('Topbar link decoration', 'hovercraft'),
-			'description' => __( 'What type of link decoration' ),
+			'description' => __( 'What type of link decoration', 'hovercraft' ),
             'section'   => 'hovercraft_link_styling',
             'settings'  => 'hovercraft_topbar_link_decoration',
             'type'      => 'select',
@@ -675,7 +675,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_main_begin_link_decoration',
         array(
             'label'     => __('Main (begin) link decoration', 'hovercraft'),
-			'description' => __( 'What type of link decoration' ),
+			'description' => __( 'What type of link decoration', 'hovercraft' ),
             'section'   => 'hovercraft_link_styling',
             'settings'  => 'hovercraft_main_begin_link_decoration',
             'type'      => 'select',
@@ -699,7 +699,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_prefooter_top_link_decoration',
         array(
             'label'     => __('Prefooter (top) link decoration', 'hovercraft'),
-			'description' => __( 'What type of link decoration' ),
+			'description' => __( 'What type of link decoration', 'hovercraft' ),
             'section'   => 'hovercraft_link_styling',
             'settings'  => 'hovercraft_prefooter_top_link_decoration',
             'type'      => 'select',
@@ -723,7 +723,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_prefooter_bottom_link_decoration',
         array(
             'label'     => __('Prefooter (bottom) link decoration', 'hovercraft'),
-			'description' => __( 'What type of link decoration' ),
+			'description' => __( 'What type of link decoration', 'hovercraft' ),
             'section'   => 'hovercraft_link_styling',
             'settings'  => 'hovercraft_prefooter_bottom_link_decoration',
             'type'      => 'select',
@@ -747,7 +747,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_footer_link_decoration',
         array(
             'label'     => __('Footer link decoration', 'hovercraft'),
-			'description' => __( 'What type of link decoration' ),
+			'description' => __( 'What type of link decoration', 'hovercraft' ),
             'section'   => 'hovercraft_link_styling',
             'settings'  => 'hovercraft_footer_link_decoration',
             'type'      => 'select',
@@ -771,7 +771,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_copyright_link_decoration',
         array(
             'label'     => __('Copyright link decoration', 'hovercraft'),
-			'description' => __( 'What type of link decoration' ),
+			'description' => __( 'What type of link decoration', 'hovercraft' ),
             'section'   => 'hovercraft_link_styling',
             'settings'  => 'hovercraft_copyright_link_decoration',
             'type'      => 'select',
@@ -801,7 +801,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_hero_content_width_desktop',
         array(
             'label'     => __('Hero content width', 'hovercraft'),
-			'description' => __( 'Width of hero content (desktop)' ),
+			'description' => __( 'Width of hero content (desktop)', 'hovercraft' ),
             'section'   => 'hovercraft_hero_styling',
             'settings'  => 'hovercraft_hero_content_width_desktop',
             'type'      => 'select',
@@ -826,7 +826,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_hero_gradient_angle',
         array(
             'label'     => __('Gradient angle', 'hovercraft'),
-			'description' => __( 'Choose the angle of the hero gradient' ),
+			'description' => __( 'Choose the angle of the hero gradient', 'hovercraft' ),
             'section'   => 'hovercraft_hero_styling',
             'settings'  => 'hovercraft_hero_gradient_angle',
             'type'      => 'select',
@@ -852,7 +852,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_hero_gradient_start_color_transparency',
         array(
             'label'     => __('Start color transparency', 'hovercraft'),
-			'description' => __( 'Transparency of the start color' ),
+			'description' => __( 'Transparency of the start color', 'hovercraft' ),
             'section'   => 'hovercraft_hero_styling',
             'settings'  => 'hovercraft_hero_gradient_start_color_transparency',
             'type'      => 'select',
@@ -881,7 +881,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_hero_gradient_stop_color_transparency',
         array(
             'label'     => __('Stop color transparency', 'hovercraft'),
-			'description' => __( 'Transparency of the stop color' ),
+			'description' => __( 'Transparency of the stop color', 'hovercraft' ),
             'section'   => 'hovercraft_hero_styling',
             'settings'  => 'hovercraft_hero_gradient_stop_color_transparency',
             'type'      => 'select',
@@ -910,7 +910,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_hero_gradient_start_color_length',
         array(
             'label'     => __('Start color length', 'hovercraft'),
-			'description' => __( 'Length of the start color' ),
+			'description' => __( 'Length of the start color', 'hovercraft' ),
             'section'   => 'hovercraft_hero_styling',
             'settings'  => 'hovercraft_hero_gradient_start_color_length',
             'type'      => 'select',
@@ -942,7 +942,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_hero_gradient_stop_color_length',
         array(
             'label'     => __('Stop color length', 'hovercraft'),
-			'description' => __( 'Length of the stop color' ),
+			'description' => __( 'Length of the stop color', 'hovercraft' ),
             'section'   => 'hovercraft_hero_styling',
             'settings'  => 'hovercraft_hero_gradient_stop_color_length',
             'type'      => 'select',
