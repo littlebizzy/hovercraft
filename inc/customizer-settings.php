@@ -189,13 +189,55 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	'settings' => 'hovercraft_header_basic_background_color'
 	)
 ) );
+	
+// main (begin) background color setting
+$wp_customize->add_setting( 'hovercraft_main_begin_background_color', array(
+	'default' => '#eceff1',
+) );
+ 
+// main (begin) background color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_main_begin_background_color', array(
+	'label' => 'Main (Begin) Background Color',
+	'description' => 'This is a description',
+	'section' => 'colors',
+	'settings' => 'hovercraft_main_begin_background_color'
+	)
+) );
+	
+// main (begin) text color setting
+$wp_customize->add_setting( 'hovercraft_main_begin_text_color', array(
+	'default' => '#263238',
+) );
+ 
+// main (begin) text color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_main_begin_text_color', array(
+	'label' => 'Main (Begin) Text Color',
+	'description' => 'This is a description',
+	'section' => 'colors',
+	'settings' => 'hovercraft_main_begin_text_color'
+	)
+) );
 
-// prefooter top background color setting
+// main (begin) link color setting
+$wp_customize->add_setting( 'hovercraft_main_begin_link_color', array(
+	'default' => '#5C6BC0',
+) );
+
+// main (begin) link color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_main_begin_link_color', array(
+	'label' => 'Main (Begin) Link Color',
+	'description' => 'This is a description',
+	'section' => 'colors',
+	'settings' => 'hovercraft_main_begin_link_color'
+	)
+) );
+
+// prefooter (top) background color setting
 $wp_customize->add_setting( 'hovercraft_prefooter_top_background_color', array(
 	'default' => '#eceff1',
 ) );
  
-// prefooter top background color control
+// prefooter (top) background color control
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_prefooter_top_background_color', array(
 	'label' => 'Prefooter (Top) Background Color',
 	'description' => 'This is a description',
@@ -203,18 +245,74 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	'settings' => 'hovercraft_prefooter_top_background_color'
 	)
 ) );
+	
+// prefooter (top) text color setting
+$wp_customize->add_setting( 'hovercraft_prefooter_top_text_color', array(
+	'default' => '#263238',
+) );
 
-// prefooter bottom background color setting
+// prefooter (top) text color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_prefooter_top_text_color', array(
+	'label' => 'Prefooter (Top) Text Color',
+	'description' => 'This is a description',
+	'section' => 'colors',
+	'settings' => 'hovercraft_prefooter_top_text_color'
+	)
+) );
+	
+// prefooter (top) link color setting
+$wp_customize->add_setting( 'hovercraft_prefooter_top_link_color', array(
+	'default' => '#5C6BC0',
+) );
+
+// prefooter (top) link color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_prefooter_top_link_color', array(
+	'label' => 'Prefooter (Top) Link Color',
+	'description' => 'This is a description',
+	'section' => 'colors',
+	'settings' => 'hovercraft_prefooter_top_link_color'
+	)
+) );
+
+// prefooter (bottom) background color setting
 $wp_customize->add_setting( 'hovercraft_prefooter_bottom_background_color', array(
 	'default' => '#263238',
 ) );
  
-// prefooter bottom background color control
+// prefooter (bottom) background color control
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_prefooter_bottom_background_color', array(
 	'label' => 'Prefooter (Bottom) Background Color',
 	'description' => 'This is a description',
 	'section' => 'colors',
 	'settings' => 'hovercraft_prefooter_bottom_background_color'
+	)
+) );
+	
+// prefooter (bottom) text color setting
+$wp_customize->add_setting( 'hovercraft_prefooter_bottom_text_color', array(
+	'default' => '#ffffff',
+) );
+
+// prefooter (bottom) text color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_prefooter_bottom_text_color', array(
+	'label' => 'Prefooter (Bottom) Text Color',
+	'description' => 'This is a description',
+	'section' => 'colors',
+	'settings' => 'hovercraft_prefooter_bottom_text_color'
+	)
+) );
+	
+// prefooter (bottom) link color setting
+$wp_customize->add_setting( 'hovercraft_prefooter_bottom_text_color', array(
+	'default' => '#5C6BC0',
+) );
+
+// prefooter (bottom) link color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_prefooter_bottom_link_color', array(
+	'label' => 'Prefooter (Bottom) Link Color',
+	'description' => 'This is a description',
+	'section' => 'colors',
+	'settings' => 'hovercraft_prefooter_bottom_link_color'
 	)
 ) );
 
