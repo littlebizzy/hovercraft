@@ -39,7 +39,7 @@
 	</div><!-- content -->
 
 	<div class="last-modified">
-		<?php echo "<span>Last modified on "; the_modified_time('F jS, Y'); echo "</span>"; ?>
+		<?php echo "<span>Last modified on "; the_modified_time('F j, Y'); echo "</span>"; ?>
 	</div><!-- last-modified -->
 
 	<div class="clear"></div>
