@@ -18,6 +18,9 @@ function hovercraft_generate_css(){
 	$hero_content_width_desktop = get_theme_mod( 'hovercraft_hero_content_width_desktop', '900px' );
 	$hero_gradient_start_color_length = get_theme_mod( 'hovercraft_hero_gradient_start_color_length', '30%' );
 	$hero_gradient_stop_color_length = get_theme_mod( 'hovercraft_hero_gradient_stop_color_length', '100%' );
+	$default_text_color = get_theme_mod( 'hovercraft_default_text_color', '#263238' );
+	$default_link_color = get_theme_mod( 'hovercraft_default_link_color', '#5C6BC0' );
+	$default_hover_color = get_theme_mod( 'hovercraft_default_hover_color', '#283593' );
 	$topbar_background_color = get_theme_mod( 'hovercraft_topbar_background_color', '#263238' );
 	$topbar_text_color = get_theme_mod( 'hovercraft_topbar_text_color', '#ffffff' );
 	$topbar_link_color = get_theme_mod( 'hovercraft_topbar_link_color', '#ffffff' );
@@ -45,6 +48,30 @@ function hovercraft_generate_css(){
     ?>
 
 <style type="text/css" id="hovercraft_custom_css">
+html, body {
+	color: <?php echo $default_text_color; ?>;
+}
+
+a {
+	color: <?php echo $default_link_color; ?>;
+}
+	
+.cta-hero-primary ul li a {
+	background: <?php echo $default_link_color; ?>;
+}
+	
+a:hover {
+	color: <?php echo $default_hover_color; ?>;
+}
+	
+.cta-hero-primary ul li a:hover {
+	background: <?php echo $default_hover_color; ?>;
+}
+	
+.tile i {
+	color: <?php echo $default_hover_color; ?>;
+}
+
 #topbar {
 	background: <?php echo $topbar_background_color; ?>;
 	color: <?php echo $topbar_text_color; ?>;
