@@ -1,5 +1,5 @@
-<div id="splash-wrapper">
-<div class="splash-wide">
+<div id="hero-wrapper">
+<div class="hero-wide">
 
 <?php 
 	$url_hovercraft_video = wp_get_attachment_url(get_theme_mod('hovercraft_video'));
@@ -13,7 +13,7 @@
 <?php get_template_part('template-parts/header/navigation'); ?>
 </div>
 	
-<div class="splash-main">
+<div class="hero-main">
 <div class="inner">
 	<?php if (is_front_page()) { ?>
 	<div class="welcome-wrapper">
@@ -68,7 +68,7 @@
 		
 <div class="clear"></div>
 </div><!-- inner -->
-</div><!-- splash-main -->
+</div><!-- hero-main -->
 	
-</div><!-- splash-wide -->
-</div><!-- splash-wrapper -->
+</div><!-- hero-wide -->
+</div><!-- hero-wrapper -->
