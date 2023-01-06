@@ -90,7 +90,20 @@ a:hover {
 	text-decoration: <?php echo $topbar_link_decoration; ?>;
 }
 
-.splash-wide {
+#hero-full {
+	background: linear-gradient(<?php echo $hero_gradient_angle; ?>, <?php 
+		list($r1, $g1, $b1) = sscanf($hero_gradient_start_color, "#%02x%02x%02x");
+		echo "rgba($r1, $g1, $b1, $hero_gradient_start_color_transparency)"; 
+		?> <?php echo $hero_gradient_start_color_length; ?>, <?php 
+		list($r2, $g2, $b2) = sscanf($hero_gradient_stop_color, "#%02x%02x%02x");
+		echo "rgba($r2, $g2, $b2, $hero_gradient_stop_color_transparency)"; 
+		?> <?php echo $hero_gradient_stop_color_length; ?>), url(<?php echo $hero_image; ?>);
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+	
+#hero-half {
 	background: linear-gradient(<?php echo $hero_gradient_angle; ?>, <?php 
 		list($r1, $g1, $b1) = sscanf($hero_gradient_start_color, "#%02x%02x%02x");
 		echo "rgba($r1, $g1, $b1, $hero_gradient_start_color_transparency)"; 
@@ -103,7 +116,7 @@ a:hover {
 	background-repeat: no-repeat;
 }
 
-.splash-mini {
+#hero-mini {
 	background: linear-gradient(<?php echo $hero_gradient_angle; ?>, <?php 
 		list($r1, $g1, $b1) = sscanf($hero_gradient_start_color, "#%02x%02x%02x");
 		echo "rgba($r1, $g1, $b1, $hero_gradient_start_color_transparency)"; 
