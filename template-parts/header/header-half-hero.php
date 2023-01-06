@@ -1,5 +1,5 @@
-<div id="hero-wrapper">
-<div class="hero-wide">
+<div id="hero-half-wrapper">
+<div id="hero-half">
 
 <div id="header-half-hero">
 <?php get_template_part('template-parts/header/navigation'); ?>
@@ -62,5 +62,5 @@
 </div><!-- inner -->
 </div><!-- hero-main -->
 	
-</div><!-- hero-wide -->
-</div><!-- hero-wrapper -->
+</div><!-- hero-half -->
+</div><!-- hero-half-wrapper -->
