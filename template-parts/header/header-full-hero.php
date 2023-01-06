@@ -1,5 +1,5 @@
-<div id="hero-wrapper">
-<div class="hero-wide">
+<div id="hero-full-wrapper">
+<div id="hero-full">
 
 <?php 
 	$url_hovercraft_video = wp_get_attachment_url(get_theme_mod('hovercraft_video'));
@@ -70,5 +70,5 @@
 </div><!-- inner -->
 </div><!-- hero-main -->
 	
-</div><!-- hero-wide -->
-</div><!-- hero-wrapper -->
+</div><!-- hero-full -->
+</div><!-- hero-full-wrapper -->
