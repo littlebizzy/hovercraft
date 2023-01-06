@@ -1,4 +1,4 @@
-<div class="hero-mini">
+<div id="hero-mini">
 
 <div id="header-mini-hero">
 <?php get_template_part('template-parts/header/navigation'); ?>
@@ -58,4 +58,3 @@
 </div><!-- hero-main-mini -->
 	
 </div><!-- hero-mini -->
-	
