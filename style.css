@@ -1092,24 +1092,24 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 }
 
 
-/* splash */
+/* hero */
 
 @media screen and (max-width: 1200px) {
-#splash-wrapper {
+#hero-wrapper {
 	width: 100%;
 	height: 100%;
 	}
 }
 
 @media screen and (min-width: 1200px) {
-#splash-wrapper {
+#hero-wrapper {
 	width: 100%;
 	height: 100%;
 	}
 }
 
 @media screen and (max-width: 1200px) {
-.splash-wide {
+.hero-wide {
 	width: 100%; /* correct */
 	height: 100%; /* correct */
 	padding: 0; /* correct */
@@ -1119,7 +1119,7 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 }
 
 @media screen and (min-width: 1200px) {
-.splash-wide {
+.hero-wide {
 	width: 100%; /* correct */
 	height: 100%; /* correct */
 	padding: 0; /* correct */
@@ -1129,7 +1129,7 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 }
 
 @media screen and (max-width: 1200px) {
-.splash-mini {
+.hero-mini {
 	width:100%; /* correct */
 	padding:0px; /* correct */
 	display:table; /* correct */
@@ -1137,7 +1137,7 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 }
 
 @media screen and (min-width: 1200px) {
-.splash-mini {
+.hero-mini {
 	width:100%; /* correct */
 	padding:0px; /* correct */
 	display:table; /* correct */
@@ -1147,7 +1147,7 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 
 /* video background for full hero header */
 
-#splash-wrapper video {
+#hero-wrapper video {
 	width: 100%;
 	height: 100%;
 	object-fit: cover; /** simulates background-size: cover */
@@ -1156,7 +1156,7 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
   	left: 0;
 }
 
-#splash-wrapper video::after {
+#hero-wrapper video::after {
 	width: 100%;
   	height: 100%;
   	position: absolute;
@@ -1172,7 +1172,7 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 }
 
 @media screen and (max-width: 1200px) {
-.splash-main {
+.hero-main {
 	padding: 0; /* 0 correct because ignored per table-row */
 	display: table-row; /* correct */
 	position: relative; /* required when using video background on splash-wide */
@@ -1180,7 +1180,7 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 }
 
 @media screen and (min-width: 1200px) {
-.splash-main {
+.hero-main {
 	padding: 0; /* 0 correct because ignored per table-row */
 	display: table-row; /* correct */
 	position: relative; /* required when using video background on splash-wide */
@@ -1188,13 +1188,13 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 }
 
 @media screen and (max-width: 1200px) {
-.splash-main-mini {
+.hero-main-mini {
 	padding: 60px 20px; /* correct */
 	}
 }
 
 @media screen and (min-width: 1200px) {
-.splash-main-mini {
+.hero-main-mini {
 	padding: 60px 0px;
 	}
 }
