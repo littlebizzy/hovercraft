@@ -5,7 +5,7 @@ function hovercraft_generate_css(){
 	
 	$url_header_image = esc_url( get_header_image() );
 	
-	if(!isset($post->ID)) {
+	if(isset($post->ID)) {
 	$url_featured_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' );
         }
 	
