@@ -1,11 +1,11 @@
-<div id="splash-wrapper">
-<div class="splash-wide">
+<div id="hero-wrapper">
+<div class="hero-wide">
 
 <div id="header-half-hero">
 <?php get_template_part('template-parts/header/navigation'); ?>
 </div>
 	
-<div class="splash-main">
+<div class="hero-main">
 <div class="inner">
 	<?php if (is_front_page()) { ?>
 	<div class="welcome-wrapper">
@@ -60,7 +60,7 @@
 		
 <div class="clear"></div>
 </div><!-- inner -->
-</div><!-- splash-main -->
+</div><!-- hero-main -->
 	
-</div><!-- splash-wide -->
-</div><!-- splash-wrapper -->
+</div><!-- hero-wide -->
+</div><!-- hero-wrapper -->
