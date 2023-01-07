@@ -4,7 +4,7 @@
 <div id="main">
 <div class="inner">
 	
-	<?php if ( get_theme_mod( 'hovercraft_sidebar_status' ) == 1 ) { ?><div id="primary"><?php } else { ?><div id="primary-wide"><?php } ?>
+<?php if ( get_theme_mod( 'hovercraft_sidebar_status' ) == 1 ) { ?><div id="primary"><?php } else { ?><div id="primary-wide"><?php } ?>
 
 	<?php if ( get_theme_mod( 'hovercraft_breadcrumbs' ) == 1 ) { ?>
 		<div class="breadcrumbs">
@@ -14,18 +14,16 @@
 	
 	<div id="content">
 	
-    <h1 class="page-title"><?php _e( 'Search results for:', 'nd_dosth' ); ?><span class="search-query"><?php echo get_search_query(); ?></span></h1> 
+    <h1 class="page-title"><?php _e( 'Search results for:', 'nd_dosth' ); ?> <span class="search-query"><?php echo get_search_query(); ?></span></h1> 
 
             <?php if ( have_posts() ): ?>
                 <?php while( have_posts() ): ?>
                     <?php the_post(); ?>
-                    <div class="search-result">
                         <h2><?php the_title(); ?></h2>
                         <?php the_excerpt(); ?>
                         <a href="<?php the_permalink(); ?>" class="read-more-link">
                             <?php _e( 'Read More', 'nd_dosth' );  ?>
                         </a>
-                    </div>
                 <?php endwhile; ?>
                 <?php the_posts_pagination(); ?>
             <?php else: ?>
@@ -34,6 +32,9 @@
 		
 			<div class="clear"></div>
 	</div><!-- content -->
+	
+	<div class="clear"></div>
+</div><!-- primary -->
 
 	
 	<?php if ( get_theme_mod( 'hovercraft_sidebar_status' ) == 1 ) { 
@@ -47,4 +48,4 @@
 </div><!-- main -->
 
 <?php get_template_part( 'footer' ); ?>
-    
+	
