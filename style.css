@@ -2,7 +2,7 @@
 Theme Name: HoverCraft
 Theme URI: https://www.littlebizzy.com/themes/hovercraft
 Description: No maintenance WordPress theme
-Version: 0.1.91
+Version: 0.1.92
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 License: GPLv3
@@ -969,31 +969,53 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 }
 
 #header-full-hero .cta-header-secondary ul li {
-	font-size: 18px;
-	font-weight: 400;
 	list-style-type: none;
-	vertical-align: middle;
 	display: inline-block;
-	padding: 10px 20px;
-	background: transparent;
-	border-radius: 4px;
-	border: 1px solid #FFF;
+	vertical-align: middle;
+	padding: 0;
+	border-radius: 5px;
+	border: 1px solid #ffffff;
+	text-align:center;
 }
 
 #header-half-hero .cta-header-secondary ul li, #header-mini-hero .cta-header-secondary ul li, #header-basic .cta-header-secondary ul li {
-	font-size: 18px;
-	font-weight: 400;
 	list-style-type: none;
+	display: inline-block;
 	vertical-align: middle;
+	padding: 0;
+	border-radius: 5px;
+	border: 1px solid #263238;
+	text-align:center;
+}
+
+#header-full-hero .cta-header-secondary ul li a {
+	font-size: 18px;
+	font-weight: 600;
 	display: inline-block;
 	padding: 10px 20px;
 	background: transparent;
-	border-radius: 4px;
-	border: 1px solid #263238;
+	text-decoration: none;
+	color: #ffffff;
 }
 
-.cta-header-secondary ul li a {
+#header-half-hero .cta-header-secondary ul li a, #header-mini-hero .cta-header-secondary ul li a, #header-basic .cta-header-secondary ul li a {
+	font-size: 18px;
+	font-weight: 600;
+	display: inline-block;
+	padding: 10px 20px;
+	background: transparent;
 	text-decoration: none;
+	color: #263238;
+}
+
+#header-full-hero .cta-header-secondary ul li a:hover {
+	background: #fff;
+	color: #263238 !important;
+}
+
+#header-half-hero .cta-header-secondary ul li a:hover, #header-mini-hero .cta-header-secondary ul li a:hover, #header-basic .cta-header-secondary ul li a:hover {
+	background: #263238;
+	color: #ffffff !important;
 }
 
 
