@@ -1048,14 +1048,14 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 
 /* search */
 
-.search {
+.search-icon-wrapper {
 	display:inline-block;
 	text-align:right;
 	padding-left:30px;
  	vertical-align: middle;
 }
 
-.search i {
+.search-icon-wrapper i {
 	text-decoration:none;
 	font-size:24px;
 	padding:0px;
