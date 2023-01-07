@@ -1061,6 +1061,34 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 	padding:0px;
 }
 
+.searchinput {
+	width: 250px;
+	line-height: 1.5;
+	border: none;
+	background: #ECEFF1;
+	border: 0;
+	padding: 2px 5px;
+}
+
+.searchinput::placeholder {
+	color: #78909C;
+}
+
+.searchinput:focus {
+  outline: none;
+}
+
+#sidebar .searchinput {
+	width: 100%;
+	line-height: 1.5;
+	border: 1px solid #B0BEC5;
+	background: #FFF;
+	padding: 5px 10px;
+	font-size: 16px;
+	border-radius: 5px;
+}
+
+
 /* shopping cart */
 
 .cart {
