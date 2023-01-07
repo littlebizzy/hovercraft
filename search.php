@@ -14,8 +14,7 @@
 	
 	<div id="content">
 	
-    <h1 class="page-title"><?php _e( 'Search results for:', 'nd_dosth' ); ?></h1>
-    <div class="search-query"><?php echo get_search_query(); ?></div>    
+    <h1 class="page-title"><?php _e( 'Search results for:', 'nd_dosth' ); ?><span class="search-query"><?php echo get_search_query(); ?></span></h1> 
 
             <?php if ( have_posts() ): ?>
                 <?php while( have_posts() ): ?>
