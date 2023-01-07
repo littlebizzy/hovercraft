@@ -1,10 +1,10 @@
-<div class="splash-mini">
+<div id="hero-mini">
 
 <div id="header-mini-hero">
 <?php get_template_part('template-parts/header/navigation'); ?>
 </div>
 	
-<div class="splash-main-mini">
+<div class="hero-main-mini">
 <div class="inner">
 		<div class="title-wrapper">
 		<h1 class="mini-hero-title"><?php single_post_title(); ?></h1>
@@ -55,7 +55,6 @@
 		
 <div class="clear"></div>
 </div><!-- inner -->
-</div><!-- splash-main -->
+</div><!-- hero-main-mini -->
 	
-</div><!-- splash-wide -->
-	
+</div><!-- hero-mini -->
