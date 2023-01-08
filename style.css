@@ -2,7 +2,7 @@
 Theme Name: HoverCraft
 Theme URI: https://www.littlebizzy.com/themes/hovercraft
 Description: No maintenance WordPress theme
-Version: 0.1.94
+Version: 0.1.95
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 License: GPLv3
@@ -290,7 +290,18 @@ button {
 	padding: 10px 20px;
 	text-decoration: none;
 	background: #ECEFF1;
-	border-radius: 4px;
+	border-radius: 5px;
+	border: 0;
+	cursor: pointer;
+}
+
+input[type="submit"] {
+	font-size: 16px;
+	font-weight: 400;
+	padding: 10px 20px;
+	text-decoration: none;
+	background: #ECEFF1;
+	border-radius: 5px;
 	border: 0;
 	cursor: pointer;
 }
