@@ -831,10 +831,16 @@ $wp_customize->add_control( new WP_Customize_Control(
             'settings'  => 'hovercraft_hero_gradient_angle',
             'type'      => 'select',
 			'choices' => array(
+				'0deg' => '0 Degrees',
         		'45deg' => '45 Degrees',
         		'60deg' => '60 Degrees',
         		'90deg' => '90 Degrees',
         		'120deg' => '120 Degrees',
+				'135deg' => '135 Degrees',
+				'180deg' => '180 Degrees',
+				'225deg' => '225 Degrees',
+				'270deg' => '270 Degrees',
+				'315deg' => '315 Degrees',
     			)
         )
 ) );
