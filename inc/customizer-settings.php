@@ -842,7 +842,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 // hero gradient start color transparency setting
 $wp_customize->add_setting( 'hovercraft_hero_gradient_start_color_transparency', array(
     'default'    => '0.50',
-	'sanitize_callback' => 'hovercraft_sanitize_select',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
 	) 
 );
 
@@ -884,7 +884,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 // hero gradient stop color transparency setting
 $wp_customize->add_setting( 'hovercraft_hero_gradient_stop_color_transparency', array(
     'default'    => '0.50',
-	'sanitize_callback' => 'hovercraft_sanitize_select',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
 	) 
 );
 
@@ -926,7 +926,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 // hero gradient start color length setting
 $wp_customize->add_setting( 'hovercraft_hero_gradient_start_color_length', array(
     'default'    => '30%',
-	'sanitize_callback' => 'hovercraft_sanitize_select',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
 	) 
 );
 
@@ -958,7 +958,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 // hero gradient stop color length setting
 $wp_customize->add_setting( 'hovercraft_hero_gradient_stop_color_length', array(
     'default'    => '100%',
-	'sanitize_callback' => 'hovercraft_sanitize_select',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
 	) 
 );
 
@@ -1018,5 +1018,11 @@ function hovercraft_sanitize_checkbox( $input ){
 	return ( isset( $input ) ? true : false );
 }
 
+// sanitize float function
+function hovercraft_sanitize_float( $input ){
+	return filter_var($input, FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
+}
+
 // https://themeshaper.com/2013/04/29/validation-sanitization-in-customizer/
 // https://divpusher.com/blog/wordpress-customizer-sanitization-examples/
+// https://wordpress.stackexchange.com/questions/225825/customizer-sanitize-callback-for-input-type-number
