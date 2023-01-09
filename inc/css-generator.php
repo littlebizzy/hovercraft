@@ -153,6 +153,20 @@ a:hover {
 #header-basic {
 	background: <?php echo $header_basic_background_color; ?>;
 }
+	
+.cta-header-primary ul li a {
+	font-size: 18px;
+	font-weight: 700;
+	display: inline-block;
+	padding: 10px 20px;
+	background: <?php echo $default_link_color; ?>;
+	text-decoration: none !important;
+	border-radius: 5px;
+}
+
+.cta-header-primary ul li a:hover {
+	background: <?php echo $default_hover_color; ?>;
+}
 
 @media screen and (min-width: 1200px) {
 .welcome-wrapper {
