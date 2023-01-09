@@ -103,23 +103,7 @@ a:hover {
 	background-repeat: no-repeat;
 }
 	
-#hero-half-container {
-	width: 100%; /* correct */
-	height: 100%; /* correct */
-	padding: 0; /* correct */
-	display: table; /* correct */
-	position: relative; /* required to keep video background from escaping esp on mobile */
-}
-	
-.hero-half-wrapper {
-	display: table-row;
-}
-	
 .hero-half {
-	width: 100%;
-	height: 100%;
-	display: table-cell;
-	vertical-align: middle;
 	background: linear-gradient(<?php echo $hero_gradient_angle; ?>, <?php 
 		list($r1, $g1, $b1) = sscanf($hero_gradient_start_color, "#%02x%02x%02x");
 		echo "rgba({$r1}, {$g1}, {$b1}, {$hero_gradient_start_color_transparency})"; 
