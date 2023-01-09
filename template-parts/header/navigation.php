@@ -21,9 +21,6 @@
         	}
         	?>
 			<?php if ( get_theme_mod( 'hovercraft_search' ) == 1 ) { ?>
-				<div class="search"><a href="#"><i class="material-icons search">search</i></a></div>
-			<?php } ?>
-			<?php if ( get_theme_mod( 'hovercraft_search' ) == 1 ) { ?>
 				<div class="search-icon-wrapper"><i class="material-icons search">search</i></div><!-- search-icon-wrapper -->
 			<?php } ?>
 			<?php if ( class_exists( 'WooCommerce' ) ) { ?>
