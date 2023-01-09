@@ -2,7 +2,7 @@
 Theme Name: HoverCraft
 Theme URI: https://www.littlebizzy.com/themes/hovercraft
 Description: No maintenance WordPress theme
-Version: 0.1.98
+Version: 0.1.99
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 License: GPLv3
@@ -1162,7 +1162,7 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 }
 
 
-/* hero */
+/* full hero */
 
 @media screen and (max-width: 1200px) {
 #hero-full-wrapper {
@@ -1178,59 +1178,30 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 	}
 }
 
-@media screen and (max-width: 1200px) {
-#hero-half-wrapper {
+
+/* half hero */
+
+#hero-half-container {
+	width: 100%; /* correct */
+	height: 100%; /* correct */
+	padding: 0; /* correct */
+	display: table; /* correct */
+	position: relative; /* required to keep video background from escaping esp on mobile */
+}
+
+.hero-half-wrapper {
+	display: table-row;
+}
+
+.hero-half {
 	width: 100%;
 	height: 100%;
-	}
+	display: table-cell;
+	vertical-align: middle;
 }
 
-@media screen and (min-width: 1200px) {
-#hero-half-wrapper {
-	width: 100%;
-	height: 100%;
-	}
-}
 
-@media screen and (max-width: 1200px) {
-#hero-full {
-	width: 100%; /* correct */
-	height: 100%; /* correct */
-	padding: 0; /* correct */
-	display: table; /* correct */
-	position: relative; /* required to keep video background from escaping esp on mobile */
-	}
-}
-
-@media screen and (min-width: 1200px) {
-#hero-full {
-	width: 100%; /* correct */
-	height: 100%; /* correct */
-	padding: 0; /* correct */
-	display: table; /* correct */
-	position: relative; /* required to keep video background from escaping esp on mobile */
-	}
-}
-
-@media screen and (max-width: 1200px) {
-#hero-half {
-	width: 100%; /* correct */
-	height: 100%; /* correct */
-	padding: 0; /* correct */
-	display: table; /* correct */
-	position: relative; /* required to keep video background from escaping esp on mobile */
-	}
-}
-
-@media screen and (min-width: 1200px) {
-#hero-half {
-	width: 100%; /* correct */
-	height: 100%; /* correct */
-	padding: 0; /* correct */
-	display: table; /* correct */
-	position: relative; /* required to keep video background from escaping esp on mobile */
-	}
-}
+/* mini hero */
 
 @media screen and (max-width: 1200px) {
 #hero-mini {
