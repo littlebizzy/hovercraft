@@ -2,7 +2,7 @@
 Theme Name: HoverCraft
 Theme URI: https://www.littlebizzy.com/themes/hovercraft
 Description: No maintenance WordPress theme
-Version: 0.1.101
+Version: 0.1.102
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 License: GPLv3
@@ -1231,29 +1231,9 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 
 /* video background for full hero header */
 
-#hero-full-container video {
-	width: 100%;
-	height: 100%;
-	object-fit: cover; /** simulates background-size: cover */
-  	position: absolute;
-  	top: 0;
-  	left: 0;
-}
 
-#hero-full-container video::after {
-	width: 100%;
-  	height: 100%;
-  	position: absolute;
-  	top: 0;
-  	left: 0;
-  	content: '';
-	background: linear-gradient(60deg,
-    rgba(55, 71, 79, 0.7777485994397759) 30%,
-    rgba(255, 255, 255, 0) 100%);		
-	background-position: center center;
-	background-size: cover;
-	background-repeat: no-repeat;
-}
+/* hero main mini */
+
 
 @media screen and (max-width: 1200px) {
 .hero-main-mini {
