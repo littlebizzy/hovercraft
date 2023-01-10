@@ -1183,6 +1183,11 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 	vertical-align: middle;
 }
 
+.hero-full-main {
+	display: table-row; /* correct */
+	position: relative; /* required when using video background on splash-wide */
+}
+
 
 /* half hero */
 
@@ -1249,22 +1254,6 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
-}
-
-@media screen and (max-width: 1200px) {
-.hero-main {
-	padding: 0; /* 0 correct because ignored per table-row */
-	display: table-row; /* correct */
-	position: relative; /* required when using video background on splash-wide */
-	}
-}
-
-@media screen and (min-width: 1200px) {
-.hero-main {
-	padding: 0; /* 0 correct because ignored per table-row */
-	display: table-row; /* correct */
-	position: relative; /* required when using video background on splash-wide */
-	}
 }
 
 @media screen and (max-width: 1200px) {
