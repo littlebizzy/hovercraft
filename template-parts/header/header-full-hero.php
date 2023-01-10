@@ -1,8 +1,5 @@
 <div id="hero-full-container">
 	
-<div class="hero-full-wrapper">
-<div class="hero-full">
-
 <?php 
 	$url_hovercraft_video = wp_get_attachment_url(get_theme_mod('hovercraft_video'));
 	if (!empty($url_hovercraft_video)){ echo 
@@ -14,6 +11,9 @@
 <div id="header-full-hero">
 <?php get_template_part('template-parts/header/navigation'); ?>
 </div><!-- header-full-hero -->
+	
+<div class="hero-full-wrapper">
+<div class="hero-full">
 
 <div class="hero-main">
 <div class="inner">
