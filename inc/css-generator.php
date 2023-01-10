@@ -102,6 +102,34 @@ a:hover {
 	background-size: cover;
 	background-repeat: no-repeat;
 }
+
+video.hero-background-video {
+	width: 100%; /* correct */
+	height: 100%; /* correct */
+	object-fit: cover; /* simulates background-size: cover */
+  	position: absolute; /* correct */
+  	top: 0;
+  	left: 0;
+}
+
+.hero-background-video-overlay {
+	width: 100%; /* correct */
+	height: 100%; /* correct */
+	object-fit: cover; /* simulates background-size: cover */
+  	position: absolute; /* correct */
+  	top: 0;
+  	left: 0;
+	background: linear-gradient(<?php echo $hero_gradient_angle; ?>, <?php 
+		list($r1, $g1, $b1) = sscanf($hero_gradient_start_color, "#%02x%02x%02x");
+		echo "rgba({$r1}, {$g1}, {$b1}, {$hero_gradient_start_color_transparency})"; 
+		?> <?php echo $hero_gradient_start_color_length; ?>%, <?php 
+		list($r2, $g2, $b2) = sscanf($hero_gradient_stop_color, "#%02x%02x%02x");
+		echo "rgba({$r2}, {$g2}, {$b2}, {$hero_gradient_stop_color_transparency})"; 
+		?> <?php echo $hero_gradient_stop_color_length; ?>%);
+	background-position: top center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
 	
 .hero-half {
 	background: linear-gradient(<?php echo $hero_gradient_angle; ?>, <?php 
