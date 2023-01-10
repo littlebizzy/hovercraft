@@ -1231,7 +1231,7 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 
 /* video background for full hero header */
 
-#hero-full-wrapper video {
+#hero-full-container video {
 	width: 100%;
 	height: 100%;
 	object-fit: cover; /** simulates background-size: cover */
@@ -1240,7 +1240,7 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
   	left: 0;
 }
 
-#hero-full-wrapper video::after {
+#hero-full-container video::after {
 	width: 100%;
   	height: 100%;
   	position: absolute;
