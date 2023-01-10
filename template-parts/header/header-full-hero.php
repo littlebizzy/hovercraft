@@ -3,9 +3,9 @@
 <?php 
 	$url_hovercraft_video = wp_get_attachment_url(get_theme_mod('hovercraft_video'));
 	if (!empty($url_hovercraft_video)){ echo 
-		'<video playsinline autoplay muted loop poster="'.$url_header_image.'">
+		'<video class="hero-background-video" playsinline autoplay muted loop poster="'.$url_header_image.'">
     	<source src="'.$url_hovercraft_video.'" type="video/mp4">
-    	Your browser does not support the video tag.</video>';
+    	Your browser does not support the video tag.</video><div class="hero-background-video-overlay"></div>';
 	} ?>
 
 <div id="header-full-hero">
