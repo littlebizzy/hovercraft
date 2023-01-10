@@ -90,7 +90,7 @@ a:hover {
 	text-decoration: <?php echo $topbar_link_decoration; ?>;
 }
 
-.hero-full {
+#hero-full-container {
 	background: linear-gradient(<?php echo $hero_gradient_angle; ?>, <?php 
 		list($r1, $g1, $b1) = sscanf($hero_gradient_start_color, "#%02x%02x%02x");
 		echo "rgba({$r1}, {$g1}, {$b1}, {$hero_gradient_start_color_transparency})"; 
