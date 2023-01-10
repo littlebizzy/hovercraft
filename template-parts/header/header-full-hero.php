@@ -1,5 +1,5 @@
 <div id="hero-full-container">
-	
+
 <?php 
 	$url_hovercraft_video = wp_get_attachment_url(get_theme_mod('hovercraft_video'));
 	if (!empty($url_hovercraft_video)){ echo 
@@ -15,7 +15,7 @@
 <div class="hero-full-wrapper">
 <div class="hero-full">
 
-<div class="hero-main">
+<div class="hero-full-main">
 <div class="inner">
 	<?php if (is_front_page()) { ?>
 	<div class="welcome-wrapper">
@@ -69,7 +69,7 @@
 		
 	<div class="clear"></div>
 </div><!-- inner -->
-</div><!-- hero-main -->
+</div><!-- hero-full-main -->
 	
 </div><!-- hero-full -->
 </div><!-- hero-full-wrapper -->
