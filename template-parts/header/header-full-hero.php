@@ -1,5 +1,7 @@
-<div id="hero-full-wrapper">
-<div id="hero-full">
+<div id="hero-full-container">
+	
+<div class="hero-full-wrapper">
+<div class="hero-full">
 
 <?php 
 	$url_hovercraft_video = wp_get_attachment_url(get_theme_mod('hovercraft_video'));
@@ -11,8 +13,8 @@
 
 <div id="header-full-hero">
 <?php get_template_part('template-parts/header/navigation'); ?>
-</div>
-	
+</div><!-- header-full-hero -->
+
 <div class="hero-main">
 <div class="inner">
 	<?php if (is_front_page()) { ?>
@@ -65,9 +67,11 @@
 			
 	</div><!-- welcome-wrapper -->
 		
-<div class="clear"></div>
+	<div class="clear"></div>
 </div><!-- inner -->
 </div><!-- hero-main -->
 	
 </div><!-- hero-full -->
 </div><!-- hero-full-wrapper -->
+	
+</div><!-- hero-full-container -->
