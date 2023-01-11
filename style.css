@@ -1275,7 +1275,6 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 @media screen and (max-width: 1200px) {
 .cta-hero-primary ul li {
 	list-style-type: none;
-	width: 100%;
 	display: block;
 	margin: 0;
 	padding: 0;
@@ -1346,64 +1345,60 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 
 @media screen and (max-width: 1200px) {
 .cta-hero-secondary ul li {
-	font-size:16px;
-	font-weight:400;
-	list-style-type:none;
-	display:block;
-	padding:0px;
-	background:transparent;
-	border:1px solid #fff;
+	list-style-type: none;
+	display: block;
+	margin: 0;
+	padding: 0;
 	vertical-align: middle;
-	text-align:center;
-}
+	text-align: center;
+	}
 }
 
 @media screen and (min-width: 1200px) {
 .cta-hero-secondary ul li {
-	font-size:16px;
-	font-weight:400;
-	list-style-type:none;
-	display:inline-block;
-	padding:0px;
-	background:transparent;
-	border:1px solid #fff;
+	list-style-type: none;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
 	vertical-align: middle;
-	text-align:center;
-}
+	text-align: center;
+	}
 }
 
 @media screen and (max-width: 1200px) {
 .cta-hero-secondary ul li a {
+	width: 100%;
 	font-size: 20px;
+	font-weight: 400;
 	color: #fff;
 	padding: 10px 0px;
 	text-decoration: none;
 	display: block;
-	width: 100%;
+	background: transparent;
 	margin-bottom: 0;
 	border-radius: 5px;
-}
+	border: 1px solid #fff;
+	}
 }
 
 @media screen and (min-width: 1200px) {
 .cta-hero-secondary ul li a {
+	width: 200px;
 	font-size: 20px;
+	font-weight: 400;
 	color: #fff;
 	padding: 10px 0px;
 	text-decoration: none;
 	display: inline-block;
+	background: transparent;
 	border-radius: 5px;
-	width: 200px;
-}
-}
-
-.cta-hero-secondary ul li:hover {
-color:#263238;
-	background:#fff;
+	border: 1px solid #fff;
+	}
 }
 
 .cta-hero-secondary ul li:hover a {
-color:#263238;
+	color: #263238;
+	background: #ffffff;
 }
 
 
