@@ -1274,44 +1274,45 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 
 @media screen and (max-width: 1200px) {
 .cta-hero-primary ul li {
-	list-style-type:none;
-	display:block;
-	padding:0px;
-	border:1px solid transparent;
+	list-style-type: none;
+	width: 100%;
+	display: block;
+	margin: 0;
+	padding: 0;
 	vertical-align: middle;
-	text-align:center;
-	width:100%;
-}
+	text-align: center;
+	}
 }
 
 @media screen and (min-width: 1200px) {
 .cta-hero-primary ul li {
-	list-style-type:none;
-	display:inline-block;
-	padding:0px;
-	border:1px solid transparent;
+	list-style-type: none;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
 	vertical-align: middle;
-	text-align:center;
-}
+	text-align: center;
+	}
 }
 
 @media screen and (max-width: 1200px) {
 .cta-hero-primary ul li a {
+	width: 100%;
 	font-size: 20px;
 	font-weight: 700;
 	color: #fff;
 	padding: 10px 0px;
 	text-decoration: none;
 	display: block;
-	width: 100%;
 	background: #5C6BC0; /* correct indigo */
 	margin-bottom: 20px;
 	border-radius: 5px;
-}
+	}
 }
 
 @media screen and (min-width: 1200px) {
 .cta-hero-primary ul li a {
+	width: 200px;
 	font-size: 20px;
 	font-weight: 700;
 	color: #fff;
@@ -1320,12 +1321,11 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 	display: inline-block;
 	background: #5C6BC0; /* correct indigo */
 	border-radius: 5px;
-	width: 200px;
-}
+	}
 }
 
 .cta-hero-primary ul li a:hover {
-	background:#01579B;
+	background: #01579B;
 }
 
 
