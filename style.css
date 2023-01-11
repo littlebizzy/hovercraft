@@ -2,7 +2,7 @@
 Theme Name: HoverCraft
 Theme URI: https://www.littlebizzy.com/themes/hovercraft
 Description: No maintenance WordPress theme
-Version: 0.1.102
+Version: 0.1.103
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 License: GPLv3
@@ -896,19 +896,21 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 }
 
 .main-menu ul li {
-	display: inline-block;
 	list-style-type: none;
-	padding-left: 30px;
-	font-size: 18px;
- 	vertical-align: middle;
-	
-	transition: all .2s ease-in-out;
+	display: inline-block;
+	margin: 0;
+	padding: 0 0 0 30px;
+	vertical-align: middle;
+	text-align: center;
 }
 
-/* delete probably */
-.main-menu ul li a{
-        display: block; 
-      }
+.main-menu ul li a {
+	font-size: 18px;
+	font-weight: 700;
+	display: inline-block;
+	padding: 10px 0px;
+	text-decoration: none !important;
+}
 
 /* Fisrt Tier Dropdown */
 .main-menu ul ul li {
@@ -917,7 +919,6 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 	display: block;
 	text-align: left;
 }
-
 
 .main-menu ul ul ul {
             position: absolute; 
@@ -944,10 +945,6 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 	content: ''; 
 }
 
-.main-menu a {
-	display: block;
-}
-
 
 /* header primary cta */
 
@@ -959,8 +956,9 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 .cta-header-primary ul li {
 	list-style-type: none;
 	display: inline-block;
-	vertical-align: middle;
+	margin: 0;
 	padding: 0;
+	vertical-align: middle;
 	text-align: center;
 }
 
@@ -991,21 +989,19 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 #header-full-hero .cta-header-secondary ul li {
 	list-style-type: none;
 	display: inline-block;
-	vertical-align: middle;
+	margin: 0;
 	padding: 0;
-	border-radius: 5px;
-	border: 1px solid #ffffff;
-	text-align:center;
+	vertical-align: middle;
+	text-align: center;
 }
 
 #header-half-hero .cta-header-secondary ul li, #header-mini-hero .cta-header-secondary ul li, #header-basic .cta-header-secondary ul li {
 	list-style-type: none;
 	display: inline-block;
-	vertical-align: middle;
+	margin: 0;
 	padding: 0;
-	border-radius: 5px;
-	border: 1px solid #263238;
-	text-align:center;
+	vertical-align: middle;
+	text-align: center;
 }
 
 #header-full-hero .cta-header-secondary ul li a {
@@ -1016,6 +1012,8 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 	background: transparent;
 	text-decoration: none;
 	color: #ffffff;
+	border-radius: 5px;
+	box-shadow: inset 0px 0px 0px 1px #ffffff;
 }
 
 #header-half-hero .cta-header-secondary ul li a, #header-mini-hero .cta-header-secondary ul li a, #header-basic .cta-header-secondary ul li a {
@@ -1026,6 +1024,8 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 	background: transparent;
 	text-decoration: none;
 	color: #263238;
+	border-radius: 5px;
+	box-shadow: inset 0px 0px 0px 1px #263238;
 }
 
 #header-full-hero .cta-header-secondary ul li a:hover {
@@ -1088,20 +1088,24 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 }
 
 
-/* search */
+/* search icon */
 
 .search-icon-wrapper {
-	display:inline-block;
-	text-align:right;
-	padding-left:30px;
- 	vertical-align: middle;
+	display: inline-block;
+	margin: 0;
+	padding: 0 0 0 30px;
+	vertical-align: middle;
+	text-align: center;
 }
 
 .search-icon-wrapper i {
-	text-decoration:none;
-	font-size:24px;
-	padding:0px;
+	text-decoration: none;
+	font-size: 24px;
+	padding: 10px 0px;
 }
+
+
+/* search bar */
 
 .searchinput {
 	width: 100%;
@@ -1377,7 +1381,7 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 	background: transparent;
 	margin-bottom: 0;
 	border-radius: 5px;
-	border: 1px solid #fff;
+	box-shadow: inset 0px 0px 0px 1px #ffffff;
 	}
 }
 
@@ -1392,7 +1396,7 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 	display: inline-block;
 	background: transparent;
 	border-radius: 5px;
-	border: 1px solid #fff;
+	box-shadow: inset 0px 0px 0px 1px #ffffff;
 	}
 }
 
