@@ -2,7 +2,7 @@
 Theme Name: HoverCraft
 Theme URI: https://www.littlebizzy.com/themes/hovercraft
 Description: No maintenance WordPress theme
-Version: 0.1.105
+Version: 0.1.106
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 License: GPLv3
@@ -294,17 +294,6 @@ pre {
 /* buttons */
 
 button {
-	font-size: 16px;
-	font-weight: 400;
-	padding: 10px 20px;
-	text-decoration: none;
-	background: #ECEFF1;
-	border-radius: 5px;
-	border: 0;
-	cursor: pointer;
-}
-
-input[type="submit"] {
 	font-size: 16px;
 	font-weight: 400;
 	padding: 10px 20px;
@@ -2216,6 +2205,42 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 
 
 /* woocommerce */
+
+.woocommerce-result-count {
+	font-size: 16px;
+	font-weight: 600;
+}
+
+ul.products {
+	margin: 0px !important;
+	padding: 30px 0 0 0 !important;
+}
+
+select {
+	width: 100%;
+	font-size: 16px;
+	font-weight: 400;
+	display: inline-block;
+	padding: 10px 47px 10px 20px;
+	background: #ffffff;
+	border-radius: 5px;
+	border: 0;
+	box-shadow: inset 0px 0px 0px 1px #263238;
+	background: transparent;
+	outline: none;
+	appearance: none;
+}
+
+.woocommerce-ordering:after {
+  	position: absolute;
+  	right: 20px;
+  	top: 50%;
+	margin-top: -17px;
+  	pointer-events: none;
+	font-family: "Material Icons";
+	font-size: 24px;
+	content: ' \e5cf';
+}
 
 .price {
 	font-size: 24px !important;
