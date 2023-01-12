@@ -252,6 +252,23 @@ video.hero-background-video {
 	color: <?php echo $copyright_link_color; ?>;
 	text-decoration: <?php echo $copyright_link_decoration; ?>;
 }
+
+input[type="submit"] {
+	width: 100%;
+	font-size: 18px;
+	font-weight: 600;
+	display: inline-block;
+	padding: 10px 20px !important;
+	background: <?php echo $default_link_color; ?>;
+	text-decoration: none;
+	color: #ffffff;
+	border-radius: 5px;
+	cursor: pointer;
+}
+	
+input[type="submit"]:hover {
+	background: <?php echo $default_hover_color; ?>;
+}
 </style>
 
 <?php }
