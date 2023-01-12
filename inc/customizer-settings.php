@@ -931,7 +931,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 	
 // hero gradient start color length setting
 $wp_customize->add_setting( 'hovercraft_hero_gradient_start_color_length', array(
-    'default'    => '30%',
+    'default'    => '30',
 	'sanitize_callback' => 'absint',
 	) 
 );
@@ -974,7 +974,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 	
 // hero gradient stop color length setting
 $wp_customize->add_setting( 'hovercraft_hero_gradient_stop_color_length', array(
-    'default'    => '100%',
+    'default'    => '100',
 	'sanitize_callback' => 'absint',
 	) 
 );
