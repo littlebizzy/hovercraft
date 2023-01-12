@@ -252,6 +252,18 @@ video.hero-background-video {
 	color: <?php echo $copyright_link_color; ?>;
 	text-decoration: <?php echo $copyright_link_decoration; ?>;
 }
+	
+input[type="text"], input[type="email"] {
+	width: 100%;
+	font-size: 18px;
+	font-weight: 400;
+	display: inline-block;
+	padding: 10px 20px !important;
+	background: #ffffff;
+	border-radius: 5px;
+	border: 0;
+	box-shadow: inset 0px 0px 0px 1px #263238;
+}
 
 input[type="submit"] {
 	width: 100%;
