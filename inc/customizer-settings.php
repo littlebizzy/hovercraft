@@ -79,6 +79,31 @@ $wp_customize->add_control(
     )
 );
 
+// main begin widget display setting
+$wp_customize->add_setting( 'hovercraft_main_begin_widget_display', array(
+    'default'    => 'full_and_half_hero',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// main begin widget display control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_main_begin_widget_display',
+        array(
+            'label'     => __('Main Begin widget display', 'hovercraft'),
+			'description' => __( 'Where do you want the Main Begin widget to display when enabled?', 'hovercraft' ),
+            'section'   => 'hovercraft_general',
+            'settings'  => 'hovercraft_main_begin_widget_display',
+            'type'      => 'select',
+			'choices' => array(
+        		'full_hero_only' => 'Full Hero only',
+        		'full_and_half_hero' => 'Full &amp; Half Hero',
+        		'full_and_half_and_mini_hero' => 'Full &amp; Half &amp; Mini Hero',
+    			)
+        )
+) );
+
 // default text color setting
 $wp_customize->add_setting( 'hovercraft_default_text_color', array(
 	'default' => '#263238',
