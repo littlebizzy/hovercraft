@@ -1,4 +1,4 @@
-<?php /* Template Name: Half Hero Tiles */ ?>
+<?php /* Template Name: Half Hero (Tiles) */ ?>
 <?php get_template_part( 'header' ); ?>
 <?php get_template_part( 'template-parts/header/header-half-hero' ); ?>
 
