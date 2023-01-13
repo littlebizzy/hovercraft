@@ -103,6 +103,36 @@ $wp_customize->add_control( new WP_Customize_Control(
     			)
         )
 ) );
+	
+// general options section
+$wp_customize->add_section( 'hovercraft_fonts', array(
+    'title'      => 'Fonts',
+    'priority'   => 43,
+) );
+
+// site name font setting
+$wp_customize->add_setting( 'hovercraft_site_name_font', array(
+    'default'    => 'noto_sans',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// site name font control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_site_name_font',
+        array(
+            'label'     => __('Site Name font family', 'hovercraft'),
+			'description' => __( 'What Google Fonts family to use for the site name?', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_site_name_font',
+            'type'      => 'select',
+			'choices' => array(
+        		'noto_sans' => 'Noto Sans',
+        		'open_sans' => 'Open Sans',
+    			)
+        )
+) );
 
 // default text color setting
 $wp_customize->add_setting( 'hovercraft_default_text_color', array(
@@ -809,8 +839,8 @@ $wp_customize->add_control( new WP_Customize_Control(
 
 // hero styling section
 $wp_customize->add_section( 'hovercraft_hero_styling', array(
-    'title'      => 'Hero Styling',
-    'priority'   => 105,
+    'title'      => 'Hero Gradient',
+    'priority'   => 87,
 ) );
 
 // hero content width (desktop) setting
