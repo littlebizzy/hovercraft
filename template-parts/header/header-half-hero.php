@@ -1,32 +1,35 @@
-<div id="hero-half-wrapper">
-<div id="hero-half">
-
+<div id="hero-half-container">
+	
 <div id="header-half-hero">
 <?php get_template_part('template-parts/header/navigation'); ?>
-</div>
+</div><!-- header-half-hero -->
+
+
+<div class="hero-half-wrapper">
+<div class="hero-half">
 	
-<div class="hero-main">
-<div class="inner">
+	<div class="inner">
+		
 	<?php if (is_front_page()) { ?>
-	<div class="welcome-wrapper">
+		<div class="welcome-wrapper">
 	<?php } else { ?>
 		<div class="title-wrapper">
 	<?php } ?>
+			
 		<h1 class="half-hero-title"><?php single_post_title(); ?></h1>
 			
 		<?php if (is_front_page()) : ?>
-		<div class="welcome-text">
-			<?php if ( has_excerpt() ) { ?>
-					<div class="full-hero-snippet">
-			 			<?php the_excerpt(); ?>
-					</div><!--full-hero-snippet -->
-				<?php } elseif ( is_active_sidebar( 'hovercraft_hero_snippet' ) ) { ?>
-					<div class="full-hero-snippet">
-						<?php add_filter( 'widget_title' , 'my_widget_title', 10, 1 );
-							dynamic_sidebar( 'hovercraft_hero_snippet' ); remove_filter( 'widget_title', 'my_widget_title' ); ?>
-				</div><!--full-hero-snippet -->
-				<?php } ?>
-		</div><!-- welcome-text -->
+		
+			<?php if ( is_active_sidebar( 'hovercraft_hero_snippet' ) || has_excerpt() ) : ?>
+				<div class="hero-snippet">
+					<?php if ( is_active_sidebar( 'hovercraft_hero_snippet' ) ) {
+						add_filter( 'widget_title' , 'my_widget_title', 10, 1 );
+							dynamic_sidebar( 'hovercraft_hero_snippet' ); remove_filter( 'widget_title', 'my_widget_title' );
+					} else the_excerpt();
+					?>
+				</div><!-- hero-snippet -->
+			<?php endif; ?>
+			
 		<?php endif; ?><!-- is_front_page -->
 	
 		<?php if (is_front_page()) : ?>
@@ -58,9 +61,10 @@
 			
 	</div><!-- welcome-wrapper -->
 		
-<div class="clear"></div>
-</div><!-- inner -->
-</div><!-- hero-main -->
-	
+	<div class="clear"></div>
+	</div><!-- inner -->
+
 </div><!-- hero-half -->
 </div><!-- hero-half-wrapper -->
+
+</div><!-- hero-half-container -->

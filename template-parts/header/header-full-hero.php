@@ -1,19 +1,21 @@
-<div id="hero-full-wrapper">
-<div id="hero-full">
+<div id="hero-full-container">
 
 <?php 
 	$url_hovercraft_video = wp_get_attachment_url(get_theme_mod('hovercraft_video'));
 	if (!empty($url_hovercraft_video)){ echo 
-		'<video playsinline autoplay muted loop poster="'.$url_header_image.'">
+		'<video class="hero-background-video" playsinline autoplay muted loop poster="'.$url_header_image.'">
     	<source src="'.$url_hovercraft_video.'" type="video/mp4">
-    	Your browser does not support the video tag.</video>';
+    	Your browser does not support the video tag.</video><div class="hero-background-video-overlay"></div>';
 	} ?>
 
 <div id="header-full-hero">
 <?php get_template_part('template-parts/header/navigation'); ?>
-</div>
+</div><!-- header-full-hero -->
 	
-<div class="hero-main">
+<div class="hero-full-wrapper">
+<div class="hero-full">
+
+<div class="hero-full-main">
 <div class="inner">
 	<?php if (is_front_page()) { ?>
 	<div class="welcome-wrapper">
@@ -23,18 +25,17 @@
 		<h1 class="full-hero-title"><?php single_post_title(); ?></h1>
 			
 		<?php if (is_front_page()) : ?>
-		<div class="welcome-text">
-			<?php if ( has_excerpt() ) { ?>
-					<div class="full-hero-snippet">
-			 			<?php the_excerpt(); ?>
-					</div><!--full-hero-snippet -->
-				<?php } elseif ( is_active_sidebar( 'hovercraft_hero_snippet' ) ) { ?>
-					<div class="full-hero-snippet">
-						<?php add_filter( 'widget_title' , 'my_widget_title', 10, 1 );
-							dynamic_sidebar( 'hovercraft_hero_snippet' ); remove_filter( 'widget_title', 'my_widget_title' ); ?>
-				</div><!--full-hero-snippet -->
-				<?php } ?>
-		</div><!-- welcome-text -->
+		
+			<?php if ( is_active_sidebar( 'hovercraft_hero_snippet' ) || has_excerpt() ) : ?>
+				<div class="hero-snippet">
+					<?php if ( is_active_sidebar( 'hovercraft_hero_snippet' ) ) {
+						add_filter( 'widget_title' , 'my_widget_title', 10, 1 );
+							dynamic_sidebar( 'hovercraft_hero_snippet' ); remove_filter( 'widget_title', 'my_widget_title' );
+					} else the_excerpt();
+					?>
+				</div><!-- hero-snippet -->
+			<?php endif; ?>
+			
 		<?php endif; ?><!-- is_front_page -->
 	
 		<?php if (is_front_page()) : ?>
@@ -66,9 +67,11 @@
 			
 	</div><!-- welcome-wrapper -->
 		
-<div class="clear"></div>
+	<div class="clear"></div>
 </div><!-- inner -->
-</div><!-- hero-main -->
+</div><!-- hero-full-main -->
 	
 </div><!-- hero-full -->
 </div><!-- hero-full-wrapper -->
+	
+</div><!-- hero-full-container -->

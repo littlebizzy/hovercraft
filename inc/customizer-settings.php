@@ -79,6 +79,61 @@ $wp_customize->add_control(
     )
 );
 
+// main begin widget display setting
+$wp_customize->add_setting( 'hovercraft_main_begin_widget_display', array(
+    'default'    => 'full_and_half_hero',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// main begin widget display control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_main_begin_widget_display',
+        array(
+            'label'     => __('Main Begin widget display', 'hovercraft'),
+			'description' => __( 'Where do you want the Main Begin widget to display when enabled?', 'hovercraft' ),
+            'section'   => 'hovercraft_general',
+            'settings'  => 'hovercraft_main_begin_widget_display',
+            'type'      => 'select',
+			'choices' => array(
+        		'full_hero_only' => 'Full Hero only',
+        		'full_and_half_hero' => 'Full &amp; Half Hero',
+        		'full_and_half_and_mini_hero' => 'Full &amp; Half &amp; Mini Hero',
+    			)
+        )
+) );
+	
+// general options section
+$wp_customize->add_section( 'hovercraft_fonts', array(
+    'title'      => 'Fonts',
+    'priority'   => 43,
+) );
+
+// site name font setting
+$wp_customize->add_setting( 'hovercraft_site_name_font', array(
+    'default'    => 'noto_sans',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// site name font control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_site_name_font',
+        array(
+            'label'     => __('Site Name font family', 'hovercraft'),
+			'description' => __( 'What Google Fonts family to use for the site name?', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_site_name_font',
+            'type'      => 'select',
+			'choices' => array(
+        		'noto_sans' => 'Noto Sans',
+        		'open_sans' => 'Open Sans',
+    			)
+        )
+) );
+
 // default text color setting
 $wp_customize->add_setting( 'hovercraft_default_text_color', array(
 	'default' => '#263238',
@@ -784,8 +839,8 @@ $wp_customize->add_control( new WP_Customize_Control(
 
 // hero styling section
 $wp_customize->add_section( 'hovercraft_hero_styling', array(
-    'title'      => 'Hero Styling',
-    'priority'   => 105,
+    'title'      => 'Hero Gradient',
+    'priority'   => 87,
 ) );
 
 // hero content width (desktop) setting
@@ -831,10 +886,16 @@ $wp_customize->add_control( new WP_Customize_Control(
             'settings'  => 'hovercraft_hero_gradient_angle',
             'type'      => 'select',
 			'choices' => array(
+				'0deg' => '0 Degrees',
         		'45deg' => '45 Degrees',
         		'60deg' => '60 Degrees',
         		'90deg' => '90 Degrees',
         		'120deg' => '120 Degrees',
+				'135deg' => '135 Degrees',
+				'180deg' => '180 Degrees',
+				'225deg' => '225 Degrees',
+				'270deg' => '270 Degrees',
+				'315deg' => '315 Degrees',
     			)
         )
 ) );
@@ -842,7 +903,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 // hero gradient start color transparency setting
 $wp_customize->add_setting( 'hovercraft_hero_gradient_start_color_transparency', array(
     'default'    => '0.50',
-	'sanitize_callback' => 'hovercraft_sanitize_select',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
 	) 
 );
 
@@ -857,13 +918,26 @@ $wp_customize->add_control( new WP_Customize_Control(
             'settings'  => 'hovercraft_hero_gradient_start_color_transparency',
             'type'      => 'select',
 			'choices' => array(
-        		'0.10' => '10%',
-				'0.15' => '15%',
-				'0.20' => '20%',
-        		'0.25' => '25%',
-        		'0.50' => '50%',
-        		'0.75' => '75%',
-        		'1.0' => '100%',
+        		'0.0' => '0.00',
+        		'0.10' => '0.10',
+				'0.15' => '0.15',
+				'0.20' => '0.20',
+        		'0.25' => '0.25',
+				'0.30' => '0.30',
+				'0.35' => '0.35',
+				'0.40' => '0.40',
+				'0.45' => '0.45',
+        		'0.50' => '0.50',
+				'0.55' => '0.55',
+				'0.60' => '0.60',
+				'0.65' => '0.65',
+				'0.70' => '0.70',
+        		'0.75' => '0.75',
+				'0.80' => '0.80',
+				'0.85' => '0.85',
+				'0.90' => '0.90',
+				'0.95' => '0.95',
+        		'1.0' => '1.00',
     			)
         )
 ) );
@@ -871,7 +945,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 // hero gradient stop color transparency setting
 $wp_customize->add_setting( 'hovercraft_hero_gradient_stop_color_transparency', array(
     'default'    => '0.50',
-	'sanitize_callback' => 'hovercraft_sanitize_select',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
 	) 
 );
 
@@ -886,21 +960,34 @@ $wp_customize->add_control( new WP_Customize_Control(
             'settings'  => 'hovercraft_hero_gradient_stop_color_transparency',
             'type'      => 'select',
 			'choices' => array(
-				'0.10' => '10%',
-				'0.15' => '15%',
-				'0.20' => '20%',
-        		'0.25' => '25%',
-        		'0.50' => '50%',
-        		'0.75' => '75%',
-        		'1.0' => '100%',
+				'0.0' => '0.00',
+        		'0.10' => '0.10',
+				'0.15' => '0.15',
+				'0.20' => '0.20',
+        		'0.25' => '0.25',
+				'0.30' => '0.30',
+				'0.35' => '0.35',
+				'0.40' => '0.40',
+				'0.45' => '0.45',
+        		'0.50' => '0.50',
+				'0.55' => '0.55',
+				'0.60' => '0.60',
+				'0.65' => '0.65',
+				'0.70' => '0.70',
+        		'0.75' => '0.75',
+				'0.80' => '0.80',
+				'0.85' => '0.85',
+				'0.90' => '0.90',
+				'0.95' => '0.95',
+        		'1.0' => '1.00',
     			)
         )
 ) );
 	
 // hero gradient start color length setting
 $wp_customize->add_setting( 'hovercraft_hero_gradient_start_color_length', array(
-    'default'    => '30%',
-	'sanitize_callback' => 'hovercraft_sanitize_select',
+    'default'    => '30',
+	'sanitize_callback' => 'absint',
 	) 
 );
 
@@ -915,24 +1002,35 @@ $wp_customize->add_control( new WP_Customize_Control(
             'settings'  => 'hovercraft_hero_gradient_start_color_length',
             'type'      => 'select',
 			'choices' => array(
-				'10%' => '10%',
-				'15%' => '15%',
-				'20%' => '20%',
-        		'25%' => '25%',
-				'30%' => '30%',
-				'40%' => '40%',
-        		'50%' => '50%',
-				'60%' => '60%',
-        		'75%' => '75%',
-        		'100%' => '100%',
+				'0' => '0%',
+				'5' => '5%',
+				'10' => '10%',
+				'15' => '15%',
+				'20' => '20%',
+        		'25' => '25%',
+				'30' => '30%',
+				'35' => '35%',
+				'40' => '40%',
+				'45' => '45%',
+        		'50' => '50%',
+				'55' => '55%',
+				'60' => '60%',
+				'65' => '65%',
+				'70' => '70%',
+        		'75' => '75%',
+				'80' => '80%',
+				'85' => '85%',
+				'90' => '90%',
+				'95' => '95%',
+        		'100' => '100%',
     			)
         )
 ) );
 	
 // hero gradient stop color length setting
 $wp_customize->add_setting( 'hovercraft_hero_gradient_stop_color_length', array(
-    'default'    => '100%',
-	'sanitize_callback' => 'hovercraft_sanitize_select',
+    'default'    => '100',
+	'sanitize_callback' => 'absint',
 	) 
 );
 
@@ -947,16 +1045,27 @@ $wp_customize->add_control( new WP_Customize_Control(
             'settings'  => 'hovercraft_hero_gradient_stop_color_length',
             'type'      => 'select',
 			'choices' => array(
-				'10%' => '10%',
-				'15%' => '15%',
-				'20%' => '20%',
-        		'25%' => '25%',
-				'30%' => '30%',
-				'40%' => '40%',
-        		'50%' => '50%',
-				'60%' => '60%',
-        		'75%' => '75%',
-        		'100%' => '100%',
+				'0' => '0%',
+				'5' => '5%',
+				'10' => '10%',
+				'15' => '15%',
+				'20' => '20%',
+        		'25' => '25%',
+				'30' => '30%',
+				'35' => '35%',
+				'40' => '40%',
+				'45' => '45%',
+        		'50' => '50%',
+				'55' => '55%',
+				'60' => '60%',
+				'65' => '65%',
+				'70' => '70%',
+        		'75' => '75%',
+				'80' => '80%',
+				'85' => '85%',
+				'90' => '90%',
+				'95' => '95%',
+        		'100' => '100%',
     			)
         )
 ) );
@@ -992,5 +1101,11 @@ function hovercraft_sanitize_checkbox( $input ){
 	return ( isset( $input ) ? true : false );
 }
 
+// sanitize float function
+function hovercraft_sanitize_float( $input ){
+	return filter_var($input, FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
+}
+
 // https://themeshaper.com/2013/04/29/validation-sanitization-in-customizer/
 // https://divpusher.com/blog/wordpress-customizer-sanitization-examples/
+// https://wordpress.stackexchange.com/questions/225825/customizer-sanitize-callback-for-input-type-number

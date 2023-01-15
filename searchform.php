@@ -1,9 +1,5 @@
-<form role="search" method="get" id="searchform"
-	class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-	<div>
-		<label class="screen-reader-text" for="s"><?php _x( 'Search for:', 'label' ); ?></label>
-		<input type="text" value="<?php echo get_search_query(); ?>" name="s" id="s" />
-		<input type="submit" id="searchsubmit"
-			value="<?php echo esc_attr_x( 'Search', 'submit button' ); ?>" />
-	</div>
-</form>
+<form role="search" method="get" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+	<div class="searchform-items">
+		<input type="search" class="searchinput" value="<?php echo esc_attr( get_search_query() ); ?>" name="s" placeholder="<?php if ( class_exists( 'WooCommerce' ) ) { echo "Search entire store..."; } else { echo "Search entire site..."; } ?>" />
+	</div><!-- searchform-items -->
+</form><!-- searchform -->

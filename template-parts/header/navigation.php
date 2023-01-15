@@ -21,7 +21,7 @@
         	}
         	?>
 			<?php if ( get_theme_mod( 'hovercraft_search' ) == 1 ) { ?>
-				<div class="search"><a href="#"><i class="material-icons search">search</i></a></div>
+				<div class="search-icon-wrapper"><i class="material-icons search">search</i></div><!-- search-icon-wrapper -->
 			<?php } ?>
 			<?php if ( class_exists( 'WooCommerce' ) ) { ?>
 			<div class="cart"><a href="/cart/"><i class="material-icons cart">shopping_cart</i></a><div class="notification-dot"><?php echo WC()->cart->get_cart_contents_count(); ?><div class="clear"></div></div></div>

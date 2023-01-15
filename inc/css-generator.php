@@ -3,6 +3,7 @@
 // css from customizer
 function hovercraft_generate_css(){
 	
+	$url_hero_video = wp_get_attachment_url( get_theme_mod( 'hovercraft_video' ) ); 
 	$url_header_image = esc_url( get_header_image() );
 	
 	if (isset( $post->ID )) {
@@ -18,8 +19,8 @@ function hovercraft_generate_css(){
 	$hero_gradient_angle = get_theme_mod( 'hovercraft_hero_gradient_angle', '60deg' );
 	$hero_gradient_start_color_transparency = get_theme_mod( 'hovercraft_hero_gradient_start_color_transparency', '0.50' );
 	$hero_gradient_stop_color_transparency = get_theme_mod( 'hovercraft_hero_gradient_stop_color_transparency', '0.50' );
-	$hero_gradient_start_color_length = get_theme_mod( 'hovercraft_hero_gradient_start_color_length', '30%' );
-	$hero_gradient_stop_color_length = get_theme_mod( 'hovercraft_hero_gradient_stop_color_length', '100%' );
+	$hero_gradient_start_color_length = get_theme_mod( 'hovercraft_hero_gradient_start_color_length', '30' );
+	$hero_gradient_stop_color_length = get_theme_mod( 'hovercraft_hero_gradient_stop_color_length', '100' );
 	$hero_content_width_desktop = get_theme_mod( 'hovercraft_hero_content_width_desktop', '900px' );
 	$default_text_color = get_theme_mod( 'hovercraft_default_text_color', '#263238' );
 	$default_link_color = get_theme_mod( 'hovercraft_default_link_color', '#5C6BC0' );
@@ -93,28 +94,56 @@ a:hover {
 	text-decoration: <?php echo $topbar_link_decoration; ?>;
 }
 
-#hero-full {
+#hero-full-container {
 	background: linear-gradient(<?php echo $hero_gradient_angle; ?>, <?php 
 		list($r1, $g1, $b1) = sscanf($hero_gradient_start_color, "#%02x%02x%02x");
-		echo "rgba($r1, $g1, $b1, $hero_gradient_start_color_transparency)"; 
-		?> <?php echo $hero_gradient_start_color_length; ?>, <?php 
+		echo "rgba({$r1}, {$g1}, {$b1}, {$hero_gradient_start_color_transparency})"; 
+		?> <?php echo $hero_gradient_start_color_length; ?>%, <?php 
 		list($r2, $g2, $b2) = sscanf($hero_gradient_stop_color, "#%02x%02x%02x");
-		echo "rgba($r2, $g2, $b2, $hero_gradient_stop_color_transparency)"; 
-		?> <?php echo $hero_gradient_stop_color_length; ?>), url(<?php echo $hero_image; ?>);
+		echo "rgba({$r2}, {$g2}, {$b2}, {$hero_gradient_stop_color_transparency})"; 
+		?> <?php echo $hero_gradient_stop_color_length; ?>%)<?php if (!empty( $hero_image )) echo ", url( '. $hero_image .' )" ?>;
 	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
-	
-#hero-half {
+
+video.hero-background-video {
+	width: 100%; /* correct */
+	height: 100%; /* correct */
+	object-fit: cover; /* simulates background-size: cover */
+  	position: absolute; /* correct */
+  	top: 0;
+  	left: 0;
+}
+
+.hero-background-video-overlay {
+	width: 100%; /* correct */
+	height: 100%; /* correct */
+	object-fit: cover; /* simulates background-size: cover */
+  	position: absolute; /* correct */
+  	top: 0;
+  	left: 0;
 	background: linear-gradient(<?php echo $hero_gradient_angle; ?>, <?php 
 		list($r1, $g1, $b1) = sscanf($hero_gradient_start_color, "#%02x%02x%02x");
-		echo "rgba($r1, $g1, $b1, $hero_gradient_start_color_transparency)"; 
-		?> <?php echo $hero_gradient_start_color_length; ?>, <?php 
+		echo "rgba({$r1}, {$g1}, {$b1}, {$hero_gradient_start_color_transparency})"; 
+		?> <?php echo $hero_gradient_start_color_length; ?>%, <?php 
 		list($r2, $g2, $b2) = sscanf($hero_gradient_stop_color, "#%02x%02x%02x");
-		echo "rgba($r2, $g2, $b2, $hero_gradient_stop_color_transparency)"; 
-		?> <?php echo $hero_gradient_stop_color_length; ?>), url(<?php echo $hero_image; ?>);
-	background-position: center center;
+		echo "rgba({$r2}, {$g2}, {$b2}, {$hero_gradient_stop_color_transparency})"; 
+		?> <?php echo $hero_gradient_stop_color_length; ?>%);
+	background-position: top center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+	
+.hero-half {
+	background: linear-gradient(<?php echo $hero_gradient_angle; ?>, <?php 
+		list($r1, $g1, $b1) = sscanf($hero_gradient_start_color, "#%02x%02x%02x");
+		echo "rgba({$r1}, {$g1}, {$b1}, {$hero_gradient_start_color_transparency})"; 
+		?> <?php echo $hero_gradient_start_color_length; ?>%, <?php 
+		list($r2, $g2, $b2) = sscanf($hero_gradient_stop_color, "#%02x%02x%02x");
+		echo "rgba({$r2}, {$g2}, {$b2}, {$hero_gradient_stop_color_transparency})"; 
+		?> <?php echo $hero_gradient_stop_color_length; ?>%)<?php if (!empty( $hero_image )) echo ", url( '. $hero_image .' )" ?>;
+	background-position: top center;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -122,11 +151,24 @@ a:hover {
 #hero-mini {
 	background: linear-gradient(<?php echo $hero_gradient_angle; ?>, <?php 
 		list($r1, $g1, $b1) = sscanf($hero_gradient_start_color, "#%02x%02x%02x");
-		echo "rgba($r1, $g1, $b1, $hero_gradient_start_color_transparency)"; 
-		?> <?php echo $hero_gradient_start_color_length; ?>, <?php 
+		echo "rgba({$r1}, {$g1}, {$b1}, {$hero_gradient_start_color_transparency})"; 
+		?> <?php echo $hero_gradient_start_color_length; ?>%, <?php 
 		list($r2, $g2, $b2) = sscanf($hero_gradient_stop_color, "#%02x%02x%02x");
-		echo "rgba($r2, $g2, $b2, $hero_gradient_stop_color_transparency)"; 
-		?> <?php echo $hero_gradient_stop_color_length; ?>), url(<?php echo $hero_image; ?>);
+		echo "rgba({$r2}, {$g2}, {$b2}, {$hero_gradient_stop_color_transparency})"; 
+		?> <?php echo $hero_gradient_stop_color_length; ?>%)<?php if (!empty( $hero_image )) echo ", url( '. $hero_image .' )" ?>;
+	background-position: center center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+	
+.hero-main-mini {
+	background: linear-gradient(<?php echo $hero_gradient_angle; ?>, <?php 
+		list($r1, $g1, $b1) = sscanf($hero_gradient_start_color, "#%02x%02x%02x");
+		echo "rgba({$r1}, {$g1}, {$b1}, {$hero_gradient_start_color_transparency})"; 
+		?> <?php echo $hero_gradient_start_color_length; ?>%, <?php 
+		list($r2, $g2, $b2) = sscanf($hero_gradient_stop_color, "#%02x%02x%02x");
+		echo "rgba({$r2}, {$g2}, {$b2}, {$hero_gradient_stop_color_transparency})"; 
+		?> <?php echo $hero_gradient_stop_color_length; ?>%), url(<?php echo $hero_image; ?>);
 	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -142,6 +184,20 @@ a:hover {
 
 #header-basic {
 	background: <?php echo $header_basic_background_color; ?>;
+}
+	
+.cta-header-primary ul li a {
+	font-size: 18px;
+	font-weight: 700;
+	display: inline-block;
+	padding: 10px 20px;
+	background: <?php echo $default_link_color; ?>;
+	text-decoration: none !important;
+	border-radius: 5px;
+}
+
+.cta-header-primary ul li a:hover {
+	background: <?php echo $default_hover_color; ?>;
 }
 
 @media screen and (min-width: 1200px) {
@@ -198,6 +254,35 @@ a:hover {
 #copyright a {
 	color: <?php echo $copyright_link_color; ?>;
 	text-decoration: <?php echo $copyright_link_decoration; ?>;
+}
+	
+input[type="text"], input[type="email"] {
+	width: 100%;
+	font-size: 18px;
+	font-weight: 400;
+	display: inline-block;
+	padding: 10px 20px !important;
+	background: #ffffff;
+	border-radius: 5px;
+	border: 0;
+	box-shadow: inset 0px 0px 0px 1px #263238;
+}
+
+input[type="submit"] {
+	width: 100%;
+	font-size: 18px;
+	font-weight: 600;
+	display: inline-block;
+	padding: 10px 20px !important;
+	background: <?php echo $default_link_color; ?>;
+	text-decoration: none;
+	color: #ffffff;
+	border-radius: 5px;
+	cursor: pointer;
+}
+	
+input[type="submit"]:hover {
+	background: <?php echo $default_hover_color; ?>;
 }
 </style>
 
