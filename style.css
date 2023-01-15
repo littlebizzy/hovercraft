@@ -1104,14 +1104,28 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 
 /* search bar */
 
+@media screen and (max-width: 1200px) {
 .searchinput {
 	width: 100%;
 	line-height: 2;
 	padding: 0px 10px;
 	font-size: 16px;
-	background: #ECEFF1;
+	background: #ffffff;
 	border: 0;
 	border-radius: 5px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+.searchinput {
+	width: 100%;
+	line-height: 2.5;
+	padding: 0px 10px;
+	font-size: 18px;
+	background: #ffffff;
+	border: 0;
+	border-radius: 5px;
+	}
 }
 
 .searchinput::placeholder {
