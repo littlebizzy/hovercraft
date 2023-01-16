@@ -39,7 +39,7 @@
 	</div><!-- content -->
 
 	<div class="last-modified">
-		<?php echo "<span>Last modified on "; the_modified_time('F j, Y'); echo "</span>"; ?>
+		<span> <?php _e('Last modified on ', 'hovercraft'); echo the_modified_time('F j, Y'); ?> </span>
 	</div><!-- last-modified -->
 	
 	<?php comments_template(); ?> 
