@@ -66,3 +66,9 @@ add_post_type_support( 'page', 'excerpt' );
 // rss feeds meta
 add_theme_support( 'automatic-feed-links' );
 
+//Internationalization
+function my_theme_load_theme_textdomain() {
+    load_theme_textdomain( 'hovercraft', get_template_directory() . '/languages' );
+}
+add_action( 'after_setup_theme', 'my_theme_load_theme_textdomain' );
+
