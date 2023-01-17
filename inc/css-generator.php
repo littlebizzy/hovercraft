@@ -5,7 +5,7 @@ function hovercraft_generate_css(){
 	
 	$url_hero_video = wp_get_attachment_url( get_theme_mod( 'hovercraft_video' ) ); 
 	$url_header_image = esc_url( get_header_image() );
-	$url_featured_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' ); 
+	$url_featured_image = wp_get_attachment_url( get_post_thumbnail_id(), 'large' ); 
 	
 	if (!empty( $url_featured_image )) { 
 		$hero_image = $url_featured_image; 
