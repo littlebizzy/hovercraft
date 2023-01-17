@@ -98,7 +98,7 @@ a:hover {
 		?> <?php echo $hero_gradient_start_color_length; ?>%, <?php 
 		list($r2, $g2, $b2) = sscanf($hero_gradient_stop_color, "#%02x%02x%02x");
 		echo "rgba({$r2}, {$g2}, {$b2}, {$hero_gradient_stop_color_transparency})"; 
-		?> <?php echo $hero_gradient_stop_color_length; ?>%)<?php if (!empty( $hero_image )) echo ", url( '. $hero_image .' )" ?>;
+		?> <?php echo $hero_gradient_stop_color_length; ?>%)<?php if (!empty( $hero_image )) echo ", url({$hero_image})" ?>;
 	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -139,7 +139,7 @@ video.hero-background-video {
 		?> <?php echo $hero_gradient_start_color_length; ?>%, <?php 
 		list($r2, $g2, $b2) = sscanf($hero_gradient_stop_color, "#%02x%02x%02x");
 		echo "rgba({$r2}, {$g2}, {$b2}, {$hero_gradient_stop_color_transparency})"; 
-		?> <?php echo $hero_gradient_stop_color_length; ?>%)<?php if (!empty( $hero_image )) echo ", url( '. $hero_image .' )" ?>;
+		?> <?php echo $hero_gradient_stop_color_length; ?>%)<?php if (!empty( $hero_image )) echo ", url({$hero_image})" ?>;
 	background-position: top center;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -152,7 +152,7 @@ video.hero-background-video {
 		?> <?php echo $hero_gradient_start_color_length; ?>%, <?php 
 		list($r2, $g2, $b2) = sscanf($hero_gradient_stop_color, "#%02x%02x%02x");
 		echo "rgba({$r2}, {$g2}, {$b2}, {$hero_gradient_stop_color_transparency})"; 
-		?> <?php echo $hero_gradient_stop_color_length; ?>%)<?php if (!empty( $hero_image )) echo ", url( '. $hero_image .' )" ?>;
+		?> <?php echo $hero_gradient_stop_color_length; ?>%)<?php if (!empty( $hero_image )) echo ", url({$hero_image})" ?>;
 	background-position: center center;
 	background-size: cover;
 	background-repeat: no-repeat;
