@@ -110,6 +110,30 @@ $wp_customize->add_section( 'hovercraft_fonts', array(
     'priority'   => 43,
 ) );
 
+// default font setting
+$wp_customize->add_setting( 'hovercraft_default_font', array(
+    'default'    => 'noto_sans',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// default font control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_default_font',
+        array(
+            'label'     => __('Default font family', 'hovercraft'),
+			'description' => __( 'What Google Fonts family to use for the default font?', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_default_font',
+            'type'      => 'select',
+			'choices' => array(
+        		'noto_sans' => 'Noto Sans',
+        		'open_sans' => 'Open Sans',
+    			)
+        )
+) );
+
 // site name font setting
 $wp_customize->add_setting( 'hovercraft_site_name_font', array(
     'default'    => 'noto_sans',
