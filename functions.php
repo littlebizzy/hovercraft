@@ -1,31 +1,16 @@
 <?php
 
 // select menu
-// disabled // require get_template_directory() . '/inc/select-menu.php';
+// require get_template_directory() . '/inc/select-menu.php';
 
 // back to top
 // require get_template_directory() . '/inc/back-to-top.php';
 
-// suggest git updater
-require get_template_directory() . '/inc/git-updater.php';
+// breadcrumbs
+require get_template_directory() . '/inc/breadcrumbs.php';
 
 // css generator
 require get_template_directory() . '/inc/css-generator.php';
-
-// widget areas
-require get_template_directory() . '/inc/widget-areas.php';
-
-// menu locations
-require get_template_directory() . '/inc/menu-locations.php';
-
-// featured images
-require get_template_directory() . '/inc/featured-images.php';
-
-// default logo
-require get_template_directory() . '/inc/logo-default.php';
-
-// alternative logo
-require get_template_directory() . '/inc/logo-alternative.php';
 
 // custom header
 require get_template_directory() . '/inc/custom-header.php';
@@ -33,17 +18,35 @@ require get_template_directory() . '/inc/custom-header.php';
 // customizer settings
 require get_template_directory() . '/inc/customizer-settings.php';
 
+// featured images
+require get_template_directory() . '/inc/featured-images.php';
+
+// suggest git updater
+require get_template_directory() . '/inc/git-updater.php';
+
+// google fonts
+require get_template_directory() . '/inc/google-fonts.php';
+
 // video uploader
 require get_template_directory() . '/inc/header-video.php';
 
-// widget titles
-require get_template_directory() . '/inc/widget-titles.php';
+// alternative logo
+require get_template_directory() . '/inc/logo-alternative.php';
 
-// breadcrumbs
-require get_template_directory() . '/inc/breadcrumbs.php';
+// default logo
+require get_template_directory() . '/inc/logo-default.php';
+
+// menu locations
+require get_template_directory() . '/inc/menu-locations.php';
 
 // pagination
 require get_template_directory() . '/inc/pagination.php';
+
+// widget areas
+require get_template_directory() . '/inc/widget-areas.php';
+
+// widget titles
+require get_template_directory() . '/inc/widget-titles.php';
 
 // WooCommerce support
 //// add_theme_support('woocommerce');
