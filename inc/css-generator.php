@@ -265,7 +265,19 @@ textarea {
 	box-shadow: inset 0px 0px 0px 1px #BDBDBD;
 }
 	
-input[type="text"], input[type="email"] {
+select {
+	width: 100%;
+	font-size: 18px;
+	font-weight: 400;
+	display: inline-block;
+	background: #ffffff;
+	border-radius: 5px;
+	border: 0;
+	outline: none;
+	box-shadow: inset 0px 0px 0px 1px #BDBDBD;
+}
+	
+input[type="text"], input[type="email"], select {
 	width: 100%;
 	font-size: 18px;
 	font-weight: 400;
@@ -274,6 +286,7 @@ input[type="text"], input[type="email"] {
 	background: #ffffff;
 	border-radius: 5px;
 	border: 0;
+	outline: none;
 	box-shadow: inset 0px 0px 0px 1px #BDBDBD;
 }
 
