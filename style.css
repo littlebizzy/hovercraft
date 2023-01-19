@@ -2293,6 +2293,10 @@ select {
 
 /* bbpress */
 
+#bbpress-forums ul.bbp-forums, #bbpress-forums ul.bbp-lead-topic, #bbpress-forums ul.bbp-replies, #bbpress-forums ul.bbp-search-results, #bbpress-forums ul.bbp-topics {
+	border: 1px solid #BDBDBD;
+}
+
 #bbpress-forums li.bbp-body ul.forum, #bbpress-forums li.bbp-body ul.topic {
 	border-top: 1px solid #BDBDBD;
 }
