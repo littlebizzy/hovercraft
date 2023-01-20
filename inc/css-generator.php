@@ -252,6 +252,10 @@ video.hero-background-video {
 	color: <?php echo $copyright_link_color; ?>;
 	text-decoration: <?php echo $copyright_link_decoration; ?>;
 }
+	
+form {
+	padding: 0 !important;
+}
 
 textarea {
 	width: 100%;
