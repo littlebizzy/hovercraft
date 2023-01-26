@@ -20,11 +20,11 @@
             echo '</ul></div>';
         	}
         	?>
-			<?php if ( get_theme_mod( 'hovercraft_search' ) == 1 ) { ?>
+			<?php if ( get_theme_mod( 'hovercraft_search' ) === true ) { ?>
 				<div class="search-icon-wrapper"><i class="material-icons search">search</i></div><!-- search-icon-wrapper -->
 			<?php } ?>
 			<?php if ( class_exists( 'WooCommerce' ) ) { ?>
-			<div class="cart-icon-wrapper"><a href="/cart/"><i class="material-icons cart">shopping_cart</i></a><div class="notification-dot"><?php echo WC()->cart->get_cart_contents_count(); ?></div></div><!-- cart-icon-wrapper -->
+				<div class="cart-icon-wrapper"><a href="/cart/"><i class="material-icons cart">shopping_cart</i></a><div class="notification-dot"><?php echo WC()->cart->get_cart_contents_count(); ?></div></div><!-- cart-icon-wrapper -->
 			<?php } ?>
 			<?php
 			if ( has_nav_menu( 'cta-header-secondary' ) ) {
