@@ -38,11 +38,12 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, hr, bl
 
 html, body {
 	font-family: 'Noto Sans', sans-serif;
-	font-size:16px;
-	color:#263238; /* correct */
+	font-size: 16px;
+	color: #263238; /* correct */
 	height: 100%;
-	line-height:1.5;
-	margin:0;
+	line-height: 1.5;
+	margin: 0;
+	scroll-behavior: smooth;
 }
 
 @media screen and (max-width: 1200px) {
