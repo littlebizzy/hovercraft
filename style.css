@@ -214,6 +214,10 @@ strong {
 	font-weight: 700;
 }
 
+em {
+    font-style: italic;
+}
+
 p {
 	margin-bottom: 30px;
 }
