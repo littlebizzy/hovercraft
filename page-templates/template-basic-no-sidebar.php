@@ -14,15 +14,13 @@
 		<?php } ?><!-- if hovercraft_breadcrumbs -->
 	
 		<div id="content">
-	
-					<h1><?php the_title(); ?></h1>
-					<?php $url_featured_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' ); 
-					if ( !empty( $url_featured_image ) && ( !is_singular('product') ) ) { ?>
-					<img class="featured-image" width="800" height="450" src="<?php echo $url_featured_image; ?>" />
-					<?php } ?>
-					<?php if ( 'post' == get_post_type() ) { 
-						the_time(get_option('date_format')); 
-					} ?>
+			
+			<h1><?php the_title(); ?></h1>
+			
+			<?php $url_featured_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' ); 
+			if ( !empty( $url_featured_image ) ) { ?>
+			<img class="featured-image" src="<?php echo $url_featured_image; ?>" />
+			<?php } ?>
 		
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 			<?php the_content(); ?>
