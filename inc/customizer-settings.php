@@ -128,8 +128,17 @@ $wp_customize->add_control( new WP_Customize_Control(
             'settings'  => 'hovercraft_default_font',
             'type'      => 'select',
 			'choices' => array(
+				'lato' => 'Lato',
+				'lora' => 'Lora',
+				'merriweather' => 'Merriweather',
         		'noto_sans' => 'Noto Sans',
+				'noto_serif' => 'Noto Serif',
         		'open_sans' => 'Open Sans',
+				'poppins' => 'Poppins',
+				'pt_serif' => 'PT Serif',
+				'roboto' => 'Roboto',
+				'roboto_slab' => 'Robot Slab',
+				'source_serif_pro' => 'Source Serif Pro',
     			)
         )
 ) );
