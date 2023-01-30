@@ -731,7 +731,6 @@ button {
 @media screen and (max-width: 1200px) {
 .site-name {
 	font-size: 24px;
-	font-weight: 700;
 	display: block;
 	}
 }
@@ -739,7 +738,6 @@ button {
 @media screen and (min-width: 1200px) {
 .site-name {
 	font-size: 36px;
-	font-weight: 700;
 	display: block;
 	}
 }
