@@ -110,14 +110,14 @@ $wp_customize->add_section( 'hovercraft_fonts', array(
     'priority'   => 43,
 ) );
 
-// default font setting
+// default font family setting
 $wp_customize->add_setting( 'hovercraft_default_font', array(
     'default'    => 'noto_sans',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
 	) 
 );
 
-// default font control
+// default font family control
 $wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
         'hovercraft_default_font',
@@ -134,14 +134,14 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
-// site name font setting
+// site name font family setting
 $wp_customize->add_setting( 'hovercraft_site_name_font', array(
     'default'    => 'noto_sans',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
 	) 
 );
 
-// site name font control
+// site name font family control
 $wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
         'hovercraft_site_name_font',
@@ -155,6 +155,31 @@ $wp_customize->add_control( new WP_Customize_Control(
         		'noto_sans' => 'Noto Sans',
         		'open_sans' => 'Open Sans',
 				'knewave' => 'Knewave'
+    			)
+        )
+) );
+
+// site name font weight setting
+$wp_customize->add_setting( 'hovercraft_site_name_font_weight', array(
+    'default'    => '700',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
+	) 
+);
+
+// site name font weight control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_site_name_font_weight',
+        array(
+            'label'     => __('Site Name font weight', 'hovercraft'),
+			'description' => __( 'What font weight to use for the site name?', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_site_name_font_weight',
+            'type'      => 'select',
+			'choices' => array(
+        		'700' => '700',
+        		'600' => '600',
+				'400' => '400'
     			)
         )
 ) );
