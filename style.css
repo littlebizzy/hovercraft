@@ -731,6 +731,7 @@ button {
 @media screen and (max-width: 1200px) {
 .site-name {
 	font-size: 24px;
+	line-height: 1; /* because site-tagline is hidden on mobile */
 	display: block;
 	}
 }
