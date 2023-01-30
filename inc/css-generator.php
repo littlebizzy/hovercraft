@@ -14,6 +14,7 @@ function hovercraft_generate_css(){
 	}
     
 	$default_font_family = get_theme_mod( 'hovercraft_default_font', 'noto_sans' );
+	$site_name_font_family = get_theme_mod( 'hovercraft_site_name_font', 'noto_sans' );
 	$hero_gradient_angle = get_theme_mod( 'hovercraft_hero_gradient_angle', '60deg' );
 	$hero_gradient_start_color_transparency = get_theme_mod( 'hovercraft_hero_gradient_start_color_transparency', '0.50' );
 	$hero_gradient_stop_color_transparency = get_theme_mod( 'hovercraft_hero_gradient_stop_color_transparency', '0.50' );
@@ -60,6 +61,10 @@ function hovercraft_generate_css(){
 html, body {
 	font-family: <?php echo ucwords(str_replace("_", " ", $default_font_family)); ?>;
 	color: <?php echo $default_text_color; ?>;
+}
+
+.site-name {
+	font-family: <?php echo ucwords(str_replace("_", " ", $site_name_font_family)); ?>;
 }
 
 a {
