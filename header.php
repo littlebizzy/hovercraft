@@ -56,7 +56,7 @@
 	
 <nav id="offcanvas-menu">
 	<?php if ( class_exists( 'WooCommerce' ) ) { ?>
-	<div class="cart-button-offcanvas-wrapper"><a href="/cart/"><div class="cart-button-offcanvas"><i class="material-icons cart">shopping_cart</i>My Cart<div class="notification-dot-offcanvas"><?php echo WC()->cart->get_cart_contents_count(); ?></div></div></a></div><!-- cart-icon-wrapper -->
+	<div class="cart-button-offcanvas-wrapper"><a href="/cart/"><div class="cart-button-offcanvas"><i class="material-icons cart">shopping_cart</i><?php _e( 'My Cart', 'hovercraft' ) ?><div class="notification-dot-offcanvas"><?php echo WC()->cart->get_cart_contents_count(); ?></div></div></a></div><!-- cart-icon-wrapper -->
 	<?php } ?>
 	<?php 
     if ( has_nav_menu( 'main-menu' ) ) {
