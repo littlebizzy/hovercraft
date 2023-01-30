@@ -154,6 +154,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 			'choices' => array(
         		'noto_sans' => 'Noto Sans',
         		'open_sans' => 'Open Sans',
+				'knewave' => 'Knewave'
     			)
         )
 ) );
