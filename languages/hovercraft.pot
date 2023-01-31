@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: HoverCraft\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-16 20:05+0300\n"
+"POT-Creation-Date: 2023-01-31 14:57+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: \n"
@@ -14,7 +14,7 @@ msgstr ""
 "X-Generator: Poedit 3.2.2\n"
 "X-Loco-Version: 2.6.3; wp-6.1.1\n"
 "X-Domain: hovercraft\n"
-"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-KeywordsList: _e;__;esc_html__\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SearchPath-0: .\n"
 
@@ -32,6 +32,14 @@ msgstr ""
 
 #: comments.php:51
 msgid "Comments are closed."
+msgstr ""
+
+#: header.php:48
+msgid "My Cart"
+msgstr ""
+
+#: inc/breadcrumbs.php:26
+msgid "Home"
 msgstr ""
 
 #: inc/customizer-settings.php:9
@@ -59,118 +67,138 @@ msgid "Where do you want the Main Begin widget to display when enabled?"
 msgstr ""
 
 #: inc/customizer-settings.php:125
-msgid "Site Name font family"
+msgid "Default font family"
 msgstr ""
 
 #: inc/customizer-settings.php:126
+msgid "What Google Fonts family to use for the default font?"
+msgstr ""
+
+#: inc/customizer-settings.php:158
+msgid "Site Name font family"
+msgstr ""
+
+#: inc/customizer-settings.php:159
 msgid "What Google Fonts family to use for the site name?"
 msgstr ""
 
-#: inc/customizer-settings.php:545
+#: inc/customizer-settings.php:211
+msgid "Site Name font weight"
+msgstr ""
+
+#: inc/customizer-settings.php:212
+msgid "What font weight to use for the site name?"
+msgstr ""
+
+#: inc/customizer-settings.php:632
 msgid "Enable sidebar"
 msgstr ""
 
-#: inc/customizer-settings.php:565
+#: inc/customizer-settings.php:652
 msgid "Enable sidebar padding"
 msgstr ""
 
-#: inc/customizer-settings.php:626
+#: inc/customizer-settings.php:713
 msgid "Logo effect"
 msgstr ""
 
-#: inc/customizer-settings.php:627
+#: inc/customizer-settings.php:714
 msgid "CSS hover effect for logos in the header"
 msgstr ""
 
-#: inc/customizer-settings.php:652
+#: inc/customizer-settings.php:739
 msgid "Main menu links effect"
 msgstr ""
 
-#: inc/customizer-settings.php:653
+#: inc/customizer-settings.php:740
 msgid "CSS hover effect for main menu links in the header"
 msgstr ""
 
-#: inc/customizer-settings.php:684
+#: inc/customizer-settings.php:771
 msgid "Default link decoration"
 msgstr ""
 
-#: inc/customizer-settings.php:685 inc/customizer-settings.php:709
-#: inc/customizer-settings.php:733 inc/customizer-settings.php:757
-#: inc/customizer-settings.php:781 inc/customizer-settings.php:805
-#: inc/customizer-settings.php:829
+#: inc/customizer-settings.php:772 inc/customizer-settings.php:796
+#: inc/customizer-settings.php:820 inc/customizer-settings.php:844
+#: inc/customizer-settings.php:868 inc/customizer-settings.php:892
+#: inc/customizer-settings.php:916
 msgid "What type of link decoration"
 msgstr ""
 
-#: inc/customizer-settings.php:708
+#: inc/customizer-settings.php:795
 msgid "Topbar link decoration"
 msgstr ""
 
-#: inc/customizer-settings.php:732
+#: inc/customizer-settings.php:819
 msgid "Main (begin) link decoration"
 msgstr ""
 
-#: inc/customizer-settings.php:756
+#: inc/customizer-settings.php:843
 msgid "Prefooter (top) link decoration"
 msgstr ""
 
-#: inc/customizer-settings.php:780
+#: inc/customizer-settings.php:867
 msgid "Prefooter (bottom) link decoration"
 msgstr ""
 
-#: inc/customizer-settings.php:804
+#: inc/customizer-settings.php:891
 msgid "Footer link decoration"
 msgstr ""
 
-#: inc/customizer-settings.php:828
+#: inc/customizer-settings.php:915
 msgid "Copyright link decoration"
 msgstr ""
 
-#: inc/customizer-settings.php:858
+#: inc/customizer-settings.php:945
 msgid "Hero content width"
 msgstr ""
 
-#: inc/customizer-settings.php:859
+#: inc/customizer-settings.php:946
 msgid "Width of hero content (desktop)"
 msgstr ""
 
-#: inc/customizer-settings.php:883
+#: inc/customizer-settings.php:970
 msgid "Gradient angle"
 msgstr ""
 
-#: inc/customizer-settings.php:884
+#: inc/customizer-settings.php:971
 msgid "Choose the angle of the hero gradient"
 msgstr ""
 
-#: inc/customizer-settings.php:915
+#: inc/customizer-settings.php:1002
 msgid "Start color transparency"
 msgstr ""
 
-#: inc/customizer-settings.php:916
+#: inc/customizer-settings.php:1003
 msgid "Transparency of the start color"
 msgstr ""
 
-#: inc/customizer-settings.php:957
+#: inc/customizer-settings.php:1044
 msgid "Stop color transparency"
 msgstr ""
 
-#: inc/customizer-settings.php:958
+#: inc/customizer-settings.php:1045
 msgid "Transparency of the stop color"
 msgstr ""
 
-#: inc/customizer-settings.php:999
+#: inc/customizer-settings.php:1086
 msgid "Start color length"
 msgstr ""
 
-#: inc/customizer-settings.php:1000
+#: inc/customizer-settings.php:1087
 msgid "Length of the start color"
 msgstr ""
 
-#: inc/customizer-settings.php:1042
+#: inc/customizer-settings.php:1129
 msgid "Stop color length"
 msgstr ""
 
-#: inc/customizer-settings.php:1043
+#: inc/customizer-settings.php:1130
 msgid "Length of the stop color"
+msgstr ""
+
+#: inc/header-video.php:17
+msgid "This is the description for the Media Control"
 msgstr ""
 
 #: inc/header-video.php:22 inc/header-video.php:27
@@ -197,7 +225,15 @@ msgstr ""
 msgid "Choose File"
 msgstr ""
 
-#: index.php:31 template-parts/content/primary.php:42
+#: index.php:31 page-templates/template-basic-no-sidebar.php:36
+#: page-templates/template-basic-sidebar.php:36
+#: page-templates/template-full-hero-no-sidebar.php:34
+#: page-templates/template-full-hero-sidebar.php:34
+#: page-templates/template-half-hero-no-sidebar.php:29
+#: page-templates/template-half-hero-sidebar.php:29
+#: page-templates/template-mini-hero-no-sidebar.php:29
+#: page-templates/template-mini-hero-sidebar.php:29
+#: template-parts/content/primary.php:42
 msgid "Last modified on "
 msgstr ""
 
