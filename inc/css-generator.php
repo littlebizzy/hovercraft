@@ -290,6 +290,16 @@ select {
 	box-shadow: inset 0px 0px 0px 1px #BDBDBD;
 }
 	
+button[type="submit"] {
+	font-weight: 600;
+	background: <?php echo $default_link_color; ?> !important;
+	text-decoration: none;
+	color: #ffffff;
+	border-radius: 5px;
+	border: 0;
+	cursor: pointer;
+}
+	
 input[type="text"], input[type="email"], select {
 	width: 100%;
 	font-size: 18px;
@@ -317,8 +327,8 @@ input[type="submit"] {
 	cursor: pointer;
 }
 	
-input[type="submit"]:hover {
-	background: <?php echo $default_hover_color; ?>;
+button[type="submit"]:hover, input[type="submit"]:hover {
+	background: <?php echo $default_hover_color; ?> !important;
 }
 </style>
 
