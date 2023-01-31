@@ -23,7 +23,7 @@ function ah_breadcrumb() {
     'seperator'   =>  '»',
     'id'          =>  'ah-breadcrumb',
     'classes'     =>  'ah-breadcrumb',
-    'home_title'  =>  esc_html__( 'Home', '' )
+    'home_title'  =>  esc_html__( 'Home', 'hovercraft' )
   );
 
   $sep  = '<li class="seperator">'. esc_html( $defaults['seperator'] ) .'</li>';
