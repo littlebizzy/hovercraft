@@ -1,0 +1,214 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: HoverCraft\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-01-16 20:05+0300\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"X-Generator: Poedit 3.2.2\n"
+"X-Loco-Version: 2.6.3; wp-6.1.1\n"
+"X-Domain: hovercraft\n"
+"X-Poedit-KeywordsList: _e;__\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: comments.php:44
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:45
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:46
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:51
+msgid "Comments are closed."
+msgstr ""
+
+#: inc/customizer-settings.php:9
+msgid "Header Media"
+msgstr ""
+
+#: inc/customizer-settings.php:32
+msgid "Enable back to top button"
+msgstr ""
+
+#: inc/customizer-settings.php:53
+msgid "Enable site-wide search"
+msgstr ""
+
+#: inc/customizer-settings.php:74
+msgid "Enable breadcrumbs"
+msgstr ""
+
+#: inc/customizer-settings.php:94
+msgid "Main Begin widget display"
+msgstr ""
+
+#: inc/customizer-settings.php:95
+msgid "Where do you want the Main Begin widget to display when enabled?"
+msgstr ""
+
+#: inc/customizer-settings.php:125
+msgid "Site Name font family"
+msgstr ""
+
+#: inc/customizer-settings.php:126
+msgid "What Google Fonts family to use for the site name?"
+msgstr ""
+
+#: inc/customizer-settings.php:545
+msgid "Enable sidebar"
+msgstr ""
+
+#: inc/customizer-settings.php:565
+msgid "Enable sidebar padding"
+msgstr ""
+
+#: inc/customizer-settings.php:626
+msgid "Logo effect"
+msgstr ""
+
+#: inc/customizer-settings.php:627
+msgid "CSS hover effect for logos in the header"
+msgstr ""
+
+#: inc/customizer-settings.php:652
+msgid "Main menu links effect"
+msgstr ""
+
+#: inc/customizer-settings.php:653
+msgid "CSS hover effect for main menu links in the header"
+msgstr ""
+
+#: inc/customizer-settings.php:684
+msgid "Default link decoration"
+msgstr ""
+
+#: inc/customizer-settings.php:685 inc/customizer-settings.php:709
+#: inc/customizer-settings.php:733 inc/customizer-settings.php:757
+#: inc/customizer-settings.php:781 inc/customizer-settings.php:805
+#: inc/customizer-settings.php:829
+msgid "What type of link decoration"
+msgstr ""
+
+#: inc/customizer-settings.php:708
+msgid "Topbar link decoration"
+msgstr ""
+
+#: inc/customizer-settings.php:732
+msgid "Main (begin) link decoration"
+msgstr ""
+
+#: inc/customizer-settings.php:756
+msgid "Prefooter (top) link decoration"
+msgstr ""
+
+#: inc/customizer-settings.php:780
+msgid "Prefooter (bottom) link decoration"
+msgstr ""
+
+#: inc/customizer-settings.php:804
+msgid "Footer link decoration"
+msgstr ""
+
+#: inc/customizer-settings.php:828
+msgid "Copyright link decoration"
+msgstr ""
+
+#: inc/customizer-settings.php:858
+msgid "Hero content width"
+msgstr ""
+
+#: inc/customizer-settings.php:859
+msgid "Width of hero content (desktop)"
+msgstr ""
+
+#: inc/customizer-settings.php:883
+msgid "Gradient angle"
+msgstr ""
+
+#: inc/customizer-settings.php:884
+msgid "Choose the angle of the hero gradient"
+msgstr ""
+
+#: inc/customizer-settings.php:915
+msgid "Start color transparency"
+msgstr ""
+
+#: inc/customizer-settings.php:916
+msgid "Transparency of the start color"
+msgstr ""
+
+#: inc/customizer-settings.php:957
+msgid "Stop color transparency"
+msgstr ""
+
+#: inc/customizer-settings.php:958
+msgid "Transparency of the stop color"
+msgstr ""
+
+#: inc/customizer-settings.php:999
+msgid "Start color length"
+msgstr ""
+
+#: inc/customizer-settings.php:1000
+msgid "Length of the start color"
+msgstr ""
+
+#: inc/customizer-settings.php:1042
+msgid "Stop color length"
+msgstr ""
+
+#: inc/customizer-settings.php:1043
+msgid "Length of the stop color"
+msgstr ""
+
+#: inc/header-video.php:22 inc/header-video.php:27
+msgid "Select File"
+msgstr ""
+
+#: inc/header-video.php:23
+msgid "Change File"
+msgstr ""
+
+#: inc/header-video.php:24
+msgid "Default"
+msgstr ""
+
+#: inc/header-video.php:25
+msgid "Remove"
+msgstr ""
+
+#: inc/header-video.php:26
+msgid "No file selected"
+msgstr ""
+
+#: inc/header-video.php:28
+msgid "Choose File"
+msgstr ""
+
+#: index.php:31 template-parts/content/primary.php:42
+msgid "Last modified on "
+msgstr ""
+
+#: search.php:17
+msgid "Search results for:"
+msgstr ""
+
+#: search.php:25
+msgid "Read More"
+msgstr ""
+
+#: search.php:30
+msgid "No Search Results found"
+msgstr ""
