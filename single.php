@@ -46,9 +46,7 @@
 	<?php } ?>
 	</div><!-- tags -->
 		
-	<div class="last-modified">
-		<span> <?php _e('Last modified on ', 'hovercraft'); echo the_modified_time('F j, Y'); ?> </span>
-	</div><!-- last-modified -->
+	<?php get_template_part( 'template-parts/content/last-modified' ); ?>
 	
 		<div class="clear"></div>
 		<?php hovercraft_pagination_nav(); ?>	
