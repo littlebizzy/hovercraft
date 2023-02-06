@@ -38,9 +38,7 @@
 	<div class="clear"></div>
 	</div><!-- content -->
 
-	<div class="last-modified">
-		<span> <?php _e('Last modified on ', 'hovercraft'); echo the_modified_time('F j, Y'); ?> </span>
-	</div><!-- last-modified -->
+	<?php get_template_part( 'template-parts/content/last-modified' ); ?>
 	
 	<?php comments_template(); ?> 
 
