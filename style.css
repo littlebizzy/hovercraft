@@ -2388,6 +2388,10 @@ form.cart {
 
 /* bbpress */
 
+.forums {
+	border-radius: 5px;
+}
+
 #bbpress-forums ul.bbp-forums, #bbpress-forums ul.bbp-lead-topic, #bbpress-forums ul.bbp-replies, #bbpress-forums ul.bbp-search-results, #bbpress-forums ul.bbp-topics {
 	border: 1px solid #BDBDBD;
 }
