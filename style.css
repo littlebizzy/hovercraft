@@ -2350,14 +2350,14 @@ select {
 }
 
 .woocommerce-ordering:after {
-  	position: absolute;
-  	right: 20px;
-  	top: 50%;
-	margin-top: -17px;
-  	pointer-events: none;
-	font-family: "Material Icons";
-	font-size: 24px;
-	content: ' \e5cf';
+	position: relative;
+	margin: 0px 0px 0px -10px; 
+        left: 95%;
+        bottom: 1.6ch;
+        pointer-events: none;
+        font-family: "Material Icons";
+        font-size: 24px;
+        content: ' \e5cf';
 }
 
 .price {
