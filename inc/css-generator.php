@@ -13,6 +13,8 @@ function hovercraft_generate_css(){
 		$hero_image = $url_header_image; 
 	}
     
+	$desktop_logo_width = get_theme_mod( 'hovercraft_desktop_logo_width', '150' );
+	$mobile_logo_width = get_theme_mod( 'hovercraft_mobile_logo_width', '100' );
 	$default_font_family = get_theme_mod( 'hovercraft_default_font', 'noto_sans' );
 	$site_name_font_family = get_theme_mod( 'hovercraft_site_name_font', 'noto_sans' );
 	$site_name_font_weight = get_theme_mod( 'hovercraft_site_name_font_weight', '700' );
@@ -62,6 +64,22 @@ function hovercraft_generate_css(){
 html, body {
 	font-family: <?php echo ucwords(str_replace("_", " ", $default_font_family)); ?>;
 	color: <?php echo $default_text_color; ?>;
+}
+
+@media screen and (max-width: 1200px) {
+.site-logo {
+	width: <?php echo $mobile_logo_width; ?>px !important;
+	max-width: <?php echo $mobile_logo_width; ?>px !important;
+	height: auto;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+.site-logo {
+	width: <?php echo $desktop_logo_width; ?>px !important;
+	max-width: <?php echo $desktop_logo_width; ?>px !important;
+	height: auto;
+	}
 }
 
 .site-name {
