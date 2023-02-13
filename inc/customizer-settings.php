@@ -8,13 +8,51 @@ $wp_customize->remove_control( 'header_textcolor' );
 // header media section
 $wp_customize->get_section('header_image')->title = __( 'Header Media', 'hovercraft' );
 
-
 // general options section
 $wp_customize->add_section( 'hovercraft_general', array(
     'title'      => 'General Options',
     'priority'   => 30,
 ) );
+	
+// logo width setting (desktop)
+$wp_customize->add_setting( 'hovercraft_desktop_logo_width', array(
+    'default'    => '150',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
+	) 
+);
 
+// logo width control (desktop)
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_desktop_logo_width',
+        array(
+            'label'     => __( 'Desktop logo width', 'hovercraft' ),
+			'description' => __( 'Specificy desktop logo width in pixels?', 'hovercraft' ),
+            'section'   => 'hovercraft_general',
+            'settings'  => 'hovercraft_desktop_logo_width',
+            'type' => 'text'
+        )
+) );
+
+// logo width setting (mobile)
+$wp_customize->add_setting( 'hovercraft_mobile_logo_width', array(
+    'default'    => '100',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
+	) 
+);
+
+// logo width control (mobile)
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_mobile_logo_width',
+        array(
+            'label'     => __( 'Mobile logo width', 'hovercraft' ),
+			'description' => __( 'Specificy mobile logo width in pixels?', 'hovercraft' ),
+            'section'   => 'hovercraft_general',
+            'settings'  => 'hovercraft_mobile_logo_width',
+            'type' => 'text'
+        )
+) );
 
 // back to top setting
 $wp_customize->add_setting('hovercraft_back_to_top', array(
