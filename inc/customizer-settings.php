@@ -220,6 +220,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         		'open_sans' => 'Open Sans',
 				'pacifico' => 'Pacifico',
 				'permanent_marker' => 'Permanent Marker',
+				'playfair_display' => 'Playfair Display',
 				'poller_one' => 'Poller One',
 				'press_start_2p' => 'Press Start 2P',
 				'rancho' => 'Rancho',
