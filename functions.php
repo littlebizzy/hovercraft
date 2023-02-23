@@ -48,6 +48,9 @@ require get_template_directory() . '/inc/widget-areas.php';
 // widget titles
 require get_template_directory() . '/inc/widget-titles.php';
 
+// remove generator
+require get_template_directory() . '/inc/remove-generator.php';
+
 // WooCommerce support
 //// add_theme_support('woocommerce');
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
