@@ -1,7 +1,7 @@
 <?php
 
 function hovercraft_remove_wp_generator() {
-	return'';
+	return '';
 }
 add_filter( 'the_generator', 'hovercraft_remove_wp_generator' );
 
