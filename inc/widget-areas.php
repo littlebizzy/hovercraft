@@ -77,7 +77,7 @@ function hovercraft_home_premain_top() {
 	) );
 
 }
-add_action( 'widgets_init', 'hovercraft_home_postmain_top' );
+add_action( 'widgets_init', 'hovercraft_home_premain_top' );
 
 
 // home premain bottom widgets
@@ -93,7 +93,7 @@ function hovercraft_home_premain_bottom() {
 	) );
 
 }
-add_action( 'widgets_init', 'hovercraft_home_postmain_bottom' );
+add_action( 'widgets_init', 'hovercraft_home_premain_bottom' );
 
 
 // home postmain top widgets
