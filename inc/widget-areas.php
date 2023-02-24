@@ -180,7 +180,7 @@ add_action( 'widgets_init', 'hovercraft_prefooter_bottom' );
 function hovercraft_footer_one() {
 
 	register_sidebar( array(
-		'name'          => 'Footer #1',
+		'name'          => 'Footer Column #1',
 		'id'            => 'hovercraft_footer_one',
 		'before_widget' => '<div class="widget-footer-one widget-wrapper">',
 		'after_widget'  => '</div>',
@@ -196,7 +196,7 @@ add_action( 'widgets_init', 'hovercraft_footer_one' );
 function hovercraft_footer_two() {
 
 	register_sidebar( array(
-		'name'          => 'Footer #2',
+		'name'          => 'Footer Column #2',
 		'id'            => 'hovercraft_footer_two',
 		'before_widget' => '<div class="widget-footer-two widget-wrapper">',
 		'after_widget'  => '</div>',
@@ -212,7 +212,7 @@ add_action( 'widgets_init', 'hovercraft_footer_two' );
 function hovercraft_footer_three() {
 
 	register_sidebar( array(
-		'name'          => 'Footer #3',
+		'name'          => 'Footer Column #3',
 		'id'            => 'hovercraft_footer_three',
 		'before_widget' => '<div class="widget-footer-three widget-wrapper">',
 		'after_widget'  => '</div>',
@@ -228,7 +228,7 @@ add_action( 'widgets_init', 'hovercraft_footer_three' );
 function hovercraft_footer_four() {
 
 	register_sidebar( array(
-		'name'          => 'Footer #4',
+		'name'          => 'Footer Column #4',
 		'id'            => 'hovercraft_footer_four',
 		'before_widget' => '<div class="widget-footer-four widget-wrapper">',
 		'after_widget'  => '</div>',
