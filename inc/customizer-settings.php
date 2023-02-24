@@ -129,8 +129,8 @@ $wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
         'hovercraft_main_begin_widget_display',
         array(
-            'label'     => __('Main Begin widget display', 'hovercraft'),
-			'description' => __( 'Where do you want the Main Begin widget to display when enabled?', 'hovercraft' ),
+            'label'     => __('Posthero widget display', 'hovercraft'),
+			'description' => __( 'Where should the Posthero widget be displayed when enabled?', 'hovercraft' ),
             'section'   => 'hovercraft_general',
             'settings'  => 'hovercraft_main_begin_widget_display',
             'type'      => 'select',
