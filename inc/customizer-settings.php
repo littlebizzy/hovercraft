@@ -166,6 +166,7 @@ $wp_customize->add_control( new WP_Customize_Control(
             'settings'  => 'hovercraft_default_font',
             'type'      => 'select',
 			'choices' => array(
+				'gentium_book_basic' => 'Gentium Book Basic',
 				'lato' => 'Lato',
 				'lora' => 'Lora',
 				'merriweather' => 'Merriweather',
@@ -209,6 +210,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 				'crete_round' => 'Crete Round',
 				'dancing_script' => 'Dancing Script',
 				'fredoka_one' => 'Fredoka One',
+				'gentium_book_basic' => 'Gentium Book Basic',
 				'gloria_hallelujah' => 'Gloria Hallelujah',
 				'itim' => 'Itim',
 				'knewave' => 'Knewave',
