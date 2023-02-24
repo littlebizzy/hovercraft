@@ -17,6 +17,8 @@
 	</div><!-- main-begin -->
 	<?php endif; ?>
 
+<?php get_template_part( 'template-parts/content/premain' ); ?>
+
 <div id="main">
 <div class="inner">
     
