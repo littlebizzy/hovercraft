@@ -206,6 +206,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 				'caveat_brush' => 'Caveat Brush',
 				'chewy' => 'Chewy',
 				'courgette' => 'Courgette',
+				'crete_round' => 'Crete Round',
 				'dancing_script' => 'Dancing Script',
 				'fredoka_one' => 'Fredoka One',
 				'gloria_hallelujah' => 'Gloria Hallelujah',
