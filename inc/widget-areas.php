@@ -64,6 +64,38 @@ function hovercraft_main_begin() {
 add_action( 'widgets_init', 'hovercraft_main_begin' );
 
 
+// home premain top widgets
+function hovercraft_home_premain_top() {
+
+	register_sidebar( array(
+		'name'          => 'Home Premain Top',
+		'id'            => 'hovercraft_home_premain_top',
+		'before_widget' => '<div class="widget-home-premain-top widget-wrapper">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+}
+add_action( 'widgets_init', 'hovercraft_home_postmain_top' );
+
+
+// home premain bottom widgets
+function hovercraft_home_premain_bottom() {
+
+	register_sidebar( array(
+		'name'          => 'Home Premain Bottom',
+		'id'            => 'hovercraft_home_premain_bottom',
+		'before_widget' => '<div class="widget-home-premain-bottom widget-wrapper">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+}
+add_action( 'widgets_init', 'hovercraft_home_postmain_bottom' );
+
+
 // home postmain top widgets
 function hovercraft_home_postmain_top() {
 
