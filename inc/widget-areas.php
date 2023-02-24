@@ -52,7 +52,7 @@ add_action( 'widgets_init', 'hovercraft_hero_snippet' );
 function hovercraft_main_begin() {
 
 	register_sidebar( array(
-		'name'          => 'Main Begin',
+		'name'          => 'Posthero (Adjust in Customizer)',
 		'id'            => 'hovercraft_main_begin',
 		'before_widget' => '<div class="widget-main-begin widget-wrapper">',
 		'after_widget'  => '</div>',
