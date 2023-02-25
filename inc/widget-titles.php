@@ -1,7 +1,6 @@
 <?php
 
-// disable copyright widget title
-// https://presscustomizr.com/snippet/dynamically-changing-the-widget-title-depending-on-the-context/
+// disable certain widget titles
 function my_widget_title($id_base) {
       if ('hovercraft_copyright' == $id_base) {
       		return '';
@@ -10,3 +9,5 @@ function my_widget_title($id_base) {
         return $title;
       }
     }
+
+// https://presscustomizr.com/snippet/dynamically-changing-the-widget-title-depending-on-the-context/
