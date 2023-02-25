@@ -305,7 +305,7 @@ video.hero-background-video {
 }
 
 @media screen and (max-width: 1200px) {
-.main-begin {
+#posthero {
 	width: 100%;
 	padding: 30px 20px;
 	text-align: center;
@@ -315,7 +315,7 @@ video.hero-background-video {
 }
 
 @media screen and (min-width: 1200px) {
-.main-begin {
+#posthero {
 	width: 100%;
 	padding: 30px 0px;
 	text-align: center;
@@ -324,15 +324,15 @@ video.hero-background-video {
 	}
 }
 	
-.main-begin img {
+#posthero img {
 	margin-right: 30px;
 }
 	
-.main-begin img:last-child {
+#posthero img:last-child {
 	margin-right: 0;
 }
 
-.main-begin a {
+#posthero a {
 	color: <?php echo $main_begin_link_color; ?>;
 	text-decoration: <?php echo $main_begin_link_decoration; ?>;
 }
