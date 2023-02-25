@@ -14,6 +14,7 @@ function hovercraft_generate_css(){
 	}
     
 	$mobile_topbar_widget = get_theme_mod( 'hovercraft_mobile_topbar', 'topbar_left' );
+	$mobile_preheader_widget = get_theme_mod( 'hovercraft_mobile_preheader', 'none' );
 	$desktop_logo_width = get_theme_mod( 'hovercraft_desktop_logo_width', '150' );
 	$mobile_logo_width = get_theme_mod( 'hovercraft_mobile_logo_width', '100' );
 	$default_font_family = get_theme_mod( 'hovercraft_default_font', 'noto_sans' );
@@ -33,6 +34,10 @@ function hovercraft_generate_css(){
 	$topbar_text_color = get_theme_mod( 'hovercraft_topbar_text_color', '#ffffff' );
 	$topbar_link_color = get_theme_mod( 'hovercraft_topbar_link_color', '#ffffff' );
 	$topbar_link_decoration = get_theme_mod( 'hovercraft_topbar_link_decoration', 'underline' );
+	$preheader_background_color = get_theme_mod( 'hovercraft_preheader_background_color', '#263238' );
+	$preheader_text_color = get_theme_mod( 'hovercraft_preheader_text_color', '#ffffff' );
+	$preheader_link_color = get_theme_mod( 'hovercraft_preheader_link_color', '#ffffff' );
+	$preheader_link_decoration = get_theme_mod( 'hovercraft_preheader_link_decoration', 'underline' );
 	$hero_gradient_start_color = get_theme_mod( 'hovercraft_hero_gradient_start_color', '#37474f' );
 	$hero_gradient_stop_color = get_theme_mod( 'hovercraft_hero_gradient_stop_color', '#ffffff' );
     $header_half_hero_background_color = get_theme_mod( 'hovercraft_header_half_hero_background_color', '#ffffff' ); 
@@ -146,7 +151,7 @@ a:hover {
     vertical-align: middle;
 	text-align: center;
 	<?php if ( $mobile_topbar_widget == 'topbar_right') { echo "display: none;"; } ?>
-}
+	}
 }
 
 @media screen and (min-width: 1200px) {
@@ -157,7 +162,7 @@ a:hover {
 	white-space:nowrap;
 	width:auto;
 	text-align:left;
-}
+	}
 }
 
 @media screen and (max-width: 1200px) {
@@ -175,13 +180,13 @@ a:hover {
 	height:inherit;
 	text-align:right;
 	width:100%;
-}
+	}
 }
 	
 @media screen and (max-width: 1200px) {
 .topbar-center {
 	text-align: center;
-}
+	}
 }
 
 @media screen and (min-width: 1200px) {
@@ -189,7 +194,90 @@ a:hover {
     vertical-align: middle;
 	height: inherit;
 	text-align: center;
+	}
 }
+	
+@media screen and (max-width: 1200px) {
+#preheader {
+	width: 100%;
+	padding: 10px 20px;
+	font-size: 14px;
+	line-height: 1.5;
+	background: <?php echo $preheader_background_color; ?>;
+	color: <?php echo $preheader_text_color; ?>;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+#preheader {
+	width: 100%;
+	padding: 10px 0px;
+	font-size: 14px;
+	line-height: 1.5;
+	display: table;
+	background: <?php echo $preheader_background_color; ?>;
+	color: <?php echo $preheader_text_color; ?>;
+	}
+}
+
+#preheader a {
+	color: <?php echo $preheader_link_color; ?>;
+	text-decoration: <?php echo $preheader_link_decoration; ?>;
+}
+
+#preheader p {
+	margin-bottom: 0;
+}
+	
+@media screen and (max-width: 1200px) {
+.preheader-left {
+    vertical-align: middle;
+	text-align: center;
+	<?php if ( $mobile_preheader_widget == 'preheader_right') { echo "display: none;"; } ?>
+	}
+}
+
+@media screen and (min-width: 1200px) {
+.preheader-left {
+	display:table-cell;
+    vertical-align:middle;
+	height:inherit;
+	white-space:nowrap;
+	width:auto;
+	text-align:left;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+.preheader-right {
+	vertical-align: middle;
+	text-align: center;
+	<?php if ( $mobile_preheader_widget == 'preheader_left') { echo "display: none;"; } ?>
+	}
+}
+
+@media screen and (min-width: 1200px) {
+.preheader-right {
+	display:table-cell;
+    vertical-align:middle;
+	height:inherit;
+	text-align:right;
+	width:100%;
+	}
+}
+	
+@media screen and (max-width: 1200px) {
+.preheader-center {
+	text-align: center;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+.preheader-center {
+    vertical-align: middle;
+	height: inherit;
+	text-align: center;
+	}
 }
 
 #hero-full-container {
