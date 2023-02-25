@@ -16,7 +16,7 @@
 		 if ( is_front_page() ) {
             echo get_option( 'blogname' );
             $blogdescription = get_option( 'blogdescription', "" );
-            if(!empty($blogdescription) {
+            if(!empty($blogdescription)) {
               echo ' | '.$blogdescription;
             }
         }
