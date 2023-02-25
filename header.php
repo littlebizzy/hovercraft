@@ -13,11 +13,13 @@
 	</style>
 	
 	<title><?php
-		if ( is_front_page() ) {
-			echo get_option( 'blogname' );
-			echo ' | ';
-			echo get_option( 'blogdescription' );
-		}
+		 if ( is_front_page() ) {
+            echo get_option( 'blogname' );
+            $blogdescription = get_option( 'blogdescription', "" );
+            if(!empty($blogdescription) {
+              echo ' | '.$blogdescription;
+            }
+        }
 		elseif ( is_archive() ) {
 			echo the_archive_title();
 			echo ' - ';
