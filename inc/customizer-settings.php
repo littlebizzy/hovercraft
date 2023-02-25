@@ -8,12 +8,13 @@ $wp_customize->remove_control( 'header_textcolor' );
 // header media section
 $wp_customize->get_section('header_image')->title = __( 'Header Media', 'hovercraft' );
 
+
 // general options section
 $wp_customize->add_section( 'hovercraft_general', array(
     'title'      => 'General Options',
     'priority'   => 30,
 ) );
-	
+
 // logo width setting (desktop)
 $wp_customize->add_setting( 'hovercraft_desktop_logo_width', array(
     'default'    => '150',
@@ -60,7 +61,6 @@ $wp_customize->add_setting('hovercraft_back_to_top', array(
 	'sanitize_callback' => 'hovercraft_sanitize_checkbox',
 ));
 
-
 // back to top control
 $wp_customize->add_control(
     new WP_Customize_Control(
@@ -74,7 +74,6 @@ $wp_customize->add_control(
         )
     )
 );
-
 
 // search setting
 $wp_customize->add_setting('hovercraft_search', array(
@@ -96,7 +95,6 @@ $wp_customize->add_control(
     )
 );
 
-
 // breadcrumbs setting
 $wp_customize->add_setting('hovercraft_breadcrumbs', array(
     'default' => 0,
@@ -116,6 +114,55 @@ $wp_customize->add_control(
         )
     )
 );
+
+// mobile topbar setting
+$wp_customize->add_setting( 'hovercraft_mobile_topbar', array(
+    'default'    => 'topbar_left',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// mobile topbar control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_mobile_topbar',
+        array(
+            'label'     => __('Mobile topbar', 'hovercraft'),
+			'description' => __( 'Which widget should display on mobile topbar?', 'hovercraft' ),
+            'section'   => 'hovercraft_general',
+            'settings'  => 'hovercraft_mobile_topbar',
+            'type'      => 'select',
+			'choices' => array(
+				'topbar_left' => 'Topbar Left',
+				'topbar_right' => 'Topbar Right'
+    			)
+        )
+) );
+
+// mobile preheader setting
+$wp_customize->add_setting( 'hovercraft_mobile_preheader', array(
+    'default'    => 'none',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// mobile preheader control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_mobile_preheader',
+        array(
+            'label'     => __('Mobile preheader', 'hovercraft'),
+			'description' => __( 'Which widget should display on mobile preheader?', 'hovercraft' ),
+            'section'   => 'hovercraft_general',
+            'settings'  => 'hovercraft_mobile_preheader',
+            'type'      => 'select',
+			'choices' => array(
+				'none' => 'None',
+				'preheader_left' => 'preheader Left',
+				'preheader_right' => 'preheader Right'
+    			)
+        )
+) );
 
 // posthero widget display setting
 $wp_customize->add_setting( 'hovercraft_posthero_widget_display', array(
@@ -141,8 +188,9 @@ $wp_customize->add_control( new WP_Customize_Control(
     			)
         )
 ) );
-	
-// general options section
+
+
+// fonts section
 $wp_customize->add_section( 'hovercraft_fonts', array(
     'title'      => 'Fonts',
     'priority'   => 43,
