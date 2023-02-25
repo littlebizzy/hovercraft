@@ -303,10 +303,33 @@ video.hero-background-video {
 	max-width: <?php echo $hero_content_width_desktop; ?>;
 	}
 }
-	
+
+@media screen and (max-width: 1200px) {
 .main-begin {
+	width: 100%;
+	padding: 30px 20px;
+	text-align: center;
 	background: <?php echo $main_begin_background_color; ?>;
 	color: <?php echo $main_begin_text_color; ?>;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+.main-begin {
+	width: 100%;
+	padding: 30px 0px;
+	text-align: center;
+	background: <?php echo $main_begin_background_color; ?>;
+	color: <?php echo $main_begin_text_color; ?>;
+	}
+}
+	
+.main-begin img {
+	margin-right: 30px;
+}
+	
+.main-begin img:last-child {
+	margin-right: 0;
 }
 
 .main-begin a {
