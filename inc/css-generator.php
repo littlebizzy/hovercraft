@@ -38,10 +38,10 @@ function hovercraft_generate_css(){
     $header_half_hero_background_color = get_theme_mod( 'hovercraft_header_half_hero_background_color', '#ffffff' ); 
     $header_mini_hero_background_color = get_theme_mod( 'hovercraft_header_mini_hero_background_color', '#ffffff' );
     $header_basic_background_color = get_theme_mod( 'hovercraft_header_basic_background_color', '#eceff1' );
-	$main_begin_background_color = get_theme_mod( 'hovercraft_main_begin_background_color', '#eceff1' );
-	$main_begin_text_color = get_theme_mod( 'hovercraft_main_begin_text_color', '#263238' );
-	$main_begin_link_color = get_theme_mod( 'hovercraft_main_begin_link_color', '#5C6BC0' );
-	$main_begin_link_decoration = get_theme_mod( 'hovercraft_main_begin_link_decoration', 'underline' );
+	$posthero_background_color = get_theme_mod( 'hovercraft_posthero_background_color', '#eceff1' );
+	$posthero_text_color = get_theme_mod( 'hovercraft_posthero_text_color', '#263238' );
+	$posthero_link_color = get_theme_mod( 'hovercraft_posthero_link_color', '#5C6BC0' );
+	$posthero_link_decoration = get_theme_mod( 'hovercraft_posthero_link_decoration', 'underline' );
     $prefooter_top_background_color = get_theme_mod( 'hovercraft_prefooter_top_background_color', '#eceff1' );
 	$prefooter_top_text_color = get_theme_mod( 'hovercraft_prefooter_top_text_color', '#263238' );
 	$prefooter_top_link_color = get_theme_mod( 'hovercraft_prefooter_top_link_color', '#5C6BC0' );
@@ -309,8 +309,8 @@ video.hero-background-video {
 	width: 100%;
 	padding: 30px 20px;
 	text-align: center;
-	background: <?php echo $main_begin_background_color; ?>;
-	color: <?php echo $main_begin_text_color; ?>;
+	background: <?php echo $posthero_background_color; ?>;
+	color: <?php echo $posthero_text_color; ?>;
 	}
 }
 
@@ -319,8 +319,8 @@ video.hero-background-video {
 	width: 100%;
 	padding: 30px 0px;
 	text-align: center;
-	background: <?php echo $main_begin_background_color; ?>;
-	color: <?php echo $main_begin_text_color; ?>;
+	background: <?php echo $posthero_background_color; ?>;
+	color: <?php echo $posthero_text_color; ?>;
 	}
 }
 	
@@ -333,8 +333,8 @@ video.hero-background-video {
 }
 
 #posthero a {
-	color: <?php echo $main_begin_link_color; ?>;
-	text-decoration: <?php echo $main_begin_link_decoration; ?>;
+	color: <?php echo $posthero_link_color; ?>;
+	text-decoration: <?php echo $posthero_link_decoration; ?>;
 }
 
 #prefooter-top {
