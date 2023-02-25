@@ -1,35 +1,67 @@
 <?php
 
-// topbar primary widgets
-function hovercraft_topbar_primary() {
+// topbar left widgets
+function hovercraft_topbar_left() {
 
 	register_sidebar( array(
-		'name'          => 'Topbar Primary',
-		'id'            => 'hovercraft_topbar_primary',
-		'before_widget' => '<div class="widget-topbar-primary widget-wrapper">',
+		'name'          => 'Topbar Left',
+		'id'            => 'hovercraft_topbar_left',
+		'before_widget' => '<div class="widget-topbar-left widget-wrapper">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
 
 }
-add_action( 'widgets_init', 'hovercraft_topbar_primary' );
+add_action( 'widgets_init', 'hovercraft_topbar_left' );
 
 
-// topbar secondary widgets
-function hovercraft_topbar_secondary() {
+// topbar right widgets
+function hovercraft_topbar_right() {
 
 	register_sidebar( array(
-		'name'          => 'Topbar Secondary',
-		'id'            => 'hovercraft_topbar_secondary',
-		'before_widget' => '<div class="widget-topbar-secondary widget-wrapper">',
+		'name'          => 'Topbar Right',
+		'id'            => 'hovercraft_topbar_right',
+		'before_widget' => '<div class="widget-topbar-right widget-wrapper">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
 
 }
-add_action( 'widgets_init', 'hovercraft_topbar_secondary' );
+add_action( 'widgets_init', 'hovercraft_topbar_right' );
+
+
+// preheader left widgets
+function hovercraft_preheader_left() {
+
+	register_sidebar( array(
+		'name'          => 'preheader Left',
+		'id'            => 'hovercraft_preheader_left',
+		'before_widget' => '<div class="widget-preheader-left widget-wrapper">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+}
+add_action( 'widgets_init', 'hovercraft_preheader_left' );
+
+
+// preheader right widgets
+function hovercraft_preheader_right() {
+
+	register_sidebar( array(
+		'name'          => 'preheader Right',
+		'id'            => 'hovercraft_preheader_right',
+		'before_widget' => '<div class="widget-preheader-right widget-wrapper">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+}
+add_action( 'widgets_init', 'hovercraft_preheader_right' );
 
 
 // hero snippet widgets
