@@ -139,6 +139,40 @@ a:hover {
 .topbar p {
 	margin-bottom: 0;
 }
+	
+@media screen and (max-width: 1200px) {
+.topbar-left {
+    vertical-align:middle;
+	text-align:center;
+}
+}
+
+@media screen and (min-width: 1200px) {
+.topbar-left {
+	display:table-cell;
+    vertical-align:middle;
+	height:inherit;
+	white-space:nowrap;
+	width:auto;
+	text-align:left;
+}
+}
+
+@media screen and (max-width: 1200px) {
+.topbar-right {
+	display:none;
+}
+}
+
+@media screen and (min-width: 1200px) {
+.topbar-right {
+	display:table-cell;
+    vertical-align:middle;
+	height:inherit;
+	text-align:right;
+	width:100%;
+}
+}
 
 #hero-full-container {
 	background: linear-gradient(<?php echo $hero_gradient_angle; ?>, <?php 
