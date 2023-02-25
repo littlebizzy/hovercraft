@@ -478,48 +478,48 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	)
 ) );
 	
-// main (begin) background color setting
-$wp_customize->add_setting( 'hovercraft_main_begin_background_color', array(
+// posthero background color setting
+$wp_customize->add_setting( 'hovercraft_posthero_background_color', array(
 	'default' => '#eceff1',
 	'sanitize_callback' => 'sanitize_hex_color',
 ) );
  
-// main (begin) background color control
-$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_main_begin_background_color', array(
-	'label' => 'Main (Begin) Background Color',
+// posthero background color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_posthero_background_color', array(
+	'label' => 'Posthero Background Color',
 	'description' => 'This is a description',
 	'section' => 'colors',
-	'settings' => 'hovercraft_main_begin_background_color'
+	'settings' => 'hovercraft_posthero_background_color'
 	)
 ) );
 	
-// main (begin) text color setting
-$wp_customize->add_setting( 'hovercraft_main_begin_text_color', array(
+// posthero text color setting
+$wp_customize->add_setting( 'hovercraft_posthero_text_color', array(
 	'default' => '#263238',
 	'sanitize_callback' => 'sanitize_hex_color',
 ) );
  
-// main (begin) text color control
-$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_main_begin_text_color', array(
-	'label' => 'Main (Begin) Text Color',
+// posthero text color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_posthero_text_color', array(
+	'label' => 'Posthero Text Color',
 	'description' => 'This is a description',
 	'section' => 'colors',
-	'settings' => 'hovercraft_main_begin_text_color'
+	'settings' => 'hovercraft_posthero_text_color'
 	)
 ) );
 
-// main (begin) link color setting
-$wp_customize->add_setting( 'hovercraft_main_begin_link_color', array(
+// posthero link color setting
+$wp_customize->add_setting( 'hovercraft_posthero_link_color', array(
 	'default' => '#5C6BC0',
 	'sanitize_callback' => 'sanitize_hex_color',
 ) );
 
-// main (begin) link color control
-$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_main_begin_link_color', array(
-	'label' => 'Main (Begin) Link Color',
+// posthero link color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_posthero_link_color', array(
+	'label' => 'Posthero Link Color',
 	'description' => 'This is a description',
 	'section' => 'colors',
-	'settings' => 'hovercraft_main_begin_link_color'
+	'settings' => 'hovercraft_posthero_link_color'
 	)
 ) );
 
@@ -895,22 +895,22 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
-// main (begin) link decoration setting
-$wp_customize->add_setting( 'hovercraft_main_begin_link_decoration', array(
+// posthero link decoration setting
+$wp_customize->add_setting( 'hovercraft_posthero_link_decoration', array(
     'default'    => 'underline',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
 	) 
 );
 
-// main (begin) link decoration control
+// posthero link decoration control
 $wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
-        'hovercraft_main_begin_link_decoration',
+        'hovercraft_posthero_link_decoration',
         array(
-            'label'     => __('Main (begin) link decoration', 'hovercraft'),
+            'label'     => __('Posthero link decoration', 'hovercraft'),
 			'description' => __( 'What type of link decoration', 'hovercraft' ),
             'section'   => 'hovercraft_link_styling',
-            'settings'  => 'hovercraft_main_begin_link_decoration',
+            'settings'  => 'hovercraft_posthero_link_decoration',
             'type'      => 'select',
 			'choices' => array(
 				'underline' => 'Underline',
