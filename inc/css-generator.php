@@ -173,6 +173,20 @@ a:hover {
 	width:100%;
 }
 }
+	
+@media screen and (max-width: 1200px) {
+.topbar-center {
+	text-align: center;
+}
+}
+
+@media screen and (min-width: 1200px) {
+.topbar-center {
+    vertical-align: middle;
+	height: inherit;
+	text-align: center;
+}
+}
 
 #hero-full-container {
 	background: linear-gradient(<?php echo $hero_gradient_angle; ?>, <?php 
