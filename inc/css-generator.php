@@ -108,12 +108,12 @@ a:hover {
 	color: <?php echo $default_hover_color; ?>;
 }
 
-#topbar {
+.topbar {
 	background: <?php echo $topbar_background_color; ?>;
 	color: <?php echo $topbar_text_color; ?>;
 }
 
-#topbar a {
+.topbar a {
 	color: <?php echo $topbar_link_color; ?>;
 	text-decoration: <?php echo $topbar_link_decoration; ?>;
 }
