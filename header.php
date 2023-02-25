@@ -82,20 +82,28 @@
 <div id="container">
 	
 	<?php if ( is_active_sidebar( 'hovercraft_topbar_left' ) || is_active_sidebar( 'hovercraft_topbar_right' ) ) { ?>
-	<div class="topbar<?php if ( !is_active_sidebar( 'hovercraft_topbar_left' ) || !is_active_sidebar( 'hovercraft_topbar_right' ) ) { echo " center"; } ?>">
+	<div id="topbar">
 		<div class="inner">
-			<?php if ( is_active_sidebar( 'hovercraft_topbar_left' ) ) { ?>
+			<?php if ( is_active_sidebar( 'hovercraft_topbar_left' ) && is_active_sidebar( 'hovercraft_topbar_right' ) ) { ?>
 			<div class="topbar-left">
 				<?php add_filter( 'widget_title' , 'my_widget_title', 10, 1 ); // default priority and 1 argument in the callback function
 				dynamic_sidebar( 'hovercraft_topbar_left' ); remove_filter( 'widget_title', 'my_widget_title' ); ?>
 			</div><!-- topbar-left -->
-			<?php } ?><!-- if topbar_left active -->
-			<?php if ( is_active_sidebar( 'hovercraft_topbar_right' ) ) { ?>
 			<div class="topbar-right">
 				<?php add_filter( 'widget_title' , 'my_widget_title', 10, 1 ); // default priority and 1 argument in the callback function
 				dynamic_sidebar( 'hovercraft_topbar_right' ); remove_filter( 'widget_title', 'my_widget_title' ); ?>
 			</div><!-- topbar-right -->
-			<?php } ?><!-- if topbar_right active -->
+			<?php } elseif ( is_active_sidebar( 'hovercraft_topbar_left' ) xor is_active_sidebar( 'hovercraft_topbar_right' ) ) { ?>
+			<div class="topbar-center">
+				<?php if ( is_active_sidebar( 'hovercraft_topbar_left' ) ) { ?>
+					<?php add_filter( 'widget_title' , 'my_widget_title', 10, 1 ); // default priority and 1 argument in the callback function
+					dynamic_sidebar( 'hovercraft_topbar_left' ); remove_filter( 'widget_title', 'my_widget_title' ); ?>
+				<?php } elseif ( is_active_sidebar( 'hovercraft_topbar_right' ) ) { ?>
+					<?php add_filter( 'widget_title' , 'my_widget_title', 10, 1 ); // default priority and 1 argument in the callback function
+					dynamic_sidebar( 'hovercraft_topbar_right' ); remove_filter( 'widget_title', 'my_widget_title' ); ?>
+				<?php } ?>
+			</div><!-- topbar-center -->
+			<?php } ?>
 			<div class="clear"></div>
 		</div><!-- inner -->
 	</div><!-- topbar -->
