@@ -3,10 +3,8 @@
 	<head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons&family=Material+Icons+Outlined&family=Material+Icons+Two+Tone">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap">
 	
@@ -35,18 +33,19 @@
 			echo ' - ';
 			echo get_option( 'blogname' );
 		} ?></title>
+	
 	<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
 		
-	<?php wp_body_open(); ?>
+		<?php wp_body_open(); ?>
 	
-<input type="checkbox" id="togglebox" />
+		<input type="checkbox" id="togglebox" />
 	
-<nav id="offcanvas-menu">
-	<?php if ( class_exists( 'WooCommerce' ) ) { ?>
-	<div class="cart-button-offcanvas-wrapper"><a href="/cart/"><div class="cart-button-offcanvas"><i class="material-icons cart">shopping_cart</i><?php _e( 'My Cart', 'hovercraft' ) ?><div class="notification-dot-offcanvas"><?php echo WC()->cart->get_cart_contents_count(); ?></div></div></a></div><!-- cart-icon-wrapper -->
-	<?php } ?>
+		<nav id="offcanvas-menu">
+			<?php if ( class_exists( 'WooCommerce' ) ) { ?>
+			<div class="cart-button-offcanvas-wrapper"><a href="/cart/"><div class="cart-button-offcanvas"><i class="material-icons cart">shopping_cart</i><?php _e( 'My Cart', 'hovercraft' ) ?><div class="notification-dot-offcanvas"><?php echo WC()->cart->get_cart_contents_count(); ?></div></div></a></div><!-- cart-icon-wrapper -->
+			<?php } ?>
 	<?php 
     if ( has_nav_menu( 'main-menu' ) ) {
     	wp_nav_menu(array(
@@ -82,24 +81,41 @@
 
 <div id="container">
 	
-	<?php if ( is_active_sidebar( 'hovercraft_topbar_primary' ) ) { ?>
-	<div id="topbar">
-	<div class="inner">
-	<?php if ( is_active_sidebar( 'hovercraft_topbar_secondary' ) ) { ?>
-	<div class="topbar-left">
-	<?php } else { ?>
-	<div class="topbar-center">
-	<?php } ?>
-			<?php add_filter( 'widget_title' , 'my_widget_title', 10, 1 ); //we use the default priority and 3 arguments in the callback function
-		dynamic_sidebar( 'hovercraft_topbar_primary' ); remove_filter( 'widget_title', 'my_widget_title' ); ?>
-	</div>
-	<?php if ( is_active_sidebar( 'hovercraft_topbar_secondary' )) { ?>
-	<div class="topbar-right">
-		<?php add_filter( 'widget_title' , 'my_widget_title', 10, 1 ); //we use the default priority and 3 arguments in the callback function
-		dynamic_sidebar( 'hovercraft_topbar_secondary' ); remove_filter( 'widget_title', 'my_widget_title' ); ?>
-	</div>
-	<?php } ?>
-	<div class="clear"></div>
-	</div><!-- inner -->
+	<?php if ( is_active_sidebar( 'hovercraft_topbar_left' ) || is_active_sidebar( 'hovercraft_topbar_right' ) ) { ?>
+	<div class="topbar<?php if ( !is_active_sidebar( 'hovercraft_topbar_left' ) || !is_active_sidebar( 'hovercraft_topbar_right' ) ) { echo " center"; } ?>">
+		<div class="inner">
+			<?php if ( is_active_sidebar( 'hovercraft_topbar_left' ) ) { ?>
+			<div class="topbar-left">
+				<?php add_filter( 'widget_title' , 'my_widget_title', 10, 1 ); // default priority and 1 argument in the callback function
+				dynamic_sidebar( 'hovercraft_topbar_left' ); remove_filter( 'widget_title', 'my_widget_title' ); ?>
+			</div><!-- topbar-left -->
+			<?php } ?><!-- if topbar_left active -->
+			<?php if ( is_active_sidebar( 'hovercraft_topbar_right' ) ) { ?>
+			<div class="topbar-right">
+				<?php add_filter( 'widget_title' , 'my_widget_title', 10, 1 ); // default priority and 1 argument in the callback function
+				dynamic_sidebar( 'hovercraft_topbar_right' ); remove_filter( 'widget_title', 'my_widget_title' ); ?>
+			</div><!-- topbar-right -->
+			<?php } ?><!-- if topbar_right active -->
+			<div class="clear"></div>
+		</div><!-- inner -->
 	</div><!-- topbar -->
+	<?php } ?><!-- if topbar widgets active -->
+
+	<?php if ( is_active_sidebar( 'hovercraft_preheader_left' ) ) { ?>
+	<div id="preheader-left">
+		<div class="inner">
+			<?php dynamic_sidebar( 'hovercraft_preheader_left' ); ?>
+			<div class="clear"></div>
+		</div><!--inner -->
+	</div><!-- preheader-left -->
 	<?php } ?>
+
+	<?php if ( is_active_sidebar( 'hovercraft_preheader_right' ) ) { ?>
+	<div id="preheader-right">
+		<div class="inner">
+			<?php dynamic_sidebar( 'hovercraft_preheader_right' ); ?>
+			<div class="clear"></div>
+		</div><!--inner -->
+	</div><!-- preheader-right -->
+	<?php } ?>
+	
