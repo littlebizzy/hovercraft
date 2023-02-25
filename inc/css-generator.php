@@ -109,7 +109,7 @@ a:hover {
 }
 
 @media screen and (max-width: 1200px) {
-.topbar {
+#topbar {
 	width: 100%;
 	padding: 10px 20px;
 	font-size: 14px;
@@ -120,7 +120,7 @@ a:hover {
 }
 
 @media screen and (min-width: 1200px) {
-.topbar {
+#topbar {
 	width: 100%;
 	padding: 10px 0px;
 	font-size: 14px;
@@ -131,12 +131,12 @@ a:hover {
 	}
 }
 
-.topbar a {
+#topbar a {
 	color: <?php echo $topbar_link_color; ?>;
 	text-decoration: <?php echo $topbar_link_decoration; ?>;
 }
 
-.topbar p {
+#topbar p {
 	margin-bottom: 0;
 }
 	
