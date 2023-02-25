@@ -36,7 +36,7 @@ add_action( 'widgets_init', 'hovercraft_topbar_right' );
 function hovercraft_preheader_left() {
 
 	register_sidebar( array(
-		'name'          => 'preheader Left',
+		'name'          => 'Preheader Left',
 		'id'            => 'hovercraft_preheader_left',
 		'before_widget' => '<div class="widget-preheader-left widget-wrapper">',
 		'after_widget'  => '</div>',
@@ -52,7 +52,7 @@ add_action( 'widgets_init', 'hovercraft_preheader_left' );
 function hovercraft_preheader_right() {
 
 	register_sidebar( array(
-		'name'          => 'preheader Right',
+		'name'          => 'Preheader Right',
 		'id'            => 'hovercraft_preheader_right',
 		'before_widget' => '<div class="widget-preheader-right widget-wrapper">',
 		'after_widget'  => '</div>',
