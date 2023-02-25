@@ -108,9 +108,27 @@ a:hover {
 	color: <?php echo $default_hover_color; ?>;
 }
 
+@media screen and (max-width: 1200px) {
 .topbar {
+	width: 100%;
+	padding: 10px 20px;
+	font-size: 14px;
+	line-height: 1.5;
 	background: <?php echo $topbar_background_color; ?>;
 	color: <?php echo $topbar_text_color; ?>;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+.topbar {
+	width: 100%;
+	padding: 10px 0px;
+	font-size: 14px;
+	line-height: 1.5;
+	display: table;
+	background: <?php echo $topbar_background_color; ?>;
+	color: <?php echo $topbar_text_color; ?>;
+	}
 }
 
 .topbar a {
