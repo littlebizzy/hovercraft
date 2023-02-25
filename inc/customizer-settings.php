@@ -117,22 +117,22 @@ $wp_customize->add_control(
     )
 );
 
-// main begin widget display setting
-$wp_customize->add_setting( 'hovercraft_main_begin_widget_display', array(
+// posthero widget display setting
+$wp_customize->add_setting( 'hovercraft_posthero_widget_display', array(
     'default'    => 'full_and_half_hero',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
 	) 
 );
 
-// main begin widget display control
+// posthero widget display control
 $wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
-        'hovercraft_main_begin_widget_display',
+        'hovercraft_posthero_widget_display',
         array(
             'label'     => __('Posthero widget display', 'hovercraft'),
 			'description' => __( 'Where should the Posthero widget be displayed when enabled?', 'hovercraft' ),
             'section'   => 'hovercraft_general',
-            'settings'  => 'hovercraft_main_begin_widget_display',
+            'settings'  => 'hovercraft_posthero_widget_display',
             'type'      => 'select',
 			'choices' => array(
         		'full_hero_only' => 'Full Hero only',
