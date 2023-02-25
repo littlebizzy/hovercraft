@@ -13,6 +13,7 @@ function hovercraft_generate_css(){
 		$hero_image = $url_header_image; 
 	}
     
+	$mobile_topbar_widget = get_theme_mod( 'hovercraft_mobile_topbar', 'topbar_left' );
 	$desktop_logo_width = get_theme_mod( 'hovercraft_desktop_logo_width', '150' );
 	$mobile_logo_width = get_theme_mod( 'hovercraft_mobile_logo_width', '100' );
 	$default_font_family = get_theme_mod( 'hovercraft_default_font', 'noto_sans' );
@@ -142,8 +143,9 @@ a:hover {
 	
 @media screen and (max-width: 1200px) {
 .topbar-left {
-    vertical-align:middle;
-	text-align:center;
+    vertical-align: middle;
+	text-align: center;
+	<?php if ( $mobile_topbar_widget == 'topbar_right') { echo "display: none;"; } ?>
 }
 }
 
@@ -160,8 +162,10 @@ a:hover {
 
 @media screen and (max-width: 1200px) {
 .topbar-right {
-	display:none;
-}
+	vertical-align: middle;
+	text-align: center;
+	<?php if ( $mobile_topbar_widget == 'topbar_left') { echo "display: none;"; } ?>
+	}
 }
 
 @media screen and (min-width: 1200px) {
