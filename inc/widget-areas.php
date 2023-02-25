@@ -48,20 +48,20 @@ function hovercraft_hero_snippet() {
 add_action( 'widgets_init', 'hovercraft_hero_snippet' );
 
 
-// main begin widgets
-function hovercraft_main_begin() {
+// posthero widgets
+function hovercraft_posthero() {
 
 	register_sidebar( array(
 		'name'          => 'Posthero (Adjust in Customizer)',
-		'id'            => 'hovercraft_main_begin',
-		'before_widget' => '<div class="widget-main-begin widget-wrapper">',
+		'id'            => 'hovercraft_posthero',
+		'before_widget' => '<div class="widget-posthero widget-wrapper">',
 		'after_widget'  => '</div>',
 		'before_title'  => '<h3 class="widget-title">',
 		'after_title'   => '</h3>',
 	) );
 
 }
-add_action( 'widgets_init', 'hovercraft_main_begin' );
+add_action( 'widgets_init', 'hovercraft_posthero' );
 
 
 // home premain top widgets
