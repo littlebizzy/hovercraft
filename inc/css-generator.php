@@ -537,14 +537,30 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 /* scroll-to-top */
 
 .scrollup-wrapper {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
+	position: fixed;
+	bottom: 30px;
+	right: 30px;
+	margin: 0;
+	padding: 2px 3px;
+	background: rgba(55, 71, 79, 0.1);
+}
+	
+.scrollup-wrapper:hover {
+	background: rgba(55, 71, 79, 0.2);
 }
 
 .scrollup-link {
-  cursor: pointer;
-  font-size: 24px;
+	cursor: pointer;
+	font-size: 24px;
+	line-height: 1;
+	vertical-align: middle;
+	margin: 0;
+	padding: 0;
+	color: #ffffff;
+}
+
+.scrollup-link:active, .scrollup-link:hover {
+	color: #ffffff;
 }
 </style>
 
