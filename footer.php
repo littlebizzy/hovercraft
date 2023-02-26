@@ -82,7 +82,7 @@
 <?php wp_footer(); ?>
 
 <?php if ( get_theme_mod( 'hovercraft_scroll_to_top' ) === true ) { ?>
-	<a href="#top" id="scrollup"></a>
+	<div class="scrollup-wrapper"><a class="scrollup-link" href="#top"></a></div>
 <?php } ?>
 
 </body><!-- body -->
