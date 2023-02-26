@@ -1319,9 +1319,9 @@ function hovercraft_sanitize_radio( $input, $setting ){
 }
 
 // sanitize checkbox function
-function hovercraft_sanitize_checkbox( $input ){
+function hovercraft_sanitize_checkbox( $checked ){
 	//returns true if checkbox is checked
-	return ( isset( $input ) ? true : false );
+	return ( ( isset( $checked ) && true === $checked ) ? true : false );
 }
 
 // sanitize float function
@@ -1332,3 +1332,5 @@ function hovercraft_sanitize_float( $input ){
 // https://themeshaper.com/2013/04/29/validation-sanitization-in-customizer/
 // https://divpusher.com/blog/wordpress-customizer-sanitization-examples/
 // https://wordpress.stackexchange.com/questions/225825/customizer-sanitize-callback-for-input-type-number
+// https://core.trac.wordpress.org/ticket/24528
+// https://wp-a2z.org/oik_api/twentytwenty_customizesanitize_checkbox/
