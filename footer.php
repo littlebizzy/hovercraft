@@ -81,8 +81,8 @@
 
 <?php wp_footer(); ?>
 
-<?php if ( get_theme_mod( 'hovercraft_back_to_top' ) == 1 ) { ?>
-	<a id="scrollup"></a>
+<?php if ( get_theme_mod( 'hovercraft_scroll_to_top' ) === true ) { ?>
+	<a href="#top" id="scrollup"></a>
 <?php } ?>
 
 </body><!-- body -->
