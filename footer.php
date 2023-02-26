@@ -81,7 +81,8 @@
 
 <?php wp_footer(); ?>
 
-<?php if ( get_theme_mod( 'hovercraft_scroll_to_top' ) === true ) { ?>
+<?php $hovercraft_scroll_to_top_checked = get_theme_mod( 'hovercraft_scroll_to_top' ) ? true : false;
+if ( $hovercraft_scroll_to_top_checked == true ) { ?>
 		<div class="scrollup-wrapper">
 			<a class="scrollup-link" href="#top"><i class="material-icons arrow_upward">arrow_upward</i></a>
 		</div><!-- scrollup-wrapper -->
