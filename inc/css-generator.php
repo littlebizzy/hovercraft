@@ -536,43 +536,15 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 
 /* scroll-to-top */
 
-#scrollup {
-  	display: inline-block;
-  	background-color: #FF9800;
-  	width: 50px;
-  	height: 50px;
-  	text-align: center;
-  	border-radius: 5px;
-  	position: fixed;
-  	bottom: 30px;
-  	right: 30px;
-  	transition: background-color .3s, 
-    opacity .5s, visibility .5s;
-  	opacity: 0;
-  	visibility: hidden;
-  	z-index: 1000;
+.scrollup-wrapper {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
 }
 
-#scrollup::after {
-	content: "\e316";
-	font-family: 'Material Icons';
-  	font-size: 2em;
-  	line-height: 50px;
-  	color: #fff;
-}
-
-#scrollup:hover {
-  	cursor: pointer;
-  	background-color: #333;
-}
-
-#scrollup:active {
-  	background-color: #555;
-}
-
-#scrollup.show {
-  	opacity: 1;
-  	visibility: visible;
+.scrollup-link {
+  cursor: pointer;
+  font-size: 24px;
 }
 </style>
 
