@@ -55,21 +55,21 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
-// back to top setting
-$wp_customize->add_setting('hovercraft_back_to_top', array(
+// scroll to top setting
+$wp_customize->add_setting('hovercraft_scroll_to_top', array(
     'default' => 0,
 	'sanitize_callback' => 'hovercraft_sanitize_checkbox',
 ));
 
-// back to top control
+// scroll to top control
 $wp_customize->add_control(
     new WP_Customize_Control(
         $wp_customize,
-        'hovercraft_back_to_top',
+        'hovercraft_scroll_to_top',
         array(
-            'label'     => __('Enable back to top button', 'hovercraft'),
+            'label'     => __( 'Enable scroll to top', 'hovercraft' ),
             'section'   => 'hovercraft_general',
-            'settings'  => 'hovercraft_back_to_top',
+            'settings'  => 'hovercraft_scroll_to_top',
             'type'      => 'checkbox',
         )
     )
