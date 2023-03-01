@@ -6,7 +6,11 @@ function hovercraft_customizer($wp_customize) {
 $wp_customize->remove_control( 'header_textcolor' );
 
 // header media section
-$wp_customize->get_section('header_image')->title = __( 'Header Media', 'hovercraft' );
+$wp_customize->get_section( 'header_image' )->title = __( 'Header Media', 'hovercraft' );
+
+// homepage section
+$wp_customize->get_section( 'static_front_page' )->title = __( 'Homepage', 'hovercraft' );
+$wp_customize->get_section( 'static_front_page' )->priority = 31;
 
 
 // general options section
@@ -188,13 +192,7 @@ $wp_customize->add_control( new WP_Customize_Control(
     			)
         )
 ) );
-	
 
-// homepage section
-$wp_customize->add_section( 'hovercraft_homepage', array(
-    'title'      => 'Homepage',
-    'priority'   => 32,
-) );
 
 // homepage html title setting
 $wp_customize->add_setting( 'hovercraft_homepage_html_title', array(
@@ -210,7 +208,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         array(
             'label'     => __( 'Homepage HTML title', 'hovercraft' ),
 			'description' => __( 'How should the homepage HTML title tag be generated?', 'hovercraft' ),
-            'section'   => 'hovercraft_homepage',
+            'section'   => 'static_front_page',
             'settings'  => 'hovercraft_homepage_html_title',
             'type'      => 'select',
 			'choices' => array(
@@ -234,7 +232,7 @@ $wp_customize->add_control(
         'hovercraft_homepage_hide_main',
         array(
             'label'     => __('Hide homepage main section', 'hovercraft'),
-            'section'   => 'hovercraft_homepage',
+            'section'   => 'static_front_page',
             'settings'  => 'hovercraft_homepage_hide_main',
             'type'      => 'checkbox',
         )
@@ -1386,3 +1384,5 @@ function hovercraft_sanitize_float( $input ){
 // https://wordpress.stackexchange.com/questions/225825/customizer-sanitize-callback-for-input-type-number
 // https://core.trac.wordpress.org/ticket/24528
 // https://wp-a2z.org/oik_api/twentytwenty_customizesanitize_checkbox/
+// https://wordpress.stackexchange.com/questions/261969/how-to-rename-and-rearrange-multiple-sections-in-the-customizer
+// https://wphelp.blog/how-to-remove-sections-from-wordpress-customizer/
