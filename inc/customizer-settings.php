@@ -188,6 +188,38 @@ $wp_customize->add_control( new WP_Customize_Control(
     			)
         )
 ) );
+	
+
+// homepage section
+$wp_customize->add_section( 'hovercraft_homepage', array(
+    'title'      => 'Homepage',
+    'priority'   => 32,
+) );
+
+// homepage html title setting
+$wp_customize->add_setting( 'hovercraft_homepage_html_title', array(
+    'default'    => 'site_name_site_tagline',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// homepage html title control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_homepage_html_title',
+        array(
+            'label'     => __( 'Homepage HTML title', 'hovercraft' ),
+			'description' => __( 'How should the homepage HTML title tag be generated?', 'hovercraft' ),
+            'section'   => 'hovercraft_homepage',
+            'settings'  => 'hovercraft_homepage_html_title',
+            'type'      => 'select',
+			'choices' => array(
+				'site_name_site_tagline' => 'Site Name | Site Tagline',
+				'site_name_only' => 'Site Name Only',
+				'page_title_only' => 'Page Title Only',
+    			)
+        )
+) );
 
 
 // fonts section
