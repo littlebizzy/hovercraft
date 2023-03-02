@@ -280,6 +280,40 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// alternative font family setting
+$wp_customize->add_setting( 'hovercraft_alternative_font', array(
+    'default'    => 'noto_sans',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// alternative font family control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_alternative_font',
+        array(
+            'label'     => __( 'Alternative font family', 'hovercraft' ),
+			'description' => __( 'What Google Fonts family to use for the alternative font?', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_alternative_font',
+            'type'      => 'select',
+			'choices' => array(
+				'gentium_book_basic' => 'Gentium Book Basic',
+				'lato' => 'Lato',
+				'lora' => 'Lora',
+				'merriweather' => 'Merriweather',
+        		'noto_sans' => 'Noto Sans',
+				'noto_serif' => 'Noto Serif',
+        		'open_sans' => 'Open Sans',
+				'poppins' => 'Poppins',
+				'pt_serif' => 'PT Serif',
+				'roboto' => 'Roboto',
+				'roboto_slab' => 'Robot Slab',
+				'source_serif_pro' => 'Source Serif Pro',
+    			)
+        )
+) );
+
 // site name font family setting
 $wp_customize->add_setting( 'hovercraft_site_name_font', array(
     'default'    => 'noto_sans',
