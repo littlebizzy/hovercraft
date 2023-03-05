@@ -495,7 +495,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	
 // preheader background color setting
 $wp_customize->add_setting( 'hovercraft_preheader_background_color', array(
-	'default' => '#263238',
+	'default' => '#eceff1',
 	'sanitize_callback' => 'sanitize_hex_color',
 ) );
 
@@ -510,7 +510,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	
 // preheader text color setting
 $wp_customize->add_setting( 'hovercraft_preheader_text_color', array(
-	'default' => '#ffffff',
+	'default' => '#263238',
 	'sanitize_callback' => 'sanitize_hex_color',
 ) );
  
