@@ -34,9 +34,9 @@ function hovercraft_generate_css(){
 	$topbar_text_color = get_theme_mod( 'hovercraft_topbar_text_color', '#ffffff' );
 	$topbar_link_color = get_theme_mod( 'hovercraft_topbar_link_color', '#ffffff' );
 	$topbar_link_decoration = get_theme_mod( 'hovercraft_topbar_link_decoration', 'underline' );
-	$preheader_background_color = get_theme_mod( 'hovercraft_preheader_background_color', '#263238' );
-	$preheader_text_color = get_theme_mod( 'hovercraft_preheader_text_color', '#ffffff' );
-	$preheader_link_color = get_theme_mod( 'hovercraft_preheader_link_color', '#ffffff' );
+	$preheader_background_color = get_theme_mod( 'hovercraft_preheader_background_color', '#eceff1' );
+	$preheader_text_color = get_theme_mod( 'hovercraft_preheader_text_color', '#263238' );
+	$preheader_link_color = get_theme_mod( 'hovercraft_preheader_link_color', '#263238' );
 	$preheader_link_decoration = get_theme_mod( 'hovercraft_preheader_link_decoration', 'underline' );
 	$hero_gradient_start_color = get_theme_mod( 'hovercraft_hero_gradient_start_color', '#37474f' );
 	$hero_gradient_stop_color = get_theme_mod( 'hovercraft_hero_gradient_stop_color', '#ffffff' );
@@ -72,11 +72,16 @@ html, body {
 	color: <?php echo $default_text_color; ?>;
 }
 
+
+/* logo */
+
 @media screen and (max-width: 1200px) {
 .site-logo {
 	width: <?php echo $mobile_logo_width; ?>px !important;
 	max-width: <?php echo $mobile_logo_width; ?>px !important;
 	height: auto;
+	margin-right: 10px;
+	display: inline-block;
 	}
 }
 
@@ -85,12 +90,31 @@ html, body {
 	width: <?php echo $desktop_logo_width; ?>px !important;
 	max-width: <?php echo $desktop_logo_width; ?>px !important;
 	height: auto;
+	margin-right: 20px;
+	display: inline-block;
 	}
 }
 
+
+/* site name */
+
+@media screen and (max-width: 1200px) {
 .site-name {
 	font-family: <?php echo ucwords(str_replace("_", " ", $site_name_font_family)); ?>;
 	font-weight: <?php echo $site_name_font_weight; ?>;
+	font-size: 24px;
+	line-height: 1; /* because site-tagline is hidden on mobile */
+	display: block;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+.site-name {
+	font-family: <?php echo ucwords(str_replace("_", " ", $site_name_font_family)); ?>;
+	font-weight: <?php echo $site_name_font_weight; ?>;
+	font-size: 36px;
+	display: block;
+	}
 }
 
 a {
@@ -113,6 +137,9 @@ a:hover {
 .tile i {
 	color: <?php echo $default_hover_color; ?>;
 }
+
+
+/* topbar */
 
 @media screen and (max-width: 1200px) {
 #topbar {
@@ -196,7 +223,10 @@ a:hover {
 	text-align: center;
 	}
 }
-	
+
+
+/* preheader */
+
 @media screen and (max-width: 1200px) {
 #preheader {
 	width: 100%;
