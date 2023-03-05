@@ -1,7 +1,7 @@
 /*
 Theme Name: HoverCraft
 Theme URI: https://hovercraft.vip
-Version: 0.1.140
+Version: 0.1.141
 Description: No maintenance WordPress theme
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
@@ -33,18 +33,14 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, hr, bl
     box-sizing: border-box;
   }
 
-
-/* general */
-
 html, body {
-	font-family: 'Noto Sans', sans-serif;
 	font-size: 16px;
-	color: #263238; /* correct */
 	height: 100%;
 	line-height: 1.5;
-	margin: 0;
 	scroll-behavior: smooth;
 }
+
+/* general */
 
 @media screen and (max-width: 1200px) {
 #container {
@@ -620,21 +616,8 @@ button {
 }
 
 
-/* logo */
 
-@media screen and (max-width: 1200px) {
-.site-logo {
-	margin-right: 10px;
-	display: inline-block;
-	}
-}
 
-@media screen and (min-width: 1200px) {
-.site-logo {
-	margin-right: 20px;
-	display: inline-block;
-	}
-}
 
 /* branding right... site name and tagline */
 
@@ -644,21 +627,6 @@ button {
 	height:inherit;
 	text-align:left;
 	width:100%;
-}
-
-@media screen and (max-width: 1200px) {
-.site-name {
-	font-size: 24px;
-	line-height: 1; /* because site-tagline is hidden on mobile */
-	display: block;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-.site-name {
-	font-size: 36px;
-	display: block;
-	}
 }
 
 @media screen and (max-width: 1200px) {
