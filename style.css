@@ -2239,6 +2239,10 @@ form.cart {
 	margin-bottom: 30px !important;
 }
 
+.show-password-input {
+    top: 0px!important;
+ }
+
 
 /* woocommerce product list widget */
 
