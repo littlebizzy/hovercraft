@@ -2243,7 +2243,8 @@ form.cart {
 /* woo login page */
 
 .show-password-input {
-	top: auto!important;
+	position: absolute!important;
+	top: .4em!important;
 }
 
 .woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea {
