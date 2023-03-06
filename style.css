@@ -2240,7 +2240,7 @@ form.cart {
 }
 
 .show-password-input {
-    top: 0px!important;
+    top: auto!important;
  }
 
 
