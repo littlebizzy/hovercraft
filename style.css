@@ -2240,6 +2240,20 @@ form.cart {
 }
 
 
+/* woo login page */
+
+.show-password-input {
+	top: auto!important;
+}
+
+.woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea {
+    border: 1px solid #d3ced2!important;
+	padding: 5px 10px!important;
+	box-shadow: inset 0px 0px 0px 0px #bdbdbd!important;
+	font-size: 18px!important;
+}
+
+
 /* woocommerce product list widget */
 
 ul.product_list_widget {
