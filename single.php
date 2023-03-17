@@ -15,9 +15,9 @@
 		<?php if ( is_singular() ) { ?>
 				<?php if ( is_page_template( 'page-templates/template-basic.php' ) || !is_page_template() ) { ?>
 					<h1><?php the_title(); ?></h1>
-					<?php $url_featured_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' ); 
+					<?php global $post; $url_featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( $currentID ), 'medium' );
 					if ( !empty( $url_featured_image ) && ( !is_singular('product') ) ) { ?>
-					<img class="featured-image" src="<?php echo $url_featured_image; ?>" />
+					<img class="featured-image" src="<?php echo $url_featured_image[0]; ?>" />
 					<?php } ?>
 					<?php if ( 'post' == get_post_type() ) { 
 						the_time(get_option('date_format')); 
