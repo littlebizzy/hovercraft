@@ -521,7 +521,6 @@ video.hero-background-video {
 	float: right;
 	width: 360px;
 	margin-left: 40px;
-	padding: 40px;
 	<?php $sidebar_padding_checked = get_theme_mod( 'hovercraft_sidebar_padding' ) ? true : false;
 	if ( $sidebar_padding_checked == true ) { echo "padding: 40px;"; } ?>
 	background: #FFF;
