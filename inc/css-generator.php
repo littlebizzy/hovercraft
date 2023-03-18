@@ -47,6 +47,7 @@ function hovercraft_generate_css(){
 	$posthero_text_color = get_theme_mod( 'hovercraft_posthero_text_color', '#263238' );
 	$posthero_link_color = get_theme_mod( 'hovercraft_posthero_link_color', '#5C6BC0' );
 	$posthero_link_decoration = get_theme_mod( 'hovercraft_posthero_link_decoration', 'underline' );
+	$main_background_color = get_theme_mod( 'hovercraft_main_background_color', '#ffffff' );
     $prefooter_top_background_color = get_theme_mod( 'hovercraft_prefooter_top_background_color', '#eceff1' );
 	$prefooter_top_text_color = get_theme_mod( 'hovercraft_prefooter_top_text_color', '#263238' );
 	$prefooter_top_link_color = get_theme_mod( 'hovercraft_prefooter_top_link_color', '#5C6BC0' );
@@ -453,6 +454,10 @@ video.hero-background-video {
 #posthero a {
 	color: <?php echo $posthero_link_color; ?>;
 	text-decoration: <?php echo $posthero_link_decoration; ?>;
+}
+
+#main {
+	background: <?php echo $main_background_color; ?>;
 }
 
 #prefooter-top {
