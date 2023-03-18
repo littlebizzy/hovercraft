@@ -456,8 +456,22 @@ video.hero-background-video {
 	text-decoration: <?php echo $posthero_link_decoration; ?>;
 }
 
+/* main */
+/* main refers to everything between header/splash and footer */
+
+@media screen and (max-width: 1200px) {
 #main {
+	width: 100%;
+	padding: 40px 0px;
 	background: <?php echo $main_background_color; ?>;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+#main {
+	padding: 40px 0px;
+	background: <?php echo $main_background_color; ?>;
+	}
 }
 
 #prefooter-top {
