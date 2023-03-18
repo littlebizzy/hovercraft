@@ -399,9 +399,41 @@ video.hero-background-video {
 	background: <?php echo $header_mini_hero_background_color; ?>;
 }
 
+/* basic header */
+
+@media screen and (max-width: 1200px) {
 #header-basic {
+	width: 100%;
+	display: table;
+	padding: 20px 20px;
+	border-bottom: 1px solid transparent;
 	background: <?php echo $header_basic_background_color; ?>;
+	color: #263238; /* correct */
+	}
 }
+
+@media screen and (min-width: 1200px) {
+#header-basic {
+	width: 100%;
+	display: table;
+	margin: 0px auto;
+	padding: 30px 0px;
+	border-bottom: 1px solid transparent;
+	background: <?php echo $header_basic_background_color; ?>;
+	color: #263238; /* correct */
+	}
+}
+
+#header-basic .main-menu ul li a {
+	text-decoration: none;
+	color: #263238;
+	font-weight: 600;
+}
+
+#header-basic a {
+	color: #263238; /* correct */
+}
+
 	
 .cta-header-primary ul li a {
 	font-size: 18px;
