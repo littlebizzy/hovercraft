@@ -503,6 +503,53 @@ video.hero-background-video {
 	background: <?php echo $main_background_color; ?>;
 	}
 }
+
+/* primary */
+
+@media screen and (max-width: 1200px) {
+#primary {
+	width: 100%;
+	padding: 20px 20px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+#primary {
+	float: left;
+	width: 800px;
+	padding: 0px 0px;
+	}
+}
+	
+/* primary-wide */
+
+@media screen and (max-width: 1200px) {
+#primary-wide {
+	width: 100%;
+	padding: 20px 20px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+#primary-wide {
+	width: 100%;
+	}
+}
+	
+/* primary-center */
+
+@media screen and (max-width: 1200px) {
+#primary-center {
+	width: 100%;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+#primary-center {
+	width: 800px;
+	margin: 0px auto;
+	}
+}
 	
 /* images */
 
@@ -511,6 +558,10 @@ img.featured-image {
 }
 	
 /* content */
+	
+#content {
+	background: #ffffff;
+}
 
 #content ul {
 	margin-left: 30px;
