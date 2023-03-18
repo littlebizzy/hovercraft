@@ -100,7 +100,7 @@ html, body {
 
 img.featured-image {
 	width: 800px;
-	margin-bottom: 30px;
+	margin-bottom: 40px;
 }
 
 
@@ -1429,6 +1429,10 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 
 #content ol li {
 	margin-bottom: 15px;
+}
+
+.content-padded {
+	padding: 0px 40px;
 }
 
 
