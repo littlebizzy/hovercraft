@@ -56,7 +56,6 @@ function hovercraft_generate_css(){
 	$prefooter_bottom_text_color = get_theme_mod( 'hovercraft_prefooter_bottom_text_color', '#ffffff' );
 	$prefooter_bottom_link_color = get_theme_mod( 'hovercraft_prefooter_bottom_link_color', '#5C6BC0' );
 	$prefooter_bottom_link_decoration = get_theme_mod( 'hovercraft_prefooter_bottom_link_decoration', 'underline' );
-	$sidebar_padding = get_theme_mod( 'hovercraft_sidebar_padding', true );
     $footer_background_color = get_theme_mod( 'hovercraft_footer_background_color', '#eceff1' );
 	$footer_text_color = get_theme_mod( 'hovercraft_footer_text_color', '#263238' );
 	$footer_link_color = get_theme_mod( 'hovercraft_footer_link_color', '#5C6BC0' );
@@ -523,7 +522,8 @@ video.hero-background-video {
 	width: 360px;
 	margin-left: 40px;
 	padding: 40px;
-	<?php if ( $sidebar_padding == true ) { echo "padding: 40px;"; } ?>
+	<?php $sidebar_padding_checked = get_theme_mod( 'hovercraft_sidebar_padding' ) ? true : false;
+	if ( $sidebar_padding_checked == true ) { echo "padding: 40px;"; } ?>
 	background: #FFF;
 	}
 }
