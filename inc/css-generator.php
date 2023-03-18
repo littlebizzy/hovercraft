@@ -408,7 +408,6 @@ video.hero-background-video {
 	padding: 20px 20px;
 	border-bottom: 1px solid transparent;
 	background: <?php echo $header_basic_background_color; ?>;
-	color: #263238; /* correct */
 	}
 }
 
@@ -417,10 +416,9 @@ video.hero-background-video {
 	width: 100%;
 	display: table;
 	margin: 0px auto;
-	padding: 30px 0px;
+	padding: 20px 0px;
 	border-bottom: 1px solid transparent;
 	background: <?php echo $header_basic_background_color; ?>;
-	color: #263238; /* correct */
 	}
 }
 
@@ -501,10 +499,37 @@ video.hero-background-video {
 
 @media screen and (min-width: 1200px) {
 #main {
-	padding: 40px 0px;
+	padding: 20px 0px;
 	background: <?php echo $main_background_color; ?>;
 	}
 }
+	
+/* images */
+
+img.featured-image {
+	width: 800px;
+}
+	
+/* content */
+
+#content ul {
+	margin-left: 30px;
+	margin-bottom: 30px;
+}
+
+#content ol {
+	margin-left: 30px;
+	margin-bottom: 30px;
+}
+
+#content ol li {
+	margin-bottom: 15px;
+}
+
+.content-padded {
+	padding: 40px;
+}
+
 	
 /* sidebar */
 
@@ -519,16 +544,18 @@ video.hero-background-video {
 @media screen and (min-width: 1200px) {
 #sidebar {
 	float: right;
-	width: 360px;
-	margin-left: 40px;
-	<?php $sidebar_padding_checked = get_theme_mod( 'hovercraft_sidebar_padding' ) ? true : false;
-	if ( $sidebar_padding_checked == true ) { echo "padding: 40px;"; } ?>
-	background: #FFF;
+	width: 380px;
+	margin-left: 20px;
+	<?php // $sidebar_padding_checked = get_theme_mod( 'hovercraft_sidebar_padding' ) ? true : false;
+	// if ( $sidebar_padding_checked == true ) { echo "padding: 40px;"; } ?>
 	}
 }
 
 #sidebar .widget-wrapper{
-    margin-bottom: 30px;
+	width: 100%;
+	background: #ffffff;
+	padding: 20px;
+    margin-bottom: 20px;
 }
 
 #sidebar .widget-wrapper:last-child{
