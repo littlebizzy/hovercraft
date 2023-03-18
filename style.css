@@ -1436,43 +1436,6 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 }
 
 
-/* sidebar */
-
-@media screen and (max-width: 1200px) {
-#sidebar {
-	width: 100%;
-	padding: 30px 20px;
-	background: #FFF;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-#sidebar {
-	float: right;
-	width: 360px;
-	margin-left: 40px;
-	padding: 40px;
-	background: #FFF;
-	}
-}
-
-#sidebar .widget-wrapper{
-    margin-bottom: 30px;
-}
-
-#sidebar .widget-wrapper:last-child{
-    margin-bottom: 0;
-}
-
-#sidebar p:last-child {
-	margin-bottom: 0px;
-}
-
-#sidebar ol li {
-	margin-bottom: 15px;
-}
-
-
 /* home-premain-top */
 
 @media screen and (max-width: 1200px) {
