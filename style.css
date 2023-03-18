@@ -1,7 +1,7 @@
 /*
 Theme Name: HoverCraft
 Theme URI: https://hovercraft.vip
-Version: 0.1.144
+Version: 0.1.145
 Description: No maintenance WordPress theme
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
@@ -1397,25 +1397,6 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 .hero-snippet {
 	font-size: 18px;
 	color: #ffffff;
-	}
-}
-
-
-/* main */
-/* main refers to everything between header/splash and footer */
-
-@media screen and (max-width: 1200px) {
-#main {
-	width: 100%;
-	padding: 0px 0px;
-	background: #FFF;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-#main {
-	padding: 40px 0px;
-	background: #FFF;
 	}
 }
 
