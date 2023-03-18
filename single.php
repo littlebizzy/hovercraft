@@ -9,21 +9,22 @@
 		<?php if ( get_theme_mod( 'hovercraft_sidebar_status' ) == 1 ) { ?><div id="primary"><?php } else { ?><div id="primary-wide"><?php } ?>
 
 		<?php get_template_part( 'template-parts/content/breadcrumbs' ); ?>
-	
+		
 		<div id="content">
 	
 		<?php if ( is_singular() ) { ?>
 				<?php if ( is_page_template( 'page-templates/template-basic.php' ) || !is_page_template() ) { ?>
-					<h1><?php the_title(); ?></h1>
 					<?php global $post; $url_featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( $currentID ), 'medium' );
 					if ( !empty( $url_featured_image ) && ( !is_singular('product') ) ) { ?>
 					<img class="featured-image" src="<?php echo $url_featured_image[0]; ?>" />
 					<?php } ?>
-					<?php if ( 'post' == get_post_type() ) { 
-						the_time(get_option('date_format')); 
-					} ?>
+			<div class="content-padded">
+					<h1><?php the_title(); ?></h1>
+					<span><?php if ( 'post' == get_post_type() ) { the_time(get_option('date_format')); } ?></span><br><br>
 				<?php } ?>
 		<?php } ?><!-- singular -->
+		
+		
 		
 		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		
@@ -39,6 +40,8 @@
 	<?php get_template_part( 'template-parts/content/tags' ); ?>
 	
 	<?php get_template_part( 'template-parts/content/last-modified' ); ?>
+			
+	</div><!-- content-padded -->
 	
 		<div class="clear"></div>
 		<?php hovercraft_pagination_nav(); ?>	
