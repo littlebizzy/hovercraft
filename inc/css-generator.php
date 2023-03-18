@@ -56,6 +56,7 @@ function hovercraft_generate_css(){
 	$prefooter_bottom_text_color = get_theme_mod( 'hovercraft_prefooter_bottom_text_color', '#ffffff' );
 	$prefooter_bottom_link_color = get_theme_mod( 'hovercraft_prefooter_bottom_link_color', '#5C6BC0' );
 	$prefooter_bottom_link_decoration = get_theme_mod( 'hovercraft_prefooter_bottom_link_decoration', 'underline' );
+	$sidebar_padding = get_theme_mod( 'hovercraft_sidebar_padding', true );
     $footer_background_color = get_theme_mod( 'hovercraft_footer_background_color', '#eceff1' );
 	$footer_text_color = get_theme_mod( 'hovercraft_footer_text_color', '#263238' );
 	$footer_link_color = get_theme_mod( 'hovercraft_footer_link_color', '#5C6BC0' );
@@ -504,6 +505,43 @@ video.hero-background-video {
 	padding: 40px 0px;
 	background: <?php echo $main_background_color; ?>;
 	}
+}
+	
+/* sidebar */
+
+@media screen and (max-width: 1200px) {
+#sidebar {
+	width: 100%;
+	padding: 30px 20px;
+	background: #FFF;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+#sidebar {
+	float: right;
+	width: 360px;
+	margin-left: 40px;
+	padding: 40px;
+	<?php if ( $sidebar_padding == true ) { echo "padding: 40px;"; } ?>
+	background: #FFF;
+	}
+}
+
+#sidebar .widget-wrapper{
+    margin-bottom: 30px;
+}
+
+#sidebar .widget-wrapper:last-child{
+    margin-bottom: 0;
+}
+
+#sidebar p:last-child {
+	margin-bottom: 0px;
+}
+
+#sidebar ol li {
+	margin-bottom: 15px;
 }
 
 #prefooter-top {
