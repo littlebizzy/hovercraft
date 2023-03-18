@@ -832,6 +832,21 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	)
 ) );
 
+// main background color setting
+$wp_customize->add_setting( 'hovercraft_main_background_color', array(
+	'default' => '#ffffff',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+ 
+// main background color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_main_background_color', array(
+	'label' => 'Main Background Color',
+	'description' => 'This is a description',
+	'section' => 'colors',
+	'settings' => 'hovercraft_main_background_color'
+	)
+) );
+
 // prefooter (top) background color setting
 $wp_customize->add_setting( 'hovercraft_prefooter_top_background_color', array(
 	'default' => '#eceff1',
