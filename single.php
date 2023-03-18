@@ -6,7 +6,8 @@
 	<div id="main">
 	<div class="inner">
     	
-		<?php if ( get_theme_mod( 'hovercraft_sidebar_status' ) == 1 ) { ?><div id="primary"><?php } else { ?><div id="primary-wide"><?php } ?>
+		<?php $hovercraft_sidebar_status_checked = get_theme_mod( 'hovercraft_sidebar_status' ) ? true : false;
+		if ( $hovercraft_sidebar_status_checked == true ) { ?><div id="primary"><?php } else { ?><div id="primary-center"><?php } ?>
 
 		<?php get_template_part( 'template-parts/content/breadcrumbs' ); ?>
 		
