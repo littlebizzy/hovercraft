@@ -96,14 +96,6 @@ html, body {
 }
 
 
-/* images */
-
-img.featured-image {
-	width: 800px;
-	margin-bottom: 40px;
-}
-
-
 /* titles */
 
 h1 {
@@ -1412,27 +1404,6 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 	margin-bottom: 30px;
 	font-size: 14px;
 	color: #607D8B;
-}
-
-
-/* content */
-
-#content ul {
-	margin-left: 30px;
-	margin-bottom: 30px;
-}
-
-#content ol {
-	margin-left: 30px;
-	margin-bottom: 30px;
-}
-
-#content ol li {
-	margin-bottom: 15px;
-}
-
-.content-padded {
-	padding: 0px 40px;
 }
 
 
