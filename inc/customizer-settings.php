@@ -96,7 +96,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_mobile_topbar',
         array(
             'label'     => __( 'Mobile Topbar Widget', 'hovercraft' ),
-			'description' => __( 'Which widget to display on mobile Topbar? This only applies if both widgets active.', 'hovercraft' ),
+			'description' => __( 'Which widget to display on mobile topbar? This only applies if both widgets active.', 'hovercraft' ),
             'section'   => 'hovercraft_general',
             'settings'  => 'hovercraft_mobile_topbar',
             'type'      => 'select',
