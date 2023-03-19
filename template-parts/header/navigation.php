@@ -1,4 +1,6 @@
-<div class="inner">
+<?php $hovercraft_desktop_header_width = get_theme_mod( 'hovercraft_desktop_header_width', 'full' );
+		if ( $hovercraft_desktop_header_width == 'fixed' ) { ?><div class="inner"><?php } else { ?><div class="full"><?php } ?>
+	
 	<div class="header-left">
 		<?php get_template_part( 'template-parts/header/branding' ); ?>
 	</div><!-- header-left -->
