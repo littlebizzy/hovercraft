@@ -18,6 +18,30 @@ $wp_customize->add_section( 'hovercraft_general', array(
     'title'      => 'General Options',
     'priority'   => 30,
 ) );
+	
+// header width setting (desktop)
+$wp_customize->add_setting( 'hovercraft_desktop_header_width', array(
+    'default'    => 'full',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// header width control (desktop)
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_desktop_header_width',
+        array(
+            'label'     => __('Desktop header width', 'hovercraft'),
+			'description' => __( 'What should the header width be on desktop?', 'hovercraft' ),
+            'section'   => 'hovercraft_general',
+            'settings'  => 'hovercraft_desktop_header_width',
+            'type'      => 'select',
+			'choices' => array(
+				'full' => 'Full Width',
+				'fixed' => 'Fixed With (1200px)'
+    			)
+        )
+) );
 
 // logo width setting (desktop)
 $wp_customize->add_setting( 'hovercraft_desktop_logo_width', array(
