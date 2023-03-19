@@ -64,9 +64,18 @@ html, body {
 	max-width:1200px;
 }
 
+@media screen and (max-width: 1200px) {
+.full {
+	max-width: 100%;
+	padding: 0px 0px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
 .full {
 	max-width: 100%;
 	padding: 0px 40px;
+	}
 }
 
 .clear {
