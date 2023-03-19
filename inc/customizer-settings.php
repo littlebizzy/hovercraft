@@ -229,14 +229,15 @@ $wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
         'hovercraft_homepage_html_title',
         array(
-            'label'     => __( 'Homepage HTML title', 'hovercraft' ),
-			'description' => __( 'How should the homepage HTML title tag be generated?', 'hovercraft' ),
+            'label'     => __( 'Homepage HTML Title', 'hovercraft' ),
+			'description' => __( 'How should the homepage HTML title tag be generated? Note: Page Title options only work if homepage set to static page (above).', 'hovercraft' ),
             'section'   => 'static_front_page',
             'settings'  => 'hovercraft_homepage_html_title',
             'type'      => 'select',
 			'choices' => array(
 				'site_name_site_tagline' => 'Site Name | Site Tagline',
 				'site_name_only' => 'Site Name Only',
+				'site_name_page_title' => 'Site Name | Page Title',
 				'page_title_only' => 'Page Title Only',
     			)
         )
