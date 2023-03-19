@@ -405,7 +405,7 @@ video.hero-background-video {
 #header-basic {
 	width: 100%;
 	display: table;
-	padding: 20px 20px;
+	padding: 10px 20px;
 	border-bottom: 1px solid transparent;
 	background: <?php echo $header_basic_background_color; ?>;
 	}
@@ -492,7 +492,7 @@ video.hero-background-video {
 @media screen and (max-width: 1200px) {
 #main {
 	width: 100%;
-	padding: 40px 0px;
+	padding: 0px 0px;
 	background: <?php echo $main_background_color; ?>;
 	}
 }
@@ -553,8 +553,16 @@ video.hero-background-video {
 	
 /* images */
 
+@media screen and (max-width: 1200px) {
+img.featured-image {
+	width: 100%;
+	}
+}
+
+@media screen and (min-width: 1200px) {
 img.featured-image {
 	width: 800px;
+	}
 }
 	
 /* content */
@@ -577,8 +585,16 @@ img.featured-image {
 	margin-bottom: 15px;
 }
 
+@media screen and (max-width: 1200px) {
+.content-padded {
+	padding: 20px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
 .content-padded {
 	padding: 40px;
+	}
 }
 
 	
