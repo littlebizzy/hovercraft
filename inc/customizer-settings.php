@@ -21,7 +21,7 @@ $wp_customize->add_section( 'hovercraft_general', array(
 	
 // header width setting (desktop)
 $wp_customize->add_setting( 'hovercraft_desktop_header_width', array(
-    'default'    => 'full',
+    'default'    => 'fixed',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
 	) 
 );
