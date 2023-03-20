@@ -768,7 +768,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	)
 ) );
 	
-
 // header half hero background color setting
 $wp_customize->add_setting( 'hovercraft_header_half_hero_background_color', array(
 	'default' => '#ffffff',
@@ -856,6 +855,36 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	'description' => 'This is a description',
 	'section' => 'colors',
 	'settings' => 'hovercraft_posthero_link_color'
+	)
+) );
+	
+// sidebar callout background color setting
+$wp_customize->add_setting( 'hovercraft_sidebar_callout_background_color', array(
+	'default' => '#283593',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+
+// sidebar callout background color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_sidebar_callout_background_color', array(
+	'label' => 'Sidebar Callout Background Color',
+	'description' => 'Specify background color of first child sidebar widget?',
+	'section' => 'colors',
+	'settings' => 'hovercraft_sidebar_callout_background_color'
+	)
+) );
+	
+// sidebar callout text color setting
+$wp_customize->add_setting( 'hovercraft_sidebar_callout_text_color', array(
+	'default' => '#fffff',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+
+// sidebar callout text color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_sidebar_callout_text_color', array(
+	'label' => 'Sidebar Callout Text Color',
+	'description' => 'Specify Text color of first child sidebar widget?',
+	'section' => 'colors',
+	'settings' => 'hovercraft_sidebar_callout_text_color'
 	)
 ) );
 
