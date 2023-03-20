@@ -1911,27 +1911,6 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 }
 
 
-/* icons */
-
-#copyright i {
-	font-size: 24px;
-	margin-left: 20px;
-}
-
-#copyright i:first-child {
-	margin-left: 0;
-}
-
-#copyright a i {
-    font-size: 24px;
-    margin-left: 20px !important;
-}
-
-#copyright a i:first-child {
-    margin-left: 0;
-}
-
-
 /* tiles */
 
 @media screen and (max-width: 1200px) {
