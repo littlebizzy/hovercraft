@@ -73,8 +73,8 @@
 	</div><!-- copyright-right -->
 	<?php } ?>
 		
-	<?php $hovercraft_scroll_to_top_checked = get_theme_mod( 'hovercraft_scroll_to_top' ) ? true : false;
-	if ( $hovercraft_scroll_to_top_checked == true ) { ?>
+	<?php $hovercraft_scroll_to_top = get_theme_mod( 'hovercraft_scroll_to_top', 'mobile_only' );
+	if ( $hovercraft_scroll_to_top != 'none' ) { ?>
 	<div class="scrollup-wrapper">
 		<a class="scrollup-link" href="#top">Back to top<i class="material-icons arrow_upward">arrow_upward</i></a>
 	</div><!-- scrollup-wrapper -->
