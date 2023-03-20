@@ -753,7 +753,6 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 .scrollup-wrapper {
 	<?php if ( $scroll_to_top == 'none') { echo "display: none;"; } ?>
 	margin-top: 20px;
-	background: rgba(55, 71, 79, 0.1);
 	}
 }
 	
@@ -761,29 +760,33 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 .scrollup-wrapper {
 	<?php if ( $scroll_to_top == 'mobile_only') { echo "display: none;"; } ?>
 	margin-top: 20px;
-	background: rgba(55, 71, 79, 0.1);
 	}
-}
-	
-.scrollup-wrapper:hover {
-	background: rgba(55, 71, 79, 0.2);
 }
 
 .scrollup-link {
 	display: block;
 	width: 100%;
-	border-radius: 5px;
+	
 	cursor: pointer;
 	font-size: 14px;
-	padding: 10px 0px;
-	text-decoration: none !important;
 	line-height: 1;
-	color: #ffffff;
+	padding: 10px 0px;
+	color: rgba(255, 255, 255, 0.5) !important;
+	text-decoration: none !important;
 	text-align: center;
+	vertical-align: middle;
+	background: rgba(0, 0, 0, 0.1);
+	border-radius: 5px;
 }
 
 .scrollup-link:active, .scrollup-link:hover {
-	color: #ffffff;
+	background: rgba(0, 0, 0, 0.2);
+	color: #ffffff !important;
+}
+
+.scrollup-link i {
+	font-size: 14px !important;
+	vertical-align: middle;
 }
 </style>
 
