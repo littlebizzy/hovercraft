@@ -804,13 +804,18 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 .scrollup-link:active, .scrollup-link:hover {
 	background: rgba(0, 0, 0, 0.2);
 	color: #ffffff !important;
+	outline: none !important;
+	-webkit-tap-highlight-color: transparent;
 }
 
-.scrollup-link i {
-	margin-left: 10px;
+.scrollup-wrapper i {
 	font-size: 14px !important;
 	line-height: 1 !important;
 	vertical-align: middle;
+}
+
+.scrollup-wrapper i:first-child {
+	margin-left: 10px !important;
 }
 </style>
 
