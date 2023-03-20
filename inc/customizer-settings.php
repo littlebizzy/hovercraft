@@ -12,7 +12,6 @@ $wp_customize->get_section( 'header_image' )->title = __( 'Header Media', 'hover
 $wp_customize->get_section( 'static_front_page' )->title = __( 'Homepage', 'hovercraft' );
 $wp_customize->get_section( 'static_front_page' )->priority = 31;
 
-
 // general options section
 $wp_customize->add_section( 'hovercraft_general', array(
     'title'      => 'General Options',
@@ -21,7 +20,7 @@ $wp_customize->add_section( 'hovercraft_general', array(
 	
 // header width setting (desktop)
 $wp_customize->add_setting( 'hovercraft_desktop_header_width', array(
-    'default'    => 'fixed',
+    'default'    => 'full',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
 	) 
 );
@@ -158,24 +157,29 @@ $wp_customize->add_control( new WP_Customize_Control(
 ) );
 
 // scroll to top setting
-$wp_customize->add_setting('hovercraft_scroll_to_top', array(
-    'default' => 0,
-	'sanitize_callback' => 'hovercraft_sanitize_checkbox',
-));
+$wp_customize->add_setting( 'hovercraft_scroll_to_top', array(
+    'default'    => 'mobile_only',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
 
 // scroll to top control
-$wp_customize->add_control(
-    new WP_Customize_Control(
+$wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
         'hovercraft_scroll_to_top',
         array(
-            'label'     => __( 'Enable scroll to top', 'hovercraft' ),
+            'label'     => __( 'Back To Top Display', 'hovercraft' ),
+			'description' => __( 'On which devices should "back to top" be displayed?', 'hovercraft' ),
             'section'   => 'hovercraft_general',
             'settings'  => 'hovercraft_scroll_to_top',
-            'type'      => 'checkbox',
+            'type'      => 'select',
+			'choices' => array(
+        		'none' => 'None (Disabled)',
+        		'mobile_only' => 'Mobile Only',
+        		'desktop_and_mobile' => 'Desktop &amp; Mobile',
+    			)
         )
-    )
-);
+) );
 
 // search setting
 $wp_customize->add_setting('hovercraft_search', array(
@@ -262,7 +266,6 @@ $wp_customize->add_control(
         )
     )
 );
-
 
 // fonts section
 $wp_customize->add_section( 'hovercraft_fonts', array(
