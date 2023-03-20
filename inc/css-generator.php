@@ -678,6 +678,28 @@ img.featured-image {
 	text-decoration: <?php echo $copyright_link_decoration; ?>;
 }
 	
+/* copyright icons */
+
+#copyright i {
+	font-size: 24px;
+	margin-left: 20px;
+}
+
+#copyright i:first-child {
+	margin-left: 0;
+}
+
+#copyright a i {
+    font-size: 24px;
+    margin-left: 20px;
+}
+
+#copyright a i:first-child {
+    margin-left: 0;
+}
+
+/* other stuff */
+	
 form {
 	padding: 0 !important;
 }
@@ -785,7 +807,9 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 }
 
 .scrollup-link i {
+	margin-left: 10px;
 	font-size: 14px !important;
+	line-height: 1 !important;
 	vertical-align: middle;
 }
 </style>
