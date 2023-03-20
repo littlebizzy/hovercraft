@@ -13,6 +13,7 @@ function hovercraft_generate_css(){
 		$hero_image = $url_header_image; 
 	}
     
+	$scroll_to_top = get_theme_mod( 'hovercraft_scroll_to_top', 'mobile_only' );
 	$mobile_topbar_widget = get_theme_mod( 'hovercraft_mobile_topbar', 'topbar_left' );
 	$mobile_preheader_widget = get_theme_mod( 'hovercraft_mobile_preheader', 'none' );
 	$desktop_logo_width = get_theme_mod( 'hovercraft_desktop_logo_width', '150' );
@@ -748,13 +749,20 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 
 /* scroll-to-top */
 
+@media screen and (max-width: 1200px) {
 .scrollup-wrapper {
-	position: fixed;
-	bottom: 30px;
-	right: 30px;
-	margin: 0;
-	padding: 2px 3px;
+	<?php if ( $scroll_to_top == 'none') { echo "display: none;"; } ?>
+	margin-top: 20px;
 	background: rgba(55, 71, 79, 0.1);
+	}
+}
+	
+@media screen and (min-width: 1200px) {
+.scrollup-wrapper {
+	<?php if ( $scroll_to_top == 'mobile_only') { echo "display: none;"; } ?>
+	margin-top: 20px;
+	background: rgba(55, 71, 79, 0.1);
+	}
 }
 	
 .scrollup-wrapper:hover {
@@ -762,13 +770,16 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 }
 
 .scrollup-link {
+	display: block;
+	width: 100%;
+	border-radius: 5px;
 	cursor: pointer;
-	font-size: 24px;
+	font-size: 14px;
+	padding: 10px 0px;
+	text-decoration: none !important;
 	line-height: 1;
-	vertical-align: middle;
-	margin: 0;
-	padding: 0;
 	color: #ffffff;
+	text-align: center;
 }
 
 .scrollup-link:active, .scrollup-link:hover {
