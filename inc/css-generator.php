@@ -624,7 +624,7 @@ img.featured-image {
 #sidebar .widget-wrapper{
 	width: 100%;
 	background: #ffffff;
-	padding: 20px;
+	padding: 40px 40px;
     margin-bottom: 20px;
 }
 
