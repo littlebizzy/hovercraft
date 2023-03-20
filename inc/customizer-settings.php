@@ -169,7 +169,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_scroll_to_top',
         array(
             'label'     => __( 'Back To Top Display', 'hovercraft' ),
-			'description' => __( 'On which devices should "back to top" be displayed?', 'hovercraft' ),
+			'description' => __( 'On which devices should the "back to top" element be displayed?', 'hovercraft' ),
             'section'   => 'hovercraft_general',
             'settings'  => 'hovercraft_scroll_to_top',
             'type'      => 'select',
