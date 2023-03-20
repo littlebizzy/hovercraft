@@ -512,7 +512,7 @@ video.hero-background-video {
 @media screen and (max-width: 1200px) {
 #primary {
 	width: 100%;
-	padding: 20px 20px;
+	padding: 0px 0px;
 	}
 }
 
