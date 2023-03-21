@@ -17,30 +17,6 @@ $wp_customize->add_section( 'hovercraft_general', array(
     'title'      => 'General Options',
     'priority'   => 30,
 ) );
-	
-// header width setting (desktop)
-$wp_customize->add_setting( 'hovercraft_desktop_header_width', array(
-    'default'    => 'fixed',
-	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
-);
-
-// header width control (desktop)
-$wp_customize->add_control( new WP_Customize_Control(
-        $wp_customize,
-        'hovercraft_desktop_header_width',
-        array(
-            'label'     => __( 'Header Width (Desktop)', 'hovercraft' ),
-			'description' => __( 'What should the header width be on desktop? Note: always Full Width on mobile.', 'hovercraft' ),
-            'section'   => 'hovercraft_general',
-            'settings'  => 'hovercraft_desktop_header_width',
-            'type'      => 'select',
-			'choices' => array(
-				'full' => 'Full Width',
-				'fixed' => 'Fixed Width (1200px)'
-    			)
-        )
-) );
 
 // logo width setting (desktop)
 $wp_customize->add_setting( 'hovercraft_desktop_logo_width', array(
@@ -55,7 +31,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_desktop_logo_width',
         array(
             'label'     => __( 'Logo Width (Desktop)', 'hovercraft' ),
-			'description' => __( 'Specificy desktop logo width in pixels?', 'hovercraft' ),
+			'description' => __( 'Specificy desktop logo width in pixels? The height will be determined automatically.', 'hovercraft' ),
             'section'   => 'hovercraft_general',
             'settings'  => 'hovercraft_desktop_logo_width',
             'type' => 'text'
@@ -75,10 +51,59 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_mobile_logo_width',
         array(
             'label'     => __( 'Logo Width (Mobile)', 'hovercraft' ),
-			'description' => __( 'Specificy mobile logo width in pixels?', 'hovercraft' ),
+			'description' => __( 'Specificy mobile logo width in pixels? The height will be determined automatically.', 'hovercraft' ),
             'section'   => 'hovercraft_general',
             'settings'  => 'hovercraft_mobile_logo_width',
             'type' => 'text'
+        )
+) );
+
+// header width setting (desktop)
+$wp_customize->add_setting( 'hovercraft_desktop_header_width', array(
+    'default'    => 'fixed',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// header width control (desktop)
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_desktop_header_width',
+        array(
+            'label'     => __( 'Header Width (Desktop)', 'hovercraft' ),
+			'description' => __( 'What should the header width be on desktop? Note: Always Full Width on mobile.', 'hovercraft' ),
+            'section'   => 'hovercraft_general',
+            'settings'  => 'hovercraft_desktop_header_width',
+            'type'      => 'select',
+			'choices' => array(
+				'full' => 'Full Width',
+				'fixed' => 'Fixed Width (1200px)'
+    			)
+        )
+) );
+	
+// posthero widget display setting
+$wp_customize->add_setting( 'hovercraft_posthero_widget_display', array(
+    'default'    => 'full_and_half_hero',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// posthero widget display control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_posthero_widget_display',
+        array(
+            'label'     => __( 'Posthero Widget Display', 'hovercraft' ),
+			'description' => __( 'Below which hero types should the posthero widget be displayed when active?', 'hovercraft' ),
+            'section'   => 'hovercraft_general',
+            'settings'  => 'hovercraft_posthero_widget_display',
+            'type'      => 'select',
+			'choices' => array(
+        		'full_hero_only' => 'Full Hero Only',
+        		'full_and_half_hero' => 'Full &amp; Half Hero',
+        		'full_and_half_and_mini_hero' => 'Full &amp; Half &amp; Mini Hero',
+    			)
         )
 ) );
 
@@ -119,7 +144,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_mobile_preheader',
         array(
             'label'     => __( 'Mobile Preheader Widget', 'hovercraft' ),
-			'description' => __( 'Which widget to display on mobile preheader?', 'hovercraft' ),
+			'description' => __( 'Which widget to display on mobile preheader? Note: We suggest disabling this.', 'hovercraft' ),
             'section'   => 'hovercraft_general',
             'settings'  => 'hovercraft_mobile_preheader',
             'type'      => 'select',
@@ -127,31 +152,6 @@ $wp_customize->add_control( new WP_Customize_Control(
 				'none' => 'None (Disabled)',
 				'preheader_left' => 'Preheader Left',
 				'preheader_right' => 'Preheader Right'
-    			)
-        )
-) );
-	
-// posthero widget display setting
-$wp_customize->add_setting( 'hovercraft_posthero_widget_display', array(
-    'default'    => 'full_and_half_hero',
-	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
-);
-
-// posthero widget display control
-$wp_customize->add_control( new WP_Customize_Control(
-        $wp_customize,
-        'hovercraft_posthero_widget_display',
-        array(
-            'label'     => __( 'Posthero Widget Display', 'hovercraft' ),
-			'description' => __( 'Below which hero types should the posthero widget be displayed when active?', 'hovercraft' ),
-            'section'   => 'hovercraft_general',
-            'settings'  => 'hovercraft_posthero_widget_display',
-            'type'      => 'select',
-			'choices' => array(
-        		'full_hero_only' => 'Full Hero Only',
-        		'full_and_half_hero' => 'Full &amp; Half Hero',
-        		'full_and_half_and_mini_hero' => 'Full &amp; Half &amp; Mini Hero',
     			)
         )
 ) );
@@ -169,7 +169,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_scroll_to_top',
         array(
             'label'     => __( 'Back To Top Display', 'hovercraft' ),
-			'description' => __( 'On which devices should the "back to top" element be displayed?', 'hovercraft' ),
+			'description' => __( 'On which devices should the "back to top" element be displayed in footer?', 'hovercraft' ),
             'section'   => 'hovercraft_general',
             'settings'  => 'hovercraft_scroll_to_top',
             'type'      => 'select',
@@ -193,8 +193,8 @@ $wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
         'hovercraft_search_icon',
         array(
-            'label'     => __( 'Search Icon', 'hovercraft' ),
-			'description' => __( 'On which devices should the search icon in header be displayed?', 'hovercraft' ),
+            'label'     => __( 'Search Icon Display', 'hovercraft' ),
+			'description' => __( 'On which devices should the search icon be displayed in the header?', 'hovercraft' ),
             'section'   => 'hovercraft_general',
             'settings'  => 'hovercraft_search_icon',
             'type'      => 'select',
