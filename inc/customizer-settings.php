@@ -176,30 +176,36 @@ $wp_customize->add_control( new WP_Customize_Control(
 			'choices' => array(
         		'none' => 'None (Disabled)',
         		'mobile_only' => 'Mobile Only',
-        		'desktop_and_mobile' => 'Desktop &amp; Mobile',
+        		'desktop_and_mobile' => 'Desktop &amp; Mobile'
     			)
         )
 ) );
-
-// search setting
-$wp_customize->add_setting('hovercraft_search', array(
-    'default' => 0,
-	'sanitize_callback' => 'hovercraft_sanitize_checkbox',
-));
-
-// search control
-$wp_customize->add_control(
-    new WP_Customize_Control(
-        $wp_customize,
-        'hovercraft_search',
-        array(
-            'label'     => __('Enable search icon in main menu', 'hovercraft'),
-            'section'   => 'hovercraft_general',
-            'settings'  => 'hovercraft_search',
-            'type'      => 'checkbox',
-        )
-    )
+	
+// search icon setting
+$wp_customize->add_setting( 'hovercraft_search_icon', array(
+    'default'    => 'desktop_only',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
 );
+
+// search icon control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_search_icon',
+        array(
+            'label'     => __( 'Search Icon', 'hovercraft' ),
+			'description' => __( 'On which devices should the search icon in header be displayed?', 'hovercraft' ),
+            'section'   => 'hovercraft_general',
+            'settings'  => 'hovercraft_search_icon',
+            'type'      => 'select',
+			'choices' => array(
+        		'none' => 'None (Disabled)',
+				'desktop_only' => 'Desktop Only',
+				'desktop_and_mobile' => 'Desktop &amp; Mobile',
+        		'mobile_only' => 'Mobile Only'
+    			)
+        )
+) );
 
 // breadcrumbs setting
 $wp_customize->add_setting('hovercraft_breadcrumbs', array(
