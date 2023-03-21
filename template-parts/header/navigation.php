@@ -22,7 +22,9 @@
             echo '</ul></div>';
         	}
         	?>
-			<?php if ( get_theme_mod( 'hovercraft_search' ) === true ) { ?>
+			<?php // https://inthedigital.co.uk/use-phps-in_array-to-compare-a-variable-to-multiple-values/
+			$search_icon_status = get_theme_mod( 'hovercraft_search_icon', 'desktop_only' );
+			if ( in_array( $search_icon_status, ['desktop_only', 'desktop_and_mobile'] )) { ?>
 				<div class="search-icon-wrapper"><i class="material-icons search">search</i></div><!-- search-icon-wrapper -->
 			<?php } ?>
 			<?php if ( class_exists( 'WooCommerce' ) ) { ?>
