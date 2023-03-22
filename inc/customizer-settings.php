@@ -120,7 +120,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_mobile_topbar',
         array(
             'label'     => __( 'Mobile Topbar Widget', 'hovercraft' ),
-			'description' => __( 'Which widget to display on mobile topbar? This only applies if both widgets active.', 'hovercraft' ),
+			'description' => __( 'Which widget to display on mobile topbar? This only applies if both widgets are active.', 'hovercraft' ),
             'section'   => 'hovercraft_general',
             'settings'  => 'hovercraft_mobile_topbar',
             'type'      => 'select',
@@ -169,7 +169,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_scroll_to_top',
         array(
             'label'     => __( 'Back To Top Display', 'hovercraft' ),
-			'description' => __( 'On which devices should the "back to top" element be displayed in footer?', 'hovercraft' ),
+			'description' => __( 'On which devices should the "back to top" element be displayed in the footer?', 'hovercraft' ),
             'section'   => 'hovercraft_general',
             'settings'  => 'hovercraft_scroll_to_top',
             'type'      => 'select',
@@ -291,8 +291,8 @@ $wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
         'hovercraft_default_font',
         array(
-            'label'     => __('Default font family', 'hovercraft'),
-			'description' => __( 'What Google Fonts family to use for the default font?', 'hovercraft' ),
+            'label'     => __('Default Font Family', 'hovercraft'),
+			'description' => __( 'Which Google Fonts family should be used for the default site-wide font?', 'hovercraft' ),
             'section'   => 'hovercraft_fonts',
             'settings'  => 'hovercraft_default_font',
             'type'      => 'select',
@@ -315,7 +315,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 
 // alternative font family setting
 $wp_customize->add_setting( 'hovercraft_alternative_font', array(
-    'default'    => 'noto_sans',
+    'default'    => 'none',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
 	) 
 );
@@ -325,12 +325,13 @@ $wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
         'hovercraft_alternative_font',
         array(
-            'label'     => __( 'Alternative font family', 'hovercraft' ),
-			'description' => __( 'What Google Fonts family to use for the alternative font?', 'hovercraft' ),
+            'label'     => __( 'Alternative Font Family', 'hovercraft' ),
+			'description' => __( 'Which Google Fonts family should be used for the alternative font? Note: This is generally meant to be used on multi-lingual websites, and should usually be disabled otherwise.', 'hovercraft' ),
             'section'   => 'hovercraft_fonts',
             'settings'  => 'hovercraft_alternative_font',
             'type'      => 'select',
 			'choices' => array(
+				'none' => 'None (Disabled)',
 				'noto_color_emoji' => 'Noto Color Emoji',
 				'noto_emoji' => 'Noto Emoji',
 				'noto_kufi_arabic' => 'Noto Kufi Arabic',
@@ -536,8 +537,8 @@ $wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
         'hovercraft_site_name_font',
         array(
-            'label'     => __('Site Name font family', 'hovercraft'),
-			'description' => __( 'What Google Fonts family to use for the site name?', 'hovercraft' ),
+            'label'     => __('Site Name Font Family', 'hovercraft'),
+			'description' => __( 'Which Google Fonts family should be used for the site name in the header? Note: Display must be enabled under the Site Identity section.', 'hovercraft' ),
             'section'   => 'hovercraft_fonts',
             'settings'  => 'hovercraft_site_name_font',
             'type'      => 'select',
@@ -584,6 +585,26 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// site name font size setting
+$wp_customize->add_setting( 'hovercraft_site_name_font_size', array(
+    'default'    => '36',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
+	) 
+);
+
+// site name font size control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_site_name_font_size',
+        array(
+            'label'     => __( 'Site Name Font Size', 'hovercraft' ),
+			'description' => __( 'Specify font size to use for the site name?', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_site_name_font_size',
+            'type' => 'text'
+        )
+) );
+
 // site name font weight setting
 $wp_customize->add_setting( 'hovercraft_site_name_font_weight', array(
     'default'    => '700',
@@ -596,8 +617,8 @@ $wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
         'hovercraft_site_name_font_weight',
         array(
-            'label'     => __('Site Name font weight', 'hovercraft'),
-			'description' => __( 'What font weight to use for the site name?', 'hovercraft' ),
+            'label'     => __('Site Name Font Weight', 'hovercraft'),
+			'description' => __( 'Specify font weight to use for the site name? Note: Ensure your chosen font family supports the font weight that you choose.', 'hovercraft' ),
             'section'   => 'hovercraft_fonts',
             'settings'  => 'hovercraft_site_name_font_weight',
             'type'      => 'select',
