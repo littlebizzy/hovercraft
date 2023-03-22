@@ -585,22 +585,42 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
-// site name font size setting
-$wp_customize->add_setting( 'hovercraft_site_name_font_size', array(
+// site name font size (desktop) setting
+$wp_customize->add_setting( 'hovercraft_site_name_desktop_font_size', array(
     'default'    => '36',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
 	) 
 );
 
-// site name font size control
+// site name font size (desktop) control
 $wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
-        'hovercraft_site_name_font_size',
+        'hovercraft_site_name_desktop_font_size',
         array(
-            'label'     => __( 'Site Name Font Size', 'hovercraft' ),
-			'description' => __( 'Specify font size to use for the site name?', 'hovercraft' ),
+            'label'     => __( 'Site Name Font Size (Desktop)', 'hovercraft' ),
+			'description' => __( 'Specify font size to use for the site name on desktop devices?', 'hovercraft' ),
             'section'   => 'hovercraft_fonts',
-            'settings'  => 'hovercraft_site_name_font_size',
+            'settings'  => 'hovercraft_site_name_desktop_font_size',
+            'type' => 'text'
+        )
+) );
+	
+// site name font size (mobile) setting
+$wp_customize->add_setting( 'hovercraft_site_name_mobile_font_size', array(
+    'default'    => '24',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
+	) 
+);
+
+// site name font size (mobile) control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_site_name_mobile_font_size',
+        array(
+            'label'     => __( 'Site Name Font Size (Mobile)', 'hovercraft' ),
+			'description' => __( 'Specify font size to use for the site name on mobile devices?', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_site_name_mobile_font_size',
             'type' => 'text'
         )
 ) );
