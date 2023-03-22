@@ -20,6 +20,7 @@ function hovercraft_generate_css(){
 	$mobile_logo_width = get_theme_mod( 'hovercraft_mobile_logo_width', '100' );
 	$default_font_family = get_theme_mod( 'hovercraft_default_font', 'noto_sans' );
 	$site_name_font_family = get_theme_mod( 'hovercraft_site_name_font', 'noto_sans' );
+	$site_name_font_size = get_theme_mod( 'hovercraft_site_name_font_size', '36' );
 	$site_name_font_weight = get_theme_mod( 'hovercraft_site_name_font_weight', '700' );
 	$hero_gradient_angle = get_theme_mod( 'hovercraft_hero_gradient_angle', '60deg' );
 	$hero_gradient_start_color_transparency = get_theme_mod( 'hovercraft_hero_gradient_start_color_transparency', '0.50' );
@@ -106,7 +107,7 @@ html, body {
 .site-name {
 	font-family: <?php echo ucwords(str_replace("_", " ", $site_name_font_family)); ?>;
 	font-weight: <?php echo $site_name_font_weight; ?>;
-	font-size: 24px;
+	font-size: <?php echo $site_name_font_size; ?>px;
 	line-height: 1; /* because site-tagline is hidden on mobile */
 	display: block;
 	}
@@ -116,7 +117,7 @@ html, body {
 .site-name {
 	font-family: <?php echo ucwords(str_replace("_", " ", $site_name_font_family)); ?>;
 	font-weight: <?php echo $site_name_font_weight; ?>;
-	font-size: 36px;
+	font-size: <?php echo $site_name_font_size; ?>px;
 	display: block;
 	}
 }
