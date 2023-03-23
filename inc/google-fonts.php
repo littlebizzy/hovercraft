@@ -7,6 +7,11 @@ function hovercraft_google_fonts() {
 	$default_font_almost = ucfirst($default_font_clean);
 	$default_font_final = ucwords($default_font_almost, "+");
 	
+	$alternative_font = get_theme_mod( 'hovercraft_alternative_font', 'noto_sans' );
+	$alternative_font_clean = str_replace("_", "+", $alternative_font);
+	$alternative_font_almost = ucfirst($alternative_font_clean);
+	$alternative_font_final = ucwords($alternative_font_almost, "+");
+	
 	$site_name_font = get_theme_mod( 'hovercraft_site_name_font', 'noto_sans' );
 	$site_name_font_clean = str_replace("_", "+", $site_name_font);
 	$site_name_font_almost = ucfirst($site_name_font_clean);
