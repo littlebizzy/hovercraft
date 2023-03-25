@@ -5,8 +5,8 @@ function hovercraft_customizer($wp_customize) {
 // remove header text color control
 $wp_customize->remove_control( 'header_textcolor' );
 
-// header media section
-$wp_customize->get_section( 'header_image' )->title = __( 'Header Media', 'hovercraft' );
+// hero media section
+$wp_customize->get_section( 'header_image' )->title = __( 'Hero Media', 'hovercraft' );
 
 // homepage section
 $wp_customize->get_section( 'static_front_page' )->title = __( 'Homepage', 'hovercraft' );
@@ -16,6 +16,30 @@ $wp_customize->get_section( 'static_front_page' )->priority = 31;
 $wp_customize->add_section( 'hovercraft_general', array(
     'title'      => 'General Options',
     'priority'   => 30,
+) );
+	
+// sitewide layout setting
+$wp_customize->add_setting( 'hovercraft_sitewide_layout', array(
+    'default'    => 'floating_islands',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// sitewide layout control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_sitewide_layout',
+        array(
+            'label'     => __( 'Sitewide Layout', 'hovercraft' ),
+			'description' => __( 'Which layout style to use? This affects padding and alignment, so you might need to adjust background colors accordingly.', 'hovercraft' ),
+            'section'   => 'hovercraft_general',
+            'settings'  => 'hovercraft_sitewide_layout',
+            'type'      => 'select',
+			'choices' => array(
+        		'floating_islands' => 'Floating Islands',
+        		'classic_clean' => 'Classic Clean'
+    			)
+        )
 ) );
 
 // logo width setting (desktop)
@@ -302,7 +326,7 @@ $wp_customize->add_control( new WP_Customize_Control(
             'settings'  => 'hovercraft_default_font',
             'type'      => 'select',
 			'choices' => array(
-				'gentium_book_plus' => 'Gentium Book Plus',
+				'gentium_book_basic' => 'Gentium Book Basic',
 				'lato' => 'Lato',
 				'lora' => 'Lora',
 				'merriweather' => 'Merriweather',
@@ -1449,7 +1473,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 
 // hero styling section
 $wp_customize->add_section( 'hovercraft_hero_styling', array(
-    'title'      => 'Hero Gradient',
+    'title'      => 'Hero Options',
     'priority'   => 87,
 ) );
 
