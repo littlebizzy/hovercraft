@@ -592,13 +592,13 @@ img.featured-image {
 
 @media screen and (max-width: 1200px) {
 .content-padded {
-	padding: 20px;
+	padding: 20px 20px 0px 20px;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 .content-padded {
-	padding: 40px;
+	padding: 40px 40px 0px 40px;
 	}
 }
 
