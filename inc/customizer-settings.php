@@ -208,24 +208,29 @@ $wp_customize->add_control( new WP_Customize_Control(
 ) );
 
 // breadcrumbs setting
-$wp_customize->add_setting('hovercraft_breadcrumbs', array(
-    'default' => 0,
-	'sanitize_callback' => 'hovercraft_sanitize_checkbox',
-));
+$wp_customize->add_setting( 'hovercraft_breadcrumbs', array(
+    'default'    => 'sitewide_except_homepage',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
 
 // breadcrumbs control
-$wp_customize->add_control(
-    new WP_Customize_Control(
+$wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
         'hovercraft_breadcrumbs',
         array(
-            'label'     => __('Enable breadcrumbs', 'hovercraft'),
+            'label'     => __( 'Breadcrumbs Display', 'hovercraft' ),
+			'description' => __( 'On which pages should the breadcrumbs element be displayed (top of primary)?', 'hovercraft' ),
             'section'   => 'hovercraft_general',
             'settings'  => 'hovercraft_breadcrumbs',
-            'type'      => 'checkbox',
+            'type'      => 'select',
+			'choices' => array(
+        		'none' => 'None (Disabled)',
+				'sitewide_except_homepage' => 'Sitewide Except Homepage',
+				'sitewide' => 'Sitewide (All Pages)'
+    			)
         )
-    )
-);
+) );
 
 // homepage html title setting
 $wp_customize->add_setting( 'hovercraft_homepage_html_title', array(
