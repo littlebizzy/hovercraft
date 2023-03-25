@@ -302,7 +302,7 @@ $wp_customize->add_control( new WP_Customize_Control(
             'settings'  => 'hovercraft_default_font',
             'type'      => 'select',
 			'choices' => array(
-				'gentium_book_basic' => 'Gentium Book Basic',
+				'gentium_book_plus' => 'Gentium Book Plus',
 				'lato' => 'Lato',
 				'lora' => 'Lora',
 				'merriweather' => 'Merriweather',
