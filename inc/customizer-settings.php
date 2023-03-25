@@ -583,7 +583,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 				'dancing_script' => 'Dancing Script',
 				'fredoka_one' => 'Fredoka One',
 				'genos' => 'Genos',
-				'gentium_book_basic' => 'Gentium Book Basic',
+				'gentium_book_plus' => 'Gentium Book Plus',
 				'gloria_hallelujah' => 'Gloria Hallelujah',
 				'itim' => 'Itim',
 				'knewave' => 'Knewave',
