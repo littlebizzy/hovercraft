@@ -13,7 +13,7 @@ function hovercraft_generate_css(){
 		$hero_image = $url_header_image; 
 	}
     
-	$sitewide_layout = get_theme_mod( 'hovercraft_sitewide_layout', 'classic_clean' );
+	$sitewide_layout = get_theme_mod( 'hovercraft_sitewide_layout', 'floating_islands' );
 	$scroll_to_top = get_theme_mod( 'hovercraft_scroll_to_top', 'mobile_only' );
 	$mobile_topbar_widget = get_theme_mod( 'hovercraft_mobile_topbar', 'topbar_left' );
 	$mobile_preheader_widget = get_theme_mod( 'hovercraft_mobile_preheader', 'none' );
@@ -633,6 +633,7 @@ img.featured-image {
 	background: #ffffff;
 	padding: 40px 40px;
     margin-bottom: 20px;
+	border-radius: 2px;
 }
 
 #sidebar .widget-wrapper:first-child{
