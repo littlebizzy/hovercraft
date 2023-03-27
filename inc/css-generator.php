@@ -13,7 +13,7 @@ function hovercraft_generate_css(){
 		$hero_image = $url_header_image; 
 	}
     
-	$sitewide_layout = get_theme_mod( 'hovercraft_sitewide_layout', 'floating_islands' );
+	$sitewide_layout = get_theme_mod( 'hovercraft_sitewide_layout', 'classic_clean' );
 	$scroll_to_top = get_theme_mod( 'hovercraft_scroll_to_top', 'mobile_only' );
 	$mobile_topbar_widget = get_theme_mod( 'hovercraft_mobile_topbar', 'topbar_left' );
 	$mobile_preheader_widget = get_theme_mod( 'hovercraft_mobile_preheader', 'none' );
@@ -531,7 +531,7 @@ video.hero-background-video {
 	<?php if ( $sitewide_layout == 'floating_islands' ) { 
 			echo "width: 800px;\n"; 
 		} else { 
-			echo "width: 760px;\n"; 
+			echo "width: 768px;\n"; 
 		}  ?>
 	}
 }
@@ -670,7 +670,7 @@ img.featured-image {
 @media screen and (min-width: 1200px) {
 #sidebar {
 	float: right;
-	width: 400px;
+	width: 392px;
 	margin-left: 40px;
 	<?php // $sidebar_padding_checked = get_theme_mod( 'hovercraft_sidebar_padding' ) ? true : false;
 	// if ( $sidebar_padding_checked == true ) { echo "padding: 40px;"; } ?>
