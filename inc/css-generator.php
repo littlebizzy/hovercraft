@@ -13,7 +13,7 @@ function hovercraft_generate_css(){
 		$hero_image = $url_header_image; 
 	}
     
-	$sitewide_layout = get_theme_mod( 'hovercraft_sitewide_layout', 'classic_clean' );
+	$sitewide_layout = get_theme_mod( 'hovercraft_sitewide_layout', 'floating_islands' );
 	$scroll_to_top = get_theme_mod( 'hovercraft_scroll_to_top', 'mobile_only' );
 	$mobile_topbar_widget = get_theme_mod( 'hovercraft_mobile_topbar', 'topbar_left' );
 	$mobile_preheader_widget = get_theme_mod( 'hovercraft_mobile_preheader', 'none' );
@@ -529,7 +529,7 @@ video.hero-background-video {
 	float: left;
 	padding: 0px 0px;
 	<?php if ( $sitewide_layout == 'floating_islands' ) { 
-			echo "width: 800px;\n"; 
+			echo "width: 768px;\n"; 
 		} else { 
 			echo "width: 768px;\n"; 
 		}  ?>
@@ -561,7 +561,7 @@ video.hero-background-video {
 
 @media screen and (min-width: 1200px) {
 #primary-center {
-	width: 800px;
+	width: 768px;
 	margin: 0px auto;
 	}
 }
@@ -577,9 +577,9 @@ img.featured-image {
 @media screen and (min-width: 1200px) {
 img.featured-image {
 	<?php if ( $sitewide_layout == 'floating_islands' ) { 
-			echo "width: 800px;\n"; 
+			echo "width: 768px;\n"; 
 		} else { 
-			echo "width: 760px;\n"; 
+			echo "width: 768px;\n"; 
 		}  ?>
 	}
 }
