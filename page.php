@@ -14,10 +14,11 @@ if ( !is_front_page() || ( is_front_page() && $hovercraft_homepage_hide_main_che
 	
 		<div id="content">
 						
-			<?php $url_featured_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' ); 
-			if ( !empty( $url_featured_image ) ) { ?>
-			<img class="featured-image" src="<?php echo $url_featured_image; ?>" />
-			<?php } ?>
+			<?php global $post; $url_featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( $currentID ), 'medium_large' );
+					// https://rudrastyh.com/wordpress/image-sizes.html
+					if ( !empty( $url_featured_image ) && ( !is_singular('product') ) ) { ?>
+					<img class="featured-image" src="<?php echo $url_featured_image[0]; ?>" />
+					<?php } ?>
 			
 			<div class="content-padded">
 				<h1><?php the_title(); ?></h1>
