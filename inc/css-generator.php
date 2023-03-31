@@ -565,7 +565,15 @@ video.hero-background-video {
 	margin: 0px auto;
 	}
 }
-	
+
+
+/* author byline */
+
+.author-byline {
+	margin-bottom: 20px;	
+}	
+
+
 /* images */
 
 @media screen and (max-width: 1200px) {
