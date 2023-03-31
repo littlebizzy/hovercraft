@@ -12,43 +12,28 @@
 		<?php get_template_part( 'template-parts/content/breadcrumbs' ); ?>
 		
 		<div id="content">
-	
-		<?php if ( is_singular() ) { ?>
-				<?php if ( is_page_template( 'page-templates/template-basic.php' ) || !is_page_template() ) { ?>
 			
+			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
 				<?php get_template_part( 'template-parts/content/featured-image' ); ?>
 			
-					<div class="content-padded">
-					<h1><?php the_title(); ?></h1>
-					
-					<?php get_template_part( 'template-parts/content/byline' ); ?>
-					
-					<span><?php if ( 'post' == get_post_type() ) { the_time(get_option('date_format')); } ?></span><br><br>
-				<?php } ?>
-						
-		<?php } ?><!-- singular -->
+				<div class="content-padded">
+				
+				<h1><?php the_title(); ?></h1>
+
+				<?php get_template_part( 'template-parts/content/byline' ); ?>					
 		
+			<?php the_content(); ?>
 		
-		
-		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-		
-			<?php if (is_home()) { ?>
-				<h4><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
-				<?php the_excerpt(); ?>
-			<?php } else {
-				the_content();
-			} ?>
-		
-		<?php endwhile; endif; ?><!-- the loop -->
+			<?php endwhile; endif; ?><!-- the loop -->
 			
-	<?php get_template_part( 'template-parts/content/tags' ); ?>
+			<?php get_template_part( 'template-parts/content/tags' ); ?>
 	
-	<?php get_template_part( 'template-parts/content/last-modified' ); ?>
+			<?php get_template_part( 'template-parts/content/last-modified' ); ?>
+					
+			<?php hovercraft_pagination_nav(); ?>
 			
-	</div><!-- content-padded -->
-	
-		<div class="clear"></div>
-		<?php hovercraft_pagination_nav(); ?>	
+		</div><!-- content-padded -->
 	
 	<div class="clear"></div>
 	</div><!-- content -->
@@ -68,6 +53,6 @@
 	</div><!-- inner -->
 	</div><!-- main -->
 	
-</div>
+</div><!-- post -->
 
 <?php get_template_part( 'footer' ); ?>
