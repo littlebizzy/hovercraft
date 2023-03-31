@@ -15,15 +15,14 @@
 	
 		<?php if ( is_singular() ) { ?>
 				<?php if ( is_page_template( 'page-templates/template-basic.php' ) || !is_page_template() ) { ?>
-					<?php global $post; $url_featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( $currentID ), 'medium_large' );
-					// https://rudrastyh.com/wordpress/image-sizes.html
-					if ( !empty( $url_featured_image ) && ( !is_singular('product') ) ) { ?>
-					<img class="featured-image" src="<?php echo $url_featured_image[0]; ?>" />
-					<?php } ?>
-			<div class="content-padded">
+			
+				<?php get_template_part( 'template-parts/content/featured-image' ); ?>
+			
+					<div class="content-padded">
 					<h1><?php the_title(); ?></h1>
 					<span><?php if ( 'post' == get_post_type() ) { the_time(get_option('date_format')); } ?></span><br><br>
 				<?php } ?>
+						
 		<?php } ?><!-- singular -->
 		
 		
