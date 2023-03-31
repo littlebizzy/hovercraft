@@ -20,6 +20,9 @@
 			
 					<div class="content-padded">
 					<h1><?php the_title(); ?></h1>
+					
+					<?php get_template_part( 'template-parts/content/byline' ); ?>
+					
 					<span><?php if ( 'post' == get_post_type() ) { the_time(get_option('date_format')); } ?></span><br><br>
 				<?php } ?>
 						
