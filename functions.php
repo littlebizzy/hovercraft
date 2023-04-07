@@ -36,6 +36,9 @@ require get_template_directory() . '/inc/logo-alternative.php';
 // default logo
 require get_template_directory() . '/inc/logo-default.php';
 
+// media sizes
+require get_template_directory() . '/inc/media-sizes.php';
+
 // menu locations
 require get_template_directory() . '/inc/menu-locations.php';
 
