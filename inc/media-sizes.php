@@ -10,14 +10,17 @@
 
 function hovercraft_verify_media_sizes() {
     
-    $media_large_width = get_option( 'large_size_w' );
+    $large_width = get_option( 'large_size_w' );
+	$large_height = get_option( 'large_size_h' );
+	$medium_width = get_option( 'large_size_h' );
+	$medium_height = get_option( 'large_size_h' );
 
-    if ( $media_large_width != '1200' ) { ?>
+    if ( $large_width != '1200' || $medium_width != '480' ) { ?>
 
         <div class="notice notice-warning">
         <p><strong>Adjust Media Sizes</strong></p>
-        <p>The HoverCraft theme requires the Large size to be 1200px for Max Width and Max Height.</p>
-		<p><a href="/options-media.php">Review Settings</a></p>
+        <p>The HoverCraft theme requires the Large image size to have a Max Width of 1200 and the Medium image size to have a Max Width of 480.</p>
+		<p><a href="/wp-admin/options-media.php">Review Settings</a></p>
 		</div>
 
     <?php }
