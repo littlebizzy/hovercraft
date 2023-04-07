@@ -6,7 +6,9 @@
 			$logo_default_url = wp_get_attachment_url( get_theme_mod( 'custom_logo' ) );
 			$logo_alternative_url = get_theme_mod( 'hovercraft_logo_alternative' );
 			if ( is_page_template( array( 
-				'page-templates/template-full-hero.php',
+				'page-templates/template-full-hero-columns.php',
+				'page-templates/template-full-hero-no-sidebar.php',
+				'page-templates/template-full-hero-sidebar.php',
 				'page-templates/template-full-hero-tiles.php'
 				) ) ) {
 				echo esc_url($logo_alternative_url);
