@@ -19,7 +19,7 @@ function hovercraft_verify_media_sizes() {
 
         <div class="notice notice-warning">
         <p><strong>Adjust Media Sizes</strong></p>
-        <p>The HoverCraft theme requires the Large image size to have a Max Width of 1200 and the Medium image size to have a Max Width of 480.</p>
+        <p>The HoverCraft theme requires Large size images to have a Max Width of 1200 and Medium size images to have a Max Width of 480.</p>
 		<p><a href="/wp-admin/options-media.php">Review Settings</a></p>
 		</div>
 
