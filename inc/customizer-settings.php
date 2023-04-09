@@ -1476,6 +1476,99 @@ $wp_customize->add_section( 'hovercraft_hero_styling', array(
     'title'      => 'Hero Options',
     'priority'   => 87,
 ) );
+	
+// full hero background position setting
+$wp_customize->add_setting( 'hovercraft_full_hero_background_position', array(
+    'default'    => 'center_center',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// full hero background position control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_full_hero_background_position',
+        array(
+            'label'     => __('Full Hero Background Position', 'hovercraft'),
+			'description' => __( 'Background position of the hero image?', 'hovercraft' ),
+            'section'   => 'hovercraft_hero_styling',
+            'settings'  => 'hovercraft_full_hero_background_position',
+            'type'      => 'select',
+			'choices' => array(
+				'left_top' => 'Left Top',
+				'left_center' => 'Left Center',
+				'left_bottom' => 'Left Bottom',
+				'right_top' => 'Right Top',
+				'right_center' => 'Right Center',
+				'right_bottom' => 'Right Bottom',
+				'center_top' => 'Center Top',
+				'center_center' => 'Center Center',
+				'center_bottom' => 'Center Bottom'
+    			)
+        )
+) );
+	
+// half hero background position setting
+$wp_customize->add_setting( 'hovercraft_half_hero_background_position', array(
+    'default'    => 'center_center',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// half hero background position control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_half_hero_background_position',
+        array(
+            'label'     => __('Half Hero Background Position', 'hovercraft'),
+			'description' => __( 'Background position of the hero image?', 'hovercraft' ),
+            'section'   => 'hovercraft_hero_styling',
+            'settings'  => 'hovercraft_half_hero_background_position',
+            'type'      => 'select',
+			'choices' => array(
+				'left_top' => 'Left Top',
+				'left_center' => 'Left Center',
+				'left_bottom' => 'Left Bottom',
+				'right_top' => 'Right Top',
+				'right_center' => 'Right Center',
+				'right_bottom' => 'Right Bottom',
+				'center_top' => 'Center Top',
+				'center_center' => 'Center Center',
+				'center_bottom' => 'Center Bottom'
+    			)
+        )
+) );
+	
+// mini hero background position setting
+$wp_customize->add_setting( 'hovercraft_mini_hero_background_position', array(
+    'default'    => 'center_center',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// mini hero background position control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_mini_hero_background_position',
+        array(
+            'label'     => __('Mini Hero Background Position', 'hovercraft'),
+			'description' => __( 'Background position of the hero image?', 'hovercraft' ),
+            'section'   => 'hovercraft_hero_styling',
+            'settings'  => 'hovercraft_mini_hero_background_position',
+            'type'      => 'select',
+			'choices' => array(
+				'left_top' => 'Left Top',
+				'left_center' => 'Left Center',
+				'left_bottom' => 'Left Bottom',
+				'right_top' => 'Right Top',
+				'right_center' => 'Right Center',
+				'right_bottom' => 'Right Bottom',
+				'center_top' => 'Center Top',
+				'center_center' => 'Center Center',
+				'center_bottom' => 'Center Bottom'
+    			)
+        )
+) );
 
 // hero content width (desktop) setting
 $wp_customize->add_setting( 'hovercraft_hero_content_width_desktop', array(
