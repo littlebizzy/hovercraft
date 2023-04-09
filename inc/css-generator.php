@@ -13,6 +13,9 @@ function hovercraft_generate_css(){
 		$hero_image = $url_header_image; 
 	}
     
+	$full_hero_background_position = get_theme_mod( 'hovercraft_full_hero_background_position', 'center_center' );
+	$half_hero_background_position = get_theme_mod( 'hovercraft_half_hero_background_position', 'center_center' );
+	$mini_hero_background_position = get_theme_mod( 'hovercraft_mini_hero_background_position', 'center_center' );
 	$sitewide_layout = get_theme_mod( 'hovercraft_sitewide_layout', 'floating_islands' );
 	$scroll_to_top = get_theme_mod( 'hovercraft_scroll_to_top', 'mobile_only' );
 	$mobile_topbar_widget = get_theme_mod( 'hovercraft_mobile_topbar', 'topbar_left' );
@@ -325,7 +328,7 @@ a:hover {
 		list($r2, $g2, $b2) = sscanf($hero_gradient_stop_color, "#%02x%02x%02x");
 		echo "rgba({$r2}, {$g2}, {$b2}, {$hero_gradient_stop_color_transparency})"; 
 		?> <?php echo $hero_gradient_stop_color_length; ?>%)<?php if (!empty( $hero_image )) echo ", url({$hero_image})" ?>;
-	background-position: center center;
+	background-position: <?php $fullpos = str_replace('_',' ',$full_hero_background_position); echo $fullpos; ?>;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -366,7 +369,7 @@ video.hero-background-video {
 		list($r2, $g2, $b2) = sscanf($hero_gradient_stop_color, "#%02x%02x%02x");
 		echo "rgba({$r2}, {$g2}, {$b2}, {$hero_gradient_stop_color_transparency})"; 
 		?> <?php echo $hero_gradient_stop_color_length; ?>%)<?php if (!empty( $hero_image )) echo ", url({$hero_image})" ?>;
-	background-position: top center;
+	background-position: <?php $halfpos = str_replace('_',' ',$half_hero_background_position); echo $halfpos; ?>;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -379,7 +382,7 @@ video.hero-background-video {
 		list($r2, $g2, $b2) = sscanf($hero_gradient_stop_color, "#%02x%02x%02x");
 		echo "rgba({$r2}, {$g2}, {$b2}, {$hero_gradient_stop_color_transparency})"; 
 		?> <?php echo $hero_gradient_stop_color_length; ?>%)<?php if (!empty( $hero_image )) echo ", url({$hero_image})" ?>;
-	background-position: center center;
+	background-position: <?php $minipos = str_replace('_',' ',$mini_hero_background_position); echo $minipos; ?>;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -392,7 +395,7 @@ video.hero-background-video {
 		list($r2, $g2, $b2) = sscanf($hero_gradient_stop_color, "#%02x%02x%02x");
 		echo "rgba({$r2}, {$g2}, {$b2}, {$hero_gradient_stop_color_transparency})"; 
 		?> <?php echo $hero_gradient_stop_color_length; ?>%), url(<?php echo $hero_image; ?>);
-	background-position: center center;
+	background-position: <?php $minipos = str_replace('_',' ',$mini_hero_background_position); echo $minipos; ?>;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
