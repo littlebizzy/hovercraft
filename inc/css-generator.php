@@ -577,6 +577,25 @@ video.hero-background-video {
 }	
 
 
+/* alignment */
+	
+.aligncenter {
+	text-align: center;
+	margin: 0 auto;
+	display: block;
+}
+	
+.alignleft {
+	text-align: left;
+	display: inline-block;
+}
+
+.alignright {
+	text-align: right;
+	display: inline-block;
+}
+
+
 /* images */
 
 @media screen and (max-width: 1200px) {
