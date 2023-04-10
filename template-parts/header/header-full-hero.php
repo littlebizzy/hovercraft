@@ -39,30 +39,26 @@
 		<?php endif; ?><!-- is_front_page -->
 	
 		<?php if (is_front_page()) : ?>
-		<div class="cta-hero-wrapper">
-		<?php
-			if ( has_nav_menu( 'cta-hero-primary' ) ) {
-    		// User has assigned menu to this location;
-    		// https://wordpress.stackexchange.com/questions/32739/wp-nav-menu-show-menu-only-if-one-exists-otherwise-show-nothing
-    		wp_nav_menu( array( 
-        	'theme_location' => 'cta-hero-primary', 
-        	'menu_class' => 'cta', 
-        	'container_class' => 'cta-hero-primary'
-    		) );
-			}
-		?>
-		<?php
-			if ( has_nav_menu( 'cta-hero-secondary' ) ) {
-    		// User has assigned menu to this location;
-    		// https://wordpress.stackexchange.com/questions/32739/wp-nav-menu-show-menu-only-if-one-exists-otherwise-show-nothing
-    		wp_nav_menu( array( 
-        	'theme_location' => 'cta-hero-secondary', 
-        	'menu_class' => 'cta', 
-        	'container_class' => 'cta-hero-secondary'
-    		) );
-			}
-		?>
-		</div><!-- cta-hero-wrapper -->
+		<?php if ( has_nav_menu( 'cta-hero-primary' ) || has_nav_menu( 'cta-hero-secondary' ) ) : ?>
+		
+			<div class="cta-hero-wrapper">
+				<?php if ( has_nav_menu( 'cta-hero-primary' ) ) : ?>
+    				<?php wp_nav_menu( array( 
+        				'theme_location' => 'cta-hero-primary', 
+        				'menu_class' => 'cta', 
+        				'container_class' => 'cta-hero-primary'
+    					) ); ?>
+				<?php endif; ?>
+				<?php if ( has_nav_menu( 'cta-hero-secondary' ) ) : ?>
+    				<?php wp_nav_menu( array( 
+        				'theme_location' => 'cta-hero-secondary', 
+        				'menu_class' => 'cta', 
+        				'container_class' => 'cta-hero-secondary'
+    					) );
+				<?php endif; ?>
+			</div><!-- cta-hero-wrapper -->
+		
+		<?php endif; ?>
 		<?php endif; ?>
 			
 	</div><!-- welcome-wrapper -->
@@ -75,3 +71,5 @@
 </div><!-- hero-full-wrapper -->
 	
 </div><!-- hero-full-container -->
+
+<!-- https://wordpress.stackexchange.com/questions/32739/wp-nav-menu-show-menu-only-if-one-exists-otherwise-show-nothing -->
