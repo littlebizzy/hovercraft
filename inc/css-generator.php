@@ -771,26 +771,19 @@ img.featured-image {
 	color: <?php echo $copyright_link_color; ?>;
 	text-decoration: <?php echo $copyright_link_decoration; ?>;
 }
-	
+
+
 /* copyright icons */
 
 #copyright i {
 	font-size: 24px;
-	margin-left: 20px;
+	margin-left: 20px !important;
 }
 
 #copyright i:first-child {
 	margin-left: 0;
 }
 
-#copyright a i {
-    font-size: 24px;
-    margin-left: 20px;
-}
-
-#copyright a i:first-child {
-    margin-left: 0;
-}
 
 /* other stuff */
 	
