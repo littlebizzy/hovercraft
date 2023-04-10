@@ -54,7 +54,7 @@
         				'theme_location' => 'cta-hero-secondary', 
         				'menu_class' => 'cta', 
         				'container_class' => 'cta-hero-secondary'
-    					) );
+    					) ); ?>
 				<?php endif; ?>
 			</div><!-- cta-hero-wrapper -->
 		
