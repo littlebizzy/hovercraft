@@ -9,6 +9,7 @@ function hovercraft_menu_locations() {
 			'cta-header-secondary' => 'Header Secondary CTA',
 			'cta-hero-primary' => 'Hero Primary CTA',
 			'cta-hero-secondary' => 'Hero Secondary CTA',
+			'cta-sidebar-callout' => 'Sidebar Callout CTA'
         )
     ); 
 }
@@ -80,6 +81,26 @@ add_filter( 'wp_nav_menu_objects', 'hovercraft_cta_hero_secondary_limit', 10, 2 
 
 function hovercraft_cta_hero_secondary_limit($items, $args) {
     if ( $args->theme_location == 'cta-hero-secondary' ) {
+        $toplinks = 0;
+        foreach ( $items as $k => $v ) {
+            if ( $v->menu_item_parent == 0 ) {
+                // count how many top-level links we have so far...
+                $toplinks++;
+            }
+            // if we've passed our max # ...
+            if ( $toplinks > 1 ) {
+                unset($items[$k]);
+            }
+        }
+    }
+    return $items;
+}
+
+// limit cta-sidebar-callout to one link
+add_filter( 'wp_nav_menu_objects', 'hovercraft_cta_sidebar_callout_limit', 10, 2 );
+
+function hovercraft_cta_sidebar_callout_limit($items, $args) {
+    if ( $args->theme_location == 'cta-sidebar-callout' ) {
         $toplinks = 0;
         foreach ( $items as $k => $v ) {
             if ( $v->menu_item_parent == 0 ) {
