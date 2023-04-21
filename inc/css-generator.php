@@ -637,6 +637,8 @@ img.featured-image {
 
 .breadcrumbs ul {
 	display: inline;
+	list-style-position: unset;
+	margin-left: 0 !important;
 }
 
 .breadcrumbs ul li {
