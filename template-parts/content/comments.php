@@ -1,0 +1,1 @@
+<?php comments_template(); ?>
