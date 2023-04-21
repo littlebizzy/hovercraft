@@ -31,7 +31,7 @@
 	
 			<?php get_template_part( 'template-parts/content/last-modified' ); ?>
 					
-			<?php hovercraft_pagination_nav(); ?>
+			<?php get_template_part( 'template-parts/content/pagination' ); ?>
 			
 		</div><!-- content-padded -->
 	
@@ -46,8 +46,6 @@
     	<?php if ( get_theme_mod( 'hovercraft_sidebar_status' ) == 1 ) { 
 		get_template_part( 'sidebar' ); 
 		} ?>
-		
-    	<?php get_template_part( 'template-parts/content/pagination' ); ?>
 		
     	<div class="clear"></div>
 	</div><!-- inner -->
