@@ -6,11 +6,7 @@
 
   <?php if ( get_theme_mod( 'hovercraft_sidebar_status' ) == 1 ) { ?><div id="primary"><?php } else { ?><div id="primary-wide"><?php } ?>
 
-	<?php if ( get_theme_mod( 'hovercraft_breadcrumbs' ) == 1 ) { ?>
-		<div class="breadcrumbs">
-			<?php ah_breadcrumb(); ?>
-		</div><!-- breadcrumbs -->
-	<?php } ?><!-- if hovercraft_breadcrumbs -->
+	<?php get_template_part( 'template-parts/content/breadcrumbs' ); ?>
 	
 	<div id="content">
 		
@@ -21,15 +17,12 @@
 		
 		<?php endwhile; endif; ?><!-- the loop -->
 	
-	<div class="clear"></div>
-	<?php hovercraft_pagination_nav(); ?>	
+	<?php get_template_part( 'template-parts/content/last-modified' ); ?>
+		
+	<?php get_template_part( 'template-parts/content/pagination' ); ?>
 	
 	<div class="clear"></div>
 	</div><!-- content -->
-
-	<div class="last-modified">
-		<span> <?php _e('Last modified on ', 'hovercraft'); echo the_modified_time('F j, Y'); ?> </span>
-	</div><!-- last-modified -->
 
 	<div class="clear"></div>
   </div><!-- primary -->
@@ -37,7 +30,6 @@
     <?php if ( get_theme_mod( 'hovercraft_sidebar_status' ) == 1 ) { 
 		get_template_part( 'sidebar' ); 
 	  } ?>
-    <?php get_template_part( 'template-parts/content/pagination' ); ?>
     
     <div class="clear"></div>
 </div><!-- inner -->
