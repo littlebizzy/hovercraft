@@ -10,7 +10,7 @@
 				
 			<?php get_template_part( 'template-parts/content/last-modified' ); ?>
 					
-			<?php hovercraft_pagination_nav(); ?>
+			<?php get_template_part( 'template-parts/content/pagination' ); ?>
 			
 		</div><!-- content-padded -->
 	
