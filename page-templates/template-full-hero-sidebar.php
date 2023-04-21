@@ -15,8 +15,6 @@ if ( !is_front_page() || ( is_front_page() && $hovercraft_homepage_hide_main_che
 	    <?php get_template_part( 'template-parts/content/breadcrumbs' ); ?>
 
 	    <?php get_template_part( 'template-parts/content/content' ); ?>
-
-	    <?php get_template_part( 'template-parts/content/last-modified' ); ?>
 	
 	    <?php comments_template(); ?> 
 
