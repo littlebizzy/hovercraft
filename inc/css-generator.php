@@ -711,7 +711,7 @@ img.featured-image {
 	width: 100%;
 	background: #ffffff;
 	padding: 40px 40px;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 	border-radius: 5px;
 }
 
