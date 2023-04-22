@@ -698,6 +698,10 @@ img.featured-image {
 	border-radius: 5px;
 }
 
+.author-biography p {
+	margin-bottom: 0;
+}
+
 
 /* sidebar */
 
