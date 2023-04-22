@@ -688,7 +688,17 @@ img.featured-image {
 	}
 }
 
-	
+
+/* author biography */
+
+.author-biography {
+	margin: 40px 0px;
+	padding: 40px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+}
+
+
 /* sidebar */
 
 @media screen and (max-width: 1200px) {
