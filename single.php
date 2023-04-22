@@ -26,6 +26,8 @@
 			<?php the_content(); ?>
 		
 			<?php endwhile; endif; ?><!-- the loop -->
+					
+			<?php get_template_part( 'template-parts/content/biography' ); ?>
 			
 			<?php get_template_part( 'template-parts/content/tags' ); ?>
 	
