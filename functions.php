@@ -15,6 +15,9 @@ require get_template_directory() . '/inc/css-generator.php';
 // custom header
 require get_template_directory() . '/inc/custom-header.php';
 
+// custom post test
+require get_template_directory() . '/inc/custom-post-test.php';
+
 // customizer settings
 require get_template_directory() . '/inc/customizer-settings.php';
 
