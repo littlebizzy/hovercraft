@@ -45,6 +45,9 @@ require get_template_directory() . '/inc/menu-locations.php';
 // pagination
 require get_template_directory() . '/inc/pagination.php';
 
+// tags list
+require get_template_directory() . '/inc/tags-list.php';
+
 // widget areas
 require get_template_directory() . '/inc/widget-areas.php';
 
