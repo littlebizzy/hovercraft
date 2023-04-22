@@ -976,7 +976,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	
 // sidebar callout text color setting
 $wp_customize->add_setting( 'hovercraft_sidebar_callout_text_color', array(
-	'default' => '#fffff',
+	'default' => '#ffffff',
 	'sanitize_callback' => 'sanitize_hex_color',
 ) );
 
