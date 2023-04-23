@@ -899,6 +899,21 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	)
 ) );
 	
+// header mini hero text color setting
+$wp_customize->add_setting( 'hovercraft_mini_hero_header_text_color', array(
+	'default' => '#263238',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+ 
+// header mini hero text color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_mini_hero_header_text_color', array(
+	'label' => 'Header (Mini Hero) Text Color',
+	'description' => 'This is a description',
+	'section' => 'colors',
+	'settings' => 'hovercraft_mini_hero_header_text_color'
+	)
+) );
+	
 // header basic background color setting
 $wp_customize->add_setting( 'hovercraft_header_basic_background_color', array(
 	'default' => '#eceff1',
