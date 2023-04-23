@@ -944,6 +944,36 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	)
 ) );
 	
+// header basic hero text color setting
+$wp_customize->add_setting( 'hovercraft_basic_hero_header_text_color', array(
+	'default' => '#263238',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+ 
+// header basic hero text color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_basic_hero_header_text_color', array(
+	'label' => 'Header (basic Hero) Text Color',
+	'description' => 'This is a description',
+	'section' => 'colors',
+	'settings' => 'hovercraft_basic_hero_header_text_color'
+	)
+) );
+	
+// header basic hero link color setting
+$wp_customize->add_setting( 'hovercraft_basic_hero_header_link_color', array(
+	'default' => '#5C6BC0',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+ 
+// header basic hero link color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_basic_hero_header_link_color', array(
+	'label' => 'Header (basic Hero) Link Color',
+	'description' => 'This is a description',
+	'section' => 'colors',
+	'settings' => 'hovercraft_basic_hero_header_link_color'
+	)
+) );
+	
 // posthero background color setting
 $wp_customize->add_setting( 'hovercraft_posthero_background_color', array(
 	'default' => '#eceff1',
