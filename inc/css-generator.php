@@ -13,6 +13,7 @@ function hovercraft_generate_css(){
 		$hero_image = $url_header_image; 
 	}
     
+	$mini_hero_header_text_color = get_theme_mod( 'hovercraft_mini_hero_header_text_color', '#263238' );
 	$full_hero_background_position = get_theme_mod( 'hovercraft_full_hero_background_position', 'center_center' );
 	$half_hero_background_position = get_theme_mod( 'hovercraft_half_hero_background_position', 'center_center' );
 	$mini_hero_background_position = get_theme_mod( 'hovercraft_mini_hero_background_position', 'center_center' );
@@ -374,6 +375,12 @@ video.hero-background-video {
 	background-repeat: no-repeat;
 }
 
+#header-half-hero {
+	background: <?php echo $header_half_hero_background_color; ?>;
+}
+
+/* mini header */
+
 #hero-mini {
 	background: linear-gradient(<?php echo $hero_gradient_angle; ?>, <?php 
 		list($r1, $g1, $b1) = sscanf($hero_gradient_start_color, "#%02x%02x%02x");
@@ -400,12 +407,37 @@ video.hero-background-video {
 	background-repeat: no-repeat;
 }
 
-#header-half-hero {
-	background: <?php echo $header_half_hero_background_color; ?>;
+@media screen and (max-width: 1200px) {
+#header-mini-hero {
+	width: 100%;
+	display: table;
+	padding: 10px 20px;
+	border-bottom: 1px solid transparent;
+	background: <?php echo $header_mini_hero_background_color; ?>;
+	color: <?php echo $mini_hero_header_text_color; ?>;
+	}
 }
 
+@media screen and (min-width: 1200px) {
 #header-mini-hero {
+	width: 100%;
+	display: table;
+	margin: 0px auto;
+	padding: 20px 0px;
+	border-bottom: 1px solid transparent;
 	background: <?php echo $header_mini_hero_background_color; ?>;
+	color: <?php echo $mini_hero_header_text_color; ?>;
+	}
+}
+	
+#header-mini-hero .main-menu ul li a {
+	text-decoration: none;
+	color: #263238; /* correct */
+	font-weight: 600;
+}
+
+#header-mini-hero a {
+	color: #263238; /* correct */
 }
 
 /* basic header */
@@ -656,6 +688,7 @@ img.featured-image {
 	
 #content {
 	background: #ffffff;
+	border-radius: 5px;
 }
 
 #content ul {
