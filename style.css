@@ -479,42 +479,6 @@ button {
 }
 
 
-/* mini hero header */
-
-@media screen and (max-width: 1200px) {
-#header-mini-hero {
-	width: 100%;
-	display: table;
-	padding: 10px 20px;
-	border-bottom: 1px solid transparent;
-	background: #FFF;
-	color: #263238; /* correct */
-	}
-}
-
-@media screen and (min-width: 1200px) {
-#header-mini-hero {
-	width: 100%;
-	display: table;
-	margin: 0px auto;
-	padding: 20px 0px;
-	border-bottom: 1px solid transparent;
-	background: #FFF;
-	color: #263238; /* correct */
-	}
-}
-
-#header-mini-hero .main-menu ul li a {
-	text-decoration: none;
-	color: #263238; /* correct */
-	font-weight: 600;
-}
-
-#header-mini-hero a {
-	color: #263238; /* correct */
-}
-
-
 /* header elements */
 
 .header-left {
