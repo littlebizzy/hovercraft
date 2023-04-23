@@ -691,6 +691,10 @@ img.featured-image {
 	background: #ffffff;
 	border-radius: 5px;
 }
+	
+#content img {
+	max-width: 100%;
+}
 
 #content ul {
 	margin-left: 30px;
