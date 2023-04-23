@@ -433,7 +433,7 @@ video.hero-background-video {
 	
 #header-mini-hero .main-menu ul li a {
 	text-decoration: none;
-	color: #263238; /* correct */
+	color: <?php echo $mini_hero_header_link_color; ?>;
 	font-weight: 600;
 }
 
