@@ -131,6 +131,18 @@ html, body {
 	}
 }
 
+/* general */
+	
+.white {
+	color: #ffffff;
+}
+
+.full-width {
+	width: 100%;
+}
+	
+/* links */
+
 a {
 	color: <?php echo $default_link_color; ?>;
 	text-decoration: <?php echo $default_link_decoration; ?>;
@@ -147,7 +159,9 @@ a:hover {
 .cta-hero-primary ul li a:hover {
 	background: <?php echo $default_hover_color; ?>;
 }
-	
+
+/* tiles */
+
 .tile i {
 	color: <?php echo $default_hover_color; ?>;
 }
