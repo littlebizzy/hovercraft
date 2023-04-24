@@ -716,6 +716,7 @@ img.featured-image {
 	
 #content img {
 	max-width: 100%;
+	height: auto;
 }
 
 #content ul {
