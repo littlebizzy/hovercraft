@@ -140,6 +140,10 @@ html, body {
 .full-width {
 	width: 100%;
 }
+
+.center {
+	text-align: center;
+}
 	
 /* links */
 
