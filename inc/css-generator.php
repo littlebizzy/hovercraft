@@ -134,7 +134,7 @@ html, body {
 /* general */
 	
 .white {
-	color: #ffffff;
+	color: #ffffff !important;
 }
 
 .full-width {
