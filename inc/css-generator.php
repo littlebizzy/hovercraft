@@ -164,6 +164,29 @@ a:hover {
 	background: <?php echo $default_hover_color; ?>;
 }
 
+/* images */
+	
+.alignright { 
+	float: right; 
+	margin: 0 0 20px 20px; 
+}
+
+.alignleft { 
+	float: left; 
+	margin: 0 20px 20px 0; 
+}
+
+.aligncenter { 
+	display: block; 
+	margin-left: auto; 
+	margin-right: auto; 
+}
+
+.wp-caption-text {
+	font-size: 12px;
+	color: #444;
+}
+
 /* tiles */
 
 .tile i {
