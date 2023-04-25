@@ -1009,3 +1009,5 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 <?php }
  
 add_action( 'wp_head', 'hovercraft_generate_css' );
+
+// https://codex.wordpress.org/Wrapping_Text_Around_Images
