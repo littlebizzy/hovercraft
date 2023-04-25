@@ -732,9 +732,18 @@ img.featured-image {
 	
 /* content */
 	
+@media screen and (max-width: 1200px) {
+#content {
+	background: #ffffff;
+	border-radius: 0;
+	}
+}
+	
+@media screen and (min-width: 1200px) {
 #content {
 	background: #ffffff;
 	border-radius: 5px;
+	}
 }
 	
 #content img {
