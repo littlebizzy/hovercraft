@@ -60,6 +60,7 @@ function hovercraft_generate_css(){
 	$posthero_link_decoration = get_theme_mod( 'hovercraft_posthero_link_decoration', 'underline' );
 	$sidebar_callout_background_color = get_theme_mod( 'hovercraft_sidebar_callout_background_color', '#283593' );
 	$sidebar_callout_text_color = get_theme_mod( 'hovercraft_sidebar_callout_text_color', '#ffffff' );
+	$sidebar_callout_link_color = get_theme_mod( 'hovercraft_sidebar_callout_link_color', '#ffffff' );
 	$main_background_color = get_theme_mod( 'hovercraft_main_background_color', '#eceff1' );
     $prefooter_top_background_color = get_theme_mod( 'hovercraft_prefooter_top_background_color', '#eceff1' );
 	$prefooter_top_text_color = get_theme_mod( 'hovercraft_prefooter_top_text_color', '#263238' );
@@ -827,6 +828,10 @@ img.featured-image {
 #sidebar .widget-wrapper:first-child {
    	background: <?php echo $sidebar_callout_background_color; ?>;
 	color: <?php echo $sidebar_callout_text_color; ?>;
+}
+	
+#sidebar .widget-wrapper:first-child a {
+	color: <?php echo $sidebar_callout_link_color; ?>;
 }
 
 #sidebar .widget-wrapper:last-child {
