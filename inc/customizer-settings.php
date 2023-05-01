@@ -1043,9 +1043,24 @@ $wp_customize->add_setting( 'hovercraft_sidebar_callout_text_color', array(
 // sidebar callout text color control
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_sidebar_callout_text_color', array(
 	'label' => 'Sidebar Callout Text Color',
-	'description' => 'Specify Text color of first child sidebar widget?',
+	'description' => 'Specify text color of first child sidebar widget?',
 	'section' => 'colors',
 	'settings' => 'hovercraft_sidebar_callout_text_color'
+	)
+) );
+	
+// sidebar callout link color setting
+$wp_customize->add_setting( 'hovercraft_sidebar_callout_link_color', array(
+	'default' => '#ffffff',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+
+// sidebar callout link color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_sidebar_callout_link_color', array(
+	'label' => 'Sidebar Callout Link Color',
+	'description' => 'Specify link color of first child sidebar widget?',
+	'section' => 'colors',
+	'settings' => 'hovercraft_sidebar_callout_link_color'
 	)
 ) );
 
