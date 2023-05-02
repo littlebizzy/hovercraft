@@ -573,6 +573,10 @@ video.hero-background-video {
 	color: <?php echo $posthero_link_color; ?>;
 	text-decoration: <?php echo $posthero_link_decoration; ?>;
 }
+	
+#posthero h3:last-child, #posthero h4:last-child {
+	margin-bottom: 0;
+}
 
 /* main */
 /* main refers to everything between header/splash and footer */
