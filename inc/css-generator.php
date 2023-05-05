@@ -193,6 +193,29 @@ a:hover {
 .tile i {
 	color: <?php echo $default_hover_color; ?>;
 }
+	
+/* offcanvas primary cta */
+
+.cta-offcanvas-primary {
+	
+}
+
+.cta-offcanvas-primary ul li {
+	margin: 20px 20px 0px 20px;
+	list-style-type: none;
+}
+
+.cta-offcanvas-primary ul li a {
+	width: 100%;
+	display: block;
+	padding: 10px 20px;
+	color: #FFF !important;
+	text-decoration: none !important;
+	font-size: 18px;
+	font-weight: 700;
+	background: <?php echo $default_link_color; ?>;
+	border-radius: 5px;
+}
 
 
 /* topbar */
