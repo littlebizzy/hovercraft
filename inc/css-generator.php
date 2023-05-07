@@ -13,9 +13,9 @@ function hovercraft_generate_css(){
 		$hero_image = $url_header_image; 
 	}
     
-	$basic_hero_header_link_color = get_theme_mod( 'hovercraft_basic_hero_header_link_color', '#5C6BC0' );
+	$basic_hero_header_link_color = get_theme_mod( 'hovercraft_basic_hero_header_link_color', '#263238' );
 	$basic_hero_header_text_color = get_theme_mod( 'hovercraft_basic_hero_header_text_color', '#263238' );
-	$mini_hero_header_link_color = get_theme_mod( 'hovercraft_mini_hero_header_link_color', '#5C6BC0' );
+	$mini_hero_header_link_color = get_theme_mod( 'hovercraft_mini_hero_header_link_color', '#263238' );
 	$mini_hero_header_text_color = get_theme_mod( 'hovercraft_mini_hero_header_text_color', '#263238' );
 	$full_hero_background_position = get_theme_mod( 'hovercraft_full_hero_background_position', 'center_center' );
 	$half_hero_background_position = get_theme_mod( 'hovercraft_half_hero_background_position', 'center_center' );
