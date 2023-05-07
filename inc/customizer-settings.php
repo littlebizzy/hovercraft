@@ -916,7 +916,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	
 // header mini hero link color setting
 $wp_customize->add_setting( 'hovercraft_mini_hero_header_link_color', array(
-	'default' => '#5C6BC0',
+	'default' => '#263238',
 	'sanitize_callback' => 'sanitize_hex_color',
 ) );
  
@@ -961,7 +961,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	
 // header basic hero link color setting
 $wp_customize->add_setting( 'hovercraft_basic_hero_header_link_color', array(
-	'default' => '#5C6BC0',
+	'default' => '#263238',
 	'sanitize_callback' => 'sanitize_hex_color',
 ) );
  
