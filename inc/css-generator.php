@@ -676,11 +676,19 @@ video.hero-background-video {
 }
 
 
-/* author byline */
+/* post byline */
 
-.author-byline {
-	margin-bottom: 20px;	
+.post-byline {
+	margin-bottom: 40px;	
 }	
+	
+.post-author {
+	display: inline;
+}
+
+.post-updated {
+	display: inline;
+}
 
 
 /* alignment */
