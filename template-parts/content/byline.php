@@ -1,4 +1,3 @@
-<div class="author-byline">
-	<span class="post-author"><?php _e( 'By: ', 'hovercraft' ); echo get_the_author_meta('display_name', $author_id); ?></span><br>
-	<span class="post-date"><?php if ( 'post' == get_post_type() ) { the_time(get_option('date_format')); } ?></span>	
-</div><!-- author-byline -->
+<div class="post-byline">
+	<span class="post-author"><?php _e( 'By ', 'hovercraft' ); echo get_the_author_meta('display_name', $author_id); ?></span> | <span class="post-updated"><?php _e( 'Updated on ', 'hovercraft' ); echo the_modified_time('F j, Y'); ?></span>
+</div><!-- post-byline -->
