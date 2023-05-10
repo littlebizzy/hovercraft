@@ -332,6 +332,32 @@ $wp_customize->add_control( new WP_Customize_Control(
     			)
         )
 ) );
+	
+// byline date setting
+$wp_customize->add_setting( 'hovercraft_byline_date', array(
+    'default'    => 'updated_date_only',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// byline date control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_byline_date',
+        array(
+            'label'     => __( 'Post Byline Date', 'hovercraft' ),
+			'description' => __( 'Which date should appear next to the post author name (in the byline)? Note: For SEO reasons, most sites should probably use the Updated Date Only option to keep things cleaner.', 'hovercraft' ),
+            'section'   => 'hovercraft_blog',
+            'settings'  => 'hovercraft_byline_date',
+            'type'      => 'select',
+			'choices' => array(
+        		'none' => 'None (Disabled)',
+				'updated_date_only' => 'Updated Date Only',
+				'published_date_only' => 'Published Date Only',
+				'updated_and_published_dates' => 'Updated & Published Dates'
+    			)
+        )
+) );
 
 // fonts section
 $wp_customize->add_section( 'hovercraft_fonts', array(
