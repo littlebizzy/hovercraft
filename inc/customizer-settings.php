@@ -256,31 +256,6 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
-// biography setting
-$wp_customize->add_setting( 'hovercraft_biography', array(
-    'default'    => 'native_posts_only',
-	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
-);
-
-// biography control
-$wp_customize->add_control( new WP_Customize_Control(
-        $wp_customize,
-        'hovercraft_biography',
-        array(
-            'label'     => __( 'Author Biography Display', 'hovercraft' ),
-			'description' => __( 'On which post types should the author biography be displayed (below article text)?', 'hovercraft' ),
-            'section'   => 'hovercraft_general',
-            'settings'  => 'hovercraft_biography',
-            'type'      => 'select',
-			'choices' => array(
-        		'none' => 'None (Disabled)',
-				'native_posts_only' => 'Native Posts Only',
-				'all_post_types' => 'Native & Custom Post Types'
-    			)
-        )
-) );
-
 // homepage html title setting
 $wp_customize->add_setting( 'hovercraft_homepage_html_title', array(
     'default'    => 'site_name_site_tagline',
@@ -326,6 +301,37 @@ $wp_customize->add_control(
         )
     )
 );
+
+// blog options section
+$wp_customize->add_section( 'hovercraft_blog', array(
+    'title'      => 'Blog (Posts)',
+    'priority'   => 113,
+) );
+
+// biography setting
+$wp_customize->add_setting( 'hovercraft_biography', array(
+    'default'    => 'native_posts_only',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// biography control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_biography',
+        array(
+            'label'     => __( 'Author Biography Display', 'hovercraft' ),
+			'description' => __( 'On which post types should the author biography be displayed (below article text)?', 'hovercraft' ),
+            'section'   => 'hovercraft_blog',
+            'settings'  => 'hovercraft_biography',
+            'type'      => 'select',
+			'choices' => array(
+        		'none' => 'None (Disabled)',
+				'native_posts_only' => 'Native Posts Only',
+				'all_post_types' => 'Native & Custom Post Types'
+    			)
+        )
+) );
 
 // fonts section
 $wp_customize->add_section( 'hovercraft_fonts', array(
