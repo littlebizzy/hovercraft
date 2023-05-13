@@ -849,8 +849,8 @@ img.featured-image {
 }
 
 .biography-photo img {
-	float: left;
-	margin-right: 20px;
+	float: left; 
+	margin: 0 20px 20px 0; 
 }
 
 
