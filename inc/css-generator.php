@@ -848,6 +848,11 @@ img.featured-image {
 	margin-bottom: 0;
 }
 
+.biography-photo img {
+	float: left;
+	margin-right: 20px;
+}
+
 
 /* sidebar */
 
