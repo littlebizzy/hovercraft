@@ -5,7 +5,17 @@
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	
+	<?php $hovercraft_material_icons = get_theme_mod( 'hovercraft_material_icons', 'classic_only' );
+		if ( $hovercraft_material_icons == 'classic_only' ) { ?>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons">
+		<?php } elseif ( $hovercraft_material_icons == 'classic_and_outlined' ) { ?>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons&family=Material+Icons+Outlined">
+		<?php } elseif ( $hovercraft_material_icons == 'classic_and_outlined_and_two_toned' ) { ?>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons&family=Material+Icons+Outlined&family=Material+Icons+Two+Tone">
+		<?php } elseif ( $hovercraft_material_icons == 'none' ) { ?>
+		<?php } ?>
+	
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap">
 	
 	<style>
