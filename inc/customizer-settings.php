@@ -1603,6 +1603,38 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// icons section
+$wp_customize->add_section( 'hovercraft_icons', array(
+    'title'      => 'Icons',
+    'priority'   => 102,
+) );
+
+// material icons setting
+$wp_customize->add_setting( 'hovercraft_material_icons', array(
+    'default'    => 'classic_only',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// material icons control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_material_icons',
+        array(
+            'label'     => __( 'Material Icons', 'hovercraft' ),
+			'description' => __( 'On which devices should the "back to top" element be displayed in the footer?', 'hovercraft' ),
+            'section'   => 'hovercraft_icons',
+            'settings'  => 'hovercraft_material_icons',
+            'type'      => 'select',
+			'choices' => array(
+        		'none' => 'None (Disabled)',
+        		'classic_only' => 'Classic Only',
+				'classic_and_outlined' => 'Classic &amp; Outlined',
+        		'classic_and_outlined_and_two_toned' => 'Classic &amp; Outlined &amp; Two-Toned'
+    			)
+        )
+) );
+
 // hero styling section
 $wp_customize->add_section( 'hovercraft_hero_styling', array(
     'title'      => 'Hero Options',
