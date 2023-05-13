@@ -853,6 +853,10 @@ img.featured-image {
 	margin: 0 20px 20px 0; 
 }
 
+p.biography-description {
+	font-size: 14px;
+}
+
 
 /* sidebar */
 
