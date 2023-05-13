@@ -165,6 +165,23 @@ a:hover {
 	background: <?php echo $default_hover_color; ?>;
 }
 
+
+/* titles */
+
+h5 {
+	margin-bottom: 20px;
+	font-weight: 700;
+	font-size: 18px;
+}
+	
+h5.author-biography-intro {
+	font-size: 14px;
+	font-weight: 600;
+	text-transform: uppercase;
+	color: #607D8B;
+}
+
+
 /* images */
 	
 .alignright { 
