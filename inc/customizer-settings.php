@@ -1622,7 +1622,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_material_icons',
         array(
             'label'     => __( 'Material Icons', 'hovercraft' ),
-			'description' => __( 'On which devices should the "back to top" element be displayed in the footer?', 'hovercraft' ),
+			'description' => __( 'Which variations of the Material Icons should be loaded? Note: Disabling this might break your search and navigation menus.', 'hovercraft' ),
             'section'   => 'hovercraft_icons',
             'settings'  => 'hovercraft_material_icons',
             'type'      => 'select',
