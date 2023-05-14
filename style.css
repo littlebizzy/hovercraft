@@ -1098,19 +1098,6 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 /* hero main mini */
 
 
-@media screen and (max-width: 1200px) {
-.hero-main-mini {
-	padding: 60px 20px; /* correct */
-	}
-}
-
-@media screen and (min-width: 1200px) {
-.hero-main-mini {
-	padding: 60px 0px;
-	}
-}
-
-
 /* hero cta wrapper */
 
 .cta-hero-wrapper {
