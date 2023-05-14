@@ -13,11 +13,7 @@ if ( !is_front_page() || ( is_front_page() && $hovercraft_homepage_hide_main_che
 		<div id="content">
 			
 			<?php get_template_part( 'template-parts/content/breadcrumbs' ); ?>
-						
-			<?php $url_featured_image = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'large' ); 
-			if ( !empty( $url_featured_image ) ) { ?>
-			<img class="featured-image" src="<?php echo $url_featured_image; ?>" />
-			<?php } ?>
+			<?php get_template_part( 'template-parts/content/featured-image-large' ); ?>
 		
 			<div class="content-padded">
 				<h1><?php the_title(); ?></h1>
