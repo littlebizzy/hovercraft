@@ -1000,7 +1000,7 @@ button[type="submit"] {
 	cursor: pointer;
 }
 	
-input[type="text"], input[type="email"], input[type="number"], select {
+input, select {
 	width: 100%;
 	font-size: 18px;
 	font-weight: 400;
