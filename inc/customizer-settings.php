@@ -1746,7 +1746,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
         'hovercraft_hero_content_width_desktop',
         array(
-            'label'     => __('Hero content width', 'hovercraft'),
+            'label'     => __('Full Hero Content Width', 'hovercraft'),
 			'description' => __( 'Width of hero content (desktop)', 'hovercraft' ),
             'section'   => 'hovercraft_hero_styling',
             'settings'  => 'hovercraft_hero_content_width_desktop',
@@ -1757,7 +1757,27 @@ $wp_customize->add_control( new WP_Customize_Control(
 				'1200px' => 'Full width (1200px)',
     			)
         )
-) );	
+) );
+
+// mini hero vertical padding setting (desktop)
+$wp_customize->add_setting( 'hovercraft_mini_hero_vertical_padding', array(
+    'default'    => '80',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
+	) 
+);
+
+// mini hero vertical padding control (desktop)
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_mini_hero_vertical_padding',
+        array(
+            'label'     => __( 'Mini Hero Padding (Desktop)', 'hovercraft' ),
+			'description' => __( 'Specificy mini hero vertical padding in pixels?', 'hovercraft' ),
+            'section'   => 'hovercraft_hero_styling',
+            'settings'  => 'hovercraft_mini_hero_vertical_padding',
+            'type' => 'text'
+        )
+) );
 
 // hero gradient angle setting
 $wp_customize->add_setting( 'hovercraft_hero_gradient_angle', array(
