@@ -478,7 +478,7 @@ video.hero-background-video {
 	background-size: cover;
 	background-repeat: no-repeat;
 }
-	
+
 .hero-main-mini {
 	background: linear-gradient(<?php echo $hero_gradient_angle; ?>, <?php 
 		list($r1, $g1, $b1) = sscanf($hero_gradient_start_color, "#%02x%02x%02x");
@@ -490,6 +490,18 @@ video.hero-background-video {
 	background-position: <?php $minipos = str_replace('_',' ',$mini_hero_background_position); echo $minipos; ?>;
 	background-size: cover;
 	background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 1200px) {
+.hero-main-mini {
+	padding: 60px 20px; /* correct */
+	}
+}
+
+@media screen and (min-width: 1200px) {
+.hero-main-mini {
+	padding: 60px 0px;
+	}
 }
 
 @media screen and (max-width: 1200px) {
