@@ -465,6 +465,11 @@ video.hero-background-video {
 	background: <?php echo $header_half_hero_background_color; ?>;
 }
 
+#header-half-hero .menu-mobile-wrapper i {
+	font-size: 36px;
+	color: #263238;
+}
+
 /* mini header */
 
 #hero-mini {
@@ -528,6 +533,10 @@ video.hero-background-video {
 	}
 }
 	
+#header-mini-hero .menu-mobile-wrapper i {
+	color: <?php echo $mini_hero_header_text_color; ?>;
+}
+	
 #header-mini-hero .main-menu ul li a {
 	text-decoration: none;
 	color: <?php echo $mini_hero_header_link_color; ?>;
@@ -561,6 +570,11 @@ video.hero-background-video {
 	background: <?php echo $header_basic_background_color; ?>;
 	color: <?php echo $basic_hero_header_text_color; ?>;
 	}
+}
+
+#header-basic .menu-mobile-wrapper i {
+	font-size: 36px;
+	color: <?php echo $basic_hero_header_text_color; ?>;
 }
 
 #header-basic .main-menu ul li a {
