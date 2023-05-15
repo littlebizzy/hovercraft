@@ -8,6 +8,7 @@ if ( !empty( $url_featured_image ) && ( !is_singular('product') ) ) { ?>
 <img width="<?php echo $image_width; ?>" height="<?php echo $image_height; ?>" class="featured-image" src="<?php echo $url_featured_image[0]; ?>" />
 <div class="featured-image-caption"><?php echo the_post_thumbnail_caption(); ?></div>
 </div><!-- featured-image-wrapper -->
+<br><br>
 <?php }
 
 // https://wordpress.stackexchange.com/questions/18337/how-to-get-featured-images-width-and-use-elsewhere-in-template
