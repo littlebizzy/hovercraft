@@ -740,7 +740,7 @@ video.hero-background-video {
 }
 
 
-/* images */
+/* featured images */
 
 @media screen and (max-width: 1200px) {
 img.featured-image {
@@ -756,6 +756,23 @@ img.featured-image {
 			echo "width: 768px;\n"; 
 		}  ?>
 	}
+}
+
+.featured-image-wrapper {
+	position: relative;
+	height: <?php global $post; 
+			$url_featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( $currentID ), 'medium_large' );
+			$image_height = $url_featured_image[2];
+			echo $image_height; ?>px;
+}
+
+.featured-image-caption {
+	position: absolute;
+	font-size: 12px;
+	bottom: 0px;
+	color: #ffffff;
+	padding: 5px 10px;
+	right: 0px;
 }
 	
 /* breadcrumbs */
