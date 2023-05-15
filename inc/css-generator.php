@@ -328,29 +328,20 @@ h5.author-biography-intro {
 @media screen and (max-width: 1200px) {
 #preheader {
 	width: 100%;
-	padding: 10px 20px;
+	padding: 0px 20px 10px 20px;
 	font-size: 14px;
 	line-height: 1.5;
-	background: <?php echo $preheader_background_color; ?>;
-	color: <?php echo $preheader_text_color; ?>;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 #preheader {
 	width: 100%;
-	padding: 10px 0px;
+	padding: 0px 0px 20px 0px;
 	font-size: 14px;
 	line-height: 1.5;
 	display: table;
-	background: <?php echo $preheader_background_color; ?>;
-	color: <?php echo $preheader_text_color; ?>;
 	}
-}
-
-#preheader a {
-	color: <?php echo $preheader_link_color; ?>;
-	text-decoration: <?php echo $preheader_link_decoration; ?>;
 }
 
 #preheader p {
