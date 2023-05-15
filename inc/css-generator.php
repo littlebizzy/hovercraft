@@ -202,6 +202,7 @@ h5.author-biography-intro {
 }
 
 .wp-caption-text {
+	text-align: left;
 	font-size: 12px;
 	color: #444;
 }
