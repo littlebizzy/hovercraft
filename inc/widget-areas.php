@@ -527,7 +527,6 @@ function hovercraft_column_three() {
 }
 add_action( 'widgets_init', 'hovercraft_column_three' );
 
-
 // column four widgets
 function hovercraft_column_four() {
 
@@ -542,3 +541,19 @@ function hovercraft_column_four() {
 
 }
 add_action( 'widgets_init', 'hovercraft_column_four' );
+
+// column five widgets
+function hovercraft_column_five() {
+
+	register_sidebar( array(
+		'name'          => 'Column #5',
+		'id'            => 'hovercraft_column_five',
+		'before_widget' => '<div class="widget-column-five widget-wrapper">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+}
+add_action( 'widgets_init', 'hovercraft_column_five' );
+
