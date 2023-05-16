@@ -2,15 +2,13 @@
 <div class="inner">
 	
 	<?php if ( is_active_sidebar( 'hovercraft_column_five' ) ) { ?>
-			<div id="columns-wrapper-five">
+			<div id="columns-five">
 		<?php } elseif ( ! is_active_sidebar( 'hovercraft_column_five' ) && is_active_sidebar( 'hovercraft_column_four' ) ) { ?>
-			<div id="columns-wrapper-four">
+			<div id="columns-four">
 		<?php } elseif ( ! is_active_sidebar( 'hovercraft_column_five' ) && ! is_active_sidebar( 'hovercraft_column_four' ) ) { ?>
-				<div id="columns-wrapper-three">
+				<div id="columns-three">
 		<?php } ?>
-	
-	<div id="columns">
-	
+		
 	<?php if ( is_active_sidebar( 'hovercraft_column_one' ) ) { ?>
 	<div class="column">
 		<?php dynamic_sidebar( 'hovercraft_column_one' ); ?>
@@ -48,7 +46,6 @@
 		
 	<div class="clear"></div>
 	</div><!-- columns -->
-	</div><!-- columns-wrapper -->
     
 	<?php // get_template_part( 'template-parts/content/primary' ); ?>
     
