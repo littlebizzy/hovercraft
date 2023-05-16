@@ -1,5 +1,4 @@
-<div id="main">
-<div class="inner">
+
 	
 	<?php if ( is_active_sidebar( 'hovercraft_column_five' ) ) { ?>
 			<div id="columns-five">
@@ -46,11 +45,3 @@
 		
 	<div class="clear"></div>
 	</div><!-- columns -->
-    
-	<?php // get_template_part( 'template-parts/content/primary' ); ?>
-    
-    <?php get_template_part( 'template-parts/content/pagination' ); ?>
-	
-    <div class="clear"></div>
-</div><!-- inner -->
-</div><!-- main -->
