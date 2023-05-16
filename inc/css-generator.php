@@ -328,7 +328,7 @@ h5.author-biography-intro {
 @media screen and (max-width: 1200px) {
 #preheader {
 	width: 100%;
-	padding: 0px 20px 10px 20px;
+	padding: 0px 20px 20px 20px;
 	font-size: 14px;
 	line-height: 1.5;
 	}
@@ -337,7 +337,7 @@ h5.author-biography-intro {
 @media screen and (min-width: 1200px) {
 #preheader {
 	width: 100%;
-	padding: 0px 0px 20px 0px;
+	padding: 0px 0px 40px 0px;
 	font-size: 14px;
 	line-height: 1.5;
 	display: table;
@@ -949,6 +949,7 @@ p.biography-description {
 	padding: 30px;
 	border-radius: 5px;
 	margin-bottom: 30px;
+	background: #ffffff;
 	}
 }
 
@@ -965,7 +966,12 @@ p.biography-description {
   	justify-content: center;
   	align-items: center;
 	padding: 30px;
+	background: #ffffff;
 	}
+}
+	
+.column ul {
+	font-size: 14px;
 }
 
 
