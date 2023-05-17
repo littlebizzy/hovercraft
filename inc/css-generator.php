@@ -201,11 +201,6 @@ h5.author-biography-intro {
 	margin-right: auto; 
 }
 
-.wp-caption-text {
-	text-align: left;
-	font-size: 12px;
-	color: #444;
-}
 
 /* tiles */
 
@@ -831,13 +826,8 @@ img.featured-image {
 @media screen and (min-width: 1200px) {
 #content {
 	background: #ffffff;
-	border-radius: 5px;
+	border-radius: 0;
 	}
-}
-	
-#content img {
-	max-width: 100%;
-	height: auto;
 }
 
 #content ul {
@@ -853,10 +843,19 @@ img.featured-image {
 #content ol li {
 	margin-bottom: 15px;
 }
+	
+
+/* content-padded */
 
 @media screen and (max-width: 1200px) {
 .content-padded {
-	padding: 20px 20px 0px 20px;
+	padding: 20px;
+	width: 100%;
+	max-width: 100%;
+	display: block;
+    overflow: hidden;
+	overflow-wrap: break-word;
+	word-break: break-all;
 	}
 }
 
@@ -867,9 +866,30 @@ img.featured-image {
 		} else { 
 			echo "padding: 40px 40px 20px 0px;\n"; 
 		}  ?>
+	overflow: hidden;
+	overflow-wrap: break-word;
+	word-break: break-all;
 	}
 }
+	
+.content-padded img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
 
+.wp-caption {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+.wp-caption-text {
+	text-align: left;
+	font-size: 12px;
+	color: #444;
+	padding-top: 2px;
+}
 
 /* author biography */
 
@@ -1203,3 +1223,4 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 add_action( 'wp_head', 'hovercraft_generate_css' );
 
 // https://codex.wordpress.org/Wrapping_Text_Around_Images
+// https://blog.logrocket.com/guide-css-word-wrap-overflow-wrap-word-break/
