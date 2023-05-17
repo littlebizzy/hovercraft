@@ -1006,6 +1006,49 @@ p.biography-description {
 }
 
 
+/* postcolumns */
+	
+@media screen and (max-width: 1200px) {
+#postcolumns-top {
+	width: 100%;
+	padding: 30px 20px;
+	text-align: center;
+	background: <?php echo $postcolumns_top_background_color; ?>;
+	color: <?php echo $postcolumns_top_text_color; ?>;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+#postcolumns-top {
+	width: 100%;
+	padding: 30px 0px;
+	text-align: center;
+	background: <?php echo $postcolumns_top_background_color; ?>;
+	color: <?php echo $postcolumns_top_text_color; ?>;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+#postcolumns-bottom {
+	width: 100%;
+	padding: 30px 20px;
+	text-align: center;
+	background: <?php echo $postcolumns_bottom_background_color; ?>;
+	color: <?php echo $postcolumns_bottom_text_color; ?>;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+#postcolumns-bottom {
+	width: 100%;
+	padding: 30px 0px;
+	text-align: center;
+	background: <?php echo $postcolumns_bottom_background_color; ?>;
+	color: <?php echo $postcolumns_bottom_text_color; ?>;
+	}
+}
+
+
 /* sidebar */
 
 @media screen and (max-width: 1200px) {
