@@ -855,7 +855,6 @@ img.featured-image {
 	display: block;
     overflow: hidden;
 	overflow-wrap: break-word;
-	word-break: break-all;
 	}
 }
 
@@ -868,7 +867,6 @@ img.featured-image {
 		}  ?>
 	overflow: hidden;
 	overflow-wrap: break-word;
-	word-break: break-all;
 	}
 }
 	
