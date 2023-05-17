@@ -10,7 +10,6 @@ if ( !empty( $url_featured_image ) && ( !is_singular('product') ) ) { ?>
 <img width="<?php echo $image_width; ?>" height="<?php echo $image_height; ?>" class="featured-image" src="<?php echo $url_featured_image[0]; ?>" alt="<?php echo $image_alt; ?>" />
 <div class="featured-image-caption"><?php echo the_post_thumbnail_caption(); ?></div>
 </div><!-- featured-image-wrapper -->
-<br><br>
 <?php }
 
 // https://rudrastyh.com/wordpress/image-sizes.html
