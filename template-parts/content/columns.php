@@ -1,4 +1,3 @@
-
 	
 	<?php if ( is_active_sidebar( 'hovercraft_column_five' ) ) { ?>
 			<div id="columns-five">
@@ -45,3 +44,21 @@
 		
 	<div class="clear"></div>
 	</div><!-- columns -->
+
+<?php if ( is_active_sidebar( 'hovercraft_postcolumns_top' ) ) { ?>
+<div id="postcolumns-top">
+<div class="inner">
+	<?php dynamic_sidebar( 'hovercraft_postcolumns_top' ); ?>
+	<div class="clear"></div>
+</div><!--inner -->
+</div><!-- postcolumns-top -->
+<?php } ?>
+
+<?php if ( is_active_sidebar( 'hovercraft_postcolumns_bottom' ) ) { ?>
+<div id="postcolumns-bottom">
+<div class="inner">
+	<?php dynamic_sidebar( 'hovercraft_postcolumns_bottom' ); ?>
+	<div class="clear"></div>
+</div><!--inner -->
+</div><!-- postcolumns-bottom -->
+<?php } ?>
