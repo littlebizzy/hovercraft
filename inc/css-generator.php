@@ -746,6 +746,8 @@ video.hero-background-video {
 @media screen and (max-width: 1200px) {
 img.featured-image {
 	width: 100%;
+	height: auto;
+	display: block;
 	}
 }
 
@@ -756,15 +758,25 @@ img.featured-image {
 		} else { 
 			echo "width: 768px;\n"; 
 		}  ?>
+	height: auto;
+	display: block;
 	}
 }
 
+@media screen and (max-width: 1200px) {
 .featured-image-wrapper {
 	position: relative;
-	height: <?php global $post; 
-			$url_featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( $currentID ), 'medium_large' );
-			$image_height = $url_featured_image[2];
-			echo $image_height; ?>px;
+	width: 100%;
+	height: auto;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+.featured-image-wrapper {
+	position: relative;
+	width: 768px;
+	height: auto;
+	}
 }
 
 .featured-image-caption {
@@ -865,6 +877,7 @@ img.featured-image {
 		} else { 
 			echo "padding: 40px 40px 20px 0px;\n"; 
 		}  ?>
+	display: block;
 	overflow: hidden;
 	overflow-wrap: break-word;
 	}
