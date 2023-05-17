@@ -557,3 +557,32 @@ function hovercraft_column_five() {
 }
 add_action( 'widgets_init', 'hovercraft_column_five' );
 
+// postcolumns top widgets
+function hovercraft_postcolumns_top() {
+
+	register_sidebar( array(
+		'name'          => 'Postcolumns Top',
+		'id'            => 'hovercraft_postcolumns_top',
+		'before_widget' => '<div class="widget-postcolumns-top widget-wrapper">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+}
+add_action( 'widgets_init', 'hovercraft_postcolumns_top' );
+
+// postcolumns bottom widgets
+function hovercraft_postcolumns_bottom() {
+
+	register_sidebar( array(
+		'name'          => 'Postcolumns Bottom',
+		'id'            => 'hovercraft_postcolumns_bottom',
+		'before_widget' => '<div class="widget-postcolumns-bottom widget-wrapper">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+}
+add_action( 'widgets_init', 'hovercraft_postcolumns_bottom' );
