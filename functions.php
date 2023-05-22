@@ -48,6 +48,9 @@ require get_template_directory() . '/inc/menu-locations.php';
 // pagination
 require get_template_directory() . '/inc/pagination.php';
 
+// portal category
+require get_template_directory() . '/inc/portal-category.php';
+
 // tags list
 require get_template_directory() . '/inc/tags-list.php';
 
