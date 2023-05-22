@@ -36,7 +36,16 @@
 <div class="hero-main-mini">
 <div class="inner">
 		<div class="title-wrapper">
-		<h1 class="mini-hero-title"><?php single_post_title(); ?></h1>
+		<h1 class="mini-hero-title"><?php if ( is_singular() ) { single_post_title(); } ?></h1>
+			
+			<?php if (is_category('support')) { ?>
+			<form role="search" method="get" class="searchform" action="<?php $category_link = get_category_link( $category_id );
+											  echo esc_url( $category_link ); ?>">
+			<div class="searchform-items">
+			<input type="search" class="searchinput" value="<?php echo esc_attr( get_search_query() ); ?>" name="s" placeholder="<?php echo "Search support articles..."; ?>" />
+			</div><!-- searchform-items -->
+			</form><!-- searchform -->
+			<?php } ?>
 		
 		<?php if (is_front_page()) : ?>
 		
