@@ -17,6 +17,30 @@ $wp_customize->add_section( 'hovercraft_general', array(
     'title'      => 'General Options',
     'priority'   => 30,
 ) );
+
+// portal category setting
+$wp_customize->add_setting( 'hovercraft_portal_category', array(
+    'default'    => 'none',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// portal category control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_portal_category',
+        array(
+            'label'     => __( 'Portal Category', 'hovercraft' ),
+			'description' => __( 'Which post category should use the portal layout?', 'hovercraft' ),
+            'section'   => 'hovercraft_general',
+            'settings'  => 'hovercraft_portal_category',
+            'type'      => 'select',
+			'choices' => array(
+        		'none' => 'None (Disabled)',
+        		'support' => 'Support'
+    			)
+        )
+) );
 	
 // sitewide layout setting
 $wp_customize->add_setting( 'hovercraft_sitewide_layout', array(
