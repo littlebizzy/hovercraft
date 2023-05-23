@@ -32,6 +32,8 @@
 			<?php get_template_part( 'template-parts/content/tags' ); ?>
 	
 			<?php get_template_part( 'template-parts/content/last-modified' ); ?>
+				
+			<?php get_template_part( 'template-parts/content/link-pages' ); ?>
 					
 			<?php get_template_part( 'template-parts/content/pagination' ); ?>
 			
