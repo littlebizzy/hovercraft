@@ -46,10 +46,6 @@ function hovercraft_generate_css(){
 	$topbar_text_color = get_theme_mod( 'hovercraft_topbar_text_color', '#ffffff' );
 	$topbar_link_color = get_theme_mod( 'hovercraft_topbar_link_color', '#ffffff' );
 	$topbar_link_decoration = get_theme_mod( 'hovercraft_topbar_link_decoration', 'underline' );
-	$preheader_background_color = get_theme_mod( 'hovercraft_preheader_background_color', '#eceff1' );
-	$preheader_text_color = get_theme_mod( 'hovercraft_preheader_text_color', '#263238' );
-	$preheader_link_color = get_theme_mod( 'hovercraft_preheader_link_color', '#263238' );
-	$preheader_link_decoration = get_theme_mod( 'hovercraft_preheader_link_decoration', 'underline' );
 	$hero_gradient_start_color = get_theme_mod( 'hovercraft_hero_gradient_start_color', '#37474f' );
 	$hero_gradient_stop_color = get_theme_mod( 'hovercraft_hero_gradient_stop_color', '#ffffff' );
     $header_half_hero_background_color = get_theme_mod( 'hovercraft_header_half_hero_background_color', '#ffffff' ); 
