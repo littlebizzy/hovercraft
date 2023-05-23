@@ -57,6 +57,9 @@ require get_template_directory() . '/inc/portal-category.php';
 // tags list
 require get_template_directory() . '/inc/tags-list.php';
 
+// title homepage
+require get_template_directory() . '/inc/title-homepage.php';
+
 // title tag
 require get_template_directory() . '/inc/title-tag.php';
 
