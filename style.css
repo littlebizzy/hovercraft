@@ -1974,6 +1974,11 @@ form.cart {
 	font-size: 18px!important;
 }
 
+.woocommerce-form__input-checkbox {
+	width: auto;
+	box-shadow: inset 0px 0px 0px 0px #bdbdbd!important;
+}
+
 
 /* woocommerce product list widget */
 
