@@ -22,48 +22,6 @@
 	<?php include 'style.css'; ?>
 	</style>
 	
-	<title><?php
-		if ( is_front_page() ) {
-			$hovercraft_homepage_html_title = get_theme_mod( 'hovercraft_homepage_html_title', 'site_name_site_tagline' );
-			if ( $hovercraft_homepage_html_title == 'site_name_site_tagline' ) {
-				echo get_option( 'blogname' );
-				$blogdescription = get_option( 'blogdescription', "" );
-            	if(!empty($blogdescription)) {
-            		echo ' | '.$blogdescription;
-            	}
-			} // if site_name_site_tagline
-			elseif ( $hovercraft_homepage_html_title == 'site_name_only' ) {
-				echo get_option( 'blogname' );
-			} // if site_name_only
-			elseif ( $hovercraft_homepage_html_title == 'site_name_page_title' ) {
-				echo get_option( 'blogname' );
-				$id_frontpage = get_option('page_on_front');
-				if(!empty($id_frontpage)) {
-            		echo ' | ';
-					echo get_the_title($id_frontpage);
-				}
-			} // if site_name_page_title
-			elseif ( $hovercraft_homepage_html_title == 'page_title_only' ) {
-				$id_frontpage = get_option('page_on_front');
-				echo get_the_title( $id_frontpage );
-			} // if page_title_only
-		} // if is_front_page
-		elseif ( is_archive() ) {
-			echo the_archive_title();
-			echo ' - ';
-			echo get_option( 'blogname' );
-		}
-		elseif ( is_404() ) {
-			echo '404 Error (Page Not Found)';
-			echo ' - ';
-			echo get_option( 'blogname' );
-		}
-		else {
-			echo trim( wp_title('', false) );
-			echo ' - ';
-			echo get_option( 'blogname' );
-		} ?></title>
-	
 	<?php wp_head(); ?>
 	</head>
 	<body <?php body_class(); ?>>
