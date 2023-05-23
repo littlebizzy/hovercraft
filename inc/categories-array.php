@@ -10,7 +10,7 @@ function hovercraft_portal_category_register( $wp_customize ) {
  
     //Loop through the array and add the correct values every time
 	foreach( $rjs_categories_full_list as $rjs_single_cat ) {
-    	$rjs_choices_list[$rjs_single_cat->slug] = esc_html__( $rjs_single_cat->name, 'text-domain' );
+    	$rjs_choices_list[$rjs_single_cat->slug] = __( $rjs_single_cat->name );
 	}
 	
 	// portal category setting
