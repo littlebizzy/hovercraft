@@ -849,51 +849,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	'settings' => 'hovercraft_topbar_link_color'
 	)
 ) );
-	
-// preheader background color setting
-$wp_customize->add_setting( 'hovercraft_preheader_background_color', array(
-	'default' => '#eceff1',
-	'sanitize_callback' => 'sanitize_hex_color',
-) );
-
-// preheader background color control
-$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_preheader_background_color', array(
-	'label' => 'Preheader Background Color',
-	'description' => 'Applies to the site-wide preheader element.',
-	'section' => 'colors',
-	'settings' => 'hovercraft_preheader_background_color'
-	)
-) );
-	
-// preheader text color setting
-$wp_customize->add_setting( 'hovercraft_preheader_text_color', array(
-	'default' => '#263238',
-	'sanitize_callback' => 'sanitize_hex_color',
-) );
- 
-// preheader text color control
-$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_preheader_text_color', array(
-	'label' => 'Preheader Text Color',
-	'description' => 'Applies to any plain text inside the preheader.',
-	'section' => 'colors',
-	'settings' => 'hovercraft_preheader_text_color'
-	)
-) );
-	
-// preheader link color setting
-$wp_customize->add_setting( 'hovercraft_preheader_link_color', array(
-	'default' => '#ffffff',
-	'sanitize_callback' => 'sanitize_hex_color',
-) );
- 
-// preheader link color control
-$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_preheader_link_color', array(
-	'label' => 'Preheader Link Color',
-	'description' => 'Applies to any links inside the preheader.',
-	'section' => 'colors',
-	'settings' => 'hovercraft_preheader_link_color'
-	)
-) );
 
 // hero gradient color start setting
 $wp_customize->add_setting( 'hovercraft_hero_gradient_start_color', array(
