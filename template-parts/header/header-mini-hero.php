@@ -36,9 +36,11 @@
 <div class="hero-main-mini">
 <div class="inner">
 		<div class="title-wrapper">
-		<h1 class="mini-hero-title"><?php if ( is_singular() ) { single_post_title(); } ?></h1>
+		<h1 class="mini-hero-title"><?php if ( is_singular() ) { single_post_title(); } elseif ( is_category() ) { single_cat_title(); } ?></h1>
 			
-			<?php if (is_category('support')) { ?>
+			<?php $portal_category = get_theme_mod( 'hovercraft_portal_category', 'none' );
+			if (is_category( $portal_category )) { ?>
+			<br>
 			<form role="search" method="get" class="searchform" action="<?php $category_link = get_category_link( $category_id );
 											  echo esc_url( $category_link ); ?>">
 			<div class="searchform-items">
