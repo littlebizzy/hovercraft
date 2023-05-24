@@ -6,7 +6,7 @@ function hovercraft_portal_category_register( $wp_customize ) {
 	$rjs_categories_full_list = get_categories(array( 'orderby' => 'name', ));
  
     //Create an empty array
-	$rjs_choices_list = [];
+	$rjs_choices_list = [ 'none' => 'None (Disabled)', ];
  
     //Loop through the array and add the correct values every time
 	foreach( $rjs_categories_full_list as $rjs_single_cat ) {
@@ -26,11 +26,11 @@ function hovercraft_portal_category_register( $wp_customize ) {
         'hovercraft_portal_category',
         array(
             'label'     => __( 'Portal Category', 'hovercraft' ),
-			'description' => __( 'Which post category should use the portal layout? Note: This works well with Support articles, and might not be needed in some cases.', 'hovercraft' ),
+			'description' => __( 'Which post category should use the portal layout? Note: This works well with Support articles, but might not be needed in some cases.', 'hovercraft' ),
             'section'   => 'hovercraft_general',
             'settings'  => 'hovercraft_portal_category',
             'type'      => 'select',
-			'choices' => $rjs_choices_list,
+			'choices' =>  $rjs_choices_list,
         )
 ) );
  
@@ -40,3 +40,4 @@ add_action( 'customize_register', 'hovercraft_portal_category_register' );
 
 // https://ralphjsmit.com/create-a-category-dropdown-in-wordpress-customizer
 // $category = get_theme_mod( 'rjs_category_dropdown', 'Uncategorized');
+// https://stackoverflow.com/questions/43715567/how-to-add-extra-values-to-a-existing-array
