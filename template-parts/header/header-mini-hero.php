@@ -44,7 +44,10 @@
 			<form role="search" method="get" class="searchform" action="<?php $category_link = get_category_link( $category_id );
 											  echo esc_url( $category_link ); ?>">
 			<div class="searchform-items">
-			<input type="search" class="searchinput" value="<?php echo esc_attr( get_search_query() ); ?>" name="s" placeholder="<?php echo "Search support articles..."; ?>" />
+			<input type="search" class="searchinput" value="<?php echo esc_attr( get_search_query() ); ?>" name="s" placeholder="<?php 
+				$cattitle = single_cat_title('', false);
+				$lowercattitle = strtolower($cattitle);
+				echo "Search $lowercattitle articles..."; ?>" />
 			</div><!-- searchform-items -->
 			</form><!-- searchform -->
 			<?php } ?>
