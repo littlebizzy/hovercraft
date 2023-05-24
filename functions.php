@@ -12,6 +12,9 @@ require get_template_directory() . '/inc/breadcrumbs.php';
 // categories array
 require get_template_directory() . '/inc/categories-array.php';
 
+// category bullets
+require get_template_directory() . '/inc/category-bullets.php';
+
 // css generator
 require get_template_directory() . '/inc/css-generator.php';
 
