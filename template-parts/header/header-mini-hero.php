@@ -47,7 +47,7 @@
 			<input type="search" class="searchinput" value="<?php echo esc_attr( get_search_query() ); ?>" name="s" placeholder="<?php 
 				$cattitle = single_cat_title('', false);
 				$lowercattitle = strtolower($cattitle);
-				echo "Search $lowercattitle articles..."; ?>" />
+				echo "Search {$lowercattitle}..."; ?>" />
 			</div><!-- searchform-items -->
 			</form><!-- searchform -->
 			<?php } ?>
