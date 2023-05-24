@@ -15,7 +15,7 @@
         <?php if ($the_query->have_posts()) : ?>
             <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
                 <h5><?php the_title(); ?></h5>
-                <?php the_content(); ?><br><br>
+                <?php the_content(); ?>
 
             <?php endwhile; ?>
             <?php wp_reset_postdata(); ?>
