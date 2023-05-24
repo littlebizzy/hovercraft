@@ -232,6 +232,20 @@ h5.author-biography-intro {
 }
 
 
+/* bullets */
+
+#bullets {
+	columns: 2;
+  column-fill: balance;
+	column-gap: 40px;
+}
+
+#bullets p {
+	font-size: 14px;
+	margin-bottom: 40px;
+}
+
+
 /* topbar */
 
 @media screen and (max-width: 1200px) {
