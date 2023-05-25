@@ -25,8 +25,8 @@ function hovercraft_bullets_category_register( $wp_customize ) {
         $wp_customize,
         'hovercraft_bullets_category',
         array(
-            'label'     => __( 'Bullets Category', 'hovercraft' ),
-			'description' => __( 'Which post category should use the bullets layout? Note: This works well with FAQ content, which should be brief. Add sub-categories to these posts for better organization.', 'hovercraft' ),
+            'label'     => __( 'Snippets Category', 'hovercraft' ),
+			'description' => __( 'Which post category should use the snippets layout? Note: This works well with FAQ content, which should be brief. Add sub-categories to these posts for better organization.', 'hovercraft' ),
             'section'   => 'hovercraft_general',
             'settings'  => 'hovercraft_bullets_category',
             'type'      => 'select',
