@@ -12,11 +12,11 @@ require get_template_directory() . '/inc/breadcrumbs.php';
 // bullets category
 require get_template_directory() . '/inc/bullets-category.php';
 
-// categories array
-require get_template_directory() . '/inc/categories-array.php';
+// register portal category (customizer)
+require get_template_directory() . '/inc/customizer/register-portal-category.php';
 
-// category bullets assign
-require get_template_directory() . '/inc/category-bullets-assign.php';
+// register snippets category (customizer)
+require get_template_directory() . '/inc/customizer/register-snippets-category.php';
 
 // css generator
 require get_template_directory() . '/inc/css-generator.php';
