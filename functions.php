@@ -9,6 +9,9 @@
 // breadcrumbs
 require get_template_directory() . '/inc/breadcrumbs.php';
 
+// bullets category
+require get_template_directory() . '/inc/bullets-category.php';
+
 // categories array
 require get_template_directory() . '/inc/categories-array.php';
 
