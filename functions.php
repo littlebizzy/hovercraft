@@ -28,7 +28,7 @@ require get_template_directory() . '/inc/custom-header.php';
 require get_template_directory() . '/inc/custom-post-test.php';
 
 // customizer settings
-require get_template_directory() . '/inc/customizer-settings.php';
+require get_template_directory() . '/inc/customizer/customizer-settings.php';
 
 // featured images
 require get_template_directory() . '/inc/featured-images.php';
