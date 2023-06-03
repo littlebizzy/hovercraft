@@ -1230,6 +1230,7 @@ input[type="submit"] {
 	border-radius: 5px;
 	border: 0;
 	cursor: pointer;
+	box-shadow: none;
 }
 	
 button[type="submit"]:hover, input[type="submit"]:hover {
