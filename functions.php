@@ -42,6 +42,9 @@ require get_template_directory() . '/inc/google-fonts.php';
 // video uploader
 require get_template_directory() . '/inc/header-video.php';
 
+// hide certain categories
+require get_template_directory() . '/inc/hide-certain-categories.php';
+
 // alternative logo
 require get_template_directory() . '/inc/logo-alternative.php';
 
