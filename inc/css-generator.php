@@ -244,6 +244,16 @@ h5.author-biography-intro {
 	font-size: 14px;
 	margin-bottom: 40px;
 }
+	
+#bullets ul, #bullets ol {
+	font-size: 14px;
+	margin-bottom: 40px;
+}
+
+#bullets li {
+	font-size: 14px;
+	margin-bottom: 10px;
+}
 
 
 /* topbar */
