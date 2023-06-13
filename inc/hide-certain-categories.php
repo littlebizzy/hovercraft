@@ -13,7 +13,7 @@ function wpa_31553( $wp_query ) {
     $excluded = array($port_cat_id,$bull_cat_id);  //made it an array in case you need to exclude more than one
 
     // only exclude on the front end
-    if( !is_admin() ) {
+    if( !is_admin() && !is_category(array($port_cat_id,$bull_cat_id)) ) {
         $wp_query->set('category__not_in', $excluded);
     }
 }
@@ -21,3 +21,4 @@ function wpa_31553( $wp_query ) {
 add_action('pre_get_posts', 'wpa_31553' );
 
 // https://wordpress.stackexchange.com/questions/31553/is-there-a-quick-way-to-hide-category-from-everywhere
+// https://stackoverflow.com/questions/13750619/if-is-not-category-wordpress-with-multiple-categories
