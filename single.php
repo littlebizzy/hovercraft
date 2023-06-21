@@ -8,8 +8,6 @@
     	
 		<?php $hovercraft_sidebar_status_checked = get_theme_mod( 'hovercraft_sidebar_status' ) ? true : false;
 		if ( $hovercraft_sidebar_status_checked == true ) { ?><div id="primary"><?php } else { ?><div id="primary-center"><?php } ?>
-
-		<?php get_template_part( 'template-parts/content/breadcrumbs' ); ?>
 		
 		<div id="content">
 			
@@ -18,26 +16,28 @@
 				<?php get_template_part( 'template-parts/content/featured-image' ); ?>
 			
 				<div class="content-padded">
-				
-				<h1><?php the_title(); ?></h1>
 
-				<?php get_template_part( 'template-parts/content/byline' ); ?>					
-		
-			<?php the_content(); ?>
-		
-			<?php endwhile; endif; ?><!-- the loop -->
-					
-			<?php get_template_part( 'template-parts/content/biography' ); ?>
-			
-			<?php get_template_part( 'template-parts/content/tags' ); ?>
-	
-			<?php get_template_part( 'template-parts/content/last-modified' ); ?>
+					<?php get_template_part( 'template-parts/content/breadcrumbs' ); ?>
 				
-			<?php get_template_part( 'template-parts/content/link-pages' ); ?>
+					<h1><?php the_title(); ?></h1>
+
+					<?php get_template_part( 'template-parts/content/byline' ); ?>					
+		
+					<?php the_content(); ?>
+		
+					<?php endwhile; endif; ?><!-- the loop -->
 					
-			<?php get_template_part( 'template-parts/content/pagination' ); ?>
+					<?php get_template_part( 'template-parts/content/biography' ); ?>
 			
-		</div><!-- content-padded -->
+					<?php get_template_part( 'template-parts/content/tags' ); ?>
+	
+					<?php get_template_part( 'template-parts/content/last-modified' ); ?>
+				
+					<?php get_template_part( 'template-parts/content/link-pages' ); ?>
+					
+					<?php get_template_part( 'template-parts/content/pagination' ); ?>
+			
+				</div><!-- content-padded -->
 	
 	<div class="clear"></div>
 	</div><!-- content -->
