@@ -772,6 +772,7 @@ img.featured-image {
 	width: 100%;
 	height: auto;
 	display: block;
+	margin-bottom: 40px;
 	}
 }
 
@@ -784,6 +785,7 @@ img.featured-image {
 		}  ?>
 	height: auto;
 	display: block;
+	margin-bottom: 40px;
 	}
 }
 
@@ -817,8 +819,8 @@ img.featured-image {
 @media screen and (max-width: 1200px) {
 .breadcrumbs {
 	width: 100%;
-	font-size: 14px;
 	margin-bottom: 20px;
+	font-size: 14px;
 	color: #607D8B;
 	white-space: normal;
 	}
@@ -827,7 +829,7 @@ img.featured-image {
 @media screen and (min-width: 1200px) {
 .breadcrumbs {
 	font-size: 14px;
-	margin-bottom: 20px;
+	margin-bottom: 40px;
 	color: #607D8B;
 	white-space: normal;
 	}
@@ -897,9 +899,9 @@ img.featured-image {
 @media screen and (min-width: 1200px) {
 .content-padded {
 	<?php if ( $sitewide_layout == 'floating_islands' ) { 
-			echo "padding: 40px 40px 20px 40px;\n"; 
+			echo "padding: 0px 40px 20px 40px;\n"; 
 		} else { 
-			echo "padding: 40px 40px 20px 0px;\n"; 
+			echo "padding: 0px 40px 20px 0px;\n"; 
 		}  ?>
 	display: block;
 	overflow: hidden;
