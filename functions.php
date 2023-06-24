@@ -107,3 +107,6 @@ function hovercraft_load_theme_textdomain() {
     load_theme_textdomain( 'hovercraft', get_template_directory() . '/languages' );
 }
 add_action( 'after_setup_theme', 'hovercraft_load_theme_textdomain' );
+
+// disable post gallery inline css
+add_filter( 'use_default_gallery_style', '__return_false' );
