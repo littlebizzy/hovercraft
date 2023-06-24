@@ -1165,6 +1165,26 @@ p.biography-description {
 }
 
 
+/* post image galleries */
+
+@media screen and (max-width: 1200px) {
+.gallery img {
+	width: 100%;
+	display: block;
+	margin-bottom: 20px;
+	border:;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+.gallery img {
+	width: 50%;
+	margin-bottom: 20px;
+	border: 0;
+	}
+}
+
+
 /* copyright icons */
 
 #copyright i {
