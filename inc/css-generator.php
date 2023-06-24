@@ -1100,7 +1100,7 @@ p.biography-description {
 	background: #ffffff;
 	padding: 40px 40px;
     margin-bottom: 40px;
-	border-radius: 5px;
+	border-radius: 0px;
 }
 
 #sidebar .widget-wrapper:first-child {
