@@ -204,6 +204,87 @@ h5.author-biography-intro {
 
 /* tiles */
 
+@media screen and (max-width: 1200px) {
+#tiles {
+	width: 100%;
+	padding: 30px 20px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+#tiles {
+	/* width: 100%;
+	margin: 0px auto;
+	padding: 0; */
+	
+	width: 100%;
+	display: grid;
+  	grid-template-columns: repeat(auto-fill, 380px);
+  	grid-gap: 30px;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+#tiles-narrow {
+	width: 100%;
+	padding: 30px 20px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+#tiles-narrow {
+	/* width: 100%;
+	margin: 0px auto;
+	padding: 0; */
+	
+	width: 100%;
+	display: grid;
+  	grid-template-columns: repeat(auto-fill, 354px);
+  	grid-gap: 30px;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+.tile {
+	width: 100%;
+	margin-bottom: 30px;
+	padding: 30px;
+	text-align: center;
+	border: 1px solid #263238;
+	border-radius: 5px;
+	background: #ffffff;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+.tile {
+	display: flex;
+	padding: 30px;
+  	justify-content: center;
+  	align-items: center;
+	text-align: center;
+	border: 1px solid #263238;
+	border-radius: 5px;
+	background: #ffffff;
+	}
+}
+
+.tile i {
+	margin-bottom: 30px;
+	font-size: 48px;
+	display: block;
+	color: #5C6BC0; /* correct */
+}
+
+.tile img {
+	display: block;
+	margin: 0 auto;
+}
+
+.tile p {
+	text-align: left;
+}
+
 .tile i {
 	color: <?php echo $default_hover_color; ?>;
 }
