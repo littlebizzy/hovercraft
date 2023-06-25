@@ -1,7 +1,32 @@
-<?php /* Template Name: Full Hero (Tiles Sidebar) */ ?>
+<?php /* Template Name: Full Hero Tiles (Sidebar) */ ?>
 <?php get_template_part( 'header' ); ?>
 <?php get_template_part( 'template-parts/header/header-full-hero' ); ?>
 <?php get_template_part( 'template-parts/content/posthero' ); ?>
-<?php get_template_part( 'template-parts/content/tiles' ); ?>
-<?php get_template_part( 'sidebar' ); ?>
+
+<?php $hovercraft_homepage_hide_main_checked = get_theme_mod( 'hovercraft_homepage_hide_main' ) ? true : false;
+if ( !is_front_page() || ( is_front_page() && $hovercraft_homepage_hide_main_checked != true ) ) { ?>
+
+<div id="main">
+<div class="inner">
+    
+    <div id="primary">
+
+	    <?php get_template_part( 'template-parts/content/content' ); ?>
+        <?php get_template_part( 'template-parts/content/tiles' ); ?>
+	
+	    <?php comments_template(); ?> 
+
+	    <div class="clear"></div>
+    </div><!-- primary -->
+    
+    <?php get_template_part( 'sidebar' ); ?>
+    
+    <?php get_template_part( 'template-parts/content/pagination' ); ?>
+    
+    <div class="clear"></div>
+</div><!-- inner -->
+</div><!-- main -->
+
+<?php } // if is_front_page ?>
+
 <?php get_template_part( 'footer' ); ?>
