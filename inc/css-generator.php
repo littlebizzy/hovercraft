@@ -866,7 +866,7 @@ img.featured-image {
 		}  ?>
 	height: auto;
 	display: block;
-	margin-bottom: 40px;
+	margin-bottom: 0px;
 	}
 }
 
