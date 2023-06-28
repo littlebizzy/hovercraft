@@ -315,10 +315,20 @@ h5.author-biography-intro {
 
 /* bullets */
 
-#bullets {
+@media screen and (max-width: 1200px) {
+	#bullets {
+	columns: 1;
+  column-fill: balance;
+	column-gap: 0;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	#bullets {
 	columns: 2;
   column-fill: balance;
 	column-gap: 40px;
+	}
 }
 
 #bullets p {
