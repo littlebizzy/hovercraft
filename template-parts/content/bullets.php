@@ -1,6 +1,10 @@
 <div id="main">
 <div class="inner">
 	
+	<div id="primary-wide">
+	<div id="content">
+	<div class="content-padded">
+	
 	<div id="bullets">
 		
 				<?php
@@ -27,6 +31,10 @@
 		
 	<div class="clear"></div>
 	</div><!-- bullets -->
+		
+	</div><!-- content-padded -->
+	</div><!-- content -->
+	</div><!-- primary-wide -->
         	
     <div class="clear"></div>
 </div><!-- inner -->
