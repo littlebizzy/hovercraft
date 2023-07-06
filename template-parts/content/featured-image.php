@@ -22,3 +22,4 @@ if ( !empty( $url_featured_image ) && ( !is_singular('product') ) ) { ?>
 // https://developer.wordpress.org/reference/functions/wp_get_attachment_image_src/
 // https://wordpress.stackexchange.com/questions/312283/getting-alt-text-of-featured-image
 // https://wordpress.stackexchange.com/questions/193196/how-to-get-image-title-alt-attribute
+// FIX NEEDED: Undefined variable $currentID in /var/www/html/wp-content/themes/hovercraft/template-parts/content/featured-image.php on line 5
