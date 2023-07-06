@@ -1412,6 +1412,17 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 
 /* woocommerce product list widget */
 
+@media screen and (max-width: 1200px) {
+ul.product_list_widget {
+	width: 100% !important;
+	list-style-type:none;
+  columns: 2;
+  column-fill: balance;
+	column-gap: 20px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
 ul.product_list_widget {
 	width: 100% !important;
 	list-style-type:none;
@@ -1419,6 +1430,7 @@ ul.product_list_widget {
     grid-template-columns: repeat(auto-fill, 300px);
     grid-gap: 60px;
 	grid-template-columns: auto auto auto auto;
+	}
 }
 
 ul.product_list_widget li {
