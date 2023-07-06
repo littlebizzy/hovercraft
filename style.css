@@ -1920,63 +1920,6 @@ form.cart {
 }
 
 
-/* woocommerce product list widget */
-
-ul.product_list_widget {
-	width: 100% !important;
-	list-style-type:none;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 300px);
-    grid-gap: 60px;
-	grid-template-columns: auto auto auto auto;
-}
-
-ul.product_list_widget li {
-	height: 250px;
-	position: relative;
-}
-
-ul.product_list_widget .product-title {
-	width: 100%;
-	font-size: 16px;
-	bottom:0;
-	position: absolute;
-	display: block;
-	padding: 10px;
-	background: rgba(0, 0, 0, 0.7);
-}
-
-ul.product_list_widget .woocommerce-Price-amount {
-	display: none;
-	font-weight: 700;
-}
-
-ul.product_list_widget li img {
-	display: block !important;
-	margin-bottom: 10px;
-	object-fit: cover;
-	width: 100%;
-	height: 100%;
-	display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border: 0px solid #263238;
-}
-
-ul.product_list_widget li a:before {
-	content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: rgba(0, 0, 0, 0.1);
-}
-
-ul.product_list_widget li a:hover:before {
-	background: rgba(0, 0, 0, 0.0);
-}
-
-
 /* bbpress */
 
 .forums {
