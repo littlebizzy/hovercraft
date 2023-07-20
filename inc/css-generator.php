@@ -251,7 +251,7 @@ h5.author-biography-intro {
 	padding: 30px;
 	text-align: center;
 	border: 1px solid #263238;
-	border-radius: 5px;
+	border-radius: 0px;
 	background: #ffffff;
 	}
 }
@@ -264,7 +264,7 @@ h5.author-biography-intro {
   	align-items: center;
 	text-align: center;
 	border: 1px solid #263238;
-	border-radius: 5px;
+	border-radius: 0px;
 	background: #ffffff;
 	}
 }
@@ -309,7 +309,7 @@ h5.author-biography-intro {
 	font-size: 18px;
 	font-weight: 700;
 	background: <?php echo $default_link_color; ?>;
-	border-radius: 5px;
+	border-radius: 0px;
 }
 
 
@@ -697,7 +697,7 @@ video.hero-background-video {
 	padding: 10px 20px;
 	background: <?php echo $default_link_color; ?>;
 	text-decoration: none !important;
-	border-radius: 5px;
+	border-radius: 0px;
 }
 
 .cta-header-primary ul li a:hover {
@@ -1025,7 +1025,7 @@ img.featured-image {
 	margin: 40px 0px;
 	padding: 40px;
 	border: 1px solid #ccc;
-	border-radius: 5px;
+	border-radius: 0px;
 }
 
 .author-biography p {
@@ -1095,7 +1095,7 @@ p.biography-description {
 	width: 100%;
 	border: 1px solid #263238;
 	padding: 30px;
-	border-radius: 5px;
+	border-radius: 0px;
 	margin-bottom: 30px;
 	background: #ffffff;
 	}
@@ -1107,7 +1107,7 @@ p.biography-description {
 	float: left;
 	border: 1px solid #263238;
 	padding: 30px;
-	border-radius: 5px; */
+	border-radius: 0px; */
 	
 	border: 1px solid #263238;
 	display: flex;
@@ -1301,7 +1301,7 @@ textarea {
 	display: inline-block;
 	padding: 10px 20px !important;
 	background: #ffffff;
-	border-radius: 5px;
+	border-radius: 0px;
 	border: 0;
 	box-shadow: inset 0px 0px 0px 1px #BDBDBD;
 }
@@ -1312,7 +1312,7 @@ select {
 	font-weight: 400;
 	display: inline-block;
 	background: #ffffff;
-	border-radius: 5px;
+	border-radius: 0px;
 	border: 0;
 	outline: none;
 	box-shadow: inset 0px 0px 0px 1px #BDBDBD;
@@ -1323,7 +1323,7 @@ button[type="submit"] {
 	background: <?php echo $default_link_color; ?> !important;
 	text-decoration: none;
 	color: #ffffff;
-	border-radius: 5px;
+	border-radius: 0px;
 	border: 0;
 	cursor: pointer;
 }
@@ -1335,7 +1335,7 @@ input, select {
 	display: inline-block;
 	padding: 10px 20px !important;
 	background: #ffffff;
-	border-radius: 5px;
+	border-radius: 0px;
 	border: 0;
 	outline: none;
 	box-shadow: inset 0px 0px 0px 1px #BDBDBD;
@@ -1350,7 +1350,7 @@ input[type="submit"] {
 	background: <?php echo $default_link_color; ?>;
 	text-decoration: none;
 	color: #ffffff;
-	border-radius: 5px;
+	border-radius: 0px;
 	border: 0;
 	cursor: pointer;
 	box-shadow: none;
@@ -1389,7 +1389,7 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 	text-align: center;
 	vertical-align: middle;
 	background: rgba(0, 0, 0, 0.1);
-	border-radius: 5px;
+	border-radius: 0px;
 }
 
 .scrollup-link:active, .scrollup-link:hover {
