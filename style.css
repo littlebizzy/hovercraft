@@ -1,7 +1,7 @@
 /*
 Theme Name: HoverCraft
 Theme URI: https://hovercraft.vip
-Version: 0.1.332
+Version: 0.1.333
 Description: No maintenance WordPress theme
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
@@ -298,7 +298,7 @@ pre {
 	overflow-x: scroll;
 	white-space: pre;
 	color: #263238; /* correct */
-	border-radius: 5px;
+	border-radius: 0px;
 }
 
 /* buttons */
@@ -309,7 +309,7 @@ button {
 	padding: 10px 20px;
 	text-decoration: none;
 	background: #ECEFF1;
-	border-radius: 5px;
+	border-radius: 0px;
 	border: 0;
 	cursor: pointer;
 }
@@ -325,7 +325,7 @@ button {
 	text-decoration: none;
 	display: block;
 	background: #5C6BC0; /* correct */
-	border-radius: 5px;
+	border-radius: 0px;
 	}
 }
 
@@ -339,7 +339,7 @@ button {
 	text-decoration: none;
 	display: block;
 	background: #5C6BC0; /* correct */
-	border-radius: 5px;
+	border-radius: 0px;
 	}
 }
 
@@ -351,7 +351,7 @@ button {
 	font-weight: 600;
 	padding: 10px 0px;
 	background: transparent;
-	border-radius: 5px;
+	border-radius: 0px;
 	text-align: center;
 	border: 1px solid #263238; /* correct */
 	color: #263238; /* correct */
@@ -366,7 +366,7 @@ button {
 	font-weight: 600;
 	padding: 10px 20px;
 	background: transparent;
-	border-radius: 5px;
+	border-radius: 0px;
 	border: 1px solid #263238; /* correct */
 	color: #263238; /* correct */
 	text-decoration: none;
@@ -384,7 +384,7 @@ button {
 	text-decoration: none;
 	display: block;
 	background: #263238;
-	border-radius: 5px;
+	border-radius: 0px;
 	}
 }
 
@@ -399,7 +399,7 @@ button {
 	text-decoration: none;
 	display: block;
 	background: #263238;
-	border-radius: 5px;
+	border-radius: 0px;
 	}
 }
 
@@ -415,7 +415,7 @@ button {
 	display: block;
 	background: transparent;
 	margin-bottom: 0;
-	border-radius: 5px;
+	border-radius: 0px;
 	box-shadow: inset 0px 0px 0px 1px #ffffff;
 	}
 }
@@ -432,7 +432,7 @@ button {
 	display: block;
 	background: transparent;
 	margin-bottom: 0;
-	border-radius: 5px;
+	border-radius: 0px;
 	box-shadow: inset 0px 0px 0px 1px #ffffff;
 	}
 }
@@ -789,7 +789,7 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 	background: #5C6BC0; /* correct */
 	text-decoration: none !important;
 	color: #ffffff !important;
-	border-radius: 5px;
+	border-radius: 0px;
 }
 
 .cta-header-primary ul li a:hover {
@@ -831,7 +831,7 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 	background: transparent;
 	text-decoration: none;
 	color: #ffffff;
-	border-radius: 5px;
+	border-radius: 0px;
 	box-shadow: inset 0px 0px 0px 1px #ffffff;
 }
 
@@ -843,7 +843,7 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 	background: transparent;
 	text-decoration: none;
 	color: #263238;
-	border-radius: 5px;
+	border-radius: 0px;
 	box-shadow: inset 0px 0px 0px 1px #263238;
 }
 
@@ -879,7 +879,7 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 	font-weight: 700;
 	background: transparent; /* correct */
 	border: 1px solid #FFF;
-	border-radius: 5px;
+	border-radius: 0px;
 }
 
 
@@ -909,7 +909,7 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 	font-size: 16px;
 	background: #ffffff;
 	border: 0;
-	border-radius: 5px;
+	border-radius: 0px;
 	}
 }
 
@@ -921,7 +921,7 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 	font-size: 18px;
 	background: #ffffff;
 	border: 0;
-	border-radius: 5px;
+	border-radius: 0px;
 	}
 }
 
@@ -940,7 +940,7 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 	background: #FFF;
 	padding: 5px 10px;
 	font-size: 16px;
-	border-radius: 5px;
+	border-radius: 0px;
 }
 
 #sidebar ul li {
@@ -997,7 +997,7 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 	background: transparent;
 	text-decoration: none;
 	color: #ffffff;
-	border-radius: 5px;
+	border-radius: 0px;
 	box-shadow: inset 0px 0px 0px 1px #ffffff;
 	vertical-align: middle;
 }
@@ -1151,7 +1151,7 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 	display: block;
 	background: #5C6BC0; /* correct indigo */
 	margin-bottom: 20px;
-	border-radius: 5px;
+	border-radius: 0px;
 	}
 }
 
@@ -1165,7 +1165,7 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 	text-decoration: none;
 	display: inline-block;
 	background: #5C6BC0; /* correct indigo */
-	border-radius: 5px;
+	border-radius: 0px;
 	}
 }
 
@@ -1222,7 +1222,7 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 	display: block;
 	background: transparent;
 	margin-bottom: 0;
-	border-radius: 5px;
+	border-radius: 0px;
 	box-shadow: inset 0px 0px 0px 1px #ffffff;
 	}
 }
@@ -1237,7 +1237,7 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 	text-decoration: none;
 	display: inline-block;
 	background: transparent;
-	border-radius: 5px;
+	border-radius: 0px;
 	box-shadow: inset 0px 0px 0px 1px #ffffff;
 	}
 }
@@ -1855,7 +1855,7 @@ select {
 	display: inline-block;
 	padding: 10px 47px 10px 20px;
 	background: #ffffff;
-	border-radius: 5px;
+	border-radius: 0px;
 	border: 0;
 	box-shadow: inset 0px 0px 0px 1px #263238;
 	background: transparent;
@@ -1923,7 +1923,7 @@ form.cart {
 /* bbpress */
 
 .forums {
-	border-radius: 5px;
+	border-radius: 0px;
 }
 
 #bbpress-forums ul.bbp-forums, #bbpress-forums ul.bbp-lead-topic, #bbpress-forums ul.bbp-replies, #bbpress-forums ul.bbp-search-results, #bbpress-forums ul.bbp-topics {
@@ -2007,7 +2007,7 @@ visibility: hidden;
 .navigation li.disabled {
     background-color: #ECEFF1;
 	color: #263238;
-    border-radius: 5px;
+    border-radius: 0px;
     cursor: pointer;
     padding: 5px 10px;
 	text-decoration: none;
