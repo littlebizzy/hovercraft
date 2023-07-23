@@ -633,6 +633,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 				'bebas_neue' => 'Bebas Neue',
 				'bungee_inline' => 'Bungee Inline',
 				'carter_one' => 'Carter One',
+				'caveat' => 'caveat',
 				'caveat_brush' => 'Caveat Brush',
 				'chewy' => 'Chewy',
 				'courgette' => 'Courgette',
@@ -669,7 +670,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 				'rye' => 'Rye',
 				'special_elite' => 'Special Elite',
 				'staatliches' => 'Staatliches',
-				'tektur' => 'Tektur';
+				'tektur' => 'Tektur',
 				'titan_one' => 'Titan One',
 				'yellowtail' => 'Yellowtail',
     			)
@@ -737,6 +738,72 @@ $wp_customize->add_control( new WP_Customize_Control(
         		'700' => '700',
         		'600' => '600',
 				'400' => '400'
+    			)
+        )
+) );
+
+// h1 font family setting
+$wp_customize->add_setting( 'hovercraft_h1_font', array(
+    'default'    => 'noto_sans',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// h1 font family control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_h1_font',
+        array(
+            'label'     => __('H1 Font Family', 'hovercraft'),
+			'description' => __( 'Which Google Fonts family should be used for H1 titles?', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_h1_font',
+            'type'      => 'select',
+			'choices' => array(
+				'averia_libre' => 'Averia Libre',
+				'bebas_neue' => 'Bebas Neue',
+				'bungee_inline' => 'Bungee Inline',
+				'carter_one' => 'Carter One',
+				'caveat' => 'caveat',
+				'caveat_brush' => 'Caveat Brush',
+				'chewy' => 'Chewy',
+				'courgette' => 'Courgette',
+				'crete_round' => 'Crete Round',
+				'dancing_script' => 'Dancing Script',
+				'fredoka_one' => 'Fredoka One',
+				'genos' => 'Genos',
+				'gentium_book_plus' => 'Gentium Book Plus',
+				'gloria_hallelujah' => 'Gloria Hallelujah',
+				'itim' => 'Itim',
+				'knewave' => 'Knewave',
+				'lato' => 'Lato',
+				'lilita_one' => 'Lilita One',
+				'lobster' => 'Lobster',
+				'marcellus_sc' => 'Marcellus SC',
+				'merriweather' => 'Merriweather',
+				'monoton' => 'Monoton',
+				'montserrat' => 'Montserrat',
+        		'noto_sans' => 'Noto Sans',
+        		'open_sans' => 'Open Sans',
+				'orbitron' => 'Orbitron',
+				'pacifico' => 'Pacifico',
+				'permanent_marker' => 'Permanent Marker',
+				'phudu' => 'Phudu',
+				'playfair_display' => 'Playfair Display',
+				'poller_one' => 'Poller One',
+				'poppins' => 'Poppins',
+				'press_start_2p' => 'Press Start 2P',
+				'raleway' => 'Raleway',
+				'rancho' => 'Rancho',
+				'righteous' => 'Righteous',
+				'roboto_slab' => 'Roboto Slab',
+				'rowdies' => 'Rowdies',
+				'rye' => 'Rye',
+				'special_elite' => 'Special Elite',
+				'staatliches' => 'Staatliches',
+				'tektur' => 'Tektur',
+				'titan_one' => 'Titan One',
+				'yellowtail' => 'Yellowtail',
     			)
         )
 ) );
