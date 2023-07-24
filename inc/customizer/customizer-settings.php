@@ -742,6 +742,117 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// main menu font family setting
+$wp_customize->add_setting( 'hovercraft_main_menu_font', array(
+    'default'    => 'noto_sans',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// main menu font family control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_main_menu_font',
+        array(
+            'label'     => __('Main Menu Font Family', 'hovercraft'),
+			'description' => __( 'Which Google Fonts family should be used for the main menu links?', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_main_menu_font',
+            'type'      => 'select',
+			'choices' => array(
+				'averia_libre' => 'Averia Libre',
+				'bebas_neue' => 'Bebas Neue',
+				'bungee_inline' => 'Bungee Inline',
+				'carter_one' => 'Carter One',
+				'caveat' => 'Caveat',
+				'caveat_brush' => 'Caveat Brush',
+				'chewy' => 'Chewy',
+				'courgette' => 'Courgette',
+				'crete_round' => 'Crete Round',
+				'dancing_script' => 'Dancing Script',
+				'fredoka_one' => 'Fredoka One',
+				'genos' => 'Genos',
+				'gentium_book_plus' => 'Gentium Book Plus',
+				'gloria_hallelujah' => 'Gloria Hallelujah',
+				'itim' => 'Itim',
+				'knewave' => 'Knewave',
+				'lato' => 'Lato',
+				'lilita_one' => 'Lilita One',
+				'lobster' => 'Lobster',
+				'marcellus_sc' => 'Marcellus SC',
+				'merriweather' => 'Merriweather',
+				'monoton' => 'Monoton',
+				'montserrat' => 'Montserrat',
+        		'noto_sans' => 'Noto Sans',
+        		'open_sans' => 'Open Sans',
+				'orbitron' => 'Orbitron',
+				'pacifico' => 'Pacifico',
+				'permanent_marker' => 'Permanent Marker',
+				'phudu' => 'Phudu',
+				'playfair_display' => 'Playfair Display',
+				'poller_one' => 'Poller One',
+				'poppins' => 'Poppins',
+				'press_start_2p' => 'Press Start 2P',
+				'raleway' => 'Raleway',
+				'rancho' => 'Rancho',
+				'righteous' => 'Righteous',
+				'roboto_slab' => 'Roboto Slab',
+				'rowdies' => 'Rowdies',
+				'rye' => 'Rye',
+				'special_elite' => 'Special Elite',
+				'staatliches' => 'Staatliches',
+				'tektur' => 'Tektur',
+				'titan_one' => 'Titan One',
+				'yellowtail' => 'Yellowtail',
+    			)
+        )
+) );
+
+// main menu font size (desktop) setting
+$wp_customize->add_setting( 'hovercraft_main_menu_desktop_font_size', array(
+    'default'    => '16',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
+	) 
+);
+
+// main menu font size (desktop) control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_main_menu_desktop_font_size',
+        array(
+            'label'     => __( 'Main Menu Font Size (Desktop)', 'hovercraft' ),
+			'description' => __( 'Specify font size to use, in pixels, for the main menu links on desktop devices?', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_main_menu_desktop_font_size',
+            'type' => 'text'
+        )
+) );
+
+// main menu font weight setting
+$wp_customize->add_setting( 'hovercraft_main_menu_font_weight', array(
+    'default'    => '600',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
+	) 
+);
+
+// main menu font weight control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_main_menu_font_weight',
+        array(
+            'label'     => __('Main Menu Font Weight', 'hovercraft'),
+			'description' => __( 'Specify font weight to use for the main menu? Note: Ensure your chosen font family supports the font weight that you choose.', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_main_menu_font_weight',
+            'type'      => 'select',
+			'choices' => array(
+        		'700' => '700',
+        		'600' => '600',
+				'400' => '400'
+    			)
+        )
+) );
+
 // h1 font family setting
 $wp_customize->add_setting( 'hovercraft_h1_font', array(
     'default'    => 'noto_sans',
