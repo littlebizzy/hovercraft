@@ -808,6 +808,46 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// h1 font size (desktop) setting
+$wp_customize->add_setting( 'hovercraft_h1_desktop_font_size', array(
+    'default'    => '36',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
+	) 
+);
+
+// h1 font size (desktop) control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_h1_desktop_font_size',
+        array(
+            'label'     => __( 'H1 Font Size (Desktop)', 'hovercraft' ),
+			'description' => __( 'Specify font size to use, in pixels, for the H1 titles on desktop devices?', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_h1_desktop_font_size',
+            'type' => 'text'
+        )
+) );
+
+// h1 font size (mobile) setting
+$wp_customize->add_setting( 'hovercraft_h1_mobile_font_size', array(
+    'default'    => '24',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
+	) 
+);
+
+// h1 font size (mobile) control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_h1_mobile_font_size',
+        array(
+            'label'     => __( 'H1 Font Size (Mobile)', 'hovercraft' ),
+			'description' => __( 'Specify font size to use, in pixels, for the H1 titles on mobile devices?', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_h1_mobile_font_size',
+            'type' => 'text'
+        )
+) );
+
 // default text color setting
 $wp_customize->add_setting( 'hovercraft_default_text_color', array(
 	'default' => '#263238',
