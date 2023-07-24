@@ -848,6 +848,31 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// h1 font weight setting
+$wp_customize->add_setting( 'hovercraft_h1_font_weight', array(
+    'default'    => '700',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
+	) 
+);
+
+// h1 font weight control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_h1_font_weight',
+        array(
+            'label'     => __('H1 Font Weight', 'hovercraft'),
+			'description' => __( 'Specify font weight to use for the H1 titles? Note: Ensure your chosen font family supports the font weight that you choose.', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_h1_font_weight',
+            'type'      => 'select',
+			'choices' => array(
+        		'700' => '700',
+        		'600' => '600',
+				'400' => '400'
+    			)
+        )
+) );
+
 // default text color setting
 $wp_customize->add_setting( 'hovercraft_default_text_color', array(
 	'default' => '#263238',
