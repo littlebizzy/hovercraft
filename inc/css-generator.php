@@ -369,6 +369,114 @@ h5.author-biography-intro {
 }
 
 
+/* main menu desktop */
+
+@media screen and (max-width: 1200px) {
+.menu-desktop {
+	display: none;	
+	}
+}
+
+.main-menu {
+	display: inline-block;
+}
+
+.main-menu ul {
+	position: relative;
+	text-align: right;
+	
+	display: inline-table;
+}
+
+.main-menu ul ul {
+	display: none;
+	position: absolute; 
+	
+	background: #fff;
+	padding: 10px 20px;
+	box-shadow: -3px 3px 10px -2px rgba(0,0,0,.1);
+    border: 1px solid rgba(0,0,0,.1);
+}
+
+.main-menu ul li:hover > ul {
+	display: block;
+}
+
+.main-menu ul li {
+	list-style-type: none;
+	display: inline-block;
+	margin: 0;
+	padding: 0 0 0 30px;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.main-menu ul li a {
+	font-size: 18px;
+	font-weight: 700;
+	display: inline-block;
+	padding: 10px 0px;
+	text-decoration: none !important;
+}
+
+/* Fisrt Tier Dropdown */
+.main-menu ul ul li {
+	position: relative;
+	padding-left: 0px;
+	display: block;
+	text-align: left;
+}
+
+.main-menu ul ul ul {
+            position: absolute; 
+            left: 100%; 
+            top:0;
+          }	
+
+/* Second, Third and more Tiers	*/
+.main-menu ul ul ul li {
+	position: relative;
+	top: -60px; 
+	left: 170px;
+}
+	
+/* Change this in order to change the Dropdown symbol */
+.main-menu li > a:after { 
+	font-family: "Material Icons";
+	font-size: 24px;
+	content:  ' \e5cf'; 
+	vertical-align: middle;
+}
+
+.main-menu li > a:only-child:after { 
+	content: ''; 
+}
+
+#header-full-hero .main-menu ul li a {
+	text-decoration: none;
+	color: #FFF; /* correct */
+	font-weight: 600;
+}
+
+#header-full-hero .main-menu ul ul {
+    background: #263238;   
+}
+
+#header-full-hero a {
+	color: #FFF; /* correct */
+}
+
+#header-half-hero .main-menu ul li a {
+	text-decoration: none;
+	color: #263238; /* correct */
+	font-weight: 600;
+}
+
+#header-half-hero a {
+	color: #263238; /* correct */
+}
+
+
 /* topbar */
 
 @media screen and (max-width: 1200px) {
