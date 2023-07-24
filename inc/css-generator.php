@@ -1299,30 +1299,6 @@ p.biography-description {
 form {
 	padding: 0 !important;
 }
-
-textarea {
-	width: 100%;
-	font-size: 18px;
-	font-weight: 400;
-	display: inline-block;
-	padding: 10px 20px !important;
-	background: #ffffff;
-	border-radius: 0px;
-	border: 0;
-	box-shadow: inset 0px 0px 0px 0px #BDBDBD;
-}
-	
-select {
-	width: 100%;
-	font-size: 18px;
-	font-weight: 400;
-	display: inline-block;
-	background: #ffffff;
-	border-radius: 0px;
-	border: 0;
-	outline: none;
-	box-shadow: inset 0px 0px 0px 1px #BDBDBD;
-}
 	
 button[type="submit"] {
 	font-weight: 600;
@@ -1344,11 +1320,26 @@ input, select {
 	border-radius: 0px;
 	border: 0;
 	outline: none;
-	box-shadow: inset 0px 0px 0px 0px #BDBDBD;
+	box-shadow: inset 0px 0px 0px 1px #BDBDBD;
+}
+
+textarea {
+	width: 100%;
+	font-size: 18px;
+	font-weight: 400;
+	display: inline-block;
+	padding: 10px 20px !important;
+	background: #ffffff;
+	border-radius: 0px;
+	border: 0;
+	box-shadow: inset 0px 0px 0px 1px #BDBDBD;
 }
 
 input[type="checkbox"] {
-	text-align: left;
+	width: auto;
+	font-size: 18px;
+	display: inline-block;
+	outline: none;
 	box-shadow: none;
 }
 
