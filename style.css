@@ -1,7 +1,7 @@
 /*
 Theme Name: HoverCraft
 Theme URI: https://hovercraft.vip
-Version: 0.2.3
+Version: 0.2.4
 Description: No maintenance WordPress theme
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
@@ -112,11 +112,7 @@ html, body {
 
 /* titles */
 
-h1 {
-	margin-bottom: 20px;
-	font-weight: 700;
-	font-size: 36px;
-}
+
 
 @media screen and (max-width: 1200px) {
 h1.full-hero-title {
