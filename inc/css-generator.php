@@ -1492,6 +1492,14 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 	background: <?php echo $default_hover_color; ?> !important;
 }
 
+
+/* comments */
+
+#comments {
+	margin-top: 40px;
+}
+
+
 /* scroll-to-top */
 
 @media screen and (max-width: 1200px) {
