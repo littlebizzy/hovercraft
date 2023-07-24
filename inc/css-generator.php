@@ -32,6 +32,10 @@ function hovercraft_generate_css(){
 	$site_name_mobile_font_size = get_theme_mod( 'hovercraft_site_name_mobile_font_size', '24' );
 	$site_name_desktop_font_size = get_theme_mod( 'hovercraft_site_name_desktop_font_size', '36' );
 	$site_name_font_weight = get_theme_mod( 'hovercraft_site_name_font_weight', '700' );
+	$h1_font_family = get_theme_mod( 'hovercraft_h1_font', 'noto_sans' );
+	$h1_mobile_font_size = get_theme_mod( 'hovercraft_h1_mobile_font_size', '24' );
+	$h1_desktop_font_size = get_theme_mod( 'hovercraft_h1_desktop_font_size', '36' );
+	$h1_font_weight = get_theme_mod( 'hovercraft_h1_font_weight', '700' );
 	$hero_gradient_angle = get_theme_mod( 'hovercraft_hero_gradient_angle', '60deg' );
 	$hero_gradient_start_color_transparency = get_theme_mod( 'hovercraft_hero_gradient_start_color_transparency', '0.50' );
 	$hero_gradient_stop_color_transparency = get_theme_mod( 'hovercraft_hero_gradient_stop_color_transparency', '0.50' );
@@ -168,6 +172,24 @@ a:hover {
 
 
 /* titles */
+
+@media screen and (max-width: 1200px) {
+h1 {
+	font-family: <?php echo ucwords(str_replace("_", " ", $h1_font_family)); ?>;
+	font-weight: <?php echo $h1_font_weight; ?>;
+	font-size: <?php echo $h1_mobile_font_size; ?>px;
+	margin-bottom: 20px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+h1 {
+	font-family: <?php echo ucwords(str_replace("_", " ", $h1_font_family)); ?>;
+	font-weight: <?php echo $h1_font_weight; ?>;
+	font-size: <?php echo $h1_desktop_font_size; ?>px;
+	margin-bottom: 20px;
+	}
+}
 
 h5 {
 	margin-bottom: 20px;
