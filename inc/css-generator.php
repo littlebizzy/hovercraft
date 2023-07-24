@@ -458,8 +458,7 @@ h5.author-biography-intro {
 
 #header-full-hero .main-menu ul li a {
 	text-decoration: none;
-	color: #FFF; /* correct */
-	font-weight: 600;
+	color: #ffffff; /* correct */
 }
 
 #header-full-hero .main-menu ul ul {
@@ -467,13 +466,12 @@ h5.author-biography-intro {
 }
 
 #header-full-hero a {
-	color: #FFF; /* correct */
+	color: #ffffff; /* correct */
 }
 
 #header-half-hero .main-menu ul li a {
 	text-decoration: none;
 	color: #263238; /* correct */
-	font-weight: 600;
 }
 
 #header-half-hero a {
