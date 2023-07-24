@@ -412,7 +412,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_alternative_font',
         array(
             'label'     => __( 'Alternative Font Family', 'hovercraft' ),
-			'description' => __( 'Which Google Fonts family should be used for the alternative font? Note: This is generally meant to be used on multi-lingual websites, and should usually be disabled otherwise.', 'hovercraft' ),
+			'description' => __( 'Which Google Fonts family should be loaded for the alternative font? Note: This is generally meant to be used on multi-lingual websites, and should usually be disabled otherwise.', 'hovercraft' ),
             'section'   => 'hovercraft_fonts',
             'settings'  => 'hovercraft_alternative_font',
             'type'      => 'select',
@@ -690,7 +690,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_site_name_desktop_font_size',
         array(
             'label'     => __( 'Site Name Font Size (Desktop)', 'hovercraft' ),
-			'description' => __( 'Specify font size to use for the site name on desktop devices?', 'hovercraft' ),
+			'description' => __( 'Specify font size to use, in pixels, for the site name on desktop devices?', 'hovercraft' ),
             'section'   => 'hovercraft_fonts',
             'settings'  => 'hovercraft_site_name_desktop_font_size',
             'type' => 'text'
@@ -710,7 +710,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_site_name_mobile_font_size',
         array(
             'label'     => __( 'Site Name Font Size (Mobile)', 'hovercraft' ),
-			'description' => __( 'Specify font size to use for the site name on mobile devices?', 'hovercraft' ),
+			'description' => __( 'Specify font size to use, in pixels, for the site name on mobile devices?', 'hovercraft' ),
             'section'   => 'hovercraft_fonts',
             'settings'  => 'hovercraft_site_name_mobile_font_size',
             'type' => 'text'
@@ -755,7 +755,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_h1_font',
         array(
             'label'     => __('H1 Font Family', 'hovercraft'),
-			'description' => __( 'Which Google Fonts family should be used for H1 titles?', 'hovercraft' ),
+			'description' => __( 'Which Google Fonts family should be used for all H1 titles site-wide?', 'hovercraft' ),
             'section'   => 'hovercraft_fonts',
             'settings'  => 'hovercraft_h1_font',
             'type'      => 'select',
