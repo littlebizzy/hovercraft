@@ -1303,7 +1303,7 @@ textarea {
 	background: #ffffff;
 	border-radius: 0px;
 	border: 0;
-	box-shadow: inset 0px 0px 0px 1px #BDBDBD;
+	box-shadow: inset 0px 0px 0px 0px #BDBDBD;
 }
 	
 select {
@@ -1338,7 +1338,12 @@ input, select {
 	border-radius: 0px;
 	border: 0;
 	outline: none;
-	box-shadow: inset 0px 0px 0px 1px #BDBDBD;
+	box-shadow: inset 0px 0px 0px 0px #BDBDBD;
+}
+
+input[type="checkbox"] {
+	text-align: left;
+	box-shadow: none;
 }
 
 input[type="submit"] {
