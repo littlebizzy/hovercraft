@@ -32,6 +32,9 @@ function hovercraft_generate_css(){
 	$site_name_mobile_font_size = get_theme_mod( 'hovercraft_site_name_mobile_font_size', '24' );
 	$site_name_desktop_font_size = get_theme_mod( 'hovercraft_site_name_desktop_font_size', '36' );
 	$site_name_font_weight = get_theme_mod( 'hovercraft_site_name_font_weight', '700' );
+	$main_menu_font_family = get_theme_mod( 'hovercraft_main_menu_font', 'noto_sans' );
+	$main_menu_desktop_font_size = get_theme_mod( 'hovercraft_main_menu_desktop_font_size', '16' );
+	$main_menu_font_weight = get_theme_mod( 'hovercraft_main_menu_font_weight', '700' );
 	$h1_font_family = get_theme_mod( 'hovercraft_h1_font', 'noto_sans' );
 	$h1_mobile_font_size = get_theme_mod( 'hovercraft_h1_mobile_font_size', '24' );
 	$h1_desktop_font_size = get_theme_mod( 'hovercraft_h1_desktop_font_size', '36' );
@@ -412,8 +415,9 @@ h5.author-biography-intro {
 }
 
 .main-menu ul li a {
-	font-size: 18px;
-	font-weight: 700;
+	font-family: <?php echo ucwords(str_replace("_", " ", $main_menu_font_family)); ?>;
+	font-size: <?php echo $main_menu_desktop_font_size; ?>px;
+	font-weight: <?php echo $main_menu_font_weight; ?>;
 	display: inline-block;
 	padding: 10px 0px;
 	text-decoration: none !important;
