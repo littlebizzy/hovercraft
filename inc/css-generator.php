@@ -1215,6 +1215,12 @@ p.biography-description {
 	margin-bottom: 15px;
 }
 
+#sidebar img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
 #prefooter-top {
 	background: <?php echo $prefooter_top_background_color; ?>;
 	color: <?php echo $prefooter_top_text_color; ?>;
