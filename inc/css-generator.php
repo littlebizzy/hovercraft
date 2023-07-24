@@ -813,7 +813,6 @@ video.hero-background-video {
 #header-basic .main-menu ul li a {
 	text-decoration: none;
 	color: <?php echo $basic_hero_header_link_color; ?>;
-	font-weight: 600;
 }
 
 #header-basic a {
