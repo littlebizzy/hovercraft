@@ -1301,8 +1301,7 @@ p.biography-description {
 @media screen and (max-width: 1200px) {
 #sidebar {
 	width: 100%;
-	padding: 30px 20px;
-	background: #FFF;
+	padding: 20px;
 	}
 }
 
