@@ -1495,10 +1495,18 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 
 /* comments */
 
+@media screen and (max-width: 1200px) {
 #comments {
 	margin-top: 40px;
+	padding: 20px;
+	}
 }
 
+@media screen and (min-width: 1200px) {
+#comments {
+	margin-top: 40px;
+	}
+}
 
 /* scroll-to-top */
 
