@@ -264,8 +264,8 @@ h5.author-biography-intro {
 	
 	width: 100%;
 	display: grid;
-  	grid-template-columns: repeat(auto-fill, 354px);
-  	grid-gap: 30px;
+  	grid-template-columns: repeat(auto-fill, 364px);
+  	grid-gap: 40px;
 	}
 }
 
