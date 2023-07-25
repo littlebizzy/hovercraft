@@ -54,6 +54,9 @@ require get_template_directory() . '/inc/logo-default.php';
 // media sizes
 require get_template_directory() . '/inc/media-sizes.php';
 
+// media sizes insert
+require get_template_directory() . '/inc/media-sizes-insert.php';
+
 // menu locations
 require get_template_directory() . '/inc/menu-locations.php';
 
