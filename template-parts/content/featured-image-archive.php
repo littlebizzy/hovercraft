@@ -6,7 +6,7 @@ $url_featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( $curre
 $image_width = $url_featured_image[1];
 $image_height = $url_featured_image[2];
 if ( !empty( $url_featured_image ) && ( !is_singular('product') ) ) { ?>
-<img width="<?php echo $image_width; ?>" height="<?php echo $image_height; ?>" class="featured-image" src="<?php echo $url_featured_image[0]; ?>" alt="<?php echo $image_alt; ?>" />
+<a href="<?php the_permalink() ?>"><img width="<?php echo $image_width; ?>" height="<?php echo $image_height; ?>" class="featured-image" src="<?php echo $url_featured_image[0]; ?>" alt="<?php echo $image_alt; ?>" /></a>
 <div class="clear"></div>
 <?php }
 
