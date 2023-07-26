@@ -1011,6 +1011,24 @@ img.featured-image {
 }
 
 @media screen and (max-width: 1200px) {
+img.featured-image-archive {
+	width: 100%;
+	height: auto;
+	display: block;
+	margin-bottom: 20px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+img.featured-image-archive {
+	width: 768px;
+	height: auto;
+	display: block;
+	margin-bottom: 20px;
+	}
+}
+
+@media screen and (max-width: 1200px) {
 .featured-image-wrapper {
 	position: relative;
 	width: 100%;
