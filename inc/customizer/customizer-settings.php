@@ -884,7 +884,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 
 // main menu font size (desktop) setting
 $wp_customize->add_setting( 'hovercraft_main_menu_desktop_font_size', array(
-    'default'    => '16',
+    'default'    => '18',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
 	) 
 );
