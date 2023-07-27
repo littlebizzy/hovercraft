@@ -15,10 +15,11 @@
 		
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
+				<div class="post-tease-archive">
 				<?php get_template_part( 'template-parts/content/featured-image-archive' ); ?>
-		
 				<h4><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
-				<?php the_excerpt(); ?>
+				<div class="post-excerpt-archive"><?php the_excerpt(); ?></div>
+				</div><!-- post-tease-archive -->
 		
 				<?php endwhile; endif; ?><!-- the loop -->
 					
