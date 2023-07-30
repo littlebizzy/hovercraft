@@ -1,7 +1,7 @@
 /*
 Theme Name: HoverCraft
 Theme URI: https://hovercraft.vip
-Version: 0.2.14
+Version: 0.2.15
 Description: No maintenance WordPress theme
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
@@ -981,85 +981,6 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 
 
 /* hero main mini */
-
-
-/* hero cta wrapper */
-
-.cta-hero-wrapper {
-	margin-top: 30px;
-}
-
-
-/* hero cta primary */
-
-@media screen and (max-width: 1200px) {
-.cta-hero-primary {
-	display: block;
-	width: 100%;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-.cta-hero-primary {
-	display: inline-block;
-	margin-right: 30px;
-	}
-}
-
-@media screen and (max-width: 1200px) {
-.cta-hero-primary ul li {
-	list-style-type: none;
-	display: block;
-	margin: 0;
-	padding: 0;
-	vertical-align: middle;
-	text-align: center;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-.cta-hero-primary ul li {
-	list-style-type: none;
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-	vertical-align: middle;
-	text-align: center;
-	}
-}
-
-@media screen and (max-width: 1200px) {
-.cta-hero-primary ul li a {
-	width: 100%;
-	font-size: 20px;
-	font-weight: 700;
-	color: #fff;
-	padding: 10px 0px;
-	text-decoration: none;
-	display: block;
-	background: #5C6BC0; /* correct indigo */
-	margin-bottom: 20px;
-	border-radius: 0px;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-.cta-hero-primary ul li a {
-	width: 200px;
-	font-size: 20px;
-	font-weight: 700;
-	color: #fff;
-	padding: 10px 0px;
-	text-decoration: none;
-	display: inline-block;
-	background: #5C6BC0; /* correct indigo */
-	border-radius: 0px;
-	}
-}
-
-.cta-hero-primary ul li a:hover {
-	background: #01579B;
-}
 
 
 /* hero cta secondary */
