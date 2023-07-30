@@ -225,11 +225,11 @@ a:hover {
 
 @media screen and (min-width: 1200px) {
 .cta-hero-primary ul li a {
-	width: 200px;
+	<?php if ( has_nav_menu( 'cta-hero-secondary' ) ) { echo "width: 200px;"; } else { echo "width: auto;"; } ?>
 	font-size: 20px;
 	font-weight: 700;
 	color: #fff;
-	padding: 10px 0px;
+	<?php if ( has_nav_menu( 'cta-hero-secondary' ) ) { echo "padding: 10px 0px;"; } else { echo "padding: 10px 20px;"; } ?>
 	text-decoration: none;
 	display: inline-block;
 	background: <?php echo $default_link_color; ?>;
