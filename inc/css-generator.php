@@ -161,14 +161,82 @@ a {
 	text-decoration: <?php echo $default_link_decoration; ?>;
 }
 	
-.cta-hero-primary ul li a {
-	background: <?php echo $default_link_color; ?>;
-}
-	
 a:hover {
 	color: <?php echo $default_hover_color; ?>;
 }
-	
+
+
+/* hero cta primary */
+
+.cta-hero-wrapper {
+	margin-top: 30px;
+}
+
+@media screen and (max-width: 1200px) {
+.cta-hero-primary {
+	display: block;
+	width: 100%;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+.cta-hero-primary {
+	display: inline-block;
+	margin-right: 40px;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+.cta-hero-primary ul li {
+	list-style-type: none;
+	display: block;
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+	text-align: center;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+.cta-hero-primary ul li {
+	list-style-type: none;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+	text-align: center;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+.cta-hero-primary ul li a {
+	width: 100%;
+	font-size: 20px;
+	font-weight: 700;
+	color: #fff;
+	padding: 10px 0px;
+	text-decoration: none;
+	display: block;
+	background: <?php echo $default_link_color; ?>;
+	margin-bottom: 20px;
+	border-radius: 0px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+.cta-hero-primary ul li a {
+	width: 200px;
+	font-size: 20px;
+	font-weight: 700;
+	color: #fff;
+	padding: 10px 0px;
+	text-decoration: none;
+	display: inline-block;
+	background: <?php echo $default_link_color; ?>;
+	border-radius: 0px;
+	}
+}
+
 .cta-hero-primary ul li a:hover {
 	background: <?php echo $default_hover_color; ?>;
 }
