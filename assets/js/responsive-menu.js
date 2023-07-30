@@ -1,30 +1,27 @@
-(function($) {
-
-$(function(){
-  btnToggle = $('.btn--toggle');
-  $submenuTrigger = $('.submenu--trigger');
-  $thirdSubmenuTrigger = $('.third-submenu--trigger');
+jQuery(function(){
+  $btnToggle = jQuery('.btn--toggle');
+  $submenuTrigger = jQuery('.submenu--trigger');
+  $thirdSubmenuTrigger = jQuery('.third-submenu--trigger');
   
   $btnToggle.on('click', function(e) {
     // e.preventDefault();
-    let $target = $( $(e.currentTarget).attr('data-target') );
+    let $target = jQuery( jQuery(e.currentTarget).attr('data-target') );
     $target.toggleClass('showing');
   });
   
   
   $submenuTrigger.on('click', function(e) {
     e.preventDefault();
-    $(this).toggleClass('active');
+    jQuery(this).toggleClass('active');
   });
   
   $thirdSubmenuTrigger.on('click', function(e) {
     e.preventDefault();
     e.stopPropagation();
-    $(this).toggleClass('active');
+    jQuery(this).toggleClass('active');
   })
 });
 
-})( jQuery );
 
 // https://codepen.io/joshuaaron/pen/QgdLpB
 // alt https://codepen.io/jigneshpanchalmj/pen/Qevqjp
