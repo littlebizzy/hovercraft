@@ -11,8 +11,22 @@ if ( !is_front_page() || ( is_front_page() && $hovercraft_homepage_hide_main_che
     
     <div id="primary">
 
-	    <?php get_template_part( 'template-parts/content/content' ); ?>
-        <?php get_template_part( 'template-parts/content/tiles-narrow' ); ?>
+	<div id="content">
+	
+	<div class="content-padded">
+		
+	<?php get_template_part( 'template-parts/content/breadcrumbs' ); ?>
+
+	<?php get_template_part( 'template-parts/content/loop' ); ?>
+		
+	<?php get_template_part( 'template-parts/content/tiles-narrow' ); ?>
+						
+	<?php get_template_part( 'template-parts/content/pagination' ); ?>
+			
+	</div><!-- content-padded -->
+	
+	<div class="clear"></div>
+	</div><!-- content -->   
 	
 	    <?php comments_template(); ?> 
 
