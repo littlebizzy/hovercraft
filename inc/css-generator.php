@@ -320,19 +320,15 @@ h5.author-biography-intro {
 @media screen and (max-width: 1200px) {
 #tiles-narrow {
 	width: 100%;
-	padding: 30px 20px;
+	padding: 20px 20px;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 #tiles-narrow {
-	/* width: 100%;
-	margin: 0px auto;
-	padding: 0; */
-	
 	width: 100%;
 	display: grid;
-  	grid-template-columns: repeat(auto-fill, 364px);
+  	grid-template-columns: repeat(auto-fill, 324px);
   	grid-gap: 40px;
 	}
 }
@@ -343,30 +339,26 @@ h5.author-biography-intro {
 	margin-bottom: 30px;
 	padding: 30px;
 	text-align: center;
-	border: 1px solid #263238;
-	border-radius: 0px;
-	background: #ffffff;
+	border: 1px solid <?php echo $default_text_color; ?>;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 .tile {
 	display: flex;
-	padding: 30px;
+	padding: 40px 40px;
   	justify-content: center;
   	align-items: center;
 	text-align: center;
-	border: 1px solid #263238;
-	border-radius: 0px;
-	background: #ffffff;
+	border: 1px solid <?php echo $default_text_color; ?>;
 	}
 }
 
 .tile i {
-	margin-bottom: 30px;
+	margin-bottom: 20px;
 	font-size: 48px;
 	display: block;
-	color: #5C6BC0; /* correct */
+	color: <?php echo $default_link_color; ?>;
 }
 
 .tile img {
@@ -375,12 +367,9 @@ h5.author-biography-intro {
 }
 
 .tile p {
-	text-align: left;
+	margin-bottom: 0;
 }
 
-.tile i {
-	color: <?php echo $default_hover_color; ?>;
-}
 	
 /* offcanvas primary cta */
 
