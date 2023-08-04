@@ -295,6 +295,143 @@ h5.author-biography-intro {
 }
 
 
+/* buttons */
+
+button {
+	font-size: 16px;
+	font-weight: 400;
+	padding: 10px 20px;
+	text-decoration: none;
+	background: #ECEFF1;
+	border-radius: 0px;
+	border: 0;
+	cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+.button-link {
+	width: 100%;
+	text-align: center;
+	font-size: 20px;
+	font-weight: 700;
+	color: #ffffff;
+	padding: 10px 0px;
+	text-decoration: none;
+	display: block;
+	background: #5C6BC0; /* correct */
+	border-radius: 0px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+.button-link {
+	text-align: center;
+	font-size: 20px;
+	font-weight: 700;
+	color: #ffffff;
+	padding: 10px 20px;
+	text-decoration: none;
+	display: block;
+	background: #5C6BC0; /* correct */
+	border-radius: 0px;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+.button-outline {
+	width: 100%;
+	display: block;
+	font-size: 18px;
+	font-weight: 600;
+	padding: 10px 0px;
+	background: transparent;
+	border-radius: 0px;
+	text-align: center;
+	border: 1px solid <?php echo $default_text_color; ?>;
+	color: <?php echo $default_text_color; ?>;
+	text-decoration: none;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+.button-outline {
+	display: inline-block;
+	font-size: 18px;
+	font-weight: 600;
+	padding: 10px 20px;
+	background: transparent;
+	border-radius: 0px;
+	border: 1px solid <?php echo $default_text_color; ?>;
+	color: <?php echo $default_text_color; ?>;
+	text-decoration: none;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+.button-wide-dark {
+	width: 100%;
+	text-align: center;
+	font-size: 20px;
+	font-weight: 600;
+	color: #ffffff;
+	padding: 10px 0px;
+	text-decoration: none;
+	display: block;
+	background: <?php echo $default_text_color; ?>;
+	border-radius: 0px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+.button-wide-dark {
+	width: 100%;
+	text-align: center;
+	font-size: 20px;
+	font-weight: 600;
+	color: #ffffff;
+	padding: 10px 0px;
+	text-decoration: none;
+	display: block;
+	background: <?php echo $default_text_color; ?>;
+	border-radius: 0px;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+.button-wide-white {
+	width: 100%;
+	text-align: center;
+	font-size: 20px;
+	font-weight: 600;
+	color: #ffffff;
+	padding: 10px 0px;
+	text-decoration: none;
+	display: block;
+	background: transparent;
+	margin-bottom: 0;
+	border-radius: 0px;
+	box-shadow: inset 0px 0px 0px 1px #ffffff;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+.button-wide-white {
+	width: 100%;
+	text-align: center;
+	font-size: 20px;
+	font-weight: 600;
+	color: #ffffff;
+	padding: 10px 0px;
+	text-decoration: none;
+	display: block;
+	background: transparent;
+	margin-bottom: 0;
+	border-radius: 0px;
+	box-shadow: inset 0px 0px 0px 1px #ffffff;
+	}
+}
+
+
 /* tiles */
 
 @media screen and (max-width: 1200px) {
