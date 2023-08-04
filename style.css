@@ -1,7 +1,7 @@
 /*
 Theme Name: HoverCraft
 Theme URI: https://hovercraft.vip
-Version: 0.2.18
+Version: 0.2.19
 Description: No maintenance WordPress theme
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
@@ -650,99 +650,6 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
   transform: translate3d(0, 0, 0);
   visibility: visible; /* this is for browsers that don't support CSS3 translate3d in showing the menu */
   transition-delay: 0s; /* No delay for applying "visibility:visible" property when menu is going from "closed" to "open" */
-}
-
-
-/* header primary cta */
-
-.cta-header-primary {
-	display:inline-block;
-	margin-left:30px;
-}
-
-.cta-header-primary ul li {
-	list-style-type: none;
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-	vertical-align: middle;
-	text-align: center;
-}
-
-.cta-header-primary ul li a {
-	font-size: 18px;
-	font-weight: 700;
-	display: inline-block;
-	padding: 10px 20px;
-	background: #5C6BC0; /* correct */
-	text-decoration: none !important;
-	color: #ffffff !important;
-	border-radius: 0px;
-}
-
-.cta-header-primary ul li a:hover {
-	background: #5C6BC0; /* correct */
-	color: #ffffff !important;
-}
-
-
-/* header secondary cta */
-
-.cta-header-secondary {
-	display: inline-block;
-	margin-left: 30px;
-}
-
-#header-full-hero .cta-header-secondary ul li {
-	list-style-type: none;
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-	vertical-align: middle;
-	text-align: center;
-}
-
-#header-half-hero .cta-header-secondary ul li, #header-mini-hero .cta-header-secondary ul li, #header-basic .cta-header-secondary ul li {
-	list-style-type: none;
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-	vertical-align: middle;
-	text-align: center;
-}
-
-#header-full-hero .cta-header-secondary ul li a {
-	font-size: 18px;
-	font-weight: 400;
-	display: inline-block;
-	padding: 10px 20px;
-	background: transparent;
-	text-decoration: none;
-	color: #ffffff;
-	border-radius: 0px;
-	box-shadow: inset 0px 0px 0px 1px #ffffff;
-}
-
-#header-half-hero .cta-header-secondary ul li a, #header-mini-hero .cta-header-secondary ul li a, #header-basic .cta-header-secondary ul li a {
-	font-size: 18px;
-	font-weight: 400;
-	display: inline-block;
-	padding: 10px 20px;
-	background: transparent;
-	text-decoration: none;
-	color: #263238;
-	border-radius: 0px;
-	box-shadow: inset 0px 0px 0px 1px #263238;
-}
-
-#header-full-hero .cta-header-secondary ul li a:hover {
-	background: #fff;
-	color: #263238 !important;
-}
-
-#header-half-hero .cta-header-secondary ul li a:hover, #header-mini-hero .cta-header-secondary ul li a:hover, #header-basic .cta-header-secondary ul li a:hover {
-	background: #263238;
-	color: #ffffff !important;
 }
 
 
