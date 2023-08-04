@@ -465,7 +465,11 @@ button {
 #tiles-narrow {
 	width: 100%;
 	display: grid;
-  	grid-template-columns: repeat(auto-fill, 324px);
+	<?php if ( $sitewide_layout == 'floating_islands' ) { 
+			echo "grid-template-columns: repeat(auto-fill, 324px);\n"; 
+		} else { 
+			echo "grid-template-columns: repeat(auto-fill, 364px);\n"; 
+		}  ?>
   	grid-gap: 40px;
 	}
 }
