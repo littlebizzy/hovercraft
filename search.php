@@ -13,13 +13,17 @@
 		
 		<div class="content-padded">
 	
-    		<h2 class="page-title"><?php _e( 'Search results for:', 'nd_dosth' ); ?> <span class="search-query"><?php echo get_search_query(); ?></span></h2> 
-			<br>
+    		<h1><?php _e( 'Search results for:', 'hovercraft' ); ?>&nbsp;<span class="search-query"><?php echo get_search_query(); ?></span></h1>
 			
             <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-           	<h4><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
-			<?php the_excerpt(); ?><br>
-			<?php endwhile; endif; ?><!-- the loop -->
+
+				<div class="post-tease-archive">
+				<?php get_template_part( 'template-parts/content/featured-image-archive' ); ?>
+				<h4><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
+				<div class="post-excerpt-archive"><?php the_excerpt(); ?></div>
+				</div><!-- post-tease-archive -->
+		
+				<?php endwhile; endif; ?><!-- the loop -->
 			
 			<?php get_template_part( 'template-parts/content/pagination' ); ?>
 			
