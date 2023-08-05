@@ -1,7 +1,7 @@
 /*
 Theme Name: HoverCraft
 Theme URI: https://hovercraft.vip
-Version: 0.2.21
+Version: 0.2.22
 Description: No maintenance WordPress theme
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
@@ -246,55 +246,6 @@ iframe {
 
 #footer iframe {
 	aspect-ratio: 1 / 1.5;
-}
-
-
-
-code {
-	font-family: 'Noto Sans Mono', monospace;
-	font-weight: 400;
-	background: #ECEFF1;
-	padding: 0px 5px;
-}
-
-@media screen and (max-width: 1200px) {
-pre {
-	width: calc(100% - 40px) !important;
-	font-family: 'Noto Sans Mono', monospace;
-	font-weight: 400;
-	background: #ECEFF1; /* correct */
-	padding: 10px;
-	margin-bottom: 30px;
-	overflow-x: scroll;
-	white-space: pre;
-	color: #263238; /* correct */
-	}
-}
-
-@media screen and (min-width: 1200px) {
-pre {
-	width: 100%;
-	font-family: 'Noto Sans Mono', monospace;
-	font-weight: 400;
-	background: #ECEFF1; /* correct */
-	padding: 10px;
-	margin-bottom: 30px;
-	overflow-x: scroll;
-	white-space: pre;
-	color: #263238; /* correct */
-	}
-}
-
-.pre {
-	width: 100%;
-	font-family: 'Noto Sans Mono', monospace;
-	background: #ECEFF1; /* correct */
-	padding: 10px;
-	margin-bottom: 30px;
-	overflow-x: scroll;
-	white-space: pre;
-	color: #263238; /* correct */
-	border-radius: 0px;
 }
 
 
