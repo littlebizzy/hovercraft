@@ -468,7 +468,7 @@ button {
 	<?php if ( $sitewide_layout == 'floating_islands' ) { 
 			echo "grid-template-columns: repeat(auto-fill, 324px);\n"; 
 		} else { 
-			echo "grid-template-columns: repeat(auto-fill, 364px);\n"; 
+			echo "grid-template-columns: repeat(auto-fill, 344px);\n"; 
 		}  ?>
   	grid-gap: 40px;
 	}
