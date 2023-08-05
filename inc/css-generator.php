@@ -1803,6 +1803,17 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 }
 
 
+/* search bar */
+
+.searchinput::placeholder {
+	color: #78909C;
+}
+
+.searchinput:focus {
+  outline: none;
+}
+
+
 /* comments */
 
 @media screen and (max-width: 1200px) {
