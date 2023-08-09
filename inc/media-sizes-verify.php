@@ -3,11 +3,6 @@
 // large should be 1200 x whatever and medium 480 x whatever
 // medium-large 768 x auto (0) is also used by HoverCraft
 
-// large_size_w
-// large_size_h
-// medium_size_w
-// medium_size_h
-
 function hovercraft_verify_media_sizes() {
     
     $large_width = get_option( 'large_size_w' );
