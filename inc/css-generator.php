@@ -492,10 +492,22 @@ button {
 
 @media screen and (min-width: 1200px) {
 #tiles {
-	/* width: 100%;
-	margin: 0px auto;
-	padding: 0; */
-	
+	width: 100%;
+	display: grid;
+  	grid-template-columns: repeat(auto-fill, 380px);
+  	grid-gap: 30px;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+#tiles-wide {
+	width: 100%;
+	padding: 30px 20px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+#tiles-wide {
 	width: 100%;
 	display: grid;
   	grid-template-columns: repeat(auto-fill, 380px);
