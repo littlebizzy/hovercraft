@@ -737,6 +737,16 @@ button {
 	color: <?php echo $default_text_color; ?>;
 }
 
+#header-mini-hero .main-menu ul li a {
+	text-decoration: none;
+	color: <?php echo $mini_hero_header_link_color; ?>;
+}
+
+#header-basic .main-menu ul li a {
+	text-decoration: none;
+	color: <?php echo $basic_hero_header_link_color; ?>;
+}
+
 
 /* topbar */
 
@@ -1029,11 +1039,6 @@ video.hero-background-video {
 #header-mini-hero .menu-mobile-wrapper i {
 	color: <?php echo $mini_hero_header_text_color; ?>;
 }
-	
-#header-mini-hero .main-menu ul li a {
-	text-decoration: none;
-	color: <?php echo $mini_hero_header_link_color; ?>;
-}
 
 #header-mini-hero a {
 	color: <?php echo $mini_hero_header_link_color; ?>;
@@ -1067,11 +1072,6 @@ video.hero-background-video {
 #header-basic .menu-mobile-wrapper i {
 	font-size: 36px;
 	color: <?php echo $basic_hero_header_text_color; ?>;
-}
-
-#header-basic .main-menu ul li a {
-	text-decoration: none;
-	color: <?php echo $basic_hero_header_link_color; ?>;
 }
 
 #header-basic a {
