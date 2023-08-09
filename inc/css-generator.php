@@ -631,7 +631,7 @@ button {
 }
 
 
-/* main menu desktop */
+/* main menu (desktop) */
 
 @media screen and (max-width: 1200px) {
 .menu-desktop {
@@ -643,64 +643,69 @@ button {
 	display: inline-block;
 }
 
+.toggle,
+[id^=drop] {
+	display: none;
+}
+
+.main-menu:after {
+	content:"";
+	display:table;
+	clear:both;
+}
+
 .main-menu ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
 	position: relative;
 	text-align: right;
-	
 	display: inline-table;
+}
+
+.main-menu ul li {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	display: inline-block;
+	vertical-align: middle;
 }
 
 .main-menu ul ul {
 	display: none;
 	position: absolute; 
-	
-	background: #fff;
-	padding: 10px 20px;
-	box-shadow: -3px 3px 10px -2px rgba(0,0,0,.1);
-    border: 1px solid rgba(0,0,0,.1);
+	top: 56px; 
 }
-
+	
 .main-menu ul li:hover > ul {
 	display: block;
-}
+	z-index: 100;
+}	
 
-.main-menu ul li {
-	list-style-type: none;
-	display: inline-block;
-	margin: 0;
-	padding: 0 0 0 30px;
-	vertical-align: middle;
-	text-align: center;
-}
-
-.main-menu ul li a {
+.main-menu a {
 	font-family: <?php echo ucwords(str_replace("_", " ", $main_menu_font_family)); ?>;
 	font-size: <?php echo $main_menu_desktop_font_size; ?>px;
 	font-weight: <?php echo $main_menu_font_weight; ?>;
 	display: inline-block;
-	padding: 10px 0px;
+	padding: 10px 15px;
 	text-decoration: none !important;
 }
 
+
 /* Fisrt Tier Dropdown */
 .main-menu ul ul li {
+	width:250px;
+	display: list-item;
 	position: relative;
-	padding-left: 0px;
-	display: block;
 	text-align: left;
 }
 
-.main-menu ul ul ul {
-            position: absolute; 
-            left: 100%; 
-            top:0;
-          }	
-
 /* Second, Third and more Tiers	*/
+
 .main-menu ul ul ul li {
 	position: relative;
-	top: -60px; 
-	left: 170px;
+	top: -56px; 
+	left: 250px;
 }
 	
 /* Change this in order to change the Dropdown symbol */
@@ -715,14 +720,24 @@ button {
 	content: ''; 
 }
 
+	
+#header-full-hero .main-menu ul li ul li { background: <?php echo $default_text_color; ?>; }
+	
+#header-half-hero .main-menu ul li ul li { background: #fff; }
+
+#header-mini-hero .main-menu ul li ul li { background: #fff; }
+	
+#header-basic .main-menu ul li ul li { background: <?php echo $header_basic_background_color; ?>; }
+
+
+
+	
 #header-full-hero .main-menu ul li a {
 	text-decoration: none;
 	color: #ffffff; /* correct */
 }
 
-#header-full-hero .main-menu ul ul {
-    background: <?php echo $default_text_color; ?>;   
-}
+
 
 #header-full-hero a {
 	color: #ffffff; /* correct */
