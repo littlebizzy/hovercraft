@@ -721,7 +721,7 @@ button {
 }
 
 #header-full-hero .main-menu ul ul {
-    background: #263238;   
+    background: <?php echo $default_text_color; ?>;   
 }
 
 #header-full-hero a {
@@ -730,11 +730,11 @@ button {
 
 #header-half-hero .main-menu ul li a {
 	text-decoration: none;
-	color: #263238; /* correct */
+	color: <?php echo $default_text_color; ?>;
 }
 
 #header-half-hero a {
-	color: #263238; /* correct */
+	color: <?php echo $default_text_color; ?>;
 }
 
 
