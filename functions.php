@@ -52,7 +52,7 @@ require get_template_directory() . '/inc/logo-alternative.php';
 require get_template_directory() . '/inc/logo-default.php';
 
 // media sizes
-require get_template_directory() . '/inc/media-sizes.php';
+require get_template_directory() . '/inc/media-sizes-verify.php';
 
 // media sizes insert
 require get_template_directory() . '/inc/media-sizes-insert.php';
