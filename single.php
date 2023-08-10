@@ -21,7 +21,9 @@
 				
 					<?php get_template_part( 'template-parts/content/title' ); ?>	
 
-					<?php get_template_part( 'template-parts/content/byline' ); ?>					
+					<?php get_template_part( 'template-parts/content/byline' ); ?>
+
+					<?php get_template_part( 'template-parts/content/byline-after' ); ?>
 		
 					<?php the_content(); ?>
 		
