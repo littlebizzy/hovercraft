@@ -586,3 +586,18 @@ function hovercraft_postcolumns_bottom() {
 
 }
 add_action( 'widgets_init', 'hovercraft_postcolumns_bottom' );
+
+// single post after byline
+function hovercraft_after_byline() {
+
+	register_sidebar( array(
+		'name'          => 'After Byline',
+		'id'            => 'hovercraft_after_byline',
+		'before_widget' => '<div class="widget-after-byline widget-wrapper">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+}
+add_action( 'widgets_init', 'hovercraft_after_byline' );
