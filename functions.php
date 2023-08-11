@@ -33,6 +33,9 @@ require get_template_directory() . '/inc/customizer/customizer-settings.php';
 // featured images
 require get_template_directory() . '/inc/featured-images.php';
 
+// full screen search
+require get_template_directory() . '/inc/full-screen-search.php';
+
 // suggest git updater
 require get_template_directory() . '/inc/git-updater.php';
 
