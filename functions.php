@@ -42,6 +42,9 @@ require get_template_directory() . '/inc/git-updater.php';
 // google fonts
 require get_template_directory() . '/inc/google-fonts.php';
 
+// google fonts array (customizer)
+require get_template_directory() . '/inc/customizer/google-fonts-array.php';
+
 // video uploader
 require get_template_directory() . '/inc/header-video.php';
 
