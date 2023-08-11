@@ -76,7 +76,7 @@
 	<?php $hovercraft_search_icon = get_theme_mod( 'hovercraft_search_icon', 'none' );
 		if ( $hovercraft_search_icon != 'none' ) { ?>
 	<div id="full-screen-search">
-		<button type="button" class="close" id="full-screen-search-close">X</button>
+		<button type="button" class="close" id="full-screen-search-close"><i class="material-icons close">close</i></button>
 			<form role="search" method="get" action="<?php echo home_url( '/' ); ?>" id="full-screen-search-form">
 				<div id="full-screen-search-container">
 					<input type="text" name="s" placeholder="<?php _e( 'Search' ); ?>" id="full-screen-search-input" />
