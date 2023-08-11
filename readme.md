@@ -5,6 +5,7 @@ No maintenance WordPress theme
 ## Changelog
 
 ### 0.2.x
+- still a little bit alpha
 - forced update (fixes versioning conflict)
 - passes Theme Check basic tests
 
