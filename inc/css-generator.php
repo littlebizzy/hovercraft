@@ -2002,33 +2002,21 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 #full-screen-search form div input,
 #full-screen-search form div input.search {
     background:none;
-    border:0 none;
-    border-radius:0;
-    -webkit-border-radius:0;
-    -moz-border-radius:0;
     float:none;
     font-size:100%;
     height:auto;
-    letter-spacing:normal;
     list-style:none;
     outline:none;
     position:static;
     text-decoration:none;
     text-indent:0;
-    text-shadow:none;
-    text-transform:none;
     width:auto;
     visibility:visible;
     overflow:visible;
     margin:0;
     padding:0;
     line-height:1;
-    -webkit-appearance:none;
     transition: none;
-    -webkit-transition: none;
-    -moz-transition: none;
-    -o-transition: none;
-    -ms-transition: none;
 }
 
 /**
@@ -2042,7 +2030,7 @@ button[type="submit"]:hover, input[type="submit"]:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(255,255,255,0.95);
+    background: rgba(0,0,0,0.7);
 
     /**
     * Add some CSS3 transitions for showing the Full Screen Search
@@ -2079,11 +2067,14 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 #full-screen-search button.close {
     position: absolute;
     z-index: 999999;
-    top: 20px;
-    right: 20px;
-    font-size: 30px;
-    color: <?php echo $default_text_color; ?>;
+    top: 40px;
+    right: 40px;
+    color: #ffffff;
     cursor: pointer;
+}
+	
+#full-screen-search button.close i {
+	font-size: 48px;
 }
 
 /**
@@ -2111,10 +2102,11 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 #full-screen-search form div input {
     width: 100%;
     height: 100px;
-    background: #eee;
+    background: #ffffff;
     padding: 20px;
-    font-size: 40px;
+    font-size: 36px;
     line-height: 60px;
+	box-shadow: none;
 }
 
 
