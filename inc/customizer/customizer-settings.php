@@ -22,7 +22,7 @@ $wp_customize->add_section( 'hovercraft_general', array(
 	
 // sitewide layout setting
 $wp_customize->add_setting( 'hovercraft_sitewide_layout', array(
-    'default'    => 'classic_clean',
+    'default'    => 'floating_islands',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
 	) 
 );
