@@ -1,7 +1,7 @@
 /*
 Theme Name: HoverCraft
 Theme URI: https://hovercraft.vip
-Version: 0.2.33
+Version: 0.2.34
 Description: No maintenance WordPress theme
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
@@ -107,83 +107,6 @@ html, body {
 	.mobile {
 		display: none;
 	}
-}
-
-
-/* titles */
-
-
-
-@media screen and (max-width: 1200px) {
-h1.full-hero-title {
-	font-size: 24px;
-	font-weight: 700;
-	margin-bottom: 30px;
-	color: #FFF;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-h1.full-hero-title {
-	font-size: 48px;
-	font-weight: 700;
-	margin-bottom: 30px;
-	color: #FFF;
-	}
-}
-
-@media screen and (max-width: 1200px) {
-h1.half-hero-title {
-	font-size: 24px;
-	font-weight: 700;
-	margin-bottom: 30px;
-	color: #FFF;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-h1.half-hero-title {
-	font-size: 48px;
-	font-weight: 700;
-	margin-bottom: 30px;
-	color: #FFF;
-	}
-}
-
-@media screen and (max-width: 1200px) {
-h1.mini-hero-title {
-	font-size: 24px;
-	font-weight: 700;
-	margin-bottom: 0;
-	color: #FFF;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-h1.mini-hero-title {
-	font-size: 48px;
-	font-weight: 700;
-	margin-bottom: 0;
-	color: #FFF;
-	}
-}
-
-h2 {
-	margin-bottom: 20px;
-	font-weight: 700;
-	font-size: 24px;
-}
-
-h3 {
-	margin-bottom: 20px;
-	font-weight: 700;
-	font-size: 24px;
-}
-
-h4 {
-	margin-bottom: 20px;
-	font-weight: 700;
-	font-size: 20px;
 }
 
 
