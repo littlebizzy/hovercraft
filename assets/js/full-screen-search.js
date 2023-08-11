@@ -23,7 +23,20 @@ jQuery( document ).ready( function( $ ) {
         // Hide the Full Screen Search
         $( '#full-screen-search' ).removeClass( 'open' );
     } );
+	
+	 // Hide the Full Screen search when the user clicks the esc key
+	$( document ).on( 'keydown', function( event ) {
+		
+		if (event.key == "Escape") {
+			
+		// Hide the Full Screen Search
+        $( '#full-screen-search' ).removeClass( 'open' );
+		
+		}
+
+    } );
 
 } );
 
 // https://wordpress.org/plugins/full-screen-search-overlay/
+// https://www.geeksforgeeks.org/how-to-detect-escape-key-press-using-jquery/
