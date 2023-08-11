@@ -1986,7 +1986,6 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 #full-screen-search form div,
 #full-screen-search form div input,
 #full-screen-search form div input.search {
-    font-family: Arial, sans-serif;
     background:none;
     border:0 none;
     border-radius:0;
@@ -2009,14 +2008,6 @@ button[type="submit"]:hover, input[type="submit"]:hover {
     margin:0;
     padding:0;
     line-height:1;
-    box-sizing:border-box;
-    -webkit-box-sizing:border-box;
-    -moz-box-sizing:border-box;
-    -webkit-box-shadow:none;
-    -moz-box-shadow:none;
-    -ms-box-shadow:none;
-    -o-box-shadow:none;
-    box-shadow:none;
     -webkit-appearance:none;
     transition: none;
     -webkit-transition: none;
@@ -2041,7 +2032,7 @@ button[type="submit"]:hover, input[type="submit"]:hover {
     /**
     * Add some CSS3 transitions for showing the Full Screen Search
     */
-    transition: opacity 0.5s linear;
+    transition: opacity 0.1s linear;
 }
 
 /**
@@ -2076,8 +2067,7 @@ button[type="submit"]:hover, input[type="submit"]:hover {
     top: 20px;
     right: 20px;
     font-size: 30px;
-    font-weight: 300;
-    color: #999;
+    color: <?php echo $default_text_color; ?>;
     cursor: pointer;
 }
 
@@ -2096,20 +2086,7 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 /**
 * Search Form Input Placeholder Color
 */
-#full-screen-search form div input::-webkit-input-placeholder { 
-    font-family: Arial, sans-serif;
-    color: #ccc;
-}
-#full-screen-search form div input:-moz-placeholder { 
-    font-family: Arial, sans-serif;
-    color: #ccc;
-}
-#full-screen-search form div input::-moz-placeholder { 
-    font-family: Arial, sans-serif;
-    color: #ccc;
-}
-#full-screen-search form div input:-ms-input-placeholder { 
-    font-family: Arial, sans-serif;
+#full-screen-search form div input::placeholder { 
     color: #ccc;
 }
 
