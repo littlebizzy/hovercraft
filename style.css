@@ -1,7 +1,7 @@
 /*
 Theme Name: HoverCraft
 Theme URI: https://hovercraft.vip
-Version: 0.2.31
+Version: 0.2.32
 Description: No maintenance WordPress theme
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
@@ -429,26 +429,6 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 	background: transparent; /* correct */
 	border: 1px solid #FFF;
 	border-radius: 0px;
-}
-
-
-/* search icon */
-
-.search-icon-wrapper {
-	display: inline-block;
-	padding-left: 30px;
-	vertical-align: middle;
-	text-align: center;
-}
-
-.search-icon-wrapper i {
-	padding: 10px 0px;
-	text-decoration: none !important;
-	font-size: 24px;
-}
-
-#sidebar ul li {
-	line-height: 2;
 }
 
 
