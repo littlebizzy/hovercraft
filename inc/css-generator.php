@@ -28,6 +28,8 @@ function hovercraft_generate_css(){
 	$desktop_logo_width = get_theme_mod( 'hovercraft_desktop_logo_width', '150' );
 	$mobile_logo_width = get_theme_mod( 'hovercraft_mobile_logo_width', '100' );
 	$default_font_family = get_theme_mod( 'hovercraft_default_font', 'noto_sans' );
+	$default_desktop_font_size = get_theme_mod( 'hovercraft_default_desktop_font_size', '16' );
+	$default_mobile_font_size = get_theme_mod( 'hovercraft_default_mobile_font_size', '16' );
 	$site_name_font_family = get_theme_mod( 'hovercraft_site_name_font', 'noto_sans' );
 	$site_name_mobile_font_size = get_theme_mod( 'hovercraft_site_name_mobile_font_size', '24' );
 	$site_name_desktop_font_size = get_theme_mod( 'hovercraft_site_name_desktop_font_size', '36' );
@@ -90,9 +92,20 @@ function hovercraft_generate_css(){
     ?>
 
 <style type="text/css" id="hovercraft_custom_css">
+@media screen and (max-width: 1200px) {
 html, body {
 	font-family: <?php echo ucwords(str_replace("_", " ", $default_font_family)); ?>;
+	font-size: <?php echo $default_mobile_font_size; ?>px;
 	color: <?php echo $default_text_color; ?>;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+html, body {
+	font-family: <?php echo ucwords(str_replace("_", " ", $default_font_family)); ?>;
+	font-size: <?php echo $default_desktop_font_size; ?>px;
+	color: <?php echo $default_text_color; ?>;
+	}
 }
 
 
@@ -155,6 +168,83 @@ iframe {
 
 #footer iframe {
 	aspect-ratio: 1 / 1.5;
+}
+
+
+/* titles */
+
+
+
+@media screen and (max-width: 1200px) {
+h1.full-hero-title {
+	font-size: 24px;
+	font-weight: 700;
+	margin-bottom: 30px;
+	color: #FFF;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+h1.full-hero-title {
+	font-size: 48px;
+	font-weight: 700;
+	margin-bottom: 30px;
+	color: #FFF;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+h1.half-hero-title {
+	font-size: 24px;
+	font-weight: 700;
+	margin-bottom: 30px;
+	color: #FFF;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+h1.half-hero-title {
+	font-size: 48px;
+	font-weight: 700;
+	margin-bottom: 30px;
+	color: #FFF;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+h1.mini-hero-title {
+	font-size: 24px;
+	font-weight: 700;
+	margin-bottom: 0;
+	color: #FFF;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+h1.mini-hero-title {
+	font-size: 48px;
+	font-weight: 700;
+	margin-bottom: 0;
+	color: #FFF;
+	}
+}
+
+h2 {
+	margin-bottom: 20px;
+	font-weight: 700;
+	font-size: 24px;
+}
+
+h3 {
+	margin-bottom: 20px;
+	font-weight: 700;
+	font-size: 24px;
+}
+
+h4 {
+	margin-bottom: 20px;
+	font-weight: 700;
+	font-size: 20px;
 }
 
 
