@@ -749,7 +749,7 @@ button {
 	font-size: <?php echo $main_menu_desktop_font_size; ?>px;
 	font-weight: <?php echo $main_menu_font_weight; ?>;
 	display: inline-block;
-	padding: 10px 15px;
+	padding-left: 30px;
 	text-decoration: none !important;
 }
 
@@ -1969,11 +1969,26 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 }
 
 
-/* full screen search */
+/* search icon and full screen search */
 
 .search-icon-wrapper {
+	display: inline-block;
+	padding-left: 30px;
+	vertical-align: middle;
+	text-align: center;
 	cursor: pointer;
 }
+
+.search-icon-wrapper i {
+	padding: 10px 0px;
+	text-decoration: none !important;
+	font-size: 24px;
+}
+
+#sidebar ul li {
+	line-height: 2;
+}
+
 
 /**
 * Reset
