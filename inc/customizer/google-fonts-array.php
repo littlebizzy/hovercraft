@@ -1,6 +1,8 @@
 <?php
 
-array(
+function hovercraft_google_fonts_array() {
+
+$googlefontslist = array(
     'arvo' => 'Arvo',
     'averia_libre' => 'Averia Libre',
     'bebas_neue' => 'Bebas Neue',
@@ -60,6 +62,9 @@ array(
     'titan_one' => 'Titan One',
     'yellowtail' => 'Yellowtail',
     'zilla_slab' => 'Zilla Slab'
-)
-	
-?>
+);
+
+return $googlefontslist;
+}
+
+// https://stackoverflow.com/questions/57558027/how-to-access-an-array-variable-from-another-php-file-in-wordpress
