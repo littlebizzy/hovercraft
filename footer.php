@@ -72,7 +72,19 @@
 	<div class="clear"></div>
 	</div><!-- copyright-right -->
 	<?php } ?>
-		
+
+	<?php $hovercraft_search_icon = get_theme_mod( 'hovercraft_search_icon', 'none' );
+		if ( $hovercraft_search_icon != 'none' ) { ?>
+	<div id="full-screen-search">
+		<button type="button" class="close" id="full-screen-search-close">X</button>
+			<form role="search" method="get" action="<?php echo home_url( '/' ); ?>" id="full-screen-search-form">
+				<div id="full-screen-search-container">
+					<input type="text" name="s" placeholder="<?php _e( 'Search' ); ?>" id="full-screen-search-input" />
+				</div>
+			</form>
+	</div><!-- full-screen-search -->
+	<?php } ?>
+	
 	<?php $hovercraft_scroll_to_top = get_theme_mod( 'hovercraft_scroll_to_top', 'mobile_only' );
 	if ( $hovercraft_scroll_to_top != 'none' ) { ?>
 	<div class="scrollup-wrapper">
