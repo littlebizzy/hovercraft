@@ -2112,16 +2112,9 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 #full-screen-search {
     visibility: hidden;
     opacity: 0;
-    z-index: 999998;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.7);
-
-    /**
-    * Add some CSS3 transitions for showing the Full Screen Search
-    */
     transition: opacity 0.1s linear;
 }
 
