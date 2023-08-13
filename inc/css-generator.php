@@ -153,11 +153,6 @@ ol > li::marker {
   font-weight: 700;
 }
 
-a {
-	color: #5C6BC0; /* correct */
-	text-decoration: underline;
-}
-
 iframe {
     display: block;
 }
@@ -305,12 +300,14 @@ h4 {
 .center {
 	text-align: center;
 }
-	
+
+
 /* links */
 
 a {
 	color: <?php echo $default_link_color; ?>;
 	text-decoration: <?php echo $default_link_decoration; ?>;
+	cursor: pointer;
 }
 	
 a:hover {
