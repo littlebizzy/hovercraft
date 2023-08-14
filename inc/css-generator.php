@@ -2112,10 +2112,14 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 #full-screen-search {
     visibility: hidden;
     opacity: 0;
+	position: static;
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.7);
     transition: opacity 0.1s linear;
+	top: 0;
+	left: 0;
+	z-index: -1;
 }
 
 /**
@@ -2127,9 +2131,10 @@ button[type="submit"]:hover, input[type="submit"]:hover {
     * we define position: fixed; here so that the Full Screen Search doesn't block
     * the underlying HTML elements when not open
     */
-    position: fixed;
     visibility: visible;
     opacity: 1;
+	position: fixed;
+	z-index: 99998;
 }
 
 /**
@@ -2146,7 +2151,7 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 */
 #full-screen-search button.close {
     position: absolute;
-    z-index: 999999;
+    z-index: 99999;
     top: 40px;
     right: 40px;
     color: #ffffff;
