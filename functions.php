@@ -64,7 +64,7 @@ require get_template_directory() . '/inc/media-sizes-verify.php';
 require get_template_directory() . '/inc/media-sizes-insert.php';
 
 // menu functions
-require get_template_directory() . '/inc/menu-functions.php';
+// require get_template_directory() . '/inc/menu-functions.php';
 
 // menu locations
 require get_template_directory() . '/inc/menu-locations.php';
@@ -93,20 +93,8 @@ require get_template_directory() . '/inc/widget-titles.php';
 // remove generator
 require get_template_directory() . '/inc/remove-generator.php';
 
-// WooCommerce support
-//// add_theme_support('woocommerce');
-remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10);
-remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10);
-add_action('woocommerce_before_main_content', 'hovercraft_main_start', 10);
-add_action('woocommerce_after_main_content', 'hovercraft_main_end', 10);
-
-function hovercraft_main_start() {
-    echo '<div id="main">';
-}
-
-function hovercraft_main_end() {
-    echo '</div>';
-}
+// woocommerce support
+require get_template_directory() . '/inc/woocommerce-support.php';
 
 // page excerpts
 add_post_type_support( 'page', 'excerpt' );
