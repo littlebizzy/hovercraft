@@ -89,10 +89,10 @@
 <?php $hovercraft_search_icon = get_theme_mod( 'hovercraft_search_icon', 'none' );
 	if ( $hovercraft_search_icon != 'none' ) { ?>
 	<div id="full-screen-search">
-		<button type="button" class="close" id="full-screen-search-close"><i class="material-icons close">close</i></button>
-			<form role="search" method="get" action="<?php echo home_url( '/' ); ?>" id="full-screen-search-form">
+		<button type="button" class="close"><i class="material-icons close">close</i></button>
+			<form role="search" method="get" action="<?php echo home_url( '/' ); ?>">
 				<div id="full-screen-search-container">
-					<input type="text" name="s" placeholder="<?php _e( 'Search entire site...' ); ?>" id="full-screen-search-input" />
+					<input type="text" name="s" placeholder="<?php _e( 'Search entire site...' ); ?>" />
 				</div>
 			</form>
 	</div><!-- full-screen-search -->
