@@ -319,7 +319,7 @@ h4 {
 }
 
 a.site-name-link {
-	<?php if ( $tagline == 'right_of_site_title' ) { 
+	<?php if ( $tagline_display == 'right_of_site_title' ) { 
 			echo "display: inline-block;\n"; 
 		} else { 
 			echo "display: block;\n"; 
@@ -336,14 +336,14 @@ a.site-name-link {
 
 @media screen and (min-width: 1200px) {
 .site-tagline {
-	<?php if ( $tagline == 'right_of_site_title' ) { 
+	<?php if ( $tagline_display == 'right_of_site_title' ) { 
 			echo "margin-left: 30px;\n"; 
 		} else { 
 			echo "margin-left: 0;\n"; 
 		}  ?>
 	font-size: 14px;
 	line-height: 1.5;
-	<?php if ( $tagline == 'right_of_site_title' ) { 
+	<?php if ( $tagline_display == 'right_of_site_title' ) { 
 			echo "display: inline-block;\n"; 
 		} else { 
 			echo "display: block;\n"; 
