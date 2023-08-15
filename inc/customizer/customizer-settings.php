@@ -32,7 +32,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
         'hovercraft_tagline_display',
         array(
-            'label'     => __( 'Tagline Display', 'hovercraft' ),
+            'label'     => __( 'Tagline Display (Desktop)', 'hovercraft' ),
 			'description' => __( 'Where should the Tagline display in the header? Note: Tagline must be filled in the Site Identity section for this to work.', 'hovercraft' ),
             'section'   => 'hovercraft_general',
             'settings'  => 'hovercraft_tagline_display',
