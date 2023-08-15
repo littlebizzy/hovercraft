@@ -22,7 +22,7 @@ $wp_customize->add_section( 'hovercraft_general', array(
 	
 // tagline display setting
 $wp_customize->add_setting( 'hovercraft_tagline_display', array(
-    'default'    => 'right_of_sitename',
+    'default'    => 'right_of_site_title',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
 	) 
 );
@@ -39,8 +39,8 @@ $wp_customize->add_control( new WP_Customize_Control(
             'type'      => 'select',
 			'choices' => array(
         		'none' => 'None (Hidden)',
-				'right_of_sitename' => 'Right of Site Name',
-				'below_sitename' => 'Below Site Name'
+				'right_of_site_title' => 'Right of Site Title',
+				'below_site_title' => 'Below Site Title'
     			)
         )
 ) );
