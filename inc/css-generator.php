@@ -289,6 +289,25 @@ h4 {
 }
 
 
+/* branding */
+
+#branding {
+	display: table;
+}
+
+#branding a {
+	text-decoration: none !important;
+}
+
+.branding-left {
+	display:table-cell;
+    vertical-align:middle;
+	height:inherit;
+	min-width: auto;
+	white-space: nowrap;
+}
+
+
 /* branding right... site name and tagline */
 
 .branding-right {
