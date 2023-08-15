@@ -202,36 +202,6 @@ html, body {
 }
 
 
-
-
-
-/* branding right... site name and tagline */
-
-.branding-right {
-	display:table-cell;
-    vertical-align:middle;
-	height:inherit;
-	text-align:left;
-	width:100%;
-}
-
-@media screen and (max-width: 1200px) {
-.site-tagline {
-	font-size: 14px;
-	line-height: 1.5;
-	display: none;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-.site-tagline {
-	font-size: 14px;
-	line-height: 1.5;
-	display: block;
-	}
-}
-
-
 /* mobile menu */
 
 @media screen and (max-width: 1200px) {
