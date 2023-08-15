@@ -33,6 +33,7 @@ function hovercraft_generate_css(){
 	$site_name_font_family = get_theme_mod( 'hovercraft_site_name_font', 'noto_sans' );
 	$site_name_mobile_font_size = get_theme_mod( 'hovercraft_site_name_mobile_font_size', '24' );
 	$site_name_desktop_font_size = get_theme_mod( 'hovercraft_site_name_desktop_font_size', '36' );
+	$tagline_display = get_theme_mod( 'hovercraft_tagline_display', 'right_of_site_title' );
 	$site_name_font_weight = get_theme_mod( 'hovercraft_site_name_font_weight', '700' );
 	$main_menu_font_family = get_theme_mod( 'hovercraft_main_menu_font', 'noto_sans' );
 	$main_menu_desktop_font_size = get_theme_mod( 'hovercraft_main_menu_desktop_font_size', '18' );
@@ -286,6 +287,51 @@ h4 {
 	display: block;
 	}
 }
+
+
+/* branding right... site name and tagline */
+
+.branding-right {
+	display: table-cell;
+    vertical-align: middle;
+	height: inherit;
+	text-align: left;
+	width: 100%;
+}
+
+a.site-name-link {
+	<?php if ( $tagline == 'right_of_site_title' ) { 
+			echo "display: inline-block;\n"; 
+		} else { 
+			echo "display: block;\n"; 
+		}  ?>
+}
+
+@media screen and (max-width: 1200px) {
+.site-tagline {
+	font-size: 14px;
+	line-height: 1.5;
+	display: none;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+.site-tagline {
+	<?php if ( $tagline == 'right_of_site_title' ) { 
+			echo "margin-left: 30px;\n"; 
+		} else { 
+			echo "margin-left: 0;\n"; 
+		}  ?>
+	font-size: 14px;
+	line-height: 1.5;
+	<?php if ( $tagline == 'right_of_site_title' ) { 
+			echo "display: inline-block;\n"; 
+		} else { 
+			echo "display: block;\n"; 
+		}  ?>
+	}
+}
+
 
 /* general */
 	
