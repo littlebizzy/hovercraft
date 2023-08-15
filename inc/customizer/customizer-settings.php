@@ -20,6 +20,31 @@ $wp_customize->add_section( 'hovercraft_general', array(
     'priority'   => 30,
 ) );
 	
+// tagline display setting
+$wp_customize->add_setting( 'hovercraft_tagline_display', array(
+    'default'    => 'right_of_sitename',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// tagline display control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_tagline_display',
+        array(
+            'label'     => __( 'Tagline Display', 'hovercraft' ),
+			'description' => __( 'Where should the Tagline display in the header? Note: Tagline must be filled in the Site Identity section for this to work.', 'hovercraft' ),
+            'section'   => 'hovercraft_general',
+            'settings'  => 'hovercraft_tagline_display',
+            'type'      => 'select',
+			'choices' => array(
+        		'none' => 'None (Hidden)',
+				'right_of_sitename' => 'Right of Site Name',
+				'below_sitename' => 'Below Site Name'
+    			)
+        )
+) );
+	
 // sitewide layout setting
 $wp_customize->add_setting( 'hovercraft_sitewide_layout', array(
     'default'    => 'floating_islands',
