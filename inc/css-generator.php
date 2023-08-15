@@ -888,7 +888,7 @@ button {
 .main-menu ul ul {
 	display: none;
 	position: absolute; 
-	top: 56px; 
+	top: 36px; 
 }
 	
 .main-menu ul li:hover > ul {
