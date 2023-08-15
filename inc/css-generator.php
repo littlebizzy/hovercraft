@@ -122,8 +122,10 @@ blockquote {
 blockquote p {
 	font-size: 18px;
 	line-height: 2;
-	margin: 0px !important;
-	padding: 0px !important;
+}
+
+blockquote p:last-child {
+	margin-bottom: 0;
 }
 
 strong {
