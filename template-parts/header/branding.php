@@ -20,9 +20,9 @@
 	</div><!-- branding-left -->
 	<?php } ?>
 	<?php if (display_header_text()==true) { ?>
-	<div class="branding-right">
+	<div class="branding-text">
 		<a href="<?php echo esc_url( home_url() ); ?>" class="site-name-link" rel="home"><div class="site-name"><?php echo get_bloginfo( 'name' ); ?></div></a>
 		<div class="site-tagline"><?php echo get_bloginfo( 'description' ); ?></div>
-	</div><!-- branding-right -->
+	</div><!-- branding-text -->
 	<?php } ?>
 </div><!-- branding -->
