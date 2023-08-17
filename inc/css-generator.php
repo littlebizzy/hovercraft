@@ -1450,20 +1450,21 @@ video.hero-background-video {
 	margin-bottom: 0;
 }
 
+
 /* main */
 /* main refers to everything between header/splash and footer */
 
 @media screen and (max-width: 1200px) {
 #main {
 	width: 100%;
-	padding: 0px 0px;
+	padding: 0;
 	background: <?php echo $main_background_color; ?>;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 #main {
-	padding: 40px 0px;
+	padding: 0;
 	background: <?php echo $main_background_color; ?>;
 	<?php if ( $sitewide_layout == 'floating_islands' ) { 
 			echo "background: $main_background_color;\n"; 
