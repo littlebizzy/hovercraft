@@ -1923,25 +1923,25 @@ p.biography-description {
 
 #sidebar .widget-wrapper {
 	width: 100%;
-	margin-bottom: 40px;
 	padding: 40px 40px;
 	background: #ffffff;
 }
 
-#sidebar .widget-wrapper:first-of-type {
+#sidebar .widget-wrapper:not(:last-child) {
+    margin-bottom: 40px;
+}
+
+
+#sidebar .widget-wrapper:first-child {
    	background: <?php echo $sidebar_callout_background_color; ?>;
 	color: <?php echo $sidebar_callout_text_color; ?>;
 }
 	
-#sidebar .widget-wrapper:first-of-type a {
+#sidebar .widget-wrapper:first-child a {
 	color: <?php echo $sidebar_callout_link_color; ?>;
 }
 
-#sidebar .widget-wrapper:last-of-type {
-    margin-bottom: 0;
-}
-
-#sidebar .widget-wrapper p:last-of-type {
+#sidebar .widget-wrapper p:last-child {
 	margin-bottom: 0;
 }
 
@@ -1954,6 +1954,9 @@ p.biography-description {
 	height: auto;
 	display: block;
 }
+
+
+/* prefooter */
 
 #prefooter-top {
 	background: <?php echo $prefooter_top_background_color; ?>;
