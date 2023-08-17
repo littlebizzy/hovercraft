@@ -1927,17 +1927,24 @@ p.biography-description {
 	background: #ffffff;
 }
 
-#sidebar .widget-wrapper:not(:last-child) {
-    margin-bottom: 40px;
+@media screen and (max-width: 1200px) {
+	#sidebar .widget-wrapper:not(:last-child) {
+    margin-bottom: 20px;
+	}
 }
 
+@media screen and (min-width: 1200px) {
+	#sidebar .widget-wrapper:not(:last-child) {
+    margin-bottom: 40px;
+	}
+}
 
-#sidebar .widget-wrapper:first-child {
+#sidebar .widget-wrapper:first-of-type {
    	background: <?php echo $sidebar_callout_background_color; ?>;
 	color: <?php echo $sidebar_callout_text_color; ?>;
 }
 	
-#sidebar .widget-wrapper:first-child a {
+#sidebar .widget-wrapper:first-of-type a {
 	color: <?php echo $sidebar_callout_link_color; ?>;
 }
 
@@ -1956,11 +1963,27 @@ p.biography-description {
 }
 
 
-/* prefooter */
+/* prefooter-top */
 
+@media screen and (max-width: 1200px) {
 #prefooter-top {
+	width: 100%;
 	background: <?php echo $prefooter_top_background_color; ?>;
 	color: <?php echo $prefooter_top_text_color; ?>;
+	padding: 20px 20px;
+	text-align: center;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+#prefooter-top {
+	width: 100%;
+	margin: 0px auto;
+	background: <?php echo $prefooter_top_background_color; ?>;
+	color: <?php echo $prefooter_top_text_color; ?>;
+	padding: 40px 0px;
+	text-align: center;
+	}
 }
 	
 #prefooter-top a {
@@ -1977,6 +2000,9 @@ p.biography-description {
 	color: <?php echo $prefooter_bottom_link_color; ?>;
 	text-decoration: <?php echo $prefooter_bottom_link_decoration; ?>;
 }
+
+
+/* footer */
 
 #footer {
 	background: <?php echo $footer_background_color; ?>;
