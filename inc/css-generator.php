@@ -310,9 +310,9 @@ h4 {
 }
 
 
-/* branding right... site name and tagline */
+/* branding text */
 
-.branding-right {
+.branding-text {
 	display: table-cell;
     vertical-align: middle;
 	height: inherit;
@@ -320,7 +320,7 @@ h4 {
 	width: 100%;
 }
 
-a.site-name-link {
+.site-name-link {
 	<?php if ( $tagline_display == 'right_of_site_title' ) { 
 			echo "display: inline-block;\n"; 
 		} else { 
