@@ -1915,6 +1915,7 @@ p.biography-description {
 	float: right;
 	width: 392px;
 	margin-left: 40px;
+	padding-top: 40px;
 	<?php // $sidebar_padding_checked = get_theme_mod( 'hovercraft_sidebar_padding' ) ? true : false;
 	// if ( $sidebar_padding_checked == true ) { echo "padding: 40px;"; } ?>
 	}
@@ -1922,10 +1923,9 @@ p.biography-description {
 
 #sidebar .widget-wrapper {
 	width: 100%;
-	background: #ffffff;
+	margin-bottom: 40px;
 	padding: 40px 40px;
-    margin-bottom: 40px;
-	border-radius: 0px;
+	background: #ffffff;
 }
 
 #sidebar .widget-wrapper:first-child {
