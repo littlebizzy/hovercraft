@@ -1928,20 +1928,20 @@ p.biography-description {
 	background: #ffffff;
 }
 
-#sidebar .widget-wrapper:first-child {
+#sidebar .widget-wrapper:first-of-type {
    	background: <?php echo $sidebar_callout_background_color; ?>;
 	color: <?php echo $sidebar_callout_text_color; ?>;
 }
 	
-#sidebar .widget-wrapper:first-child a {
+#sidebar .widget-wrapper:first-of-type a {
 	color: <?php echo $sidebar_callout_link_color; ?>;
 }
 
-#sidebar .widget-wrapper:last-child {
+#sidebar .widget-wrapper:last-of-type {
     margin-bottom: 0;
 }
 
-#sidebar p:last-child {
+#sidebar .widget-wrapper p:last-of-type {
 	margin-bottom: 0;
 }
 
