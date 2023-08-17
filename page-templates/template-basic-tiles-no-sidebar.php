@@ -11,6 +11,8 @@ if ( !is_front_page() || ( is_front_page() && $hovercraft_homepage_hide_main_che
     <div id="primary-wide">
 
 	<div id="content">
+
+	<div class="content-padded">
 			
 	<?php get_template_part( 'template-parts/content/breadcrumbs' ); ?>
 		
@@ -23,6 +25,8 @@ if ( !is_front_page() || ( is_front_page() && $hovercraft_homepage_hide_main_che
 	<?php get_template_part( 'template-parts/content/pagination' ); ?>
 				
 	<div class="clear"></div>
+	</div><!-- content-padded -->
+		
 	</div><!-- content -->   
 	
 	    <?php comments_template(); ?> 
