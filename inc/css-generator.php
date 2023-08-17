@@ -1595,6 +1595,7 @@ img.featured-image {
 @media screen and (min-width: 1200px) {
 .featured-image-wrapper {
 	position: relative;
+	margin-top: 40px;
 	width: 768px;
 	height: auto;
 	}
