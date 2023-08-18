@@ -301,7 +301,7 @@ h4 {
 	text-decoration: none !important;
 }
 
-.branding-left {
+.branding-media {
 	display:table-cell;
     vertical-align:middle;
 	height:inherit;
@@ -1726,7 +1726,7 @@ img.featured-image-archive {
 	<?php if ( $sitewide_layout == 'floating_islands' ) { 
 			echo "padding: 40px 40px 20px 40px;\n"; 
 		} else { 
-			echo "padding: 40px 40px 20px 0px;\n"; 
+			echo "padding: 0px 40px 20px 0px;\n"; 
 		}  ?>
 	display: block;
 	overflow: hidden;
