@@ -1457,14 +1457,14 @@ video.hero-background-video {
 @media screen and (max-width: 1200px) {
 #main {
 	width: 100%;
-	padding: 0;
+	padding: 20px;
 	background: <?php echo $main_background_color; ?>;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 #main {
-	padding: 0;
+	padding: 40px 0px;
 	background: <?php echo $main_background_color; ?>;
 	<?php if ( $sitewide_layout == 'floating_islands' ) { 
 			echo "background: $main_background_color;\n"; 
@@ -1595,7 +1595,6 @@ img.featured-image {
 @media screen and (min-width: 1200px) {
 .featured-image-wrapper {
 	position: relative;
-	margin-top: 40px;
 	width: 768px;
 	height: auto;
 	}
@@ -1916,7 +1915,6 @@ p.biography-description {
 	float: right;
 	width: 392px;
 	margin-left: 40px;
-	padding-top: 40px;
 	<?php // $sidebar_padding_checked = get_theme_mod( 'hovercraft_sidebar_padding' ) ? true : false;
 	// if ( $sidebar_padding_checked == true ) { echo "padding: 40px;"; } ?>
 	}
