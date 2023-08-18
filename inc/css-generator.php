@@ -2343,6 +2343,14 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 }
 
 
+/* woocommerce */
+
+section.upsells {
+	clear: both;
+	display: block;
+}
+
+
 /* woocommerce product list widget */
 
 @media screen and (max-width: 1200px) {
