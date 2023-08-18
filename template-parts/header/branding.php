@@ -1,6 +1,6 @@
 <div id="branding">
 	<?php if(get_theme_mod('custom_logo', '') != '') { ?>
-	<div class="branding-left">
+	<div class="branding-media">
 		<a href="<?php echo esc_url( home_url() ); ?>" class="custom-logo-link" rel="home">
 		<img class="site-logo" src="<?php 
 			$logo_default_url = wp_get_attachment_url( get_theme_mod( 'custom_logo' ) );
@@ -17,7 +17,7 @@
 				echo esc_url($logo_default_url); 
 			} ?>" class="custom-logo" alt="<?php echo get_bloginfo( 'name' ); ?>" />
 		</a><!-- custom-logo-link -->
-	</div><!-- branding-left -->
+	</div><!-- branding-media -->
 	<?php } ?>
 	<?php if (display_header_text()==true) { ?>
 	<div class="branding-text">
