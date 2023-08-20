@@ -207,6 +207,25 @@ iframe {
 }
 
 
+/* header elements */
+
+.header-left {
+	display: table-cell;
+    vertical-align: middle;
+	height: inherit;
+	min-width: auto; /* https://developer.mozilla.org/en-US/docs/Web/CSS/min-width */
+	white-space: nowrap;
+}
+
+.header-right {
+	display: table-cell;
+    vertical-align: middle;
+	height: inherit;
+	text-align: right;
+	width: 100%;
+}
+
+
 /* full hero header */
 
 @media screen and (max-width: 1200px) {
