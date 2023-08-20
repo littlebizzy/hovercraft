@@ -373,7 +373,7 @@ h1.mini-hero-title {
 }
 
 
-/* site tile (site name) */
+/* site title (site name) */
 
 @media screen and (max-width: 1200px) {
 .site-title {
