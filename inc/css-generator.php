@@ -373,10 +373,10 @@ h1.mini-hero-title {
 }
 
 
-/* site name */
+/* site tile (site name) */
 
 @media screen and (max-width: 1200px) {
-.site-name {
+.site-title {
 	font-family: <?php echo ucwords(str_replace("_", " ", $site_name_font_family)); ?>;
 	font-weight: <?php echo $site_name_font_weight; ?>;
 	font-size: <?php echo $site_name_mobile_font_size; ?>px;
@@ -386,7 +386,7 @@ h1.mini-hero-title {
 }
 
 @media screen and (min-width: 1200px) {
-.site-name {
+.site-title {
 	font-family: <?php echo ucwords(str_replace("_", " ", $site_name_font_family)); ?>;
 	font-weight: <?php echo $site_name_font_weight; ?>;
 	font-size: <?php echo $site_name_desktop_font_size; ?>px;
