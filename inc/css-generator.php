@@ -373,28 +373,6 @@ h1.mini-hero-title {
 }
 
 
-/* site title (site name) */
-
-@media screen and (max-width: 1200px) {
-.site-title {
-	font-family: <?php echo ucwords(str_replace("_", " ", $site_name_font_family)); ?>;
-	font-weight: <?php echo $site_name_font_weight; ?>;
-	font-size: <?php echo $site_name_mobile_font_size; ?>px;
-	line-height: 1; /* because site-tagline is hidden on mobile */
-	display: block;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-.site-title {
-	font-family: <?php echo ucwords(str_replace("_", " ", $site_name_font_family)); ?>;
-	font-weight: <?php echo $site_name_font_weight; ?>;
-	font-size: <?php echo $site_name_desktop_font_size; ?>px;
-	display: block;
-	}
-}
-
-
 /* branding */
 
 #branding {
@@ -424,7 +402,26 @@ h1.mini-hero-title {
 	width: 100%;
 }
 
-.site-name-link {
+@media screen and (max-width: 1200px) {
+.site-title {
+	font-family: <?php echo ucwords(str_replace("_", " ", $site_name_font_family)); ?>;
+	font-weight: <?php echo $site_name_font_weight; ?>;
+	font-size: <?php echo $site_name_mobile_font_size; ?>px;
+	line-height: 1; /* because site-tagline is hidden on mobile */
+	display: block;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+.site-title {
+	font-family: <?php echo ucwords(str_replace("_", " ", $site_name_font_family)); ?>;
+	font-weight: <?php echo $site_name_font_weight; ?>;
+	font-size: <?php echo $site_name_desktop_font_size; ?>px;
+	display: block;
+	}
+}
+
+.site-title-link {
 	<?php if ( $tagline_display == 'right_of_site_title' ) { 
 			echo "display: inline-block;\n"; 
 		} else { 
