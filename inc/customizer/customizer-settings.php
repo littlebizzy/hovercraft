@@ -20,6 +20,30 @@ $wp_customize->add_section( 'hovercraft_general', array(
     'priority'   => 30,
 ) );
 	
+// sitewide layout setting
+$wp_customize->add_setting( 'hovercraft_sitewide_layout', array(
+    'default'    => 'floating_islands',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// sitewide layout control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_sitewide_layout',
+        array(
+            'label'     => __( 'Sitewide Layout', 'hovercraft' ),
+			'description' => __( 'Which layout style to use? This affects padding and alignment, so you might need to adjust background colors accordingly.', 'hovercraft' ),
+            'section'   => 'hovercraft_general',
+            'settings'  => 'hovercraft_sitewide_layout',
+            'type'      => 'select',
+			'choices' => array(
+        		'floating_islands' => 'Floating Islands',
+        		'classic_clean' => 'Classic Clean'
+    			)
+        )
+) );
+
 // tagline display setting
 $wp_customize->add_setting( 'hovercraft_tagline_display', array(
     'default'    => 'right_of_site_title',
@@ -41,30 +65,6 @@ $wp_customize->add_control( new WP_Customize_Control(
         		'none' => 'None (Hidden)',
 				'right_of_site_title' => 'Right of Site Title',
 				'below_site_title' => 'Below Site Title'
-    			)
-        )
-) );
-	
-// sitewide layout setting
-$wp_customize->add_setting( 'hovercraft_sitewide_layout', array(
-    'default'    => 'floating_islands',
-	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
-);
-
-// sitewide layout control
-$wp_customize->add_control( new WP_Customize_Control(
-        $wp_customize,
-        'hovercraft_sitewide_layout',
-        array(
-            'label'     => __( 'Sitewide Layout', 'hovercraft' ),
-			'description' => __( 'Which layout style to use? This affects padding and alignment, so you might need to adjust background colors accordingly.', 'hovercraft' ),
-            'section'   => 'hovercraft_general',
-            'settings'  => 'hovercraft_sitewide_layout',
-            'type'      => 'select',
-			'choices' => array(
-        		'floating_islands' => 'Floating Islands',
-        		'classic_clean' => 'Classic Clean'
     			)
         )
 ) );
