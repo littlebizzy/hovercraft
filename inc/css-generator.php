@@ -1695,7 +1695,7 @@ video.hero-background-video {
 @media screen and (max-width: 1200px) {
 #main {
 	width: 100%;
-	padding: 20px;
+	padding: 0;
 	background: <?php echo $main_background_color; ?>;
 	}
 }
@@ -2378,7 +2378,7 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 
 @media screen and (max-width: 1200px) {
 #comments {
-	margin-top: 40px;
+	margin-top: 0;
 	padding: 20px;
 	}
 }
