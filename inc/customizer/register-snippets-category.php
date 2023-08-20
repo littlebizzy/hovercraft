@@ -27,7 +27,7 @@ function hovercraft_bullets_category_register( $wp_customize ) {
         array(
             'label'     => __( 'Snippets Category', 'hovercraft' ),
 			'description' => __( 'Which post category should use the snippets layout? Note: This works well with FAQ content, which should be brief. Add sub-categories to these posts for better organization.', 'hovercraft' ),
-            'section'   => 'hovercraft_general',
+            'section'   => 'hovercraft_category_layouts',
             'settings'  => 'hovercraft_bullets_category',
             'type'      => 'select',
 			'choices' =>  $rjs_choices_list,
