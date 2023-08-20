@@ -346,9 +346,11 @@ h4 {
 	font-size: 14px;
 	line-height: 1.5;
 	<?php if ( $tagline_display == 'right_of_site_title' ) { 
-			echo "display: inline-block;\n"; 
-		} else { 
-			echo "display: block;\n"; 
+			echo "display: inline-block;\n";
+		} elseif ( $tagline_display == 'below_site_title' ) {
+			echo "display: block;\n";
+		} elseif ( $tagline_display == 'none' ) { 
+			echo "display: none;\n"; 
 		}  ?>
 	}
 }
