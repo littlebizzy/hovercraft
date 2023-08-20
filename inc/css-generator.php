@@ -2423,6 +2423,19 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 	}
 }
 
+@media screen and (max-width: 1200px) {
+#respond {
+	margin-top: 0;
+	padding: 20px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+#respond {
+	margin-top: 40px;
+	}
+}
+
 
 /* search icon and full screen search */
 
