@@ -283,6 +283,12 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// category layouts section
+$wp_customize->add_section( 'hovercraft_category_layouts', array(
+    'title'      => 'Category Layouts',
+    'priority'   => 29,
+) );
+
 // homepage html title setting
 $wp_customize->add_setting( 'hovercraft_homepage_html_title', array(
     'default'    => 'site_name_site_tagline',
