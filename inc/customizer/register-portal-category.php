@@ -27,7 +27,7 @@ function hovercraft_portal_category_register( $wp_customize ) {
         array(
             'label'     => __( 'Portal Category', 'hovercraft' ),
 			'description' => __( 'Which post category should use the portal layout? Note: This works well with Support articles, but might not be needed in some cases.', 'hovercraft' ),
-            'section'   => 'hovercraft_general',
+            'section'   => 'hovercraft_category_layouts',
             'settings'  => 'hovercraft_portal_category',
             'type'      => 'select',
 			'choices' =>  $rjs_choices_list,
