@@ -2007,7 +2007,7 @@ img.featured-image-archive {
 
 .biography-photo img {
 	float: left; 
-	margin: 0 20px 20px 0; 
+	margin-right: 20px; 
 }
 
 p.biography-description {
