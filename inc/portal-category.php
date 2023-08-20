@@ -4,7 +4,7 @@ add_filter( 'template_include', 'portal_category_template', 99 );
 function portal_category_template( $template ) {
 	$portal_category = get_theme_mod( 'hovercraft_portal_category', 'none' ); // depends on inc/categories-array.php
     if ( is_category( $portal_category )  ) {
-        $new_template = locate_template( array( 'page-templates/portal-category-template.php' ) );
+        $new_template = locate_template( array( 'page-templates/categories/category-portal.php' ) );
 	if ( '' != $new_template ) {
 	    return $new_template ;
 	}
