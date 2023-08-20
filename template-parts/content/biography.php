@@ -12,6 +12,7 @@ if ( ( $hovercraft_biography == 'native_posts_only' ) || ( $hovercraft_biography
             <div class="biography-photo"><?php echo get_avatar( get_the_author_meta('user_email'), '150' ); ?></div>
             <h3 class="biography-name"><?php the_author_meta('display_name'); ?></h3>
             <p class="biography-description"><?php echo nl2br( get_the_author_meta('description') ); ?></p>
+			<div class="clear"></div>
         </div>
 
 		<?php } // if native post
@@ -25,6 +26,7 @@ if ( ( $hovercraft_biography == 'native_posts_only' ) || ( $hovercraft_biography
             <div class="biography-photo"><?php echo get_avatar( get_the_author_meta('user_email'), '150' ); ?></div>
             <h3 class="biography-name"><?php the_author_meta('display_name'); ?></h3>
             <p class="biography-description"><?php echo nl2br( get_the_author_meta('description') ); ?></p>
+			<div class="clear"></div>
         </div>
 
 		<?php } // if custom post or native post
