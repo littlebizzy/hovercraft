@@ -217,7 +217,7 @@ iframe {
 	border-bottom: 1px solid rgba(255,255,255, 0.2);
 	background: rgba(55, 71, 79, 0.2);
 	position: relative; /* required when using video background on splash-wide */
-	color: #FFF;
+	color: #ffffff;
 	}
 }
 
@@ -230,7 +230,7 @@ iframe {
 	border-bottom: 1px solid rgba(255,255,255, 0.2);
 	background: rgba(55, 71, 79, 0.2);
 	position: relative; /* required when using video background on splash-wide */
-	color: #FFF;
+	color: #ffffff;
 	}
 }
 
@@ -281,8 +281,8 @@ h1.full-hero-title {
 	display: table;
 	padding: 10px 20px;
 	border-bottom: 1px solid transparent;
-	background: #FFF;
-	color: #263238; /* correct */
+	background: #ffffff;
+	color: <?php echo $default_text_color; ?>;
 	}
 }
 
@@ -293,8 +293,8 @@ h1.full-hero-title {
 	margin: 0px auto;
 	padding: 20px 0px;
 	border-bottom: 1px solid transparent;
-	background: #FFF;
-	color: #263238; /* correct */
+	background: #ffffff;
+	color: <?php echo $default_text_color; ?>;
 	}
 }
 
@@ -406,9 +406,9 @@ h1.mini-hero-title {
 }
 
 .branding-media {
-	display:table-cell;
-    vertical-align:middle;
-	height:inherit;
+	display: table-cell;
+    vertical-align: middle;
+	height: inherit;
 	min-width: auto;
 	white-space: nowrap;
 }
@@ -506,7 +506,7 @@ a:hover {
 @media screen and (min-width: 1200px) {
 .cta-hero-primary {
 	display: inline-block;
-	margin-right: 40px;
+	margin-right: 30px;
 	}
 }
 
@@ -537,13 +537,12 @@ a:hover {
 	width: 100%;
 	font-size: 20px;
 	font-weight: 700;
-	color: #fff;
+	color: #ffffff;
 	padding: 10px 0px;
 	text-decoration: none;
 	display: block;
 	background: <?php echo $default_link_color; ?>;
 	margin-bottom: 20px;
-	border-radius: 0px;
 	}
 }
 
@@ -552,12 +551,11 @@ a:hover {
 	<?php if ( has_nav_menu( 'cta-hero-secondary' ) ) { echo "width: 200px;"; } else { echo "width: auto;"; } ?>
 	font-size: 20px;
 	font-weight: 700;
-	color: #fff;
+	color: #ffffff;
 	<?php if ( has_nav_menu( 'cta-hero-secondary' ) ) { echo "padding: 10px 0px;"; } else { echo "padding: 10px 20px;"; } ?>
 	text-decoration: none;
 	display: inline-block;
 	background: <?php echo $default_link_color; ?>;
-	border-radius: 0px;
 	}
 }
 
@@ -608,13 +606,12 @@ a:hover {
 	width: 100%;
 	font-size: 20px;
 	font-weight: 400;
-	color: #fff;
+	color: #ffffff;
 	padding: 10px 0px;
 	text-decoration: none;
 	display: block;
 	background: transparent;
 	margin-bottom: 0;
-	border-radius: 0px;
 	box-shadow: inset 0px 0px 0px 1px #ffffff;
 	}
 }
@@ -624,18 +621,17 @@ a:hover {
 	width: 200px;
 	font-size: 20px;
 	font-weight: 400;
-	color: #fff;
+	color: #ffffff;
 	padding: 10px 0px;
 	text-decoration: none;
 	display: inline-block;
 	background: transparent;
-	border-radius: 0px;
 	box-shadow: inset 0px 0px 0px 1px #ffffff;
 	}
 }
 
 .cta-hero-secondary ul li:hover a {
-	color: #263238;
+	color: <?php echo $default_text_color; ?>;
 	background: #ffffff;
 }
 
@@ -1052,12 +1048,11 @@ button {
 	width: 100%;
 	display: block;
 	padding: 10px 20px;
-	color: #FFF !important;
+	color: #ffffff !important;
 	text-decoration: none !important;
 	font-size: 18px;
 	font-weight: 700;
 	background: <?php echo $default_link_color; ?>;
-	border-radius: 0px;
 }
 
 
@@ -1187,9 +1182,9 @@ button {
 	
 #header-full-hero .main-menu ul li ul li { background: <?php echo $default_text_color; ?>; }
 	
-#header-half-hero .main-menu ul li ul li { background: #fff; }
+#header-half-hero .main-menu ul li ul li { background: #ffffff; }
 
-#header-mini-hero .main-menu ul li ul li { background: #fff; }
+#header-mini-hero .main-menu ul li ul li { background: #ffffff; }
 	
 #header-basic .main-menu ul li ul li { background: <?php echo $header_basic_background_color; ?>; }
 
@@ -1271,12 +1266,12 @@ button {
 
 @media screen and (min-width: 1200px) {
 .topbar-left {
-	display:table-cell;
-    vertical-align:middle;
-	height:inherit;
-	white-space:nowrap;
-	width:auto;
-	text-align:left;
+	display: table-cell;
+    vertical-align: middle;
+	height: inherit;
+	white-space: nowrap;
+	width: auto;
+	text-align: left;
 	}
 }
 
@@ -1290,11 +1285,11 @@ button {
 
 @media screen and (min-width: 1200px) {
 .topbar-right {
-	display:table-cell;
-    vertical-align:middle;
-	height:inherit;
-	text-align:right;
-	width:100%;
+	display: table-cell;
+    vertical-align: middle;
+	height: inherit;
+	text-align: right;
+	width: 100%;
 	}
 }
 	
@@ -1348,12 +1343,12 @@ button {
 
 @media screen and (min-width: 1200px) {
 .preheader-left {
-	display:table-cell;
-    vertical-align:middle;
-	height:inherit;
-	white-space:nowrap;
-	width:auto;
-	text-align:left;
+	display: table-cell;
+    vertical-align: middle;
+	height: inherit;
+	white-space: nowrap;
+	width: auto;
+	text-align: left;
 	}
 }
 
@@ -1367,11 +1362,11 @@ button {
 
 @media screen and (min-width: 1200px) {
 .preheader-right {
-	display:table-cell;
-    vertical-align:middle;
-	height:inherit;
-	text-align:right;
-	width:100%;
+	display: table-cell;
+    vertical-align: middle;
+	height: inherit;
+	text-align: right;
+	width: 100%;
 	}
 }
 	
@@ -1449,7 +1444,7 @@ video.hero-background-video {
 
 #header-half-hero .menu-mobile-wrapper i {
 	font-size: 36px;
-	color: #263238;
+	color: <?php echo $default_text_color; ?>;
 }
 
 /* mini header */
@@ -1625,7 +1620,6 @@ video.hero-background-video {
 	background: transparent;
 	text-decoration: none;
 	color: #ffffff;
-	border-radius: 0px;
 	box-shadow: inset 0px 0px 0px 1px #ffffff;
 }
 
@@ -1638,12 +1632,11 @@ video.hero-background-video {
 	background: transparent;
 	text-decoration: none;
 	color: <?php echo $default_text_color; ?>;
-	border-radius: 0px;
 	box-shadow: inset 0px 0px 0px 1px #263238;
 }
 
 #header-full-hero .cta-header-secondary ul li a:hover {
-	background: #fff;
+	background: #ffffff;
 	color: <?php echo $default_text_color; ?> !important;
 }
 
@@ -1722,6 +1715,7 @@ video.hero-background-video {
 	}
 }
 
+
 /* primary */
 
 @media screen and (max-width: 1200px) {
@@ -1777,7 +1771,7 @@ video.hero-background-video {
 /* post byline */
 
 .post-byline {
-	margin-bottom: 40px;	
+	margin-bottom: 30px;	
 }	
 	
 .post-author {
@@ -1924,20 +1918,19 @@ img.featured-image-archive {
 .breadcrumbs a {
 	color: #607D8B;
 }
-	
+
+
 /* content */
 	
 @media screen and (max-width: 1200px) {
 #content {
 	background: #ffffff;
-	border-radius: 0;
 	}
 }
 	
 @media screen and (min-width: 1200px) {
 #content {
 	background: #ffffff;
-	border-radius: 0;
 	}
 }
 
@@ -2088,7 +2081,7 @@ p.biography-description {
 .column {
 	/* width: 400px;
 	float: left;
-	border: 1px solid #263238;
+	border: 1px solid <?php echo $default_text_color; ?>;
 	padding: 30px;
 	border-radius: 0px; */
 	
