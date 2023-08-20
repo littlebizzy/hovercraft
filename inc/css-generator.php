@@ -168,81 +168,185 @@ iframe {
 	aspect-ratio: 1 / 1.5;
 }
 
+.tags {
+	margin-bottom: 30px;
+	font-size: 14px;
+	color: #607D8B;
+}
 
-/* titles */
+.last-modified {
+	margin-bottom: 30px;
+	font-size: 14px;
+	color: #607D8B;
+}
 
 
+/* full hero */
+
+#hero-full-container {
+	width: 100%; /* correct */
+	height: 100%; /* correct */
+	padding: 0; /* correct */
+	display: table; /* correct */
+	position: relative; /* required to keep video background from escaping esp on mobile */
+}
+
+.hero-full-wrapper {
+	display: table-row; /* correct */
+}
+
+.hero-full {
+	width: 100%;
+	height: 100%;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.hero-full-main {
+	position: relative; /* required when using video background on splash-wide */
+}
+
+
+/* full hero header */
 
 @media screen and (max-width: 1200px) {
-h1.full-hero-title {
-	font-size: 24px;
-	font-weight: 700;
-	margin-bottom: 30px;
+#header-full-hero {
+	width: 100%;
+	display: table;
+	padding: 10px 20px;
+	border-bottom: 1px solid rgba(255,255,255, 0.2);
+	background: rgba(55, 71, 79, 0.2);
+	position: relative; /* required when using video background on splash-wide */
 	color: #FFF;
 	}
 }
 
 @media screen and (min-width: 1200px) {
+#header-full-hero {
+	width: 100%;
+	display: table;
+	margin: 0px auto;
+	padding: 20px 0px;
+	border-bottom: 1px solid rgba(255,255,255, 0.2);
+	background: rgba(55, 71, 79, 0.2);
+	position: relative; /* required when using video background on splash-wide */
+	color: #FFF;
+	}
+}
+
+@media screen and (max-width: 1200px) {
 h1.full-hero-title {
-	font-size: 48px;
 	font-weight: 700;
 	margin-bottom: 30px;
-	color: #FFF;
+	color: #ffffff;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+h1.full-hero-title {
+	font-weight: 700;
+	margin-bottom: 30px;
+	color: #ffffff;
+	}
+}
+
+
+/* half hero */
+
+#hero-half-container {
+	width: 100%; /* correct */
+	height: 100%; /* correct */
+	padding: 0; /* correct */
+	display: table; /* correct */
+	position: relative; /* required to keep video background from escaping esp on mobile */
+}
+
+.hero-half-wrapper {
+	display: table-row; /* correct */
+}
+
+.hero-half {
+	width: 100%;
+	height: 100%;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+
+/* half hero header */
+
+@media screen and (max-width: 1200px) {
+#header-half-hero {
+	width: 100%;
+	display: table;
+	padding: 10px 20px;
+	border-bottom: 1px solid transparent;
+	background: #FFF;
+	color: #263238; /* correct */
+	}
+}
+
+@media screen and (min-width: 1200px) {
+#header-half-hero {
+	width: 100%;
+	display: table;
+	margin: 0px auto;
+	padding: 20px 0px;
+	border-bottom: 1px solid transparent;
+	background: #FFF;
+	color: #263238; /* correct */
 	}
 }
 
 @media screen and (max-width: 1200px) {
 h1.half-hero-title {
-	font-size: 24px;
 	font-weight: 700;
 	margin-bottom: 30px;
-	color: #FFF;
+	color: #ffffff;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 h1.half-hero-title {
-	font-size: 48px;
 	font-weight: 700;
 	margin-bottom: 30px;
-	color: #FFF;
+	color: #ffffff;
+	}
+}
+
+
+/* mini hero */
+
+@media screen and (max-width: 1200px) {
+#hero-mini {
+	width:100%; /* correct */
+	padding:0px; /* correct */
+	display:table; /* correct */
+	}
+}
+
+@media screen and (min-width: 1200px) {
+#hero-mini {
+	width:100%; /* correct */
+	padding:0px; /* correct */
+	display:table; /* correct */
 	}
 }
 
 @media screen and (max-width: 1200px) {
 h1.mini-hero-title {
-	font-size: 24px;
 	font-weight: 700;
 	margin-bottom: 0;
-	color: #FFF;
+	color: #ffffff;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 h1.mini-hero-title {
-	font-size: 48px;
 	font-weight: 700;
 	margin-bottom: 0;
-	color: #FFF;
+	color: #ffffff;
 	}
-}
-
-h2 {
-	margin-bottom: 20px;
-	font-weight: 700;
-	font-size: 24px;
-}
-
-h3 {
-	margin-bottom: 20px;
-	font-weight: 700;
-	font-size: 24px;
-}
-
-h4 {
-	margin-bottom: 20px;
-	font-weight: 700;
-	font-size: 20px;
 }
 
 
@@ -462,7 +566,129 @@ a:hover {
 }
 
 
-/* titles */
+/* hero cta secondary */
+
+@media screen and (max-width: 1200px) {
+.cta-hero-secondary {
+	display: block;
+	width: 100%;
+}
+}
+
+@media screen and (min-width: 1200px) {
+.cta-hero-secondary {
+	display: inline-block;
+}
+}
+
+@media screen and (max-width: 1200px) {
+.cta-hero-secondary ul li {
+	list-style-type: none;
+	display: block;
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+	text-align: center;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+.cta-hero-secondary ul li {
+	list-style-type: none;
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+	text-align: center;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+.cta-hero-secondary ul li a {
+	width: 100%;
+	font-size: 20px;
+	font-weight: 400;
+	color: #fff;
+	padding: 10px 0px;
+	text-decoration: none;
+	display: block;
+	background: transparent;
+	margin-bottom: 0;
+	border-radius: 0px;
+	box-shadow: inset 0px 0px 0px 1px #ffffff;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+.cta-hero-secondary ul li a {
+	width: 200px;
+	font-size: 20px;
+	font-weight: 400;
+	color: #fff;
+	padding: 10px 0px;
+	text-decoration: none;
+	display: inline-block;
+	background: transparent;
+	border-radius: 0px;
+	box-shadow: inset 0px 0px 0px 1px #ffffff;
+	}
+}
+
+.cta-hero-secondary ul li:hover a {
+	color: #263238;
+	background: #ffffff;
+}
+
+
+/* hero title */
+
+@media screen and (max-width: 1200px) {
+.welcome-wrapper {
+	width: 100%;
+	padding: 30px 20px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+.welcome-wrapper {
+	max-width: 900px;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+.title-wrapper {
+	width: 100%;
+	padding: 0px 20px;
+	text-align: center;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+.title-wrapper {
+	width: 100%;
+	text-align: center;
+	}
+}
+
+
+/* hero snippet */
+
+@media screen and (max-width: 1200px) {
+.hero-snippet {
+	font-size: 16px;
+	color: #ffffff;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+.hero-snippet {
+	font-size: 18px;
+	color: #ffffff;
+	}
+}
+
+
+/* headings (titles) */
 
 @media screen and (max-width: 1200px) {
 h1 {
@@ -480,6 +706,24 @@ h1 {
 	font-size: <?php echo $h1_desktop_font_size; ?>px;
 	margin-bottom: 20px;
 	}
+}
+
+h2 {
+	margin-bottom: 20px;
+	font-weight: 700;
+	font-size: 24px;
+}
+
+h3 {
+	margin-bottom: 20px;
+	font-weight: 700;
+	font-size: 24px;
+}
+
+h4 {
+	margin-bottom: 20px;
+	font-weight: 700;
+	font-size: 20px;
 }
 
 h5 {
