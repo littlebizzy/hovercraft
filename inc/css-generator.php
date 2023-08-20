@@ -169,13 +169,6 @@ iframe {
 }
 
 .tags {
-	margin-bottom: 30px;
-	font-size: 14px;
-	color: #607D8B;
-}
-
-.last-modified {
-	margin-bottom: 30px;
 	font-size: 14px;
 	color: #607D8B;
 }
@@ -1981,9 +1974,9 @@ img.featured-image-archive {
 @media screen and (min-width: 1200px) {
 .content-padded {
 	<?php if ( $sitewide_layout == 'floating_islands' ) { 
-			echo "padding: 40px 40px 20px 40px;\n"; 
+			echo "padding: 40px 40px 40px 40px;\n"; 
 		} else { 
-			echo "padding: 0px 40px 20px 0px;\n"; 
+			echo "padding: 0px 40px 40px 0px;\n"; 
 		}  ?>
 	display: block;
 	overflow: hidden;
