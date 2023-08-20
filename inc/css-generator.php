@@ -351,6 +351,8 @@ h4 {
 			echo "display: block;\n";
 		} elseif ( $tagline_display == 'none' ) { 
 			echo "display: none;\n"; 
+		} else { 
+			echo "display: inline-block;\n";
 		}  ?>
 	}
 }
