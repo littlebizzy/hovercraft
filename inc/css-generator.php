@@ -1996,12 +1996,16 @@ img.featured-image-archive {
 	height: auto;
 	display: block;
 }
+	
+.wp-caption img {
+	margin-bottom: 0;
+}
 
 .wp-caption-text {
-	text-align: left;
-	font-size: 12px;
-	color: #444;
-	padding-top: 2px;
+    text-align: left;
+    font-size: 12px;
+	line-height: 2;
+    color: #444;
 }
 
 /* author biography */
