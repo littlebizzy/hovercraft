@@ -61,6 +61,7 @@ $googlefontslist = array(
     'tektur' => 'Tektur',
     'titan_one' => 'Titan One',
     'yellowtail' => 'Yellowtail',
+    'zen_dots' => 'Zen Dots',
     'zilla_slab' => 'Zilla Slab'
 );
 
