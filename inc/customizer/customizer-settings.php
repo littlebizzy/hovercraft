@@ -3,7 +3,7 @@
 function hovercraft_customizer($wp_customize) {
 
 $hovercraft_google_fonts_array = hovercraft_google_fonts_array();
-	
+
 // remove header text color control
 $wp_customize->remove_control( 'header_textcolor' );
 
@@ -111,8 +111,8 @@ $wp_customize->add_control( new WP_Customize_Control(
 
 // header width setting (desktop)
 $wp_customize->add_setting( 'hovercraft_desktop_header_width', array(
-    'default'    => 'fixed',
-	'sanitize_callback' => 'hovercraft_sanitize_select',
+    'default' => 'fixed',
+	'sanitize_callback' => 'hovercraft_sanitize_select'
 	) 
 );
 
@@ -846,7 +846,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 
 // h1 font size (desktop) setting
 $wp_customize->add_setting( 'hovercraft_h1_desktop_font_size', array(
-    'default'    => '36',
+    'default'    => '48',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
 	) 
 );
