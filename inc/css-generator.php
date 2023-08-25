@@ -73,6 +73,12 @@ function hovercraft_generate_css(){
 	$sidebar_callout_text_color = get_theme_mod( 'hovercraft_sidebar_callout_text_color', '#ffffff' );
 	$sidebar_callout_link_color = get_theme_mod( 'hovercraft_sidebar_callout_link_color', '#ffffff' );
 	$main_background_color = get_theme_mod( 'hovercraft_main_background_color', '#eceff1' );
+	$postmain_top_background_color = get_theme_mod( 'hovercraft_postmain_top_background_color', '#eceff1' );
+	$postmain_top_text_color = get_theme_mod( 'hovercraft_postmain_top_text_color', '#263238' );
+	$postmain_top_link_color = get_theme_mod( 'hovercraft_postmain_top_link_color', '#5C6BC0' );
+	$postmain_bottom_background_color = get_theme_mod( 'hovercraft_postmain_bottom_background_color', '#eceff1' );
+	$postmain_bottom_text_color = get_theme_mod( 'hovercraft_postmain_bottom_text_color', '#263238' );
+	$postmain_bottom_link_color = get_theme_mod( 'hovercraft_postmain_bottom_link_color', '#5C6BC0' );
     $prefooter_top_background_color = get_theme_mod( 'hovercraft_prefooter_top_background_color', '#eceff1' );
 	$prefooter_top_text_color = get_theme_mod( 'hovercraft_prefooter_top_text_color', '#263238' );
 	$prefooter_top_link_color = get_theme_mod( 'hovercraft_prefooter_top_link_color', '#5C6BC0' );
@@ -2213,6 +2219,50 @@ p.biography-description {
 	max-width: 100%;
 	height: auto;
 	display: block;
+}
+
+
+/* home-postmain-top */
+
+@media screen and (max-width: 1200px) {
+#home-postmain-top {
+	width: 100%;
+	background: <?php echo $postmain_top_background_color; ?>;
+	color: <?php echo $postmain_top_text_color; ?>;
+	padding: 20px 20px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+#home-postmain-top {
+	width: 100%;
+	margin: 0px auto;
+	background: <?php echo $postmain_top_background_color; ?>;
+	color: <?php echo $postmain_top_text_color; ?>;
+	padding: 30px 0px;
+	}
+}
+
+
+/* home-postmain-bottom */
+
+@media screen and (max-width: 1200px) {
+#home-postmain-bottom {
+	width: 100%;
+	background: <?php echo $postmain_bottom_background_color; ?>;
+	color: <?php echo $postmain_bottom_text_color; ?>;
+	padding: 20px 20px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+#home-postmain-bottom {
+	width: 100%;
+	margin: 0px auto;
+	background: <?php echo $postmain_bottom_background_color; ?>;
+	color: <?php echo $postmain_bottom_text_color; ?>;
+	padding: 30px 0px;
+	}
 }
 
 
