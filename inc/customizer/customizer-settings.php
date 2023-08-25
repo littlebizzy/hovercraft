@@ -1239,6 +1239,96 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	)
 ) );
 
+// home postmain (top) background color setting
+$wp_customize->add_setting( 'hovercraft_postmain_top_background_color', array(
+	'default' => '#eceff1',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+ 
+// home postmain (top) background color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_postmain_top_background_color', array(
+	'label' => 'Home Postmain (Top) Background Color',
+	'description' => 'This is a description',
+	'section' => 'colors',
+	'settings' => 'hovercraft_postmain_top_background_color'
+	)
+) );
+	
+// home postmain (top) text color setting
+$wp_customize->add_setting( 'hovercraft_postmain_top_text_color', array(
+	'default' => '#263238',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+
+// home postmain (top) text color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_postmain_top_text_color', array(
+	'label' => 'Home Postmain (Top) Text Color',
+	'description' => 'This is a description',
+	'section' => 'colors',
+	'settings' => 'hovercraft_postmain_top_text_color'
+	)
+) );
+	
+// home postmain (top) link color setting
+$wp_customize->add_setting( 'hovercraft_postmain_top_link_color', array(
+	'default' => '#5C6BC0',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+
+// home postmain (top) link color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_postmain_top_link_color', array(
+	'label' => 'Home Postmain (Top) Link Color',
+	'description' => 'This is a description',
+	'section' => 'colors',
+	'settings' => 'hovercraft_postmain_top_link_color'
+	)
+) );
+
+// home postmain (bottom) background color setting
+$wp_customize->add_setting( 'hovercraft_postmain_bottom_background_color', array(
+	'default' => '#eceff1',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+ 
+// home postmain (bottom) background color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_postmain_bottom_background_color', array(
+	'label' => 'Home Postmain (Bottom) Background Color',
+	'description' => 'This is a description',
+	'section' => 'colors',
+	'settings' => 'hovercraft_postmain_bottom_background_color'
+	)
+) );
+	
+// home postmain (bottom) text color setting
+$wp_customize->add_setting( 'hovercraft_postmain_bottom_text_color', array(
+	'default' => '#263238',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+
+// home postmain (bottom) text color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_postmain_bottom_text_color', array(
+	'label' => 'Home Postmain (Bottom) Text Color',
+	'description' => 'This is a description',
+	'section' => 'colors',
+	'settings' => 'hovercraft_postmain_bottom_text_color'
+	)
+) );
+	
+// home postmain (bottom) link color setting
+$wp_customize->add_setting( 'hovercraft_postmain_bottom_link_color', array(
+	'default' => '#5C6BC0',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+
+// home postmain (bottom) link color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_postmain_bottom_link_color', array(
+	'label' => 'Home Postmain (Bottom) Link Color',
+	'description' => 'This is a description',
+	'section' => 'colors',
+	'settings' => 'hovercraft_postmain_bottom_link_color'
+	)
+) );
+
 // prefooter (top) background color setting
 $wp_customize->add_setting( 'hovercraft_prefooter_top_background_color', array(
 	'default' => '#eceff1',
