@@ -365,7 +365,31 @@ $wp_customize->add_control( new WP_Customize_Control(
     			)
         )
 ) );
-	
+
+// byline author photo setting
+$wp_customize->add_setting( 'hovercraft_byline_photo', array(
+    'default'    => 'none',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// byline author photo control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_byline_photo',
+        array(
+            'label'     => __( 'Post Byline Photo', 'hovercraft' ),
+			'description' => __( 'Should the post author photo be displayed in the byline?', 'hovercraft' ),
+            'section'   => 'hovercraft_blog',
+            'settings'  => 'hovercraft_byline_photo',
+            'type'      => 'select',
+			'choices' => array(
+        		'none' => 'None (Disabled)',
+				'gravatar' => 'Display Gravatar'
+    			)
+        )
+) );
+
 // byline date setting
 $wp_customize->add_setting( 'hovercraft_byline_date', array(
     'default'    => 'updated_date_only',
