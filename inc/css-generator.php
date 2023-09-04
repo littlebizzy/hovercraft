@@ -890,6 +890,36 @@ button {
 }
 
 @media screen and (max-width: 1200px) {
+.button-outline-white {
+	width: 100%;
+	text-align: center;
+	font-size: 20px;
+	font-weight: 700;
+	color: #ffffff;
+	padding: 10px 0;
+	text-decoration: none;
+	display: block;
+	background: transparent;
+	box-shadow: inset 0px 0px 0px 1px #ffffff;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+.button-outline-white {
+	width: 100%;
+	text-align: center;
+	font-size: 20px;
+	font-weight: 700;
+	color: #ffffff;
+	padding: 10px 0;
+	text-decoration: none;
+	display: block;
+	background: transparent;
+	box-shadow: inset 0px 0px 0px 1px #ffffff;
+	}
+}
+
+@media screen and (max-width: 1200px) {
 .button-wide-dark {
 	width: 100%;
 	text-align: center;
