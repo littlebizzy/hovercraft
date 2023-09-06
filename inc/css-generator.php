@@ -1924,6 +1924,7 @@ img.featured-image-archive {
 .breadcrumbs {
 	width: 100%;
 	margin-bottom: 20px;
+	font-size: 14px;
 	line-height: 18px !important;
 	color: #607D8B;
 	white-space: normal;
@@ -1933,6 +1934,7 @@ img.featured-image-archive {
 @media screen and (min-width: 1200px) {
 .breadcrumbs {
 	margin-bottom: 40px;
+	font-size: 14px;
 	line-height: 18px !important;
 	color: #607D8B;
 	white-space: normal;
@@ -1947,7 +1949,7 @@ img.featured-image-archive {
 
 .breadcrumbs ul li {
 	display: inline;
-	font-size: 14px !important;
+	font-size: 14px;
 	word-break: break-all;
 	overflow-wrap: break-all;
 	margin-right: 5px;
@@ -1961,6 +1963,7 @@ img.featured-image-archive {
 }
 
 .breadcrumbs a {
+	font-size: 14px;
 	color: #607D8B;
 }
 
