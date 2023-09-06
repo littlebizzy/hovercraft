@@ -4,12 +4,18 @@
 <div id="main">
 <div class="inner">
 
-	<?php $hovercraft_sidebar_status_checked = get_theme_mod( 'hovercraft_sidebar_status' ) ? true : false;
-	if ( $hovercraft_sidebar_status_checked == true ) { ?><div id="primary"><?php } else { ?><div id="primary-wide"><?php } ?>
+	<?php 
+	$hovercraft_sidebar_status_checked = get_theme_mod( 'hovercraft_sidebar_status' ) ? true : false;
+	$hovercraft_primary_width = get_theme_mod( 'hovercraft_primary_width', 'narrow_centered' );
+	
+	if ( ( $hovercraft_sidebar_status_checked == true ) || ( $hovercraft_sidebar_status_checked != true && $hovercraft_primary_width = 'narrow_centered' ) ) { ?><div id="primary"><?php } elseif ( ( $hovercraft_sidebar_status_checked == false ) && ( $hovercraft_primary_width = 'wide' ) ) { ?><div id="primary-wide"><?php } ?>
 	
 		<div id="content">
 									
 			<div class="content-padded">
+				
+				<?php $hovercraft_sidebar_status_checked = get_theme_mod( 'hovercraft_sidebar_status' ) ? true : false;
+				echo $hovercraft_sidebar_status_checked; ?>
 				
 				<?php get_template_part( 'template-parts/content/breadcrumbs' ); ?>
 		
