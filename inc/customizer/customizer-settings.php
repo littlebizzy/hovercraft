@@ -2316,3 +2316,4 @@ function hovercraft_sanitize_float( $input ){
 // https://wordpress.stackexchange.com/questions/261969/how-to-rename-and-rearrange-multiple-sections-in-the-customizer
 // https://wphelp.blog/how-to-remove-sections-from-wordpress-customizer/
 // https://stackoverflow.com/questions/7073672/how-to-load-return-array-from-a-php-file
+// https://stackoverflow.com/questions/53613871/how-to-check-whether-checkox-is-checked-in-wordpress-customizer
