@@ -214,12 +214,12 @@ function ah_breadcrumb() {
       echo $parents;
 
       // Current page
-      echo '<li class="item-current item">'. _e( 'Updated on ', 'hovercraft' ) .'</li>';
+      // echo '<li class="item-current item">'. _e( 'You are here', 'hovercraft' ) .'</li>';
 
     } else {
 
       // Just display current page if not parents
-      echo '<li class="item-current item">'. _e( 'Updated on ', 'hovercraft' ) .'</li>';
+      // echo '<li class="item-current item">'. _e( 'You are here', 'hovercraft' ) .'</li>';
 
     }
 
