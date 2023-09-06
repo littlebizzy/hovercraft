@@ -341,14 +341,14 @@ $wp_customize->add_section( 'hovercraft_blog', array(
     'priority'   => 113,
 ) );
 
-// biography setting
+// author biography display setting
 $wp_customize->add_setting( 'hovercraft_biography', array(
     'default'    => 'native_posts_only',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
 	) 
 );
 
-// biography control
+// author biography display control
 $wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
         'hovercraft_biography',
@@ -362,6 +362,31 @@ $wp_customize->add_control( new WP_Customize_Control(
         		'none' => 'None (Disabled)',
 				'native_posts_only' => 'Native Posts Only',
 				'all_post_types' => 'Native & Custom Post Types'
+    			)
+        )
+) );
+
+// author biography links setting
+$wp_customize->add_setting( 'hovercraft_biography_links', array(
+    'default'    => 'none',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// author biography links control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_biography_links',
+        array(
+            'label'     => __( 'Author Biography Links', 'hovercraft' ),
+			'description' => __( 'Where should the author website and social media links be display in their biography section?', 'hovercraft' ),
+            'section'   => 'hovercraft_blog',
+            'settings'  => 'hovercraft_biography_links',
+            'type'      => 'select',
+			'choices' => array(
+        		'none' => 'None (Disabled)',
+				'above_author_biography' => 'Above Author Biography',
+				'below_author_biography' => 'Below Author Biography'
     			)
         )
 ) );
