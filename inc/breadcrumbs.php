@@ -32,6 +32,7 @@ function ah_breadcrumb() {
   echo '<ul id="'. esc_attr( $defaults['id'] ) .'" class="'. esc_attr( $defaults['classes'] ) .'">';
 
   // Creating home link
+  // echo '<li class="item"><a href="'. get_home_url() .'"><i class="material-icons home">home</i>'. esc_html( $defaults['home_title'] ) .'</a></li>' . $sep;
   echo '<li class="item"><a href="'. get_home_url() .'">'. esc_html( $defaults['home_title'] ) .'</a></li>' . $sep;
 
   if ( is_single() ) {
@@ -86,16 +87,16 @@ function ah_breadcrumb() {
     if( !empty( $get_last_category ) ) {
 
       echo $display_category;
-      echo '<li class="item item-current">'. get_the_title() .'</li>';
+      // echo '<li class="item item-current">'. _e( 'You are here', 'hovercraft' ) .'</li>';
 
     } else if( !empty( $cat_id ) ) {
 
       echo '<li class="item item-cat"><a href="'. $cat_link .'">'. $cat_name .'</a></li>' . $sep;
-      echo '<li class="item-current item">'. get_the_title() .'</li>';
+      // echo '<li class="item-current item">'. _e( 'You are here', 'hovercraft' ) .'</li>';
 
     } else {
 
-      echo '<li class="item-current item">'. get_the_title() .'</li>';
+      echo '<li class="item-current item">'. _e( 'You are here', 'hovercraft' ) .'</li>'; // probably remove this later
 
     }
 
@@ -213,12 +214,12 @@ function ah_breadcrumb() {
       echo $parents;
 
       // Current page
-      echo '<li class="item-current item">'. get_the_title() .'</li>';
+      echo '<li class="item-current item">'. _e( 'Updated on ', 'hovercraft' ) .'</li>';
 
     } else {
 
       // Just display current page if not parents
-      echo '<li class="item-current item">'. get_the_title() .'</li>';
+      echo '<li class="item-current item">'. _e( 'Updated on ', 'hovercraft' ) .'</li>';
 
     }
 
