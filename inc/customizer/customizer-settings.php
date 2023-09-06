@@ -44,6 +44,30 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// primary width setting
+$wp_customize->add_setting( 'hovercraft_primary_width', array(
+    'default'    => 'narrow_centered',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// primary width control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_primary_width',
+        array(
+            'label'     => __( 'Primary Width (Desktop)', 'hovercraft' ),
+			'description' => __( 'If sidebar disabled what should be the default width of the primary article section?', 'hovercraft' ),
+            'section'   => 'hovercraft_general',
+            'settings'  => 'hovercraft_primary_width',
+            'type'      => 'select',
+			'choices' => array(
+        		'narrow_centered' => 'Narrow Centered',
+        		'wide' => 'Wide (1200px)'
+    			)
+        )
+) );
+
 // tagline display setting
 $wp_customize->add_setting( 'hovercraft_tagline_display', array(
     'default'    => 'right_of_site_title',
