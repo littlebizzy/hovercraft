@@ -1924,7 +1924,7 @@ img.featured-image-archive {
 .breadcrumbs {
 	width: 100%;
 	margin-bottom: 20px;
-	font-size: 14px;
+	line-height: 18px !important;
 	color: #607D8B;
 	white-space: normal;
 	}
@@ -1932,8 +1932,8 @@ img.featured-image-archive {
 
 @media screen and (min-width: 1200px) {
 .breadcrumbs {
-	font-size: 14px;
 	margin-bottom: 40px;
+	line-height: 18px !important;
 	color: #607D8B;
 	white-space: normal;
 	}
@@ -1947,8 +1947,16 @@ img.featured-image-archive {
 
 .breadcrumbs ul li {
 	display: inline;
+	font-size: 14px !important;
 	word-break: break-all;
 	overflow-wrap: break-all;
+	margin-right: 5px;
+	vertical-align: middle;
+}
+
+.breadcrumbs i {
+	font-size: 18px !important;
+	vertical-align: middle;
 	margin-right: 5px;
 }
 
