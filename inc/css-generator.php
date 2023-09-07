@@ -2796,6 +2796,11 @@ section.upsells {
 	display: block;
 }
 
+.woo-related-products-container {
+	clear: both;
+	display: block;
+}
+
 
 /* woocommerce product list widget */
 
