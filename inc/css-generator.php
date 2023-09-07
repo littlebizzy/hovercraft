@@ -1038,7 +1038,7 @@ button {
 	margin-bottom: 30px;
 	padding: 30px;
 	text-align: center;
-	border: 1px solid <?php echo $default_text_color; ?>;
+	box-shadow: inset 0px 0px 0px 1px <?php echo $default_text_color; ?>;
 	}
 }
 
@@ -1049,7 +1049,7 @@ button {
   	justify-content: center;
   	align-items: center;
 	text-align: center;
-	border: 1px solid <?php echo $default_text_color; ?>;
+	box-shadow: inset 0px 0px 0px 1px <?php echo $default_text_color; ?>;
 	}
 }
 
@@ -1065,7 +1065,7 @@ button {
 	margin: 0 auto;
 }
 
-.tile p {
+.tile p:last-child {
 	margin-bottom: 0;
 }
 
