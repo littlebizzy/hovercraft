@@ -20,7 +20,7 @@ function ah_breadcrumb() {
   $custom_taxonomy  = ''; // If you have custom taxonomy place it here
 
   $defaults = array(
-    'seperator'   =>  '»',
+    'seperator'   =>  '«',
     'id'          =>  'ah-breadcrumb',
     'classes'     =>  'ah-breadcrumb',
     'home_title'  =>  esc_html__( 'Home', 'hovercraft' )
@@ -87,16 +87,16 @@ function ah_breadcrumb() {
     if( !empty( $get_last_category ) ) {
 
       echo $display_category;
-      // echo '<li class="item item-current">'. _e( 'You are here', 'hovercraft' ) .'</li>';
+      echo '<li class="item item-current">'. _e( 'Go back', 'hovercraft' ) .'</li>';
 
     } else if( !empty( $cat_id ) ) {
 
       echo '<li class="item item-cat"><a href="'. $cat_link .'">'. $cat_name .'</a></li>' . $sep;
-      // echo '<li class="item-current item">'. _e( 'You are here', 'hovercraft' ) .'</li>';
+      echo '<li class="item-current item">'. _e( 'Go back', 'hovercraft' ) .'</li>';
 
     } else {
 
-      echo '<li class="item-current item">'. _e( 'You are here', 'hovercraft' ) .'</li>'; // probably remove this later
+      echo '<li class="item-current item">'. _e( 'Go back', 'hovercraft' ) .'</li>'; // probably remove this later
 
     }
 
@@ -214,12 +214,12 @@ function ah_breadcrumb() {
       echo $parents;
 
       // Current page
-      // echo '<li class="item-current item">'. _e( 'You are here', 'hovercraft' ) .'</li>';
+      echo '<li class="item-current item">'. _e( 'Go back', 'hovercraft' ) .'</li>';
 
     } else {
 
       // Just display current page if not parents
-      // echo '<li class="item-current item">'. _e( 'You are here', 'hovercraft' ) .'</li>';
+      echo '<li class="item-current item">'. _e( 'Go back', 'hovercraft' ) .'</li>';
 
     }
 
