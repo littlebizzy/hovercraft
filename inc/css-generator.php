@@ -1935,7 +1935,7 @@ img.featured-image-archive {
 .breadcrumbs {
 	margin-bottom: 40px;
 	font-size: 14px;
-	line-height: 18px !important;
+	line-height: 20px !important;
 	color: #607D8B;
 	white-space: normal;
 	}
@@ -1949,21 +1949,16 @@ img.featured-image-archive {
 
 .breadcrumbs ul li {
 	display: inline;
-	font-size: 14px;
 	word-break: break-all;
-	overflow-wrap: break-all;
 	margin-right: 5px;
-	vertical-align: middle;
 }
 
 .breadcrumbs i {
 	font-size: 18px !important;
-	vertical-align: middle;
 	margin-right: 5px;
 }
 
 .breadcrumbs a {
-	font-size: 14px;
 	color: #607D8B;
 }
 
