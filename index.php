@@ -14,9 +14,6 @@
 									
 			<div class="content-padded">
 				
-				<?php $hovercraft_sidebar_status_checked = get_theme_mod( 'hovercraft_sidebar_status' ) ? true : false;
-				echo $hovercraft_sidebar_status_checked; ?>
-				
 				<?php get_template_part( 'template-parts/content/breadcrumbs' ); ?>
 		
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
