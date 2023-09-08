@@ -2338,6 +2338,30 @@ p.biography-description {
 }
 
 
+/* prefooter-bottom */
+
+@media screen and (max-width: 1200px) {
+#prefooter-bottom {
+	width: 100%;
+	background: #263238; /* can be overriden in customizer via !important */
+	color: #FFF;
+	padding: 30px 20px;
+	text-align: center;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+#prefooter-bottom {
+	width: 100%;
+	margin: 0px auto;
+	background: #263238; /* can be overriden in customizer via !important */
+	color: #FFF;
+	padding: 60px 0px;
+	text-align: center;
+	}
+}
+
+
 /* footer */
 
 #footer {
