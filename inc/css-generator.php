@@ -2326,24 +2326,14 @@ p.biography-description {
 	text-decoration: <?php echo $prefooter_top_link_decoration; ?>;
 }
 
-#prefooter-bottom {
-	background: <?php echo $prefooter_bottom_background_color; ?>;
-	color: <?php echo $prefooter_bottom_text_color; ?>;
-}
-	
-#prefooter-bottom a {
-	color: <?php echo $prefooter_bottom_link_color; ?>;
-	text-decoration: <?php echo $prefooter_bottom_link_decoration; ?>;
-}
-
 
 /* prefooter-bottom */
 
 @media screen and (max-width: 1200px) {
 #prefooter-bottom {
 	width: 100%;
-	background: #263238; /* can be overriden in customizer via !important */
-	color: #FFF;
+	background: <?php echo $prefooter_bottom_background_color; ?>;
+	color: <?php echo $prefooter_bottom_text_color; ?>;
 	padding: 30px 20px;
 	text-align: center;
 	}
@@ -2352,12 +2342,16 @@ p.biography-description {
 @media screen and (min-width: 1200px) {
 #prefooter-bottom {
 	width: 100%;
-	margin: 0px auto;
-	background: #263238; /* can be overriden in customizer via !important */
-	color: #FFF;
+	background: <?php echo $prefooter_bottom_background_color; ?>;
+	color: <?php echo $prefooter_bottom_text_color; ?>;
 	padding: 60px 0px;
 	text-align: center;
 	}
+}
+
+#prefooter-bottom a {
+	color: <?php echo $prefooter_bottom_link_color; ?>;
+	text-decoration: <?php echo $prefooter_bottom_link_decoration; ?>;
 }
 
 
