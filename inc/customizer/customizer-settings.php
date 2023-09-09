@@ -384,7 +384,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_biography',
         array(
             'label'     => __( 'Author Biography Display', 'hovercraft' ),
-			'description' => __( 'On which post types should the author biography be displayed (below article text)?', 'hovercraft' ),
+			'description' => __( 'On which post types should the author biography be displayed (below article text)? Note: for SEO reasons, we highly recommend keeping this enabled in most cases.', 'hovercraft' ),
             'section'   => 'hovercraft_blog',
             'settings'  => 'hovercraft_biography',
             'type'      => 'select',
@@ -396,27 +396,28 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
-// author biography links setting
+// author social media links setting
 $wp_customize->add_setting( 'hovercraft_biography_links', array(
     'default'    => 'none',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
 	) 
 );
 
-// author biography links control
+// author social media links control
 $wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
         'hovercraft_biography_links',
         array(
-            'label'     => __( 'Author Biography Links', 'hovercraft' ),
-			'description' => __( 'Where should the author website and social media links be display in their biography section?', 'hovercraft' ),
+            'label'     => __( 'Author Social Media Links', 'hovercraft' ),
+			'description' => __( 'Where should the author social media links be displayed? Note: Biography options require Author Biography to be enabled.', 'hovercraft' ),
             'section'   => 'hovercraft_blog',
             'settings'  => 'hovercraft_biography_links',
             'type'      => 'select',
 			'choices' => array(
         		'none' => 'None (Disabled)',
-				'above_author_biography' => 'Above Author Biography',
-				'below_author_biography' => 'Below Author Biography'
+				'byline_only' => 'Byline Only',
+				'biography_only' => 'Biography Only',
+				'byline_and_biography' => 'Byline & Biography'
     			)
         )
 ) );
@@ -433,8 +434,8 @@ $wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
         'hovercraft_byline_photo',
         array(
-            'label'     => __( 'Author Photo', 'hovercraft' ),
-			'description' => __( 'Should the post author photo be displayed in the byline, in the biography, or both?', 'hovercraft' ),
+            'label'     => __( 'Author Photo (Gravatar)', 'hovercraft' ),
+			'description' => __( 'Where should the author gravatar photo be displayed? Note: Biography options require Author Biography to be enabled.', 'hovercraft' ),
             'section'   => 'hovercraft_blog',
             'settings'  => 'hovercraft_byline_photo',
             'type'      => 'select',
@@ -460,7 +461,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_byline_date',
         array(
             'label'     => __( 'Post Byline Date', 'hovercraft' ),
-			'description' => __( 'Which date should appear next to the post author name (in the byline)? Note: For SEO reasons, most sites should probably use the Updated Date Only option to keep things cleaner.', 'hovercraft' ),
+			'description' => __( 'Which date should appear next to the post author name (in the byline)? Note: for SEO reasons, most sites should probably use the Updated Date Only option to keep things cleaner.', 'hovercraft' ),
             'section'   => 'hovercraft_blog',
             'settings'  => 'hovercraft_byline_date',
             'type'      => 'select',
