@@ -142,6 +142,10 @@ em {
     font-style: italic;
 }
 
+table {
+	margin-bottom: 30px;
+}
+
 p {
 	margin-bottom: 30px;
 }
