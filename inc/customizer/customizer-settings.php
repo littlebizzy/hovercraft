@@ -307,9 +307,9 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
-// category layouts section
-$wp_customize->add_section( 'hovercraft_category_layouts', array(
-    'title'      => 'Category Layouts',
+// seo section
+$wp_customize->add_section( 'hovercraft_seo', array(
+    'title'      => 'SEO',
     'priority'   => 32,
 ) );
 
@@ -327,7 +327,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         array(
             'label'     => __( 'Homepage HTML Title', 'hovercraft' ),
 			'description' => __( 'How should the homepage HTML title tag be generated? Note: Page Title options only work if homepage set to static page (above).', 'hovercraft' ),
-            'section'   => 'static_front_page',
+            'section'   => 'hovercraft_seo',
             'settings'  => 'hovercraft_homepage_html_title',
             'type'      => 'select',
 			'choices' => array(
@@ -337,6 +337,12 @@ $wp_customize->add_control( new WP_Customize_Control(
 				'page_title_only' => 'Page Title Only',
     			)
         )
+) );
+
+// category layouts section
+$wp_customize->add_section( 'hovercraft_category_layouts', array(
+    'title'      => 'Category Layouts',
+    'priority'   => 33,
 ) );
 	
 // homepage hide main setting
