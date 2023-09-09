@@ -56,13 +56,13 @@ $wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
         'hovercraft_primary_width',
         array(
-            'label'     => __( 'Primary Width (Desktop)', 'hovercraft' ),
-			'description' => __( 'If sidebar disabled what should be the default width of the primary article section?', 'hovercraft' ),
+            'label'     => __( 'Primary Article Width (Desktop)', 'hovercraft' ),
+			'description' => __( 'If sidebar disabled, what should be the default width of the primary article section?', 'hovercraft' ),
             'section'   => 'hovercraft_general',
             'settings'  => 'hovercraft_primary_width',
             'type'      => 'select',
 			'choices' => array(
-        		'narrow_centered' => 'Narrow Centered',
+        		'narrow_centered' => 'Narrow Centered (768px)',
         		'wide' => 'Wide (1200px)'
     			)
         )
@@ -81,7 +81,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_tagline_display',
         array(
             'label'     => __( 'Tagline Display (Desktop)', 'hovercraft' ),
-			'description' => __( 'Where should the Tagline display in the header? Note: Tagline must be filled in the Site Identity section for this to work.', 'hovercraft' ),
+			'description' => __( 'Where should the Tagline display in the header? Note: Tagline must be filled in the Site Identity section for this to work, and will always be hidden on mobile devices regardless.', 'hovercraft' ),
             'section'   => 'hovercraft_general',
             'settings'  => 'hovercraft_tagline_display',
             'type'      => 'select',
