@@ -1078,13 +1078,13 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	)
 ) );
 
-// hero gradient color start setting
+// hero gradient start color setting
 $wp_customize->add_setting( 'hovercraft_hero_gradient_start_color', array(
 	'default' => '#37474f',
 	'sanitize_callback' => 'sanitize_hex_color',
 ) );
  
-// hero gradient color start control
+// hero gradient start color control
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_hero_gradient_start_color', array(
 	'label' => 'Hero Gradient Start Color',
 	'description' => 'This is a description',
@@ -1092,14 +1092,29 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	'settings' => 'hovercraft_hero_gradient_start_color'
 	)
 ) );
+
+// hero gradient mid color setting
+$wp_customize->add_setting( 'hovercraft_hero_gradient_mid_color', array(
+	'default' => '#37474f',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+ 
+// hero gradient mid color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_hero_gradient_mid_color', array(
+	'label' => 'Hero Gradient Mid Color',
+	'description' => 'This is a description',
+	'section' => 'colors',
+	'settings' => 'hovercraft_hero_gradient_mid_color'
+	)
+) );
 	
-// hero gradient color stop setting
+// hero gradient stop color setting
 $wp_customize->add_setting( 'hovercraft_hero_gradient_stop_color', array(
 	'default' => '#ffffff',
 	'sanitize_callback' => 'sanitize_hex_color',
 ) );
  
-// hero gradient color stop control
+// hero gradient stop color control
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_hero_gradient_stop_color', array(
 	'label' => 'Hero Gradient Stop Color',
 	'description' => 'This is a description',
@@ -1191,7 +1206,7 @@ $wp_customize->add_setting( 'hovercraft_basic_hero_header_text_color', array(
  
 // header basic hero text color control
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_basic_hero_header_text_color', array(
-	'label' => 'Header (basic Hero) Text Color',
+	'label' => 'Header (Basic) Text Color',
 	'description' => 'This is a description',
 	'section' => 'colors',
 	'settings' => 'hovercraft_basic_hero_header_text_color'
@@ -1206,7 +1221,7 @@ $wp_customize->add_setting( 'hovercraft_basic_hero_header_link_color', array(
  
 // header basic hero link color control
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_basic_hero_header_link_color', array(
-	'label' => 'Header (basic Hero) Link Color',
+	'label' => 'Header (Basic) Link Color',
 	'description' => 'This is a description',
 	'section' => 'colors',
 	'settings' => 'hovercraft_basic_hero_header_link_color'
@@ -2120,10 +2135,52 @@ $wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
         'hovercraft_hero_gradient_start_color_transparency',
         array(
-            'label'     => __('Start color transparency', 'hovercraft'),
+            'label'     => __('Start Color Transparency', 'hovercraft'),
 			'description' => __( 'Transparency of the start color', 'hovercraft' ),
             'section'   => 'hovercraft_hero_styling',
             'settings'  => 'hovercraft_hero_gradient_start_color_transparency',
+            'type'      => 'select',
+			'choices' => array(
+        		'0.0' => '0.00',
+        		'0.10' => '0.10',
+				'0.15' => '0.15',
+				'0.20' => '0.20',
+        		'0.25' => '0.25',
+				'0.30' => '0.30',
+				'0.35' => '0.35',
+				'0.40' => '0.40',
+				'0.45' => '0.45',
+        		'0.50' => '0.50',
+				'0.55' => '0.55',
+				'0.60' => '0.60',
+				'0.65' => '0.65',
+				'0.70' => '0.70',
+        		'0.75' => '0.75',
+				'0.80' => '0.80',
+				'0.85' => '0.85',
+				'0.90' => '0.90',
+				'0.95' => '0.95',
+        		'1.0' => '1.00',
+    			)
+        )
+) );
+
+// hero gradient mid color transparency setting
+$wp_customize->add_setting( 'hovercraft_hero_gradient_mid_color_transparency', array(
+    'default'    => '0.50',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
+	) 
+);
+
+// hero gradient mid color transparency control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_hero_gradient_mid_color_transparency',
+        array(
+            'label'     => __('Mid Color Transparency', 'hovercraft'),
+			'description' => __( 'Transparency of the mid color', 'hovercraft' ),
+            'section'   => 'hovercraft_hero_styling',
+            'settings'  => 'hovercraft_hero_gradient_mid_color_transparency',
             'type'      => 'select',
 			'choices' => array(
         		'0.0' => '0.00',
@@ -2162,7 +2219,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
         'hovercraft_hero_gradient_stop_color_transparency',
         array(
-            'label'     => __('Stop color transparency', 'hovercraft'),
+            'label'     => __('Stop Color Transparency', 'hovercraft'),
 			'description' => __( 'Transparency of the stop color', 'hovercraft' ),
             'section'   => 'hovercraft_hero_styling',
             'settings'  => 'hovercraft_hero_gradient_stop_color_transparency',
