@@ -6,14 +6,22 @@
 
 	<?php 
 	$hovercraft_sidebar_status_checked = get_theme_mod( 'hovercraft_sidebar_status' ) ? true : false;
-	$hovercraft_primary_width = get_theme_mod( 'hovercraft_primary_width', 'narrow_centered' );
+	$hovercraft_primary_width = get_theme_mod( 'hovercraft_primary_width', 'wide' );
 	
-	if ( ( $hovercraft_sidebar_status_checked == true ) || ( $hovercraft_sidebar_status_checked != true && $hovercraft_primary_width = 'narrow_centered' ) ) { ?><div id="primary"><?php } elseif ( ( $hovercraft_sidebar_status_checked == false ) && ( $hovercraft_primary_width = 'wide' ) ) { ?><div id="primary-wide"><?php } ?>
-	
+	if ( $hovercraft_sidebar_status_checked == true ) { ?><div id="primary"><?php } 
+	elseif ( $hovercraft_sidebar_status_checked == false ) {
+		if ( $hovercraft_primary_width == 'narrow_centered' ) { ?>
+			<div id="primary-center">
+		<?php } 
+		elseif ( $hovercraft_primary_width == 'wide' ) { ?>
+			<div id="primary-wide">
+		<?php } 
+	} ?>
+
 		<div id="content">
 									
 			<div class="content-padded">
-				
+								
 				<?php get_template_part( 'template-parts/content/breadcrumbs' ); ?>
 		
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
