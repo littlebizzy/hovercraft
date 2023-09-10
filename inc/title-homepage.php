@@ -10,12 +10,22 @@ function hovercraft_homepage_title( $title ) {
 				$blogname = get_option( 'blogname' );
 				$blogdescription = get_option( 'blogdescription', "" );
             	if(!empty($blogdescription)) {
-            		$title_ready = $blogname." &#124; ".$blogdescription;
+            		$title_ready = $blogname." &vert; ".$blogdescription;
             	} else {
 					$title_ready = $blogname;
 				}
 				$title = $title_ready;
 			} // if site_name_site_tagline
+			elseif ( $hovercraft_homepage_html_title == 'site_name_dash_site_tagline' ) {
+				$blogname = get_option( 'blogname' );
+				$blogdescription = get_option( 'blogdescription', "" );
+            	if(!empty($blogdescription)) {
+            		$title_ready = $blogname." &ndash; ".$blogdescription;
+            	} else {
+					$title_ready = $blogname;
+				}
+				$title = $title_ready;
+			} // if site_name_dash_site_tagline
 			elseif ( $hovercraft_homepage_html_title == 'site_name_only' ) {
 				$blogname = get_option( 'blogname' );
 				$title = $blogname;
@@ -25,10 +35,19 @@ function hovercraft_homepage_title( $title ) {
 				$id_frontpage = get_option( 'page_on_front' );
 				if(!empty($id_frontpage)) {
 					$frontpagetitle = get_the_title($id_frontpage);
-					$title_ready = $blogname." &#124; ".$frontpagetitle;
+					$title_ready = $blogname." &vert; ".$frontpagetitle;
 				}
 				$title = $title_ready;
 			} // if site_name_page_title
+			elseif ( $hovercraft_homepage_html_title == 'site_name_dash_page_title' ) {
+				$blogname = get_option( 'blogname' );
+				$id_frontpage = get_option( 'page_on_front' );
+				if(!empty($id_frontpage)) {
+					$frontpagetitle = get_the_title($id_frontpage);
+					$title_ready = $blogname." &ndash; ".$frontpagetitle;
+				}
+				$title = $title_ready;
+			} // if site_name_dash_page_title
 			elseif ( $hovercraft_homepage_html_title == 'page_title_only' ) {
 				$id_frontpage = get_option( 'page_on_front' );
 				$frontpagetitle = get_the_title($id_frontpage);
@@ -41,3 +60,4 @@ function hovercraft_homepage_title( $title ) {
 
 // https://wordpress.stackexchange.com/questions/176940/add-theme-support-title-tag-in-conflict-with-custom-titles-function
 // https://wordpress.stackexchange.com/questions/305353/cant-change-the-title-tag-with-wp-title-filter
+// https://stackoverflow.com/questions/29956708/is-there-any-reason-to-use-html-entities-over-the-characters-themselves
