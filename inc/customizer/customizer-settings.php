@@ -326,7 +326,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_homepage_html_title',
         array(
             'label'     => __( 'Homepage HTML Title', 'hovercraft' ),
-			'description' => __( 'How should the homepage HTML title tag be generated? Note: Page Title options only work if homepage set to static page (above).', 'hovercraft' ),
+			'description' => __( 'How should the homepage HTML title tag be generated? Note: Page Title options only work if homepage set to use static page.', 'hovercraft' ),
             'section'   => 'hovercraft_seo',
             'settings'  => 'hovercraft_homepage_html_title',
             'type'      => 'select',
