@@ -331,11 +331,11 @@ $wp_customize->add_control( new WP_Customize_Control(
             'settings'  => 'hovercraft_homepage_html_title',
             'type'      => 'select',
 			'choices' => array(
-				'site_name_site_tagline' => 'Site Name | Site Tagline',
-				'site_name_dash_site_tagline' => 'Site Name - Site Tagline',
-				'site_name_only' => 'Site Name Only',
-				'site_name_page_title' => 'Site Name | Page Title',
-				'site_name_dash_page_title' => 'Site Name - Page Title',
+				'site_name_site_tagline' => 'Site Title | Tagline',
+				'site_name_dash_site_tagline' => 'Site Title - Tagline',
+				'site_name_only' => 'Site Title Only',
+				'site_name_page_title' => 'Site Title | Page Title',
+				'site_name_dash_page_title' => 'Site Title - Page Title',
 				'page_title_only' => 'Page Title Only',
     			)
         )
