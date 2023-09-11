@@ -2033,6 +2033,13 @@ img.featured-image-archive {
 	display: block;
 }
 
+.content-padded iframe {
+	margin-bottom: 30px;
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
 .wp-caption {
 	max-width: 100%;
 	height: auto;
