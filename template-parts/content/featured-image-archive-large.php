@@ -2,11 +2,11 @@
 $image_id = get_post_thumbnail_id();
 $image_alt = get_post_meta($image_id, '_wp_attachment_image_alt', true);
 $image_title = get_the_title($image_id);
-$url_featured_image = wp_get_attachment_image_src( get_post_thumbnail_id( $currentID ), 'large' );
-$image_width = $url_featured_image[1];
-$image_height = $url_featured_image[2];
-if ( !empty( $url_featured_image ) && ( !is_singular('product') ) ) { ?>
-<a href="<?php the_permalink() ?>"><img width="<?php echo $image_width; ?>" height="<?php echo $image_height; ?>" class="featured-image-archive" src="<?php echo $url_featured_image[0]; ?>" alt="<?php echo $image_alt; ?>" /></a>
+$url_featured_image_large = wp_get_attachment_image_src( get_post_thumbnail_id( $currentID ), 'large' );
+$image_width = $url_featured_image_large[1];
+$image_height = $url_featured_image_large[2];
+if ( !empty( $url_featured_image_large ) && ( !is_singular('product') ) ) { ?>
+<a href="<?php the_permalink() ?>"><img width="<?php echo $image_width; ?>" height="<?php echo $image_height; ?>" class="featured-image-archive-large" src="<?php echo $url_featured_image_large[0]; ?>" alt="<?php echo $image_alt; ?>" /></a>
 <div class="clear"></div>
 <?php }
 
