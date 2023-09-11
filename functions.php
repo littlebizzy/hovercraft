@@ -63,9 +63,6 @@ require get_template_directory() . '/inc/media-sizes-verify.php';
 // media sizes insert
 require get_template_directory() . '/inc/media-sizes-insert.php';
 
-// menu functions
-// require get_template_directory() . '/inc/menu-functions.php';
-
 // menu locations
 require get_template_directory() . '/inc/menu-locations.php';
 
@@ -74,6 +71,9 @@ require get_template_directory() . '/inc/pagination.php';
 
 // portal category
 require get_template_directory() . '/inc/portal-category.php';
+
+// responsive menu
+require get_template_directory() . '/inc/responsive-menu.php';
 
 // tags list
 require get_template_directory() . '/inc/tags-list.php';
