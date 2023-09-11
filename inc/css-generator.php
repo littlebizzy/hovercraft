@@ -104,6 +104,8 @@ html, body {
 	font-family: <?php echo ucwords(str_replace("_", " ", $default_font_family)); ?>;
 	font-size: <?php echo $default_mobile_font_size; ?>px;
 	color: <?php echo $default_text_color; ?>;
+	/* height: 100%;
+  	letter-spacing: .5px; */
 	}
 }
 
@@ -112,6 +114,8 @@ html, body {
 	font-family: <?php echo ucwords(str_replace("_", " ", $default_font_family)); ?>;
 	font-size: <?php echo $default_desktop_font_size; ?>px;
 	color: <?php echo $default_text_color; ?>;
+	/* height: 100%;
+  	letter-spacing: .5px; */
 	}
 }
 
