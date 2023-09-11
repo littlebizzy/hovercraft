@@ -27,7 +27,12 @@
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 				<div class="post-tease-archive">
-				<?php get_template_part( 'template-parts/content/featured-image-archive' ); ?>
+					
+				<?php 
+				$hovercraft_primary_width = get_theme_mod( 'hovercraft_primary_width', 'wide' );
+				if ( $hovercraft_primary_width == 'wide' ) { get_template_part( 'template-parts/content/featured-image-archive-large' ); } 
+				else { get_template_part( 'template-parts/content/featured-image-archive' ); } ?>
+				
 				<h4><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
 				<div class="post-excerpt-archive"><?php the_excerpt(); ?></div>
 				</div><!-- post-tease-archive -->
