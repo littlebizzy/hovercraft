@@ -1602,7 +1602,7 @@ video.hero-background-video {
 
 .cta-header-primary {
 	display: inline-block;
-	margin-left: 40px;
+	margin-left: 30px;
 }
 
 .cta-header-primary ul li {
@@ -1635,7 +1635,7 @@ video.hero-background-video {
 
 .cta-header-secondary {
 	display: inline-block;
-	margin-left: 40px;
+	margin-left: 30px;
 }
 
 #header-full-hero .cta-header-secondary ul li {
