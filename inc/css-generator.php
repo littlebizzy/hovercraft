@@ -2265,6 +2265,13 @@ p.biography-description {
 }
 
 
+/* widgets */
+	
+ .widget-wrapper iframe {
+	max-width: 100%;
+}
+
+
 /* home-postmain-top */
 
 @media screen and (max-width: 1200px) {
