@@ -666,10 +666,6 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 	line-height: 2;
 }
 
-#footer ul li a {
-	text-decoration: none;
-}
-
 
 /* copyright */
 
