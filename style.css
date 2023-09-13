@@ -347,35 +347,6 @@ input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
 }
 
 
-/* footer */
-
-@media screen and (max-width: 1200px) {
-#footer {
-	width: 100%;
-	background: #ECEFF1; /* can be overriden in customizer via !important */
-	padding: 30px 20px;
-	border-bottom: 1px solid #B0BEC5;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-#footer {
-	width: 100%;
-	margin: 0px auto;
-	background: #ECEFF1; /* can be overriden in customizer via !important */
-	padding: 60px 0px;
-	border-bottom: 1px solid #B0BEC5;
-}
-}
-
-#footer .widget-wrapper{
-    margin-bottom: 30px;
-}
-#footer .widget-wrapper:last-child{
-    margin-bottom: 0;
-}
-
-
 /* footer column one (four unequal columns) */
 
 @media screen and (max-width: 1200px) {
