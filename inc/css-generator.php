@@ -1213,7 +1213,7 @@ button {
 }
 	
 /* Change this in order to change the Dropdown symbol */
-.main-menu li > a:after { 
+.menu-item-has-children > a:after { 
 	font-family: "Material Icons";
 	font-size: 24px;
 	content:  ' \e5cf'; 
