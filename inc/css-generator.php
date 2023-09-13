@@ -1144,22 +1144,17 @@ button {
 	}
 }
 
-.main-menu {
+.menu-desktop > .main-menu {
 	display: inline-block;
 }
 
-.toggle,
-[id^=drop] {
-	display: none;
-}
-
-.main-menu:after {
+.menu-desktop > .main-menu:after {
 	content:"";
 	display:table;
 	clear:both;
 }
 
-.main-menu ul {
+.menu-desktop > .main-menu ul {
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
@@ -1168,7 +1163,7 @@ button {
 	display: inline-table;
 }
 
-.main-menu ul li {
+.menu-desktop > .main-menu ul li {
 	margin: 0;
 	padding: 0;
 	list-style-type: none;
@@ -1176,18 +1171,18 @@ button {
 	vertical-align: middle;
 }
 
-.main-menu ul ul {
+.menu-desktop > .main-menu ul ul {
 	display: none;
 	position: absolute; 
 	top: 36px; 
 }
 	
-.main-menu ul li:hover > ul {
+.menu-desktop > .main-menu ul li:hover > ul {
 	display: block;
 	z-index: 100;
 }	
 
-.main-menu a {
+.menu-desktop > .main-menu a {
 	font-family: <?php echo ucwords(str_replace("_", " ", $main_menu_font_family)); ?>;
 	font-size: <?php echo $main_menu_desktop_font_size; ?>px;
 	font-weight: <?php echo $main_menu_font_weight; ?>;
@@ -1198,7 +1193,7 @@ button {
 
 
 /* Fisrt Tier Dropdown */
-.main-menu ul ul li {
+.menu-desktop > .main-menu ul ul li {
 	width:250px;
 	display: list-item;
 	position: relative;
@@ -1206,11 +1201,11 @@ button {
 }
 
 /* force display block and line height on desktop drop-down links only (not parent links) */
-.main-menu ul ul a, .main-menu ul ul ul a { display:block !important; line-height: 60px; }
+.menu-desktop > .main-menu ul ul a, .main-menu ul ul ul a { display:block !important; line-height: 60px; }
 
 /* Second, Third and more Tiers	*/
 
-.main-menu ul ul ul li {
+.menu-desktop > .main-menu ul ul ul li {
 	position: relative;
 	top: -56px; 
 	left: 250px;
@@ -1229,13 +1224,13 @@ button {
 }
 
 	
-#header-full-hero .main-menu ul li ul li { background: <?php echo $default_text_color; ?>; }
+#header-full-hero .menu-desktop > .main-menu ul li ul li { background: <?php echo $default_text_color; ?>; }
 	
-#header-half-hero .main-menu ul li ul li { background: #ffffff; }
+#header-half-hero .menu-desktop > .main-menu ul li ul li { background: #ffffff; }
 
-#header-mini-hero .main-menu ul li ul li { background: #ffffff; }
+#header-mini-hero .menu-desktop > .main-menu ul li ul li { background: #ffffff; }
 	
-#header-basic .main-menu ul li ul li { background: <?php echo $header_basic_background_color; ?>; }
+#header-basic .menu-desktop > .main-menu ul li ul li { background: <?php echo $header_basic_background_color; ?>; }
 
 
 
