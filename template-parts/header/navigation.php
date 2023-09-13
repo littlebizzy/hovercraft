@@ -7,6 +7,11 @@
 	
 	<div class="header-right">
 	<div class="menu-choose">
+		
+		<div class="menu-mobile-wrapper">
+	 		<a class="nav-icon"><i class="material-icons menu">menu</i></a>
+		</div><!--menu-mobile-wrapper -->
+		
 		<div class="menu-desktop">
 			<?php // wp_nav_menu( array( 'theme_location' => 'main-menu', 'container_class' => 'main-menu' ) ); ?>
 			<?php 
@@ -53,10 +58,8 @@
 			}
 			?>
 		</div><!-- menu-desktop -->
-		<div class="menu-mobile-wrapper">
-			<label for="togglebox" id="navtoggler"><i class="material-icons menu">menu</i></label>
-		</div><!--menu-mobile-wrapper -->
-		</div><!--menu-choose -->
+		
+	</div><!--menu-choose -->
 	<div class="clear"></div>
 	</div><!-- header-right -->
 		
