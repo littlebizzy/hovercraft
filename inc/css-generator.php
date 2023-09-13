@@ -2375,9 +2375,32 @@ p.biography-description {
 
 /* footer */
 
+/* footer */
+
+@media screen and (max-width: 1200px) {
 #footer {
+	width: 100%;
+	padding: 20px 20px;
 	background: <?php echo $footer_background_color; ?>;
 	color: <?php echo $footer_text_color; ?>;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+#footer {
+	width: 100%;
+	margin: 0px auto;
+	padding: 40px 0px;
+	background: <?php echo $footer_background_color; ?>;
+	color: <?php echo $footer_text_color; ?>;
+	}
+}
+
+#footer .widget-wrapper{
+    margin-bottom: 30px;
+}
+#footer .widget-wrapper:last-child{
+    margin-bottom: 0;
 }
 
 #footer a {
