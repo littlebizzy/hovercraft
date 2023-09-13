@@ -1,5 +1,6 @@
 <?php get_template_part( 'header' ); ?>
 <?php get_template_part( 'template-parts/header/header-basic' ); ?>
+<?php get_template_part( 'template-parts/header/mobile-menu' ); ?>
 
 <div id="main">
 <div class="inner">
