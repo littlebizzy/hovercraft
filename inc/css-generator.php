@@ -510,6 +510,7 @@ a {
 	
 a:hover {
 	color: <?php echo $default_hover_color; ?>;
+	cursor: pointer;
 }
 
 
