@@ -1205,6 +1205,9 @@ button {
 	text-align: left;
 }
 
+/* force display block and line height on desktop drop-down links only (not parent links) */
+.main-menu ul ul a, .main-menu ul ul ul a { display:block !important; line-height: 60px; }
+
 /* Second, Third and more Tiers	*/
 
 .main-menu ul ul ul li {
