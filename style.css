@@ -113,6 +113,18 @@ html, body {
 /* mobile menu */
 
 @media screen and (max-width: 1200px) {
+.mobile-nav {
+	display: none;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+.mobile-nav {
+	display: none;
+	}
+}
+
+@media screen and (max-width: 1200px) {
 .menu-mobile-wrapper {
 	display: inline-block;
 	text-align: right;
