@@ -112,6 +112,10 @@ html, body {
 
 /* mobile menu */
 
+.nav-icon {
+    outline: none !important;
+}
+
 .nav-icon:focus {
     outline: none !important;
 }
