@@ -22,7 +22,7 @@
 	<?php if (display_header_text()==true) { ?>
 	<div class="branding-text">
 		<a href="<?php echo esc_url( home_url() ); ?>" class="site-title-link" rel="home"><div class="site-title"><?php echo get_bloginfo( 'name' ); ?></div></a>
-		<div class="site-tagline"><?php echo get_bloginfo( 'description' ); ?></div>
+		<div class="tagline"><?php echo get_bloginfo( 'description' ); ?></div>
 	</div><!-- branding-text -->
 	<?php } ?>
 </div><!-- branding -->
