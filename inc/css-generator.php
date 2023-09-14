@@ -2,7 +2,6 @@
 
 // css from customizer
 function hovercraft_generate_css(){
-	
 	$url_hero_video = wp_get_attachment_url( get_theme_mod( 'hovercraft_video' ) ); 
 	$url_header_image = esc_url( get_header_image() );
 	$url_featured_image = wp_get_attachment_url( get_post_thumbnail_id(), 'large' ); 
@@ -95,7 +94,6 @@ function hovercraft_generate_css(){
 	$copyright_text_color = get_theme_mod( 'hovercraft_copyright_text_color', '#263238' );
 	$copyright_link_color = get_theme_mod( 'hovercraft_copyright_link_color', '#5C6BC0' );
 	$copyright_link_decoration = get_theme_mod( 'hovercraft_copyright_link_decoration', 'underline' );
-     
     ?>
 
 <style type="text/css" id="hovercraft_custom_css">
@@ -104,8 +102,6 @@ html, body {
 	font-family: <?php echo ucwords(str_replace("_", " ", $default_font_family)); ?>;
 	font-size: <?php echo $default_mobile_font_size; ?>px;
 	color: <?php echo $default_text_color; ?>;
-	/* height: 100%;
-  	letter-spacing: .5px; */
 	}
 }
 
@@ -114,8 +110,6 @@ html, body {
 	font-family: <?php echo ucwords(str_replace("_", " ", $default_font_family)); ?>;
 	font-size: <?php echo $default_desktop_font_size; ?>px;
 	color: <?php echo $default_text_color; ?>;
-	/* height: 100%;
-  	letter-spacing: .5px; */
 	}
 }
 
@@ -456,7 +450,7 @@ h1.mini-hero-title {
 }
 
 @media screen and (max-width: 1200px) {
-.site-tagline {
+.tagline {
 	font-size: 14px;
 	line-height: 1.5;
 	display: none;
@@ -464,7 +458,7 @@ h1.mini-hero-title {
 }
 
 @media screen and (min-width: 1200px) {
-.site-tagline {
+.tagline {
 	<?php if ( $tagline_display == 'right_of_site_title' ) { 
 			echo "margin-left: 30px;\n"; 
 		} else { 
