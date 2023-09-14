@@ -1,7 +1,7 @@
 /*
 Theme Name: HoverCraft
 Theme URI: https://hovercraft.vip
-Version: 0.2.80
+Version: 0.2.81
 Description: No maintenance WordPress theme
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
@@ -126,9 +126,28 @@ html, body {
 	padding: 20px;
 	}
 
-.mobile-nav li { display:block; }
+.mobile-nav ul li {
+	font-size: 18px;
+	list-style-type: none;
+ 	vertical-align: middle;
+	display: block;
+	margin: 0px;
+	padding: 0px;
+	border-bottom: 1px solid rgba(255,255,255, 0.2);
+}
+
+.mobile-nav ul li:last-child {
+	border-bottom: 0;
+}
 	
-.mobile-nav a { display:block; width: 100%;line-height:40px; color:#fff !important; font-size:16px; }
+.mobile-nav a {
+	display: block;
+	width: 100%;
+	line-height:40px;
+	color: #ffffff !important;
+	font-size: 16px;
+	text-decoration none;
+}
 
 /* js will toggle this to display: block */
  .mobile-nav li > ul { display:none; width: 100%; position:relative; }
@@ -137,7 +156,7 @@ html, body {
 
 @media screen and (min-width: 1200px) {
 .mobile-nav {
-	display: none;
+	display: none !important;
 	}
 }
 
@@ -158,107 +177,6 @@ html, body {
 #header-full-hero .menu-mobile-wrapper i {
 	font-size: 36px; /* correct */
 	color: #ffffff; /* correct */
-}
-
-.offcanvas-menu {
-	display: block;
-}
-
-.offcanvas-menu ul {
-	text-align: left;
-}
-
-.offcanvas-menu ul li {
-	font-size: 18px;
-	list-style-type: none;
- 	vertical-align: middle;
-	display: block;
-	margin: 0px;
-	padding: 0px;
-	border-bottom: 1px solid rgba(255,255,255, 0.2);
-}
-
-.offcanvas-menu ul li:last-child {
-	border-bottom: 0;
-}
-
-.offcanvas-menu ul li a {
-	width: 100%;
-	display: block;
-	padding: 10px 20px;
-	text-decoration: none;
-	color: #FFF; /* correct */
-}
-
-input[type="checkbox"]#togglebox {
-  	position: absolute;
-	top: 0;
-  	right: 0;
-  	visibility: hidden;
-}
-
-label#navtoggler {
-	z-index: 9;
-	display: block;
-	position: relative;
-	top: 0;
-  	right: 0;
-  	cursor: pointer;
-}
-
-nav#offcanvas-menu {
-  /* Full screen nav menu */
-  	width: 250px;
-  	height: 100%;
-  	top: 0;
-  	right: 0;
-	padding: 30px 0px;
-  	z-index: 100;
-  	visibility: hidden; /* this is for browsers that don't support CSS3 translate3d */
-  	transform: translate3d(250px, 0, 0);
-  	background: #263238; /* correct */
-	color: #FFF;
-  	display: block;
-  	position: fixed;
-  	text-align: center;
-  overflow: auto;
-  	transition: transform 0.5s, visibility 0s 0.5s;
-}
-
-input[type="checkbox"]#togglebox:checked ~ div#container {
-	transform: translate3d(-250px, 0, 0);
-}
-
-input[type="checkbox"]#togglebox:checked ~ nav#offcanvas-menu {
-  /* nav state when corresponding checkbox is checked */
-  transform: translate3d(0, 0, 0);
-  visibility: visible; /* this is for browsers that don't support CSS3 translate3d in showing the menu */
-  transition-delay: 0s; /* No delay for applying "visibility:visible" property when menu is going from "closed" to "open" */
-}
-
-
-/* offcanvas secondary cta */
-
-.cta-offcanvas-secondary {
-	
-}
-
-.cta-offcanvas-secondary ul li {
-	margin: 20px 20px 0px 20px;
-	list-style-type: none;
-}
-
-.cta-offcanvas-secondary ul li a {
-	width: 100%;
-	display: block;
-	padding: 10px 20px;
-	color: #FFF !important;
-	text-decoration: none !important;
-	font-size: 18px;
-	font-weight: 700;
-	background: transparent; /* correct */
-	border: 1px solid #FFF;
-	border-radius: 0px;
 }
 
 
