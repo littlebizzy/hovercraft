@@ -1194,6 +1194,12 @@ button {
 	text-align: left;
 }
 
+/* do we need it */
+.menu-desktop > .main-menu li ul { position: absolute; display: none;  }
+.menu-desktop > .main-menu li:hover ul, .menu-desktop > .main-menu li ul li { display: block; z-index:999; }
+.menu-desktop > .main-menu ul ul ul { position: absolute; display: none;  }
+	
+
 /* force display block and line height on desktop drop-down links only (not parent links) */
 .menu-desktop > .main-menu ul ul a, .main-menu ul ul ul a { display:block !important; line-height: 60px; }
 
