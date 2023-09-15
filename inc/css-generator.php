@@ -2938,6 +2938,100 @@ ul.product_list_widget li a:hover:before {
 	color: #ffffff;
 }
 
+
+/***************************/
+/*start mobile menu overlay*/
+/***************************/
+.mobile-menu-trig{
+	/*display: none;*/
+}
+.mobile-menu-trig:hover{
+	cursor: pointer;
+}
+.overlay {   
+  	height: 0;
+  	width: 100%;
+  	position: fixed; 
+  	z-index: 9999; 
+  	left: 0;
+  	top: 0;
+  	background-color: rgb(0,0,0);
+  	background-color: rgba(0,0,0, 0.9); 
+  	overflow-x: hidden; 
+  	transition: 0.5s; 
+}
+.overlay-content {
+  	position: relative;
+  	top: 25%; 
+  	width: 100%; 
+  	text-align: center; 
+}
+.overlay ul.menu{
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+.overlay ul.sub-menu{
+	list-style: none;
+	margin-left: 0px;
+	padding-left: 0px;
+	font-style: italic;
+	background-color: rgb(0,0,0); /* Black fallback color */
+  	background-color: rgba(0,0,0, 0.60); /* Black w/opacity */
+}
+.overlay a {
+  	padding: 8px;
+  	text-decoration: none;
+  	font-size: 20px;
+  	color: #818181;
+  	display: block;
+  	transition: 0.3s;
+}
+.overlay li.current-menu-item a{
+	color: #fff;
+}
+.overlay a:hover, 
+.overlay a:focus{
+  	color: #f1f1f1;
+  	text-decoration: none;
+}
+
+.overlay .closebtn {
+  	position: absolute;
+  	top: 20px;
+  	right: 45px;
+  	font-size: 60px;
+}
+.overlay .closebtn:hover,
+.overlay .closebtn:focus{
+	text-decoration: none;
+	outline: none;
+}
+
+@media screen and (max-height: 450px) {
+	.overlay .closebtn {
+		font-size: 60px;
+		top: 15px;
+		right: 35px;
+	}
+	.overlay-content{
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+}
+@media screen and (max-width: 800px) {
+	nav#site-navigation{
+		display: none;
+	}
+	.mobile-menu-trig{
+		display: inline;
+	}
+
+}
+/*************************/
+/*end mobile menu overlay*/
+/*************************/
+
 </style>
 
 <?php }
