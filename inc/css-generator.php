@@ -1464,6 +1464,7 @@ video.hero-background-video {
 }
 
 #header-half-hero .menu-mobile-wrapper i {
+	margin-left: 20px;
 	font-size: 36px;
 	color: <?php echo $default_text_color; ?>;
 }
@@ -1532,6 +1533,8 @@ video.hero-background-video {
 }
 	
 #header-mini-hero .menu-mobile-wrapper i {
+	margin-left: 20px;
+	font-size: 36px;
 	color: <?php echo $mini_hero_header_text_color; ?>;
 }
 
@@ -1565,6 +1568,7 @@ video.hero-background-video {
 }
 
 #header-basic .menu-mobile-wrapper i {
+	margin-left: 20px;
 	font-size: 36px;
 	color: <?php echo $basic_hero_header_text_color; ?>;
 }
@@ -2824,6 +2828,11 @@ visibility: hidden;
 
 
 /* woocommerce */
+
+/* shopping cart icon mobile */
+.menu-mobile-wrapper i.shopping_cart {
+	font-size: 36px;
+}
 
 section.upsells {
 	clear: both;
