@@ -9,6 +9,9 @@
 	<div class="menu-choose">
 		
 		<div class="menu-mobile-wrapper">
+			<?php if ( class_exists( 'WooCommerce' ) ) { ?>
+				<a href="/cart/"><i class="material-icons shopping_cart">shopping_cart</i></a><div class="notification-dot"><?php echo WC()->cart->get_cart_contents_count(); ?></div><!-- notification-dot -->
+			<?php } ?>
 	 		<a class="nav-icon mobile-menu-trig" onclick="openNav()"><i class="material-icons menu">menu</i></a>
 		</div><!--menu-mobile-wrapper -->
 		
