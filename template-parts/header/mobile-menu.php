@@ -1,13 +1,12 @@
-<nav class="mobile-nav">
-	<?php if ( has_nav_menu( 'main-menu' ) ) {
-		wp_nav_menu(array(
-			'theme_location' => 'main-menu', 
-			'menu_class' => 'menu', 
-			'container_class' => 'main-menu'
-			));
-	} else {
-		echo '<div class="main-menu"><ul class="menu">';
-		wp_list_pages( array( 'title_li' => '' ) );
-		echo '</ul></div>';
-	} ?>
-</nav>
+<!-- ADD IMEDIATLY AFTER OPENING BODY -->
+<!-- start mobile menu overlay -->
+<div id="myNav" class="overlay">
+  	<!-- Button to close the overlay navigation -->
+  	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  	<!-- Overlay content -->
+  	<div class="overlay-content">
+    	<?php wp_nav_menu( array('menu' => 'Main Menu' )); ?>
+  	</div>
+</div>
+<!-- end mobile menu overlay -->
