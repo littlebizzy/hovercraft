@@ -1,7 +1,6 @@
 <?php /* Template Name: Basic (Gallery) Sidebar */ ?>
 <?php get_template_part( 'header' ); ?>
 <?php get_template_part( 'template-parts/header/header-basic' ); ?>
-<?php get_template_part( 'template-parts/header/mobile-menu' ); ?>
 
 <?php $hovercraft_homepage_hide_main_checked = get_theme_mod( 'hovercraft_homepage_hide_main' ) ? true : false;
 if ( !is_front_page() || ( is_front_page() && $hovercraft_homepage_hide_main_checked != true ) ) { ?>
