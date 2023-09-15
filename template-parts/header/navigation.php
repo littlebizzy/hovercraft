@@ -9,7 +9,7 @@
 	<div class="menu-choose">
 		
 		<div class="menu-mobile-wrapper">
-	 		<a class="nav-icon"><i class="material-icons menu">menu</i></a>
+	 		<a class="nav-icon mobile-menu-trig" onclick="openNav()"><i class="material-icons menu">menu</i></a>
 		</div><!--menu-mobile-wrapper -->
 		
 		<div class="menu-desktop">
