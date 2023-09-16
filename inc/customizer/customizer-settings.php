@@ -1952,6 +1952,32 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// font awesome setting
+$wp_customize->add_setting( 'hovercraft_font_awesome', array(
+    'default'    => 'none',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// font awesome control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_font_awesome',
+        array(
+            'label'     => __( 'Font Awesome', 'hovercraft' ),
+			'description' => __( 'Which variations of Font Awesome icons should be loaded?', 'hovercraft' ),
+            'section'   => 'hovercraft_icons',
+            'settings'  => 'hovercraft_font_awesome',
+            'type'      => 'select',
+			'choices' => array(
+        		'none' => 'None (Disabled)',
+        		'version_6' => 'Version 6',
+				'version_5' => 'Version 5',
+        		'version_4' => 'Version 4'
+    			)
+        )
+) );
+
 // hero styling section
 $wp_customize->add_section( 'hovercraft_hero_styling', array(
     'title'      => 'Hero Options',
