@@ -1928,7 +1928,7 @@ $wp_customize->add_section( 'hovercraft_icons', array(
 
 // layout icons setting
 $wp_customize->add_setting( 'hovercraft_layout_icons', array(
-    'default'    => 'material_icons',
+    'default'    => 'material_icons_classic',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
 	) 
 );
