@@ -1938,8 +1938,8 @@ $wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
         'hovercraft_layout_icons',
         array(
-            'label'     => __( 'Layout Icons', 'hovercraft' ),
-			'description' => __( 'Which icons should be used for critical site layout and UI features?', 'hovercraft' ),
+            'label'     => __( 'Default Icon Elements', 'hovercraft' ),
+			'description' => __( 'Which icon elements should be used for critical site layout and usability features?', 'hovercraft' ),
             'section'   => 'hovercraft_icons',
             'settings'  => 'hovercraft_layout_icons',
             'type'      => 'select',
