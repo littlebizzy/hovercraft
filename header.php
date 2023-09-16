@@ -14,7 +14,17 @@
 		<?php } elseif ( $hovercraft_material_icons == 'classic_and_outlined_and_two_toned' ) { ?>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons&family=Material+Icons+Outlined&family=Material+Icons+Two+Tone">
 		<?php } elseif ( $hovercraft_material_icons == 'none' ) { ?>
-		<?php } ?>
+	<?php } ?>
+
+	<?php $hovercraft_font_awesome = get_theme_mod( 'hovercraft_font_awesome', 'none' );
+		if ( $hovercraft_font_awesome == 'version_6' ) { ?>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+		<?php } elseif ( $hovercraft_font_awesome == 'version_5' ) { ?>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+		<?php } elseif ( $hovercraft_font_awesome == 'version_4' ) { ?>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/all.min.css">
+		<?php } elseif ( $hovercraft_font_awesome == 'none' ) { ?>
+	<?php } ?>
 	
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap">
 	
