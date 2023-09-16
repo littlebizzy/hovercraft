@@ -12,11 +12,11 @@
 			<?php if ( class_exists( 'WooCommerce' ) ) { ?>
 				<a href="/cart/"><?php $hovercraft_layout_icons = get_theme_mod( 'hovercraft_layout_icons', 'material_icons_classic' );
 				if ( $hovercraft_layout_icons == 'material_icons_classic' ) { ?><i class="material-icons shopping_cart">shopping_cart</i><?php } 
-				elseif ( $hovercraft_layout_icons == 'font_awesome_version_6' ) { ?> { ?><i class="fas fa-shopping-cart"></i><?php } ?></a><div class="notification-dot"><?php echo WC()->cart->get_cart_contents_count(); ?></div><!-- notification-dot -->
+				elseif ( $hovercraft_layout_icons == 'font_awesome_version_6' ) { ?><i class="fas fa-shopping-cart"></i><?php } ?></a><div class="notification-dot"><?php echo WC()->cart->get_cart_contents_count(); ?></div><!-- notification-dot -->
 			<?php } ?>
 	 		<a class="nav-icon mobile-menu-trig" onclick="openNav()"><?php $hovercraft_layout_icons = get_theme_mod( 'hovercraft_layout_icons', 'material_icons_classic' );
 				if ( $hovercraft_layout_icons == 'material_icons_classic' ) { ?><i class="material-icons menu">menu</i><?php } 
-				elseif ( $hovercraft_layout_icons == 'font_awesome_version_6' ) { ?> { ?><i class="fa-solid fa-bars"></i><?php } ?></a>
+				elseif ( $hovercraft_layout_icons == 'font_awesome_version_6' ) { ?><i class="fa-solid fa-bars"></i><?php } ?></a>
 		</div><!--menu-mobile-wrapper -->
 		
 		<div class="menu-desktop">
@@ -39,12 +39,12 @@
 			if ( in_array( $search_icon_status, ['desktop_only', 'desktop_and_mobile'] )) { ?>
 				<div class="search-icon-wrapper"><?php $hovercraft_layout_icons = get_theme_mod( 'hovercraft_layout_icons', 'material_icons_classic' );
 				if ( $hovercraft_layout_icons == 'material_icons_classic' ) { ?><i class="material-icons search">search</i><?php } 
-				elseif ( $hovercraft_layout_icons == 'font_awesome_version_6' ) { ?> { ?><i class="fas fa-search"></i><?php } ?></div><!-- search-icon-wrapper -->
+				elseif ( $hovercraft_layout_icons == 'font_awesome_version_6' ) { ?><i class="fas fa-search"></i><?php } ?></div><!-- search-icon-wrapper -->
 			<?php } ?>
 			<?php if ( class_exists( 'WooCommerce' ) ) { ?>
 				<div class="cart-icon-wrapper"><a href="/cart/"><?php $hovercraft_layout_icons = get_theme_mod( 'hovercraft_layout_icons', 'material_icons_classic' );
 				if ( $hovercraft_layout_icons == 'material_icons_classic' ) { ?><i class="material-icons shopping_cart">shopping_cart</i><?php } 
-				elseif ( $hovercraft_layout_icons == 'font_awesome_version_6' ) { ?> { ?><i class="fas fa-shopping-cart"></i><?php } ?></a><div class="notification-dot"><?php echo WC()->cart->get_cart_contents_count(); ?></div></div><!-- cart-icon-wrapper -->
+				elseif ( $hovercraft_layout_icons == 'font_awesome_version_6' ) { ?><i class="fas fa-shopping-cart"></i><?php } ?></a><div class="notification-dot"><?php echo WC()->cart->get_cart_contents_count(); ?></div></div><!-- cart-icon-wrapper -->
 			<?php } ?>
 			<?php
 			if ( has_nav_menu( 'cta-header-secondary' ) ) {
