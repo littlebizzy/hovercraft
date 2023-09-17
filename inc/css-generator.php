@@ -1856,6 +1856,7 @@ img.featured-image {
 	position: relative;
 	width: 100%;
 	height: auto;
+	margin-bottom: 20px;
 	}
 }
 
@@ -1864,6 +1865,7 @@ img.featured-image {
 	position: relative;
 	width: 768px;
 	height: auto;
+	margin-bottom: 40px;
 	}
 }
 
