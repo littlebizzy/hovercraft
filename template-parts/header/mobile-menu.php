@@ -1,12 +1,23 @@
-<!-- ADD IMEDIATLY AFTER OPENING BODY -->
-<!-- start mobile menu overlay -->
 <div id="myNav" class="overlay">
+	
   	<!-- Button to close the overlay navigation -->
-  	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-
+  	<a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><?php $hovercraft_layout_icons = get_theme_mod( 'hovercraft_layout_icons', 'material_icons_classic' ); if ( $hovercraft_layout_icons == 'material_icons_classic' ) { ?><i class="material-icons close">close</i><?php } 
+				elseif ( $hovercraft_layout_icons == 'font_awesome_version_6' ) { ?><i class="fa-solid fa-x"></i><?php } ?></a>
+	
   	<!-- Overlay content -->
   	<div class="overlay-content">
-    	<?php wp_nav_menu( array('menu' => 'Main Menu' )); ?>
+    	<?php 
+        	if ( has_nav_menu( 'main-menu' ) ) {
+            wp_nav_menu(array(
+                'theme_location' => 'main-menu', 
+				'menu_class' => 'menu', 
+        		'container_class' => 'main-menu'
+                ));
+        	}else{
+            echo '<div class="main-menu"><ul class="menu">';
+            wp_list_pages( array( 'title_li' => '' ) );
+            echo '</ul></div>';
+        	}
+        ?>
   	</div>
-</div>
-<!-- end mobile menu overlay -->
+</div><!-- myNav -->
