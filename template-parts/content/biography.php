@@ -9,7 +9,12 @@ if ( ( $hovercraft_biography == 'native_posts_only' ) || ( $hovercraft_biography
 
         <div class="author-biography">
 			<h5 class="author-biography-intro"><?php _e( 'About the Author', 'hovercraft' ); ?></h5>
-			<div class="biography-photo"><?php if (get_the_author_meta('user_email')) { echo get_avatar(get_the_author_meta('user_email'), '150'); } ?></div>
+			
+			<?php $hovercraft_byline_photo = get_theme_mod( 'hovercraft_byline_photo', 'none' );
+			if ( ($hovercraft_byline_photo == 'biography_only') || ($hovercraft_byline_photo == 'byline_and_biography') ) { ?>
+		<div class="biography-photo"><?php if (get_the_author_meta('user_email')) { echo get_avatar(get_the_author_meta('user_email'), '150'); } ?></div>
+		<?php } ?>
+			
             <h3 class="biography-name"><?php the_author_meta('display_name'); ?></h3>
             <p class="biography-description"><?php echo nl2br( get_the_author_meta('description') ); ?></p>
 			<div class="clear"></div>
@@ -23,8 +28,13 @@ if ( ( $hovercraft_biography == 'native_posts_only' ) || ( $hovercraft_biography
 
 		<div class="author-biography">
 			<h5 class="author-biography-intro"><?php _e( 'About the Author', 'hovercraft' ); ?></h5>
-			<div class="biography-photo"><?php if (get_the_author_meta('user_email')) { echo get_avatar(get_the_author_meta('user_email'), '150'); } ?></div>
-            <h3 class="biography-name"><?php the_author_meta('display_name'); ?></h3>
+
+			<?php $hovercraft_byline_photo = get_theme_mod( 'hovercraft_byline_photo', 'none' );
+			if ( ($hovercraft_byline_photo == 'biography_only') || ($hovercraft_byline_photo == 'byline_and_biography') ) { ?>
+		<div class="biography-photo"><?php if (get_the_author_meta('user_email')) { echo get_avatar(get_the_author_meta('user_email'), '150'); } ?></div>
+		<?php } ?>
+			
+			<h3 class="biography-name"><?php the_author_meta('display_name'); ?></h3>
             <p class="biography-description"><?php echo nl2br( get_the_author_meta('description') ); ?></p>
 			<div class="clear"></div>
         </div><!-- author-biography -->
