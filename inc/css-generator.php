@@ -1796,9 +1796,19 @@ video.hero-background-video {
 /* post byline */
 
 .post-byline {
-	margin-bottom: 30px;	
-}	
-	
+	margin-bottom: 30px;
+	line-height: 16px;
+}
+
+.byline-photo {
+	display: inline-block;
+	margin-right: 5px;
+	vertical-align: middle;
+	clip-path: circle();
+	width: 25px;
+	height: 25px;
+}
+
 .post-author {
 	display: inline;
 }
