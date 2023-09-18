@@ -3100,8 +3100,8 @@ ul.product_list_widget li a:hover:before {
 .overlay .closebtn {
   	position: absolute;
   	top: 20px;
-  	right: 45px;
-  	font-size: 60px;
+  	right: 20px;
+  	font-size: 36px;
 }
 .overlay .closebtn:hover,
 .overlay .closebtn:focus{
