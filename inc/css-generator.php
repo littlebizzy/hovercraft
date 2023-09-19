@@ -1047,12 +1047,14 @@ button {
 
 @media screen and (min-width: 1200px) {
 .tile {
-	display: flex;
 	padding: 40px 40px;
   	justify-content: center;
   	align-items: center;
 	text-align: center;
 	box-shadow: inset 0px 0px 0px 1px <?php echo $default_text_color; ?>;
+	/* display: flex;
+	flex-wrap: wrap; */
+	display: inline-block;
 	}
 }
 
