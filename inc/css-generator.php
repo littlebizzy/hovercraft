@@ -738,28 +738,68 @@ h1 {
 	}
 }
 
+@media screen and (max-width: 1200px) {
 h2 {
+	font-weight: <?php echo $h2_font_weight; ?>;
+	font-size: <?php echo $h2_mobile_font_size; ?>px;
 	margin-bottom: 20px;
-	font-weight: 700;
-	font-size: 24px;
+	}
 }
 
+@media screen and (min-width: 1200px) {
+h2 {
+	font-weight: <?php echo $h2_font_weight; ?>;
+	font-size: <?php echo $h2_desktop_font_size; ?>px;
+	margin-bottom: 20px;
+	}
+}
+
+@media screen and (max-width: 1200px) {
 h3 {
+	font-weight: <?php echo $h3_font_weight; ?>;
+	font-size: <?php echo $h3_mobile_font_size; ?>px;
 	margin-bottom: 20px;
-	font-weight: 700;
-	font-size: 24px;
+	}
 }
 
+@media screen and (min-width: 1200px) {
+h3 {
+	font-weight: <?php echo $h3_font_weight; ?>;
+	font-size: <?php echo $h3_desktop_font_size; ?>px;
+	margin-bottom: 20px;
+	}
+}
+
+@media screen and (max-width: 1200px) {
 h4 {
+	font-weight: <?php echo $h4_font_weight; ?>;
+	font-size: <?php echo $h4_mobile_font_size; ?>px;
 	margin-bottom: 20px;
-	font-weight: 700;
-	font-size: 20px;
+	}
 }
 
-h5 {
+@media screen and (min-width: 1200px) {
+h4 {
+	font-weight: <?php echo $h4_font_weight; ?>;
+	font-size: <?php echo $h4_desktop_font_size; ?>px;
 	margin-bottom: 20px;
-	font-weight: 700;
-	font-size: 18px;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+h5 {
+	font-weight: <?php echo $h5_font_weight; ?>;
+	font-size: <?php echo $h5_mobile_font_size; ?>px;
+	margin-bottom: 20px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+h5 {
+	font-weight: <?php echo $h5_font_weight; ?>;
+	font-size: <?php echo $h5_desktop_font_size; ?>px;
+	margin-bottom: 20px;
+	}
 }
 	
 h5.author-biography-intro {
