@@ -1,4 +1,4 @@
-<?php /* Template Name: Mini Hero (No Sidebar) */ ?>
+<?php /* Template Name: Mini Hero Gallery (No Sidebar) */ ?>
 <?php get_template_part( 'header' ); ?>
 <?php get_template_part( 'template-parts/header/header-mini-hero' ); ?>
 
@@ -32,9 +32,7 @@ if ( !is_front_page() || ( is_front_page() && $hovercraft_homepage_hide_main_che
 
 		<div class="clear"></div>
 	</div><!-- primary-wide -->
-    
-    <?php get_template_part( 'template-parts/content/pagination' ); ?>
-	
+    	
     <div class="clear"></div>
 </div><!-- inner -->
 </div><!-- main -->
