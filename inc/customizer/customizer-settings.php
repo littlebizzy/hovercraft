@@ -2523,6 +2523,31 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// hero gradient status setting
+$wp_customize->add_setting( 'hovercraft_hero_gradient_status', array(
+    'default'    => 'all_hero_instances',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// hero gradient status control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_hero_gradient_status',
+        array(
+            'label'     => __('Hero Gradient Status', 'hovercraft'),
+			'description' => __( 'Which pages should the hero CSS gradient be applied?', 'hovercraft' ),
+            'section'   => 'hovercraft_hero_styling',
+            'settings'  => 'hovercraft_hero_gradient_status',
+            'type'      => 'select',
+			'choices' => array(
+				'all_hero_instances' => 'All Hero Instances',
+				'homepage_only' => 'Homepage Hero Only',
+				'none' => 'None (Disabled)'
+    			)
+        )
+) );
+
 // hero gradient start color transparency setting
 $wp_customize->add_setting( 'hovercraft_hero_gradient_start_color_transparency', array(
     'default'    => '0.50',
