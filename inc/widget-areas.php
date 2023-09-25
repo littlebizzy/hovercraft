@@ -216,8 +216,8 @@ function hovercraft_footer_one() {
 		'id'            => 'hovercraft_footer_one',
 		'before_widget' => '<div class="widget-footer-one widget-wrapper">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
 
 }
@@ -232,8 +232,8 @@ function hovercraft_footer_two() {
 		'id'            => 'hovercraft_footer_two',
 		'before_widget' => '<div class="widget-footer-two widget-wrapper">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
 
 }
@@ -248,8 +248,8 @@ function hovercraft_footer_three() {
 		'id'            => 'hovercraft_footer_three',
 		'before_widget' => '<div class="widget-footer-three widget-wrapper">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
 
 }
@@ -264,8 +264,8 @@ function hovercraft_footer_four() {
 		'id'            => 'hovercraft_footer_four',
 		'before_widget' => '<div class="widget-footer-four widget-wrapper">',
 		'after_widget'  => '</div>',
-		'before_title'  => '<h3 class="widget-title">',
-		'after_title'   => '</h3>',
+		'before_title'  => '<h4 class="widget-title">',
+		'after_title'   => '</h4>',
 	) );
 
 }
