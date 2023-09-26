@@ -1756,12 +1756,20 @@ video.hero-background-video {
 	color: <?php echo $posthero_text_color; ?>;
 	}
 }
+
+#posthero .widget-wrapper {
+	display: inline-block;
+}
+
+#posthero .widget_text {
+	display: block;
+}
 	
 #posthero img {
 	margin-right: 30px;
 }
 	
-#posthero img:last-child {
+#posthero img:last-of-type {
 	margin-right: 0;
 }
 
@@ -1769,8 +1777,9 @@ video.hero-background-video {
 	color: <?php echo $posthero_link_color; ?>;
 	text-decoration: <?php echo $posthero_link_decoration; ?>;
 }
-	
-#posthero h3:last-child, #posthero h4:last-child {
+
+/* no bottom margin if the only thing in posthero is a paragraph or heading title */
+#posthero p:last-child, #posthero h2:last-child, #posthero h3:last-child, #posthero h4:last-child, #posthero h5:last-child {
 	margin-bottom: 0;
 }
 
