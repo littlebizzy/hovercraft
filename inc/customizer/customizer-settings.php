@@ -476,6 +476,31 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// post tags setting
+$wp_customize->add_setting( 'hovercraft_post_tags', array(
+    'default'    => 'native_posts_only',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// post tags control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_post_tags',
+        array(
+            'label'     => __( 'Post Tags Display', 'hovercraft' ),
+			'description' => __( 'Should the Tags be displayed at the bottom of articles or not?', 'hovercraft' ),
+            'section'   => 'hovercraft_blog',
+            'settings'  => 'hovercraft_post_tags',
+            'type'      => 'select',
+			'choices' => array(
+        		'none' => 'None (Disabled)',
+				'native_posts_only' => 'Native Posts Only',
+				'native_posts_and_pages' => 'Native Posts & Pages'
+    			)
+        )
+) );
+
 // fonts section
 $wp_customize->add_section( 'hovercraft_fonts', array(
     'title'      => 'Fonts',
