@@ -30,8 +30,11 @@
 					<?php endwhile; endif; ?><!-- the loop -->
 					
 					<?php get_template_part( 'template-parts/content/biography' ); ?>
-			
-					<?php get_template_part( 'template-parts/content/tags' ); ?>
+
+					<?php $hovercraft_post_tags = get_theme_mod( 'hovercraft_post_tags', 'native_posts_only' );
+					if ( $hovercraft_post_tags != 'none' ) { ?>
+						<?php get_template_part( 'template-parts/content/tags' ); ?>
+					<?php } ?>
 					
 					<?php get_template_part( 'template-parts/content/link-pages' ); ?>
 					
