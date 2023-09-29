@@ -160,8 +160,16 @@ table {
 	margin-bottom: 30px;
 }
 
+@media screen and (max-width: 1200px) {
+p {
+	margin-bottom: 20px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
 p {
 	margin-bottom: 30px;
+	}
 }
 
 ul {
@@ -2626,6 +2634,18 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 @media screen and (min-width: 1200px) {
 #respond {
 	margin-top: 40px;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+p.akismet_comment_form_privacy_notice {
+	padding: 0 20px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+p.akismet_comment_form_privacy_notice {
+	padding: 0;
 	}
 }
 
