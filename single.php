@@ -44,10 +44,11 @@
 	
 	<div class="clear"></div>
 	</div><!-- content -->
-	
-	<?php comments_template(); ?> 
 
-		<div class="clear"></div>
+	<!-- comments template outside of post content div -->
+	<?php comments_template(); ?>
+
+	<div class="clear"></div>
 	</div><!-- primary -->
 		
     	<?php if ( get_theme_mod( 'hovercraft_sidebar_status' ) == 1 ) { 
