@@ -21,6 +21,7 @@ function hovercraft_generate_css(){
 	$half_hero_background_position = get_theme_mod( 'hovercraft_half_hero_background_position', 'center_center' );
 	$mini_hero_background_position = get_theme_mod( 'hovercraft_mini_hero_background_position', 'center_center' );
 	$sitewide_layout = get_theme_mod( 'hovercraft_sitewide_layout', 'floating_islands' );
+	$tiles_across = get_theme_mod( 'hovercraft_tiles_across', '3' );
 	$scroll_to_top = get_theme_mod( 'hovercraft_scroll_to_top', 'mobile_only' );
 	$mobile_topbar_widget = get_theme_mod( 'hovercraft_mobile_topbar', 'topbar_left' );
 	$mobile_preheader_widget = get_theme_mod( 'hovercraft_mobile_preheader', 'none' );
@@ -1058,7 +1059,11 @@ button {
 #tiles {
 	width: 100%;
 	display: grid;
-  	grid-template-columns: repeat(auto-fill, 380px);
+  	<?php if ( $tiles_across == '3' ) { 
+			echo "grid-template-columns: repeat(auto-fill, 380px);\n"; 
+		} elseif ( $tiles_across == '4' ) { 
+			echo "grid-template-columns: repeat(auto-fill, 370px);\n"; 
+		}  ?>
   	grid-gap: 30px;
 	}
 }
