@@ -1060,11 +1060,11 @@ button {
 	width: 100%;
 	display: grid;
   	<?php if ( $tiles_across == '3' ) { 
-			echo "grid-template-columns: repeat(auto-fill, 380px);\n"; 
+			echo "grid-template-columns: repeat(3, 1fr);\n"; 
 		} elseif ( $tiles_across == '4' ) { 
-			echo "grid-template-columns: repeat(auto-fill, 370px);\n"; 
-		}  ?>
-  	grid-gap: 30px;
+			echo "grid-template-columns: repeat(4, 1fr);\n"; 
+	} ?>
+  	gap: 30px;
 	}
 }
 
@@ -1079,8 +1079,12 @@ button {
 #tiles-wide {
 	width: 100%;
 	display: grid;
-  	grid-template-columns: repeat(auto-fill, 380px);
-  	grid-gap: 30px;
+  	<?php if ( $tiles_across == '3' ) { 
+			echo "grid-template-columns: repeat(3, 1fr);\n"; 
+		} elseif ( $tiles_across == '4' ) { 
+			echo "grid-template-columns: repeat(4, 1fr);\n"; 
+	} ?>
+  	gap: 30px;
 	}
 }
 
@@ -1100,7 +1104,7 @@ button {
 		} else { 
 			echo "grid-template-columns: repeat(auto-fill, 344px);\n"; 
 		}  ?>
-  	grid-gap: 40px;
+  	gap: 40px;
 	}
 }
 
@@ -1116,13 +1120,12 @@ button {
 
 @media screen and (min-width: 1200px) {
 .tile {
-	padding: 40px 40px;
+	max-width: 100%;
+	padding: 30px;
   	justify-content: center;
   	align-items: center;
 	text-align: center;
 	box-shadow: inset 0px 0px 0px 1px <?php echo $default_text_color; ?>;
-	/* display: flex;
-	flex-wrap: wrap; */
 	display: inline-block;
 	}
 }
