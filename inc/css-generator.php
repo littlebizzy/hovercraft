@@ -3145,21 +3145,22 @@ ul.product_list_widget li a:hover:before {
 	cursor: pointer;
 }
 .overlay {   
-  	height: 0;
-  	width: 100%;
-  	position: fixed; 
+	position: fixed; 
+	overflow-x: hidden;
+   	overflow-y: scroll;
+   	overscroll-behavior: contain;
+   	top: 0; right: 0; bottom: 0; left: 0; 
+
   	z-index: 9999; 
-  	left: 0;
-  	top: 0;
-  	background-color: rgb(0,0,0);
   	background-color: rgba(0,0,0, 0.9); 
-  	overflow-x: hidden; 
   	transition: 0.5s; 
 }
 .overlay-content {
+	max-width: 768px;
+	width: 100%; 
+	height: 100%;
+	
   	position: relative;
-  	top: 25%; 
-  	width: 100%; 
   	text-align: center; 
 }
 .overlay ul.menu{
