@@ -3174,20 +3174,22 @@ ul.product_list_widget li a:hover:before {
 	padding: 40px 0px;
 }
 
+.overlay ul a {
+	display: block;
+  	padding: 5px 0;
+	font-size: 18px;
+}
+
 .overlay ul.sub-menu {
 	list-style: none;
 	margin-left: 0px;
 	padding-left: 0px;
 	font-style: italic;
-  	background-color: rgba(0,0,0, 0.60);
 }
 	
 .overlay a {
-  	padding: 8px;
   	text-decoration: none;
-  	font-size: 18px;
   	color: #818181;
-  	display: block;
   	transition: 0.3s;
 }
 
@@ -3201,7 +3203,7 @@ ul.product_list_widget li a:hover:before {
   	text-decoration: none;
 }
 
-.overlay .closebtn {
+.overlay .closebtn i {
   	position: absolute;
   	top: 20px;
   	right: 20px;
@@ -3209,23 +3211,14 @@ ul.product_list_widget li a:hover:before {
 	z-index: 99999;
 }
 
-.overlay .closebtn:hover,
-.overlay .closebtn:focus {
+.overlay .closebtn i:hover,
+.overlay .closebtn i:focus {
 	text-decoration: none;
 	outline: none;
 }
 
-@media screen and (max-height: 450px) {
-	.overlay .closebtn {
-		font-size: 60px;
-		top: 15px;
-		right: 35px;
-	}
-	.overlay-content{
-		margin-top: 30px;
-		margin-bottom: 30px;
-	}
-}
+
+	
 @media screen and (max-width: 800px) {
 	nav#site-navigation{
 		display: none;
