@@ -3138,12 +3138,14 @@ ul.product_list_widget li a:hover:before {
 /***************************/
 /*start mobile menu overlay*/
 /***************************/
-.mobile-menu-trig{
+.mobile-menu-trig {
 	/*display: none;*/
 }
-.mobile-menu-trig:hover{
+
+.mobile-menu-trig:hover {
 	cursor: pointer;
 }
+
 .overlay {   
 	position: fixed; 
 	overflow-x: hidden;
@@ -3151,10 +3153,12 @@ ul.product_list_widget li a:hover:before {
    	overscroll-behavior: contain;
    	top: 0; right: 0; bottom: 0; left: 0; 
 
+	height: 0;
   	z-index: 9999; 
   	background-color: rgba(0,0,0, 0.9); 
   	transition: 0.5s; 
 }
+
 .overlay-content {
 	max-width: 768px;
 	width: 100%; 
@@ -3163,32 +3167,36 @@ ul.product_list_widget li a:hover:before {
   	position: relative;
   	text-align: center; 
 }
-.overlay ul.menu{
+
+.overlay ul.menu {
 	list-style: none;
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 40px 0px;
 }
-.overlay ul.sub-menu{
+
+.overlay ul.sub-menu {
 	list-style: none;
 	margin-left: 0px;
 	padding-left: 0px;
 	font-style: italic;
-	background-color: rgb(0,0,0); /* Black fallback color */
-  	background-color: rgba(0,0,0, 0.60); /* Black w/opacity */
+  	background-color: rgba(0,0,0, 0.60);
 }
+	
 .overlay a {
   	padding: 8px;
   	text-decoration: none;
-  	font-size: 20px;
+  	font-size: 18px;
   	color: #818181;
   	display: block;
   	transition: 0.3s;
 }
-.overlay li.current-menu-item a{
-	color: #fff;
+
+.overlay li.current-menu-item a {
+	color: #ffffff;
 }
+
 .overlay a:hover, 
-.overlay a:focus{
+.overlay a:focus {
   	color: #f1f1f1;
   	text-decoration: none;
 }
@@ -3198,9 +3206,11 @@ ul.product_list_widget li a:hover:before {
   	top: 20px;
   	right: 20px;
   	font-size: 36px;
+	z-index: 99999;
 }
+
 .overlay .closebtn:hover,
-.overlay .closebtn:focus{
+.overlay .closebtn:focus {
 	text-decoration: none;
 	outline: none;
 }
