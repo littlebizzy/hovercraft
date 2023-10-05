@@ -30,6 +30,9 @@ require get_template_directory() . '/inc/custom-post-test.php';
 // customizer settings
 require get_template_directory() . '/inc/customizer/customizer-settings.php';
 
+// disable responsive images
+require get_template_directory() . '/inc/disable-responsive-images.php';
+
 // featured images
 require get_template_directory() . '/inc/featured-images.php';
 
