@@ -2364,6 +2364,11 @@ p.biography-description {
 	}
 }
 
+#home-postmain-top a {
+	color: <?php echo $postmain_top_link_color; ?>;
+	text-decoration: <?php echo $postmain_top_link_decoration; ?>;
+}
+
 
 /* home-postmain-bottom */
 
@@ -2384,6 +2389,11 @@ p.biography-description {
 	color: <?php echo $postmain_bottom_text_color; ?>;
 	padding: 30px 0px;
 	}
+}
+
+#home-postmain-bottom a {
+	color: <?php echo $postmain_bottom_link_color; ?>;
+	text-decoration: <?php echo $postmain_bottom_link_decoration; ?>;
 }
 
 
