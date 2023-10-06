@@ -259,7 +259,6 @@ iframe {
 	width: 100%;
 	display: table;
 	padding: 10px 20px;
-	border-bottom: 1px solid rgba(255,255,255, 0.2);
 	background: rgba(55, 71, 79, 0.2);
 	position: relative; /* required when using video background on splash-wide */
 	color: #ffffff;
@@ -272,7 +271,6 @@ iframe {
 	display: table;
 	margin: 0px auto;
 	padding: 20px 0px;
-	border-bottom: 1px solid rgba(255,255,255, 0.2);
 	background: rgba(55, 71, 79, 0.2);
 	position: relative; /* required when using video background on splash-wide */
 	color: #ffffff;
@@ -325,7 +323,6 @@ h1.full-hero-title {
 	width: 100%;
 	display: table;
 	padding: 10px 20px;
-	border-bottom: 1px solid transparent;
 	background: #ffffff;
 	color: <?php echo $default_text_color; ?>;
 	}
@@ -337,7 +334,6 @@ h1.full-hero-title {
 	display: table;
 	margin: 0px auto;
 	padding: 20px 0px;
-	border-bottom: 1px solid transparent;
 	background: #ffffff;
 	color: <?php echo $default_text_color; ?>;
 	}
@@ -1588,7 +1584,6 @@ video.hero-background-video {
 	width: 100%;
 	display: table;
 	padding: 10px 20px;
-	border-bottom: 1px solid transparent;
 	background: <?php echo $header_mini_hero_background_color; ?>;
 	color: <?php echo $mini_hero_header_text_color; ?>;
 	}
@@ -1600,7 +1595,6 @@ video.hero-background-video {
 	display: table;
 	margin: 0px auto;
 	padding: 20px 0px;
-	border-bottom: 1px solid transparent;
 	background: <?php echo $header_mini_hero_background_color; ?>;
 	color: <?php echo $mini_hero_header_text_color; ?>;
 	}
@@ -1623,7 +1617,6 @@ video.hero-background-video {
 	width: 100%;
 	display: table;
 	padding: 10px 20px;
-	border-bottom: 1px solid transparent;
 	background: <?php echo $header_basic_background_color; ?>;
 	color: <?php echo $basic_hero_header_text_color; ?>;
 	}
@@ -1635,7 +1628,6 @@ video.hero-background-video {
 	display: table;
 	margin: 0px auto;
 	padding: 20px 0px;
-	border-bottom: 1px solid transparent;
 	background: <?php echo $header_basic_background_color; ?>;
 	color: <?php echo $basic_hero_header_text_color; ?>;
 	}
