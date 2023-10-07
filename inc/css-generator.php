@@ -95,6 +95,12 @@ function hovercraft_generate_css(){
 	$postmain_bottom_background_color = get_theme_mod( 'hovercraft_postmain_bottom_background_color', '#eceff1' );
 	$postmain_bottom_text_color = get_theme_mod( 'hovercraft_postmain_bottom_text_color', '#263238' );
 	$postmain_bottom_link_color = get_theme_mod( 'hovercraft_postmain_bottom_link_color', '#5C6BC0' );
+	$premain_top_background_color = get_theme_mod( 'hovercraft_premain_top_background_color', '#eceff1' );
+	$premain_top_text_color = get_theme_mod( 'hovercraft_premain_top_text_color', '#263238' );
+	$premain_top_link_color = get_theme_mod( 'hovercraft_premain_top_link_color', '#5C6BC0' );
+	$premain_bottom_background_color = get_theme_mod( 'hovercraft_premain_bottom_background_color', '#eceff1' );
+	$premain_bottom_text_color = get_theme_mod( 'hovercraft_premain_bottom_text_color', '#263238' );
+	$premain_bottom_link_color = get_theme_mod( 'hovercraft_premain_bottom_link_color', '#5C6BC0' );
     $prefooter_top_background_color = get_theme_mod( 'hovercraft_prefooter_top_background_color', '#eceff1' );
 	$prefooter_top_text_color = get_theme_mod( 'hovercraft_prefooter_top_text_color', '#263238' );
 	$prefooter_top_link_color = get_theme_mod( 'hovercraft_prefooter_top_link_color', '#5C6BC0' );
@@ -2335,6 +2341,60 @@ p.biography-description {
 }
 
 
+/* home-premain-top */
+
+@media screen and (max-width: 1200px) {
+#home-premain-top {
+	width: 100%;
+	background: <?php echo $premain_top_background_color; ?>;
+	color: <?php echo $premain_top_text_color; ?>;
+	padding: 20px 20px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+#home-premain-top {
+	width: 100%;
+	margin: 0px auto;
+	background: <?php echo $premain_top_background_color; ?>;
+	color: <?php echo $premain_top_text_color; ?>;
+	padding: 30px 0px;
+	}
+}
+
+#home-premain-top a {
+	color: <?php echo $premain_top_link_color; ?>;
+	text-decoration: <?php echo $premain_top_link_decoration; ?>;
+}
+
+
+/* home-premain-bottom */
+
+@media screen and (max-width: 1200px) {
+#home-premain-bottom {
+	width: 100%;
+	background: <?php echo $premain_bottom_background_color; ?>;
+	color: <?php echo $premain_bottom_text_color; ?>;
+	padding: 20px 20px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+#home-premain-bottom {
+	width: 100%;
+	margin: 0px auto;
+	background: <?php echo $premain_bottom_background_color; ?>;
+	color: <?php echo $premain_bottom_text_color; ?>;
+	padding: 30px 0px;
+	}
+}
+
+#home-premain-bottom a {
+	color: <?php echo $premain_bottom_link_color; ?>;
+	text-decoration: <?php echo $premain_bottom_link_decoration; ?>;
+}
+
+
 /* home-postmain-top */
 
 @media screen and (max-width: 1200px) {
@@ -2502,10 +2562,18 @@ p.biography-description {
 }
 
 @media screen and (min-width: 1200px) {
-.gallery {
+.gallery-narrow-wrapper > .gallery {
 	columns: 2;
 	column-fill: balance;
 	column-gap: 20px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+.gallery-wide-wrapper > .gallery {
+	columns: 3;
+	column-fill: balance;
+	column-gap: 2px;
 	}
 }
 
