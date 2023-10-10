@@ -3224,7 +3224,7 @@ ul.product_list_widget li a:hover:before {
    	top: 0; right: 0; bottom: 0; left: 0; 
 
 	height: 0;
-  	z-index: 9999; 
+  	z-index: 999999; 
   	background-color: rgba(0,0,0, 0.9); 
   	transition: 0.5s; 
 }
@@ -3278,7 +3278,7 @@ ul.product_list_widget li a:hover:before {
   	top: 20px;
   	right: 20px;
   	font-size: 36px;
-	z-index: 99999;
+	z-index: 999999;
 }
 
 .overlay .closebtn i:hover,
