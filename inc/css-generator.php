@@ -58,6 +58,8 @@ function hovercraft_generate_css(){
 	$h5_mobile_font_size = get_theme_mod( 'hovercraft_h5_mobile_font_size', '18' );
 	$h5_desktop_font_size = get_theme_mod( 'hovercraft_h5_desktop_font_size', '18' );
 	$h5_font_weight = get_theme_mod( 'hovercraft_h5_font_weight', '700' );
+	$full_hero_header_background_color = get_theme_mod( 'hovercraft_full_hero_header_background_color', '#263238' );
+	$full_hero_header_background_transparency = get_theme_mod( 'hovercraft_full_hero_header_background_transparency', '0.20' );
 	$hero_gradient_angle = get_theme_mod( 'hovercraft_hero_gradient_angle', '60deg' );
 	$hero_gradient_start_color_transparency = get_theme_mod( 'hovercraft_hero_gradient_start_color_transparency', '0.50' );
 	$hero_gradient_stop_color_transparency = get_theme_mod( 'hovercraft_hero_gradient_stop_color_transparency', '0.50' );
@@ -265,7 +267,7 @@ iframe {
 	width: 100%;
 	display: table;
 	padding: 10px 20px;
-	background: rgba(55, 71, 79, 0.2);
+	background: <?php list($r1, $g1, $b1) = sscanf($full_hero_header_background_color, "#%02x%02x%02x"); echo "rgba({$r1}, {$g1}, {$b1}, {$full_hero_header_background_transparency})"; ?>;
 	position: relative; /* required when using video background on splash-wide */
 	color: #ffffff;
 	}
@@ -277,7 +279,7 @@ iframe {
 	display: table;
 	margin: 0px auto;
 	padding: 20px 0px;
-	background: rgba(55, 71, 79, 0.2);
+	background: <?php list($r1, $g1, $b1) = sscanf($full_hero_header_background_color, "#%02x%02x%02x"); echo "rgba({$r1}, {$g1}, {$b1}, {$full_hero_header_background_transparency})"; ?>;
 	position: relative; /* required when using video background on splash-wide */
 	color: #ffffff;
 	}
