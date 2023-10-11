@@ -1485,6 +1485,21 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	)
 ) );
 
+// full hero header background color setting
+$wp_customize->add_setting( 'hovercraft_full_hero_header_background_color', array(
+	'default' => '#37474f',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+ 
+// full hero header background color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_full_hero_header_background_color', array(
+	'label' => 'Full Hero Header Background Color',
+	'description' => 'This is a description',
+	'section' => 'colors',
+	'settings' => 'hovercraft_full_hero_header_background_color'
+	)
+) );
+
 // hero gradient start color setting
 $wp_customize->add_setting( 'hovercraft_hero_gradient_start_color', array(
 	'default' => '#37474f',
@@ -2602,6 +2617,48 @@ $wp_customize->add_control( new WP_Customize_Control(
 				'all_hero_instances' => 'All Hero Instances',
 				'homepage_only' => 'Homepage Hero Only',
 				'none' => 'None (Disabled)'
+    			)
+        )
+) );
+
+// full hero header background transparency setting
+$wp_customize->add_setting( 'hovercraft_full_hero_header_background_transparency', array(
+    'default'    => '0.20',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
+	) 
+);
+
+// full hero header background transparency control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_full_hero_header_background_transparency',
+        array(
+            'label'     => __('Full Hero Header Background Transparency', 'hovercraft'),
+			'description' => __( 'Transparency of the Full Hero header background color', 'hovercraft' ),
+            'section'   => 'hovercraft_hero_styling',
+            'settings'  => 'hovercraft_full_hero_header_background_transparency',
+            'type'      => 'select',
+			'choices' => array(
+        		'0.0' => '0.00',
+        		'0.10' => '0.10',
+				'0.15' => '0.15',
+				'0.20' => '0.20',
+        		'0.25' => '0.25',
+				'0.30' => '0.30',
+				'0.35' => '0.35',
+				'0.40' => '0.40',
+				'0.45' => '0.45',
+        		'0.50' => '0.50',
+				'0.55' => '0.55',
+				'0.60' => '0.60',
+				'0.65' => '0.65',
+				'0.70' => '0.70',
+        		'0.75' => '0.75',
+				'0.80' => '0.80',
+				'0.85' => '0.85',
+				'0.90' => '0.90',
+				'0.95' => '0.95',
+        		'1.0' => '1.00',
     			)
         )
 ) );
