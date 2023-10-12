@@ -1740,6 +1740,51 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	)
 ) );
 
+// sidebar widget background color setting
+$wp_customize->add_setting( 'hovercraft_sidebar_widget_background_color', array(
+	'default' => '#ffffff',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+
+// sidebar widget background color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_sidebar_widget_background_color', array(
+	'label' => 'Sidebar widget Background Color',
+	'description' => 'Specify background color of default sidebar widgets?',
+	'section' => 'colors',
+	'settings' => 'hovercraft_sidebar_widget_background_color'
+	)
+) );
+	
+// sidebar widget text color setting
+$wp_customize->add_setting( 'hovercraft_sidebar_widget_text_color', array(
+	'default' => '#263238',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+
+// sidebar widget text color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_sidebar_widget_text_color', array(
+	'label' => 'Sidebar widget Text Color',
+	'description' => 'Specify text color of default sidebar widgets?',
+	'section' => 'colors',
+	'settings' => 'hovercraft_sidebar_widget_text_color'
+	)
+) );
+	
+// sidebar widget link color setting
+$wp_customize->add_setting( 'hovercraft_sidebar_widget_link_color', array(
+	'default' => '#5C6BC0',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+
+// sidebar widget link color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_sidebar_widget_link_color', array(
+	'label' => 'Sidebar widget Link Color',
+	'description' => 'Specify link color of default sidebar widgets?',
+	'section' => 'colors',
+	'settings' => 'hovercraft_sidebar_widget_link_color'
+	)
+) );
+
 // main background color setting
 $wp_customize->add_setting( 'hovercraft_main_background_color', array(
 	'default' => '#eceff1',
