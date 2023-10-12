@@ -2760,35 +2760,6 @@ p.akismet_comment_form_privacy_notice {
 
 
 /**
-* Reset
-* - Prevents Themes and other Plugins from applying their own styles to our full screen search
-*/
-#full-screen-search,
-#full-screen-search button,
-#full-screen-search button.close,
-#full-screen-search form,
-#full-screen-search form div,
-#full-screen-search form div input,
-#full-screen-search form div input.search {
-    background:none;
-    float:none;
-    font-size:100%;
-    height:auto;
-    list-style:none;
-    outline:none;
-    position:static;
-    text-decoration:none;
-    text-indent:0;
-    width:auto;
-    visibility:visible;
-    overflow:visible;
-    margin:0;
-    padding:0;
-    line-height:1;
-    transition: none;
-}
-
-/**
 * Background
 */
 #full-screen-search {
