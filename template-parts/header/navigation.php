@@ -76,3 +76,5 @@
 		
 <div class="clear"></div>
 </div><!-- inner -->
+
+<!-- https://www.wpbeginner.com/plugins/how-to-add-a-full-screen-search-overlay-in-wordpress/ -->
