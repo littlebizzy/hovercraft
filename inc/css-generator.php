@@ -90,6 +90,9 @@ function hovercraft_generate_css(){
 	$sidebar_callout_background_color = get_theme_mod( 'hovercraft_sidebar_callout_background_color', '#283593' );
 	$sidebar_callout_text_color = get_theme_mod( 'hovercraft_sidebar_callout_text_color', '#ffffff' );
 	$sidebar_callout_link_color = get_theme_mod( 'hovercraft_sidebar_callout_link_color', '#ffffff' );
+	$sidebar_widget_background_color = get_theme_mod( 'hovercraft_sidebar_widget_background_color', '#ffffff' );
+	$sidebar_widget_text_color = get_theme_mod( 'hovercraft_sidebar_widget_text_color', '#263238' );
+	$sidebar_widget_link_color = get_theme_mod( 'hovercraft_sidebar_widget_link_color', '#5C6BC0' );
 	$main_background_color = get_theme_mod( 'hovercraft_main_background_color', '#eceff1' );
 	$postmain_top_background_color = get_theme_mod( 'hovercraft_postmain_top_background_color', '#eceff1' );
 	$postmain_top_text_color = get_theme_mod( 'hovercraft_postmain_top_text_color', '#263238' );
@@ -2297,7 +2300,12 @@ p.biography-description {
 #sidebar .widget-wrapper {
 	width: 100%;
 	padding: 40px 40px;
-	background: #ffffff;
+	background: <?php echo $sidebar_widget_background_color; ?>;
+	color: <?php echo $sidebar_widget_text_color; ?>;
+}
+
+#sidebar .widget-wrapper a {
+	color: <?php echo $sidebar_widget_link_color; ?>;
 }
 
 @media screen and (max-width: 1200px) {
