@@ -2787,7 +2787,7 @@ p.akismet_comment_form_privacy_notice {
     visibility: visible;
     opacity: 1;
 	position: fixed;
-	z-index: 99998;
+	z-index: 999998;
 }
 
 /**
@@ -2804,9 +2804,11 @@ p.akismet_comment_form_privacy_notice {
 */
 #full-screen-search button.close {
     position: absolute;
-    z-index: 99999;
-    top: 40px;
-    right: 40px;
+    z-index: 999999;
+    top: 20px;
+    right: 20px;
+	padding: 0 !important;
+	background: transparent;
     color: #ffffff;
     cursor: pointer;
 }
