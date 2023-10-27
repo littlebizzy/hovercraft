@@ -184,6 +184,20 @@ p {
 	}
 }
 
+/* wordpress video/media container */
+@media screen and (max-width: 1200px) {
+.mejs-container {
+	margin-bottom: 20px;
+	}
+}
+
+/* wordpress video/media container */
+@media screen and (min-width: 1200px) {
+.mejs-container {
+	margin-bottom: 30px;
+	}
+}
+
 ul {
 	list-style-position: inside;
 }
