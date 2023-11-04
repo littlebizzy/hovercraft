@@ -34,6 +34,9 @@
 				else { get_template_part( 'template-parts/content/featured-image-archive' ); } ?>
 				
 				<h4><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h4>
+
+				<?php get_template_part( 'template-parts/content/byline-archive' ); ?>
+		
 				<div class="post-excerpt-archive"><?php the_excerpt(); ?></div>
 				</div><!-- post-tease-archive -->
 		
