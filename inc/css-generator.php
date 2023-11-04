@@ -1900,6 +1900,11 @@ video.hero-background-video {
 	line-height: 16px;
 }
 
+.post-byline-archive {
+	margin-bottom: 20px;
+	line-height: 1;
+}
+
 .byline-photo {
 	display: inline-block;
 	margin-right: 5px;
