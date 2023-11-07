@@ -40,6 +40,7 @@ function hovercraft_generate_css(){
 	$main_menu_font_weight = get_theme_mod( 'hovercraft_main_menu_font_weight', '600' );
 	$after_byline_mobile_font_size = get_theme_mod( 'hovercraft_after_byline_mobile_font_size', '12' );
 	$after_byline_desktop_font_size = get_theme_mod( 'hovercraft_after_byline_desktop_font_size', '12' );
+	$after_byline_padding = get_theme_mod( 'hovercraft_after_byline_padding', '0' );
 	$h1_font_family = get_theme_mod( 'hovercraft_h1_font', 'noto_sans' );
 	$h1_mobile_font_size = get_theme_mod( 'hovercraft_h1_mobile_font_size', '36' );
 	$h1_desktop_font_size = get_theme_mod( 'hovercraft_h1_desktop_font_size', '48' );
@@ -236,6 +237,7 @@ iframe {
 @media screen and (max-width: 1200px) {
 .after-byline {
 	font-size: <?php echo $after_byline_mobile_font_size; ?>px;
+	padding: <?php echo $after_byline_padding; ?>px;
 	margin-bottom: 20px;
 	}
 }
@@ -243,6 +245,7 @@ iframe {
 @media screen and (min-width: 1200px) {
 .after-byline {
 	font-size: <?php echo $after_byline_desktop_font_size; ?>px;
+	padding: <?php echo $after_byline_padding; ?>px;
 	margin-bottom: 30px;
 	}
 }
