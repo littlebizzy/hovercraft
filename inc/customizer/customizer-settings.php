@@ -967,7 +967,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 
 // after byline (desktop) setting
 $wp_customize->add_setting( 'hovercraft_after_byline_desktop_font_size', array(
-    'default'    => '14',
+    'default'    => '12',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
 	) 
 );
@@ -987,7 +987,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 
 // after byline (mobile) setting
 $wp_customize->add_setting( 'hovercraft_after_byline_mobile_font_size', array(
-    'default'    => '14',
+    'default'    => '12',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
 	) 
 );
