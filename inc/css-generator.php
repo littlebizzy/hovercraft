@@ -1201,6 +1201,10 @@ button {
 	margin-bottom: 10px;
 }
 
+.faq-item {
+	display: inline-block;
+}
+
 
 /* main menu (desktop) */
 
