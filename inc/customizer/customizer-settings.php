@@ -1754,6 +1754,21 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	'settings' => 'hovercraft_posthero_link_color'
 	)
 ) );
+
+// after byline background color setting
+$wp_customize->add_setting( 'hovercraft_after_byline_background_color', array(
+	'default' => '#fff8e1',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+
+// after byline background color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_after_byline_background_color', array(
+	'label' => 'After Byline Background Color',
+	'description' => 'Applies to the After Byline widget element.',
+	'section' => 'colors',
+	'settings' => 'hovercraft_after_byline_background_color'
+	)
+) );
 	
 // sidebar callout background color setting
 $wp_customize->add_setting( 'hovercraft_sidebar_callout_background_color', array(
