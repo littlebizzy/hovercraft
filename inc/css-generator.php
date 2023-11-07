@@ -236,12 +236,14 @@ iframe {
 @media screen and (max-width: 1200px) {
 .after-byline {
 	font-size: <?php echo $after_byline_mobile_font_size; ?>px;
+	margin-bottom: 20px;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 .after-byline {
 	font-size: <?php echo $after_byline_desktop_font_size; ?>px;
+	margin-bottom: 30px;
 	}
 }
 
