@@ -965,6 +965,46 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// after byline (desktop) setting
+$wp_customize->add_setting( 'hovercraft_after_byline_desktop_font_size', array(
+    'default'    => '14',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
+	) 
+);
+
+// after byline (desktop) control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_after_byline_desktop_font_size',
+        array(
+            'label'     => __( 'After Byline Font Size (Desktop)', 'hovercraft' ),
+			'description' => __( 'Specify font size to use, in pixels, for the After Byline widget on desktop devices?', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_after_byline_desktop_font_size',
+            'type' => 'text'
+        )
+) );
+
+// after byline (mobile) setting
+$wp_customize->add_setting( 'hovercraft_after_byline_mobile_font_size', array(
+    'default'    => '14',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
+	) 
+);
+
+// after byline (mobile) control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_after_byline_mobile_font_size',
+        array(
+            'label'     => __( 'After Byline Font Size (Mobile)', 'hovercraft' ),
+			'description' => __( 'Specify font size to use, in pixels, for the After Byline widget on mobile devices?', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_after_byline_mobile_font_size',
+            'type' => 'text'
+        )
+) );
+
 // h1 font family setting
 $wp_customize->add_setting( 'hovercraft_h1_font', array(
     'default'    => 'noto_sans',
