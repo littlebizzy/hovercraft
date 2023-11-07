@@ -157,6 +157,26 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// after byline padding setting (desktop)
+$wp_customize->add_setting( 'hovercraft_after_byline_padding', array(
+    'default'    => '0',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
+	) 
+);
+
+// after byline padding control (desktop)
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_after_byline_padding',
+        array(
+            'label'     => __( 'After Byline Padding', 'hovercraft' ),
+			'description' => __( 'Specificy After Byline widget padding in pixels?', 'hovercraft' ),
+            'section'   => 'hovercraft_general',
+            'settings'  => 'hovercraft_after_byline_padding',
+            'type' => 'text'
+        )
+) );
+
 // tiles across setting
 $wp_customize->add_setting( 'hovercraft_tiles_across', array(
     'default'    => '3',
