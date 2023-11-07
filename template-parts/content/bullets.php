@@ -18,8 +18,10 @@
 
         <?php if ($the_query->have_posts()) : ?>
             <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
+				<div class="faq-item">
                 <h5><?php the_title(); ?></h5>
                 <?php the_content(); ?>
+				</div><!-- faq-item -->
 
             <?php endwhile; ?>
             <?php wp_reset_postdata(); ?>
