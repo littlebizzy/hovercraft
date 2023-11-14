@@ -176,39 +176,6 @@ $wp_customize->add_control( new WP_Customize_Control(
             'type' => 'text'
         )
 ) );
-
-// tiles across setting
-$wp_customize->add_setting( 'hovercraft_tiles_across', array(
-    'default'    => '3',
-	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
-);
-
-// tiles across control
-$wp_customize->add_control( new WP_Customize_Control(
-        $wp_customize,
-        'hovercraft_tiles_across',
-        array(
-            'label'     => __('Tiles Across (Desktop)', 'hovercraft'),
-			'description' => __( 'How many tiles across should display in the tiles widget area? (How many columns)', 'hovercraft' ),
-            'section'   => 'hovercraft_general',
-            'settings'  => 'hovercraft_tiles_across',
-            'type'      => 'select',
-			'choices' => array(
-        		'2' => '2 Columns',
-        		'3' => '3 Columns',
-				'4' => '4 Columns',
-				'5' => '5 Columns',
-        		'6' => '6 Columns',
-				'7' => '7 Columns',
-				'8' => '8 Columns',
-				'9' => '9 Columns',
-				'10' => '10 Columns',
-        		'11' => '11 Columns',
-				'12' => '12 Columns'
-    			)
-        )
-) );
 	
 // posthero widget display setting
 $wp_customize->add_setting( 'hovercraft_posthero_widget_display', array(
@@ -419,6 +386,45 @@ $wp_customize->add_control(
         )
     )
 );
+
+// page layouts section
+$wp_customize->add_section( 'hovercraft_page_layouts', array(
+    'title'      => 'Page Layouts',
+    'priority'   => 34,
+) );
+
+// tiles across setting
+$wp_customize->add_setting( 'hovercraft_tiles_across', array(
+    'default'    => '3',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
+	) 
+);
+
+// tiles across control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_tiles_across',
+        array(
+            'label'     => __('Tiles Across (Desktop)', 'hovercraft'),
+			'description' => __( 'How many tiles across should display in the tiles widget area? (How many columns)', 'hovercraft' ),
+            'section'   => 'hovercraft_page_layouts',
+            'settings'  => 'hovercraft_tiles_across',
+            'type'      => 'select',
+			'choices' => array(
+        		'2' => '2 Columns',
+        		'3' => '3 Columns',
+				'4' => '4 Columns',
+				'5' => '5 Columns',
+        		'6' => '6 Columns',
+				'7' => '7 Columns',
+				'8' => '8 Columns',
+				'9' => '9 Columns',
+				'10' => '10 Columns',
+        		'11' => '11 Columns',
+				'12' => '12 Columns'
+    			)
+        )
+) );
 
 // blog options section
 $wp_customize->add_section( 'hovercraft_blog', array(
