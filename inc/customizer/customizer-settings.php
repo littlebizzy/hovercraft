@@ -2366,6 +2366,102 @@ $wp_customize->add_control( new WP_Customize_Control(
     			)
         )
 ) );
+
+// home premain (top) link decoration setting
+$wp_customize->add_setting( 'hovercraft_premain_top_link_decoration', array(
+    'default'    => 'underline',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// home premain (top) link decoration control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_premain_top_link_decoration',
+        array(
+            'label'     => __('Home Premain (Top) Link Decoration', 'hovercraft'),
+			'description' => __( 'What type of link decoration', 'hovercraft' ),
+            'section'   => 'hovercraft_link_styling',
+            'settings'  => 'hovercraft_premain_top_link_decoration',
+            'type'      => 'select',
+			'choices' => array(
+				'underline' => 'Underline',
+				'none' => 'None (no decoration)',
+    			)
+        )
+) );
+
+// home premain (bottom) link decoration setting
+$wp_customize->add_setting( 'hovercraft_premain_bottom_link_decoration', array(
+    'default'    => 'underline',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// home premain (bottom) link decoration control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_premain_bottom_link_decoration',
+        array(
+            'label'     => __('Home Premain (Bottom) Link Decoration', 'hovercraft'),
+			'description' => __( 'What type of link decoration', 'hovercraft' ),
+            'section'   => 'hovercraft_link_styling',
+            'settings'  => 'hovercraft_premain_bottom_link_decoration',
+            'type'      => 'select',
+			'choices' => array(
+				'underline' => 'Underline',
+				'none' => 'None (no decoration)',
+    			)
+        )
+) );
+
+// home postmain (top) link decoration setting
+$wp_customize->add_setting( 'hovercraft_postmain_top_link_decoration', array(
+    'default'    => 'underline',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// home postmain (top) link decoration control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_postmain_top_link_decoration',
+        array(
+            'label'     => __('Home Postmain (Top) Link Decoration', 'hovercraft'),
+			'description' => __( 'What type of link decoration', 'hovercraft' ),
+            'section'   => 'hovercraft_link_styling',
+            'settings'  => 'hovercraft_postmain_top_link_decoration',
+            'type'      => 'select',
+			'choices' => array(
+				'underline' => 'Underline',
+				'none' => 'None (no decoration)',
+    			)
+        )
+) );
+
+// home postmain (bottom) link decoration setting
+$wp_customize->add_setting( 'hovercraft_postmain_bottom_link_decoration', array(
+    'default'    => 'underline',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// home postmain (bottom) link decoration control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_postmain_bottom_link_decoration',
+        array(
+            'label'     => __('Home Postmain (Bottom) Link Decoration', 'hovercraft'),
+			'description' => __( 'What type of link decoration', 'hovercraft' ),
+            'section'   => 'hovercraft_link_styling',
+            'settings'  => 'hovercraft_postmain_bottom_link_decoration',
+            'type'      => 'select',
+			'choices' => array(
+				'underline' => 'Underline',
+				'none' => 'None (no decoration)',
+    			)
+        )
+) );
 	
 // prefooter (top) link decoration setting
 $wp_customize->add_setting( 'hovercraft_prefooter_top_link_decoration', array(
