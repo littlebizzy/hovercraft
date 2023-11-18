@@ -3053,6 +3053,49 @@ $wp_customize->add_control( new WP_Customize_Control(
     			)
         )
 ) );
+
+// hero gradient mid color length setting
+$wp_customize->add_setting( 'hovercraft_hero_gradient_mid_color_length', array(
+    'default'    => '30',
+	'sanitize_callback' => 'absint',
+	) 
+);
+
+// hero gradient mid color length control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_hero_gradient_mid_color_length',
+        array(
+            'label'     => __('Mid color length', 'hovercraft'),
+			'description' => __( 'Length of the mid color', 'hovercraft' ),
+            'section'   => 'hovercraft_hero_styling',
+            'settings'  => 'hovercraft_hero_gradient_mid_color_length',
+            'type'      => 'select',
+			'choices' => array(
+				'0' => '0%',
+				'5' => '5%',
+				'10' => '10%',
+				'15' => '15%',
+				'20' => '20%',
+        		'25' => '25%',
+				'30' => '30%',
+				'35' => '35%',
+				'40' => '40%',
+				'45' => '45%',
+        		'50' => '50%',
+				'55' => '55%',
+				'60' => '60%',
+				'65' => '65%',
+				'70' => '70%',
+        		'75' => '75%',
+				'80' => '80%',
+				'85' => '85%',
+				'90' => '90%',
+				'95' => '95%',
+        		'100' => '100%',
+    			)
+        )
+) );
 	
 // hero gradient stop color length setting
 $wp_customize->add_setting( 'hovercraft_hero_gradient_stop_color_length', array(
