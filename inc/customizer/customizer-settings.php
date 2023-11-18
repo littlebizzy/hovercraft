@@ -2843,6 +2843,30 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// hero gradient tones setting
+$wp_customize->add_setting( 'hovercraft_hero_gradient_tones', array(
+    'default'    => 'two_tones',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// hero gradient tones control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_hero_gradient_tones',
+        array(
+            'label'     => __('Hero Gradient Tones', 'hovercraft'),
+			'description' => __( 'How many color tones should be used to generate the CSS gradient?', 'hovercraft' ),
+            'section'   => 'hovercraft_hero_styling',
+            'settings'  => 'hovercraft_hero_gradient_tones',
+            'type'      => 'select',
+			'choices' => array(
+				'two_tones' => '2 Tones',
+				'three_tones' => '3 Tones'
+    			)
+        )
+) );
+
 // full hero header background transparency setting
 $wp_customize->add_setting( 'hovercraft_full_hero_header_background_transparency', array(
     'default'    => '0.20',
