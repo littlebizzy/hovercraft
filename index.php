@@ -23,9 +23,28 @@
 			<div class="content-padded">
 								
 				<?php get_template_part( 'template-parts/content/breadcrumbs' ); ?>
-		
-				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
+				<?php
+				// blog category
+				$blog_category = get_theme_mod( 'hovercraft_blog_category', 'none' );
+        		// the query
+				// https://wordpress.stackexchange.com/questions/145125/display-content-from-a-specific-category
+				if ( $blog_category != 'none' ) {
+        			$the_query = new WP_Query(array(
+            			'category_name' => $blog_category,
+            			'post_status' => 'publish'        
+						)
+					);	
+				} else {
+					$the_query = new WP_Query(array(
+            			'post_status' => 'publish'        
+						)
+					);
+				}
+        		?>
+				
+				<?php if ($the_query->have_posts()) : while ($the_query->have_posts()) : $the_query->the_post(); ?>
+		
 				<div class="post-tease-archive">
 					
 				<?php 
