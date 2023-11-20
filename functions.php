@@ -30,6 +30,9 @@ require get_template_directory() . '/inc/custom-post-test.php';
 // customizer settings
 require get_template_directory() . '/inc/customizer/customizer-settings.php';
 
+// register blog category
+require get_template_directory() . '/inc/customizer/register-blog-category.php';
+
 // disable responsive images
 require get_template_directory() . '/inc/disable-responsive-images.php';
 
