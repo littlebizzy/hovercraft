@@ -81,6 +81,9 @@ require get_template_directory() . '/inc/portal-category.php';
 // responsive menu
 require get_template_directory() . '/inc/responsive-menu.php';
 
+// sidebar callout
+require get_template_directory() . '/inc/sidebar-callout.php';
+
 // tags list
 require get_template_directory() . '/inc/tags-list.php';
 
