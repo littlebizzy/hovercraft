@@ -1673,7 +1673,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	
 // header basic background color setting
 $wp_customize->add_setting( 'hovercraft_header_basic_background_color', array(
-	'default' => '#eceff1',
+	'default' => '#ffffff',
 	'sanitize_callback' => 'sanitize_hex_color',
 ) );
  
