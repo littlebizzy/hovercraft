@@ -2463,6 +2463,81 @@ p.biography-description {
     margin-bottom: 40px;
 	}
 }
+	
+
+/* sidebar callout */
+
+@media screen and (max-width: 1200px) {
+.cta-sidebar-callout {
+	display: block;
+	width: 100%;
+	margin-top: 20px;
+}
+}
+
+@media screen and (min-width: 1200px) {
+.cta-sidebar-callout {
+	display: block;
+	width: 100%;
+	margin-top: 30px;
+}
+}
+
+@media screen and (max-width: 1200px) {
+.cta-sidebar-callout ul li {
+	list-style-type: none;
+	display: block;
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+	text-align: center;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+.cta-sidebar-callout ul li {
+	list-style-type: none;
+	display: block;
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+	text-align: center;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+.cta-sidebar-callout ul li a {
+	width: 100%;
+	font-size: 20px;
+	font-weight: 600;
+	color: <?php echo $sidebar_callout_text_color; ?>;
+	padding: 10px 0px;
+	text-decoration: none;
+	display: block;
+	background: transparent;
+	margin-bottom: 0;
+	box-shadow: inset 0px 0px 0px 1px <?php echo $sidebar_callout_text_color; ?>;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+.cta-sidebar-callout ul li a {
+	width: 100%;
+	font-size: 20px;
+	font-weight: 600;
+	color: <?php echo $sidebar_callout_text_color; ?>;
+	padding: 10px 0px;
+	text-decoration: none;
+	display: block;
+	background: transparent;
+	box-shadow: inset 0px 0px 0px 1px <?php echo $sidebar_callout_text_color; ?>;
+	}
+}
+
+.cta-sidebar-callout ul li:hover a {
+	color: <?php echo $default_text_color; ?> !important;
+	background: <?php echo $sidebar_callout_text_color; ?>;
+}
 
 #sidebar .widget-wrapper:first-of-type {
    	background: <?php echo $sidebar_callout_background_color; ?>;
