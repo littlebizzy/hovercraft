@@ -14,7 +14,7 @@ $callout_menu = wp_nav_menu( array(
 $after_widget_callout = ' '. $callout_menu . '</div>';
 	
 	$callout_array = array(
-		'name'          => 'Callout',
+		'name'          => 'Sidebar Callout',
 		'id'            => 'hovercraft_callout',
 		'before_widget' => '<div class="widget-callout widget-wrapper">',
 		'after_widget'  => $after_widget_callout,
