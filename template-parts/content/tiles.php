@@ -1,6 +1,8 @@
 <div id="main">
 <div class="inner">
 	
+	<?php get_template_part( 'template-parts/content/loop' ); ?>
+	
 	<div id="tiles">
 	
 	<?php if ( is_active_sidebar( 'hovercraft_tile_one' ) ) { ?>
