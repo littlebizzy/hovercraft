@@ -47,21 +47,25 @@
 		<div class="inner">
 			<?php if ( is_active_sidebar( 'hovercraft_topbar_left' ) && is_active_sidebar( 'hovercraft_topbar_right' ) ) { ?>
 			<div class="topbar-left">
-				<?php add_filter( 'widget_title' , 'my_widget_title', 10, 1 ); // default priority and 1 argument in the callback function
-				dynamic_sidebar( 'hovercraft_topbar_left' ); remove_filter( 'widget_title', 'my_widget_title' ); ?>
+				<?php add_filter('widget_title', '__return_false');
+				dynamic_sidebar( 'hovercraft_topbar_left' ); // https://stackoverflow.com/questions/13903918/apply-widget-title-filter-only-to-wordpress-widgets-from-a-certain-sidebar
+				remove_filter('widget_title', '__return_false'); ?>
 			</div><!-- topbar-left -->
 			<div class="topbar-right">
-				<?php add_filter( 'widget_title' , 'my_widget_title', 10, 1 ); // default priority and 1 argument in the callback function
-				dynamic_sidebar( 'hovercraft_topbar_right' ); remove_filter( 'widget_title', 'my_widget_title' ); ?>
+				<?php add_filter('widget_title', '__return_false');
+				dynamic_sidebar( 'hovercraft_topbar_right' ); // https://stackoverflow.com/questions/13903918/apply-widget-title-filter-only-to-wordpress-widgets-from-a-certain-sidebar
+				remove_filter('widget_title', '__return_false'); ?>
 			</div><!-- topbar-right -->
 			<?php } elseif ( is_active_sidebar( 'hovercraft_topbar_left' ) xor is_active_sidebar( 'hovercraft_topbar_right' ) ) { ?>
 			<div class="topbar-center">
 				<?php if ( is_active_sidebar( 'hovercraft_topbar_left' ) ) { ?>
-					<?php add_filter( 'widget_title' , 'my_widget_title', 10, 1 ); // default priority and 1 argument in the callback function
-					dynamic_sidebar( 'hovercraft_topbar_left' ); remove_filter( 'widget_title', 'my_widget_title' ); ?>
+					<?php add_filter('widget_title', '__return_false');
+					dynamic_sidebar( 'hovercraft_topbar_left' ); // https://stackoverflow.com/questions/13903918/apply-widget-title-filter-only-to-wordpress-widgets-from-a-certain-sidebar
+					remove_filter('widget_title', '__return_false'); ?>
 				<?php } elseif ( is_active_sidebar( 'hovercraft_topbar_right' ) ) { ?>
-					<?php add_filter( 'widget_title' , 'my_widget_title', 10, 1 ); // default priority and 1 argument in the callback function
-					dynamic_sidebar( 'hovercraft_topbar_right' ); remove_filter( 'widget_title', 'my_widget_title' ); ?>
+					<?php add_filter('widget_title', '__return_false');
+					dynamic_sidebar( 'hovercraft_topbar_right' ); // https://stackoverflow.com/questions/13903918/apply-widget-title-filter-only-to-wordpress-widgets-from-a-certain-sidebar
+					remove_filter('widget_title', '__return_false'); ?>
 				<?php } ?>
 			</div><!-- topbar-center -->
 			<?php } ?>
