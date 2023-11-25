@@ -2230,6 +2230,33 @@ img.featured-image-archive {
 }
 	
 
+/* content-wide */
+
+@media screen and (max-width: 1200px) {
+#content-wide {
+	padding: 20px;
+	width: 100%;
+	max-width: 100%;
+	display: block;
+    overflow: hidden;
+	overflow-wrap: break-word;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+#content-wide {
+	<?php if ( $sitewide_layout == 'floating_islands' ) { 
+			echo "padding: 40px 40px 0px 40px;\n"; 
+		} else { 
+			echo "padding: 40px 40px 0px 0px;\n"; 
+		}  ?>
+	display: block;
+	overflow: hidden;
+	overflow-wrap: break-word;
+	}
+}
+
+	
 /* content-padded */
 
 @media screen and (max-width: 1200px) {
