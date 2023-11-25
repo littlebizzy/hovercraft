@@ -15,7 +15,7 @@
     
 	<div id="primary-wide">
 	
-		<?php get_template_part( 'template-parts/content/content' ); ?>
+		<?php get_template_part( 'template-parts/content/content-wide' ); ?>
 		
 		<?php get_template_part( 'template-parts/content/tiles' ); ?>
 	
