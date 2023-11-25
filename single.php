@@ -9,7 +9,7 @@
 		<?php $hovercraft_sidebar_status_checked = get_theme_mod( 'hovercraft_sidebar_status' ) ? true : false;
 		if ( $hovercraft_sidebar_status_checked == true ) { ?><div id="primary"><?php } else { ?><div id="primary-center"><?php } ?>
 		
-		<div id="content">
+		<div id="content-wrapper">
 			
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -43,7 +43,7 @@
 				</div><!-- content-padded -->
 	
 	<div class="clear"></div>
-	</div><!-- content -->
+	</div><!-- content-wrapper -->
 
 	<!-- comments template outside of post content div -->
 	<?php get_template_part( 'template-parts/content/comments' ); ?>
