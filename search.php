@@ -7,11 +7,11 @@
 	<?php $hovercraft_sidebar_status_checked = get_theme_mod( 'hovercraft_sidebar_status' ) ? true : false;
 	if ( $hovercraft_sidebar_status_checked == true ) { ?><div id="primary"><?php } else { ?><div id="primary-wide"><?php } ?>
 		
-	<div id="content">
+	<div id="content-wrapper">
 		
 		<?php get_template_part( 'template-parts/content/breadcrumbs' ); ?>
 		
-		<div class="content-padded">
+		<div id="content-padded">
 	
     		<h1><?php _e( 'Search results for:', 'hovercraft' ); ?>&nbsp;<span class="search-query"><?php echo get_search_query(); ?></span></h1>
 			
@@ -30,7 +30,7 @@
 		<div class="clear"></div>
 		</div><!-- content-padded -->
 	
-	</div><!-- content -->
+	</div><!-- content-wrapper -->
 	
 	<div class="clear"></div>
   	</div><!-- primary -->
