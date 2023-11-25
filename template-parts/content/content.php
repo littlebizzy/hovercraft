@@ -1,6 +1,6 @@
-<div id="content">
+<div id="content-wrapper">
 	
-	<div class="content-padded">
+	<div id="content-padded">
 		
 	<?php get_template_part( 'template-parts/content/breadcrumbs' ); ?>
 
