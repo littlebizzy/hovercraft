@@ -8,14 +8,14 @@
 
 	<?php get_template_part( 'template-parts/content/breadcrumbs' ); ?>
 	
-	<div id="content">
+	<div id="content-wrapper">
 	
 		<h1>404 Error (Not Found)</h1>
 		
 	<?php get_template_part( 'template-parts/content/loop' ); ?>
 	
 	<div class="clear"></div>
-	</div><!-- content -->
+	</div><!-- content-wrapper -->
 	
 	<div class="clear"></div>
 </div><!-- primary -->
