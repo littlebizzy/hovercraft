@@ -10,11 +10,11 @@ if ( !is_front_page() || ( is_front_page() && $hovercraft_homepage_hide_main_che
 	
     <div id="primary">
 		
-	    	<div id="content">
+	    	<div id="content-wrapper">
 			
 				<?php get_template_part( 'template-parts/content/featured-image' ); ?>
 				
-				<div class="content-padded">
+				<div id="content-padded">
 					<?php get_template_part( 'template-parts/content/breadcrumbs' ); ?>
 					<h1><?php the_title(); ?></h1>
 					<?php get_template_part( 'template-parts/content/loop' ); ?>
