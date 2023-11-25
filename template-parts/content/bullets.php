@@ -2,8 +2,8 @@
 <div class="inner">
 	
 	<div id="primary-wide">
-	<div id="content">
-	<div class="content-padded">
+	<div id="content-wrapper">
+	<div id="content-padded">
 	
 	<div id="bullets">
 		
@@ -35,7 +35,7 @@
 	</div><!-- bullets -->
 		
 	</div><!-- content-padded -->
-	</div><!-- content -->
+	</div><!-- content-wrapper -->
 	</div><!-- primary-wide -->
         	
     <div class="clear"></div>
