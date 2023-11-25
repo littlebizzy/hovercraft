@@ -10,5 +10,24 @@
 		<?php get_template_part( 'template-parts/content/posthero' ); ?>
 	<?php endif; ?>
 
-<?php get_template_part( 'template-parts/content/tiles' ); ?>
+<div id="main">
+<div class="inner">
+    
+	<div id="primary-wide">
+	
+		<?php get_template_part( 'template-parts/content/content' ); ?>
+		
+		<?php get_template_part( 'template-parts/content/tiles' ); ?>
+	
+		<?php get_template_part( 'template-parts/content/comments' ); ?> 
+
+		<div class="clear"></div>
+	</div><!-- primary-wide -->
+    
+    <?php get_template_part( 'template-parts/content/pagination' ); ?>
+	
+    <div class="clear"></div>
+</div><!-- inner -->
+</div><!-- main -->
+
 <?php get_template_part( 'footer' ); ?>
