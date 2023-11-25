@@ -2,7 +2,7 @@
 
 	<?php get_template_part( 'template-parts/content/breadcrumbs' ); ?>
 	
-	<div id="content">
+	<div id="content-wrapper">
 	
 		<?php if ( is_singular() ) { ?>
 				<?php if ( is_page_template( 'page-templates/template-basic.php' ) || !is_page_template() ) { ?>
@@ -32,7 +32,7 @@
 	<?php hovercraft_pagination_nav(); ?>	
 	
 	<div class="clear"></div>
-	</div><!-- content -->
+	</div><!-- content-wrapper -->
 
 	<?php get_template_part( 'template-parts/content/last-modified' ); ?>
 	
