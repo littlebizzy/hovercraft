@@ -15,7 +15,7 @@
 
 				<?php get_template_part( 'template-parts/content/featured-image' ); ?>
 			
-				<div class="content-padded">
+				<div id="content-padded">
 
 					<?php get_template_part( 'template-parts/content/breadcrumbs' ); ?>
 				
@@ -46,7 +46,7 @@
 	</div><!-- content -->
 
 	<!-- comments template outside of post content div -->
-	<?php comments_template(); ?>
+	<?php get_template_part( 'template-parts/content/comments' ); ?>
 
 	<div class="clear"></div>
 	</div><!-- primary -->
