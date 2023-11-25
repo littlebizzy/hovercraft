@@ -18,7 +18,7 @@ if ( !is_front_page() || ( is_front_page() && $hovercraft_homepage_hide_main_che
 	
 	    <?php get_template_part( 'template-parts/content/content' ); ?>
 	
-	    <?php comments_template(); ?> 
+	    <?php get_template_part( 'template-parts/content/comments' ); ?> 
 
 	    <div class="clear"></div>
     </div><!-- primary -->
