@@ -24,7 +24,7 @@ if ( !is_front_page() || ( is_front_page() && $hovercraft_homepage_hide_main_che
 				<div class="clear"></div>
 				</div><!-- content-padded -->
 				
-			</div><!-- content -->
+			</div><!-- content-wrapper -->
 
 	<div class="clear"></div>
     </div><!-- primary -->
