@@ -6,8 +6,9 @@
     )) : ?>
 	<div id="posthero">
 		<div class="inner">
-		<?php add_filter( 'widget_title' , 'my_widget_title', 10, 1 ); // default priority and 1 argument in the callback function
-		dynamic_sidebar( 'hovercraft_posthero' ); remove_filter( 'widget_title', 'my_widget_title' ); ?>
+			<?php add_filter('widget_title', '__return_false');
+			dynamic_sidebar( 'hovercraft_posthero' ); // https://stackoverflow.com/questions/13903918/apply-widget-title-filter-only-to-wordpress-widgets-from-a-certain-sidebar
+			remove_filter('widget_title', '__return_false'); ?>
 		<div class="clear"></div>
 		</div><!-- inner -->
 	</div><!-- posthero -->
