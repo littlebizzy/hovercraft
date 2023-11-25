@@ -18,9 +18,9 @@
 		<?php } 
 	} ?>
 
-		<div id="content">
+		<div id="content-wrapper">
 									
-			<div class="content-padded">
+			<div id="content-padded">
 								
 				<?php get_template_part( 'template-parts/content/breadcrumbs' ); ?>
 
@@ -65,7 +65,7 @@
 						
 			<div class="clear"></div>
 			</div><!-- content-padded -->
-		</div><!-- content -->
+		</div><!-- content-wrapper -->
 
 	<div class="clear"></div>
   	</div><!-- primary -->
