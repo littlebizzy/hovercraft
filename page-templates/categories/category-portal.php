@@ -6,11 +6,11 @@
 
 	<div id="primary-wide">
 	
-		<div id="content">
+		<div id="content-wrapper">
 			
 			<?php get_template_part( 'template-parts/content/breadcrumbs' ); ?>
 									
-			<div class="content-padded">
+			<div id="content-padded">
 		
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 		
@@ -23,7 +23,7 @@
 						
 			<div class="clear"></div>
 			</div><!-- content-padded -->
-		</div><!-- content -->
+		</div><!-- content-wrapper -->
 
 	<div class="clear"></div>
   	</div><!-- primary -->
