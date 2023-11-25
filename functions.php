@@ -96,9 +96,6 @@ require get_template_directory() . '/inc/title-tag.php';
 // widget areas
 require get_template_directory() . '/inc/widget-areas.php';
 
-// widget titles
-require get_template_directory() . '/inc/widget-titles.php';
-
 // remove generator
 require get_template_directory() . '/inc/remove-generator.php';
 
