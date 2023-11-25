@@ -2234,7 +2234,7 @@ img.featured-image-archive {
 
 @media screen and (max-width: 1200px) {
 #content-wide {
-	padding: 20px;
+	padding: 0px;
 	width: 100%;
 	max-width: 100%;
 	display: block;
@@ -2246,9 +2246,9 @@ img.featured-image-archive {
 @media screen and (min-width: 1200px) {
 #content-wide {
 	<?php if ( $sitewide_layout == 'floating_islands' ) { 
-			echo "padding: 40px 40px 0px 40px;\n"; 
+			echo "padding: 0px 0px 0px 0px;\n"; 
 		} else { 
-			echo "padding: 40px 40px 0px 0px;\n"; 
+			echo "padding: 0px 0px 0px 0px;\n"; 
 		}  ?>
 	display: block;
 	overflow: hidden;
