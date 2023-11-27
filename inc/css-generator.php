@@ -23,6 +23,7 @@ function hovercraft_generate_css(){
 	$mini_hero_background_position = get_theme_mod( 'hovercraft_mini_hero_background_position', 'center_center' );
 	$sitewide_layout = get_theme_mod( 'hovercraft_sitewide_layout', 'floating_islands' );
 	$tiles_across = get_theme_mod( 'hovercraft_tiles_across', '3' );
+	$columns_across = get_theme_mod( 'hovercraft_columns_across', '4' );
 	$scroll_to_top = get_theme_mod( 'hovercraft_scroll_to_top', 'mobile_only' );
 	$mobile_topbar_widget = get_theme_mod( 'hovercraft_mobile_topbar', 'topbar_left' );
 	$mobile_preheader_widget = get_theme_mod( 'hovercraft_mobile_preheader', 'none' );
