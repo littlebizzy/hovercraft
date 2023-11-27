@@ -426,6 +426,32 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// columns across setting
+$wp_customize->add_setting( 'hovercraft_columns_across', array(
+    'default'    => '4',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
+	) 
+);
+
+// columns across control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_columns_across',
+        array(
+            'label'     => __('Columns Across (Desktop)', 'hovercraft'),
+			'description' => __( 'How many columns across should display in the columns widget area? (How many columns)', 'hovercraft' ),
+            'section'   => 'hovercraft_page_layouts',
+            'settings'  => 'hovercraft_columns_across',
+            'type'      => 'select',
+			'choices' => array(
+        		'3' => '3 Columns',
+				'4' => '4 Columns',
+				'5' => '5 Columns',
+				'6' => '6 Columns'
+    			)
+        )
+) );
+
 // blog options section
 $wp_customize->add_section( 'hovercraft_blog', array(
     'title'      => 'Blog (Posts)',
