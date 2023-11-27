@@ -1166,26 +1166,6 @@ button {
 }
 
 @media screen and (max-width: 1200px) {
-#tiles-narrow {
-	width: 100%;
-	padding: 20px 20px;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-#tiles-narrow {
-	width: 100%;
-	display: grid;
-	<?php if ( $sitewide_layout == 'floating_islands' ) { 
-			echo "grid-template-columns: repeat(auto-fill, 324px);\n"; 
-		} else { 
-			echo "grid-template-columns: repeat(auto-fill, 344px);\n"; 
-		}  ?>
-  	gap: 40px;
-	}
-}
-
-@media screen and (max-width: 1200px) {
 .tile {
 	width: 100%;
 	margin-bottom: 30px;
@@ -2347,41 +2327,19 @@ p.biography-description {
 }
 
 @media screen and (min-width: 1200px) {
-#columns-three {
-	/* width: 100%;
-	margin: 0px auto;
-	padding: 0; */
-	
+#columns {
 	width: 100%;
 	display: grid;
-  	grid-template-columns: repeat(auto-fill, 380px);
-  	grid-gap: 30px;
-	}
-}
-	
-@media screen and (min-width: 1200px) {
-#columns-four {
-	/* width: 100%;
-	margin: 0px auto;
-	padding: 0; */
-	
-	width: 100%;
-	display: grid;
-  	grid-template-columns: repeat(auto-fill, 285px);
-  	grid-gap: 20px;
-	}
-}
-	
-@media screen and (min-width: 1200px) {
-#columns-five {
-	/* width: 100%;
-	margin: 0px auto;
-	padding: 0; */
-	
-	width: 100%;
-	display: grid;
-  	grid-template-columns: repeat(auto-fill, 224px);
-  	grid-gap: 20px;
+  	<?php if ( $columns_across == '3' ) { 
+			echo "grid-template-columns: repeat(3, 1fr);\n"; 
+		} elseif ( $columns_across == '4' ) { 
+			echo "grid-template-columns: repeat(4, 1fr);\n"; 
+		} elseif ( $columns_across == '5' ) { 
+			echo "grid-template-columns: repeat(5, 1fr);\n"; 
+		} elseif ( $columns_across == '6' ) { 
+			echo "grid-template-columns: repeat(6, 1fr);\n"; 
+		} ?>
+  	gap: 30px;
 	}
 }
 
