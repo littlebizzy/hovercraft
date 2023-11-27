@@ -2388,33 +2388,42 @@ p.biography-description {
 @media screen and (max-width: 1200px) {
 .column {
 	width: 100%;
-	border: 1px solid #263238;
-	padding: 30px;
-	border-radius: 0px;
 	margin-bottom: 30px;
-	background: #ffffff;
+	padding: 30px;
+	box-shadow: inset 0px 0px 0px 1px <?php echo $default_text_color; ?>;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 .column {
-	/* width: 400px;
-	float: left;
-	border: 1px solid <?php echo $default_text_color; ?>;
+	max-width: 100%;
 	padding: 30px;
-	border-radius: 0px; */
-	
-	border: 1px solid #263238;
-	display: flex;
   	justify-content: center;
   	align-items: center;
-	padding: 30px;
-	background: #ffffff;
+	text-align: center;
+	box-shadow: inset 0px 0px 0px 1px <?php echo $default_text_color; ?>;
+	display: inline-block;
 	}
 }
 	
 .column ul {
 	font-size: 14px;
+}
+
+.column i {
+	margin-bottom: 20px;
+	font-size: 48px;
+	display: block;
+	color: <?php echo $default_link_color; ?>;
+}
+
+.column img {
+	display: block;
+	margin: 0 auto;
+}
+
+.column p:last-child {
+	margin-bottom: 0;
 }
 
 
