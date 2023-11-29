@@ -257,6 +257,22 @@ iframe {
     display: block;
 }
 
+@media screen and (max-width: 1200px) {
+hr {
+	background: <?php echo $default_text_color; ?>;
+	height: 1px;
+	margin-bottom: 20px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+hr {
+	background: <?php echo $default_text_color; ?>;
+	height: 1px;
+	margin-bottom: 30px;
+	}
+}
+
 #content iframe {
 	aspect-ratio: 16 / 9;
 }
