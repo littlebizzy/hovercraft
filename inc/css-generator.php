@@ -127,11 +127,11 @@ function hovercraft_generate_css(){
 	$prefooter_bottom_text_color = get_theme_mod( 'hovercraft_prefooter_bottom_text_color', '#ffffff' );
 	$prefooter_bottom_link_color = get_theme_mod( 'hovercraft_prefooter_bottom_link_color', '#5C6BC0' );
 	$prefooter_bottom_link_decoration = get_theme_mod( 'hovercraft_prefooter_bottom_link_decoration', 'underline' );
-    $footer_background_color = get_theme_mod( 'hovercraft_footer_background_color', '#eceff1' );
+    $footer_background_color = get_theme_mod( 'hovercraft_footer_background_color', '#ffffff' );
 	$footer_text_color = get_theme_mod( 'hovercraft_footer_text_color', '#263238' );
 	$footer_link_color = get_theme_mod( 'hovercraft_footer_link_color', '#5C6BC0' );
 	$footer_link_decoration = get_theme_mod( 'hovercraft_footer_link_decoration', 'underline' );
-    $copyright_background_color = get_theme_mod( 'hovercraft_copyright_background_color', '#eceff1' );
+    $copyright_background_color = get_theme_mod( 'hovercraft_copyright_background_color', '#ffffff' );
 	$copyright_text_color = get_theme_mod( 'hovercraft_copyright_text_color', '#263238' );
 	$copyright_link_color = get_theme_mod( 'hovercraft_copyright_link_color', '#5C6BC0' );
 	$copyright_link_decoration = get_theme_mod( 'hovercraft_copyright_link_decoration', 'underline' );
