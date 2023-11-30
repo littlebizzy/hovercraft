@@ -69,6 +69,17 @@
 					?>
 				</div><!-- hero-snippet -->
 			<?php endif; ?>
+
+			<?php if ( is_active_sidebar( 'hovercraft_hero_window' ) || has_excerpt() ) : ?>
+				<div class="hero-window">
+					<?php if ( is_active_sidebar( 'hovercraft_hero_window' ) ) {
+						add_filter('widget_title', '__return_false');
+						dynamic_sidebar( 'hovercraft_hero_window' ); // https://stackoverflow.com/questions/13903918/apply-widget-title-filter-only-to-wordpress-widgets-from-a-certain-sidebar
+						remove_filter('widget_title', '__return_false');
+					} else the_excerpt();
+					?>
+				</div><!-- hero-window -->
+			<?php endif; ?>
 			
 		<?php endif; ?><!-- is_front_page -->
 	
