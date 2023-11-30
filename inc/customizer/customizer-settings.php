@@ -2089,7 +2089,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 
 // footer background color setting
 $wp_customize->add_setting( 'hovercraft_footer_background_color', array(
-	'default' => '#eceff1',
+	'default' => '#ffffff',
 	'sanitize_callback' => 'sanitize_hex_color',
 ) );
  
@@ -2134,7 +2134,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 
 // copyright background color setting
 $wp_customize->add_setting( 'hovercraft_copyright_background_color', array(
-        'default' => '#eceff1',
+        'default' => '#ffffff',
 	'sanitize_callback' => 'sanitize_hex_color',
 		));
  
