@@ -79,6 +79,20 @@ function hovercraft_hero_snippet() {
 }
 add_action( 'widgets_init', 'hovercraft_hero_snippet' );
 
+// hero window widgets
+function hovercraft_hero_window() {
+
+	register_sidebar( array(
+		'name'          => 'Hero Window',
+		'id'            => 'hovercraft_hero_window',
+		'before_widget' => '<div class="widget-hero-window widget-wrapper">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+}
+add_action( 'widgets_init', 'hovercraft_hero_window' );
 
 // posthero widgets
 function hovercraft_posthero() {
