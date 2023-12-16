@@ -2445,72 +2445,15 @@ p.biography-description {
 }
 
 
-/* sidebar */
-
-@media screen and (max-width: 1200px) {
-#sidebar {
-	width: 100%;
-	padding: 20px;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-#sidebar {
-	float: right;
-	width: 392px;
-	margin-left: 40px;
-	<?php // $sidebar_padding_checked = get_theme_mod( 'hovercraft_sidebar_padding' ) ? true : false;
-	// if ( $sidebar_padding_checked == true ) { echo "padding: 40px;"; } ?>
-	}
-}
-
-#sidebar .widget-wrapper {
-	width: 100%;
-	padding: 40px 40px;
-	background: <?php echo $sidebar_widget_background_color; ?>;
-	color: <?php echo $sidebar_widget_text_color; ?>;
-}
-
-#sidebar .widget-wrapper a {
-	color: <?php echo $sidebar_widget_link_color; ?>;
-}
-
-@media screen and (max-width: 1200px) {
-	#sidebar .widget-wrapper:not(:last-child) {
-    margin-bottom: 20px;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-	#sidebar .widget-wrapper:not(:last-child) {
-    margin-bottom: 40px;
-	}
-}
-
-#sidebar .widget-wrapper p:last-child {
-	margin-bottom: 0;
-}
-
-#sidebar ol li {
-	margin-bottom: 15px;
-}
-
-#sidebar img {
-	max-width: 100%;
-	height: auto;
-	display: block;
-}
-	
-
 /* sidebar callout */
 
-.widget-callout {
-   	background: <?php echo $sidebar_callout_background_color; ?>;
-	color: <?php echo $sidebar_callout_text_color; ?>;
+#sidebar .widget-callout {
+   	background: <?php echo $sidebar_callout_background_color; ?> !important;
+	color: <?php echo $sidebar_callout_text_color; ?> !important;
 }
 	
-.widget-callout a {
-	color: <?php echo $sidebar_callout_link_color; ?>;
+#sidebar .widget-callout a {
+	color: <?php echo $sidebar_callout_link_color; ?> !important;
 }
 
 @media screen and (max-width: 1200px) {
@@ -2583,6 +2526,63 @@ p.biography-description {
 .cta-sidebar-callout ul li:hover a {
 	color: <?php echo $default_text_color; ?> !important;
 	background: <?php echo $sidebar_callout_text_color; ?>;
+}
+
+
+/* sidebar */
+
+@media screen and (max-width: 1200px) {
+#sidebar {
+	width: 100%;
+	padding: 20px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+#sidebar {
+	float: right;
+	width: 392px;
+	margin-left: 40px;
+	<?php // $sidebar_padding_checked = get_theme_mod( 'hovercraft_sidebar_padding' ) ? true : false;
+	// if ( $sidebar_padding_checked == true ) { echo "padding: 40px;"; } ?>
+	}
+}
+
+#sidebar .widget-wrapper {
+	width: 100%;
+	padding: 40px 40px;
+	background: <?php echo $sidebar_widget_background_color; ?>;
+	color: <?php echo $sidebar_widget_text_color; ?>;
+}
+
+#sidebar .widget-wrapper a {
+	color: <?php echo $sidebar_widget_link_color; ?>;
+}
+
+@media screen and (max-width: 1200px) {
+	#sidebar .widget-wrapper:not(:last-child) {
+    margin-bottom: 20px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	#sidebar .widget-wrapper:not(:last-child) {
+    margin-bottom: 40px;
+	}
+}
+
+#sidebar .widget-wrapper p:last-child {
+	margin-bottom: 0;
+}
+
+#sidebar ol li {
+	margin-bottom: 15px;
+}
+
+#sidebar img {
+	max-width: 100%;
+	height: auto;
+	display: block;
 }
 
 
