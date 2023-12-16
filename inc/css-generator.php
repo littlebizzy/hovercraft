@@ -2486,9 +2486,32 @@ p.biography-description {
     margin-bottom: 40px;
 	}
 }
+
+#sidebar .widget-wrapper p:last-child {
+	margin-bottom: 0;
+}
+
+#sidebar ol li {
+	margin-bottom: 15px;
+}
+
+#sidebar img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
 	
 
 /* sidebar callout */
+
+.widget-callout {
+   	background: <?php echo $sidebar_callout_background_color; ?>;
+	color: <?php echo $sidebar_callout_text_color; ?>;
+}
+	
+.widget-callout a {
+	color: <?php echo $sidebar_callout_link_color; ?>;
+}
 
 @media screen and (max-width: 1200px) {
 .cta-sidebar-callout {
@@ -2560,29 +2583,6 @@ p.biography-description {
 .cta-sidebar-callout ul li:hover a {
 	color: <?php echo $default_text_color; ?> !important;
 	background: <?php echo $sidebar_callout_text_color; ?>;
-}
-
-#sidebar .widget-wrapper:first-of-type {
-   	background: <?php echo $sidebar_callout_background_color; ?>;
-	color: <?php echo $sidebar_callout_text_color; ?>;
-}
-	
-#sidebar .widget-wrapper:first-of-type a {
-	color: <?php echo $sidebar_callout_link_color; ?>;
-}
-
-#sidebar .widget-wrapper p:last-child {
-	margin-bottom: 0;
-}
-
-#sidebar ol li {
-	margin-bottom: 15px;
-}
-
-#sidebar img {
-	max-width: 100%;
-	height: auto;
-	display: block;
 }
 
 
