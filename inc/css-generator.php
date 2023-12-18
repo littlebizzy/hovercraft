@@ -273,7 +273,7 @@ hr {
 	}
 }
 
-#content iframe {
+#content-wrapper iframe {
 	aspect-ratio: 16 / 9;
 }
 
@@ -2201,28 +2201,28 @@ img.featured-image-archive {
 }
 
 @media screen and (max-width: 1200px) {
-#content {
+#content-wrapper {
 	background: #ffffff;
 	}
 }
 	
 @media screen and (min-width: 1200px) {
-#content {
+#content-wrapper {
 	background: #ffffff;
 	}
 }
 
-#content ul {
+#content-wrapper ul {
 	margin-left: 30px;
 	margin-bottom: 30px;
 }
 
-#content ol {
+#content-wrapper ol {
 	margin-left: 30px;
 	margin-bottom: 30px;
 }
 
-#content ol li {
+#content-wrapper ol li {
 	margin-bottom: 15px;
 }
 	
