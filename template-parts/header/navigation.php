@@ -1,4 +1,4 @@
-<?php $hovercraft_desktop_header_width = get_theme_mod( 'hovercraft_desktop_header_width', 'full' );
+<?php $hovercraft_desktop_header_width = get_theme_mod( 'hovercraft_desktop_header_width', 'fixed' );
 		if ( $hovercraft_desktop_header_width == 'fixed' ) { ?><div class="inner"><?php } else { ?><div class="full"><?php } ?>
 	
 	<div class="header-left">
