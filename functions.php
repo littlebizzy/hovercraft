@@ -72,6 +72,9 @@ require get_template_directory() . '/inc/media-sizes-insert.php';
 // menu locations
 require get_template_directory() . '/inc/menu-locations.php';
 
+// meta box
+require get_template_directory() . '/inc/meta-box.php';
+
 // pagination
 require get_template_directory() . '/inc/pagination.php';
 
