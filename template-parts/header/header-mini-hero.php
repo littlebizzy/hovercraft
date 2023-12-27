@@ -40,7 +40,17 @@
 <div class="hero-main-mini">
 <div class="inner">
 		<div class="title-wrapper">
+
+		<!-- <h1 class="mini-hero-title"><?php if ( is_singular() ) { single_post_title(); } elseif ( is_category() ) { single_cat_title(); } ?></h1> -->
+
+		<!--Start the hide title-->
+    	<?php 
+        $hide_title_status = get_post_meta( get_the_ID(), '_mysite_meta_hide_title', true);
+        $post_id = get_the_ID();
+        if($hide_title_status == "off" || !metadata_exists( 'post', $post_id, '_mysite_meta_hide_title' ) ) :
+    	?>
 		<h1 class="mini-hero-title"><?php if ( is_singular() ) { single_post_title(); } elseif ( is_category() ) { single_cat_title(); } ?></h1>
+		<?php endif; ?> <!--End the hide title-->
 			
 			<?php $portal_category = get_theme_mod( 'hovercraft_portal_category', 'none' );
 			if (is_category( $portal_category )) { ?>
