@@ -49,7 +49,14 @@
 		<div class="title-wrapper">
 	<?php } ?>
 			
+		<!--Start the hide title-->
+    	<?php 
+        $hide_title_status = get_post_meta( get_the_ID(), '_mysite_meta_hide_title', true);
+        $post_id = get_the_ID();
+        if($hide_title_status == "off" || !metadata_exists( 'post', $post_id, '_mysite_meta_hide_title' ) ) :
+    	?>
 		<h1 class="half-hero-title"><?php single_post_title(); ?></h1>
+		<?php endif; ?> <!--End the hide title-->
 			
 		<?php if (is_front_page()) : ?>
 		
