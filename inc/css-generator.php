@@ -286,6 +286,9 @@ hr {
 	color: #607D8B;
 }
 
+
+/* after byline (widget area) */
+
 @media screen and (max-width: 1200px) {
 .after-byline {
 	background: <?php echo $after_byline_background_color; ?>;
@@ -302,6 +305,10 @@ hr {
 	padding: <?php echo $after_byline_padding; ?>px;
 	margin-bottom: 30px;
 	}
+}
+
+.after-byline p:last-child {
+	margin-bottom: 0;
 }
 
 
