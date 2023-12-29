@@ -1181,9 +1181,11 @@ button {
 	width: 100%;
 	display: grid;
   	<?php if ( $tiles_across == '3' ) { 
-			echo "grid-template-columns: repeat(3, 1fr);\n"; 
+			/* echo "grid-template-columns: repeat(3, 1fr);\n"; */
+			echo "grid-template-columns: repeat(3, minmax(200px, 1fr));\n";
 		} elseif ( $tiles_across == '4' ) { 
-			echo "grid-template-columns: repeat(4, 1fr);\n"; 
+			/* echo "grid-template-columns: repeat(4, 1fr);\n"; */
+			echo "grid-template-columns: repeat(4, minmax(200px, 1fr));\n";
 	} ?>
   	gap: 30px;
 	}
