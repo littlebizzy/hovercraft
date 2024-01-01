@@ -72,6 +72,10 @@
 					
 				} else { ?>
 				
+				<h1><?php the_archive_title(); ?></h1>
+				
+				<div class="category-description"><?php echo category_description(); ?></div> 
+				
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 		
