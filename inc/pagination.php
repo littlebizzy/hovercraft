@@ -69,3 +69,19 @@ function hovercraft_pagination_nav() {
     echo '</ul></div>' . "\n";
   
 }
+
+// https://stackoverflow.com/questions/30108550/wordpress-category-php-pagination-404-errors
+// https://stackoverflow.com/questions/53109614/wordpress-404-error-with-pagination-page-2-when-setting-posts-per-page
+// https://stackoverflow.com/questions/42189247/why-pagination-is-not-working-and-gives-a-404-error-on-the-wordpress-site
+// https://wordpress.stackexchange.com/questions/296537/category-template-with-pagination-returns-404-on-next-pages
+// https://wordpress.stackexchange.com/questions/298767/pagination-page-2-displaying-404-on-archive-pages
+// https://wordpress.stackexchange.com/questions/209693/wordpress-page-2-404-pagination-problem-what-to-do
+function remove_page_from_query_string($query_string)
+{ 
+    if ($query_string['name'] == 'page' && isset($query_string['page'])) {
+        unset($query_string['name']);
+        $query_string['paged'] = $query_string['page'];
+    }      
+    return $query_string;
+}
+add_filter('request', 'remove_page_from_query_string');
