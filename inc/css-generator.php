@@ -11,7 +11,8 @@ function hovercraft_generate_css(){
 	} else { 
 		$hero_image = $url_header_image; 
 	}
-    
+
+	$gallery_captions = get_theme_mod( 'hovercraft_gallery_captions', 'none' );
 	$hero_gradient_tones = get_theme_mod( 'hovercraft_hero_gradient_tones', 'two_tones' );
 	$mini_hero_vertical_padding = get_theme_mod( 'hovercraft_mini_hero_vertical_padding', '80' );
 	$basic_hero_header_link_color = get_theme_mod( 'hovercraft_basic_hero_header_link_color', '#263238' );
@@ -2853,6 +2854,10 @@ p.biography-description {
 	margin-bottom: 20px;
 	border: 0;
 	}
+}
+
+.gallery-caption {
+	<?php if ( $gallery_captions == 'none') { echo "display: none;"; } ?>
 }
 
 
