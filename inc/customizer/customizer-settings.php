@@ -452,6 +452,31 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// gallery captions setting
+$wp_customize->add_setting( 'hovercraft_gallery_captions', array(
+    'default'    => 'none',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// gallery captions control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_gallery_captions',
+        array(
+            'label'     => __('Gallery Captions Display', 'hovercraft'),
+			'description' => __( 'What display style should the image gallery captions use?', 'hovercraft' ),
+            'section'   => 'hovercraft_page_layouts',
+            'settings'  => 'hovercraft_gallery_captions',
+            'type'      => 'select',
+			'choices' => array(
+        		'none' => 'None (Disabled)',
+				'below_image' => 'Below Image',
+				'inside_image' => 'Inside Image (Bottom)'
+    			)
+        )
+) );
+
 // blog options section
 $wp_customize->add_section( 'hovercraft_blog', array(
     'title'      => 'Blog (Posts)',
