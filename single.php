@@ -28,6 +28,8 @@
 					<?php the_content(); ?>
 		
 					<?php endwhile; endif; ?><!-- the loop -->
+
+					<?php get_template_part( 'template-parts/content/related-posts' ); ?>
 					
 					<?php get_template_part( 'template-parts/content/biography' ); ?>
 
