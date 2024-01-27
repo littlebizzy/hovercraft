@@ -14,16 +14,13 @@ $args = [
 ];
 $my_query = new wp_query( $args );
 if( $my_query->have_posts() ) {
-    echo '<div id="related"><h4>Related Posts</h4>';
+    echo '<div id="related"><h4>Related Posts:</h4><ul>';
         while( $my_query->have_posts() ) {
             $my_query->the_post(); ?>
-            <div class="ncc">
-                <a href="<?php the_permalink()?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-                <?php // the_excerpt(); ?>
-            </div><!--ncc-->
+            <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
         <?php }
         wp_reset_postdata();
-    echo '</div><!--related-->';
+    echo '</ul></div><!-- related -->';
 }
 
 // https://wordpress.stackexchange.com/a/183498/152624
