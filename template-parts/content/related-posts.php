@@ -18,10 +18,8 @@ if( $my_query->have_posts() ) {
         while( $my_query->have_posts() ) {
             $my_query->the_post(); ?>
             <div class="ncc">
-
-                <h5><a href="<?php the_permalink()?>" rel="bookmark" title="<?php the_title(); ?>" rel="nofollow"><?php the_title(); ?></a></h5>
+                <a href="<?php the_permalink()?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
                 <?php // the_excerpt(); ?>
-
             </div><!--ncc-->
         <?php }
         wp_reset_postdata();
