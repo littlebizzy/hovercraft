@@ -29,4 +29,5 @@ if( $my_query->have_posts() ) {
 }
 
 // https://wordpress.stackexchange.com/a/183498/152624
+// alt: https://stackoverflow.com/a/58809628/1718491
 ?> 
