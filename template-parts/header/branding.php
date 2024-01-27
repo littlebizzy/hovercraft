@@ -15,7 +15,7 @@
 				echo esc_url($logo_alternative_url);
 			} else { 
 				echo esc_url($logo_default_url); 
-			} ?>" class="custom-logo" alt="<?php echo get_bloginfo( 'name' ); ?>" />
+			} ?>" class="custom-logo" alt="<?php echo get_bloginfo( 'name' ); ?> logo" />
 		</a><!-- custom-logo-link -->
 	</div><!-- branding-media -->
 	<?php } ?>
