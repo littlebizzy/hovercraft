@@ -20,7 +20,7 @@ if( $my_query->have_posts() ) {
             <div class="ncc">
 
                 <h5><a href="<?php the_permalink()?>" rel="bookmark" title="<?php the_title(); ?>" rel="nofollow"><?php the_title(); ?></a></h5>
-                <?php the_excerpt(); ?>
+                <?php // the_excerpt(); ?>
 
             </div><!--ncc-->
         <?php }
