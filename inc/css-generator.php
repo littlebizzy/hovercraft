@@ -66,6 +66,10 @@ function hovercraft_generate_css(){
 	$h5_mobile_font_size = get_theme_mod( 'hovercraft_h5_mobile_font_size', '18' );
 	$h5_desktop_font_size = get_theme_mod( 'hovercraft_h5_desktop_font_size', '18' );
 	$h5_font_weight = get_theme_mod( 'hovercraft_h5_font_weight', '700' );
+	$footer_mobile_font_size = get_theme_mod( 'hovercraft_footer_mobile_font_size', '12' );
+	$footer_desktop_font_size = get_theme_mod( 'hovercraft_footer_desktop_font_size', '12' );
+	$copyright_mobile_font_size = get_theme_mod( 'hovercraft_copyright_mobile_font_size', '12' );
+	$copyright_desktop_font_size = get_theme_mod( 'hovercraft_copyright_desktop_font_size', '12' );
 	$full_hero_header_background_color = get_theme_mod( 'hovercraft_full_hero_header_background_color', '#263238' );
 	$full_hero_header_background_transparency = get_theme_mod( 'hovercraft_full_hero_header_background_transparency', '0.20' );
 	$hero_gradient_angle = get_theme_mod( 'hovercraft_hero_gradient_angle', '60deg' );
