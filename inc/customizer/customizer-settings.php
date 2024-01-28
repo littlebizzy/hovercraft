@@ -1124,7 +1124,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 
 // footer font size (desktop) setting
 $wp_customize->add_setting( 'hovercraft_footer_desktop_font_size', array(
-    'default'    => '14',
+    'default'    => '12',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
 	) 
 );
@@ -1144,7 +1144,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 
 // footer font size (mobile) setting
 $wp_customize->add_setting( 'hovercraft_footer_mobile_font_size', array(
-    'default'    => '14',
+    'default'    => '12',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
 	) 
 );
@@ -1164,7 +1164,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 
 // copyright font size (desktop) setting
 $wp_customize->add_setting( 'hovercraft_copyright_desktop_font_size', array(
-    'default'    => '14',
+    'default'    => '12',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
 	) 
 );
@@ -1184,7 +1184,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 
 // copyright font size (mobile) setting
 $wp_customize->add_setting( 'hovercraft_copyright_mobile_font_size', array(
-    'default'    => '14',
+    'default'    => '12',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
 	) 
 );
@@ -1956,7 +1956,7 @@ $wp_customize->add_setting( 'hovercraft_sidebar_callout_background_color', array
 // sidebar callout background color control
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_sidebar_callout_background_color', array(
 	'label' => 'Sidebar Callout Background Color',
-	'description' => 'Specify background color of first child sidebar widget?',
+	'description' => 'Specify background color of the Sidebar Callout widget? Note: Choose a bold tone for best results, and avoid white or shades of gray, which may result in poor visibility or CSS conflicts.',
 	'section' => 'colors',
 	'settings' => 'hovercraft_sidebar_callout_background_color'
 	)
@@ -1971,7 +1971,7 @@ $wp_customize->add_setting( 'hovercraft_sidebar_callout_text_color', array(
 // sidebar callout text color control
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_sidebar_callout_text_color', array(
 	'label' => 'Sidebar Callout Text Color',
-	'description' => 'Specify text color of first child sidebar widget?',
+	'description' => 'Specify text color of the Sidebar Callout widget?',
 	'section' => 'colors',
 	'settings' => 'hovercraft_sidebar_callout_text_color'
 	)
@@ -1985,52 +1985,52 @@ $wp_customize->add_setting( 'hovercraft_sidebar_callout_link_color', array(
 
 // sidebar callout link color control
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_sidebar_callout_link_color', array(
-	'label' => 'Sidebar Callout Link Color',
-	'description' => 'Specify link color of first child sidebar widget?',
+	'label' => 'Sidebar Callout Link (CTA) Color',
+	'description' => 'Specify link color of the Sidebar Callout widget?',
 	'section' => 'colors',
 	'settings' => 'hovercraft_sidebar_callout_link_color'
 	)
 ) );
 
-// sidebar widget background color setting
+// sidebar widgets background color setting
 $wp_customize->add_setting( 'hovercraft_sidebar_widget_background_color', array(
 	'default' => '#ffffff',
 	'sanitize_callback' => 'sanitize_hex_color',
 ) );
 
-// sidebar widget background color control
+// sidebar widgets background color control
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_sidebar_widget_background_color', array(
-	'label' => 'Sidebar widget Background Color',
+	'label' => 'Sidebar Widgets Background Color',
 	'description' => 'Specify background color of default sidebar widgets?',
 	'section' => 'colors',
 	'settings' => 'hovercraft_sidebar_widget_background_color'
 	)
 ) );
 	
-// sidebar widget text color setting
+// sidebar widgets text color setting
 $wp_customize->add_setting( 'hovercraft_sidebar_widget_text_color', array(
 	'default' => '#263238',
 	'sanitize_callback' => 'sanitize_hex_color',
 ) );
 
-// sidebar widget text color control
+// sidebar widgets text color control
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_sidebar_widget_text_color', array(
-	'label' => 'Sidebar widget Text Color',
+	'label' => 'Sidebar Widgets Text Color',
 	'description' => 'Specify text color of default sidebar widgets?',
 	'section' => 'colors',
 	'settings' => 'hovercraft_sidebar_widget_text_color'
 	)
 ) );
 	
-// sidebar widget link color setting
+// sidebar widgets link color setting
 $wp_customize->add_setting( 'hovercraft_sidebar_widget_link_color', array(
 	'default' => '#5C6BC0',
 	'sanitize_callback' => 'sanitize_hex_color',
 ) );
 
-// sidebar widget link color control
+// sidebar widgets link color control
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_sidebar_widget_link_color', array(
-	'label' => 'Sidebar widget Link Color',
+	'label' => 'Sidebar Widgets Link Color',
 	'description' => 'Specify link color of default sidebar widgets?',
 	'section' => 'colors',
 	'settings' => 'hovercraft_sidebar_widget_link_color'
