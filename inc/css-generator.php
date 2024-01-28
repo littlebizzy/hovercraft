@@ -2468,10 +2468,6 @@ p.biography-description {
    	background: <?php echo $sidebar_callout_background_color; ?> !important;
 	color: <?php echo $sidebar_callout_text_color; ?> !important;
 }
-	
-#sidebar .widget-callout a {
-	color: <?php echo $sidebar_callout_link_color; ?> !important;
-}
 
 @media screen and (max-width: 1200px) {
 .cta-sidebar-callout {
@@ -2516,13 +2512,13 @@ p.biography-description {
 	width: 100%;
 	font-size: 20px;
 	font-weight: 600;
-	color: <?php echo $sidebar_callout_text_color; ?>;
+	color: <?php echo $sidebar_callout_link_color; ?>;
 	padding: 10px 0px;
 	text-decoration: none;
 	display: block;
 	background: transparent;
 	margin-bottom: 0;
-	box-shadow: inset 0px 0px 0px 1px <?php echo $sidebar_callout_text_color; ?>;
+	box-shadow: inset 0px 0px 0px 1px <?php echo $sidebar_callout_link_color; ?>;
 	}
 }
 
@@ -2531,18 +2527,18 @@ p.biography-description {
 	width: 100%;
 	font-size: 20px;
 	font-weight: 600;
-	color: <?php echo $sidebar_callout_text_color; ?>;
+	color: <?php echo $sidebar_callout_link_color; ?>;
 	padding: 10px 0px;
 	text-decoration: none;
 	display: block;
 	background: transparent;
-	box-shadow: inset 0px 0px 0px 1px <?php echo $sidebar_callout_text_color; ?>;
+	box-shadow: inset 0px 0px 0px 1px <?php echo $sidebar_callout_link_color; ?>;
 	}
 }
 
 .cta-sidebar-callout ul li:hover a {
 	color: <?php echo $default_text_color; ?> !important;
-	background: <?php echo $sidebar_callout_text_color; ?>;
+	background: #ffffff;
 }
 
 
