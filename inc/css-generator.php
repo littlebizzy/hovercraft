@@ -2821,6 +2821,7 @@ p.biography-description {
 #footer {
 	width: 100%;
 	padding: 20px 20px;
+	font-size: <?php echo $footer_mobile_font_size; ?>px;
 	background: <?php echo $footer_background_color; ?>;
 	color: <?php echo $footer_text_color; ?>;
 	}
@@ -2831,6 +2832,7 @@ p.biography-description {
 	width: 100%;
 	margin: 0px auto;
 	padding: 40px 0px;
+	font-size: <?php echo $footer_desktop_font_size; ?>px;
 	background: <?php echo $footer_background_color; ?>;
 	color: <?php echo $footer_text_color; ?>;
 	}
@@ -2848,9 +2850,23 @@ p.biography-description {
 	text-decoration: <?php echo $footer_link_decoration; ?>;
 }
 
+
+/* copyright */
+	
+@media screen and (max-width: 1200px) {
 #copyright {
+	font-size: <?php echo $copyright_mobile_font_size; ?>px;
 	background: <?php echo $copyright_background_color; ?>;
 	color: <?php echo $copyright_text_color; ?>;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+#copyright {
+	font-size: <?php echo $copyright_desktop_font_size; ?>px;
+	background: <?php echo $copyright_background_color; ?>;
+	color: <?php echo $copyright_text_color; ?>;
+	}
 }
 
 #copyright a {
