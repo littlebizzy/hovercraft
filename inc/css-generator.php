@@ -2570,7 +2570,7 @@ p.biography-description {
 	width: 100%;
 	font-size: 20px;
 	font-weight: 600;
-	color: <?php echo $sidebar_callout_link_color; ?>;
+	color: <?php echo $sidebar_callout_link_color; ?> !important;
 	padding: 10px 0px;
 	text-decoration: none;
 	display: block;
@@ -2585,7 +2585,7 @@ p.biography-description {
 	width: 100%;
 	font-size: 20px;
 	font-weight: 600;
-	color: <?php echo $sidebar_callout_link_color; ?>;
+	color: <?php echo $sidebar_callout_link_color; ?> !important;
 	padding: 10px 0px;
 	text-decoration: none;
 	display: block;
