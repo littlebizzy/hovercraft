@@ -554,6 +554,9 @@ h1.mini-hero-title {
 	width: 100%;
 }
 
+
+/* site title */
+
 @media screen and (max-width: 1200px) {
 .site-title {
 	font-family: <?php echo ucwords(str_replace("_", " ", $site_name_font_family)); ?>;
@@ -582,10 +585,13 @@ h1.mini-hero-title {
 		}  ?>
 }
 
+
+/* tagline */
+	
 @media screen and (max-width: 1200px) {
 .tagline {
 	font-size: 14px;
-	line-height: 1.5;
+	line-height: 1;
 	display: none;
 	}
 }
@@ -597,8 +603,9 @@ h1.mini-hero-title {
 		} else { 
 			echo "margin-left: 0;\n"; 
 		}  ?>
+	padding-top: 10px;
 	font-size: 14px;
-	line-height: 1.5;
+	line-height: 1;
 	<?php if ( $tagline_display == 'right_of_site_title' ) { 
 			echo "display: inline-block;\n";
 		} elseif ( $tagline_display == 'below_site_title' ) {
