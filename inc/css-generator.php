@@ -1975,7 +1975,7 @@ video.hero-background-video {
 
 @media screen and (min-width: 1200px) {
 #main {
-	padding: 40px 0px;
+	padding: 30px 0px;
 	background: <?php echo $main_background_color; ?>;
 	<?php if ( $sitewide_layout == 'floating_islands' ) { 
 			echo "background: $main_background_color;\n"; 
@@ -2508,7 +2508,7 @@ p.biography-description {
 
 @media screen and (min-width: 1200px) {
 	#sidebar .widget-wrapper:not(:last-child) {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 	}
 }
 
