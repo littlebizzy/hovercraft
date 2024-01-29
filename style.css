@@ -1,7 +1,7 @@
 /*
 Theme Name: HoverCraft
 Theme URI: https://hovercraft.vip
-Version: 0.2.172
+Version: 0.2.173
 Description: No maintenance WordPress theme
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
@@ -33,12 +33,6 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, hr, bl
     box-sizing: border-box;
   }
 
-html, body {
-	font-size: 16px;
-	height: 100%;
-	line-height: 1.5;
-	scroll-behavior: smooth;
-}
 
 /* general */
 
@@ -255,46 +249,6 @@ html, body {
 	padding: 2px 4px;
 	left: 5px;
 	top: -5px;
-}
-
-
-/* home-premain-top */
-
-@media screen and (max-width: 1200px) {
-#home-premain-top {
-	width: 100%;
-	background: #eceff1; /* can be overriden in customizer via !important */
-	padding: 30px 20px;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-#home-premain-top {
-	width: 100%;
-	margin: 0px auto;
-	background: #eceff1; /* can be overriden in customizer via !important */
-	padding: 60px 0px;
-	}
-}
-
-
-/* home-premain-bottom */
-
-@media screen and (max-width: 1200px) {
-#home-premain-bottom {
-	width: 100%;
-	background: #eceff1; /* can be overriden in customizer via !important */
-	padding: 30px 20px;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-#home-premain-bottom {
-	width: 100%;
-	margin: 0px auto;
-	background: #eceff1; /* can be overriden in customizer via !important */
-	padding: 60px 0px;
-	}
 }
 
 
@@ -586,78 +540,4 @@ html, body {
 	margin-left: 10px;
 	list-style-type: circle;
 	line-height: 2;
-}
-
-
-/* copyright */
-
-@media screen and (max-width: 1200px) {
-#copyright {
-	width: 100%;
-	background: #ECEFF1; /* can be overriden in customizer via !important */
-	font-size: 14px;
-	padding: 20px 20px;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-#copyright {
-	width: 100%;
-	background: #ECEFF1; /* can be overriden in customizer via !important */
-	font-size: 14px;
-	padding: 20px 0px;
-	display: table;
-	}
-}
-
-@media screen and (max-width: 1200px) {
-.copyright-left {
-	width: 100%;
-	display: block;
-    vertical-align: top;
-	text-align: center;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-.copyright-left {
-	display: table-cell;
-    vertical-align: middle;
-	height: inherit;
-	min-width: auto;
-	white-space: nowrap;
-	}
-}
-
-@media screen and (max-width: 1200px) {
-.copyright-right {
-	width: 100%;
-	margin-top: 30px;
-	display: block;
-    vertical-align: top;
-	text-align: center;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-.copyright-right {
-	width: 100%;
-	display: table-cell;
-    vertical-align: middle;
-	height: inherit;
-	text-align: right;
-	}
-}
-
-
-/* copyright ul */
-
-#copyright ul {
-	list-style-type: none;
-}
-
-#copyright ul li {
-	list-style-type: none;
-	display: inline-block;
-	margin-left: 10px;
 }
