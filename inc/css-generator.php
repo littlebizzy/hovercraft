@@ -559,7 +559,7 @@ h1.mini-hero-title {
 	font-family: <?php echo ucwords(str_replace("_", " ", $site_name_font_family)); ?>;
 	font-weight: <?php echo $site_name_font_weight; ?>;
 	font-size: <?php echo $site_name_mobile_font_size; ?>px;
-	line-height: 1; /* because site-tagline is hidden on mobile */
+	line-height: 1; /* site-tagline is hidden on mobile anyways */
 	display: block;
 	}
 }
@@ -569,6 +569,7 @@ h1.mini-hero-title {
 	font-family: <?php echo ucwords(str_replace("_", " ", $site_name_font_family)); ?>;
 	font-weight: <?php echo $site_name_font_weight; ?>;
 	font-size: <?php echo $site_name_desktop_font_size; ?>px;
+	line-height: 1; /* therefore site-tagline requires padding-top */
 	display: block;
 	}
 }
@@ -1967,7 +1968,7 @@ video.hero-background-video {
 
 @media screen and (min-width: 1200px) {
 #main {
-	padding: 30px 0px;
+	padding: 40px 0px;
 	background: <?php echo $main_background_color; ?>;
 	<?php if ( $sitewide_layout == 'floating_islands' ) { 
 			echo "background: $main_background_color;\n"; 
