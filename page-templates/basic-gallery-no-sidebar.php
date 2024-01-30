@@ -1,4 +1,4 @@
-<?php /* Template Name: Basic Gallery (Sidebar) */ ?>
+<?php /* Template Name: Basic Gallery (No Sidebar) */ ?>
 <?php get_template_part( 'header' ); ?>
 <?php get_template_part( 'template-parts/header/header-basic' ); ?>
 
@@ -28,8 +28,6 @@ if ( !is_front_page() || ( is_front_page() && $hovercraft_homepage_hide_main_che
 
 	<div class="clear"></div>
     </div><!-- primary -->
-    
-    <?php get_template_part( 'sidebar' ); ?>
         
 <div class="clear"></div>
 </div><!-- inner -->
