@@ -1,4 +1,4 @@
-<?php /* Template Name: Basic (Gallery) Sidebar */ ?>
+<?php /* Template Name: Basic Gallery (Sidebar) */ ?>
 <?php get_template_part( 'header' ); ?>
 <?php get_template_part( 'template-parts/header/header-basic' ); ?>
 
