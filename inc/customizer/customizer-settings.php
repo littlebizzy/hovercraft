@@ -1686,7 +1686,7 @@ $wp_customize->add_setting( 'hovercraft_topbar_background_color', array(
 // topbar background color control
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_topbar_background_color', array(
 	'label' => 'Topbar Background Color',
-	'description' => 'Applies to the site-wide topbar element.',
+	'description' => 'Specify background color of the Topbar element? Note: Choose a bold tone or black for best results, and avoid white or shades of gray, which may result in poor visibility or CSS conflicts.',
 	'section' => 'colors',
 	'settings' => 'hovercraft_topbar_background_color'
 	)
