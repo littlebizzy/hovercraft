@@ -1,7 +1,7 @@
 <?php
 
 function hovercraft_customizer($wp_customize) {
-
+f
 $hovercraft_google_fonts_array = hovercraft_google_fonts_array();
 
 // remove header text color control
@@ -524,7 +524,7 @@ $wp_customize->add_section( 'hovercraft_blog', array(
 ) );
 
 // social sharing setting
-$wp_customize->add_setting( 'hovercraft_biography_links', array(
+$wp_customize->add_setting( 'hovercraft_social_sharing', array(
     'default'    => 'none',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
 	) 
