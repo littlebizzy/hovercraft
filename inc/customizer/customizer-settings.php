@@ -1,7 +1,6 @@
 <?php
 
 function hovercraft_customizer($wp_customize) {
-f
 $hovercraft_google_fonts_array = hovercraft_google_fonts_array();
 
 // remove header text color control
