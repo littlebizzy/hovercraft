@@ -355,6 +355,30 @@ hr {
 }
 
 
+/* social sharing */
+
+@media screen and (max-width: 1200px) {
+#social-sharing {
+	margin-bottom: 20px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+#social-sharing {
+	margin-bottom: 30px;
+	}
+}
+
+#social-sharing i {
+	font-size: 20px;
+	margin-left: 20px !important;
+}
+
+#social-sharing i:first-child {
+	margin-left: 0;
+}
+
+
 /* after byline (widget area) */
 
 @media screen and (max-width: 1200px) {
