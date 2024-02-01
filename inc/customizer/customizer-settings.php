@@ -523,6 +523,32 @@ $wp_customize->add_section( 'hovercraft_blog', array(
     'priority'   => 113,
 ) );
 
+// social sharing setting
+$wp_customize->add_setting( 'hovercraft_biography_links', array(
+    'default'    => 'none',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// social sharing control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_social_sharing',
+        array(
+            'label'     => __( 'Social Sharing Links', 'hovercraft' ),
+			'description' => __( 'Where should the social sharing links be displayed?', 'hovercraft' ),
+            'section'   => 'hovercraft_blog',
+            'settings'  => 'hovercraft_social_sharing',
+            'type'      => 'select',
+			'choices' => array(
+        		'none' => 'None (Disabled)',
+				'top_of_post' => 'Top Of Post',
+				'bottom_of_post' => 'Bottom Of Post',
+				'top_and_bottom_of_post' => 'Top & Bottom Of Post'
+    			)
+        )
+) );
+
 // author biography display setting
 $wp_customize->add_setting( 'hovercraft_biography', array(
     'default'    => 'native_posts_only',
