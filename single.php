@@ -23,6 +23,8 @@
 
 					<?php get_template_part( 'template-parts/content/byline' ); ?>
 
+					<?php get_template_part( 'template-parts/content/social-sharing' ); ?>
+
 					<?php get_template_part( 'template-parts/content/byline-after' ); ?>
 		
 					<?php the_content(); ?>
