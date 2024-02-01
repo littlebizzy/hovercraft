@@ -3359,6 +3359,7 @@ form {
 	
 button[type="submit"] {
 	font-weight: 600;
+	line-height: 1;
 	background: <?php echo $default_link_color; ?> !important;
 	text-decoration: none;
 	color: #ffffff;
@@ -3369,8 +3370,8 @@ button[type="submit"] {
 	
 input, select {
 	width: 100%;
-	font-size: 18px;
 	font-weight: 400;
+	line-height: 1;
 	display: inline-block;
 	padding: 10px 20px !important;
 	background: #ffffff;
@@ -3378,6 +3379,10 @@ input, select {
 	border: 0;
 	outline: none;
 	box-shadow: inset 0px 0px 0px 1px #BDBDBD;
+}
+
+#topbar input, .hero-half input {
+	box-shadow: none;
 }
 
 textarea {
