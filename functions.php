@@ -6,6 +6,9 @@
 // back to top
 // require get_template_directory() . '/inc/back-to-top.php';
 
+// bbpress quick tags
+require get_template_directory() . '/inc/bbpress-quick-tags.php';
+
 // breadcrumbs
 require get_template_directory() . '/inc/breadcrumbs.php';
 
