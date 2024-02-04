@@ -44,6 +44,7 @@ function hovercraft_generate_css(){
 	$after_byline_desktop_font_size = get_theme_mod( 'hovercraft_after_byline_desktop_font_size', '12' );
 
 	/* misc */
+	$breadcrumbs = get_theme_mod( 'hovercraft_breadcrumbs', 'none' );
 	$prefooter_bottom_columns = get_theme_mod( 'hovercraft_prefooter_bottom_columns', '1' );
 	$gallery_captions = get_theme_mod( 'hovercraft_gallery_captions', 'none' );
 	$sitewide_layout = get_theme_mod( 'hovercraft_sitewide_layout', 'floating_islands' );
@@ -2268,7 +2269,7 @@ img.featured-image-archive {
 
 @media screen and (min-width: 1200px) {
 .breadcrumbs {
-	margin-bottom: 40px;
+	margin-bottom: 30px;
 	font-size: 14px;
 	line-height: 20px !important;
 	color: #607D8B;
@@ -2384,7 +2385,7 @@ img.featured-image-archive {
 	<?php if ( $sitewide_layout == 'floating_islands' ) { 
 			echo "padding: 40px 40px 40px 40px;\n"; 
 		} else { 
-			echo "padding: 40px 0px 40px 0px;\n"; 
+			echo "padding: 0px 0px 40px 0px;\n"; 
 		}  ?>
 	display: block;
 	overflow: hidden;
