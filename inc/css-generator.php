@@ -322,6 +322,7 @@ ol > li::marker {
 }
 
 iframe {
+	position: relative;
     display: block;
 }
 
@@ -2390,15 +2391,12 @@ img.featured-image-archive {
 	overflow-wrap: break-word;
 	}
 }
-	
-#content-padded img {
-	margin-bottom: 30px;
-	max-width: 100%;
-	height: auto;
-	display: block;
-}
 
 #content-padded iframe {
+	margin-bottom: 30px;
+}
+	
+#content-padded img {
 	margin-bottom: 30px;
 	max-width: 100%;
 	height: auto;
