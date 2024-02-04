@@ -340,10 +340,12 @@ hr {
 	margin-bottom: 30px;
 	}
 }
-
+	
+/*
 #content-wrapper iframe {
 	aspect-ratio: 16 / 9;
 }
+*/
 
 #footer iframe {
 	aspect-ratio: 1 / 1.5;
@@ -3670,11 +3672,16 @@ p.akismet_comment_form_privacy_notice {
 }
 
 #bbpress-forums ul.bbp-forums, #bbpress-forums ul.bbp-lead-topic, #bbpress-forums ul.bbp-replies, #bbpress-forums ul.bbp-search-results, #bbpress-forums ul.bbp-topics {
-	border: 1px solid #BDBDBD;
+	border: none;
 }
 
 #bbpress-forums li.bbp-body ul.forum, #bbpress-forums li.bbp-body ul.topic {
-	border-top: 1px solid #BDBDBD;
+	border-top: none;
+}
+
+div.bbp-forum-header, div.bbp-reply-header, div.bbp-topic-header {
+    border-top: none;
+    clear: both;
 }
 
 .bbp-template-notice {
