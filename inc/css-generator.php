@@ -44,6 +44,7 @@ function hovercraft_generate_css(){
 	$after_byline_desktop_font_size = get_theme_mod( 'hovercraft_after_byline_desktop_font_size', '12' );
 
 	/* misc */
+	$blockquote_captions = get_theme_mod( 'hovercraft_blockquote_captions', 'none' );
 	$breadcrumbs = get_theme_mod( 'hovercraft_breadcrumbs', 'none' );
 	$prefooter_bottom_columns = get_theme_mod( 'hovercraft_prefooter_bottom_columns', '1' );
 	$gallery_captions = get_theme_mod( 'hovercraft_gallery_captions', 'none' );
@@ -197,6 +198,10 @@ blockquote p {
 
 blockquote p:last-child {
 	margin-bottom: 0;
+}
+
+blockquote .wp-caption-text {
+	<?php if ( $blockquote_captions == 'none') { echo "display: none;"; } ?>
 }
 
 strong {
