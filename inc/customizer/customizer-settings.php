@@ -476,6 +476,31 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// blockquote captions setting
+$wp_customize->add_setting( 'hovercraft_blockquote_captions', array(
+    'default'    => 'none',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// blockquote captions control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_blockquote_captions',
+        array(
+            'label'     => __('Gallery Blockquote Display', 'hovercraft'),
+			'description' => __( 'What display style should the blockquote captions use?', 'hovercraft' ),
+            'section'   => 'hovercraft_page_layouts',
+            'settings'  => 'hovercraft_blockquote_captions',
+            'type'      => 'select',
+			'choices' => array(
+        		'none' => 'None (Disabled)',
+				'below_image' => 'Below Image',
+				'inside_image' => 'Inside Image (Bottom)'
+    			)
+        )
+) );
+
 // widget layouts section
 $wp_customize->add_section( 'hovercraft_widget_layouts', array(
     'title'      => 'Widget Layouts',
