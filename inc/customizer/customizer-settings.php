@@ -1174,7 +1174,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 
 // footer font size (desktop) setting
 $wp_customize->add_setting( 'hovercraft_footer_desktop_font_size', array(
-    'default'    => '12',
+    'default'    => '14',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
 	) 
 );
@@ -1194,7 +1194,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 
 // footer font size (mobile) setting
 $wp_customize->add_setting( 'hovercraft_footer_mobile_font_size', array(
-    'default'    => '12',
+    'default'    => '14',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
 	) 
 );
@@ -1214,7 +1214,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 
 // copyright font size (desktop) setting
 $wp_customize->add_setting( 'hovercraft_copyright_desktop_font_size', array(
-    'default'    => '12',
+    'default'    => '14',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
 	) 
 );
@@ -1234,7 +1234,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 
 // copyright font size (mobile) setting
 $wp_customize->add_setting( 'hovercraft_copyright_mobile_font_size', array(
-    'default'    => '12',
+    'default'    => '14',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
 	) 
 );
