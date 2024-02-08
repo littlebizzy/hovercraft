@@ -11,7 +11,7 @@
 			<?php //if (get_the_author_meta('user_email')) { echo get_avatar(get_the_author_meta('user_email') ); } ?>
 		</span>
 		<?php } ?>
-		<strong><?php echo get_the_author_meta('display_name', $author_id); ?></strong></span> | <span class="post-updated"><?php /* _e( 'Updated on ', 'hovercraft' ); */ echo the_modified_time('M j, Y'); ?></span>
+		<a href="#author"><strong><?php echo get_the_author_meta('display_name', $author_id); ?></strong></a></span> | <span class="post-updated"><?php /* _e( 'Updated on ', 'hovercraft' ); */ echo the_modified_time('M j, Y'); ?></span>
 </div><!-- post-byline -->
 <?php } 
 
