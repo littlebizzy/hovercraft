@@ -2430,14 +2430,14 @@ img.featured-image-archive {
 
 /* author biography */
 
-.author-biography {
-	margin: 40px 0px;
+#author {
+	margin: 30px 0px;
 	padding: 40px;
-	border: 1px solid #ccc;
+	box-shadow: inset 0px 0px 0px 1px #cccccc;
 	border-radius: 0px;
 }
 
-.author-biography p {
+#author p {
 	margin-bottom: 0;
 }
 
