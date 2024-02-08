@@ -7,7 +7,7 @@ if ( ( $hovercraft_biography == 'native_posts_only' ) || ( $hovercraft_biography
 
 		if ( get_post_type() === 'post' ) { ?>
 
-        <div class="author-biography">
+        <div id="author">
 			<h5 class="author-biography-intro"><?php _e( 'About the Author', 'hovercraft' ); ?></h5>
 			
 			<?php $hovercraft_byline_photo = get_theme_mod( 'hovercraft_byline_photo', 'none' );
@@ -37,7 +37,7 @@ if ( ( $hovercraft_biography == 'native_posts_only' ) || ( $hovercraft_biography
 			<h3 class="biography-name"><?php the_author_meta('display_name'); ?></h3>
             <p class="biography-description"><?php echo nl2br( get_the_author_meta('description') ); ?></p>
 			<div class="clear"></div>
-        </div><!-- author-biography -->
+        </div><!-- author -->
 
 		<?php } // if custom post or native post
 	
