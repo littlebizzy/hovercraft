@@ -9,6 +9,9 @@
 // bbpress quick tags
 require get_template_directory() . '/inc/bbpress-quick-tags.php';
 
+// bbpress search results
+require get_template_directory() . '/inc/bbpress-search-results.php';
+
 // breadcrumbs
 require get_template_directory() . '/inc/breadcrumbs.php';
 
