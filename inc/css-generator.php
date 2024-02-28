@@ -359,6 +359,8 @@ hr {
 }
 
 .tags {
+	clear: right; /* needed for WooCommerce now seems */
+	display: block;
 	font-size: 14px;
 	color: #607D8B;
 }
