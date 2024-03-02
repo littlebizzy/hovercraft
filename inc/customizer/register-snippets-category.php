@@ -13,14 +13,14 @@ function hovercraft_bullets_category_register( $wp_customize ) {
     	$rjs_choices_list[$rjs_single_cat->slug] = __( $rjs_single_cat->name );
 	}
 	
-	// faq category setting
+// faq category setting
 	$wp_customize->add_setting( 'hovercraft_bullets_category', array(
     'default'    => 'none',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
 	) 
-	);
+);
 	
-	// faq category control
+// faq category control
 		$wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
         'hovercraft_bullets_category',
@@ -39,7 +39,7 @@ function hovercraft_bullets_category_register( $wp_customize ) {
     'default'    => 'none',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
 	) 
-	);
+);
 
 // faq html control
 		$wp_customize->add_control( new WP_Customize_Control(
@@ -54,6 +54,30 @@ function hovercraft_bullets_category_register( $wp_customize ) {
 			'choices' => array(
 				'none' => 'No HTML',
 				'include_html' => 'Include HTML'
+    			)
+        )
+) );
+
+// faq permalinks setting
+	$wp_customize->add_setting( 'hovercraft_faq_permalinks', array(
+    'default'    => 'none',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// faq permalinks control
+		$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_faq_permalinks',
+        array(
+            'label'     => __( 'FAQ Permalinks', 'hovercraft' ),
+			'description' => __( 'Do you want to link to child FAQ pages from the main FAQ page?', 'hovercraft' ),
+            'section'   => 'hovercraft_category_layouts',
+            'settings'  => 'hovercraft_faq_permalinks',
+            'type'      => 'select',
+			'choices' => array(
+				'none' => 'Do not link',
+				'link_to_faq' => 'Link to FAQ children'
     			)
         )
 ) );
