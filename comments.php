@@ -54,4 +54,18 @@ if ( post_password_required() ) {
 	</div><!-- comments -->
 	<?php endif; // have_comments() ?>
 
-	<?php comment_form(); ?>
+<?php
+    $fields =  array(
+        
+		'author' => '<p class="comment-form-author">' . '<label for="comment-author">' . __( 'Name' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) . '<input id="comment-author" name="comment-author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></p>',
+        'email'  => '<p class="comment-form-email"><label for="comment-email">' . __( 'Email' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) .           '<input id="comment-email" name="comment-email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></p>',
+        'url'   => '<p class="comment-form-url"><label for="comment-url">' . __( 'Website' ) . '</label>' . '<input id="comment-url" name="comment-url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></p>',
+    ); 
+
+    comment_form(array('fields'=>$fields));
+
+// https://developer.wordpress.org/reference/functions/comment_form/
+// https://stackoverflow.com/questions/3335929/edit-wordpress-comment-form-just-add-a-class-to-the-text-inputs
+// https://stackoverflow.com/questions/11333810/how-to-customize-wordpress-comment-form
+
+?>
