@@ -19,7 +19,13 @@
         <?php if ($the_query->have_posts()) : ?>
             <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
 				<div class="faq-item">
-                <h5><?php the_title(); ?></h5>					
+					
+				<?php $hovercraft_faq_permalinks = get_theme_mod( 'hovercraft_faq_permalinks', 'none' );
+				if ( $hovercraft_faq_permalinks == 'link_to_faq') { ?>
+                	<h5><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h5>	
+				<?php } else { ?>
+					<h5><?php the_title(); ?></h5>	
+				<?php } ?>
 					
 				<?php $hovercraft_bullets_html_content = get_theme_mod( 'hovercraft_bullets_html_content', 'none' );
 				if ( $hovercraft_bullets_html_content == 'include_html') { 
