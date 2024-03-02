@@ -34,7 +34,7 @@
 					$hovercraft_faq_character_count = get_theme_mod( 'hovercraft_faq_character_count', '300' );
 					$content = get_the_content();
 					//echo wp_strip_all_tags( $content );
-					echo wp_trim_words( $content, $hovercraft_faq_character_count, '...' );
+					echo '<p>' . wp_trim_words( $content, $hovercraft_faq_character_count, '...' ) . '</p>';
 					
 					// https://stackoverflow.com/questions/65033340/how-can-i-get-wordpress-page-content-without-html-tags
 					// https://wordpress.stackexchange.com/questions/94848/how-can-i-remove-all-html-tags-from-get-the-content
