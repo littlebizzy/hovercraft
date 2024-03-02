@@ -57,6 +57,26 @@ function hovercraft_bullets_category_register( $wp_customize ) {
     			)
         )
 ) );
+
+// faq character count setting
+$wp_customize->add_setting( 'hovercraft_faq_character_count', array(
+    'default'    => '300',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
+	) 
+);
+
+// faq character count control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_faq_character_count',
+        array(
+            'label'     => __( 'FAQ Character Count', 'hovercraft' ),
+			'description' => __( 'How many characters of each FAQ post should appear in the main FAQ page?', 'hovercraft' ),
+            'section'   => 'hovercraft_category_layouts',
+            'settings'  => 'hovercraft_faq_character_count',
+            'type' => 'text'
+        )
+) );
 	
 }
  
