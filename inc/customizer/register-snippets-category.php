@@ -71,7 +71,7 @@ function hovercraft_bullets_category_register( $wp_customize ) {
         'hovercraft_faq_permalinks',
         array(
             'label'     => __( 'FAQ Permalinks', 'hovercraft' ),
-			'description' => __( 'Do you want to link to child FAQ pages from the main FAQ page?', 'hovercraft' ),
+			'description' => __( 'Do you want to link to child FAQ pages from the main FAQ page? Note: For SEO reasons, we suggest limiting characters (below) using the FAQ Character Count setting if you enable FAQ Permalinks, to avoid duplicate content.', 'hovercraft' ),
             'section'   => 'hovercraft_category_layouts',
             'settings'  => 'hovercraft_faq_permalinks',
             'type'      => 'select',
