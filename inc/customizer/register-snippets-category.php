@@ -36,7 +36,7 @@ function hovercraft_bullets_category_register( $wp_customize ) {
 
 // faq html setting
 	$wp_customize->add_setting( 'hovercraft_bullets_html_content', array(
-    'default'    => 'no_html',
+    'default'    => 'none',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
 	) 
 	);
@@ -52,7 +52,7 @@ function hovercraft_bullets_category_register( $wp_customize ) {
             'settings'  => 'hovercraft_bullets_html_content',
             'type'      => 'select',
 			'choices' => array(
-				'no_html' => 'No HTML',
+				'none' => 'No HTML',
 				'include_html' => 'Include HTML'
     			)
         )
