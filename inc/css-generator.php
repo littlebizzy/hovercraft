@@ -1359,9 +1359,18 @@ button {
 	}
 }
 
+@media screen and (max-width: 1200px) {
 #bullets p {
 	font-size: 14px;
-	margin-bottom: 40px;
+	margin-bottom: 20px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+#bullets p {
+	font-size: 14px;
+	margin-bottom: 30px;
+	}
 }
 	
 #bullets ul, #bullets ol {
