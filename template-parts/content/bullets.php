@@ -19,8 +19,19 @@
         <?php if ($the_query->have_posts()) : ?>
             <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
 				<div class="faq-item">
-                <h5><?php the_title(); ?></h5>
-                <?php the_content(); ?>
+                <h5><?php the_title(); ?></h5>					
+					
+				<?php $hovercraft_bullets_html_content = get_theme_mod( 'hovercraft_bullets_html_content', 'none' );
+				if ( $hovercraft_bullets_html_content == 'include_html') { 
+					the_content();
+				} else {
+					$content = get_the_content();
+					echo wp_strip_all_tags( $content );
+					// https://stackoverflow.com/questions/65033340/how-can-i-get-wordpress-page-content-without-html-tags
+					// https://wordpress.stackexchange.com/questions/94848/how-can-i-remove-all-html-tags-from-get-the-content
+					// https://stackoverflow.com/questions/17387313/custom-wp-strip-all-tags-wordpress-function
+				} ?>
+					
 				</div><!-- faq-item -->
 
             <?php endwhile; ?>
