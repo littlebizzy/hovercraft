@@ -119,6 +119,7 @@ function hovercraft_generate_css(){
 	$sidebar_widget_text_color = get_theme_mod( 'hovercraft_sidebar_widget_text_color', '#263238' );
 	$sidebar_widget_link_color = get_theme_mod( 'hovercraft_sidebar_widget_link_color', '#5C6BC0' );
 	$main_background_color = get_theme_mod( 'hovercraft_main_background_color', '#eceff1' );
+	$main_background_color_home = get_theme_mod( 'hovercraft_main_background_color_home', '#eceff1' );
 	$postmain_top_background_color = get_theme_mod( 'hovercraft_postmain_top_background_color', '#eceff1' );
 	$postmain_top_text_color = get_theme_mod( 'hovercraft_postmain_top_text_color', '#263238' );
 	$postmain_top_link_color = get_theme_mod( 'hovercraft_postmain_top_link_color', '#5C6BC0' );
@@ -2089,6 +2090,14 @@ video.hero-background-video {
 			echo "background: #ffffff;\n"; 
 		}  ?>
 	}
+}
+
+body.home #main {
+	background: <?php echo $main_background_color_home; ?>;
+}
+
+body.home #content-wide {
+	background: <?php echo $main_background_color_home; ?>;
 }
 
 
