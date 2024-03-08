@@ -35,7 +35,7 @@ function hovercraft_suggest_git_updater_plugin() {
         <p>The HoverCraft theme requires the free Git Updater plugin to receive automatic updates via GitHub.</p>
 		<p><?php
 			// $installurl = wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=git-updater' ), 'install-plugin_git-updater' );
-			echo '<a href="https://git-updater.com/wp-content/uploads/2022/12/git-updater-11.1.10.6.zip">Download Now</a>'; 
+			echo '<a href="https://git-updater.com/wp-content/uploads/2024/03/git-updater-12.4.0.zip">Download Now</a>'; 
 			?></p>
 		</div>
 
@@ -46,7 +46,7 @@ function hovercraft_suggest_git_updater_plugin() {
         <p>The HoverCraft theme requires the free Git Updater plugin to receive automatic updates via GitHub.</p>
 		<p><?php
 			// $installurl = wp_nonce_url( self_admin_url( 'update.php?action=install-plugin&plugin=git-updater' ), 'install-plugin_git-updater' );
-			echo '<a href="https://git-updater.com/wp-content/uploads/2022/12/git-updater-11.1.10.6.zip">Download Now</a>'; 
+			echo '<a href="https://git-updater.com/wp-content/uploads/2024/03/git-updater-12.4.0.zip">Download Now</a>'; 
 			?></p>
 		</div>
 
