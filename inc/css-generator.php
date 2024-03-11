@@ -383,11 +383,7 @@ hr {
 
 #social-sharing i {
 	font-size: 18px;
-	margin-left: 20px !important;
-}
-
-#social-sharing i:first-of-type {
-	margin-left: 0;
+	margin-right: 20px !important;
 }
 
 
