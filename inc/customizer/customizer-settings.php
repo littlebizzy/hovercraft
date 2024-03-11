@@ -549,7 +549,7 @@ $wp_customize->add_section( 'hovercraft_blog', array(
 
 // social sharing setting
 $wp_customize->add_setting( 'hovercraft_social_sharing', array(
-    'default'    => 'none',
+    'default'    => 'top_of_post',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
 	) 
 );
