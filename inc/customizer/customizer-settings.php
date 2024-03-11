@@ -360,6 +360,30 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// faq noindex setting
+$wp_customize->add_setting( 'hovercraft_faq_posts_noindex', array(
+    'default'    => 'noindex',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// faq noindex control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_faq_posts_noindex',
+        array(
+            'label'     => __( 'Noindex FAQ Posts', 'hovercraft' ),
+			'description' => __( 'Do you want to noindex the FAQ posts? Note: We recommend keep noindex enabled for FAQ posts if you are displaying all FAQ post text on the FAQ category page.', 'hovercraft' ),
+            'section'   => 'hovercraft_seo',
+            'settings'  => 'hovercraft_faq_posts_noindex',
+            'type'      => 'select',
+			'choices' => array(
+				'noindex' => 'Noindex',
+				'disable_noindex' => 'Do Not Noindex'
+    			)
+        )
+) );
+
 // category layouts section
 $wp_customize->add_section( 'hovercraft_category_layouts', array(
     'title'      => 'Category Layouts',
