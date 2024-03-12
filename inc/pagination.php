@@ -76,12 +76,12 @@ function hovercraft_pagination_nav() {
 // https://wordpress.stackexchange.com/questions/296537/category-template-with-pagination-returns-404-on-next-pages
 // https://wordpress.stackexchange.com/questions/298767/pagination-page-2-displaying-404-on-archive-pages
 // https://wordpress.stackexchange.com/questions/209693/wordpress-page-2-404-pagination-problem-what-to-do
-function remove_page_from_query_string($query_string)
-{ 
-    if ($query_string['name'] == 'page' && isset($query_string['page'])) {
-        unset($query_string['name']);
-        $query_string['paged'] = $query_string['page'];
-    }      
-    return $query_string;
+// https://generatepress.com/forums/topic/pagnation/
+
+add_filter( 'request', function ( $query_string ) {
+if ( isset( $query_string['page'], $query_string['name'] ) && 'page' === $query_string['name'] ) {
+unset( $query_string['name'] );
+$query_string['paged'] = $query_string['page'];
 }
-add_filter('request', 'remove_page_from_query_string');
+return $query_string;
+} );
