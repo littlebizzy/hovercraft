@@ -9,8 +9,8 @@ if ( $social_sharing == 'top_of_post' ) { ?>
 
 <div id="social-sharing">
     <a rel="noopener noreferrer nofollow" target="_blank" href="https://twitter.com/intent/post?url=<?php echo $urlnow; ?>"><i class="fa-brands fa-x-twitter"></i></a>
-    <i class="fa-brands fa-facebook"></i>
-    <i class="fa-brands fa-pinterest"></i>
+    <a rel="noopener noreferrer nofollow" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $urlnow; ?>"><i class="fa-brands fa-facebook"></i></a>
+    <a rel="noopener noreferrer nofollow" target="_blank" href="https://pinterest.com/pin/create/link/?url=<?php echo $urlnow; ?>"><i class="fa-brands fa-pinterest"></i></a>
     <i class="fa-brands fa-telegram"></i>
     <i class="fa-brands fa-viber"></i>
     <i class="fa-brands fa-signal-messenger"></i>
