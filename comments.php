@@ -55,6 +55,12 @@ if ( post_password_required() ) {
 	<?php endif; // have_comments() ?>
 
 <?php
+
+	// https://stackoverflow.com/questions/20751219/undefined-variable-on-comments-wordpress
+	$commenter = wp_get_current_commenter();
+	$req = get_option( 'require_name_email' );
+	$aria_req = ( $req ? " aria-required='true'" : '' );
+
     $fields =  array(
         
 		'author' => '<p class="comment-form-author">' . '<label for="comment-author">' . __( 'Name' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) . '<input id="comment-author" name="comment-author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></p>',
