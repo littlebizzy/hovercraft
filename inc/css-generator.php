@@ -372,17 +372,20 @@ hr {
 @media screen and (max-width: 1200px) {
 #social-sharing {
 	margin-bottom: 20px;
+	line-height: 1;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 #social-sharing {
 	margin-bottom: 30px;
+	line-height: 1;
 	}
 }
 
 #social-sharing i {
-	font-size: 18px;
+	font-size: 16px;
+	line-height: 1;
 	margin-right: 20px !important;
 }
 
