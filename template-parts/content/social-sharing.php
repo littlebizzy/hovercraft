@@ -1,6 +1,6 @@
 <?php 
 
-$social_sharing = get_theme_mod( 'hovercraft_social_sharing', 'none' );
+$social_sharing = get_theme_mod( 'hovercraft_social_sharing', 'top_of_post' );
 $urlnow = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
 // https://stackoverflow.com/questions/6768793/get-the-full-url-in-php
