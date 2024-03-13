@@ -72,4 +72,6 @@
 			<div class="clear"></div>
 		</div><!-- inner -->
 	</div><!-- topbar -->
-	<?php } ?><!-- if topbar widgets active -->
+	<?php } 
+	// todo: https://wordpress.stackexchange.com/questions/419686/how-to-retrieve-blog-language-without-any-region-locale-attached		
+	?><!-- if topbar widgets active -->
