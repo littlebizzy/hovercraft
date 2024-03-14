@@ -2877,13 +2877,13 @@ p.biography-description {
 		echo "grid-template-columns: repeat(3, 1fr);\n"; 
 	} elseif ( $prefooter_top_columns == '4' ) { 
 		echo "grid-template-columns: repeat(4, 1fr);\n"; 
-	elseif ( $prefooter_top_columns == '5' ) { 
+	} elseif ( $prefooter_top_columns == '5' ) { 
 		echo "grid-template-columns: repeat(5, 1fr);\n"; 
-	elseif ( $prefooter_top_columns == '6' ) { 
+	} elseif ( $prefooter_top_columns == '6' ) { 
 		echo "grid-template-columns: repeat(6, 1fr);\n"; 
-	elseif ( $prefooter_top_columns == '7' ) { 
+	} elseif ( $prefooter_top_columns == '7' ) { 
 		echo "grid-template-columns: repeat(7, 1fr);\n"; 
-	elseif ( $prefooter_top_columns == '8' ) { 
+	} elseif ( $prefooter_top_columns == '8' ) { 
 		echo "grid-template-columns: repeat(8, 1fr);\n"; } ?>
   	gap: 30px;
 	}
@@ -2950,13 +2950,13 @@ p.biography-description {
 		echo "grid-template-columns: repeat(3, 1fr);\n"; 
 	} elseif ( $prefooter_bottom_columns == '4' ) { 
 		echo "grid-template-columns: repeat(4, 1fr);\n"; 
-	elseif ( $prefooter_bottom_columns == '5' ) { 
+	} elseif ( $prefooter_bottom_columns == '5' ) { 
 		echo "grid-template-columns: repeat(5, 1fr);\n"; 
-	elseif ( $prefooter_bottom_columns == '6' ) { 
+	} elseif ( $prefooter_bottom_columns == '6' ) { 
 		echo "grid-template-columns: repeat(6, 1fr);\n"; 
-	elseif ( $prefooter_bottom_columns == '7' ) { 
+	} elseif ( $prefooter_bottom_columns == '7' ) { 
 		echo "grid-template-columns: repeat(7, 1fr);\n"; 
-	elseif ( $prefooter_bottom_columns == '8' ) { 
+	} elseif ( $prefooter_bottom_columns == '8' ) { 
 		echo "grid-template-columns: repeat(8, 1fr);\n"; } ?>
   	gap: 30px;
 	}
