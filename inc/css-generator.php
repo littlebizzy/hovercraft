@@ -46,6 +46,7 @@ function hovercraft_generate_css(){
 	/* misc */
 	$blockquote_captions = get_theme_mod( 'hovercraft_blockquote_captions', 'none' );
 	$breadcrumbs = get_theme_mod( 'hovercraft_breadcrumbs', 'none' );
+	$prefooter_top_columns = get_theme_mod( 'hovercraft_prefooter_top_columns', '1' );
 	$prefooter_bottom_columns = get_theme_mod( 'hovercraft_prefooter_bottom_columns', '1' );
 	$gallery_captions = get_theme_mod( 'hovercraft_gallery_captions', 'none' );
 	$sitewide_layout = get_theme_mod( 'hovercraft_sitewide_layout', 'floating_islands' );
@@ -2854,6 +2855,44 @@ p.biography-description {
 	color: <?php echo $prefooter_top_text_color; ?>;
 	padding: 40px 0px;
 	text-align: center;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+#prefooter-top .inner {
+	width: 100%;
+	padding: 30px 20px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+#prefooter-top .inner {
+	width: 100%;
+	display: grid;
+	<?php if ( $prefooter_bottom_columns == '1' ) { 
+			echo "grid-template-columns: repeat(1, 1fr);\n"; 
+		} elseif ( $prefooter_bottom_columns == '2' ) { 
+			echo "grid-template-columns: repeat(2, 1fr);\n"; 
+	} elseif ( $prefooter_bottom_columns == '3' ) { 
+			echo "grid-template-columns: repeat(3, 1fr);\n"; 
+	} elseif ( $prefooter_bottom_columns == '4' ) { 
+			echo "grid-template-columns: repeat(4, 1fr);\n"; 
+	} ?>
+  	gap: 30px;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+#prefooter-top .widget-wrapper {
+	width: 100%;
+	margin-bottom: 30px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+#prefooter-top .widget-wrapper {
+	max-width: 100%;
+	display: inline-block;
 	}
 }
 	
