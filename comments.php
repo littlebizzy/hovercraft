@@ -60,12 +60,20 @@ if ( post_password_required() ) {
 	$commenter = wp_get_current_commenter();
 	$req = get_option( 'require_name_email' );
 	$aria_req = ( $req ? " aria-required='true'" : '' );
+	$required_attribute = '<span class="required">*</span>';
 
     $fields =  array(
         
-		'author' => '<p class="comment-form-author">' . '<label for="comment-author">' . __( 'Name' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) . '<input id="comment-author" name="comment-author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></p>',
-        'email'  => '<p class="comment-form-email"><label for="comment-email">' . __( 'Email' ) . '</label> ' . ( $req ? '<span class="required">*</span>' : '' ) .           '<input id="comment-email" name="comment-email" type="email" value="' . esc_attr(  $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></p>',
-        'url'   => '<p class="comment-form-url"><label for="comment-url">' . __( 'Website' ) . '</label>' . '<input id="comment-url" name="comment-url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></p>',
+		// https://stackoverflow.com/questions/55567423/error-please-fill-the-required-fields-name-email-in-wordpress-comment
+		'author' => '<p class="comment-form-author">' . '<label for="comment-author">' . __( 'Name' ) . '</label> ' . ( $req ? $required_attribute : '' ) . 
+		'<input id="comment-author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' /></p>',
+		
+		'email' => '<p class="comment-form-email">' . '<label for="comment-email">' . __( 'Email' ) . '</label> ' . ( $req ? $required_attribute : '' ) . 
+		'<input id="comment-email" name="email" type="email" value="' . esc_attr( $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' /></p>',
+		
+		'url' => '<p class="comment-form-url">' . '<label for="comment-url">' . __( 'Website' ) . '</label> ' . 
+		'<input id="comment-url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" /></p>',
+
     ); 
 
     comment_form(array('fields'=>$fields));
