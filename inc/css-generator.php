@@ -1615,6 +1615,19 @@ button {
 }
 
 
+/* topbar ul */
+
+#topbar ul {
+	list-style-type: none;
+}
+
+#topbar ul li {
+	list-style-type: none;
+	display: inline-block;
+	margin-left: 10px;
+}
+
+
 /* preheader */
 
 @media screen and (max-width: 1200px) {
