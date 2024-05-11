@@ -5,8 +5,12 @@ $urlnow = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' ? 'https' : '
 
 // https://stackoverflow.com/questions/6768793/get-the-full-url-in-php
 
-if ( $social_sharing == 'top_of_post' ) { ?>
+if ( $social_sharing == 'top_of_post' ) {
 
+// needs to be cleaner
+if ( post_type_exists( 'product' ) && is_product() ) {
+	echo(null);
+} else { ?>
 <div id="social-sharing">
     <a rel="noopener noreferrer nofollow" target="_blank" href="https://twitter.com/intent/post?url=<?php echo $urlnow; ?>"><i class="fa-brands fa-x-twitter"></i></a>
     <a rel="noopener noreferrer nofollow" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $urlnow; ?>"><i class="fa-brands fa-facebook"></i></a>
@@ -18,5 +22,6 @@ if ( $social_sharing == 'top_of_post' ) { ?>
     <a rel="noopener noreferrer nofollow" target="_blank" href="https://social-plugins.line.me/lineit/share?url=<?php echo $urlnow; ?>"><i class="fa-brands fa-line"></i></a>
 <div class="clear"></div>
 </div><!-- social-sharing -->
+<?php } 
 
-<?php } ?>
+} ?>
