@@ -3937,6 +3937,11 @@ form.cart {
 	font-size: 36px;
 }
 
+section.related {
+	clear: both;
+	display: block;
+}
+
 section.upsells {
 	clear: both;
 	display: block;
