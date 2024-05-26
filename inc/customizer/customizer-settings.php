@@ -1904,6 +1904,36 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	'settings' => 'hovercraft_header_half_hero_background_color'
 	)
 ) );
+
+// header half hero text color setting
+$wp_customize->add_setting( 'hovercraft_header_half_hero_text_color', array(
+	'default' => '#263238',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+ 
+// header half hero text color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_header_half_hero_text_color', array(
+	'label' => 'Header (Half Hero) Text Color',
+	'description' => 'This is a description',
+	'section' => 'colors',
+	'settings' => 'hovercraft_header_half_hero_text_color'
+	)
+) );
+
+// header half hero link color setting
+$wp_customize->add_setting( 'hovercraft_header_half_hero_link_color', array(
+	'default' => '#263238',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+ 
+// header half hero link color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_header_half_hero_link_color', array(
+	'label' => 'Header (Half Hero) Link Color',
+	'description' => 'This is a description',
+	'section' => 'colors',
+	'settings' => 'hovercraft_header_half_hero_link_color'
+	)
+) );
 	
 // header mini hero background color setting
 $wp_customize->add_setting( 'hovercraft_header_mini_hero_background_color', array(
