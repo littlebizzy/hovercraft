@@ -90,8 +90,11 @@ function hovercraft_generate_css(){
 	$copyright_desktop_font_size = get_theme_mod( 'hovercraft_copyright_desktop_font_size', '14' );
 
 	/* colors */
+	/* these need serious cleanup */
+	$basic_hero_background_color = get_theme_mod( 'hovercraft_header_basic_background_color', '#ffffff' );
 	$basic_hero_header_link_color = get_theme_mod( 'hovercraft_basic_hero_header_link_color', '#263238' );
 	$basic_hero_header_text_color = get_theme_mod( 'hovercraft_basic_hero_header_text_color', '#263238' );
+	$mini_hero_background_color = get_theme_mod( 'hovercraft_header_mini_hero_background_color', '#ffffff' );
 	$mini_hero_header_link_color = get_theme_mod( 'hovercraft_mini_hero_header_link_color', '#263238' );
 	$mini_hero_header_text_color = get_theme_mod( 'hovercraft_mini_hero_header_text_color', '#263238' );
 	$default_text_color = get_theme_mod( 'hovercraft_default_text_color', '#263238' );
@@ -100,12 +103,15 @@ function hovercraft_generate_css(){
 	$topbar_background_color = get_theme_mod( 'hovercraft_topbar_background_color', '#263238' );
 	$topbar_text_color = get_theme_mod( 'hovercraft_topbar_text_color', '#ffffff' );
 	$topbar_link_color = get_theme_mod( 'hovercraft_topbar_link_color', '#ffffff' );
+	$half_hero_background_color = get_theme_mod( 'hovercraft_header_half_hero_background_color', '#ffffff' ); 
+	$half_hero_text_color = get_theme_mod( 'hovercraft_header_half_hero_text_color', '#ffffff' ); 
+	$half_hero_link_color = get_theme_mod( 'hovercraft_header_half_hero_link_color', '#ffffff' ); 
 	$hero_gradient_start_color = get_theme_mod( 'hovercraft_hero_gradient_start_color', '#37474f' );
 	$hero_gradient_mid_color = get_theme_mod( 'hovercraft_hero_gradient_mid_color', '#37474f' );
 	$hero_gradient_stop_color = get_theme_mod( 'hovercraft_hero_gradient_stop_color', '#ffffff' );
-    $header_half_hero_background_color = get_theme_mod( 'hovercraft_header_half_hero_background_color', '#ffffff' ); 
-    $header_mini_hero_background_color = get_theme_mod( 'hovercraft_header_mini_hero_background_color', '#ffffff' );
-    $header_basic_background_color = get_theme_mod( 'hovercraft_header_basic_background_color', '#ffffff' );
+    $header_half_hero_background_color = get_theme_mod( 'hovercraft_header_half_hero_background_color', '#ffffff' ); // remove
+    $header_mini_hero_background_color = get_theme_mod( 'hovercraft_header_mini_hero_background_color', '#ffffff' ); // remove
+    $header_basic_background_color = get_theme_mod( 'hovercraft_header_basic_background_color', '#ffffff' ); // remove
 	$posthero_background_color = get_theme_mod( 'hovercraft_posthero_background_color', '#eceff1' );
 	$posthero_text_color = get_theme_mod( 'hovercraft_posthero_text_color', '#263238' );
 	$posthero_link_color = get_theme_mod( 'hovercraft_posthero_link_color', '#5C6BC0' );
