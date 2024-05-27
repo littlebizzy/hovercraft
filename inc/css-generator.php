@@ -106,6 +106,8 @@ function hovercraft_generate_css(){
 	$half_hero_background_color = get_theme_mod( 'hovercraft_header_half_hero_background_color', '#ffffff' ); 
 	$half_hero_text_color = get_theme_mod( 'hovercraft_header_half_hero_text_color', '#ffffff' ); 
 	$half_hero_link_color = get_theme_mod( 'hovercraft_header_half_hero_link_color', '#ffffff' ); 
+	$half_hero_header_text_color = get_theme_mod( 'hovercraft_header_half_hero_text_color', '#ffffff' ); 
+	$half_hero_header_link_color = get_theme_mod( 'hovercraft_header_half_hero_link_color', '#ffffff' ); 
 	$hero_gradient_start_color = get_theme_mod( 'hovercraft_hero_gradient_start_color', '#37474f' );
 	$hero_gradient_mid_color = get_theme_mod( 'hovercraft_hero_gradient_mid_color', '#37474f' );
 	$hero_gradient_stop_color = get_theme_mod( 'hovercraft_hero_gradient_stop_color', '#ffffff' );
@@ -539,7 +541,7 @@ h1.full-hero-title {
 	display: table;
 	padding: 10px 20px;
 	background: #ffffff;
-	color: <?php echo $default_text_color; ?>;
+	color: <?php echo $half_hero_text_color; ?>;
 	}
 }
 
@@ -550,7 +552,7 @@ h1.full-hero-title {
 	margin: 0px auto;
 	padding: 20px 0px;
 	background: #ffffff;
-	color: <?php echo $default_text_color; ?>;
+	color: <?php echo $half_hero_text_color; ?>;
 	}
 }
 
@@ -2036,6 +2038,9 @@ video.hero-background-video {
 	color: #ffffff !important;
 }
 
+#header-half-hero a {
+	color: <?php echo $half_hero_header_link_color; ?>;
+}
 
 
 
