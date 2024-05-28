@@ -1519,11 +1519,11 @@ button {
 
 #header-half-hero .main-menu ul li a {
 	text-decoration: none;
-	color: <?php echo $default_text_color; ?>;
+	color: <?php echo $half_hero_link_color; ?>;
 }
 
 #header-half-hero a {
-	color: <?php echo $default_text_color; ?>;
+	color: <?php echo $half_hero_link_color; ?>;
 }
 
 #header-mini-hero .main-menu ul li a {
