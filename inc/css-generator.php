@@ -1626,13 +1626,14 @@ button {
 /* topbar ul */
 
 #topbar ul {
+	margin: 0;
 	list-style-type: none;
 }
 
 #topbar ul li {
 	list-style-type: none;
 	display: inline-block;
-	margin-left: 10px;
+	margin: 0 0 0 10px;
 }
 
 
