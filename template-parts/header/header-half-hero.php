@@ -1,6 +1,14 @@
-<div id="hero-half-container">
-	
-<div id="header-half-hero">
+<div id="hero-full-container">
+
+<?php 
+	$url_hovercraft_video = wp_get_attachment_url(get_theme_mod('hovercraft_video'));
+	if (!empty($url_hovercraft_video)){ echo 
+		'<video class="hero-background-video" playsinline autoplay muted loop poster="'.$url_header_image.'">
+    	<source src="'.$url_hovercraft_video.'" type="video/mp4">
+    	Your browser does not support the video tag.</video><div class="hero-background-video-overlay"></div>';
+	} ?>
+
+<div id="header-full-hero">
 	
 	<?php if ( is_active_sidebar( 'hovercraft_preheader_left' ) || is_active_sidebar( 'hovercraft_preheader_right' ) ) { ?>
 	<div id="preheader">
@@ -35,33 +43,38 @@
 	<?php } ?><!-- if preheader widgets active -->
 	
 <?php get_template_part('template-parts/header/navigation'); ?>
-</div><!-- header-half-hero -->
-
-
-<div class="hero-half-wrapper">
-<div class="hero-half">
+</div><!-- header-full-hero -->
 	
-	<div class="inner">
-		
+<div class="hero-full-wrapper">
+<div class="hero-full">
+
+<div class="hero-full-main">
+<div class="inner">
 	<?php if (is_front_page()) { ?>
-		<div class="welcome-wrapper">
+	<div class="welcome-wrapper">
 	<?php } else { ?>
 		<div class="title-wrapper">
 	<?php } ?>
-			
-		<!--Start the hide title-->
-    	<?php 
+
+		<?php if ( ! is_active_sidebar( 'hovercraft_hero_window' ) ) {
         $hide_title_status = get_post_meta( get_the_ID(), '_mysite_meta_hide_title', true);
         $post_id = get_the_ID();
-        if($hide_title_status == "off" || !metadata_exists( 'post', $post_id, '_mysite_meta_hide_title' ) ) :
-    	?>
-		<h1 class="half-hero-title"><?php single_post_title(); ?></h1>
-		<?php endif; ?> <!--End the hide title-->
+        	if($hide_title_status == "off" || !metadata_exists( 'post', $post_id, '_mysite_meta_hide_title' ) ) : ?>
+				<h1 class="full-hero-title"><?php single_post_title(); ?></h1>
+			<?php endif;
+		} ?>
 			
 		<?php if (is_front_page()) : ?>
 		
 			<?php if ( is_active_sidebar( 'hovercraft_hero_snippet' ) || has_excerpt() ) : ?>
 				<div class="hero-snippet">
+					<?php if ( is_active_sidebar( 'hovercraft_hero_window' ) ) {
+        				$hide_title_status = get_post_meta( get_the_ID(), '_mysite_meta_hide_title', true);
+        				$post_id = get_the_ID();
+        				if($hide_title_status == "off" || !metadata_exists( 'post', $post_id, '_mysite_meta_hide_title' ) ) : ?>
+							<h1 class="full-hero-title"><?php single_post_title(); ?></h1>
+						<?php endif;
+					} ?>
 					<?php if ( is_active_sidebar( 'hovercraft_hero_snippet' ) ) {
 						add_filter('widget_title', '__return_false');
 						dynamic_sidebar( 'hovercraft_hero_snippet' ); // https://stackoverflow.com/questions/13903918/apply-widget-title-filter-only-to-wordpress-widgets-from-a-certain-sidebar
@@ -85,38 +98,37 @@
 		<?php endif; ?><!-- is_front_page -->
 	
 		<?php if (is_front_page()) : ?>
-		<div class="cta-hero-wrapper">
-		<?php
-			if ( has_nav_menu( 'cta-hero-primary' ) ) {
-    		// User has assigned menu to this location;
-    		// https://wordpress.stackexchange.com/questions/32739/wp-nav-menu-show-menu-only-if-one-exists-otherwise-show-nothing
-    		wp_nav_menu( array( 
-        	'theme_location' => 'cta-hero-primary', 
-        	'menu_class' => 'cta', 
-        	'container_class' => 'cta-hero-primary'
-    		) );
-			}
-		?>
-		<?php
-			if ( has_nav_menu( 'cta-hero-secondary' ) ) {
-    		// User has assigned menu to this location;
-    		// https://wordpress.stackexchange.com/questions/32739/wp-nav-menu-show-menu-only-if-one-exists-otherwise-show-nothing
-    		wp_nav_menu( array( 
-        	'theme_location' => 'cta-hero-secondary', 
-        	'menu_class' => 'cta', 
-        	'container_class' => 'cta-hero-secondary'
-    		) );
-			}
-		?>
-		</div><!-- cta-hero-wrapper -->
+		<?php if ( has_nav_menu( 'cta-hero-primary' ) || has_nav_menu( 'cta-hero-secondary' ) ) : ?>
+		
+			<div class="cta-hero-wrapper">
+				<?php if ( has_nav_menu( 'cta-hero-primary' ) ) : ?>
+    				<?php wp_nav_menu( array( 
+        				'theme_location' => 'cta-hero-primary', 
+        				'menu_class' => 'cta', 
+        				'container_class' => 'cta-hero-primary'
+    					) ); ?>
+				<?php endif; ?>
+				<?php if ( has_nav_menu( 'cta-hero-secondary' ) ) : ?>
+    				<?php wp_nav_menu( array( 
+        				'theme_location' => 'cta-hero-secondary', 
+        				'menu_class' => 'cta', 
+        				'container_class' => 'cta-hero-secondary'
+    					) ); ?>
+				<?php endif; ?>
+			</div><!-- cta-hero-wrapper -->
+		
+		<?php endif; ?>
 		<?php endif; ?>
 			
 	</div><!-- welcome-wrapper -->
 		
 	<div class="clear"></div>
-	</div><!-- inner -->
+</div><!-- inner -->
+</div><!-- hero-full-main -->
+	
+</div><!-- hero-full -->
+</div><!-- hero-full-wrapper -->
+	
+</div><!-- hero-full-container -->
 
-</div><!-- hero-half -->
-</div><!-- hero-half-wrapper -->
-
-</div><!-- hero-half-container -->
+<!-- https://wordpress.stackexchange.com/questions/32739/wp-nav-menu-show-menu-only-if-one-exists-otherwise-show-nothing -->
