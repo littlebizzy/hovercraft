@@ -104,10 +104,10 @@ function hovercraft_generate_css(){
 	$topbar_text_color = get_theme_mod( 'hovercraft_topbar_text_color', '#ffffff' );
 	$topbar_link_color = get_theme_mod( 'hovercraft_topbar_link_color', '#ffffff' );
 	$half_hero_background_color = get_theme_mod( 'hovercraft_header_half_hero_background_color', '#ffffff' ); 
-	$half_hero_text_color = get_theme_mod( 'hovercraft_header_half_hero_text_color', '#ffffff' ); 
-	$half_hero_link_color = get_theme_mod( 'hovercraft_header_half_hero_link_color', '#ffffff' ); 
-	$half_hero_header_text_color = get_theme_mod( 'hovercraft_header_half_hero_text_color', '#ffffff' ); 
-	$half_hero_header_link_color = get_theme_mod( 'hovercraft_header_half_hero_link_color', '#ffffff' ); 
+	$half_hero_text_color = get_theme_mod( 'hovercraft_header_half_hero_text_color', '#263238' ); 
+	$half_hero_link_color = get_theme_mod( 'hovercraft_header_half_hero_link_color', '#263238' ); 
+	$half_hero_header_text_color = get_theme_mod( 'hovercraft_header_half_hero_text_color', '#263238' ); 
+	$half_hero_header_link_color = get_theme_mod( 'hovercraft_header_half_hero_link_color', '#263238' ); 
 	$hero_gradient_start_color = get_theme_mod( 'hovercraft_hero_gradient_start_color', '#37474f' );
 	$hero_gradient_mid_color = get_theme_mod( 'hovercraft_hero_gradient_mid_color', '#37474f' );
 	$hero_gradient_stop_color = get_theme_mod( 'hovercraft_hero_gradient_stop_color', '#ffffff' );
@@ -127,6 +127,10 @@ function hovercraft_generate_css(){
 	$sidebar_widget_background_color = get_theme_mod( 'hovercraft_sidebar_widget_background_color', '#ffffff' );
 	$sidebar_widget_text_color = get_theme_mod( 'hovercraft_sidebar_widget_text_color', '#263238' );
 	$sidebar_widget_link_color = get_theme_mod( 'hovercraft_sidebar_widget_link_color', '#5C6BC0' );
+	$tile_background_color = get_theme_mod( 'hovercraft_tile_background_color', '#ffffff' );
+	$tile_border_color = get_theme_mod( 'hovercraft_tile_border_color', '#263238' );
+	$column_background_color = get_theme_mod( 'hovercraft_column_background_color', '#ffffff' );
+	$column_border_color = get_theme_mod( 'hovercraft_column_border_color', '#263238' );
 	$main_background_color = get_theme_mod( 'hovercraft_main_background_color', '#eceff1' );
 	$main_background_color_homepage = get_theme_mod( 'hovercraft_main_background_color_homepage', '#eceff1' );
 	$postmain_top_background_color = get_theme_mod( 'hovercraft_postmain_top_background_color', '#eceff1' );
@@ -1321,7 +1325,8 @@ button {
 	margin-bottom: 30px;
 	padding: 30px;
 	text-align: center;
-	box-shadow: inset 0px 0px 0px 1px <?php echo $default_text_color; ?>;
+	box-shadow: inset 0px 0px 0px 1px <?php echo $tile_border_color; ?>;
+	background: <?php echo $tile_background_color; ?>;
 	}
 }
 
@@ -1332,8 +1337,9 @@ button {
   	justify-content: center;
   	align-items: center;
 	text-align: center;
-	box-shadow: inset 0px 0px 0px 1px <?php echo $default_text_color; ?>;
+	box-shadow: inset 0px 0px 0px 1px <?php echo $tile_border_color; ?>;
 	display: inline-block;
+	background: <?php echo $tile_background_color; ?>;
 	}
 }
 
@@ -2531,19 +2537,21 @@ p.biography-description {
 	width: 100%;
 	margin-bottom: 30px;
 	padding: 30px;
-	box-shadow: inset 0px 0px 0px 1px <?php echo $default_text_color; ?>;
+	box-shadow: inset 0px 0px 0px 1px <?php echo $column_border_color; ?>;
+	background: <?php echo $column_background_color; ?>;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 .column {
+	display: inline-block;
 	max-width: 100%;
 	padding: 30px;
   	justify-content: center;
   	align-items: center;
 	text-align: center;
-	box-shadow: inset 0px 0px 0px 1px <?php echo $default_text_color; ?>;
-	display: inline-block;
+	box-shadow: inset 0px 0px 0px 1px <?php echo $column_border_color; ?>;
+	background: <?php echo $column_background_color; ?>;
 	}
 }
 	
