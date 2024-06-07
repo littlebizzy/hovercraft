@@ -2684,6 +2684,10 @@ p.biography-description {
 	color: <?php echo $sidebar_callout_text_color; ?> !important;
 }
 
+#sidebar .widget-callout a {
+	color: <?php echo $sidebar_callout_link_color; ?> !important;
+}
+
 @media screen and (max-width: 1200px) {
 .cta-sidebar-callout {
 	display: block;
