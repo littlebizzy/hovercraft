@@ -56,19 +56,25 @@
 		<div class="title-wrapper">
 	<?php } ?>
 
-		<!--Start the hide title-->
-    	<?php 
+		<?php if ( ! is_active_sidebar( 'hovercraft_hero_window' ) ) {
         $hide_title_status = get_post_meta( get_the_ID(), '_mysite_meta_hide_title', true);
         $post_id = get_the_ID();
-        if($hide_title_status == "off" || !metadata_exists( 'post', $post_id, '_mysite_meta_hide_title' ) ) :
-    	?>
-		<h1 class="full-hero-title"><?php single_post_title(); ?></h1>
-		<?php endif; ?> <!--End the hide title-->
+        	if($hide_title_status == "off" || !metadata_exists( 'post', $post_id, '_mysite_meta_hide_title' ) ) : ?>
+				<h1 class="full-hero-title"><?php single_post_title(); ?></h1>
+			<?php endif;
+		} ?>
 			
 		<?php if (is_front_page()) : ?>
 		
 			<?php if ( is_active_sidebar( 'hovercraft_hero_snippet' ) || has_excerpt() ) : ?>
 				<div class="hero-snippet">
+					<?php if ( is_active_sidebar( 'hovercraft_hero_window' ) ) {
+        				$hide_title_status = get_post_meta( get_the_ID(), '_mysite_meta_hide_title', true);
+        				$post_id = get_the_ID();
+        				if($hide_title_status == "off" || !metadata_exists( 'post', $post_id, '_mysite_meta_hide_title' ) ) : ?>
+							<h1 class="full-hero-title"><?php single_post_title(); ?></h1>
+						<?php endif;
+					} ?>
 					<?php if ( is_active_sidebar( 'hovercraft_hero_snippet' ) ) {
 						add_filter('widget_title', '__return_false');
 						dynamic_sidebar( 'hovercraft_hero_snippet' ); // https://stackoverflow.com/questions/13903918/apply-widget-title-filter-only-to-wordpress-widgets-from-a-certain-sidebar
