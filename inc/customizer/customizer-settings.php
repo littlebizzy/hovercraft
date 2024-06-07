@@ -2175,6 +2175,66 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	)
 ) );
 
+// tile background color setting
+$wp_customize->add_setting( 'hovercraft_tile_background_color', array(
+	'default' => '#ffffff',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+ 
+// tile background color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_tile_background_color', array(
+	'label' => 'Tile Background Color',
+	'description' => 'This is a description',
+	'section' => 'colors',
+	'settings' => 'hovercraft_tile_background_color'
+	)
+) );
+
+// tile border color setting
+$wp_customize->add_setting( 'hovercraft_tile_border_color', array(
+	'default' => '#263238',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+ 
+// tile border color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_tile_border_color', array(
+	'label' => 'Tile Border Color',
+	'description' => 'This is a description',
+	'section' => 'colors',
+	'settings' => 'hovercraft_tile_border_color'
+	)
+) );
+
+// column background color setting
+$wp_customize->add_setting( 'hovercraft_column_background_color', array(
+	'default' => '#ffffff',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+ 
+// column background color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_column_background_color', array(
+	'label' => 'Column Background Color',
+	'description' => 'This is a description',
+	'section' => 'colors',
+	'settings' => 'hovercraft_column_background_color'
+	)
+) );
+
+// column border color setting
+$wp_customize->add_setting( 'hovercraft_column_border_color', array(
+	'default' => '#263238',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+ 
+// column border color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_column_border_color', array(
+	'label' => 'Column Border Color',
+	'description' => 'This is a description',
+	'section' => 'colors',
+	'settings' => 'hovercraft_column_border_color'
+	)
+) );
+
 // main background color setting
 $wp_customize->add_setting( 'hovercraft_main_background_color', array(
 	'default' => '#eceff1',
