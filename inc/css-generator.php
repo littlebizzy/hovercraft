@@ -127,10 +127,10 @@ function hovercraft_generate_css(){
 	$sidebar_widget_background_color = get_theme_mod( 'hovercraft_sidebar_widget_background_color', '#ffffff' );
 	$sidebar_widget_text_color = get_theme_mod( 'hovercraft_sidebar_widget_text_color', '#263238' );
 	$sidebar_widget_link_color = get_theme_mod( 'hovercraft_sidebar_widget_link_color', '#5C6BC0' );
-	$tile_background_color = get_theme_mod( 'hovercraft_tile_background_color', '#ffffff' );
-	$tile_border_color = get_theme_mod( 'hovercraft_tile_border_color', '#263238' );
-	$column_background_color = get_theme_mod( 'hovercraft_column_background_color', '#ffffff' );
-	$column_border_color = get_theme_mod( 'hovercraft_column_border_color', '#263238' );
+	$tile_background_color = get_theme_mod( 'hovercraft_tile_background_color', '#eceff1' );
+	$tile_border_color = get_theme_mod( 'hovercraft_tile_border_color', '#eceff1' );
+	$column_background_color = get_theme_mod( 'hovercraft_column_background_color', '#eceff1' );
+	$column_border_color = get_theme_mod( 'hovercraft_column_border_color', '#eceff1' );
 	$main_background_color = get_theme_mod( 'hovercraft_main_background_color', '#eceff1' );
 	$main_background_color_homepage = get_theme_mod( 'hovercraft_main_background_color_homepage', '#eceff1' );
 	$postmain_top_background_color = get_theme_mod( 'hovercraft_postmain_top_background_color', '#eceff1' );
