@@ -2177,7 +2177,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 
 // tile background color setting
 $wp_customize->add_setting( 'hovercraft_tile_background_color', array(
-	'default' => '#ffffff',
+	'default' => '#eceff1',
 	'sanitize_callback' => 'sanitize_hex_color',
 ) );
  
@@ -2192,7 +2192,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 
 // tile border color setting
 $wp_customize->add_setting( 'hovercraft_tile_border_color', array(
-	'default' => '#263238',
+	'default' => '#eceff1',
 	'sanitize_callback' => 'sanitize_hex_color',
 ) );
  
