@@ -2207,7 +2207,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 
 // column background color setting
 $wp_customize->add_setting( 'hovercraft_column_background_color', array(
-	'default' => '#ffffff',
+	'default' => '#eceff1',
 	'sanitize_callback' => 'sanitize_hex_color',
 ) );
  
@@ -2222,7 +2222,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 
 // column border color setting
 $wp_customize->add_setting( 'hovercraft_column_border_color', array(
-	'default' => '#263238',
+	'default' => '#eceff1',
 	'sanitize_callback' => 'sanitize_hex_color',
 ) );
  
