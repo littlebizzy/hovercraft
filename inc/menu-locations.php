@@ -5,6 +5,7 @@ function hovercraft_menu_locations() {
 	register_nav_menus(
         array(
             'main-menu' => 'Main Menu',
+			'mobile-menu' => 'Mobile Menu',
             'cta-header-primary' => 'Header Primary CTA',
 			'cta-header-secondary' => 'Header Secondary CTA',
 			'cta-hero-primary' => 'Hero Primary CTA',
