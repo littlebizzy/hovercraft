@@ -1303,7 +1303,7 @@ button {
 @media screen and (max-width: 1200px) {
 #tiles-wide {
 	width: 100%;
-	padding: 30px 20px;
+	padding: 0px;
 	}
 }
 
@@ -2407,7 +2407,7 @@ img.featured-image-archive {
 
 @media screen and (max-width: 1200px) {
 #content-wide {
-	padding: 0px;
+	padding: 20px;
 	width: 100%;
 	max-width: 100%;
 	display: block;
