@@ -4,12 +4,14 @@
 
 function hovercraft_callout() {
 	
+if ( has_nav_menu( 'cta-sidebar-callout' ) ) {
 $callout_menu = wp_nav_menu( array( 
     'theme_location' => 'cta-sidebar-callout', 
     'menu_class' => 'cta', 
     'container_class' => 'cta-sidebar-callout',
 	 'echo' => false,
     ) );
+}
 	
 $after_widget_callout = ' '. $callout_menu . '</div>';
 	
