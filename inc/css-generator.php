@@ -1491,8 +1491,8 @@ button {
 	left: 250px;
 }
 	
-/* Change this in order to change the Dropdown symbol */
-.menu-item-has-children > a:after { 
+/* dropdown symbol should only appear in .main-menu context in header (not e.g. menu widgets in footer or sidebar) */
+.main-menu .menu-item-has-children > a:after { 
 	font-family: "Material Icons";
 	font-size: 24px;
 	content:  ' \e5cf'; 
