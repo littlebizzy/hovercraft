@@ -1,5 +1,8 @@
 <?php
 
+// accordion menu
+// require get_template_directory() . '/inc/accordion-menu.php';
+
 // select menu
 // require get_template_directory() . '/inc/select-menu.php';
 
