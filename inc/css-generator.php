@@ -2670,7 +2670,19 @@ p.biography-description {
 	margin-bottom: 0;
 }
 
-#sidebar ol li {
+#sidebar .widget-wrapper ul {
+	margin-bottom: 30px;
+}
+
+#sidebar .widget-wrapper ul li {
+	margin-bottom: 15px;
+}
+	
+#sidebar .widget-wrapper ol {
+	margin-bottom: 30px;
+}
+
+#sidebar .widget-wrapper ol li {
 	margin-bottom: 15px;
 }
 
