@@ -1059,6 +1059,46 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// topbar font size (desktop) setting
+$wp_customize->add_setting( 'hovercraft_topbar_desktop_font_size', array(
+    'default'    => '14',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
+	) 
+);
+
+// topbar font size (desktop) control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_topbar_desktop_font_size',
+        array(
+            'label'     => __( 'Topbar Font Size (Desktop)', 'hovercraft' ),
+			'description' => __( 'Specify font size to use, in pixels, for the Topbar on desktop devices?', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_topbar_desktop_font_size',
+            'type' => 'text'
+        )
+) );
+
+// topbar font size (mobile) setting
+$wp_customize->add_setting( 'hovercraft_topbar_mobile_font_size', array(
+    'default'    => '14',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
+	) 
+);
+
+// topbar font size (mobile) control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_topbar_mobile_font_size',
+        array(
+            'label'     => __( 'Topbar Font Size (Mobile)', 'hovercraft' ),
+			'description' => __( 'Specify font size to use, in pixels, for the Topbar on mobile devices?', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_topbar_mobile_font_size',
+            'type' => 'text'
+        )
+) );
+
 // site name font size (desktop) setting
 $wp_customize->add_setting( 'hovercraft_site_name_desktop_font_size', array(
     'default'    => '36',
