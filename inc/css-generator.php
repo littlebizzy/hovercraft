@@ -84,6 +84,7 @@ function hovercraft_generate_css(){
 	$h5_mobile_font_size = get_theme_mod( 'hovercraft_h5_mobile_font_size', '18' );
 	$h5_desktop_font_size = get_theme_mod( 'hovercraft_h5_desktop_font_size', '18' );
 	$h5_font_weight = get_theme_mod( 'hovercraft_h5_font_weight', '700' );
+	$sidebar_widget_title_font_size = get_theme_mod( 'hovercraft_sidebar_widget_title_font_size', '16' );
 
 	/* footer */
 	$footer_mobile_font_size = get_theme_mod( 'hovercraft_footer_mobile_font_size', '14' );
@@ -2652,6 +2653,10 @@ p.biography-description {
 
 #sidebar .widget-wrapper a {
 	color: <?php echo $sidebar_widget_link_color; ?>;
+}
+
+#sidebar .widget-wrapper .widget-title {
+	font-size: <?php echo $sidebar_widget_title_font_size; ?>px;
 }
 
 @media screen and (max-width: 1200px) {
