@@ -42,6 +42,8 @@ function hovercraft_generate_css(){
 	$main_menu_font_weight = get_theme_mod( 'hovercraft_main_menu_font_weight', '600' );
 	$after_byline_mobile_font_size = get_theme_mod( 'hovercraft_after_byline_mobile_font_size', '12' );
 	$after_byline_desktop_font_size = get_theme_mod( 'hovercraft_after_byline_desktop_font_size', '12' );
+	$topbar_desktop_font_size = get_theme_mod( 'hovercraft_topbar_desktop_font_size', '14' );
+	$topbar_mobile_font_size = get_theme_mod( 'hovercraft_topbar_mobile_font_size', '14' );
 
 	/* misc */
 	$blockquote_captions = get_theme_mod( 'hovercraft_blockquote_captions', 'none' );
@@ -1552,7 +1554,7 @@ button {
 #topbar {
 	width: 100%;
 	padding: 10px 20px;
-	font-size: 14px;
+	font-size: <?php echo $topbar_mobile_font_size; ?>px;
 	line-height: 1.5;
 	background: <?php echo $topbar_background_color; ?>;
 	color: <?php echo $topbar_text_color; ?>;
@@ -1563,7 +1565,7 @@ button {
 #topbar {
 	width: 100%;
 	padding: 10px 0px;
-	font-size: 14px;
+	font-size: <?php echo $topbar_desktop_font_size; ?>px;
 	line-height: 1.5;
 	display: table;
 	background: <?php echo $topbar_background_color; ?>;
