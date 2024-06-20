@@ -84,6 +84,9 @@ require get_template_directory() . '/inc/menu-locations.php';
 // meta box
 require get_template_directory() . '/inc/meta-box.php';
 
+// offcanvas menu
+require get_template_directory() . '/inc/offcanvas-menu.php';
+
 // pagination
 require get_template_directory() . '/inc/pagination.php';
 
