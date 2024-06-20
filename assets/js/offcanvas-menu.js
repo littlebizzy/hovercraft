@@ -6,7 +6,10 @@ jQuery(document).ready(function($) {
     $(document).ready(function () {
         $(".burger").on("click", function(){
         $('#offcanvas').toggleClass('active');
+		$('.overlay-main').toggleClass('active');
         });
     });
 
 });
+
+// https://codepen.io/abhi_pawar/pen/qzpEJL
