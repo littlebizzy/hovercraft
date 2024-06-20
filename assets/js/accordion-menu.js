@@ -1,4 +1,4 @@
-jQuery( document ).ready( function( $ ) {
+jQuery(document).ready(function($) {
 
 accordionNav = $(function(){
 	$('.menu-toggle').click(function(e) {
@@ -19,4 +19,5 @@ accordionNav = $(function(){
 	});
 });
 	
-} );
+});
+
