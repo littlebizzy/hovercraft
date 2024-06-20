@@ -86,6 +86,7 @@ function hovercraft_generate_css(){
 	$h5_font_weight = get_theme_mod( 'hovercraft_h5_font_weight', '700' );
 	$sidebar_widget_title_desktop_font_size = get_theme_mod( 'hovercraft_sidebar_widget_title_desktop_font_size', '24' );
 	$sidebar_widget_title_mobile_font_size = get_theme_mod( 'hovercraft_sidebar_widget_title_mobile_font_size', '24' );
+	$sidebar_widget_title_text_transform = get_theme_mod( 'hovercraft_sidebar_widget_title_text_transform', 'none' );
 	
 	/* footer */
 	$footer_mobile_font_size = get_theme_mod( 'hovercraft_footer_mobile_font_size', '14' );
@@ -2658,13 +2659,15 @@ p.biography-description {
 
 @media screen and (max-width: 1200px) {
 	#sidebar .widget-wrapper .widget-title {
-	font-size: <?php echo $sidebar_widget_title_mobile_font_size; ?>px;
+		font-size: <?php echo $sidebar_widget_title_mobile_font_size; ?>px;
+		text-transform: <?php echo $sidebar_widget_title_text_transform; ?>;
 	}
 }
 	
 @media screen and (min-width: 1200px) {
 	#sidebar .widget-wrapper .widget-title {
-	font-size: <?php echo $sidebar_widget_title_desktop_font_size; ?>px;
+		font-size: <?php echo $sidebar_widget_title_desktop_font_size; ?>px;
+		text-transform: <?php echo $sidebar_widget_title_text_transform; ?>;
 	}
 }
 
