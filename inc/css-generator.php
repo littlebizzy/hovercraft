@@ -117,6 +117,8 @@ function hovercraft_generate_css(){
     $header_half_hero_background_color = get_theme_mod( 'hovercraft_header_half_hero_background_color', '#ffffff' ); // remove
     $header_mini_hero_background_color = get_theme_mod( 'hovercraft_header_mini_hero_background_color', '#ffffff' ); // remove
 
+	$sidebar_widget_title_text_color = get_theme_mod( 'hovercraft_sidebar_widget_title_text_color', '#263238' );
+
 	// new
 	$header_basic_hero_background_color = get_theme_mod( 'hovercraft_header_basic_background_color', '#ffffff' );
 	$header_basic_hero_text_color = get_theme_mod( 'hovercraft_basic_hero_header_text_color', '#263238' );
@@ -2661,6 +2663,7 @@ p.biography-description {
 	#sidebar .widget-wrapper .widget-title {
 		font-size: <?php echo $sidebar_widget_title_mobile_font_size; ?>px;
 		text-transform: <?php echo $sidebar_widget_title_text_transform; ?>;
+		color: <?php echo $sidebar_widget_title_text_color; ?>;
 	}
 }
 	
@@ -2668,6 +2671,7 @@ p.biography-description {
 	#sidebar .widget-wrapper .widget-title {
 		font-size: <?php echo $sidebar_widget_title_desktop_font_size; ?>px;
 		text-transform: <?php echo $sidebar_widget_title_text_transform; ?>;
+		color: <?php echo $sidebar_widget_title_text_color; ?>;
 	}
 }
 
