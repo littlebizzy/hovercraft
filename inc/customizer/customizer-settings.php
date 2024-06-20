@@ -32,7 +32,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_sitewide_layout',
         array(
             'label'     => __( 'Sitewide Layout', 'hovercraft' ),
-			'description' => __( 'Which layout style to use? This affects padding and alignment, so you might need to adjust background colors accordingly.', 'hovercraft' ),
+			'description' => __( 'Which layout style to use? This affects padding and alignment, so you might need to adjust background s accordingly.', 'hovercraft' ),
             'section'   => 'hovercraft_general',
             'settings'  => 'hovercraft_sitewide_layout',
             'type'      => 'select',
@@ -2637,6 +2637,21 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	'description' => 'This is a description',
 	'section' => 'colors',
 	'settings' => 'hovercraft_copyright_link_color'
+	)
+) );
+
+// sidebar widget title text color setting
+$wp_customize->add_setting( 'hovercraft_sidebar_widget_title_text_color', array(
+	'default' => '#263238',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+
+// sidebar widget title text color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_sidebar_widget_title_text_color', array(
+	'label' => 'Sidebar Widget Title Text Color',
+	'description' => 'This is a description',
+	'section' => 'colors',
+	'settings' => 'hovercraft_sidebar_widget_title_text_color'
 	)
 ) );
 
