@@ -2400,13 +2400,17 @@ img.featured-image-archive {
 	margin-bottom: 30px;
 }
 
+#content-wrapper ul li {
+	margin-bottom: 5px;
+}
+
 #content-wrapper ol {
 	margin-left: 30px;
 	margin-bottom: 30px;
 }
 
 #content-wrapper ol li {
-	margin-bottom: 15px;
+	margin-bottom: 5px;
 }
 	
 
@@ -2696,7 +2700,7 @@ p.biography-description {
 }
 
 #sidebar .widget-wrapper ul li {
-	margin-bottom: 15px;
+	margin-bottom: 5px;
 }
 	
 #sidebar .widget-wrapper ol {
@@ -2704,7 +2708,7 @@ p.biography-description {
 }
 
 #sidebar .widget-wrapper ol li {
-	margin-bottom: 15px;
+	margin-bottom: 5px;
 }
 
 #sidebar img {
