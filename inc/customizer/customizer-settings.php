@@ -1780,6 +1780,46 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// sidebar widget title font size (desktop) setting
+$wp_customize->add_setting( 'hovercraft_sidebar_widget_title_desktop_font_size', array(
+    'default'    => '24',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
+	) 
+);
+
+// sidebar widget title font size (desktop) control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_sidebar_widget_title_desktop_font_size',
+        array(
+            'label'     => __( 'Sidebar Widget Title Font Size (Desktop)', 'hovercraft' ),
+			'description' => __( 'Specify font size to use, in pixels, for the sidebar widget titles on desktop devices?', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_sidebar_widget_title_desktop_font_size',
+            'type' => 'text'
+        )
+) );
+
+// sidebar widget title font size (mobile) setting
+$wp_customize->add_setting( 'hovercraft_sidebar_widget_title_mobile_font_size', array(
+    'default'    => '24',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
+	) 
+);
+
+// sidebar widget title font size (mobile) control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_sidebar_widget_title_mobile_font_size',
+        array(
+            'label'     => __( 'Sidebar Widget Title Font Size (Mobile)', 'hovercraft' ),
+			'description' => __( 'Specify font size to use, in pixels, for the sidebar widget titles on mobile devices?', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_sidebar_widget_title_mobile_font_size',
+            'type' => 'text'
+        )
+) );
+
 // default text color setting
 $wp_customize->add_setting( 'hovercraft_default_text_color', array(
 	'default' => '#263238',
