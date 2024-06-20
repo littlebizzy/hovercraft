@@ -1820,6 +1820,32 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// sidebar widget title text transform setting
+$wp_customize->add_setting( 'hovercraft_sidebar_widget_title_text_transform', array(
+    'default'    => 'none',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// sidebar widget title text transform control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_sidebar_widget_title_text_transform',
+        array(
+            'label'     => __( 'Sidebar Widget Title Text Transform', 'hovercraft' ),
+			'description' => __( 'Specify text transform for sidebar widget titles?', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_sidebar_widget_title_text_transform',
+            'type' => 'select',
+			'choices' => array(
+				'none' => 'Default (None)',
+				'uppercase' => 'Uppercase',
+				'lowercase' => 'Lowercase',
+				'capitalize' => 'Capitalize',
+    			)
+        )
+) );
+
 // default text color setting
 $wp_customize->add_setting( 'hovercraft_default_text_color', array(
 	'default' => '#263238',
