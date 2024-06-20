@@ -1,7 +1,22 @@
 <?php
 
+// MENUS 
+
+// menu locations
+require get_template_directory() . '/inc/menus/menu-locations.php';
+
+// accordion menu
+require get_template_directory() . '/inc/menus/accordion-menu.php';
+
+// offcanvas menu
+require get_template_directory() . '/inc/menus/offcanvas-menu.php';
+
+// overlay menu
+require get_template_directory() . '/inc/menus/overlay-menu.php';
+
 // select menu
-// require get_template_directory() . '/inc/select-menu.php';
+// require get_template_directory() . '/inc/menus/select-menu.php';
+
 
 // back to top
 // require get_template_directory() . '/inc/back-to-top.php';
@@ -75,23 +90,14 @@ require get_template_directory() . '/inc/media-sizes-verify.php';
 // media sizes insert
 require get_template_directory() . '/inc/media-sizes-insert.php';
 
-// menu locations
-require get_template_directory() . '/inc/menu-locations.php';
-
 // meta box
 require get_template_directory() . '/inc/meta-box.php';
-
-// offcanvas menu
-require get_template_directory() . '/inc/offcanvas-menu.php';
 
 // pagination
 require get_template_directory() . '/inc/pagination.php';
 
 // portal category
 require get_template_directory() . '/inc/portal-category.php';
-
-// responsive menu
-require get_template_directory() . '/inc/responsive-menu.php';
 
 // sidebar callout
 require get_template_directory() . '/inc/sidebar-callout.php';
