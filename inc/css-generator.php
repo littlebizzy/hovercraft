@@ -60,6 +60,7 @@ function hovercraft_generate_css(){
 	$desktop_logo_width = get_theme_mod( 'hovercraft_desktop_logo_width', '150' );
 	$mobile_logo_width = get_theme_mod( 'hovercraft_mobile_logo_width', '100' );
 	$tagline_display = get_theme_mod( 'hovercraft_tagline_display', 'right_of_site_title' );
+	$site_name_display_mobile = get_theme_mod( 'hovercraft_site_name_display_mobile', 'block' );
 	$after_byline_padding = get_theme_mod( 'hovercraft_after_byline_padding', '0' );
 	$after_byline_background_color = get_theme_mod( 'hovercraft_after_byline_background_color', '#fff8e1' );
 
@@ -683,7 +684,7 @@ h1.mini-hero-title {
 	font-weight: <?php echo $site_name_font_weight; ?>;
 	font-size: <?php echo $site_name_mobile_font_size; ?>px;
 	line-height: 1; /* site-tagline is hidden on mobile anyways */
-	display: block;
+	display: <?php echo $site_name_display_mobile; ?>;
 	}
 }
 
