@@ -92,6 +92,30 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// site name display setting
+$wp_customize->add_setting( 'hovercraft_site_name_display_mobile', array(
+    'default'    => 'visible',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// site name display control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_site_name_display_mobile',
+        array(
+            'label'     => __( 'Site Name Display (Mobile)', 'hovercraft' ),
+			'description' => __( 'Should the Site Name be displayed on mobile devices?', 'hovercraft' ),
+            'section'   => 'hovercraft_general',
+            'settings'  => 'hovercraft_site_name_display_mobile',
+            'type'      => 'select',
+			'choices' => array(
+        		'visible' => 'Visible',
+				'hidden' => 'Hidden'
+    			)
+        )
+) );
+
 // logo width setting (desktop)
 $wp_customize->add_setting( 'hovercraft_desktop_logo_width', array(
     'default'    => '150',
