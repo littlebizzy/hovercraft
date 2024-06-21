@@ -94,7 +94,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 
 // site name display setting
 $wp_customize->add_setting( 'hovercraft_site_name_display_mobile', array(
-    'default'    => 'visible',
+    'default'    => 'block',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
 	) 
 );
@@ -110,8 +110,8 @@ $wp_customize->add_control( new WP_Customize_Control(
             'settings'  => 'hovercraft_site_name_display_mobile',
             'type'      => 'select',
 			'choices' => array(
-        		'visible' => 'Visible',
-				'hidden' => 'Hidden'
+        		'block' => 'Visible (Block)',
+				'none' => 'None (Hidden)'
     			)
         )
 ) );
