@@ -11,7 +11,21 @@
 			<?php //if (get_the_author_meta('user_email')) { echo get_avatar(get_the_author_meta('user_email') ); } ?>
 		</span>
 		<?php } ?>
-		<a href="#author"><strong><?php echo get_the_author_meta('display_name', $author_id); ?></strong></a></span> | <span class="post-updated"><?php /* _e( 'Updated on ', 'hovercraft' ); */ echo the_modified_time('M j, Y'); ?></span>
+		<a href="#author"><strong><?php echo get_the_author_meta('display_name', $author_id); ?></strong></a></span>
+	
+	<?php $hovercraft_byline_date = get_theme_mod( 'hovercraft_byline_date', 'published_date_only' );
+	if ( $hovercraft_byline_date == 'published_date_only') { ?>
+		<span class="byline-separator"><?php echo "|"; ?></span>
+		<span class="post-published"><?php echo get_the_date('M j, Y'); ?></span>
+	<?php } elseif ( $hovercraft_byline_date == 'updated_date_only') { ?>
+		<span class="byline-separator"><?php echo "|"; ?></span>
+		<span class="post-updated"><?php echo the_modified_time('M j, Y'); ?></span>
+	<?php } elseif ( $hovercraft_byline_date == 'updated_and_published_dates') { ?>
+		<span class="byline-separator"><?php echo "|"; ?></span>
+		<span class="post-published"><?php echo get_the_date('M j, Y'); ?></span>
+		<span class="post-updated"><?php echo the_modified_time('M j, Y'); ?></span>
+	<?php } ?>
+
 </div><!-- post-byline -->
 <?php } 
 
