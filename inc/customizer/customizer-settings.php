@@ -67,6 +67,30 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// mobile menu setting
+$wp_customize->add_setting( 'hovercraft_mobile_menu', array(
+    'default'    => 'overlay',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// mobile menu control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_mobile_menu',
+        array(
+            'label'     => __( 'Mobile Menu Style', 'hovercraft' ),
+			'description' => __( 'Which mobile menu design do you want to use?', 'hovercraft' ),
+            'section'   => 'hovercraft_general',
+            'settings'  => 'hovercraft_mobile_menu',
+            'type'      => 'select',
+			'choices' => array(
+        		'overlay' => 'Overlay Simple',
+        		'accordion' => 'Accordion Push'
+    			)
+        )
+) );
+
 // tagline display setting
 $wp_customize->add_setting( 'hovercraft_tagline_display', array(
     'default'    => 'right_of_site_title',
