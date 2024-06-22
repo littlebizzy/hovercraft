@@ -24,7 +24,9 @@
 				elseif ( $hovercraft_layout_icons == 'font_awesome_version_6' ) { ?><i class="fas fa-shopping-cart"></i><?php } ?></a><div class="notification-dot"><?php echo WC()->cart->get_cart_contents_count(); ?></div><!-- notification-dot -->
 			<?php } ?>
 			
-	 		<a class="nav-icon mobile-menu-trig" onclick="openNav()"><?php $hovercraft_layout_icons = get_theme_mod( 'hovercraft_layout_icons', 'material_icons_classic' );
+	 		<?php $hovercraft_mobile_menu = get_theme_mod( 'hovercraft_mobile_menu', 'overlay' );
+				if ( $hovercraft_mobile_menu == 'overlay' ) { ?><a class="nav-icon mobile-menu-trig" onclick="openNav()"><?php } else { ?>
+					<a class="nav-icon mobile-menu-trig burger"><?php } ?><?php $hovercraft_layout_icons = get_theme_mod( 'hovercraft_layout_icons', 'material_icons_classic' );
 				if ( $hovercraft_layout_icons == 'material_icons_classic' ) { ?><i class="material-icons menu">menu</i><?php } 
 				elseif ( $hovercraft_layout_icons == 'font_awesome_version_6' ) { ?><i class="fa-solid fa-bars"></i><?php } ?></a>
 			
