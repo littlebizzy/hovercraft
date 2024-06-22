@@ -4375,49 +4375,46 @@ ul.product_list_widget li a:hover:before {
 
 #offcanvas{
 	top: 0;
-  max-width: 75vw;
-  left: -100%;
-  width: 100%;
-  background: #EBEBEB;
-  color: black;
-  height: 100%;
-  position: fixed;
-  z-index: 9997;
-  overflow-y: auto;
-  -webkit-transform: translate3d(0, 0, 205px);
-  -moz-transform: translate3d(0, 0, 205px);
-  transform: translate3d(0, 0, 205px);
-  -webkit-transition: all 500ms ease-in-out;
-  -moz-transition: all 500ms ease-in-out;
-  transition: all 500ms ease-in-out;
-	
-	background-color: #ecf5fc;
+	left: -100%;
+	width: 100%;
+	max-width: 75vw;
+	background: #eeeeee;
+	color: <?php echo $default_text_color; ?>;
+	height: 100%;
+	position: fixed;
+	z-index: 9997;
+	overflow-y: auto;
+	-webkit-transform: translate3d(0, 0, 205px);
+	-moz-transform: translate3d(0, 0, 205px);
+	transform: translate3d(0, 0, 205px);
+	-webkit-transition: all 500ms ease-in-out;
+	-moz-transition: all 500ms ease-in-out;
+	transition: all 500ms ease-in-out;
 	padding: 0 0 0 20px;
 
-	ul{
+	ul {
 		list-style-type: none;
 		padding-left: 0;
 
-		li{
+		li {
 			border-top: 1px dotted rgba(0, 0, 0, 0.0980392);
 			position: relative;
 			width: 100%;
 			user-select: none;
 			-webkit-user-select: none;
-			
 
-			a{
+			a {
 				color: rgba(0, 0, 0, 0.701961);
 				padding: 7px 0;
 				display: inline-block;
 				width: calc(100% - 50px);
 
-				&:hover{
+				&:hover {
 					text-decoration: none;
 					border-bottom: 0;
 				}
 			}
-			&.selected a{
+			&.selected a {
 				color: #004c84;
 				font-weight: bold;
 				display: block;
