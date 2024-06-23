@@ -1894,6 +1894,26 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// social sharing font size setting
+$wp_customize->add_setting( 'hovercraft_social_sharing_font_size', array(
+    'default'    => '18',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
+	) 
+);
+
+// social sharing font size control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_social_sharing_font_size',
+        array(
+            'label'     => __( 'Social Sharing Font Size', 'hovercraft' ),
+			'description' => __( 'Specify font size to use, in pixels, for the social sharing icons?', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_social_sharing_font_size',
+            'type' => 'text'
+        )
+) );
+
 // default text color setting
 $wp_customize->add_setting( 'hovercraft_default_text_color', array(
 	'default' => '#263238',
