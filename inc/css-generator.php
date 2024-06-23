@@ -44,6 +44,7 @@ function hovercraft_generate_css(){
 	$after_byline_desktop_font_size = get_theme_mod( 'hovercraft_after_byline_desktop_font_size', '12' );
 	$topbar_desktop_font_size = get_theme_mod( 'hovercraft_topbar_desktop_font_size', '14' );
 	$topbar_mobile_font_size = get_theme_mod( 'hovercraft_topbar_mobile_font_size', '14' );
+	$social_sharing_font_size = get_theme_mod( 'hovercraft_social_sharing_font_size', '18' );
 
 	/* misc */
 	$blockquote_captions = get_theme_mod( 'hovercraft_blockquote_captions', 'none' );
@@ -408,7 +409,7 @@ hr {
 }
 
 #social-sharing i {
-	font-size: 16px;
+	font-size: <?php echo $social_sharing_font_size; ?>px;
 	line-height: 1;
 	margin-right: 20px !important;
 }
