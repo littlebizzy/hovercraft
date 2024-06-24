@@ -3617,6 +3617,47 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 }
 
 
+/* searchform.php style June 2024 */
+
+.input-container {
+	display: flex;
+}
+
+::placeholder {
+  color: #757575;
+  opacity: 1;
+}
+
+.search-input {
+  background: #EEEEEE;
+  color: #212121;
+	vertical-align: middle;
+  font-size: 16px;
+  line-height: 2;
+  padding: 10px 20px;
+  border: 0;
+  outline: none;
+}
+
+.search-submit {
+  background: #D500F9;
+  color: #FFFFFF;
+	vertical-align: middle;
+  padding: 0 20px;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+
+.search-submit:hover {
+  background: #AB47BC;
+}
+
+.search-submit i {
+  font-size: 24px;
+}
+	
+
 /* search bar */
 
 .searchinput::placeholder {
