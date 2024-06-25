@@ -3624,37 +3624,38 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 }
 
 ::placeholder {
-  color: #757575;
-  opacity: 1;
+	color: #757575;
+	opacity: 1;
 }
 
 .search-input {
-  background: #EEEEEE;
-  color: #212121;
+	background: #EEEEEE;
+	color: #212121;
 	vertical-align: middle;
-  font-size: 16px;
-  line-height: 2;
-  padding: 10px 20px;
-  border: 0;
-  outline: none;
+	font-size: 16px;
+	line-height: 2;
+	padding: 10px 20px;
+	border: 0;
+	outline: none;
+	box-shadow: inset 0px 0px 0px 1px #EEEEEE;
 }
 
 .search-submit {
-  background: #D500F9;
-  color: #FFFFFF;
+	background: #D500F9;
+	color: #FFFFFF;
 	vertical-align: middle;
-  padding: 0 20px;
-  border: 0;
-  outline: none;
-  cursor: pointer;
+	padding: 0 20px;
+	border: 0;
+	outline: none;
+	cursor: pointer;
 }
 
 .search-submit:hover {
-  background: #AB47BC;
+	background: #AB47BC;
 }
 
 .search-submit i {
-  font-size: 24px;
+	font-size: 24px;
 }
 	
 
