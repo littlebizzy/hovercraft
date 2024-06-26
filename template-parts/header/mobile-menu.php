@@ -29,25 +29,23 @@
 </div><!-- myNav -->
 
 <div id="offcanvas"> 
-		<?php 
-			if ( has_nav_menu( 'mobile-menu' ) ) {
-				wp_nav_menu(array(
-                'theme_location' => 'mobile-menu', 
-				'menu_class' => 'menu', 
-        		'container_class' => 'mobile-menu'
-                ));
-			} elseif ( has_nav_menu( 'main-menu' ) ) {
-            	wp_nav_menu(array(
-                'theme_location' => 'main-menu', 
-				'menu_class' => 'menu', 
-        		'container_class' => 'main-menu'
-                ));
-        	} else {
-            echo '<div class="main-menu"><ul class="menu">';
-            wp_list_pages( array( 'title_li' => '' ) );
-            echo '</ul></div>';
-        	}
-        ?>
+	<?php if ( has_nav_menu( 'mobile-menu' ) ) {
+		wp_nav_menu(array(
+        'theme_location' => 'mobile-menu', 
+		'menu_class' => 'menu', 
+        'container_class' => 'mobile-menu'
+        ));
+	} elseif ( has_nav_menu( 'main-menu' ) ) {
+        wp_nav_menu(array(
+        'theme_location' => 'main-menu', 
+		'menu_class' => 'menu', 
+        'container_class' => 'main-menu'
+        ));
+    } else {
+        echo '<div class="main-menu"><ul class="menu">';
+        wp_list_pages( array( 'title_li' => '' ) );
+        echo '</ul></div>';
+    } ?>
 </div>
 
 <div class="overlay-main"></div>
