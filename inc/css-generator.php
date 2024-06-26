@@ -4415,8 +4415,8 @@ ul.product_list_widget li a:hover:before {
 /*************************/
 /*end mobile menu overlay*/
 /*************************/
-
-#offcanvas{
+	
+#offcanvas {
 	top: 0;
 	left: -100%;
 	width: 100%;
@@ -4427,110 +4427,107 @@ ul.product_list_widget li a:hover:before {
 	position: fixed;
 	z-index: 9997;
 	overflow-y: auto;
-	-webkit-transform: translate3d(0, 0, 205px);
-	-moz-transform: translate3d(0, 0, 205px);
 	transform: translate3d(0, 0, 205px);
-	-webkit-transition: all 500ms ease-in-out;
-	-moz-transition: all 500ms ease-in-out;
 	transition: all 500ms ease-in-out;
-	padding: 0 0 0 20px;
+	padding: 20px 0 0 20px;
 
 	ul {
 		list-style-type: none;
-		padding-left: 0;
+		margin: 0;
+		padding: 0;
 
-		li {
-			border-top: 1px dotted rgba(0, 0, 0, 0.0980392);
-			position: relative;
-			width: 100%;
-			user-select: none;
-			-webkit-user-select: none;
+	li {
+		border-top: 1px dotted rgba(0, 0, 0, 0.0980392);
+		position: relative;
+		width: 100%;
+		user-select: none;
+		margin: 0;
+		padding: 0;
 
-			a {
-				color: rgba(0, 0, 0, 0.701961);
-				padding: 7px 0;
-				display: inline-block;
-				width: calc(100% - 50px);
+	a {
+		color: rgba(0, 0, 0, 0.701961);
+		padding: 7px 0;
+		display: inline-block;
+		width: calc(100% - 50px);
+		text-decoration: none;
+		vertical-align: middle;
 
-				&:hover {
-					text-decoration: none;
-					border-bottom: 0;
-				}
-			}
-			&.selected a {
-				color: #004c84;
-				font-weight: bold;
-				display: block;
-				margin-right: 50px;
-			}
-			a.menu-toggle{
-				position: relative;
-				width: 50px;
-				text-align: center;
-				border-bottom: 0;
-				vertical-align: top;
-
-				&:after{
-					position: relative;
-					right: 0;
-					text-align: middle;
-					font-family: FontAwesome;
-					font-size: 12px;
-					content: "\f078";
-				}
-				&:focus,
-				&:hover,
-				&:visited,
-				&:link{
-					border-bottom: 0;
-					text-decoration: none;
-				}
-				&.rotate{
-					transform: rotate(180deg);
-					/* right: 1px; */
-				}
-			}
+		&:hover {
+		text-decoration: none;
 		}
 	}
+	
+	&.current-menu-item a {
+		color: #004c84;
+		font-weight: bold;
+		display: block;
+		margin-right: 50px;
+	}
+	
+	a.menu-toggle {
+		position: relative;
+		width: 50px;
+		text-align: center;
+		vertical-align: top;
 
-	ul.sub-menu{
+	&:after {
+		position: relative;
+		right: 0;
+		text-align: middle;
+		font-family: FontAwesome;
+		font-size: 12px;
+		content: "\f078";
+	}
+	
+	&:focus,
+	&:hover,
+	&:visited,
+	&:link{
+		border-bottom: 0;
+		text-decoration: none;
+		}
+	
+	&.rotate {
+		transform: rotate(180deg);
+		/* right: 1px; */
+		}
+	}
+	}
+	}
+
+	ul.sub-menu {
 		display: none;
 		font-size: 14px;
 	}
-	ul.sub-menu li{
+	
+	ul.sub-menu li {
 		padding-left: 20px;
 	}
 }
 
 #offcanvas.active {
-  left: 0;
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  -webkit-transition: all 500ms ease-in-out;
-  -moz-transition: all 500ms ease-in-out;
-  transition: all 500ms ease-in-out;
+	left: 0;
+	transform: translate3d(0, 0, 0);
+	transition: all 500ms ease-in-out;
 }
 
-	.overlay-main {
-	    background-color: #000000c2;
-	    position: absolute;
-	    visibility: hidden;
-	    opacity: 0;
-	    top: 0;
-	    left: 0;
-	    right: 0;
-	    bottom: 0;
-	    -webkit-transition: all 0.3s;
-	    -moz-transition: all 0.3s;
-	    transition: all 0.3s;
-	    z-index: 99;
-	}
+.overlay-main {
+	background-color: #000000c2;
+	position: absolute;
+	visibility: hidden;
+	opacity: 0;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	transition: all 0.3s;
+	z-index: 99;
+}
 	
-	.overlay-main.active {
-	    visibility: visible;
-	    opacity: 1;
-	}
+.overlay-main.active {
+	visibility: visible;
+	opacity: 1;
+}
 
 
 </style>
