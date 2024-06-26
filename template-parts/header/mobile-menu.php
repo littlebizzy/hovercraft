@@ -29,7 +29,6 @@
 </div><!-- myNav -->
 
 <div id="offcanvas"> 
-	<div class="nav">
 		<?php 
 			if ( has_nav_menu( 'mobile-menu' ) ) {
 				wp_nav_menu(array(
@@ -49,7 +48,6 @@
             echo '</ul></div>';
         	}
         ?>
-	</div>
 </div>
 
 <div class="overlay-main"></div>
