@@ -1500,7 +1500,7 @@ button {
 	left: 250px;
 }
 	
-/* dropdown symbol should only appear in .main-menu context in header (not e.g. menu widgets in footer or sidebar) */
+/* dropdown symbol should only appear in .main-menu context in header (not e.g. menu widgets in footer or sidebar) 
 .main-menu .menu-item-has-children > a:after { 
 	font-family: "Material Icons";
 	font-size: 24px;
@@ -1510,6 +1510,21 @@ button {
 
 .main-menu li > a:only-child:after { 
 	content: ''; 
+}
+*/
+	
+.main-menu .menu-item-has-children > a.menu-toggle {
+	position: relative;
+	vertical-align: top;
+	padding-left: 10px;
+}
+	
+.main-menu .menu-item-has-children > a.menu-toggle:after {
+	position: relative;
+	font-family: FontAwesome;
+	font-size: 12px;
+	content: "\f078";
+	padding-left: 0;
 }
 
 	
