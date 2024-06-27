@@ -42,7 +42,8 @@ function hovercraft_generate_css(){
 	$main_menu_font_weight = get_theme_mod( 'hovercraft_main_menu_font_weight', '600' );
 	$after_byline_mobile_font_size = get_theme_mod( 'hovercraft_after_byline_mobile_font_size', '12' );
 	$after_byline_desktop_font_size = get_theme_mod( 'hovercraft_after_byline_desktop_font_size', '12' );
-	$offcanvas_font_size = get_theme_mod( 'hovercraft_offcanvas_font_size', '16' );
+	$offcanvas_font_size = get_theme_mod( 'hovercraft_offcanvas_font_size', '18' );
+	$offcanvas_submenu_font_size = get_theme_mod( 'hovercraft_offcanvas_submenu_font_size', '16' );
 	$topbar_desktop_font_size = get_theme_mod( 'hovercraft_topbar_desktop_font_size', '14' );
 	$topbar_mobile_font_size = get_theme_mod( 'hovercraft_topbar_mobile_font_size', '14' );
 	$social_sharing_font_size = get_theme_mod( 'hovercraft_social_sharing_font_size', '18' );
@@ -4516,6 +4517,8 @@ ul.product_list_widget li a:hover:before {
 
 	ul.sub-menu {
 		display: none;
+		font-weight: <?php echo $offcanvas_font_weight; ?>;
+		font-size: <?php echo $offcanvas_submenu_font_size; ?>px;
 	}
 	
 	ul.sub-menu li {
