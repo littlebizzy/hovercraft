@@ -1107,6 +1107,51 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// offcanvas menu font size setting
+$wp_customize->add_setting( 'hovercraft_offcanvas_font_size', array(
+    'default'    => '16',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
+	) 
+);
+
+// offcanvas menu font size control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_offcanvas_font_size',
+        array(
+            'label'     => __( 'Offcanvas Menu Font Size', 'hovercraft' ),
+			'description' => __( 'Specify font size to use, in pixels, for the Offcanvas Menu on mobile devices?', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_offcanvas_font_size',
+            'type' => 'text'
+        )
+) );
+
+// offcanvas menu font weight setting
+$wp_customize->add_setting( 'hovercraft_offcanvas_font_weight', array(
+    'default'    => '400',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
+	) 
+);
+
+// offcanvas menu font weight control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_offcanvas_font_weight',
+        array(
+            'label'     => __('Offcanvas Menu Font Weight', 'hovercraft'),
+			'description' => __( 'Specify font weight to use for the Offcanvas Menu? Note: Ensure your chosen font family supports the font weight that you choose.', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_offcanvas_font_weight',
+            'type'      => 'select',
+			'choices' => array(
+        		'700' => '700',
+        		'600' => '600',
+				'400' => '400'
+    			)
+        )
+) );
+
 // topbar font size (desktop) setting
 $wp_customize->add_setting( 'hovercraft_topbar_desktop_font_size', array(
     'default'    => '14',
