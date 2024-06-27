@@ -104,6 +104,7 @@ function hovercraft_generate_css(){
 	$default_text_color = get_theme_mod( 'hovercraft_default_text_color', '#263238' );
 	$default_link_color = get_theme_mod( 'hovercraft_default_link_color', '#5C6BC0' );
 	$default_hover_color = get_theme_mod( 'hovercraft_default_hover_color', '#283593' );
+	$offcanvas_background_color = get_theme_mod( 'hovercraft_offcanvas_background_color', '#ffffff' );
 	$topbar_background_color = get_theme_mod( 'hovercraft_topbar_background_color', '#263238' );
 	$topbar_text_color = get_theme_mod( 'hovercraft_topbar_text_color', '#ffffff' );
 	$topbar_link_color = get_theme_mod( 'hovercraft_topbar_link_color', '#ffffff' );
@@ -4436,7 +4437,7 @@ ul.product_list_widget li a:hover:before {
 	left: -100%;
 	width: 100%;
 	max-width: 75vw;
-	background: #eeeeee;
+	background: <?php echo $offcanvas_background_color; ?>;
 	color: <?php echo $default_text_color; ?>;
 	height: 100%;
 	position: fixed;
@@ -4473,7 +4474,6 @@ ul.product_list_widget li a:hover:before {
 	}
 	
 	&.current-menu-item a {
-		color: #004c84;
 		font-weight: bold;
 		display: block;
 		margin-right: 50px;
