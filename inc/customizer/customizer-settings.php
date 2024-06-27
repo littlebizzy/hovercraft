@@ -1127,6 +1127,32 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// offcanvas menu text transform setting
+$wp_customize->add_setting( 'hovercraft_offcanvas_menu_text_transform', array(
+    'default'    => 'none',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// offcanvas menu text transform control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_offcanvas_menu_text_transform',
+        array(
+            'label'     => __( 'Sidebar Widget Title Text Transform', 'hovercraft' ),
+			'description' => __( 'Specify text transform for Offcanvas menu list items?', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_offcanvas_menu_text_transform',
+            'type' => 'select',
+			'choices' => array(
+				'none' => 'Default (None)',
+				'uppercase' => 'Uppercase',
+				'lowercase' => 'Lowercase',
+				'capitalize' => 'Capitalize',
+    			)
+        )
+) );
+
 // offcanvas submenu font size setting
 $wp_customize->add_setting( 'hovercraft_offcanvas_submenu_font_size', array(
     'default'    => '16',
