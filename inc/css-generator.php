@@ -92,6 +92,7 @@ function hovercraft_generate_css(){
 	$sidebar_widget_title_desktop_font_size = get_theme_mod( 'hovercraft_sidebar_widget_title_desktop_font_size', '24' );
 	$sidebar_widget_title_mobile_font_size = get_theme_mod( 'hovercraft_sidebar_widget_title_mobile_font_size', '24' );
 	$sidebar_widget_title_text_transform = get_theme_mod( 'hovercraft_sidebar_widget_title_text_transform', 'none' );
+	$offcanvas_menu_text_transform = get_theme_mod( 'hovercraft_offcanvas_menu_text_transform', 'none' );
 	
 	/* footer */
 	$footer_mobile_font_size = get_theme_mod( 'hovercraft_footer_mobile_font_size', '14' );
@@ -4457,6 +4458,7 @@ ul.product_list_widget li a:hover:before {
 		padding: 0;
 		font-weight: <?php echo $offcanvas_font_weight; ?>;
 		font-size: <?php echo $offcanvas_font_size; ?>px;
+		text-transform: <?php echo $offcanvas_menu_text_transform; ?>;
 
 	li {
 		border-top: 1px dotted rgba(0, 0, 0, 0.0980392);
