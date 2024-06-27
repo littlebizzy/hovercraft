@@ -1139,7 +1139,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
         'hovercraft_offcanvas_menu_text_transform',
         array(
-            'label'     => __( 'Sidebar Widget Title Text Transform', 'hovercraft' ),
+            'label'     => __( 'Offcanvas Menu Text Transform', 'hovercraft' ),
 			'description' => __( 'Specify text transform for Offcanvas menu list items?', 'hovercraft' ),
             'section'   => 'hovercraft_fonts',
             'settings'  => 'hovercraft_offcanvas_menu_text_transform',
