@@ -4523,6 +4523,7 @@ ul.product_list_widget li a:hover:before {
 		display: none;
 		font-weight: <?php echo $offcanvas_font_weight; ?>;
 		font-size: <?php echo $offcanvas_submenu_font_size; ?>px;
+		background: <?php echo $offcanvas_toggle_background_color; ?>;
 	}
 	
 	ul.sub-menu li {
