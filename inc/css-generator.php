@@ -4524,7 +4524,7 @@ ul.product_list_widget li a:hover:before {
 	}
 	
 	ul.sub-menu li {
-		padding-left: 20px;
+		padding-left: 0px;
 	}
 }
 
