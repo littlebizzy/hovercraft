@@ -1958,6 +1958,21 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	'settings' => 'hovercraft_default_hover_color'
 	)
 ) );
+
+// offcanvas menu background color setting
+$wp_customize->add_setting( 'hovercraft_offcanvas_background_color', array(
+	'default' => '#ffffff',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+
+// offcanvas menu background color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_offcanvas_background_color', array(
+	'label' => 'Offcanvas Menu Background Color',
+	'description' => 'Specify background color of the Offcanvas Menu element?',
+	'section' => 'colors',
+	'settings' => 'hovercraft_offcanvas_background_color'
+	)
+) );
  
 // topbar background color setting
 $wp_customize->add_setting( 'hovercraft_topbar_background_color', array(
