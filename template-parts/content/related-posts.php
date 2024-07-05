@@ -14,13 +14,13 @@ $args = [
 ];
 $my_query = new wp_query( $args );
 if( $my_query->have_posts() ) {
-    echo '<div id="related"><h4>Related Posts:</h4><ul>';
+    echo '<div id="related-posts"><h4><?php _e( 'Related Posts: ', 'hovercraft' ); ?></h4><ul>';
         while( $my_query->have_posts() ) {
             $my_query->the_post(); ?>
             <li><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></li>
         <?php }
         wp_reset_postdata();
-    echo '</ul></div><!-- related -->';
+    echo '</ul></div><!-- related-posts -->';
 }
 
 // https://wordpress.stackexchange.com/a/183498/152624
