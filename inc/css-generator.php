@@ -391,9 +391,9 @@ hr {
 }
 
 
-/* related posts */
+/* related posts... we use #related for simple user-friendly anchor */
 
-#related-posts {
+#related {
 	margin-top: 30px !important;
 }
 
