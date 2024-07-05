@@ -393,14 +393,14 @@ hr {
 
 /* related posts */
 
-#related {
+#related-posts {
 	margin-top: 30px !important;
 }
 
 
 /* tags */
 
-.tags {
+#tags {
 	clear: right; /* needed for WooCommerce now seems */
 	display: block;
 	font-size: 14px;
