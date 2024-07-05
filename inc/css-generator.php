@@ -390,6 +390,16 @@ hr {
 	aspect-ratio: 1 / 1.5;
 }
 
+
+/* related posts */
+
+#related {
+	margin-top: 30px !important;
+}
+
+
+/* tags */
+
 .tags {
 	clear: right; /* needed for WooCommerce now seems */
 	display: block;
@@ -2773,6 +2783,11 @@ p.biography-description {
 }
 }
 
+.cta-sidebar-callout ul {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+	
 @media screen and (max-width: 1200px) {
 .cta-sidebar-callout ul li {
 	list-style-type: none;
