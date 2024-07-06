@@ -1496,6 +1496,7 @@ button {
 	display: inline-block;
 	padding-left: 30px;
 	text-decoration: none !important;
+	text-transform: <?php echo $main_menu_text_transform; ?>;
 }
 
 
