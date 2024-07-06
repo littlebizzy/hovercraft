@@ -1153,26 +1153,6 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
-// offcanvas submenu font size setting
-$wp_customize->add_setting( 'hovercraft_offcanvas_submenu_font_size', array(
-    'default'    => '16',
-	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
-);
-
-// offcanvas submenu font size control
-$wp_customize->add_control( new WP_Customize_Control(
-        $wp_customize,
-        'hovercraft_offcanvas_submenu_font_size',
-        array(
-            'label'     => __( 'Offcanvas Submenu Font Size', 'hovercraft' ),
-			'description' => __( 'Specify font size to use, in pixels, for the Offcanvas submenus on mobile devices?', 'hovercraft' ),
-            'section'   => 'hovercraft_fonts',
-            'settings'  => 'hovercraft_offcanvas_submenu_font_size',
-            'type' => 'text'
-        )
-) );
-
 // offcanvas menu font weight setting
 $wp_customize->add_setting( 'hovercraft_offcanvas_font_weight', array(
     'default'    => '400',
@@ -1195,6 +1175,26 @@ $wp_customize->add_control( new WP_Customize_Control(
         		'600' => '600',
 				'400' => '400'
     			)
+        )
+) );
+
+// offcanvas submenu font size setting
+$wp_customize->add_setting( 'hovercraft_offcanvas_submenu_font_size', array(
+    'default'    => '16',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
+	) 
+);
+
+// offcanvas submenu font size control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_offcanvas_submenu_font_size',
+        array(
+            'label'     => __( 'Offcanvas Submenu Font Size', 'hovercraft' ),
+			'description' => __( 'Specify font size to use, in pixels, for the Offcanvas submenus on mobile devices?', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_offcanvas_submenu_font_size',
+            'type' => 'text'
         )
 ) );
 
