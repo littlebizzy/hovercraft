@@ -3964,7 +3964,13 @@ div.bbp-forum-header, div.bbp-reply-header, div.bbp-topic-header {
 	font-size: 16px !important;
 }
 
-.bbp-reply-content {
+.bbp-header {
+	font-size: 12px !important;
+	text-transform: uppercase !important;
+	font-weight: 600 !important;
+}
+
+.bbp-reply-content p {
 	font-size: 16px !important;
 	line-height: 1.5 !important;
 }
