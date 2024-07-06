@@ -404,6 +404,7 @@ hr {
 
 #tags {
 	clear: right; /* needed for WooCommerce now seems */
+	margin-top: 30px;
 	display: block;
 	font-size: 14px;
 	color: #607D8B;
@@ -2539,10 +2540,10 @@ img.featured-image-archive {
     color: #444;
 }
 
-/* author biography */
+/* author biography box */
 
 #author {
-	margin: 30px 0px;
+	margin-top: 30px;
 	padding: 40px;
 	box-shadow: inset 0px 0px 0px 1px #cccccc;
 	border-radius: 0px;
