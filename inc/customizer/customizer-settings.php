@@ -1534,6 +1534,52 @@ $wp_customize->add_control( new WP_Customize_Control(
             'type' => 'text'
         )
 ) );
+
+// back to top font size (mobile) setting
+$wp_customize->add_setting( 'hovercraft_back_to_top_mobile_font_size', array(
+    'default'    => '12',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
+	) 
+);
+
+// back to top font size (mobile) control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_back_to_top_mobile_font_size',
+        array(
+            'label'     => __( 'Back To Top Font Size (Mobile)', 'hovercraft' ),
+			'description' => __( 'Specify font size to use, in pixels, for the back to top element on mobile devices?', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_back_to_top_mobile_font_size',
+            'type' => 'text'
+        )
+) );
+
+// back to top text transform setting
+$wp_customize->add_setting( 'hovercraft_back_to_top_text_transform', array(
+    'default'    => 'uppercase',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// back to top text transform control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_back_to_top_text_transform',
+        array(
+            'label'     => __( 'Back To Top Text Transform', 'hovercraft' ),
+			'description' => __( 'Specify text transform for the Back To Top element?', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_back_to_top_text_transform',
+            'type' => 'select',
+			'choices' => array(
+				'none' => 'Default (None)',
+				'uppercase' => 'Uppercase',
+				'lowercase' => 'Lowercase',
+				'capitalize' => 'Capitalize',
+    			)
+        )
+) );
 	
 // h1 font family setting
 $wp_customize->add_setting( 'hovercraft_h1_font', array(
