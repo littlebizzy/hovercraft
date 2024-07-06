@@ -1369,6 +1369,32 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// main menu text transform setting
+$wp_customize->add_setting( 'hovercraft_main_menu_text_transform', array(
+    'default'    => 'none',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// main menu text transform control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_main_menu_text_transform',
+        array(
+            'label'     => __( 'Main Menu Text Transform', 'hovercraft' ),
+			'description' => __( 'Specify text transform for Main Menu list items?', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_main_menu_text_transform',
+            'type' => 'select',
+			'choices' => array(
+				'none' => 'Default (None)',
+				'uppercase' => 'Uppercase',
+				'lowercase' => 'Lowercase',
+				'capitalize' => 'Capitalize',
+    			)
+        )
+) );
+
 // after byline (desktop) setting
 $wp_customize->add_setting( 'hovercraft_after_byline_desktop_font_size', array(
     'default'    => '12',
@@ -1485,6 +1511,26 @@ $wp_customize->add_control( new WP_Customize_Control(
 			'description' => __( 'Specify font size to use, in pixels, for the copyright on mobile devices?', 'hovercraft' ),
             'section'   => 'hovercraft_fonts',
             'settings'  => 'hovercraft_copyright_mobile_font_size',
+            'type' => 'text'
+        )
+) );
+
+// back to top font size (desktop) setting
+$wp_customize->add_setting( 'hovercraft_back_to_top_desktop_font_size', array(
+    'default'    => '12',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
+	) 
+);
+
+// back to top font size (desktop) control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_back_to_top_desktop_font_size',
+        array(
+            'label'     => __( 'Back To Top Font Size (Desktop)', 'hovercraft' ),
+			'description' => __( 'Specify font size to use, in pixels, for the back to top element on desktop devices?', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_back_to_top_desktop_font_size',
             'type' => 'text'
         )
 ) );
