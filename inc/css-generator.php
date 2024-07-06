@@ -93,12 +93,14 @@ function hovercraft_generate_css(){
 	$sidebar_widget_title_mobile_font_size = get_theme_mod( 'hovercraft_sidebar_widget_title_mobile_font_size', '24' );
 	$sidebar_widget_title_text_transform = get_theme_mod( 'hovercraft_sidebar_widget_title_text_transform', 'none' );
 	$offcanvas_menu_text_transform = get_theme_mod( 'hovercraft_offcanvas_menu_text_transform', 'none' );
+	$main_menu_text_transform = get_theme_mod( 'hovercraft_main_menu_text_transform', 'none' );
 	
 	/* footer */
 	$footer_mobile_font_size = get_theme_mod( 'hovercraft_footer_mobile_font_size', '14' );
 	$footer_desktop_font_size = get_theme_mod( 'hovercraft_footer_desktop_font_size', '14' );
 	$copyright_mobile_font_size = get_theme_mod( 'hovercraft_copyright_mobile_font_size', '14' );
 	$copyright_desktop_font_size = get_theme_mod( 'hovercraft_copyright_desktop_font_size', '14' );
+	$back_to_top_desktop_font_size = get_theme_mod( 'hovercraft_back_to_top_desktop_font_size', '14' );
 
 	/* colors */
 	/* these need serious cleanup */
@@ -3886,7 +3888,7 @@ p.akismet_comment_form_privacy_notice {
 	width: 100%;
 	
 	cursor: pointer;
-	font-size: 14px;
+	font-size: <?php echo $back_to_top_desktop_font_size; ?>px;
 	line-height: 1;
 	padding: 10px 0px;
 	color: rgba(255, 255, 255, 0.5) !important;
