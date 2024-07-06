@@ -94,14 +94,16 @@ function hovercraft_generate_css(){
 	$sidebar_widget_title_text_transform = get_theme_mod( 'hovercraft_sidebar_widget_title_text_transform', 'none' );
 	$offcanvas_menu_text_transform = get_theme_mod( 'hovercraft_offcanvas_menu_text_transform', 'none' );
 	$main_menu_text_transform = get_theme_mod( 'hovercraft_main_menu_text_transform', 'none' );
+	$back_to_top_text_transform = get_theme_mod( 'hovercraft_back_to_top_text_transform', 'uppercase' );
 	
 	/* footer */
 	$footer_mobile_font_size = get_theme_mod( 'hovercraft_footer_mobile_font_size', '14' );
 	$footer_desktop_font_size = get_theme_mod( 'hovercraft_footer_desktop_font_size', '14' );
 	$copyright_mobile_font_size = get_theme_mod( 'hovercraft_copyright_mobile_font_size', '14' );
 	$copyright_desktop_font_size = get_theme_mod( 'hovercraft_copyright_desktop_font_size', '14' );
-	$back_to_top_desktop_font_size = get_theme_mod( 'hovercraft_back_to_top_desktop_font_size', '14' );
-
+	$back_to_top_desktop_font_size = get_theme_mod( 'hovercraft_back_to_top_desktop_font_size', '12' );
+	$back_to_top_mobile_font_size = get_theme_mod( 'hovercraft_back_to_top_mobile_font_size', '12' );
+	
 	/* colors */
 	/* these need serious cleanup */
 	$mini_hero_background_color = get_theme_mod( 'hovercraft_header_mini_hero_background_color', '#ffffff' );
@@ -3869,7 +3871,7 @@ p.akismet_comment_form_privacy_notice {
 }
 
 
-/* scroll-to-top */
+/* back to top (scroll-to-top) */
 
 @media screen and (max-width: 1200px) {
 .scrollup-wrapper {
@@ -3885,12 +3887,13 @@ p.akismet_comment_form_privacy_notice {
 	}
 }
 
+@media screen and (max-width: 1200px) {
 .scrollup-link {
 	display: block;
 	width: 100%;
-	
 	cursor: pointer;
-	font-size: <?php echo $back_to_top_desktop_font_size; ?>px;
+	font-size: <?php echo $back_to_top_mobile_font_size; ?>px;
+	text-transform: <?php echo $back_to_top_text_transform; ?>;
 	line-height: 1;
 	padding: 10px 0px;
 	color: rgba(255, 255, 255, 0.5) !important;
@@ -3898,7 +3901,24 @@ p.akismet_comment_form_privacy_notice {
 	text-align: center;
 	vertical-align: middle;
 	background: rgba(0, 0, 0, 0.1);
-	border-radius: 0px;
+	}
+}
+	
+@media screen and (min-width: 1200px) {
+.scrollup-link {
+	display: block;
+	width: 100%;
+	cursor: pointer;
+	font-size: <?php echo $back_to_top_desktop_font_size; ?>px;
+	text-transform: <?php echo $back_to_top_text_transform; ?>;
+	line-height: 1;
+	padding: 10px 0px;
+	color: rgba(255, 255, 255, 0.5) !important;
+	text-decoration: none !important;
+	text-align: center;
+	vertical-align: middle;
+	background: rgba(0, 0, 0, 0.1);
+	}
 }
 
 .scrollup-link:active, .scrollup-link:hover {
