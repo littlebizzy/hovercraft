@@ -29,6 +29,7 @@
 </div><!-- myNav -->
 
 <div id="offcanvas"> 
+	<h4 class="sitename-offcanvas"><?php echo get_bloginfo( 'name' ); ?></h4>
 	<?php if ( has_nav_menu( 'mobile-menu' ) ) {
 		wp_nav_menu(array(
         'theme_location' => 'mobile-menu', 
