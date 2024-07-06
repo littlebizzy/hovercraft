@@ -1052,6 +1052,12 @@ h4 {
 	}
 }
 
+h4.sitename-offcanvas {
+	font-weight: 600;
+	font-size: <?php echo $h4_desktop_font_size; ?>px;
+	margin-bottom: 20px;
+	}
+
 @media screen and (max-width: 1200px) {
 h5 {
 	font-weight: <?php echo $h5_font_weight; ?>;
