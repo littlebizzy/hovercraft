@@ -2517,6 +2517,36 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	)
 ) );
 
+// sidebar callout (hover) background color setting
+$wp_customize->add_setting( 'hovercraft_sidebar_callout_hover_background_color', array(
+	'default' => '#ffffff',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+
+// sidebar callout (hover) background color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_sidebar_callout_hover_background_color', array(
+	'label' => 'Sidebar Callout Hover Background Color',
+	'description' => 'Specify the hover background color for the CTA button in SideBar Callout widget?',
+	'section' => 'colors',
+	'settings' => 'hovercraft_sidebar_callout_hover_background_color'
+	)
+) );
+
+// sidebar callout (hover) link color setting
+$wp_customize->add_setting( 'hovercraft_sidebar_callout_hover_link_color', array(
+	'default' => '#283593',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+
+// sidebar callout (hover) link color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_sidebar_callout_hover_link_color', array(
+	'label' => 'Sidebar Callout Hover Link Color',
+	'description' => 'Specify the hover link color for the CTA button in SideBar Callout widget?',
+	'section' => 'colors',
+	'settings' => 'hovercraft_sidebar_callout_hover_link_color'
+	)
+) );
+
 // sidebar widgets background color setting
 $wp_customize->add_setting( 'hovercraft_sidebar_widget_background_color', array(
 	'default' => '#ffffff',
