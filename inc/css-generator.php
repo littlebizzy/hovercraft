@@ -146,6 +146,8 @@ function hovercraft_generate_css(){
 	$sidebar_callout_background_color = get_theme_mod( 'hovercraft_sidebar_callout_background_color', '#283593' );
 	$sidebar_callout_text_color = get_theme_mod( 'hovercraft_sidebar_callout_text_color', '#ffffff' );
 	$sidebar_callout_link_color = get_theme_mod( 'hovercraft_sidebar_callout_link_color', '#ffffff' );
+	$sidebar_callout_hover_background_color = get_theme_mod( 'hovercraft_sidebar_callout_hover_background_color', '#ffffff' );
+	$sidebar_callout_hover_link_color = get_theme_mod( 'hovercraft_sidebar_callout_hover_link_color', '#283593' );
 	$sidebar_widget_background_color = get_theme_mod( 'hovercraft_sidebar_widget_background_color', '#ffffff' );
 	$sidebar_widget_text_color = get_theme_mod( 'hovercraft_sidebar_widget_text_color', '#263238' );
 	$sidebar_widget_link_color = get_theme_mod( 'hovercraft_sidebar_widget_link_color', '#5C6BC0' );
@@ -2764,7 +2766,7 @@ p.biography-description {
 
 
 
-/* sidebar callout (must load after #sidebar rules) */
+/* sidebar callout widget area (must load after #sidebar rules) */
 
 #sidebar .widget-callout {
    	background: <?php echo $sidebar_callout_background_color; ?> !important;
@@ -2852,8 +2854,9 @@ p.biography-description {
 }
 
 .cta-sidebar-callout ul li:hover a {
-	color: <?php echo $default_text_color; ?> !important;
-	background: #ffffff;
+	color: <?php echo $sidebar_callout_hover_link_color; ?> !important;
+	background: <?php echo $sidebar_callout_hover_background_color; ?> !important;
+	box-shadow: none;
 }
 
 
