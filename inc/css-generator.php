@@ -4130,6 +4130,7 @@ form.cart {
 section.related {
 	clear: both;
 	display: block;
+	margin-top: 30px !important;
 }
 
 section.upsells {
