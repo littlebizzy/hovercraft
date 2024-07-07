@@ -77,7 +77,7 @@
 	<?php $hovercraft_scroll_to_top = get_theme_mod( 'hovercraft_scroll_to_top', 'mobile_only' );
 	if ( $hovercraft_scroll_to_top != 'none' ) { ?>
 	<div class="scrollup-wrapper">
-		<a class="scrollup-link" href="#top">Back to top<i class="material-icons arrow_upward">arrow_upward</i></a>
+		<a class="scrollup-link" href="#top">Back to top</a>
 	</div><!-- scrollup-wrapper -->
 	<?php } ?>
 
