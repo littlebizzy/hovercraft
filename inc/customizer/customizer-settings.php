@@ -69,7 +69,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 
 // mobile menu setting
 $wp_customize->add_setting( 'hovercraft_mobile_menu', array(
-    'default'    => 'overlay',
+    'default'    => 'accordion',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
 	) 
 );
