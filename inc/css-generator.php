@@ -4081,6 +4081,10 @@ select {
 	color: <?php echo $woocommerce_price_text_color; ?> !important;
 }
 
+.woocommerce .summary ul {
+	margin-left: 0 !important;
+}
+
 .product_meta {
 	display: block;
 	font-size: 14px;
