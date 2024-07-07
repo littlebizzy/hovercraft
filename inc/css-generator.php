@@ -4045,9 +4045,14 @@ visibility: hidden;
 	font-weight: 600;
 }
 
-ul.products {
+.woocommerce ul.products {
 	margin: 0px !important;
 	padding: 30px 0 0 0 !important;
+}
+
+.woocommerce ul.products li {
+    list-style: none outside;
+	margin-bottom: 30px !important;
 }
 
 select {
