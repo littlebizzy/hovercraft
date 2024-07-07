@@ -112,6 +112,7 @@ function hovercraft_generate_css(){
 	$default_text_color = get_theme_mod( 'hovercraft_default_text_color', '#263238' );
 	$default_link_color = get_theme_mod( 'hovercraft_default_link_color', '#5C6BC0' );
 	$default_hover_color = get_theme_mod( 'hovercraft_default_hover_color', '#283593' );
+	$woocommerce_price_text_color = get_theme_mod( 'hovercraft_woocommerce_price_text_color', '#9E9D24' );
 	$topbar_background_color = get_theme_mod( 'hovercraft_topbar_background_color', '#263238' );
 	$topbar_text_color = get_theme_mod( 'hovercraft_topbar_text_color', '#ffffff' );
 	$topbar_link_color = get_theme_mod( 'hovercraft_topbar_link_color', '#ffffff' );
@@ -4076,8 +4077,8 @@ select {
 
 .price {
 	font-size: 24px !important;
-	font-weight: 700 !important;
-	color: #00C853 !important;
+	font-weight: 600 !important;
+	color: <?php echo $woocommerce_price_text_color; ?> !important;
 }
 
 .product_meta {
