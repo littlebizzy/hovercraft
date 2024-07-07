@@ -1063,6 +1063,7 @@ h4 {
 h4.sitename-offcanvas {
 	font-weight: 600;
 	font-size: <?php echo $h4_desktop_font_size; ?>px;
+	line-height: 1;
 	margin-bottom: 20px;
 	}
 
