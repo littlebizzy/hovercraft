@@ -2142,6 +2142,21 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	)
 ) );
 
+// woocommerce price text color setting
+$wp_customize->add_setting( 'hovercraft_woocommerce_price_text_color', array(
+	'default' => '#9E9D24',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+ 
+// woocommerce price text color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_woocommerce_price_text_color', array(
+	'label' => 'WooCommerce Price Text Color',
+	'description' => 'Text color of the prices displayed by WooCommerce on products?',
+	'section' => 'colors',
+	'settings' => 'hovercraft_woocommerce_price_text_color'
+	)
+) );
+
 // offcanvas menu background color setting
 $wp_customize->add_setting( 'hovercraft_offcanvas_background_color', array(
 	'default' => '#ffffff',
