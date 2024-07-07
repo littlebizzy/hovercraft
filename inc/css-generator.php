@@ -2778,7 +2778,7 @@ p.biography-description {
 }
 
 #sidebar .widget-callout a {
-	color: <?php echo $sidebar_callout_link_color; ?> !important;
+	color: <?php echo $sidebar_callout_link_color; ?>;
 }
 
 @media screen and (max-width: 1200px) {
@@ -2835,7 +2835,7 @@ p.biography-description {
 	display: block;
 	background: transparent;
 	margin-bottom: 0;
-	box-shadow: inset 0px 0px 0px 1px <?php echo $sidebar_callout_link_color; ?>;
+	box-shadow: inset 0px 0px 0px 1px <?php echo $sidebar_callout_link_color; ?> !important;;
 	}
 }
 
@@ -2856,7 +2856,7 @@ p.biography-description {
 .cta-sidebar-callout ul li:hover a {
 	color: <?php echo $sidebar_callout_hover_link_color; ?> !important;
 	background: <?php echo $sidebar_callout_hover_background_color; ?> !important;
-	box-shadow: none;
+	box-shadow: none !important;;
 }
 
 
