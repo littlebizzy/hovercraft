@@ -2549,7 +2549,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 
 // sidebar callout (hover) link color setting
 $wp_customize->add_setting( 'hovercraft_sidebar_callout_hover_link_color', array(
-	'default' => '#283593',
+	'default' => '#263238',
 	'sanitize_callback' => 'sanitize_hex_color',
 ) );
 
