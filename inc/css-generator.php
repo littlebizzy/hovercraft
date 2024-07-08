@@ -4118,8 +4118,10 @@ form.cart {
 form.cart input {
 	vertical-align: middle;
 	font-size: 16px;
+	font-weight: 400;
 	line-height: 2;
-	padding: 5px 0px 5px 0px !important;
+	text-align: center;
+	padding: 5px 0px !important;
 	border: 0;
 	outline: none;
 	box-shadow: inset 0px 0px 0px 1px #BDBDBD;
@@ -4128,10 +4130,11 @@ form.cart input {
 form.cart button {
 	vertical-align: middle;
 	font-size: 16px !important;
-  padding: 0 20px;
-  border: 0;
-  outline: none;
-  cursor: pointer;
+	font-weight: 700 !important;
+	padding: 0 20px;
+	border: 0;
+	outline: none;
+	cursor: pointer;
 	border-radius: 0 !important;
 }
 
