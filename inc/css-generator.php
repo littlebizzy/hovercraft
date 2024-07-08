@@ -4109,11 +4109,17 @@ select {
 
 /* woocommerce add to cart form */
 
-div.single_variations_wrap {
+form.variations_form {
+	display: block !important;
+}
+
+form.cart {
+	display: flex;
+}
+	
+div.single_variation_wrap {
 	clear: both;
 	display: flex;
-	float: none !important;
-	margin: 0 !important;
 }
 
 table.variations {
