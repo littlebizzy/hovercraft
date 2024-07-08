@@ -4129,6 +4129,7 @@ form.cart input {
 	font-weight: 400;
 	line-height: 2;
 	text-align: center;
+	margin-right: 5px !important;
 	padding: 5px 0px !important;
 	border: 0;
 	outline: none;
