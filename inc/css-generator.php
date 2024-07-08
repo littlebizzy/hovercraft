@@ -4087,6 +4087,12 @@ select {
 	color: <?php echo $woocommerce_price_text_color; ?> !important;
 }
 
+p.stock {
+	font-size: 12px !important;
+	font-weight: 400 !important;
+	color: <?php echo $woocommerce_price_text_color; ?> !important;
+}
+
 .woocommerce .summary ul {
 	margin-left: 0 !important;
 }
