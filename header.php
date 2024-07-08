@@ -8,17 +8,17 @@
 	
 	<?php $hovercraft_material_icons = get_theme_mod( 'hovercraft_material_icons', 'classic_only' );
 		if ( $hovercraft_material_icons == 'classic_only' ) { ?>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons&display=block">
 		<?php } elseif ( $hovercraft_material_icons == 'classic_and_outlined' ) { ?>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons&family=Material+Icons+Outlined">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons&family=Material+Icons+Outlined&display=block">
 		<?php } elseif ( $hovercraft_material_icons == 'classic_and_outlined_and_two_toned' ) { ?>
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons&family=Material+Icons+Outlined&family=Material+Icons+Two+Tone">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Icons&family=Material+Icons+Outlined&family=Material+Icons+Two+Tone&display=block">
 		<?php } elseif ( $hovercraft_material_icons == 'none' ) { ?>
 	<?php } ?>
 
 	<?php $hovercraft_font_awesome = get_theme_mod( 'hovercraft_font_awesome', 'none' );
 		if ( $hovercraft_font_awesome == 'version_6' ) { ?>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 		<?php } elseif ( $hovercraft_font_awesome == 'version_5' ) { ?>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 		<?php } elseif ( $hovercraft_font_awesome == 'version_4' ) { ?>
@@ -26,7 +26,7 @@
 		<?php } elseif ( $hovercraft_font_awesome == 'none' ) { ?>
 	<?php } ?>
 	
-	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=swap">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=block">
 	
 	<style>
 	<?php include 'style.css'; ?>
@@ -75,3 +75,6 @@
 	<?php } 
 	// todo: https://wordpress.stackexchange.com/questions/419686/how-to-retrieve-blog-language-without-any-region-locale-attached		
 	?><!-- if topbar widgets active -->
+
+	<!-- https://stackoverflow.com/questions/48021086/how-to-avoid-font-awesome-loading-jumping-when-opening-a-page -->
+	<!-- https://www.smashingmagazine.com/2021/05/reduce-font-loading-impact-css-descriptors/ -->
