@@ -2196,6 +2196,13 @@ body.home #content-wide {
 }
 
 
+/* body frozen (triggered by offcanvas menu js) */
+
+body.frozen {
+	overflow: hidden;
+}
+
+
 /* primary */
 
 @media screen and (max-width: 1200px) {
