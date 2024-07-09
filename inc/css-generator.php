@@ -206,6 +206,7 @@ html, body {
 	line-height: 1.5;
 	color: <?php echo $default_text_color; ?>;
 	scroll-behavior: smooth;
+	overflow-y: scroll;
 	}
 }
 
@@ -217,7 +218,14 @@ html, body {
 	line-height: 1.5;
 	color: <?php echo $default_text_color; ?>;
 	scroll-behavior: smooth;
+	overflow-y: scroll;
 	}
+}
+
+/* body frozen (triggered by offcanvas menu js) */
+
+body.frozen {
+	overflow: hidden;
 }
 
 
@@ -2193,13 +2201,6 @@ body.home #main {
 
 body.home #content-wide {
 	background: <?php echo $main_background_color_homepage; ?>;
-}
-
-
-/* body frozen (triggered by offcanvas menu js) */
-
-body.frozen {
-	overflow: hidden;
 }
 
 
