@@ -4598,7 +4598,7 @@ ul.product_list_widget li a:hover:before {
 	}
 	
 	&.current-menu-item a {
-		font-weight: bold;
+		font-weight: 600;
 		display: block;
 		margin-right: 50px;
 	}
