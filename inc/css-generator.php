@@ -1065,6 +1065,7 @@ h4.sitename-offcanvas {
 	font-size: <?php echo $h4_desktop_font_size; ?>px;
 	line-height: 1;
 	margin-bottom: 20px;
+	padding-left: 20px;
 	}
 
 @media screen and (max-width: 1200px) {
@@ -4565,7 +4566,7 @@ ul.product_list_widget li a:hover:before {
 	overflow-y: auto;
 	transform: translate3d(0, 0, 205px);
 	transition: all 500ms ease-in-out;
-	padding: 20px 0 0 20px;
+	padding: 20px 0 0 0;
 
 	ul {
 		list-style-type: none;
@@ -4585,7 +4586,7 @@ ul.product_list_widget li a:hover:before {
 
 	a {
 		color: rgba(0, 0, 0, 0.701961);
-		padding: 7px 0;
+		padding: 7px 0 7px 20px;
 		display: inline-block;
 		width: calc(100% - 50px);
 		text-decoration: none;
@@ -4606,13 +4607,15 @@ ul.product_list_widget li a:hover:before {
 		position: relative;
 		width: 50px;
 		text-align: center;
-		vertical-align: top;
+		vertical-align: middle;
 		background: <?php echo $offcanvas_toggle_background_color; ?>;
+		padding-left: 0;
 
 	&:after {
 		position: relative;
 		right: 0;
-		text-align: middle;
+		text-align: center;
+		vertical-align: middle;
 		font-family: FontAwesome;
 		font-size: 12px;
 		content: "\f078";
