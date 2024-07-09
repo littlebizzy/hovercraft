@@ -1,3 +1,5 @@
+<img src="https://repository-images.githubusercontent.com/56482826/43902c63-3729-437d-ab69-8ab86f52e839" />
+
 # HoverCraft
 
 No maintenance WordPress theme
