@@ -11,8 +11,14 @@
 			<?php //if (get_the_author_meta('user_email')) { echo get_avatar(get_the_author_meta('user_email') ); } ?>
 		</span>
 		<?php } ?>
-		<a href="#author"><strong><?php echo get_the_author_meta('display_name', $author_id); ?></strong></a></span>
-	
+
+		<?php $hovercraft_biography = get_theme_mod( 'hovercraft_biography', 'native_posts_only' );
+		if ( ( $hovercraft_biography == 'native_posts_only' ) || ( $hovercraft_biography == 'all_post_types' ) ) { ?>
+			<a href="#author"><strong><?php echo get_the_author_meta('display_name', $author_id); ?></strong></a></span>
+		<?php } else { ?>
+			<strong><?php echo get_the_author_meta('display_name', $author_id); ?></strong></span>
+		<?php } ?>
+			
 	<?php $hovercraft_byline_date = get_theme_mod( 'hovercraft_byline_date', 'published_date_only' );
 	if ( $hovercraft_byline_date == 'published_date_only') { ?>
 		<span class="byline-separator"><?php echo "|"; ?></span>
