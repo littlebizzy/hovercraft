@@ -4607,8 +4607,10 @@ ul.product_list_widget li a:hover:before {
 	
 	&.current-menu-item a {
 		font-weight: 600;
-		display: block;
-		margin-right: 50px;
+	}
+		
+	&.current-menu-item ul a {
+		font-weight: 400;
 	}
 	
 	a.menu-toggle {
