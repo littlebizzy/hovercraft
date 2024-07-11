@@ -2757,6 +2757,10 @@ p.biography-description {
 	margin-bottom: 30px;
 }
 
+#sidebar .widget-wrapper ul ul {
+	margin-bottom: 0;
+}
+
 #sidebar .widget-wrapper ul li {
 	margin-bottom: 5px;
 }
