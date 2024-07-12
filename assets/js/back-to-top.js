@@ -1,16 +1,16 @@
-var btn = jQuery('#scrollup');
+jQuery(document).ready(function($){
 
-jQuery(window).scroll(function() {
-  if (jQuery(window).scrollTop() > 300) {
-    btn.addClass('show');
-  } else {
-    btn.removeClass('show');
-  }
+    $(document).ready(function(){  
+        // variables 
+        var toTop = $('.scrollup-link');
+        // logic
+        toTop.on('click', function(){
+            $('html, body').animate({
+            scrollTop: $('html, body').offset().top,
+            });
+        });
+    });
+
 });
 
-btn.on('click', function(e) {
-  e.preventDefault();
-  jQuery('html, body').animate({scrollTop:0}, '300');
-});
-
-// https://codepen.io/matthewcain/pen/ZepbeR
+// https://codepen.io/nabeelfaheem/pen/zYOZOZK
