@@ -1,5 +1,4 @@
-// When the document is ready...
-jQuery( document ).ready( function( $ ) {
+jQuery(document).ready(function($){
 
     // ... display the Full Screen search when:
     // 1. The user focuses on a search field, or
@@ -36,7 +35,7 @@ jQuery( document ).ready( function( $ ) {
 
     } );
 
-} );
+});
 
 // https://wordpress.org/plugins/full-screen-search-overlay/
 // https://www.geeksforgeeks.org/how-to-detect-escape-key-press-using-jquery/
