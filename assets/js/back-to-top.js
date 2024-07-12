@@ -1,12 +1,9 @@
 jQuery(document).ready(function($){
 
     $(document).ready(function(){  
-        // variables 
-        var toTop = $('.scrollup-link');
-        // logic
-        toTop.on('click', function(){
+        $('.scrollup-link').on('click', function(){
             $('html, body').animate({
-            scrollTop: $('html, body').offset().top,
+                scrollTop: "0"
             });
         });
     });
@@ -14,3 +11,4 @@ jQuery(document).ready(function($){
 });
 
 // https://codepen.io/nabeelfaheem/pen/zYOZOZK
+// https://www.geeksforgeeks.org/how-to-animate-scrolltop-using-jquery/
