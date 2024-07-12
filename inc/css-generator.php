@@ -3889,7 +3889,7 @@ p.akismet_comment_form_privacy_notice {
 }
 
 
-/* back to top (scroll-to-top) */
+/* back to top */
 
 @media screen and (max-width: 1200px) {
 .scrollup-wrapper {
@@ -3901,7 +3901,7 @@ p.akismet_comment_form_privacy_notice {
 @media screen and (min-width: 1200px) {
 .scrollup-wrapper {
 	<?php if ( $scroll_to_top == 'mobile_only') { echo "display: none;"; } ?>
-	margin-top: 20px;
+	margin-top: 30px;
 	}
 }
 
@@ -3943,17 +3943,6 @@ p.akismet_comment_form_privacy_notice {
 	background: rgba(0, 0, 0, 0.2);
 	color: #ffffff !important;
 	outline: none !important;
-	-webkit-tap-highlight-color: transparent;
-}
-
-.scrollup-wrapper i {
-	font-size: 14px !important;
-	line-height: 1 !important;
-	vertical-align: middle;
-}
-
-.scrollup-wrapper i:first-child {
-	margin-left: 10px !important;
 }
 
 	
