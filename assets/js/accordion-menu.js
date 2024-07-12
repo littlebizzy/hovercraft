@@ -1,6 +1,6 @@
-jQuery( document ).ready( function( $ ) {
+jQuery(document).ready(function($) {
 
-accordionNav = $(function(){
+accordionNav = $(function() {
 	$('.menu-toggle').click(function(e) {
 		e.preventDefault();
 		var toggleButton = $(this);
@@ -19,6 +19,6 @@ accordionNav = $(function(){
 	});
 });
 	
-} );
+});
 
 // https://codepen.io/keithchis/pen/GpdbLm
