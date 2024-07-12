@@ -19,7 +19,7 @@ require get_template_directory() . '/inc/menus/overlay-menu.php';
 
 
 // back to top
-// require get_template_directory() . '/inc/back-to-top.php';
+require get_template_directory() . '/inc/back-to-top.php';
 
 // bbpress quick tags
 require get_template_directory() . '/inc/bbpress-quick-tags.php';
