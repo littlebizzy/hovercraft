@@ -2516,14 +2516,29 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	'settings' => 'hovercraft_sidebar_callout_text_color'
 	)
 ) );
+
+// sidebar callout CTA background color setting
+$wp_customize->add_setting( 'hovercraft_sidebar_callout_cta_background_color', array(
+	'default' => '#263238',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+
+// sidebar callout CTA background color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_sidebar_callout_cta_background_color', array(
+	'label' => 'Sidebar Callout CTA Background Color',
+	'description' => 'Specify background color of the Sidebar Callout CTA?',
+	'section' => 'colors',
+	'settings' => 'hovercraft_sidebar_callout_cta_background_color'
+	)
+) );
 	
-// sidebar callout link color setting
+// sidebar callout CTA link color setting
 $wp_customize->add_setting( 'hovercraft_sidebar_callout_link_color', array(
 	'default' => '#ffffff',
 	'sanitize_callback' => 'sanitize_hex_color',
 ) );
 
-// sidebar callout link color control
+// sidebar callout CTA link color control
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_sidebar_callout_link_color', array(
 	'label' => 'Sidebar Callout Link (CTA) Color',
 	'description' => 'Specify link color of the Sidebar Callout widget?',
