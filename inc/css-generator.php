@@ -148,6 +148,7 @@ function hovercraft_generate_css(){
 	$sidebar_callout_text_color = get_theme_mod( 'hovercraft_sidebar_callout_text_color', '#ffffff' );
 	$sidebar_callout_link_color = get_theme_mod( 'hovercraft_sidebar_callout_link_color', '#ffffff' );
 	$sidebar_callout_cta_background_color = get_theme_mod( 'hovercraft_sidebar_callout_cta_background_color', '#263238' );
+	$sidebar_callout_cta_border_color = get_theme_mod( 'hovercraft_sidebar_callout_cta_border_color', '#263238' );
 	$sidebar_callout_hover_background_color = get_theme_mod( 'hovercraft_sidebar_callout_hover_background_color', '#ffffff' );
 	$sidebar_callout_hover_link_color = get_theme_mod( 'hovercraft_sidebar_callout_hover_link_color', '#263238' );
 	$sidebar_widget_background_color = get_theme_mod( 'hovercraft_sidebar_widget_background_color', '#ffffff' );
@@ -2851,7 +2852,7 @@ p.biography-description {
 	display: block;
 	background: transparent;
 	margin-bottom: 0;
-	box-shadow: inset 0px 0px 0px 1px <?php echo $sidebar_callout_link_color; ?> !important;;
+	box-shadow: inset 0px 0px 0px 1px <?php echo $sidebar_callout_cta_border_color; ?> !important;
 	background: <?php echo $sidebar_callout_cta_background_color; ?> !important;
 	}
 }
@@ -2866,7 +2867,7 @@ p.biography-description {
 	text-decoration: none;
 	display: block;
 	background: transparent;
-	box-shadow: inset 0px 0px 0px 1px <?php echo $sidebar_callout_link_color; ?>;
+	box-shadow: inset 0px 0px 0px 1px <?php echo $sidebar_callout_cta_border_color; ?> !important;
 	background: <?php echo $sidebar_callout_cta_background_color; ?> !important;
 	}
 }
@@ -2874,7 +2875,7 @@ p.biography-description {
 .cta-sidebar-callout ul li:hover a {
 	color: <?php echo $sidebar_callout_hover_link_color; ?> !important;
 	background: <?php echo $sidebar_callout_hover_background_color; ?> !important;
-	box-shadow: none !important;;
+	box-shadow: none !important;
 }
 
 
