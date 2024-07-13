@@ -1107,6 +1107,71 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// site name font size (desktop) setting
+$wp_customize->add_setting( 'hovercraft_site_name_desktop_font_size', array(
+    'default'    => '36',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
+	) 
+);
+
+// site name font size (desktop) control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_site_name_desktop_font_size',
+        array(
+            'label'     => __( 'Site Name Font Size (Desktop)', 'hovercraft' ),
+			'description' => __( 'Specify font size to use, in pixels, for the site name on desktop devices?', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_site_name_desktop_font_size',
+            'type' => 'text'
+        )
+) );
+	
+// site name font size (mobile) setting
+$wp_customize->add_setting( 'hovercraft_site_name_mobile_font_size', array(
+    'default'    => '24',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
+	) 
+);
+
+// site name font size (mobile) control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_site_name_mobile_font_size',
+        array(
+            'label'     => __( 'Site Name Font Size (Mobile)', 'hovercraft' ),
+			'description' => __( 'Specify font size to use, in pixels, for the site name on mobile devices?', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_site_name_mobile_font_size',
+            'type' => 'text'
+        )
+) );
+
+// site name font weight setting
+$wp_customize->add_setting( 'hovercraft_site_name_font_weight', array(
+    'default'    => '700',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
+	) 
+);
+
+// site name font weight control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_site_name_font_weight',
+        array(
+            'label'     => __('Site Name Font Weight', 'hovercraft'),
+			'description' => __( 'Specify font weight to use for the site name? Note: Ensure your chosen font family supports the font weight that you choose.', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_site_name_font_weight',
+            'type'      => 'select',
+			'choices' => array(
+        		'700' => '700',
+        		'600' => '600',
+				'400' => '400'
+    			)
+        )
+) );
+
 // offcanvas menu font size setting
 $wp_customize->add_setting( 'hovercraft_offcanvas_font_size', array(
     'default'    => '18',
@@ -1235,71 +1300,6 @@ $wp_customize->add_control( new WP_Customize_Control(
             'section'   => 'hovercraft_fonts',
             'settings'  => 'hovercraft_topbar_mobile_font_size',
             'type' => 'text'
-        )
-) );
-
-// site name font size (desktop) setting
-$wp_customize->add_setting( 'hovercraft_site_name_desktop_font_size', array(
-    'default'    => '36',
-	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
-);
-
-// site name font size (desktop) control
-$wp_customize->add_control( new WP_Customize_Control(
-        $wp_customize,
-        'hovercraft_site_name_desktop_font_size',
-        array(
-            'label'     => __( 'Site Name Font Size (Desktop)', 'hovercraft' ),
-			'description' => __( 'Specify font size to use, in pixels, for the site name on desktop devices?', 'hovercraft' ),
-            'section'   => 'hovercraft_fonts',
-            'settings'  => 'hovercraft_site_name_desktop_font_size',
-            'type' => 'text'
-        )
-) );
-	
-// site name font size (mobile) setting
-$wp_customize->add_setting( 'hovercraft_site_name_mobile_font_size', array(
-    'default'    => '24',
-	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
-);
-
-// site name font size (mobile) control
-$wp_customize->add_control( new WP_Customize_Control(
-        $wp_customize,
-        'hovercraft_site_name_mobile_font_size',
-        array(
-            'label'     => __( 'Site Name Font Size (Mobile)', 'hovercraft' ),
-			'description' => __( 'Specify font size to use, in pixels, for the site name on mobile devices?', 'hovercraft' ),
-            'section'   => 'hovercraft_fonts',
-            'settings'  => 'hovercraft_site_name_mobile_font_size',
-            'type' => 'text'
-        )
-) );
-
-// site name font weight setting
-$wp_customize->add_setting( 'hovercraft_site_name_font_weight', array(
-    'default'    => '700',
-	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
-);
-
-// site name font weight control
-$wp_customize->add_control( new WP_Customize_Control(
-        $wp_customize,
-        'hovercraft_site_name_font_weight',
-        array(
-            'label'     => __('Site Name Font Weight', 'hovercraft'),
-			'description' => __( 'Specify font weight to use for the site name? Note: Ensure your chosen font family supports the font weight that you choose.', 'hovercraft' ),
-            'section'   => 'hovercraft_fonts',
-            'settings'  => 'hovercraft_site_name_font_weight',
-            'type'      => 'select',
-			'choices' => array(
-        		'700' => '700',
-        		'600' => '600',
-				'400' => '400'
-    			)
         )
 ) );
 
