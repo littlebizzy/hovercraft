@@ -3007,6 +3007,31 @@ $wp_customize->add_control(
     )
 );
 
+// sidebar appears setting
+$wp_customize->add_setting( 'hovercraft_sidebar_appears', array(
+    'default'    => 'everywhere',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// sidebar appears control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_sidebar_appears',
+        array(
+            'label'     => __( 'Sidebar Appears', 'hovercraft' ),
+			'description' => __( 'On which pages should the breadcrumbs element be displayed (top of primary)?', 'hovercraft' ),
+            'section'   => 'hovercraft_sidebar',
+            'settings'  => 'hovercraft_sidebar_appears',
+            'type'      => 'select',
+			'choices' => array(
+        		'none' => 'None (Disabled)',
+				'everywhere' => 'Everywhere Possible',
+				'posts_only' => 'Posts Only'
+    			)
+        )
+) );
+
 // sidebar padding setting
 $wp_customize->add_setting( 'hovercraft_sidebar_padding', array(
     'default' => 0,
