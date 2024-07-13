@@ -2531,6 +2531,21 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	'settings' => 'hovercraft_sidebar_callout_cta_background_color'
 	)
 ) );
+
+// sidebar callout CTA border color setting
+$wp_customize->add_setting( 'hovercraft_sidebar_callout_cta_border_color', array(
+	'default' => '#263238',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+
+// sidebar callout CTA border color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_sidebar_callout_cta_border_color', array(
+	'label' => 'Sidebar Callout CTA Border Color',
+	'description' => 'Specify border color of the Sidebar Callout CTA?',
+	'section' => 'colors',
+	'settings' => 'hovercraft_sidebar_callout_cta_border_color'
+	)
+) );
 	
 // sidebar callout CTA link color setting
 $wp_customize->add_setting( 'hovercraft_sidebar_callout_link_color', array(
