@@ -2332,6 +2332,7 @@ img.featured-image {
 @media screen and (max-width: 1200px) {
 .featured-image-wrapper {
 	position: relative;
+	margin-bottom: 20px;
 	width: 100%;
 	height: auto;
 	}
@@ -2340,6 +2341,7 @@ img.featured-image {
 @media screen and (min-width: 1200px) {
 .featured-image-wrapper {
 	position: relative;
+	margin-bottom: 30px;
 	width: 768px;
 	height: auto;
 	}
@@ -2505,7 +2507,11 @@ img.featured-image-archive {
 
 @media screen and (max-width: 1200px) {
 #content-padded {
-	padding: 20px;
+	<?php if ( $sitewide_layout == 'floating_islands' ) { 
+			echo "padding: 0px 20px 20px 20px;\n"; 
+		} else { 
+			echo "padding: 0px 20px 20px 20px;\n"; 
+		}  ?>
 	width: 100%;
 	max-width: 100%;
 	display: block;
