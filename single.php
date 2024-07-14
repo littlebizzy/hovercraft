@@ -12,10 +12,13 @@
 		<div id="content-wrapper">
 			
 			<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-
-				<?php get_template_part( 'template-parts/content/featured-image' ); ?>
 			
-				<div id="content-padded">
+				<?php $hovercraft_featured_image_position = get_theme_mod( 'hovercraft_featured_image_position', 'above_title' );
+					if ( $hovercraft_featured_image_position == 'above_title' ) { ?>
+			
+					<?php get_template_part( 'template-parts/content/featured-image' ); ?>
+			
+					<div id="content-padded">
 
 					<?php get_template_part( 'template-parts/content/breadcrumbs' ); ?>
 				
@@ -26,7 +29,25 @@
 					<?php get_template_part( 'template-parts/content/social-sharing' ); ?>
 
 					<?php get_template_part( 'template-parts/content/byline-after' ); ?>
-		
+			
+				<?php } else { ?>	
+			
+					<div id="content-padded">
+
+					<?php get_template_part( 'template-parts/content/breadcrumbs' ); ?>
+				
+					<?php get_template_part( 'template-parts/content/title' ); ?>	
+
+					<?php get_template_part( 'template-parts/content/byline' ); ?>
+
+					<?php get_template_part( 'template-parts/content/social-sharing' ); ?>
+
+					<?php get_template_part( 'template-parts/content/byline-after' ); ?>
+						
+					<?php get_template_part( 'template-parts/content/featured-image' ); ?>
+						
+				<?php } ?>
+
 					<?php the_content(); ?>
 		
 					<?php endwhile; endif; ?><!-- the loop -->
