@@ -208,7 +208,7 @@ html, body {
 	line-height: 1.5;
 	color: <?php echo $default_text_color; ?>;
 	scroll-behavior: smooth;
-	overflow: auto;
+	overflow: visible;
 	}
 }
 
@@ -220,7 +220,7 @@ html, body {
 	line-height: 1.5;
 	color: <?php echo $default_text_color; ?>;
 	scroll-behavior: smooth;
-	overflow: auto;
+	overflow: visible;
 	}
 }
 
