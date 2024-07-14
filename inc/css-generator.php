@@ -67,7 +67,8 @@ function hovercraft_generate_css(){
 	$site_name_display_mobile = get_theme_mod( 'hovercraft_site_name_display_mobile', 'block' );
 	$after_byline_padding = get_theme_mod( 'hovercraft_after_byline_padding', '0' );
 	$after_byline_background_color = get_theme_mod( 'hovercraft_after_byline_background_color', '#fff8e1' );
-
+	$featured_image_position = get_theme_mod( 'hovercraft_featured_image_position', 'above_title' );
+	
 	/* titles */
 	$h1_font_family = get_theme_mod( 'hovercraft_h1_font', 'noto_sans' );
 	$h1_mobile_font_size = get_theme_mod( 'hovercraft_h1_mobile_font_size', '36' );
@@ -2344,6 +2345,11 @@ img.featured-image {
 	margin-bottom: 30px;
 	width: 768px;
 	height: auto;
+	<?php if ( $featured_image_position == 'below_title' ) { 
+			echo "margin-left: 40px;\n"; 
+		} else { 
+			echo "margin-left: 0;\n"; 
+		}  ?>
 	}
 }
 
