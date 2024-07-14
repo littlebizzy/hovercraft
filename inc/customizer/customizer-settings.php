@@ -653,6 +653,30 @@ $wp_customize->add_section( 'hovercraft_blog', array(
     'priority'   => 113,
 ) );
 
+// featured image position setting
+$wp_customize->add_setting( 'hovercraft_featured_image_position', array(
+    'default'    => 'above_title',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// featured image position control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_featured_image_position',
+        array(
+            'label'     => __( 'Featured Image Position', 'hovercraft' ),
+			'description' => __( 'Where should the featured images appear on blog posts?', 'hovercraft' ),
+            'section'   => 'hovercraft_blog',
+            'settings'  => 'hovercraft_featured_image_position',
+            'type'      => 'select',
+			'choices' => array(
+        		'above_title' => 'Above Title',
+				'below_title' => 'Below Title'
+    			)
+        )
+) );
+
 // social sharing setting
 $wp_customize->add_setting( 'hovercraft_social_sharing', array(
     'default'    => 'top_of_post',
