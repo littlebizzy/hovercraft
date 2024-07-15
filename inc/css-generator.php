@@ -2346,7 +2346,7 @@ img.featured-image {
 	width: 768px;
 	height: auto;
 	<?php if ( $featured_image_position == 'below_title' ) { 
-			echo "margin-left: 40px;\n"; 
+			echo "margin-left: -40px;\n"; 
 		} else { 
 			echo "margin-left: 0;\n"; 
 		}  ?>
