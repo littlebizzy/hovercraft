@@ -2555,6 +2555,21 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	'settings' => 'hovercraft_sidebar_callout_background_color'
 	)
 ) );
+
+// sidebar callout border color setting
+$wp_customize->add_setting( 'hovercraft_sidebar_callout_border_color', array(
+	'default' => '#283593',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+
+// sidebar callout border color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_sidebar_callout_border_color', array(
+	'label' => 'Sidebar Callout Border Color',
+	'description' => 'Specify border color of sidebar callout widget',
+	'section' => 'colors',
+	'settings' => 'hovercraft_sidebar_callout_border_color'
+	)
+) );
 	
 // sidebar callout text color setting
 $wp_customize->add_setting( 'hovercraft_sidebar_callout_text_color', array(
