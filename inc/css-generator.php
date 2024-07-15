@@ -2325,11 +2325,23 @@ body.home #content-wide {
 	margin-bottom: 30px;
 	width: 768px;
 	height: auto;
-	<?php if ( $featured_image_position == 'below_title' ) { 
+	<?php if ( $sitewide_layout == 'floating_islands' ) { 
+		
+		if ( $featured_image_position == 'below_title' ) { 
 			echo "margin-left: -40px;\n"; 
-		} else { 
+		} elseif ( $featured_image_position == 'above_title' ) { 
 			echo "margin-left: 0;\n"; 
-		}  ?>
+		} 
+		
+	} elseif ( $sitewide_layout == 'classic_clean' ) { 
+
+		if ( $featured_image_position == 'below_title' ) { 
+			echo "margin-left: 0;\n"; 
+		} elseif ( $featured_image_position == 'above_title' ) { 
+			echo "margin-left: 0;\n"; 
+		} 
+
+	} ?>
 	}
 }
 
