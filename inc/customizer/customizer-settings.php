@@ -2540,6 +2540,36 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	'settings' => 'hovercraft_after_byline_background_color'
 	)
 ) );
+
+// after byline text color setting
+$wp_customize->add_setting( 'hovercraft_after_byline_text_color', array(
+	'default' => '#263238',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+
+// after byline text color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_after_byline_text_color', array(
+	'label' => 'After Byline Background Color',
+	'description' => 'Specify the text color in the After Byline widget?',
+	'section' => 'colors',
+	'settings' => 'hovercraft_after_byline_text_color'
+	)
+) );
+
+// after byline link color setting
+$wp_customize->add_setting( 'hovercraft_after_byline_link_color', array(
+	'default' => '#5C6BC0',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+
+// after byline link color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_after_byline_link_color', array(
+	'label' => 'After Byline Background Color',
+	'description' => 'Specify the link color in the After Byline widget?',
+	'section' => 'colors',
+	'settings' => 'hovercraft_after_byline_link_color'
+	)
+) );
 	
 // sidebar callout background color setting
 $wp_customize->add_setting( 'hovercraft_sidebar_callout_background_color', array(
