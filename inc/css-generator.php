@@ -127,6 +127,9 @@ function hovercraft_generate_css(){
 	$hero_gradient_stop_color = get_theme_mod( 'hovercraft_hero_gradient_stop_color', '#ffffff' );
 	$offcanvas_background_color = get_theme_mod( 'hovercraft_offcanvas_background_color', '#ffffff' );
 	$offcanvas_toggle_background_color = get_theme_mod( 'hovercraft_offcanvas_toggle_background_color', '#eceff1' );
+	$breadcrumbs_text_color = get_theme_mod( 'hovercraft_breadcrumbs_text_color', '#607D8B' );
+	$breadcrumbs_link_color = get_theme_mod( 'hovercraft_breadcrumbs_link_color', '#607D8B' );
+	
 	
     $header_half_hero_background_color = get_theme_mod( 'hovercraft_header_half_hero_background_color', '#ffffff' ); // remove
     $header_mini_hero_background_color = get_theme_mod( 'hovercraft_header_mini_hero_background_color', '#ffffff' ); // remove
@@ -155,6 +158,7 @@ function hovercraft_generate_css(){
 	$sidebar_widget_background_color = get_theme_mod( 'hovercraft_sidebar_widget_background_color', '#ffffff' );
 	$sidebar_widget_text_color = get_theme_mod( 'hovercraft_sidebar_widget_text_color', '#263238' );
 	$sidebar_widget_link_color = get_theme_mod( 'hovercraft_sidebar_widget_link_color', '#5C6BC0' );
+	$sidebar_widget_border_color = get_theme_mod( 'hovercraft_sidebar_widget_border_color', '#ffffff' );
 	$tile_background_color = get_theme_mod( 'hovercraft_tile_background_color', '#eceff1' );
 	$tile_border_color = get_theme_mod( 'hovercraft_tile_border_color', '#eceff1' );
 	$column_background_color = get_theme_mod( 'hovercraft_column_background_color', '#eceff1' );
@@ -2417,7 +2421,7 @@ img.featured-image-archive {
 	margin-bottom: 20px;
 	font-size: 14px;
 	line-height: 18px !important;
-	color: #607D8B;
+	color: <?php echo $breadcrumbs_text_color; ?>;
 	white-space: normal;
 	}
 }
@@ -2427,7 +2431,7 @@ img.featured-image-archive {
 	margin-bottom: 30px;
 	font-size: 14px;
 	line-height: 20px !important;
-	color: #607D8B;
+	color: <?php echo $breadcrumbs_text_color; ?>;
 	white-space: normal;
 	}
 }
@@ -2450,7 +2454,7 @@ img.featured-image-archive {
 }
 
 .breadcrumbs a {
-	color: #607D8B;
+	color: color: <?php echo $breadcrumbs_link_color; ?>;
 }
 
 
@@ -2746,6 +2750,7 @@ p.biography-description {
 	padding: 40px 40px;
 	background: <?php echo $sidebar_widget_background_color; ?>;
 	color: <?php echo $sidebar_widget_text_color; ?>;
+	box-shadow: inset 0px 0px 0px 1px <?php echo $sidebar_widget_border_color; ?> !important;
 }
 
 #sidebar .widget-wrapper a {
