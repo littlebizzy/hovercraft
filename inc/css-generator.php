@@ -2454,7 +2454,7 @@ img.featured-image-archive {
 }
 
 .breadcrumbs a {
-	color: color: <?php echo $breadcrumbs_link_color; ?>;
+	color: <?php echo $breadcrumbs_link_color; ?>;
 }
 
 
@@ -2822,6 +2822,7 @@ p.biography-description {
 #sidebar .widget-callout {
    	background: <?php echo $sidebar_callout_background_color; ?> !important;
 	color: <?php echo $sidebar_callout_text_color; ?> !important;
+	box-shadow: inset 0px 0px 0px 1px <?php echo $sidebar_callout_border_color; ?> !important;
 }
 
 #sidebar .widget-callout .widget-title {
