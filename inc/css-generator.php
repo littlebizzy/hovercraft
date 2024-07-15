@@ -67,6 +67,8 @@ function hovercraft_generate_css(){
 	$site_name_display_mobile = get_theme_mod( 'hovercraft_site_name_display_mobile', 'block' );
 	$after_byline_padding = get_theme_mod( 'hovercraft_after_byline_padding', '0' );
 	$after_byline_background_color = get_theme_mod( 'hovercraft_after_byline_background_color', '#fff8e1' );
+	$after_byline_text_color = get_theme_mod( 'hovercraft_after_byline_text_color', '#263238' );
+	$after_byline_link_color = get_theme_mod( 'hovercraft_after_byline_link_color', '#5C6BC0' );
 	$featured_image_position = get_theme_mod( 'hovercraft_featured_image_position', 'above_title' );
 	
 	/* titles */
@@ -463,6 +465,7 @@ hr {
 	font-size: <?php echo $after_byline_mobile_font_size; ?>px;
 	padding: <?php echo $after_byline_padding; ?>px;
 	margin-bottom: 20px;
+	color: <?php echo $after_byline_text_color; ?>;
 	}
 }
 
@@ -472,11 +475,16 @@ hr {
 	font-size: <?php echo $after_byline_desktop_font_size; ?>px;
 	padding: <?php echo $after_byline_padding; ?>px;
 	margin-bottom: 30px;
+	color: <?php echo $after_byline_text_color; ?>;
 	}
 }
 
 .after-byline p:last-child {
 	margin-bottom: 0;
+}
+
+.after-byline a {
+	color: <?php echo $after_byline_link_color; ?>;
 }
 
 
