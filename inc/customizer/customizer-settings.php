@@ -2166,6 +2166,36 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	)
 ) );
 
+// breadcrumbs text color setting
+$wp_customize->add_setting( 'hovercraft_breadcrumbs_text_color', array(
+	'default' => '#607D8B',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+ 
+// breadcrumbs text color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_breadcrumbs_text_color', array(
+	'label' => 'Breadcrumbs Text Color',
+	'description' => 'Breadcrumbs text color',
+	'section' => 'colors',
+	'settings' => 'hovercraft_breadcrumbs_text_color'
+	)
+) );
+
+// breadcrumbs link color setting
+$wp_customize->add_setting( 'hovercraft_breadcrumbs_link_color', array(
+	'default' => '#607D8B',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+ 
+// breadcrumbs link color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_breadcrumbs_link_color', array(
+	'label' => 'Breadcrumbs Link Color',
+	'description' => 'Breadcrumbs link color',
+	'section' => 'colors',
+	'settings' => 'hovercraft_breadcrumbs_text_color'
+	)
+) );
+
 // woocommerce price text color setting
 $wp_customize->add_setting( 'hovercraft_woocommerce_price_text_color', array(
 	'default' => '#9E9D24',
@@ -2628,6 +2658,21 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	'description' => 'Specify background color of default sidebar widgets?',
 	'section' => 'colors',
 	'settings' => 'hovercraft_sidebar_widget_background_color'
+	)
+) );
+
+// sidebar widgets border color setting
+$wp_customize->add_setting( 'hovercraft_sidebar_widget_border_color', array(
+	'default' => '#ffffff',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+
+// sidebar widgets border color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_sidebar_widget_border_color', array(
+	'label' => 'Sidebar Widgets Border Color',
+	'description' => 'Specify border color of default sidebar widgets?',
+	'section' => 'colors',
+	'settings' => 'hovercraft_sidebar_widget_border_color'
 	)
 ) );
 	
