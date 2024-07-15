@@ -2192,7 +2192,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	'label' => 'Breadcrumbs Link Color',
 	'description' => 'Breadcrumbs link color',
 	'section' => 'colors',
-	'settings' => 'hovercraft_breadcrumbs_text_color'
+	'settings' => 'hovercraft_breadcrumbs_link_color'
 	)
 ) );
 
