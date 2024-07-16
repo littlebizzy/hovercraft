@@ -615,3 +615,18 @@ function hovercraft_after_byline() {
 
 }
 add_action( 'widgets_init', 'hovercraft_after_byline' );
+
+// single post after loop
+function hovercraft_after_loop() {
+
+	register_sidebar( array(
+		'name'          => 'After Loop',
+		'id'            => 'hovercraft_after_loop',
+		'before_widget' => '<div class="widget-after-loop widget-wrapper">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+}
+add_action( 'widgets_init', 'hovercraft_after_loop' );
