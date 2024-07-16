@@ -2166,6 +2166,36 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	)
 ) );
 
+// hero snippet text color setting
+$wp_customize->add_setting( 'hovercraft_hero_snippet_text_color', array(
+	'default' => '#ffffff',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+ 
+// hero snippet text color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_hero_snippet_text_color', array(
+	'label' => 'Hero Snippet Text Color',
+	'description' => 'Hero Snippet Text Color',
+	'section' => 'colors',
+	'settings' => 'hovercraft_hero_snippet_text_color'
+	)
+) );
+
+// hero snippet link color setting
+$wp_customize->add_setting( 'hovercraft_hero_snippet_link_color', array(
+	'default' => '#ffffff',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+ 
+// hero snippet link color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_hero_snippet_link_color', array(
+	'label' => 'Hero Snippet Link Color',
+	'description' => 'Hero Snippet Link Color',
+	'section' => 'colors',
+	'settings' => 'hovercraft_hero_snippet_link_color'
+	)
+) );
+	
 // breadcrumbs text color setting
 $wp_customize->add_setting( 'hovercraft_breadcrumbs_text_color', array(
 	'default' => '#607D8B',
