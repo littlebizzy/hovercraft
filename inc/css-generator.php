@@ -3745,7 +3745,7 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 }
 
 .search-input {
-	background: #EEEEEE;
+	background: #ffffff;
 	color: #212121;
 	vertical-align: middle;
 	font-size: 16px;
@@ -3753,7 +3753,7 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 	padding: 10px 20px;
 	border: 0;
 	outline: none;
-	box-shadow: inset 0px 0px 0px 1px #EEEEEE;
+	box-shadow: inset 0px 0px 0px 1px #ffffff;
 }
 
 .search-submit {
