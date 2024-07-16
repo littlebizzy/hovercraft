@@ -131,7 +131,8 @@ function hovercraft_generate_css(){
 	$offcanvas_toggle_background_color = get_theme_mod( 'hovercraft_offcanvas_toggle_background_color', '#eceff1' );
 	$breadcrumbs_text_color = get_theme_mod( 'hovercraft_breadcrumbs_text_color', '#607D8B' );
 	$breadcrumbs_link_color = get_theme_mod( 'hovercraft_breadcrumbs_link_color', '#607D8B' );
-	
+	$hero_snippet_text_color = get_theme_mod( 'hovercraft_hero_snippet_text_color', '#ffffff' );
+	$hero_snippet_link_color = get_theme_mod( 'hovercraft_hero_snippet_link_color', '#ffffff' );
 	
     $header_half_hero_background_color = get_theme_mod( 'hovercraft_header_half_hero_background_color', '#ffffff' ); // remove
     $header_mini_hero_background_color = get_theme_mod( 'hovercraft_header_mini_hero_background_color', '#ffffff' ); // remove
@@ -1004,17 +1005,20 @@ a:hover {
 @media screen and (max-width: 1200px) {
 .hero-snippet {
 	font-size: 16px;
-	color: #ffffff;
+	color: <?php echo $hero_snippet_text_color; ?>;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 .hero-snippet {
 	font-size: 18px;
-	color: #ffffff;
+	color: <?php echo $hero_snippet_text_color; ?>;
 	}
 }
 
+.hero-snippet a {
+	color: <?php echo $hero_snippet_link_color; ?>;
+}
 
 /* headings (titles) */
 
