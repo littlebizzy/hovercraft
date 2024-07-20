@@ -33,7 +33,7 @@
 
 					<?php get_template_part( 'template-parts/content/byline' ); ?>
 
-					<?php $hovercraft_social_sharing = get_theme_mod( 'hovercraft_social_sharing', 'top_of_post' );
+					<?php $hovercraft_social_sharing = get_theme_mod( 'hovercraft_social_sharing', 'bottom_of_post' );
 					if ( $hovercraft_social_sharing == 'top_of_post' || $hovercraft_social_sharing == 'top_and_bottom_of_post' ) {
 						get_template_part( 'template-parts/content/social-sharing' ); 
 					} ?>
@@ -50,7 +50,7 @@
 
 					<?php get_template_part( 'template-parts/content/byline' ); ?>
 
-					<?php $hovercraft_social_sharing = get_theme_mod( 'hovercraft_social_sharing', 'top_of_post' );
+					<?php $hovercraft_social_sharing = get_theme_mod( 'hovercraft_social_sharing', 'bottom_of_post' );
 					if ( $hovercraft_social_sharing == 'top_of_post' || $hovercraft_social_sharing == 'top_and_bottom_of_post' ) {
 						get_template_part( 'template-parts/content/social-sharing' ); 
 					} ?>
@@ -67,7 +67,7 @@
 
 					<?php get_template_part( 'template-parts/content/loop-after' ); ?>
 
-					<?php $hovercraft_social_sharing = get_theme_mod( 'hovercraft_social_sharing', 'top_of_post' );
+					<?php $hovercraft_social_sharing = get_theme_mod( 'hovercraft_social_sharing', 'bottom_of_post' );
 					if ( $hovercraft_social_sharing == 'bottom_of_post' || $hovercraft_social_sharing == 'top_and_bottom_of_post' ) {
 						get_template_part( 'template-parts/content/social-sharing' ); 
 					} ?>
