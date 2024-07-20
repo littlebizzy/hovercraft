@@ -437,23 +437,28 @@ hr {
 /* social sharing */
 
 @media screen and (max-width: 1200px) {
-#social-sharing {
+.social-sharing {
 	margin-bottom: 20px;
 	line-height: 1;
 	}
 }
 
 @media screen and (min-width: 1200px) {
-#social-sharing {
+.social-sharing {
 	margin-bottom: 30px;
 	line-height: 1;
 	}
 }
 
-#social-sharing i {
+.social-sharing i {
 	font-size: <?php echo $social_sharing_font_size; ?>px;
 	line-height: 1;
 	margin-right: 20px !important;
+}
+
+.social-sharing-label {
+	margin-right: 10px;
+	color: <?php echo $breadcrumbs_text_color; ?>;
 }
 
 
