@@ -655,7 +655,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 
 // social sharing setting
 $wp_customize->add_setting( 'hovercraft_social_sharing', array(
-    'default'    => 'top_of_post',
+    'default'    => 'bottom_of_post',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
 	) 
 );
