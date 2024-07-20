@@ -1,11 +1,8 @@
 <?php 
 
-$social_sharing = get_theme_mod( 'hovercraft_social_sharing', 'top_of_post' );
 $urlnow = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' ? 'https' : 'http') . '://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 
 // https://stackoverflow.com/questions/6768793/get-the-full-url-in-php
-
-if ( $social_sharing == 'top_of_post' ) {
 
 // needs to be cleaner
 if ( post_type_exists( 'product' ) && is_product() ) {
@@ -25,5 +22,3 @@ if ( post_type_exists( 'product' ) && is_product() ) {
 <div class="clear"></div>
 </div><!-- social-sharing -->
 <?php } 
-
-} ?>
