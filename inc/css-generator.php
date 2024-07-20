@@ -2390,7 +2390,7 @@ body.home #content-wide {
 /* featured images */
 
 .featured-image-wrapper img {
-	margin-bottom: 0;
+	margin-bottom: 0 !important;
 }
 
 @media screen and (max-width: 1200px) {
