@@ -3679,15 +3679,17 @@ button[type="submit"] {
 	
 input, select {
 	width: 100%;
+	vertical-align: middle;
 	font-weight: 400;
-	line-height: 1;
-	display: inline-block;
+	line-height: 2;
 	padding: 10px 20px !important;
-	background: #ffffff;
-	border-radius: 0px;
 	border: 0;
 	outline: none;
-	box-shadow: inset 0px 0px 0px 1px #BDBDBD;
+
+	font-size: 16px;
+	background: #ffffff;
+	display: inline-block;
+	box-shadow: inset 0px 0px 0px 1px <?php echo $breadcrumbs_text_color; ?>;
 }
 
 #topbar input, .hero-half input {
