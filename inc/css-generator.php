@@ -418,34 +418,52 @@ hr {
 
 /* related posts... we use #related for simple user-friendly anchor */
 
+@media screen and (max-width: 1200px) {
 #related {
-	margin-top: 30px !important;
+	margin-top: 20px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+#related {
+	margin-top: 30px;
+	}
 }
 
 
 /* tags */
 
+@media screen and (max-width: 1200px) {
+#tags {
+	clear: right; /* needed for WooCommerce now seems */
+	margin-top: 20px;
+	font-size: 14px;
+	color: <?php echo $breadcrumbs_text_color; ?>;
+	}
+}
+
+@media screen and (min-width: 1200px) {
 #tags {
 	clear: right; /* needed for WooCommerce now seems */
 	margin-top: 30px;
-	display: block;
 	font-size: 14px;
-	color: #607D8B;
+	color: <?php echo $breadcrumbs_text_color; ?>;
+	}
 }
-
+	
 
 /* social sharing */
 
 @media screen and (max-width: 1200px) {
 .social-sharing {
-	margin-bottom: 20px;
+	margin: 20px 0px;
 	line-height: 1;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 .social-sharing {
-	margin-bottom: 30px;
+	margin: 30px 0px;
 	line-height: 1;
 	}
 }
@@ -454,6 +472,7 @@ hr {
 	font-size: <?php echo $social_sharing_font_size; ?>px;
 	line-height: 1;
 	margin-right: 20px !important;
+	vertical-align: middle;
 }
 
 .social-sharing-label {
