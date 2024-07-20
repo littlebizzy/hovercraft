@@ -116,6 +116,7 @@ function hovercraft_generate_css(){
 	$default_link_color = get_theme_mod( 'hovercraft_default_link_color', '#5C6BC0' );
 	$default_hover_color = get_theme_mod( 'hovercraft_default_hover_color', '#283593' );
 	$woocommerce_price_text_color = get_theme_mod( 'hovercraft_woocommerce_price_text_color', '#9E9D24' );
+	$search_bar_background_color = get_theme_mod( 'hovercraft_search_bar_background_color', '#ffffff' );
 	$topbar_background_color = get_theme_mod( 'hovercraft_topbar_background_color', '#263238' );
 	$topbar_text_color = get_theme_mod( 'hovercraft_topbar_text_color', '#ffffff' );
 	$topbar_link_color = get_theme_mod( 'hovercraft_topbar_link_color', '#ffffff' );
@@ -3745,7 +3746,7 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 }
 
 .search-input {
-	background: #ffffff;
+	background: <?php echo $search_bar_background_color; ?>;
 	color: #212121;
 	vertical-align: middle;
 	font-size: 16px;
