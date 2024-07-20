@@ -2389,6 +2389,10 @@ body.home #content-wide {
 	
 /* featured images */
 
+.featured-image-wrapper img {
+	margin-bottom: 0;
+}
+
 @media screen and (max-width: 1200px) {
 img.featured-image {
 	width: 100%;
