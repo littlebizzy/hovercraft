@@ -3176,26 +3176,6 @@ $wp_customize->add_section( 'hovercraft_sidebar', array(
     'priority'   => 120,
 ) );
 
-// sidebar status setting
-$wp_customize->add_setting( 'hovercraft_sidebar_status', array(
-    'default' => 1,
-	'sanitize_callback' => 'hovercraft_sanitize_checkbox',
-) );
-	
-// sidebar status control
-$wp_customize->add_control(
-    new WP_Customize_Control(
-        $wp_customize,
-        'hovercraft_sidebar_status',
-        array(
-            'label'     => __('Enable sidebar', 'hovercraft'),
-            'section'   => 'hovercraft_sidebar',
-            'settings'  => 'hovercraft_sidebar_status',
-            'type'      => 'checkbox',
-        )
-    )
-);
-
 // sidebar appears setting
 $wp_customize->add_setting( 'hovercraft_sidebar_appears', array(
     'default'    => 'everywhere',
