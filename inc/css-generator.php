@@ -456,14 +456,14 @@ hr {
 
 @media screen and (max-width: 1200px) {
 .social-sharing {
-	margin: 20px 0px;
+	margin: 40px 0px;
 	line-height: 1;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 .social-sharing {
-	margin: 30px 0px;
+	margin: 60px 0px;
 	line-height: 1;
 	}
 }
