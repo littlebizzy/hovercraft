@@ -111,9 +111,10 @@
 	<div class="clear"></div>
   	</div><!-- primary -->
   
-    <?php if ( get_theme_mod( 'hovercraft_sidebar_status' ) == 1 ) { 
-		get_template_part( 'sidebar' ); 
-	  } ?>
+    <?php $hovercraft_sidebar_appears = get_theme_mod( 'hovercraft_sidebar_appears', 'everywhere' );
+		if ( $hovercraft_sidebar_appears == 'everywhere' ) { 
+			get_template_part( 'sidebar' ); 
+		} ?>
     
 <div class="clear"></div>
 </div><!-- inner -->
