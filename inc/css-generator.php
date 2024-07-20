@@ -458,6 +458,7 @@ hr {
 
 .social-sharing-label {
 	margin-right: 10px;
+	vertical-align: middle;
 	color: <?php echo $breadcrumbs_text_color; ?>;
 }
 
