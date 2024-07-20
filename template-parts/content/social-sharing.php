@@ -11,7 +11,8 @@ if ( $social_sharing == 'top_of_post' ) {
 if ( post_type_exists( 'product' ) && is_product() ) {
 	echo(null);
 } else { ?>
-<div id="social-sharing">
+<div class="social-sharing">
+	<span class="social-sharing-label"><?php _e( 'Share this: ', 'hovercraft' ); ?></span>
     <!-- <a rel="noopener noreferrer nofollow" target="_blank" href="https://twitter.com/intent/post?url=<?php echo $urlnow; ?>" title="Share via X"><i class="fa-brands fa-x-twitter"></i></a>
     <a rel="noopener noreferrer nofollow" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $urlnow; ?>" title="Share via Facebook"><i class="fa-brands fa-facebook"></i></a>
     <a rel="noopener noreferrer nofollow" target="_blank" href="https://pinterest.com/pin/create/link/?url=<?php echo $urlnow; ?>" title="Share via Pinterest"><i class="fa-brands fa-pinterest"></i></a> -->
