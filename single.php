@@ -6,8 +6,16 @@
 	<div id="main">
 	<div class="inner">
     	
-		<?php $hovercraft_sidebar_status_checked = get_theme_mod( 'hovercraft_sidebar_status' ) ? true : false;
-		if ( $hovercraft_sidebar_status_checked == true ) { ?><div id="primary"><?php } else { ?><div id="primary-center"><?php } ?>
+		<?php $hovercraft_sidebar_appears = get_theme_mod( 'hovercraft_sidebar_appears', 'everywhere' );
+		if ( $hovercraft_sidebar_appears == 'everywhere' || $hovercraft_sidebar_appears == 'posts_only' ) { ?><div id="primary"><?php } 
+		elseif ( $hovercraft_sidebar_appears == 'none' ) {
+		if ( $hovercraft_primary_width == 'narrow_centered' ) { ?>
+			<div id="primary-center">
+		<?php } 
+		elseif ( $hovercraft_primary_width == 'wide' ) { ?>
+			<div id="primary-wide">
+		<?php } 
+		} ?>
 		
 		<div id="content-wrapper">
 			
