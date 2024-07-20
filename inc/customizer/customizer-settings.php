@@ -3165,7 +3165,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_sidebar_appears',
         array(
             'label'     => __( 'Sidebar Appears', 'hovercraft' ),
-			'description' => __( 'On which pages should the Sidebar element be displayed (top of primary)?', 'hovercraft' ),
+			'description' => __( 'On which pages should the Sidebar element be displayed (Note: this forces the article width to be narrow when enabled)?', 'hovercraft' ),
             'section'   => 'hovercraft_sidebar',
             'settings'  => 'hovercraft_sidebar_appears',
             'type'      => 'select',
