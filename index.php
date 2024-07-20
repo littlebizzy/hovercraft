@@ -5,11 +5,11 @@
 <div class="inner">
 
 	<?php 
-	$hovercraft_sidebar_status_checked = get_theme_mod( 'hovercraft_sidebar_status' ) ? true : false;
+	$hovercraft_sidebar_appears = get_theme_mod( 'hovercraft_sidebar_appears', 'everywhere' );
 	$hovercraft_primary_width = get_theme_mod( 'hovercraft_primary_width', 'wide' );
-	
-	if ( $hovercraft_sidebar_status_checked == true ) { ?><div id="primary"><?php } 
-	elseif ( $hovercraft_sidebar_status_checked == false ) {
+
+	if ( $hovercraft_sidebar_appears == 'everywhere' ) { ?><div id="primary"><?php } 
+	elseif ( $hovercraft_sidebar_appears == 'posts_only' || $hovercraft_sidebar_appears == 'none' ) {
 		if ( $hovercraft_primary_width == 'narrow_centered' ) { ?>
 			<div id="primary-center">
 		<?php } 
