@@ -7,7 +7,7 @@ function wpdocs_show_tags() {
 
     if ( ! empty( $post_tags ) ) {
         foreach ( $post_tags as $tag ) {
-            $output .= '<a href="' . esc_attr( get_tag_link( $tag->term_id ) ) . '">' . __( $tag->name ) . '</a>' . $separator;
+            $output .= '<a rel="nofollow" href="' . esc_attr( get_tag_link( $tag->term_id ) ) . '">' . __( $tag->name ) . '</a>' . $separator;
         }
     }
 
@@ -15,3 +15,4 @@ function wpdocs_show_tags() {
 }
 
 // https://developer.wordpress.org/reference/functions/get_the_tags/
+// https://wordpress.stackexchange.com/questions/426110/how-to-add-nofollow-flag-to-all-tag-archive-hyperlinks
