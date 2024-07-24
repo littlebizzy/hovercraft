@@ -77,7 +77,7 @@
 					<?php get_template_part( 'template-parts/content/biography' ); ?>
 
 					<?php $hovercraft_post_tags = get_theme_mod( 'hovercraft_post_tags', 'native_posts_only' );
-					if ( $hovercraft_post_tags != 'none' ) { ?>
+					if ( $hovercraft_post_tags != 'none' && !is_product() ) { ?>
 						<?php get_template_part( 'template-parts/content/tags' ); ?>
 					<?php } ?>
 					
