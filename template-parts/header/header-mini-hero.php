@@ -53,15 +53,19 @@
 			<?php $portal_category = get_theme_mod( 'hovercraft_portal_category', 'none' );
 			if (is_category( $portal_category )) { ?>
 			<br>
-			<form role="search" method="get" class="searchform" action="<?php $category_link = get_category_link( $category_id );
-											  echo esc_url( $category_link ); ?>">
-			<div class="searchform-items">
-			<input type="search" class="searchinput" value="<?php echo esc_attr( get_search_query() ); ?>" name="s" placeholder="<?php 
-				$cattitle = single_cat_title('', false);
-				$lowercattitle = strtolower($cattitle);
-				echo "Search {$lowercattitle}..."; ?>" />
-			</div><!-- searchform-items -->
+	
+			<form role="search" method="get" class="searchform" action="<?php $category_link = get_category_link( $category_id ); echo esc_url( $category_link ); ?>">
+				<div class="input-container">
+					<input type="search" class="search-input" value="<?php echo esc_attr( get_search_query() ); ?>" name="s" placeholder="<?php 
+						$cattitle = single_cat_title('', false);
+						$lowercattitle = strtolower($cattitle);
+						echo "Search {$lowercattitle}..."; ?>" />
+					<button type="submit" class="search-submit" name="submit"><?php $hovercraft_layout_icons = get_theme_mod( 'hovercraft_layout_icons', 'material_icons_classic' );
+						if ( $hovercraft_layout_icons == 'material_icons_classic' ) { ?><i class="material-icons search">search</i><?php } 
+						elseif ( $hovercraft_layout_icons == 'font_awesome_version_6' ) { ?><i class="fas fa-search"></i><?php } ?></button>
+				</div><!-- input-container -->
 			</form><!-- searchform -->
+	
 			<?php } ?>
 		
 		<?php if (is_front_page()) : ?>
