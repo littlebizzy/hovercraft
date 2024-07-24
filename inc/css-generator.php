@@ -3789,6 +3789,11 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 	box-shadow: inset 0 -1px 1px -1px <?php echo $search_bar_border_color; ?>, inset 0 1px 1px -1px <?php echo $search_bar_border_color; ?>, inset 1px 0 1px -1px <?php echo $search_bar_border_color; ?>;
 }
 
+.hero-main-mini .search-input {
+	background: #ffffff !important;
+	box-shadow: inset 0px 0px 0px 1px #ffffff !important;
+}
+
 .search-submit {
 	background: #D500F9;
 	color: #ffffff;
