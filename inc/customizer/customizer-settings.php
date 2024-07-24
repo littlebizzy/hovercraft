@@ -2261,6 +2261,21 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	'settings' => 'hovercraft_search_bar_background_color'
 	)
 ) );
+
+// search bar border color setting
+$wp_customize->add_setting( 'hovercraft_search_bar_border_color', array(
+	'default' => '#ffffff',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+
+// search bar border color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_search_bar_border_color', array(
+	'label' => 'Search Bar Border Color',
+	'description' => 'Specify border color of the search bar element?',
+	'section' => 'colors',
+	'settings' => 'hovercraft_search_bar_border_color'
+	)
+) );
  
 // topbar background color setting
 $wp_customize->add_setting( 'hovercraft_topbar_background_color', array(
