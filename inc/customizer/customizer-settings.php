@@ -1669,7 +1669,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 
 // h1 divider display setting
 $wp_customize->add_setting( 'hovercraft_h1_divider_display', array(
-    'default'    => 'everywhere_possible',
+    'default'    => 'none',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
 	) 
 );
@@ -1781,7 +1781,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 
 // h2 divider display setting
 $wp_customize->add_setting( 'hovercraft_h2_divider_display', array(
-    'default'    => 'everywhere_possible',
+    'default'    => 'none',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
 	) 
 );
