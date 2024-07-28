@@ -1604,7 +1604,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 
 // h1 font size (desktop) setting
 $wp_customize->add_setting( 'hovercraft_h1_desktop_font_size', array(
-    'default'    => '48',
+    'default'    => '40',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
 	) 
 );
@@ -1624,7 +1624,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 
 // h1 font size (mobile) setting
 $wp_customize->add_setting( 'hovercraft_h1_mobile_font_size', array(
-    'default'    => '36',
+    'default'    => '30',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
 	) 
 );
@@ -1644,7 +1644,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 
 // h1 font weight setting
 $wp_customize->add_setting( 'hovercraft_h1_font_weight', array(
-    'default'    => '700',
+    'default'    => '600',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
 	) 
 );
@@ -2249,7 +2249,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 
 // search bar background color setting
 $wp_customize->add_setting( 'hovercraft_search_bar_background_color', array(
-	'default' => '#ffffff',
+	'default' => '#eceff1',
 	'sanitize_callback' => 'sanitize_hex_color',
 ) );
 
@@ -2264,7 +2264,7 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 
 // search bar border color setting
 $wp_customize->add_setting( 'hovercraft_search_bar_border_color', array(
-	'default' => '#ffffff',
+	'default' => '#eceff1',
 	'sanitize_callback' => 'sanitize_hex_color',
 ) );
 
