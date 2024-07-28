@@ -1667,6 +1667,32 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// h1 divider display setting
+$wp_customize->add_setting( 'hovercraft_h1_divider_display', array(
+    'default'    => 'everywhere_possible',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// h1 divider display control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_h1_divider_display',
+        array(
+            'label'     => __( 'H1 Divider Display', 'hovercraft' ),
+			'description' => __( 'Choose if you want to display a divider (line) below the H1 elements?', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_h1_divider_display',
+            'type'      => 'select',
+			'choices' => array(
+        		'none' => 'None (Hidden)',
+				'everywhere_possible' => 'Everywhere Possible',
+				'everywhere_except_homepage' => 'Everywhere Except Homepage',
+				'only_posts` => 'Only Posts'
+    			)
+        )
+) );
+
 // h2 font family setting
 $wp_customize->add_setting( 'hovercraft_h2_font', array(
     'default'    => 'noto_sans',
@@ -1749,6 +1775,32 @@ $wp_customize->add_control( new WP_Customize_Control(
         		'700' => '700',
         		'600' => '600',
 				'400' => '400'
+    			)
+        )
+) );
+
+// h2 divider display setting
+$wp_customize->add_setting( 'hovercraft_h2_divider_display', array(
+    'default'    => 'everywhere_possible',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// h2 divider display control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_h2_divider_display',
+        array(
+            'label'     => __( 'H2 Divider Display', 'hovercraft' ),
+			'description' => __( 'Choose if you want to display a divider (line) below the H2 elements?', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_h2_divider_display',
+            'type'      => 'select',
+			'choices' => array(
+        		'none' => 'None (Hidden)',
+				'everywhere_possible' => 'Everywhere Possible',
+				'everywhere_except_homepage' => 'Everywhere Except Homepage',
+				'only_posts` => 'Only Posts'
     			)
         )
 ) );
