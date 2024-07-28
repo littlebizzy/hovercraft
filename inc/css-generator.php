@@ -73,9 +73,9 @@ function hovercraft_generate_css(){
 	
 	/* titles */
 	$h1_font_family = get_theme_mod( 'hovercraft_h1_font', 'noto_sans' );
-	$h1_mobile_font_size = get_theme_mod( 'hovercraft_h1_mobile_font_size', '36' );
-	$h1_desktop_font_size = get_theme_mod( 'hovercraft_h1_desktop_font_size', '48' );
-	$h1_font_weight = get_theme_mod( 'hovercraft_h1_font_weight', '700' );
+	$h1_mobile_font_size = get_theme_mod( 'hovercraft_h1_mobile_font_size', '30' );
+	$h1_desktop_font_size = get_theme_mod( 'hovercraft_h1_desktop_font_size', '40' );
+	$h1_font_weight = get_theme_mod( 'hovercraft_h1_font_weight', '600' );
 	$h2_font_family = get_theme_mod( 'hovercraft_h2_font', 'noto_sans' );
 	$h2_mobile_font_size = get_theme_mod( 'hovercraft_h2_mobile_font_size', '30' );
 	$h2_desktop_font_size = get_theme_mod( 'hovercraft_h2_desktop_font_size', '36' );
@@ -116,8 +116,8 @@ function hovercraft_generate_css(){
 	$default_link_color = get_theme_mod( 'hovercraft_default_link_color', '#5C6BC0' );
 	$default_hover_color = get_theme_mod( 'hovercraft_default_hover_color', '#283593' );
 	$woocommerce_price_text_color = get_theme_mod( 'hovercraft_woocommerce_price_text_color', '#9E9D24' );
-	$search_bar_background_color = get_theme_mod( 'hovercraft_search_bar_background_color', '#ffffff' );
-	$search_bar_border_color = get_theme_mod( 'hovercraft_search_bar_border_color', '#ffffff' );
+	$search_bar_background_color = get_theme_mod( 'hovercraft_search_bar_background_color', '#eceff1' );
+	$search_bar_border_color = get_theme_mod( 'hovercraft_search_bar_border_color', '#eceff1' );
 	$topbar_background_color = get_theme_mod( 'hovercraft_topbar_background_color', '#263238' );
 	$topbar_text_color = get_theme_mod( 'hovercraft_topbar_text_color', '#ffffff' );
 	$topbar_link_color = get_theme_mod( 'hovercraft_topbar_link_color', '#ffffff' );
