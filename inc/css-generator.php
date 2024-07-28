@@ -1063,14 +1063,14 @@ h1 {
 	font-family: <?php echo ucwords(str_replace("_", " ", $h1_font_family)); ?>;
 	font-weight: <?php echo $h1_font_weight; ?>;
 	font-size: <?php echo $h1_desktop_font_size; ?>px;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 	}
 }
 
 @media screen and (max-width: 1200px) {
 h1:after {
 	<?php if ( $h1_divider_display == 'everywhere_possible') { echo "margin-top: 10px;"; } ?>
-	<?php if ( $h1_divider_display == 'everywhere_possible') { echo "margin-top: 20px;"; } ?>
+	<?php if ( $h1_divider_display == 'everywhere_possible') { echo "margin-bottom: 20px;"; } ?>
 	content: '';
 	display: block;
 	<?php if ( $h1_divider_display == 'everywhere_possible') { echo "border: 1px solid #ccc;"; } ?>
@@ -1080,7 +1080,7 @@ h1:after {
 @media screen and (min-width: 1200px) {
 h1:after {
 	<?php if ( $h1_divider_display == 'everywhere_possible') { echo "margin-top: 15px;"; } ?>
-	<?php if ( $h1_divider_display == 'everywhere_possible') { echo "margin-top: 30px;"; } ?>
+	<?php if ( $h1_divider_display == 'everywhere_possible') { echo "margin-bottom: 30px;"; } ?>
 	content: '';
 	display: block;
 	<?php if ( $h1_divider_display == 'everywhere_possible') { echo "border: 1px solid #ccc;"; } ?>
@@ -1099,14 +1099,14 @@ h2 {
 h2 {
 	font-weight: <?php echo $h2_font_weight; ?>;
 	font-size: <?php echo $h2_desktop_font_size; ?>px;
-	margin-bottom: 20px;
+	margin-bottom: 30px;
 	}
 }
 
 @media screen and (max-width: 1200px) {
 h2:after {
 	<?php if ( $h2_divider_display == 'everywhere_possible') { echo "margin-top: 10px;"; } ?>
-	<?php if ( $h2_divider_display == 'everywhere_possible') { echo "margin-top: 20px;"; } ?>
+	<?php if ( $h2_divider_display == 'everywhere_possible') { echo "margin-bottom: 20px;"; } ?>
 	content: '';
 	display: block;
 	<?php if ( $h2_divider_display == 'everywhere_possible') { echo "border: 1px solid #ccc;"; } ?>
@@ -1116,7 +1116,7 @@ h2:after {
 @media screen and (min-width: 1200px) {
 h2:after {
 	<?php if ( $h2_divider_display == 'everywhere_possible') { echo "margin-top: 15px;"; } ?>
-	<?php if ( $h2_divider_display == 'everywhere_possible') { echo "margin-top: 30px;"; } ?>
+	<?php if ( $h2_divider_display == 'everywhere_possible') { echo "margin-bottom: 30px;"; } ?>
 	content: '';
 	display: block;
 	<?php if ( $h2_divider_display == 'everywhere_possible') { echo "border: 1px solid #ccc;"; } ?>
