@@ -1604,7 +1604,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 
 // h1 font size (desktop) setting
 $wp_customize->add_setting( 'hovercraft_h1_desktop_font_size', array(
-    'default'    => '30',
+    'default'    => '40',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
 	) 
 );
@@ -1624,7 +1624,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 
 // h1 font size (mobile) setting
 $wp_customize->add_setting( 'hovercraft_h1_mobile_font_size', array(
-    'default'    => '24',
+    'default'    => '30',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
 	) 
 );
@@ -2864,6 +2864,21 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	)
 ) );
 
+// sidebar widget title text color setting
+$wp_customize->add_setting( 'hovercraft_sidebar_widget_title_text_color', array(
+	'default' => '#263238',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+
+// sidebar widget title text color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_sidebar_widget_title_text_color', array(
+	'label' => 'Sidebar Widget Title Text Color',
+	'description' => 'This is a description',
+	'section' => 'colors',
+	'settings' => 'hovercraft_sidebar_widget_title_text_color'
+	)
+) );
+
 // tile background color setting
 $wp_customize->add_setting( 'hovercraft_tile_background_color', array(
 	'default' => '#eceff1',
@@ -3220,21 +3235,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	'description' => 'This is a description',
 	'section' => 'colors',
 	'settings' => 'hovercraft_copyright_link_color'
-	)
-) );
-
-// sidebar widget title text color setting
-$wp_customize->add_setting( 'hovercraft_sidebar_widget_title_text_color', array(
-	'default' => '#263238',
-	'sanitize_callback' => 'sanitize_hex_color',
-) );
-
-// sidebar widget title text color control
-$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_sidebar_widget_title_text_color', array(
-	'label' => 'Sidebar Widget Title Text Color',
-	'description' => 'This is a description',
-	'section' => 'colors',
-	'settings' => 'hovercraft_sidebar_widget_title_text_color'
 	)
 ) );
 
