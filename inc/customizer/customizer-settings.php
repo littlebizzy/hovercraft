@@ -2103,6 +2103,31 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// sidebar widget title font weight setting
+$wp_customize->add_setting( 'hovercraft_sidebar_widget_title_font_weight', array(
+    'default'    => '600',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
+	) 
+);
+
+// sidebar widget title font weight control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_sidebar_widget_title_font_weight',
+        array(
+            'label'     => __('Sidebar Widget Title Font Weight', 'hovercraft'),
+			'description' => __( 'Specify font weight to use for the Sidebar widget titles? Note: Ensure your chosen font family supports the font weight that you choose.', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_sidebar_widget_title_font_weight',
+            'type'      => 'select',
+			'choices' => array(
+        		'700' => '700',
+        		'600' => '600',
+				'400' => '400'
+    			)
+        )
+) );
+
 // sidebar widget title text transform setting
 $wp_customize->add_setting( 'hovercraft_sidebar_widget_title_text_transform', array(
     'default'    => 'none',
