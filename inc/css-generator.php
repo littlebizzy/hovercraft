@@ -73,8 +73,8 @@ function hovercraft_generate_css(){
 	
 	/* titles */
 	$h1_font_family = get_theme_mod( 'hovercraft_h1_font', 'noto_sans' );
-	$h1_mobile_font_size = get_theme_mod( 'hovercraft_h1_mobile_font_size', '24' );
-	$h1_desktop_font_size = get_theme_mod( 'hovercraft_h1_desktop_font_size', '30' );
+	$h1_mobile_font_size = get_theme_mod( 'hovercraft_h1_mobile_font_size', '30' );
+	$h1_desktop_font_size = get_theme_mod( 'hovercraft_h1_desktop_font_size', '40' );
 	$h1_font_weight = get_theme_mod( 'hovercraft_h1_font_weight', '600' );
 	$h1_divider_display = get_theme_mod( 'hovercraft_h1_divider_display', 'none' );
 	$h2_font_family = get_theme_mod( 'hovercraft_h2_font', 'noto_sans' );
@@ -97,6 +97,7 @@ function hovercraft_generate_css(){
 	$sidebar_widget_title_desktop_font_size = get_theme_mod( 'hovercraft_sidebar_widget_title_desktop_font_size', '24' );
 	$sidebar_widget_title_mobile_font_size = get_theme_mod( 'hovercraft_sidebar_widget_title_mobile_font_size', '24' );
 	$sidebar_widget_title_text_transform = get_theme_mod( 'hovercraft_sidebar_widget_title_text_transform', 'none' );
+	$sidebar_widget_title_font_weight = get_theme_mod( 'hovercraft_sidebar_widget_title_font_weight', '600' );
 	$offcanvas_menu_text_transform = get_theme_mod( 'hovercraft_offcanvas_menu_text_transform', 'none' );
 	$main_menu_text_transform = get_theme_mod( 'hovercraft_main_menu_text_transform', 'none' );
 	$back_to_top_text_transform = get_theme_mod( 'hovercraft_back_to_top_text_transform', 'uppercase' );
@@ -2844,6 +2845,7 @@ p.biography-description {
 @media screen and (max-width: 1200px) {
 	#sidebar .widget-wrapper .widget-title {
 		font-size: <?php echo $sidebar_widget_title_mobile_font_size; ?>px;
+		font-weight: <?php echo $sidebar_widget_title_font_weight; ?>;
 		text-transform: <?php echo $sidebar_widget_title_text_transform; ?>;
 		color: <?php echo $sidebar_widget_title_text_color; ?>;
 	}
@@ -2852,6 +2854,7 @@ p.biography-description {
 @media screen and (min-width: 1200px) {
 	#sidebar .widget-wrapper .widget-title {
 		font-size: <?php echo $sidebar_widget_title_desktop_font_size; ?>px;
+		font-weight: <?php echo $sidebar_widget_title_font_weight; ?>;
 		text-transform: <?php echo $sidebar_widget_title_text_transform; ?>;
 		color: <?php echo $sidebar_widget_title_text_color; ?>;
 	}
