@@ -12,7 +12,7 @@
 			
 			<?php // https://inthedigital.co.uk/use-phps-in_array-to-compare-a-variable-to-multiple-values/
 			$search_icon_status = get_theme_mod( 'hovercraft_search_icon', 'desktop_only' );
-			if ( in_array( $search_icon_status, ['desktop_and_mobile'] )) { ?>
+			if ( in_array( $search_icon_status, [ 'mobile_only', 'desktop_and_mobile' ] )) { ?>
 				<div class="search-icon-wrapper"><?php $hovercraft_layout_icons = get_theme_mod( 'hovercraft_layout_icons', 'material_icons_classic' );
 				if ( $hovercraft_layout_icons == 'material_icons_classic' ) { ?><i class="material-icons search">search</i><?php } 
 				elseif ( $hovercraft_layout_icons == 'font_awesome_version_6' ) { ?><i class="fas fa-search"></i><?php } ?></div><!-- search-icon-wrapper -->
@@ -50,7 +50,7 @@
 			
 			<?php // https://inthedigital.co.uk/use-phps-in_array-to-compare-a-variable-to-multiple-values/
 			$search_icon_status = get_theme_mod( 'hovercraft_search_icon', 'desktop_only' );
-			if ( in_array( $search_icon_status, ['desktop_only', 'desktop_and_mobile'] )) { ?>
+			if ( in_array( $search_icon_status, [ 'desktop_only', 'desktop_and_mobile' ] )) { ?>
 				<div class="search-icon-wrapper"><?php $hovercraft_layout_icons = get_theme_mod( 'hovercraft_layout_icons', 'material_icons_classic' );
 				if ( $hovercraft_layout_icons == 'material_icons_classic' ) { ?><i class="material-icons search">search</i><?php } 
 				elseif ( $hovercraft_layout_icons == 'font_awesome_version_6' ) { ?><i class="fas fa-search"></i><?php } ?></div><!-- search-icon-wrapper -->
