@@ -8,7 +8,7 @@
     	
 		<?php
 		$hovercraft_sidebar_appears = get_theme_mod( 'hovercraft_sidebar_appears', 'everywhere' );
-		$hovercraft_primary_width = get_theme_mod( 'hovercraft_primary_width', 'wide' );
+		$hovercraft_primary_width = get_theme_mod( 'hovercraft_primary_width', 'narrow_centered' );
 
 		if ( $hovercraft_sidebar_appears == 'everywhere' || $hovercraft_sidebar_appears == 'posts_only' ) { ?><div id="primary"><?php } 
 		elseif ( $hovercraft_sidebar_appears == 'none' ) {
