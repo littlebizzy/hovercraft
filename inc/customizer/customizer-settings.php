@@ -2767,7 +2767,7 @@ $wp_customize->add_setting( 'hovercraft_sidebar_callout_link_color', array(
 
 // sidebar callout CTA link color control
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_sidebar_callout_link_color', array(
-	'label' => 'Sidebar Callout Link (CTA) Color',
+	'label' => 'Sidebar Callout CTA Link Color',
 	'description' => 'Specify link color of the Sidebar Callout widget?',
 	'section' => 'colors',
 	'settings' => 'hovercraft_sidebar_callout_link_color'
@@ -2782,7 +2782,7 @@ $wp_customize->add_setting( 'hovercraft_sidebar_callout_hover_background_color',
 
 // sidebar callout (hover) background color control
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_sidebar_callout_hover_background_color', array(
-	'label' => 'Sidebar Callout Hover Background Color',
+	'label' => 'Sidebar Callout CTA Background Hover Color',
 	'description' => 'Specify the hover background color for the CTA button in SideBar Callout widget?',
 	'section' => 'colors',
 	'settings' => 'hovercraft_sidebar_callout_hover_background_color'
@@ -2797,7 +2797,7 @@ $wp_customize->add_setting( 'hovercraft_sidebar_callout_hover_link_color', array
 
 // sidebar callout (hover) link color control
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_sidebar_callout_hover_link_color', array(
-	'label' => 'Sidebar Callout Hover Link Color',
+	'label' => 'Sidebar Callout CTA Link Hover Color',
 	'description' => 'Specify the hover link color for the CTA button in SideBar Callout widget?',
 	'section' => 'colors',
 	'settings' => 'hovercraft_sidebar_callout_hover_link_color'
