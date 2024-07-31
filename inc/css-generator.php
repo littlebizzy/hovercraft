@@ -73,9 +73,9 @@ function hovercraft_generate_css(){
 	
 	/* titles */
 	$h1_font_family = get_theme_mod( 'hovercraft_h1_font', 'noto_sans' );
-	$h1_mobile_font_size = get_theme_mod( 'hovercraft_h1_mobile_font_size', '30' );
-	$h1_desktop_font_size = get_theme_mod( 'hovercraft_h1_desktop_font_size', '40' );
-	$h1_font_weight = get_theme_mod( 'hovercraft_h1_font_weight', '600' );
+	$h1_mobile_font_size = get_theme_mod( 'hovercraft_h1_mobile_font_size', '36' );
+	$h1_desktop_font_size = get_theme_mod( 'hovercraft_h1_desktop_font_size', '48' );
+	$h1_font_weight = get_theme_mod( 'hovercraft_h1_font_weight', '700' );
 	$h1_divider_display = get_theme_mod( 'hovercraft_h1_divider_display', 'none' );
 	$h2_font_family = get_theme_mod( 'hovercraft_h2_font', 'noto_sans' );
 	$h2_mobile_font_size = get_theme_mod( 'hovercraft_h2_mobile_font_size', '30' );
