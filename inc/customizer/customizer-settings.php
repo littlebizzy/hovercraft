@@ -1604,7 +1604,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 
 // h1 font size (desktop) setting
 $wp_customize->add_setting( 'hovercraft_h1_desktop_font_size', array(
-    'default'    => '40',
+    'default'    => '48',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
 	) 
 );
@@ -1624,7 +1624,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 
 // h1 font size (mobile) setting
 $wp_customize->add_setting( 'hovercraft_h1_mobile_font_size', array(
-    'default'    => '30',
+    'default'    => '36',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
 	) 
 );
@@ -1644,7 +1644,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 
 // h1 font weight setting
 $wp_customize->add_setting( 'hovercraft_h1_font_weight', array(
-    'default'    => '600',
+    'default'    => '700',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
 	) 
 );
