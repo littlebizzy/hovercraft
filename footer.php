@@ -87,10 +87,12 @@
 
 </div><!-- container -->
 
-<?php $hovercraft_search_icon = get_theme_mod( 'hovercraft_search_icon', 'none' );
-	if ( $hovercraft_search_icon != 'none' ) { ?>
 	<div id="full-screen-search">
 		<button type="button" class="close"><i class="material-icons close">close</i></button>
+
+		<?php $hovercraft_layout_icons = get_theme_mod( 'hovercraft_layout_icons', 'material_icons_classic' );
+				if ( $hovercraft_layout_icons == 'material_icons_classic' ) { ?><button type="button" class="close"><i class="material-icons close">close</i></button><?php } 
+				elseif ( $hovercraft_layout_icons == 'font_awesome_version_6' ) { ?><button type="button" class="close"><i class="fa-solid fa-x"></i></button><?php } ?>
 
 			<form role="search" method="get" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 				<div class="input-container">
@@ -102,7 +104,6 @@
 			</form><!-- searchform -->
 				
 	</div><!-- full-screen-search -->
-<?php } ?>
 
 <?php wp_footer(); ?>
 
