@@ -3238,6 +3238,36 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	)
 ) );
 
+// back to top background color setting
+$wp_customize->add_setting( 'hovercraft_back_to_top_background_color', array(
+	'default' => '#eceff1',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+
+// back to top background color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_back_to_top_background_color', array(
+	'label' => 'Back To Top Background Color',
+	'description' => 'This is a description',
+	'section' => 'colors',
+	'settings' => 'hovercraft_back_to_top_background_color'
+	)
+) );
+
+// back to top link color setting
+$wp_customize->add_setting( 'hovercraft_back_to_top_link_color', array(
+	'default' => '#263238',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+
+// back to top link color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_back_to_top_link_color', array(
+	'label' => 'Back To Top Link Color',
+	'description' => 'This is a description',
+	'section' => 'colors',
+	'settings' => 'hovercraft_back_to_top_link_color'
+	)
+) );
+
 // sidebar section
 $wp_customize->add_section( 'hovercraft_sidebar', array(
     'title'      => 'Sidebar',
