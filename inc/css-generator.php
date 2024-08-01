@@ -199,6 +199,7 @@ function hovercraft_generate_css(){
 	$copyright_text_color = get_theme_mod( 'hovercraft_copyright_text_color', '#263238' );
 	$copyright_link_color = get_theme_mod( 'hovercraft_copyright_link_color', '#5C6BC0' );
 	$back_to_top_background_color = get_theme_mod( 'hovercraft_back_to_top_background_color', '#eceff1' );
+	$back_to_top_background_hover_color = get_theme_mod( 'hovercraft_back_to_top_background_hover_color', '#eceff1' );
 	$back_to_top_link_color = get_theme_mod( 'hovercraft_back_to_top_link_color', '#263238' );
 
 	/* link decoration */
@@ -4080,6 +4081,7 @@ p.akismet_comment_form_privacy_notice {
 
 .scrollup-link:active, .scrollup-link:hover {
 	background: rgba(0, 0, 0, 0.2);
+	background: <?php echo $back_to_top_background_hover_color; ?>;
 	color: #ffffff;
 	color: <?php echo $back_to_top_link_color; ?>;
 	outline: none !important;
