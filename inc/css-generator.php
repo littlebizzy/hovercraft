@@ -4193,7 +4193,10 @@ visibility: hidden;
 	margin-bottom: 30px !important;
 }
 
-/* https://codepen.io/jpdanks/pen/KKBarq */
+/*
+https://codepen.io/jpdanks/pen/KKBarq 
+https://codepen.io/rabakilgur/pen/zyggOe
+*/
 
 .woocommerce-ordering {
 	margin: 0 !important;
@@ -4211,7 +4214,8 @@ visibility: hidden;
     	box-shadow: none;
 		line-height: 1.5 !important;
     	font-size: 16px;
-    	padding: 10px 40px 10px 20px !important;
+		color: #757575;
+    	padding: 5px 40px 5px 10px !important;
     	background-color: transparent;
     	&:active,
     	&:focus {
@@ -4224,7 +4228,7 @@ visibility: hidden;
     position: absolute;
     top: 50%;
     margin-top: -2px;
-    right: 0px;
+    right: 10px;
     width: 0; 
     height: 0; 
     border-left: 5px solid transparent;
