@@ -4177,7 +4177,7 @@ visibility: hidden;
 
 .woocommerce-result-count {
 	float: left;
-	margin: 0;
+	margin: 0 !important;
 	font-size: 18px;
 	font-weight: 600;
 	color: <?php echo $breadcrumbs_text_color; ?>;
