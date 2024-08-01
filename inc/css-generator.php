@@ -4184,12 +4184,25 @@ visibility: hidden;
 
 /* woocommerce */
 
+@media screen and (max-width: 1200px) {
+.woocommerce-result-count {
+	display: block;
+	float: left;
+	margin: 0 0 20px 0 !important;
+	font-size: 18px;
+	font-weight: 600;
+	color: <?php echo $breadcrumbs_text_color; ?>;
+	}
+}
+
+@media screen and (min-width: 1200px) {
 .woocommerce-result-count {
 	float: left;
 	margin: 0 !important;
 	font-size: 18px;
 	font-weight: 600;
 	color: <?php echo $breadcrumbs_text_color; ?>;
+	}
 }
 
 .woocommerce ul.products {
@@ -4207,13 +4220,27 @@ https://codepen.io/jpdanks/pen/KKBarq
 https://codepen.io/rabakilgur/pen/zyggOe
 */
 
+
+@media screen and (max-width: 1200px) {
+	.woocommerce-ordering {
+		width: 100%;
+		max-width: 100%;
+	} 
+}
+
+
+@media screen and (min-width: 1200px) {
+	.woocommerce-ordering {
+		width: auto;
+  		max-width: 100%;
+	} 
+}
+
 .woocommerce-ordering {
 	margin: 0 !important;
 	padding: 0 !important;
   	position: relative;
   	background-color: #eeeeee;
-  	width: auto;
-  	max-width: 100%;
   	select {
 		appearance: none;
 		max-width: 100%;
