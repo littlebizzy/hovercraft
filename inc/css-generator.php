@@ -4176,8 +4176,11 @@ visibility: hidden;
 /* woocommerce */
 
 .woocommerce-result-count {
-	font-size: 16px;
+	float: left;
+	margin: 0;
+	font-size: 18px;
 	font-weight: 600;
+	color: <?php echo $breadcrumbs_text_color; ?>;
 }
 
 .woocommerce ul.products {
@@ -4190,21 +4193,47 @@ visibility: hidden;
 	margin-bottom: 30px !important;
 }
 
-select {
-	width: 100%;
-	font-size: 16px;
-	font-weight: 400;
-	display: inline-block;
-	padding: 10px 47px 10px 20px;
-	background: #ffffff;
-	border-radius: 0px;
-	border: 0;
-	box-shadow: inset 0px 0px 0px 1px #263238;
-	background: transparent;
-	outline: none;
-	appearance: none;
+/* https://codepen.io/jpdanks/pen/KKBarq */
+
+.woocommerce-ordering {
+	margin: 0 !important;
+	padding: 0 !important;
+  	position: relative;
+  	background-color: #eeeeee;
+  	width: auto;
+  	max-width: 100%;
+  	select {
+		appearance: none;
+		max-width: 100%;
+		vertical-align: middle;
+		outline: none;
+		border: none;
+    	box-shadow: none;
+		line-height: 1.5 !important;
+    	font-size: 16px;
+    	padding: 10px 40px 10px 20px !important;
+    	background-color: transparent;
+    	&:active,
+    	&:focus {
+      		outline: none;
+      		box-shadow: none;
+    	}
+  	}
+  &:after {
+    content: " ";
+    position: absolute;
+    top: 50%;
+    margin-top: -2px;
+    right: 0px;
+    width: 0; 
+    height: 0; 
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #aaa;
+  }
 }
 
+/*
 .woocommerce-ordering:after {
 	position: relative;
 	margin: 0px 0px 0px -10px; 
@@ -4215,6 +4244,7 @@ select {
         font-size: 24px;
         content: ' \e5cf';
 }
+*/
 
 .price {
 	font-size: 24px !important;
