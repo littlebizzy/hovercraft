@@ -174,6 +174,7 @@ function hovercraft_generate_css(){
 	$column_border_color = get_theme_mod( 'hovercraft_column_border_color', '#eceff1' );
 	$main_background_color = get_theme_mod( 'hovercraft_main_background_color', '#eceff1' );
 	$main_background_color_homepage = get_theme_mod( 'hovercraft_main_background_color_homepage', '#eceff1' );
+	$content_background_color = get_theme_mod( 'hovercraft_content_background_color', '#ffffff' );
 	$postmain_top_background_color = get_theme_mod( 'hovercraft_postmain_top_background_color', '#eceff1' );
 	$postmain_top_text_color = get_theme_mod( 'hovercraft_postmain_top_text_color', '#263238' );
 	$postmain_top_link_color = get_theme_mod( 'hovercraft_postmain_top_link_color', '#5C6BC0' );
@@ -2546,29 +2547,17 @@ img.featured-image-archive {
 }
 
 
-/* content */
+/* content (primary area) */
 
 @media screen and (max-width: 1200px) {
 #content-wrapper {
-	background: #ffffff;
+	background: <?php echo $content_background_color; ?>;
 	}
 }
 	
 @media screen and (min-width: 1200px) {
 #content-wrapper {
-	background: #ffffff;
-	}
-}
-
-@media screen and (max-width: 1200px) {
-#content-wrapper {
-	background: #ffffff;
-	}
-}
-	
-@media screen and (min-width: 1200px) {
-#content-wrapper {
-	background: #ffffff;
+	background: <?php echo $content_background_color; ?>;
 	}
 }
 
