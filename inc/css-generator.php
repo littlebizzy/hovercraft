@@ -198,6 +198,8 @@ function hovercraft_generate_css(){
     $copyright_background_color = get_theme_mod( 'hovercraft_copyright_background_color', '#ffffff' );
 	$copyright_text_color = get_theme_mod( 'hovercraft_copyright_text_color', '#263238' );
 	$copyright_link_color = get_theme_mod( 'hovercraft_copyright_link_color', '#5C6BC0' );
+	$back_to_top_background_color = get_theme_mod( 'hovercraft_back_to_top_background_color', '#eceff1' );
+	$back_to_top_link_color = get_theme_mod( 'hovercraft_back_to_top_link_color', '#263238' );
 
 	/* link decoration */
 	$default_link_decoration = get_theme_mod( 'hovercraft_default_link_decoration', 'underline' );
@@ -4047,11 +4049,13 @@ p.akismet_comment_form_privacy_notice {
 	text-transform: <?php echo $back_to_top_text_transform; ?>;
 	line-height: 1;
 	padding: 10px 0px;
-	color: rgba(255, 255, 255, 0.5) !important;
+	color: rgba(255, 255, 255, 0.5);
+	color: <?php echo $back_to_top_link_color; ?>;
 	text-decoration: none !important;
 	text-align: center;
 	vertical-align: middle;
 	background: rgba(0, 0, 0, 0.1);
+	background: <?php echo $back_to_top_background_color; ?>;
 	}
 }
 	
@@ -4064,17 +4068,20 @@ p.akismet_comment_form_privacy_notice {
 	text-transform: <?php echo $back_to_top_text_transform; ?>;
 	line-height: 1;
 	padding: 10px 0px;
-	color: rgba(255, 255, 255, 0.5) !important;
+	color: rgba(255, 255, 255, 0.5);
+	color: <?php echo $back_to_top_link_color; ?>;
 	text-decoration: none !important;
 	text-align: center;
 	vertical-align: middle;
 	background: rgba(0, 0, 0, 0.1);
+	background: <?php echo $back_to_top_background_color; ?>;
 	}
 }
 
 .scrollup-link:active, .scrollup-link:hover {
 	background: rgba(0, 0, 0, 0.2);
-	color: #ffffff !important;
+	color: #ffffff;
+	color: <?php echo $back_to_top_link_color; ?>;
 	outline: none !important;
 }
 
