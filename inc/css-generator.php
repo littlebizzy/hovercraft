@@ -4104,28 +4104,27 @@ div.bbp-forum-header, div.bbp-reply-header, div.bbp-topic-header {
 	display: none;
 }
 
-.bbp-header {
+li.bbp-header {
+	margin: 0 !important;
 	background: #ECEFF1 !important;
+	font-size: 12px !important;
+	font-weight: 600 !important;
+	text-transform: uppercase !important;
+	color: <?php echo $default_text_color; ?>;
+}
+
+li.bbp-body {
+	background: #ffffff !important;
 	color: #263238 !important;
 }
 
-.bbp-body {
-	background: #FFF !important;
-	color: #263238 !important;
-}
-
-.bbp-footer {
+li.bbp-footer {
 	display: none;
 }
 
+	
 .bbp-topic-title {
 	font-size: 16px !important;
-}
-
-.bbp-header {
-	font-size: 12px !important;
-	text-transform: uppercase !important;
-	font-weight: 600 !important;
 }
 
 .bbp-reply-content p {
