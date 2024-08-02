@@ -2916,7 +2916,7 @@ p.biography-description {
 .cta-sidebar-callout {
 	display: block;
 	width: 100%;
-	margin-top: 20px;
+	margin-top: 40px;
 }
 }
 
@@ -2924,7 +2924,7 @@ p.biography-description {
 .cta-sidebar-callout {
 	display: block;
 	width: 100%;
-	margin-top: 30px;
+	margin-top: 40px;
 }
 }
 
