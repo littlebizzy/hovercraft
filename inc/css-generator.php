@@ -1077,21 +1077,21 @@ h1 {
 
 @media screen and (max-width: 1200px) {
 h1.divide:after {
-	<?php if ( $h1_divider_display == 'everywhere_possible') { echo "margin-top: 10px;"; } ?>
-	<?php if ( $h1_divider_display == 'everywhere_possible') { echo "margin-bottom: 20px;"; } ?>
+	margin-top: 10px;
+	margin-bottom: 20px;
 	content: '';
 	display: block;
-	<?php if ( $h1_divider_display == 'everywhere_possible') { echo "border: 1px solid #ccc;"; } ?>
+	border: 1px solid #ccc;
 	}
 }
 	
 @media screen and (min-width: 1200px) {
 h1.divide:after {
-	<?php if ( $h1_divider_display == 'everywhere_possible') { echo "margin-top: 15px;"; } ?>
-	<?php if ( $h1_divider_display == 'everywhere_possible') { echo "margin-bottom: 30px;"; } ?>
+	margin-top: 15px;
+	margin-bottom: 30px;
 	content: '';
 	display: block;
-	<?php if ( $h1_divider_display == 'everywhere_possible') { echo "border: 1px solid #ccc;"; } ?>
+	border: 1px solid #ccc;
 	}
 }
 
