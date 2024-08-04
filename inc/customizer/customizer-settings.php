@@ -1797,9 +1797,7 @@ $wp_customize->add_control( new WP_Customize_Control(
             'type'      => 'select',
 			'choices' => array(
         		'none' => 'None (Hidden)',
-				'everywhere_possible' => 'Everywhere Possible',
-				'everywhere_except_homepage' => 'Everywhere Except Homepage',
-				'only_posts' => 'Only Posts'
+				'everywhere_possible' => 'Everywhere Possible'
     			)
         )
 ) );
