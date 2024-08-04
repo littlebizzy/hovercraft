@@ -524,6 +524,31 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// tiles captions setting
+$wp_customize->add_setting( 'hovercraft_tiles_captions', array(
+    'default'    => 'none',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// tiles captions control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_tiles_captions',
+        array(
+            'label'     => __('Tiles Captions Display', 'hovercraft'),
+			'description' => __( 'What display style should the images captions inside Tiles use?', 'hovercraft' ),
+            'section'   => 'hovercraft_page_layouts',
+            'settings'  => 'hovercraft_tiles_captions',
+            'type'      => 'select',
+			'choices' => array(
+        		'none' => 'None (Disabled)',
+				'below_image' => 'Below Image',
+				'inside_image' => 'Inside Image (Bottom)'
+    			)
+        )
+) );
+
 // blockquote captions setting
 $wp_customize->add_setting( 'hovercraft_blockquote_captions', array(
     'default'    => 'none',
