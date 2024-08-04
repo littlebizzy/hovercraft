@@ -2279,6 +2279,36 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	)
 ) );
 
+// search input placeholder color setting
+$wp_customize->add_setting( 'hovercraft_search_input_placeholder_color', array(
+	'default' => '#757575',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+ 
+// search input placeholder color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_search_input_placeholder_color', array(
+	'label' => 'Search Input Placeholder Color',
+	'description' => 'Specify color of the placeholder text that appears before search input element is active?',
+	'section' => 'colors',
+	'settings' => 'hovercraft_search_input_placeholder_color'
+	)
+) );
+
+// search input text color setting
+$wp_customize->add_setting( 'hovercraft_search_input_text_color', array(
+	'default' => '#263238',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+ 
+// search input text color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_search_input_text_color', array(
+	'label' => 'Search Input Text Color',
+	'description' => 'Search input text color',
+	'section' => 'colors',
+	'settings' => 'hovercraft_search_input_text_color'
+	)
+) );
+
 // woocommerce price text color setting
 $wp_customize->add_setting( 'hovercraft_woocommerce_price_text_color', array(
 	'default' => '#9E9D24',
