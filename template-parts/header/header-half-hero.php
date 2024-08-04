@@ -55,7 +55,7 @@
         $post_id = get_the_ID();
         if($hide_title_status == "off" || !metadata_exists( 'post', $post_id, '_mysite_meta_hide_title' ) ) :
     	?>
-		<h1 class="half-hero-title"><?php single_post_title(); ?></h1>
+		<h1 class="half-hero-title <?php if ( $h1_divider_display == 'everywhere_possible' ) { echo "divide"; } ?>"><?php single_post_title(); ?></h1>
 		<?php endif; ?> <!--End the hide title-->
 			
 		<?php if (is_front_page()) : ?>
