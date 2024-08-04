@@ -138,6 +138,9 @@ function hovercraft_generate_css(){
 	$breadcrumbs_link_color = get_theme_mod( 'hovercraft_breadcrumbs_link_color', '#607D8B' );
 	$hero_snippet_text_color = get_theme_mod( 'hovercraft_hero_snippet_text_color', '#ffffff' );
 	$hero_snippet_link_color = get_theme_mod( 'hovercraft_hero_snippet_link_color', '#ffffff' );
+	$search_input_placeholder_color = get_theme_mod( 'hovercraft_search_input_placeholder_color', '#757575' );
+	$search_input_text_color = get_theme_mod( 'hovercraft_search_input_text_color', '#263238' );
+	
 	
     $header_half_hero_background_color = get_theme_mod( 'hovercraft_header_half_hero_background_color', '#ffffff' ); // remove
     $header_mini_hero_background_color = get_theme_mod( 'hovercraft_header_mini_hero_background_color', '#ffffff' ); // remove
@@ -3810,13 +3813,13 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 }
 
 ::placeholder {
-	color: #757575;
+	color: <?php echo $search_input_placeholder_color; ?>;
 	opacity: 1;
 }
 
 .search-input {
 	background: <?php echo $search_bar_background_color; ?>;
-	color: <?php echo $default_text_color; ?>;
+	color: <?php echo $search_input_text_color; ?>;
 	vertical-align: middle;
 	font-size: 16px;
 	line-height: 2;
@@ -3853,7 +3856,7 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 /* search bar */
 
 .searchinput::placeholder {
-	color: #78909C;
+	color: <?php echo $search_input_placeholder_color; ?>;
 }
 
 .searchinput:focus {
