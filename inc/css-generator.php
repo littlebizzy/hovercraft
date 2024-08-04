@@ -55,6 +55,7 @@ function hovercraft_generate_css(){
 	$prefooter_top_columns = get_theme_mod( 'hovercraft_prefooter_top_columns', '1' );
 	$prefooter_bottom_columns = get_theme_mod( 'hovercraft_prefooter_bottom_columns', '1' );
 	$gallery_captions = get_theme_mod( 'hovercraft_gallery_captions', 'none' );
+	$tiles_captions = get_theme_mod( 'hovercraft_tiles_captions', 'none' );
 	$sitewide_layout = get_theme_mod( 'hovercraft_sitewide_layout', 'floating_islands' );
 	$tiles_across = get_theme_mod( 'hovercraft_tiles_across', '3' );
 	$columns_across = get_theme_mod( 'hovercraft_columns_across', '4' );
@@ -1504,6 +1505,11 @@ button {
 
 .tile p:last-child {
 	margin-bottom: 0;
+}
+
+
+.tile .wp-caption {
+	<?php if ( $tiles_captions == 'none') { echo "display: none;"; } ?>
 }
 
 
