@@ -47,7 +47,7 @@
         $post_id = get_the_ID();
         if($hide_title_status == "off" || !metadata_exists( 'post', $post_id, '_mysite_meta_hide_title' ) ) :
     	?>
-		<h1 class="mini-hero-title"><?php if ( is_singular() ) { single_post_title(); } elseif ( is_category() ) { single_cat_title(); } ?></h1>
+		<h1 class="mini-hero-title <?php if ( $h1_divider_display == 'everywhere_possible' ) { echo "divide"; } ?>""><?php if ( is_singular() ) { single_post_title(); } elseif ( is_category() ) { single_cat_title(); } ?></h1>
 		<?php endif; ?> <!--End the hide title-->
 			
 			<?php $portal_category = get_theme_mod( 'hovercraft_portal_category', 'none' );
