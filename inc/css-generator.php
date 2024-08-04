@@ -1508,7 +1508,7 @@ button {
 }
 
 
-.tile .wp-caption {
+.tile p.wp-caption-text {
 	<?php if ( $tiles_captions == 'none') { echo "display: none;"; } ?>
 }
 
