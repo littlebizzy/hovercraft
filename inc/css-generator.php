@@ -1076,7 +1076,7 @@ h1 {
 }
 
 @media screen and (max-width: 1200px) {
-h1:after {
+h1.divide:after {
 	<?php if ( $h1_divider_display == 'everywhere_possible') { echo "margin-top: 10px;"; } ?>
 	<?php if ( $h1_divider_display == 'everywhere_possible') { echo "margin-bottom: 20px;"; } ?>
 	content: '';
@@ -1086,7 +1086,7 @@ h1:after {
 }
 	
 @media screen and (min-width: 1200px) {
-h1:after {
+h1.divide:after {
 	<?php if ( $h1_divider_display == 'everywhere_possible') { echo "margin-top: 15px;"; } ?>
 	<?php if ( $h1_divider_display == 'everywhere_possible') { echo "margin-bottom: 30px;"; } ?>
 	content: '';
