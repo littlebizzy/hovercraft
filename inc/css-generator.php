@@ -141,11 +141,6 @@ function hovercraft_generate_css(){
 	$hero_snippet_link_color = get_theme_mod( 'hovercraft_hero_snippet_link_color', '#ffffff' );
 	$search_input_placeholder_color = get_theme_mod( 'hovercraft_search_input_placeholder_color', '#757575' );
 	$search_input_text_color = get_theme_mod( 'hovercraft_search_input_text_color', '#263238' );
-	
-	
-    $header_half_hero_background_color = get_theme_mod( 'hovercraft_header_half_hero_background_color', '#ffffff' ); // remove
-    $header_mini_hero_background_color = get_theme_mod( 'hovercraft_header_mini_hero_background_color', '#ffffff' ); // remove
-
 	$sidebar_widget_title_text_color = get_theme_mod( 'hovercraft_sidebar_widget_title_text_color', '#263238' );
 
 	// new
@@ -1672,9 +1667,9 @@ button {
 	
 #header-full-hero .menu-desktop > .main-menu ul li ul li { background: <?php echo $default_text_color; ?>; }
 	
-#header-half-hero .menu-desktop > .main-menu ul li ul li { background: #ffffff; }
+#header-half-hero .menu-desktop > .main-menu ul li ul li { background: <?php echo $half_hero_background_color; ?>; }
 
-#header-mini-hero .menu-desktop > .main-menu ul li ul li { background: #ffffff; }
+#header-mini-hero .menu-desktop > .main-menu ul li ul li { background: <?php echo $mini_hero_background_color; ?>; }
 	
 #header-basic .menu-desktop > .main-menu ul li ul li { background: <?php echo $header_basic_hero_background_color; ?>; }
 
@@ -1982,7 +1977,7 @@ video.hero-background-video {
 }
 
 #header-half-hero {
-	background: <?php echo $header_half_hero_background_color; ?>;
+	background: <?php echo $half_hero_background_color; ?>;
 }
 
 #header-half-hero .menu-mobile-wrapper i {
@@ -2062,7 +2057,7 @@ video.hero-background-video {
 	width: 100%;
 	display: table;
 	padding: 10px 20px;
-	background: <?php echo $header_mini_hero_background_color; ?>;
+	background: <?php echo $mini_hero_background_color; ?>;
 	color: <?php echo $mini_hero_header_text_color; ?>;
 	}
 }
@@ -2073,7 +2068,7 @@ video.hero-background-video {
 	display: table;
 	margin: 0px auto;
 	padding: 20px 0px;
-	background: <?php echo $header_mini_hero_background_color; ?>;
+	background: <?php echo $mini_hero_background_color; ?>;
 	color: <?php echo $mini_hero_header_text_color; ?>;
 	}
 }
