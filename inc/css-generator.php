@@ -71,6 +71,7 @@ function hovercraft_generate_css(){
 	$after_byline_text_color = get_theme_mod( 'hovercraft_after_byline_text_color', '#263238' );
 	$after_byline_link_color = get_theme_mod( 'hovercraft_after_byline_link_color', '#5C6BC0' );
 	$featured_image_position = get_theme_mod( 'hovercraft_featured_image_position', 'above_title' );
+	$title_divider_background_color = get_theme_mod( 'hovercraft_title_divider_background_color', '#757575' );
 	
 	/* titles */
 	$h1_font_family = get_theme_mod( 'hovercraft_h1_font', 'noto_sans' );
@@ -1077,7 +1078,7 @@ h1.divide:after {
 	margin-bottom: 20px;
 	content: '';
 	display: block;
-	border: 1px solid #ccc;
+	border: 1px solid <?php echo $title_divider_background_color; ?>;
 	}
 }
 	
@@ -1087,7 +1088,7 @@ h1.divide:after {
 	margin-bottom: 30px;
 	content: '';
 	display: block;
-	border: 1px solid #ccc;
+	border: 1px solid <?php echo $title_divider_background_color; ?>;
 	}
 }
 
@@ -1113,7 +1114,7 @@ h2:after {
 	<?php if ( $h2_divider_display == 'everywhere_possible') { echo "margin-bottom: 20px;"; } ?>
 	content: '';
 	display: block;
-	<?php if ( $h2_divider_display == 'everywhere_possible') { echo "border: 1px solid #ccc;"; } ?>
+	<?php if ( $h2_divider_display == 'everywhere_possible') { echo "border: 1px solid $title_divider_background_color;"; } ?>
 	}
 }
 	
@@ -1123,7 +1124,7 @@ h2:after {
 	<?php if ( $h2_divider_display == 'everywhere_possible') { echo "margin-bottom: 30px;"; } ?>
 	content: '';
 	display: block;
-	<?php if ( $h2_divider_display == 'everywhere_possible') { echo "border: 1px solid #ccc;"; } ?>
+	<?php if ( $h2_divider_display == 'everywhere_possible') { echo "border: 1px solid $title_divider_background_color;"; } ?>
 	}
 }
 
