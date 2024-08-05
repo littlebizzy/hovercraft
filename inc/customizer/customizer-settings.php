@@ -2331,6 +2331,21 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	)
 ) );
 
+// h1 h2 title divider background color setting
+$wp_customize->add_setting( 'hovercraft_title_divider_background_color', array(
+	'default' => '#757575',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+ 
+// h1 h2 title divider background color color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_title_divider_background_color', array(
+	'label' => 'H1 H2 Divider Background Color',
+	'description' => 'Specificy the background color of the H1 H2 divider line?',
+	'section' => 'colors',
+	'settings' => 'hovercraft_title_divider_background_color'
+	)
+) );
+
 // woocommerce price text color setting
 $wp_customize->add_setting( 'hovercraft_woocommerce_price_text_color', array(
 	'default' => '#9E9D24',
