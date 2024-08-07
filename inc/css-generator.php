@@ -3939,7 +3939,7 @@ p.akismet_comment_form_privacy_notice {
     opacity: 0;
 	position: static;
     width: 100%;
-    height: 100%;
+    height: 0;
     background: rgba(0,0,0,0.7);
     transition: opacity 0.1s linear;
 	top: 0;
@@ -3956,6 +3956,7 @@ p.akismet_comment_form_privacy_notice {
     * we define position: fixed; here so that the Full Screen Search doesn't block
     * the underlying HTML elements when not open
     */
+	height: 100%;
     visibility: visible;
     opacity: 1;
 	position: fixed;
