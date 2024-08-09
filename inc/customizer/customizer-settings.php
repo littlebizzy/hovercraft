@@ -827,7 +827,9 @@ $wp_customize->add_control( new WP_Customize_Control(
 			'choices' => array(
         		'none' => 'None (Disabled)',
 				'native_posts_only' => 'Native Posts Only',
-				'native_posts_and_pages' => 'Native Posts & Pages'
+				'native_posts_and_pages' => 'Native Posts & Pages',
+				'native_posts_and_custom_posts' => 'Native Posts & Custom Posts',
+				'native_posts_and_pages_and_custom_posts' => 'Native Posts, Pages & Custom Posts'
     			)
         )
 ) );
