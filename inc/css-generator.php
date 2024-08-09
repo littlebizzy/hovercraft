@@ -442,8 +442,7 @@ hr {
 /* tags */
 
 @media screen and (max-width: 1200px) {
-#tags {
-	clear: right; /* needed for WooCommerce now seems */
+.tags {
 	margin-top: 20px;
 	font-size: 14px;
 	color: <?php echo $breadcrumbs_text_color; ?>;
@@ -451,8 +450,7 @@ hr {
 }
 
 @media screen and (min-width: 1200px) {
-#tags {
-	clear: right; /* needed for WooCommerce now seems */
+.tags {
 	margin-top: 30px;
 	font-size: 14px;
 	color: <?php echo $breadcrumbs_text_color; ?>;
