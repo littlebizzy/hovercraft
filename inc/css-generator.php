@@ -4230,6 +4230,11 @@ div.coupon {
 
 /* woocommerce other */
 
+.term-description {
+	font-size: 18px;
+	color: #607D8B;
+}
+
 @media screen and (max-width: 1200px) {
 p.woocommerce-result-count {
 	float: none !important;
