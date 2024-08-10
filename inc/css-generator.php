@@ -2584,13 +2584,11 @@ img.featured-image-archive {
 	}
 }
 
+/* content (primary area) unordered and ordered lists */
+	
 #content-wrapper ul {
 	margin-left: 30px;
 	margin-bottom: 30px;
-}
-
-#content-wrapper ul li {
-	margin-bottom: 5px;
 }
 
 #content-wrapper ol {
@@ -4229,6 +4227,7 @@ div.coupon {
 	display: flex;
 }
 
+
 /* woocommerce other */
 
 @media screen and (max-width: 1200px) {
@@ -4328,16 +4327,26 @@ form.woocommerce-ordering {
 }
 */
 
+
+/* woocommerce products unordered list */
+	
 .woocommerce ul.products {
-	margin: 0px !important;
+	margin: 0 !important;
 	padding: 30px 0 0 0 !important;
 }
 
-.woocommerce ul.products li {
-    list-style: none outside;
+.woocommerce ul.products li.product {
+	float: left;
+    list-style: none outside !important;
+	position: relative;
 	margin-bottom: 30px !important;
+	padding: 0;
+	line-height: 1 !important;
 }
 
+
+/* woocommerce other */
+	
 .price {
 	font-size: 24px !important;
 	font-weight: 600 !important;
