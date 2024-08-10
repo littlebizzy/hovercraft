@@ -4217,34 +4217,26 @@ div.coupon {
 /* woocommerce other */
 
 @media screen and (max-width: 1200px) {
-.woocommerce-result-count {
+p.woocommerce-result-count {
+	float: none !important;
 	display: block;
-	float: left;
 	margin: 0 0 20px 0 !important;
 	font-size: 18px;
 	font-weight: 600;
 	color: <?php echo $breadcrumbs_text_color; ?>;
+	line-height: 30px !important;
 	}
 }
 
 @media screen and (min-width: 1200px) {
-.woocommerce-result-count {
-	float: left;
+p.woocommerce-result-count {
+	float: left !important;
 	margin: 0 !important;
 	font-size: 18px;
 	font-weight: 600;
 	color: <?php echo $breadcrumbs_text_color; ?>;
+	line-height: 30px !important;
 	}
-}
-
-.woocommerce ul.products {
-	margin: 0px !important;
-	padding: 30px 0 0 0 !important;
-}
-
-.woocommerce ul.products li {
-    list-style: none outside;
-	margin-bottom: 30px !important;
 }
 
 /*
@@ -4252,23 +4244,25 @@ https://codepen.io/jpdanks/pen/KKBarq
 https://codepen.io/rabakilgur/pen/zyggOe
 */
 
-
 @media screen and (max-width: 1200px) {
-	.woocommerce-ordering {
+	form.woocommerce-ordering {
+		float: none !important;
 		width: 100%;
 		max-width: 100%;
+		height: 30px !important;
 	} 
 }
 
 
 @media screen and (min-width: 1200px) {
-	.woocommerce-ordering {
+	form.woocommerce-ordering {
+		float: right !important;
 		width: auto;
   		max-width: 100%;
 	} 
 }
 
-.woocommerce-ordering {
+form.woocommerce-ordering {
 	margin: 0 !important;
 	padding: 0 !important;
   	position: relative;
@@ -4317,6 +4311,16 @@ https://codepen.io/rabakilgur/pen/zyggOe
         content: ' \e5cf';
 }
 */
+
+.woocommerce ul.products {
+	margin: 0px !important;
+	padding: 30px 0 0 0 !important;
+}
+
+.woocommerce ul.products li {
+    list-style: none outside;
+	margin-bottom: 30px !important;
+}
 
 .price {
 	font-size: 24px !important;
