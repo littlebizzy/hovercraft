@@ -3764,11 +3764,17 @@ input, select {
 	padding: 10px 20px !important;
 	border: 0;
 	outline: none;
-
 	font-size: 16px;
 	background: #ffffff;
 	display: inline-block;
 	box-shadow: inset 0px 0px 0px 1px <?php echo $breadcrumbs_text_color; ?>;
+}
+
+option {
+	line-height: 1.5;
+	padding: 0 !important;
+	display: block;
+	white-space: nowrap;
 }
 
 #topbar input, .hero-half input {
@@ -4221,10 +4227,11 @@ p.woocommerce-result-count {
 	float: none !important;
 	display: block;
 	margin: 0 0 20px 0 !important;
-	font-size: 18px;
+	padding: 0 !important;
+	font-size: 16px;
 	font-weight: 600;
 	color: <?php echo $breadcrumbs_text_color; ?>;
-	line-height: 30px !important;
+	line-height: 1.5 !important;
 	}
 }
 
@@ -4232,10 +4239,11 @@ p.woocommerce-result-count {
 p.woocommerce-result-count {
 	float: left !important;
 	margin: 0 !important;
-	font-size: 18px;
+	padding: 5px 0px !important;
+	font-size: 16px;
 	font-weight: 600;
 	color: <?php echo $breadcrumbs_text_color; ?>;
-	line-height: 30px !important;
+	line-height: 1.5 !important;
 	}
 }
 
@@ -4249,7 +4257,6 @@ https://codepen.io/rabakilgur/pen/zyggOe
 		float: none !important;
 		width: 100%;
 		max-width: 100%;
-		height: 30px !important;
 	} 
 }
 
@@ -4270,7 +4277,7 @@ form.woocommerce-ordering {
   	select {
 		appearance: none;
 		max-width: 100%;
-		vertical-align: middle;
+		vertical-align: middle !important;
 		outline: none;
 		border: none;
     	box-shadow: none;
