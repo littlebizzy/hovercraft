@@ -240,6 +240,7 @@ html, body {
 	}
 }
 
+
 /* body frozen (triggered by offcanvas menu js) */
 
 body.frozen {
@@ -249,26 +250,6 @@ body.frozen {
 
 /* misc */
 
-blockquote {
-	margin: 30px 0px 30px 30px;
-	padding: 20px 30px;
-	border-left: 5px solid #ECEFF1;
-	color: #607D8B;
-}
-
-blockquote p {
-	font-size: 18px;
-	line-height: 2;
-}
-
-blockquote p:last-child {
-	margin-bottom: 0;
-}
-
-blockquote .wp-caption-text {
-	<?php if ( $blockquote_captions == 'none') { echo "display: none;"; } ?>
-}
-
 strong {
 	font-weight: 700;
 }
@@ -276,6 +257,9 @@ strong {
 em {
     font-style: italic;
 }
+
+
+/* paragraphs */
 
 @media screen and (max-width: 1200px) {
 p {
@@ -287,6 +271,10 @@ p {
 p {
 	margin-bottom: 30px;
 	}
+}
+
+.clear {
+	clear: both;
 }
 
 
@@ -328,8 +316,46 @@ p {
 	}
 }
 
-.clear {
-	clear:both;
+
+/* unordered and ordered lists */
+
+ul {
+	list-style-position: inside;
+}
+
+ol {
+	list-style-position: inside;
+}
+
+li {
+	line-height: 2;
+}
+
+ol > li::marker {
+  font-weight: 700;
+}
+
+
+/* blockquotes */
+
+blockquote {
+	margin: 30px 0px 30px 30px;
+	padding: 20px 30px;
+	border-left: 5px solid #ECEFF1;
+	color: #607D8B;
+}
+
+blockquote p {
+	font-size: 18px;
+	line-height: 2;
+}
+
+blockquote p:last-child {
+	margin-bottom: 0;
+}
+
+blockquote .wp-caption-text {
+	<?php if ( $blockquote_captions == 'none') { echo "display: none;"; } ?>
 }
 
 
@@ -376,21 +402,6 @@ table td {
 	}
 }
 
-ul {
-	list-style-position: inside;
-}
-
-ol {
-	list-style-position: inside;
-}
-
-li {
-	margin-bottom: 5px;
-}
-
-ol > li::marker {
-  font-weight: 700;
-}
 
 iframe {
 	position: relative;
@@ -3014,7 +3025,6 @@ p.biography-description {
 .widget-wrapper ul li ul li {
     margin-left: 0 !important;
     list-style-type: circle;
-    line-height: 2;
 }
 	
  .widget-wrapper iframe {
