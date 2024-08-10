@@ -1266,8 +1266,14 @@ button {
 	padding: 10px 20px;
 	text-decoration: none;
 	background: #ECEFF1;
-	border: 0;
+	border: 0 !important;
+	border-radius: 0 !important;
 	cursor: pointer;
+}
+
+.button {
+	border: 0 !important;
+	border-radius: 0 !important;
 }
 
 @media screen and (max-width: 1200px) {
@@ -4178,6 +4184,30 @@ visibility: hidden;
 
 
 /* woocommerce */
+
+.checkout-button {
+	background: <?php echo $default_link_color; ?>;
+}
+
+.checkout-button:hover {
+	background: <?php echo $default_hover_color; ?>;
+}
+
+@media screen and (max-width: 1200px) {
+	div.woocommerce-notices-wrapper {
+		margin-bottom: 20px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	div.woocommerce-notices-wrapper {
+		margin-bottom: 30px;
+	}
+}
+
+div.woocommerce-notices-wrapper ul {
+	margin: 0;
+}
 
 @media screen and (max-width: 1200px) {
 .woocommerce-result-count {
