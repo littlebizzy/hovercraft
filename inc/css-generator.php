@@ -328,6 +328,7 @@ ol {
 }
 
 li {
+	margin-bottom: 5px;
 	line-height: 2;
 }
 
