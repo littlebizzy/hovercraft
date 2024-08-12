@@ -1462,86 +1462,6 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
-// footer font size (desktop) setting
-$wp_customize->add_setting( 'hovercraft_footer_desktop_font_size', array(
-    'default'    => '14',
-	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
-);
-
-// footer font size (desktop) control
-$wp_customize->add_control( new WP_Customize_Control(
-        $wp_customize,
-        'hovercraft_footer_desktop_font_size',
-        array(
-            'label'     => __( 'Footer Font Size (Desktop)', 'hovercraft' ),
-			'description' => __( 'Specify font size to use, in pixels, for the footer on desktop devices?', 'hovercraft' ),
-            'section'   => 'hovercraft_fonts',
-            'settings'  => 'hovercraft_footer_desktop_font_size',
-            'type' => 'text'
-        )
-) );
-
-// footer font size (mobile) setting
-$wp_customize->add_setting( 'hovercraft_footer_mobile_font_size', array(
-    'default'    => '14',
-	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
-);
-
-// footer font size (mobile) control
-$wp_customize->add_control( new WP_Customize_Control(
-        $wp_customize,
-        'hovercraft_footer_mobile_font_size',
-        array(
-            'label'     => __( 'Footer Font Size (Mobile)', 'hovercraft' ),
-			'description' => __( 'Specify font size to use, in pixels, for the footer on mobile devices?', 'hovercraft' ),
-            'section'   => 'hovercraft_fonts',
-            'settings'  => 'hovercraft_footer_mobile_font_size',
-            'type' => 'text'
-        )
-) );
-
-// copyright font size (desktop) setting
-$wp_customize->add_setting( 'hovercraft_copyright_desktop_font_size', array(
-    'default'    => '14',
-	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
-);
-
-// copyright font size (desktop) control
-$wp_customize->add_control( new WP_Customize_Control(
-        $wp_customize,
-        'hovercraft_copyright_desktop_font_size',
-        array(
-            'label'     => __( 'Copyright Font Size (Desktop)', 'hovercraft' ),
-			'description' => __( 'Specify font size to use, in pixels, for the copyright on desktop devices?', 'hovercraft' ),
-            'section'   => 'hovercraft_fonts',
-            'settings'  => 'hovercraft_copyright_desktop_font_size',
-            'type' => 'text'
-        )
-) );
-
-// copyright font size (mobile) setting
-$wp_customize->add_setting( 'hovercraft_copyright_mobile_font_size', array(
-    'default'    => '14',
-	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
-);
-
-// copyright font size (mobile) control
-$wp_customize->add_control( new WP_Customize_Control(
-        $wp_customize,
-        'hovercraft_copyright_mobile_font_size',
-        array(
-            'label'     => __( 'Copyright Font Size (Mobile)', 'hovercraft' ),
-			'description' => __( 'Specify font size to use, in pixels, for the copyright on mobile devices?', 'hovercraft' ),
-            'section'   => 'hovercraft_fonts',
-            'settings'  => 'hovercraft_copyright_mobile_font_size',
-            'type' => 'text'
-        )
-) );
-
 // back to top font size (desktop) setting
 $wp_customize->add_setting( 'hovercraft_back_to_top_desktop_font_size', array(
     'default'    => '12',
@@ -2194,6 +2114,86 @@ $wp_customize->add_control( new WP_Customize_Control(
 			'description' => __( 'Specify font size to use, in pixels, for the social sharing icons?', 'hovercraft' ),
             'section'   => 'hovercraft_fonts',
             'settings'  => 'hovercraft_social_sharing_font_size',
+            'type' => 'text'
+        )
+) );
+
+// footer font size (desktop) setting
+$wp_customize->add_setting( 'hovercraft_footer_desktop_font_size', array(
+    'default'    => '14',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
+	) 
+);
+
+// footer font size (desktop) control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_footer_desktop_font_size',
+        array(
+            'label'     => __( 'Footer Font Size (Desktop)', 'hovercraft' ),
+			'description' => __( 'Specify font size to use, in pixels, for the footer on desktop devices?', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_footer_desktop_font_size',
+            'type' => 'text'
+        )
+) );
+
+// footer font size (mobile) setting
+$wp_customize->add_setting( 'hovercraft_footer_mobile_font_size', array(
+    'default'    => '14',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
+	) 
+);
+
+// footer font size (mobile) control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_footer_mobile_font_size',
+        array(
+            'label'     => __( 'Footer Font Size (Mobile)', 'hovercraft' ),
+			'description' => __( 'Specify font size to use, in pixels, for the footer on mobile devices?', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_footer_mobile_font_size',
+            'type' => 'text'
+        )
+) );
+
+// copyright font size (desktop) setting
+$wp_customize->add_setting( 'hovercraft_copyright_desktop_font_size', array(
+    'default'    => '14',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
+	) 
+);
+
+// copyright font size (desktop) control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_copyright_desktop_font_size',
+        array(
+            'label'     => __( 'Copyright Font Size (Desktop)', 'hovercraft' ),
+			'description' => __( 'Specify font size to use, in pixels, for the copyright on desktop devices?', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_copyright_desktop_font_size',
+            'type' => 'text'
+        )
+) );
+
+// copyright font size (mobile) setting
+$wp_customize->add_setting( 'hovercraft_copyright_mobile_font_size', array(
+    'default'    => '14',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
+	) 
+);
+
+// copyright font size (mobile) control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_copyright_mobile_font_size',
+        array(
+            'label'     => __( 'Copyright Font Size (Mobile)', 'hovercraft' ),
+			'description' => __( 'Specify font size to use, in pixels, for the copyright on mobile devices?', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_copyright_mobile_font_size',
             'type' => 'text'
         )
 ) );
