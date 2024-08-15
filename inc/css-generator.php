@@ -52,6 +52,8 @@ function hovercraft_generate_css(){
 	/* misc */
 	$blockquote_captions = get_theme_mod( 'hovercraft_blockquote_captions', 'none' );
 	$breadcrumbs = get_theme_mod( 'hovercraft_breadcrumbs', 'none' );
+	$home_postmain_top_columns = get_theme_mod( 'hovercraft_home_postmain_top_columns', '1' );
+	$home_postmain_bottom_columns = get_theme_mod( 'hovercraft_home_postmain_bottom_columns', '1' );
 	$prefooter_top_columns = get_theme_mod( 'hovercraft_prefooter_top_columns', '1' );
 	$prefooter_bottom_columns = get_theme_mod( 'hovercraft_prefooter_bottom_columns', '1' );
 	$gallery_captions = get_theme_mod( 'hovercraft_gallery_captions', 'none' );
@@ -3103,6 +3105,37 @@ p.biography-description {
 	background: <?php echo $postmain_top_background_color; ?>;
 	color: <?php echo $postmain_top_text_color; ?>;
 	padding: 30px 0px;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+#home-postmain-top .inner {
+	width: 100%;
+	padding: 0px 0px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+#home-postmain-top .inner {
+	width: 100%;
+	display: grid;
+	<?php if ( $home_postmain_top_columns == '1' ) { 
+		echo "grid-template-columns: repeat(1, 1fr);\n"; 
+	} elseif ( $home_postmain_top_columns == '2' ) { 
+		echo "grid-template-columns: repeat(2, 1fr);\n"; 
+	} elseif ( $home_postmain_top_columns == '3' ) { 
+		echo "grid-template-columns: repeat(3, 1fr);\n"; 
+	} elseif ( $home_postmain_top_columns == '4' ) { 
+		echo "grid-template-columns: repeat(4, 1fr);\n"; 
+	} elseif ( $home_postmain_top_columns == '5' ) { 
+		echo "grid-template-columns: repeat(5, 1fr);\n"; 
+	} elseif ( $home_postmain_top_columns == '6' ) { 
+		echo "grid-template-columns: repeat(6, 1fr);\n"; 
+	} elseif ( $home_postmain_top_columns == '7' ) { 
+		echo "grid-template-columns: repeat(7, 1fr);\n"; 
+	} elseif ( $home_postmain_top_columns == '8' ) { 
+		echo "grid-template-columns: repeat(8, 1fr);\n"; } ?>
+  	gap: 30px;
 	}
 }
 
