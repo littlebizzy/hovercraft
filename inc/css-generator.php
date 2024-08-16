@@ -3799,6 +3799,8 @@ button[type="submit"] {
 	
 input, select {
 	width: 100%;
+	height: auto !important;
+	min-height: auto !important;
 	vertical-align: middle;
 	font-weight: 400;
 	line-height: 2;
