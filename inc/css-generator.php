@@ -3780,12 +3780,8 @@ p.biography-description {
 }
 
 
-/* other stuff */
-	
-form {
-	padding: 0 !important;
-}
-	
+/* buttons and submits */
+
 button[type="submit"] {
 	font-weight: 600;
 	line-height: 1;
@@ -3796,9 +3792,18 @@ button[type="submit"] {
 	border: 0;
 	cursor: pointer;
 }
+
+
+/* forms */
+	
+form {
+	margin: 0 !important;
+	padding: 0 !important;
+}
 	
 input, select {
 	width: 100%;
+	max-width: 100%;
 	height: auto !important;
 	min-height: auto !important;
 	vertical-align: middle;
