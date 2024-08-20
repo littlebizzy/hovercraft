@@ -2941,6 +2941,21 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	)
 ) );
 
+// footer callout background color setting
+$wp_customize->add_setting( 'hovercraft_footer_callout_background_color', array(
+	'default' => '#283593',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+
+// footer callout background color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_footer_callout_background_color', array(
+	'label' => 'Foter Callout Background Color',
+	'description' => 'Specify background color of the Footer Callout widget? Note: Choose a bold tone for best results, and avoid white or shades of gray, which may result in poor visibility or CSS conflicts.',
+	'section' => 'colors',
+	'settings' => 'hovercraft_footer_callout_background_color'
+	)
+) );
+
 // sidebar widgets background color setting
 $wp_customize->add_setting( 'hovercraft_sidebar_widget_background_color', array(
 	'default' => '#ffffff',
