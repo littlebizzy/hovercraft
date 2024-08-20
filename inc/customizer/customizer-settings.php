@@ -2949,10 +2949,40 @@ $wp_customize->add_setting( 'hovercraft_footer_callout_background_color', array(
 
 // footer callout background color control
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_footer_callout_background_color', array(
-	'label' => 'Foter Callout Background Color',
+	'label' => 'Footer Callout Background Color',
 	'description' => 'Specify background color of the Footer Callout widget? Note: Choose a bold tone for best results, and avoid white or shades of gray, which may result in poor visibility or CSS conflicts.',
 	'section' => 'colors',
 	'settings' => 'hovercraft_footer_callout_background_color'
+	)
+) );
+
+// footer callout border color setting
+$wp_customize->add_setting( 'hovercraft_footer_callout_border_color', array(
+	'default' => '#283593',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+
+// footer callout border color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_footer_callout_border_color', array(
+	'label' => 'Footer Callout Border Color',
+	'description' => 'Specify border color of the Footer Callout widget?',
+	'section' => 'colors',
+	'settings' => 'hovercraft_footer_callout_border_color'
+	)
+) );
+
+// footer callout text color setting
+$wp_customize->add_setting( 'hovercraft_footer_callout_text_color', array(
+	'default' => '#ffffff',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+
+// footer callout text color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_footer_callout_text_color', array(
+	'label' => 'Footer Callout Text Color',
+	'description' => 'Specify text color of the Footer Callout widget?',
+	'section' => 'colors',
+	'settings' => 'hovercraft_footer_callout_text_color'
 	)
 ) );
 
