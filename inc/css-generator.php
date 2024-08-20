@@ -158,6 +158,7 @@ function hovercraft_generate_css(){
 	$postcolumns_top_text_color = get_theme_mod( 'hovercraft_postcolumns_top_text_color', '#263238' );
 	$postcolumns_bottom_background_color = get_theme_mod( 'hovercraft_postcolumns_bottom_background_color', '#eceff1' );
 	$postcolumns_bottom_text_color = get_theme_mod( 'hovercraft_postcolumns_bottom_text_color', '#263238' );
+	$footer_callout_background_color = get_theme_mod( 'hovercraft_footer_callout_background_color', '#283593' );
 	$sidebar_callout_background_color = get_theme_mod( 'hovercraft_sidebar_callout_background_color', '#283593' );
 	$sidebar_callout_border_color = get_theme_mod( 'hovercraft_sidebar_callout_border_color', '#283593' );
 	$sidebar_callout_text_color = get_theme_mod( 'hovercraft_sidebar_callout_text_color', '#ffffff' );
@@ -3014,6 +3015,39 @@ p.biography-description {
 	color: <?php echo $sidebar_callout_hover_link_color; ?> !important;
 	background: <?php echo $sidebar_callout_hover_background_color; ?> !important;
 	box-shadow: none !important;
+}
+
+
+/* footer callout widget area */
+
+#footer .widget-footer-callout {
+   	background: <?php echo $footer_callout_background_color; ?> !important;
+	color: <?php echo $footer_callout_text_color; ?> !important;
+	box-shadow: inset 0px 0px 0px 1px <?php echo $footer_callout_border_color; ?> !important;
+}
+
+#sidebar .widget-footer-callout .widget-title {
+	color: <?php echo $footer_callout_text_color; ?> !important;
+}
+
+#sidebar .widget-footer-callout a {
+	color: <?php echo $footer_callout_link_color; ?>;
+}
+
+@media screen and (max-width: 1200px) {
+.cta-footer-callout {
+	display: block;
+	width: 100%;
+	margin-top: 40px;
+}
+}
+
+@media screen and (min-width: 1200px) {
+.cta-footer-callout {
+	display: block;
+	width: 100%;
+	margin-top: 40px;
+}
 }
 
 
