@@ -2,6 +2,7 @@
 
 	<div class="footer-column-one-three-equal">
     	<?php dynamic_sidebar( 'hovercraft_footer_one' ); ?>
+		<?php dynamic_sidebar( 'hovercraft_footer_callout' ); ?>
 		<div class="clear"></div>
 	</div><!-- footer-column-one-three-equal -->
 	
