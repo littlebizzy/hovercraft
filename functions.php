@@ -60,6 +60,9 @@ require get_template_directory() . '/inc/disable-responsive-images.php';
 // featured images
 require get_template_directory() . '/inc/featured-images.php';
 
+// footer callout
+require get_template_directory() . '/inc/footer-callout.php';
+
 // full screen search
 require get_template_directory() . '/inc/full-screen-search.php';
 
