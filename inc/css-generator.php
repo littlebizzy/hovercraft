@@ -3026,14 +3026,19 @@ p.biography-description {
    	background: <?php echo $footer_callout_background_color; ?> !important;
 	color: <?php echo $footer_callout_text_color; ?> !important;
 	box-shadow: inset 0px 0px 0px 1px <?php echo $footer_callout_border_color; ?> !important;
+	padding: 40px;
 }
 
-#sidebar .widget-footer-callout .widget-title {
+#footer .widget-footer-callout .widget-title {
 	color: <?php echo $footer_callout_text_color; ?> !important;
 }
 
-#sidebar .widget-footer-callout a {
+#footer .widget-footer-callout a {
 	color: <?php echo $footer_callout_link_color; ?>;
+}
+
+#footer .widget-wrapper p:last-child {
+	margin-bottom: 0;
 }
 
 @media screen and (max-width: 1200px) {
