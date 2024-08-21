@@ -3909,22 +3909,22 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
-// footer callout decoration setting
-$wp_customize->add_setting( 'hovercraft_footer_callout_decoration', array(
+// footer callout link decoration setting
+$wp_customize->add_setting( 'hovercraft_footer_callout_link_decoration', array(
     'default'    => 'underline',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
 	) 
 );
 
-// footer callout decoration control
+// footer callout link decoration control
 $wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
-        'hovercraft_footer_callout_decoration',
+        'hovercraft_footer_callout_link_decoration',
         array(
             'label'     => __('Footer Callout Link Decoration', 'hovercraft'),
 			'description' => __( 'Specify link decoration style for the Footer Callout widget area?', 'hovercraft' ),
             'section'   => 'hovercraft_link_styling',
-            'settings'  => 'hovercraft_footer_callout_decoration',
+            'settings'  => 'hovercraft_footer_callout_link_decoration',
             'type'      => 'select',
 			'choices' => array(
 				'underline' => 'Underline',
