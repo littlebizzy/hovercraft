@@ -220,6 +220,7 @@ function hovercraft_generate_css(){
 	$prefooter_top_link_decoration = get_theme_mod( 'hovercraft_prefooter_top_link_decoration', 'underline' );
 	$prefooter_bottom_link_decoration = get_theme_mod( 'hovercraft_prefooter_bottom_link_decoration', 'underline' );
 	$footer_link_decoration = get_theme_mod( 'hovercraft_footer_link_decoration', 'underline' );
+	$footer_callout_link_decoration = get_theme_mod( 'hovercraft_footer_callout_decoration', 'underline' );
 	$copyright_link_decoration = get_theme_mod( 'hovercraft_copyright_link_decoration', 'underline' );
     ?>
 
