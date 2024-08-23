@@ -576,7 +576,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 
 // widget layouts section
 $wp_customize->add_section( 'hovercraft_widget_layouts', array(
-    'title'      => 'Widget Layouts',
+    'title'      => 'Widget Area Layouts',
     'priority'   => 35,
 ) );
 
