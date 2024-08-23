@@ -592,8 +592,8 @@ $wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
         'hovercraft_home_postmain_top_columns',
         array(
-            'label'     => __('Home Postmain Top Widgets Across (Desktop)', 'hovercraft'),
-			'description' => __( 'How many widgets across should display in the Home Postmain Top widget area? (How many columns)', 'hovercraft' ),
+            'label'     => __('Home Postmain Top Columns (Desktop)', 'hovercraft'),
+			'description' => __( 'How many widgets across should display in the Home Postmain Top widget area?', 'hovercraft' ),
             'section'   => 'hovercraft_widget_layouts',
             'settings'  => 'hovercraft_home_postmain_top_columns',
             'type'      => 'select',
@@ -626,8 +626,8 @@ $wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
         'hovercraft_home_postmain_bottom_columns',
         array(
-            'label'     => __('Home Postmain Bottom Widgets Across (Desktop)', 'hovercraft'),
-			'description' => __( 'How many widgets across should display in the Home Postmain Bottom widget area? (How many columns)', 'hovercraft' ),
+            'label'     => __('Home Postmain Bottom Columns (Desktop)', 'hovercraft'),
+			'description' => __( 'How many widgets across should display in the Home Postmain Bottom widget area?', 'hovercraft' ),
             'section'   => 'hovercraft_widget_layouts',
             'settings'  => 'hovercraft_home_postmain_bottom_columns',
             'type'      => 'select',
@@ -660,8 +660,8 @@ $wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
         'hovercraft_prefooter_top_columns',
         array(
-            'label'     => __('Prefooter Top Widgets Across (Desktop)', 'hovercraft'),
-			'description' => __( 'How many widgets across should display in the Prefooter Top widget area? (How many columns)', 'hovercraft' ),
+            'label'     => __('Prefooter Top Columns (Desktop)', 'hovercraft'),
+			'description' => __( 'How many widgets across should display in the Prefooter Top widget area?', 'hovercraft' ),
             'section'   => 'hovercraft_widget_layouts',
             'settings'  => 'hovercraft_prefooter_top_columns',
             'type'      => 'select',
@@ -694,8 +694,8 @@ $wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
         'hovercraft_prefooter_bottom_columns',
         array(
-            'label'     => __('Prefooter Bottom Widgets Across (Desktop)', 'hovercraft'),
-			'description' => __( 'How many widgets across should display in the Prefooter Bottom widget area? (How many columns)', 'hovercraft' ),
+            'label'     => __('Prefooter Bottom Columns (Desktop)', 'hovercraft'),
+			'description' => __( 'How many widgets across should display in the Prefooter Bottom widget area?', 'hovercraft' ),
             'section'   => 'hovercraft_widget_layouts',
             'settings'  => 'hovercraft_prefooter_bottom_columns',
             'type'      => 'select',
