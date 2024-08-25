@@ -49,13 +49,17 @@ function hovercraft_generate_css(){
 	$social_sharing_font_size = get_theme_mod( 'hovercraft_social_sharing_font_size', '18' );
 	$offcanvas_font_weight = get_theme_mod( 'hovercraft_offcanvas_font_weight', '400' );
 
-	/* misc */
-	$blockquote_captions = get_theme_mod( 'hovercraft_blockquote_captions', 'none' );
-	$breadcrumbs = get_theme_mod( 'hovercraft_breadcrumbs', 'none' );
+	/* widget areas */
+	$home_premain_top_columns = get_theme_mod( 'hovercraft_home_premain_top_columns', '1' );
+	$home_premain_bottom_columns = get_theme_mod( 'hovercraft_home_premain_bottom_columns', '1' );
 	$home_postmain_top_columns = get_theme_mod( 'hovercraft_home_postmain_top_columns', '1' );
 	$home_postmain_bottom_columns = get_theme_mod( 'hovercraft_home_postmain_bottom_columns', '1' );
 	$prefooter_top_columns = get_theme_mod( 'hovercraft_prefooter_top_columns', '1' );
 	$prefooter_bottom_columns = get_theme_mod( 'hovercraft_prefooter_bottom_columns', '1' );
+	
+	/* misc */
+	$blockquote_captions = get_theme_mod( 'hovercraft_blockquote_captions', 'none' );
+	$breadcrumbs = get_theme_mod( 'hovercraft_breadcrumbs', 'none' );
 	$gallery_captions = get_theme_mod( 'hovercraft_gallery_captions', 'none' );
 	$tiles_captions = get_theme_mod( 'hovercraft_tiles_captions', 'none' );
 	$sitewide_layout = get_theme_mod( 'hovercraft_sitewide_layout', 'floating_islands' );
@@ -3098,6 +3102,35 @@ p.biography-description {
 	}
 }
 
+@media screen and (max-width: 1200px) {
+#home-premain-top .inner {
+	width: 100%;
+	padding: 0px 0px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+#home-premain-top .inner {
+	width: 100%;
+	display: grid;
+	<?php
+	if ( $home_premain_top_columns == '1' ) { echo "grid-template-columns: repeat(1, 1fr);\n"; } 
+	elseif ( $home_premain_top_columns == '2' ) { echo "grid-template-columns: repeat(2, 1fr);\n"; } 
+	elseif ( $home_premain_top_columns == '3' ) { echo "grid-template-columns: repeat(3, 1fr);\n"; } 
+	elseif ( $home_premain_top_columns == '4' ) { echo "grid-template-columns: repeat(4, 1fr);\n"; } 
+	elseif ( $home_premain_top_columns == '5' ) { echo "grid-template-columns: repeat(5, 1fr);\n"; } 
+	elseif ( $home_premain_top_columns == '6' ) { echo "grid-template-columns: repeat(6, 1fr);\n"; } 
+	elseif ( $home_premain_top_columns == '7' ) { echo "grid-template-columns: repeat(7, 1fr);\n"; } 
+	elseif ( $home_premain_top_columns == '8' ) { echo "grid-template-columns: repeat(8, 1fr);\n"; } 
+	elseif ( $home_premain_top_columns == '9' ) { echo "grid-template-columns: repeat(9, 1fr);\n"; } 
+	elseif ( $home_premain_top_columns == '10' ) { echo "grid-template-columns: repeat(10, 1fr);\n"; } 
+	elseif ( $home_premain_top_columns == '11' ) { echo "grid-template-columns: repeat(11, 1fr);\n"; } 
+	elseif ( $home_premain_top_columns == '12' ) { echo "grid-template-columns: repeat(12, 1fr);\n"; } 
+	?>
+  	gap: 30px;
+	}
+}
+
 #home-premain-top a {
 	color: <?php echo $premain_top_link_color; ?>;
 	text-decoration: <?php echo $premain_top_link_decoration; ?>;
@@ -3122,6 +3155,35 @@ p.biography-description {
 	background: <?php echo $premain_bottom_background_color; ?>;
 	color: <?php echo $premain_bottom_text_color; ?>;
 	padding: 30px 0px;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+#home-premain-bottom .inner {
+	width: 100%;
+	padding: 0px 0px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+#home-premain-bottom .inner {
+	width: 100%;
+	display: grid;
+	<?php
+	if ( $home_premain_bottom_columns == '1' ) { echo "grid-template-columns: repeat(1, 1fr);\n"; } 
+	elseif ( $home_premain_bottom_columns == '2' ) { echo "grid-template-columns: repeat(2, 1fr);\n"; } 
+	elseif ( $home_premain_bottom_columns == '3' ) { echo "grid-template-columns: repeat(3, 1fr);\n"; } 
+	elseif ( $home_premain_bottom_columns == '4' ) { echo "grid-template-columns: repeat(4, 1fr);\n"; } 
+	elseif ( $home_premain_bottom_columns == '5' ) { echo "grid-template-columns: repeat(5, 1fr);\n"; } 
+	elseif ( $home_premain_bottom_columns == '6' ) { echo "grid-template-columns: repeat(6, 1fr);\n"; } 
+	elseif ( $home_premain_bottom_columns == '7' ) { echo "grid-template-columns: repeat(7, 1fr);\n"; } 
+	elseif ( $home_premain_bottom_columns == '8' ) { echo "grid-template-columns: repeat(8, 1fr);\n"; } 
+	elseif ( $home_premain_bottom_columns == '9' ) { echo "grid-template-columns: repeat(9, 1fr);\n"; } 
+	elseif ( $home_premain_bottom_columns == '10' ) { echo "grid-template-columns: repeat(10, 1fr);\n"; } 
+	elseif ( $home_premain_bottom_columns == '11' ) { echo "grid-template-columns: repeat(11, 1fr);\n"; } 
+	elseif ( $home_premain_bottom_columns == '12' ) { echo "grid-template-columns: repeat(12, 1fr);\n"; } 
+	?>
+  	gap: 30px;
 	}
 }
 
