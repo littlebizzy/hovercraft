@@ -56,7 +56,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_mobile_menu',
         array(
             'label'     => __( 'Mobile Menu Style', 'hovercraft' ),
-			'description' => __( 'Which mobile menu design do you want to use?', 'hovercraft' ),
+			'description' => __( 'Which mobile menu style do you want to use? Larger menus should usually use the Accordion Push.', 'hovercraft' ),
             'section'   => 'hovercraft_general',
             'settings'  => 'hovercraft_mobile_menu',
             'type'      => 'select',
@@ -105,7 +105,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_site_name_display_mobile',
         array(
             'label'     => __( 'Site Name Display (Mobile)', 'hovercraft' ),
-			'description' => __( 'Should the Site Name be displayed on mobile devices?', 'hovercraft' ),
+			'description' => __( 'Should the Site Name be displayed on mobile devices next to the logo?', 'hovercraft' ),
             'section'   => 'hovercraft_general',
             'settings'  => 'hovercraft_site_name_display_mobile',
             'type'      => 'select',
