@@ -32,7 +32,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_sitewide_layout',
         array(
             'label'     => __( 'Sitewide Layout', 'hovercraft' ),
-			'description' => __( 'Which layout style to use? This affects padding and alignment, so you might need to adjust background s accordingly.', 'hovercraft' ),
+			'description' => __( 'Which layout style to use? This affects padding and alignment, so you might need to adjust background colors accordingly.', 'hovercraft' ),
             'section'   => 'hovercraft_general',
             'settings'  => 'hovercraft_sitewide_layout',
             'type'      => 'select',
