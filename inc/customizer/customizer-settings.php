@@ -506,6 +506,30 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// home premain bottom text-align setting
+$wp_customize->add_setting( 'hovercraft_home_premain_bottom_align', array(
+    'default'    => 'center',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// home premain bottom text-align control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_home_premain_bottom_align',
+        array(
+            'label'     => __( 'Home Premain Bottom Text Align', 'hovercraft' ),
+			'description' => __( 'How should content be aigned in the Home Premain Bottom widget area?', 'hovercraft' ),
+            'section'   => 'hovercraft_widget_layouts',
+            'settings'  => 'hovercraft_home_premain_bottom_align',
+            'type'      => 'select',
+			'choices' => array(
+        		'center' => 'Center',
+				'left' => 'Left'
+    			)
+        )
+) );
+
 // home postmain top widget columns setting
 $wp_customize->add_setting( 'hovercraft_home_postmain_top_columns', array(
     'default'    => '1',
@@ -540,6 +564,30 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// home postmain top text-align setting
+$wp_customize->add_setting( 'hovercraft_home_postmain_top_align', array(
+    'default'    => 'center',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// home postmain top text-align control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_home_postmain_top_align',
+        array(
+            'label'     => __( 'Home Postmain Top Text Align', 'hovercraft' ),
+			'description' => __( 'How should content be aigned in the Home Postmain Top widget area?', 'hovercraft' ),
+            'section'   => 'hovercraft_widget_layouts',
+            'settings'  => 'hovercraft_home_postmain_top_align',
+            'type'      => 'select',
+			'choices' => array(
+        		'center' => 'Center',
+				'left' => 'Left'
+    			)
+        )
+) );
+
 // home postmain bottom widget columns setting
 $wp_customize->add_setting( 'hovercraft_home_postmain_bottom_columns', array(
     'default'    => '1',
@@ -570,6 +618,30 @@ $wp_customize->add_control( new WP_Customize_Control(
 				'10' => '10 Columns',
         		'11' => '11 Columns',
 				'12' => '12 Columns'
+    			)
+        )
+) );
+
+// home postmain bottom text-align setting
+$wp_customize->add_setting( 'hovercraft_home_postmain_bottom_align', array(
+    'default'    => 'center',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// home postmain bottom text-align control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_home_postmain_bottom_align',
+        array(
+            'label'     => __( 'Home Postmain Bottom Text Align', 'hovercraft' ),
+			'description' => __( 'How should content be aigned in the Home Postmain Bottom widget area?', 'hovercraft' ),
+            'section'   => 'hovercraft_widget_layouts',
+            'settings'  => 'hovercraft_home_postmain_bottom_align',
+            'type'      => 'select',
+			'choices' => array(
+        		'center' => 'Center',
+				'left' => 'Left'
     			)
         )
 ) );
@@ -608,6 +680,30 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// prefooter top text-align setting
+$wp_customize->add_setting( 'hovercraft_prefooter_top_align', array(
+    'default'    => 'left',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// prefooter top text-align control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_prefooter_top_align',
+        array(
+            'label'     => __( 'Prefooter Top Text Align', 'hovercraft' ),
+			'description' => __( 'How should content be aigned in the Prefooter Top widget area?', 'hovercraft' ),
+            'section'   => 'hovercraft_widget_layouts',
+            'settings'  => 'hovercraft_prefooter_top_align',
+            'type'      => 'select',
+			'choices' => array(
+        		'center' => 'Center',
+				'left' => 'Left'
+    			)
+        )
+) );
+
 // prefooter bottom widget columns setting
 $wp_customize->add_setting( 'hovercraft_prefooter_bottom_columns', array(
     'default'    => '1',
@@ -638,6 +734,30 @@ $wp_customize->add_control( new WP_Customize_Control(
 				'10' => '10 Columns',
         		'11' => '11 Columns',
 				'12' => '12 Columns'
+    			)
+        )
+) );
+
+// prefooter bottom text-align setting
+$wp_customize->add_setting( 'hovercraft_prefooter_bottom_align', array(
+    'default'    => 'left',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// prefooter bottom text-align control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_prefooter_bottom_align',
+        array(
+            'label'     => __( 'Prefooter Bottom Text Align', 'hovercraft' ),
+			'description' => __( 'How should content be aigned in the Prefooter Bottom widget area?', 'hovercraft' ),
+            'section'   => 'hovercraft_widget_layouts',
+            'settings'  => 'hovercraft_prefooter_bottom_align',
+            'type'      => 'select',
+			'choices' => array(
+        		'center' => 'Center',
+				'left' => 'Left'
     			)
         )
 ) );
