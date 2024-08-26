@@ -2313,11 +2313,6 @@ video.hero-background-video {
 @media screen and (min-width: 1200px) {
 #main {
 	padding: 40px 0px;
-	<?php if ( $sitewide_layout == 'floating_islands' ) { 
-			echo "background: $main_background_color;\n"; 
-		} else { 
-			echo "background: #ffffff;\n"; 
-		}  ?>
 	background: <?php echo $main_background_color; ?>;
 	}
 }
