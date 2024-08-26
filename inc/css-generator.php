@@ -2626,7 +2626,7 @@ img.featured-image-archive {
 	<?php if ( $sitewide_layout == 'floating_islands' ) { 
 			echo "padding: 40px 40px 40px 40px;\n"; 
 		} else { 
-			echo "padding: 0px 40px 0px 0px;\n"; 
+			echo "padding: 0px 0px 0px 0px;\n"; 
 		}  ?>
 	display: block;
 	overflow: hidden;
