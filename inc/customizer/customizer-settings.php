@@ -448,6 +448,30 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// home premain top text-align setting
+$wp_customize->add_setting( 'hovercraft_home_premain_top_align', array(
+    'default'    => 'center',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// home premain top text-align control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_home_premain_top_align',
+        array(
+            'label'     => __( 'Home Premain Top Text Align', 'hovercraft' ),
+			'description' => __( 'How should content be aigned in the Home Premain Top widget area?', 'hovercraft' ),
+            'section'   => 'hovercraft_widget_layouts',
+            'settings'  => 'hovercraft_home_premain_top_align',
+            'type'      => 'select',
+			'choices' => array(
+        		'center' => 'Center',
+				'left' => 'Left'
+    			)
+        )
+) );
+
 // home premain bottom widget columns setting
 $wp_customize->add_setting( 'hovercraft_home_premain_bottom_columns', array(
     'default'    => '1',
