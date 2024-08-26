@@ -3,36 +3,12 @@
 // css from customizer
 function hovercraft_generate_css(){
 
-	/* heros */
-	$hero_gradient_tones = get_theme_mod( 'hovercraft_hero_gradient_tones', 'two_tones' );
-	$mini_hero_vertical_padding = get_theme_mod( 'hovercraft_mini_hero_vertical_padding', '80' );
-	$full_hero_background_position = get_theme_mod( 'hovercraft_full_hero_background_position', 'center_center' );
-	$half_hero_background_position = get_theme_mod( 'hovercraft_half_hero_background_position', 'center_center' );
-	$mini_hero_background_position = get_theme_mod( 'hovercraft_mini_hero_background_position', 'center_center' );
-	$full_hero_header_background_color = get_theme_mod( 'hovercraft_full_hero_header_background_color', '#263238' );
-	$full_hero_header_background_transparency = get_theme_mod( 'hovercraft_full_hero_header_background_transparency', '0.20' );
-	$hero_gradient_angle = get_theme_mod( 'hovercraft_hero_gradient_angle', '60deg' );
-	$hero_gradient_start_color_transparency = get_theme_mod( 'hovercraft_hero_gradient_start_color_transparency', '0.50' );
-	$hero_gradient_mid_color_transparency = get_theme_mod( 'hovercraft_hero_gradient_mid_color_transparency', '0.50' );
-	$hero_gradient_stop_color_transparency = get_theme_mod( 'hovercraft_hero_gradient_stop_color_transparency', '0.50' );
-	$hero_gradient_start_color_length = get_theme_mod( 'hovercraft_hero_gradient_start_color_length', '30' );
-	$hero_gradient_mid_color_length = get_theme_mod( 'hovercraft_hero_gradient_mid_color_length', '30' );
-	$hero_gradient_stop_color_length = get_theme_mod( 'hovercraft_hero_gradient_stop_color_length', '100' );
-	$hero_content_width_desktop = get_theme_mod( 'hovercraft_hero_content_width_desktop', '900px' );
-	$url_hero_video = wp_get_attachment_url( get_theme_mod( 'hovercraft_video' ) ); 
-	$url_header_image = esc_url( get_header_image() );
-	$url_featured_image = wp_get_attachment_url( get_post_thumbnail_id(), 'large' ); 
-	
-	if (!empty( $url_featured_image )) { 
-		$hero_image = $url_featured_image; 
-	} else { 
-		$hero_image = $url_header_image; 
-	}
-
 	/* fonts */
 	$default_font_family = get_theme_mod( 'hovercraft_default_font', 'noto_sans' );
 	$default_desktop_font_size = get_theme_mod( 'hovercraft_default_desktop_font_size', '16' );
 	$default_mobile_font_size = get_theme_mod( 'hovercraft_default_mobile_font_size', '16' );
+	$topbar_desktop_font_size = get_theme_mod( 'hovercraft_topbar_desktop_font_size', '14' );
+	$topbar_mobile_font_size = get_theme_mod( 'hovercraft_topbar_mobile_font_size', '14' );
 	$site_name_font_family = get_theme_mod( 'hovercraft_site_name_font', 'noto_sans' );
 	$site_name_mobile_font_size = get_theme_mod( 'hovercraft_site_name_mobile_font_size', '24' );
 	$site_name_desktop_font_size = get_theme_mod( 'hovercraft_site_name_desktop_font_size', '36' );
@@ -40,46 +16,14 @@ function hovercraft_generate_css(){
 	$main_menu_font_family = get_theme_mod( 'hovercraft_main_menu_font', 'noto_sans' );
 	$main_menu_desktop_font_size = get_theme_mod( 'hovercraft_main_menu_desktop_font_size', '18' );
 	$main_menu_font_weight = get_theme_mod( 'hovercraft_main_menu_font_weight', '600' );
+	$offcanvas_font_size = get_theme_mod( 'hovercraft_offcanvas_font_size', '18' );
+	$offcanvas_font_weight = get_theme_mod( 'hovercraft_offcanvas_font_weight', '400' );
+	$offcanvas_submenu_font_size = get_theme_mod( 'hovercraft_offcanvas_submenu_font_size', '16' );
 	$after_byline_mobile_font_size = get_theme_mod( 'hovercraft_after_byline_mobile_font_size', '12' );
 	$after_byline_desktop_font_size = get_theme_mod( 'hovercraft_after_byline_desktop_font_size', '12' );
-	$offcanvas_font_size = get_theme_mod( 'hovercraft_offcanvas_font_size', '18' );
-	$offcanvas_submenu_font_size = get_theme_mod( 'hovercraft_offcanvas_submenu_font_size', '16' );
-	$topbar_desktop_font_size = get_theme_mod( 'hovercraft_topbar_desktop_font_size', '14' );
-	$topbar_mobile_font_size = get_theme_mod( 'hovercraft_topbar_mobile_font_size', '14' );
 	$social_sharing_font_size = get_theme_mod( 'hovercraft_social_sharing_font_size', '18' );
-	$offcanvas_font_weight = get_theme_mod( 'hovercraft_offcanvas_font_weight', '400' );
 
-	/* widget areas */
-	$home_premain_top_columns = get_theme_mod( 'hovercraft_home_premain_top_columns', '1' );
-	$home_premain_bottom_columns = get_theme_mod( 'hovercraft_home_premain_bottom_columns', '1' );
-	$home_postmain_top_columns = get_theme_mod( 'hovercraft_home_postmain_top_columns', '1' );
-	$home_postmain_bottom_columns = get_theme_mod( 'hovercraft_home_postmain_bottom_columns', '1' );
-	$prefooter_top_columns = get_theme_mod( 'hovercraft_prefooter_top_columns', '1' );
-	$prefooter_bottom_columns = get_theme_mod( 'hovercraft_prefooter_bottom_columns', '1' );
-	
-	/* misc */
-	$blockquote_captions = get_theme_mod( 'hovercraft_blockquote_captions', 'none' );
-	$breadcrumbs = get_theme_mod( 'hovercraft_breadcrumbs', 'none' );
-	$gallery_captions = get_theme_mod( 'hovercraft_gallery_captions', 'none' );
-	$tiles_captions = get_theme_mod( 'hovercraft_tiles_captions', 'none' );
-	$sitewide_layout = get_theme_mod( 'hovercraft_sitewide_layout', 'floating_islands' );
-	$tiles_across = get_theme_mod( 'hovercraft_tiles_across', '3' );
-	$columns_across = get_theme_mod( 'hovercraft_columns_across', '4' );
-	$scroll_to_top = get_theme_mod( 'hovercraft_scroll_to_top', 'mobile_only' );
-	$mobile_topbar_widget = get_theme_mod( 'hovercraft_mobile_topbar', 'topbar_left' );
-	$mobile_preheader_widget = get_theme_mod( 'hovercraft_mobile_preheader', 'none' );
-	$desktop_logo_width = get_theme_mod( 'hovercraft_desktop_logo_width', '150' );
-	$mobile_logo_width = get_theme_mod( 'hovercraft_mobile_logo_width', '100' );
-	$tagline_display = get_theme_mod( 'hovercraft_tagline_display', 'right_of_site_title' );
-	$site_name_display_mobile = get_theme_mod( 'hovercraft_site_name_display_mobile', 'block' );
-	$after_byline_padding = get_theme_mod( 'hovercraft_after_byline_padding', '0' );
-	$after_byline_background_color = get_theme_mod( 'hovercraft_after_byline_background_color', '#fff8e1' );
-	$after_byline_text_color = get_theme_mod( 'hovercraft_after_byline_text_color', '#263238' );
-	$after_byline_link_color = get_theme_mod( 'hovercraft_after_byline_link_color', '#5C6BC0' );
-	$featured_image_position = get_theme_mod( 'hovercraft_featured_image_position', 'above_title' );
-	$title_divider_background_color = get_theme_mod( 'hovercraft_title_divider_background_color', '#757575' );
-	
-	/* titles */
+	/* headings (fonts) */
 	$h1_font_family = get_theme_mod( 'hovercraft_h1_font', 'noto_sans' );
 	$h1_mobile_font_size = get_theme_mod( 'hovercraft_h1_mobile_font_size', '36' );
 	$h1_desktop_font_size = get_theme_mod( 'hovercraft_h1_desktop_font_size', '48' );
@@ -110,6 +54,46 @@ function hovercraft_generate_css(){
 	$main_menu_text_transform = get_theme_mod( 'hovercraft_main_menu_text_transform', 'none' );
 	$back_to_top_text_transform = get_theme_mod( 'hovercraft_back_to_top_text_transform', 'uppercase' );
 	
+	/* heros */
+	$hero_gradient_tones = get_theme_mod( 'hovercraft_hero_gradient_tones', 'two_tones' );
+	$mini_hero_vertical_padding = get_theme_mod( 'hovercraft_mini_hero_vertical_padding', '80' );
+	$full_hero_background_position = get_theme_mod( 'hovercraft_full_hero_background_position', 'center_center' );
+	$half_hero_background_position = get_theme_mod( 'hovercraft_half_hero_background_position', 'center_center' );
+	$mini_hero_background_position = get_theme_mod( 'hovercraft_mini_hero_background_position', 'center_center' );
+	$full_hero_header_background_color = get_theme_mod( 'hovercraft_full_hero_header_background_color', '#263238' );
+	$full_hero_header_background_transparency = get_theme_mod( 'hovercraft_full_hero_header_background_transparency', '0.20' );
+	$hero_gradient_angle = get_theme_mod( 'hovercraft_hero_gradient_angle', '60deg' );
+	$hero_gradient_start_color_transparency = get_theme_mod( 'hovercraft_hero_gradient_start_color_transparency', '0.50' );
+	$hero_gradient_mid_color_transparency = get_theme_mod( 'hovercraft_hero_gradient_mid_color_transparency', '0.50' );
+	$hero_gradient_stop_color_transparency = get_theme_mod( 'hovercraft_hero_gradient_stop_color_transparency', '0.50' );
+	$hero_gradient_start_color_length = get_theme_mod( 'hovercraft_hero_gradient_start_color_length', '30' );
+	$hero_gradient_mid_color_length = get_theme_mod( 'hovercraft_hero_gradient_mid_color_length', '30' );
+	$hero_gradient_stop_color_length = get_theme_mod( 'hovercraft_hero_gradient_stop_color_length', '100' );
+	$hero_content_width_desktop = get_theme_mod( 'hovercraft_hero_content_width_desktop', '900px' );
+	$url_hero_video = wp_get_attachment_url( get_theme_mod( 'hovercraft_video' ) ); 
+	$url_header_image = esc_url( get_header_image() );
+	$url_featured_image = wp_get_attachment_url( get_post_thumbnail_id(), 'large' ); 
+	
+	if (!empty( $url_featured_image )) { 
+		$hero_image = $url_featured_image; 
+	} else { 
+		$hero_image = $url_header_image; 
+	}
+	
+	/* widget areas */
+	$home_premain_top_columns = get_theme_mod( 'hovercraft_home_premain_top_columns', '1' );
+	$home_premain_top_align = get_theme_mod( 'hovercraft_home_premain_top_align', 'center' );
+	$home_premain_bottom_columns = get_theme_mod( 'hovercraft_home_premain_bottom_columns', '1' );
+	$home_premain_bottom_align = get_theme_mod( 'hovercraft_home_premain_bottom_align', 'center' );
+	$home_postmain_top_columns = get_theme_mod( 'hovercraft_home_postmain_top_columns', '1' );
+	$home_postmain_top_align = get_theme_mod( 'hovercraft_home_postmain_top_align', 'center' );
+	$home_postmain_bottom_columns = get_theme_mod( 'hovercraft_home_postmain_bottom_columns', '1' );
+	$home_postmain_bottom_align = get_theme_mod( 'hovercraft_home_postmain_bottom_align', 'center' );
+	$prefooter_top_columns = get_theme_mod( 'hovercraft_prefooter_top_columns', '1' );
+	$prefooter_top_align = get_theme_mod( 'hovercraft_prefooter_top_align', 'left' );
+	$prefooter_bottom_columns = get_theme_mod( 'hovercraft_prefooter_bottom_columns', '1' );
+	$prefooter_bottom_align = get_theme_mod( 'hovercraft_prefooter_bottom_align', 'left' );
+	
 	/* footer */
 	$footer_mobile_font_size = get_theme_mod( 'hovercraft_footer_mobile_font_size', '14' );
 	$footer_desktop_font_size = get_theme_mod( 'hovercraft_footer_desktop_font_size', '14' );
@@ -117,6 +101,20 @@ function hovercraft_generate_css(){
 	$copyright_desktop_font_size = get_theme_mod( 'hovercraft_copyright_desktop_font_size', '14' );
 	$back_to_top_desktop_font_size = get_theme_mod( 'hovercraft_back_to_top_desktop_font_size', '12' );
 	$back_to_top_mobile_font_size = get_theme_mod( 'hovercraft_back_to_top_mobile_font_size', '12' );
+
+	/* link decoration */
+	$default_link_decoration = get_theme_mod( 'hovercraft_default_link_decoration', 'underline' );
+	$topbar_link_decoration = get_theme_mod( 'hovercraft_topbar_link_decoration', 'underline' );
+	$posthero_link_decoration = get_theme_mod( 'hovercraft_posthero_link_decoration', 'underline' );
+	$postmain_top_link_decoration = get_theme_mod( 'hovercraft_postmain_top_link_decoration', 'underline' );
+	$postmain_bottom_link_decoration = get_theme_mod( 'hovercraft_postmain_bottom_link_decoration', 'underline' );
+	$premain_top_link_decoration = get_theme_mod( 'hovercraft_premain_top_link_decoration', 'underline' );
+	$premain_bottom_link_decoration = get_theme_mod( 'hovercraft_premain_bottom_link_decoration', 'underline' );
+	$prefooter_top_link_decoration = get_theme_mod( 'hovercraft_prefooter_top_link_decoration', 'underline' );
+	$prefooter_bottom_link_decoration = get_theme_mod( 'hovercraft_prefooter_bottom_link_decoration', 'underline' );
+	$footer_link_decoration = get_theme_mod( 'hovercraft_footer_link_decoration', 'underline' );
+	$footer_callout_link_decoration = get_theme_mod( 'hovercraft_footer_callout_link_decoration', 'underline' );
+	$copyright_link_decoration = get_theme_mod( 'hovercraft_copyright_link_decoration', 'underline' );
 	
 	/* colors */
 	/* these need serious cleanup */
@@ -213,19 +211,27 @@ function hovercraft_generate_css(){
 	$back_to_top_background_hover_color = get_theme_mod( 'hovercraft_back_to_top_background_hover_color', '#eceff1' );
 	$back_to_top_link_color = get_theme_mod( 'hovercraft_back_to_top_link_color', '#263238' );
 
-	/* link decoration */
-	$default_link_decoration = get_theme_mod( 'hovercraft_default_link_decoration', 'underline' );
-	$topbar_link_decoration = get_theme_mod( 'hovercraft_topbar_link_decoration', 'underline' );
-	$posthero_link_decoration = get_theme_mod( 'hovercraft_posthero_link_decoration', 'underline' );
-	$postmain_top_link_decoration = get_theme_mod( 'hovercraft_postmain_top_link_decoration', 'underline' );
-	$postmain_bottom_link_decoration = get_theme_mod( 'hovercraft_postmain_bottom_link_decoration', 'underline' );
-	$premain_top_link_decoration = get_theme_mod( 'hovercraft_premain_top_link_decoration', 'underline' );
-	$premain_bottom_link_decoration = get_theme_mod( 'hovercraft_premain_bottom_link_decoration', 'underline' );
-	$prefooter_top_link_decoration = get_theme_mod( 'hovercraft_prefooter_top_link_decoration', 'underline' );
-	$prefooter_bottom_link_decoration = get_theme_mod( 'hovercraft_prefooter_bottom_link_decoration', 'underline' );
-	$footer_link_decoration = get_theme_mod( 'hovercraft_footer_link_decoration', 'underline' );
-	$footer_callout_link_decoration = get_theme_mod( 'hovercraft_footer_callout_link_decoration', 'underline' );
-	$copyright_link_decoration = get_theme_mod( 'hovercraft_copyright_link_decoration', 'underline' );
+	/* misc */
+	$blockquote_captions = get_theme_mod( 'hovercraft_blockquote_captions', 'none' );
+	$breadcrumbs = get_theme_mod( 'hovercraft_breadcrumbs', 'none' );
+	$gallery_captions = get_theme_mod( 'hovercraft_gallery_captions', 'none' );
+	$tiles_captions = get_theme_mod( 'hovercraft_tiles_captions', 'none' );
+	$sitewide_layout = get_theme_mod( 'hovercraft_sitewide_layout', 'floating_islands' );
+	$tiles_across = get_theme_mod( 'hovercraft_tiles_across', '3' );
+	$columns_across = get_theme_mod( 'hovercraft_columns_across', '4' );
+	$scroll_to_top = get_theme_mod( 'hovercraft_scroll_to_top', 'mobile_only' );
+	$mobile_topbar_widget = get_theme_mod( 'hovercraft_mobile_topbar', 'topbar_left' );
+	$mobile_preheader_widget = get_theme_mod( 'hovercraft_mobile_preheader', 'none' );
+	$desktop_logo_width = get_theme_mod( 'hovercraft_desktop_logo_width', '150' );
+	$mobile_logo_width = get_theme_mod( 'hovercraft_mobile_logo_width', '100' );
+	$tagline_display = get_theme_mod( 'hovercraft_tagline_display', 'right_of_site_title' );
+	$site_name_display_mobile = get_theme_mod( 'hovercraft_site_name_display_mobile', 'block' );
+	$after_byline_padding = get_theme_mod( 'hovercraft_after_byline_padding', '0' );
+	$after_byline_background_color = get_theme_mod( 'hovercraft_after_byline_background_color', '#fff8e1' );
+	$after_byline_text_color = get_theme_mod( 'hovercraft_after_byline_text_color', '#263238' );
+	$after_byline_link_color = get_theme_mod( 'hovercraft_after_byline_link_color', '#5C6BC0' );
+	$featured_image_position = get_theme_mod( 'hovercraft_featured_image_position', 'above_title' );
+	$title_divider_background_color = get_theme_mod( 'hovercraft_title_divider_background_color', '#757575' );
     ?>
 
 <style type="text/css" id="hovercraft_custom_css">
