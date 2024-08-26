@@ -16,15 +16,7 @@ if ( !is_front_page() || ( is_front_page() && $hovercraft_homepage_hide_main_che
 		
 			<div id="content-wide">
 				<?php get_template_part( 'template-parts/content/breadcrumbs' ); ?>
-
-				<!--Start the hide title-->
-				<?php $hide_title_status = get_post_meta( get_the_ID(), '_mysite_meta_hide_title', true);
-        		$post_id = get_the_ID();
-        		if($hide_title_status == "off" || !metadata_exists( 'post', $post_id, '_mysite_meta_hide_title' ) ) : ?>
-				<h1><?php the_title(); ?></h1>
-				<?php endif; ?>
-				<!--End the hide title-->
-				
+				<?php get_template_part( 'template-parts/content/title' ); ?>
 				<?php get_template_part( 'template-parts/content/loop' ); ?>
 				<?php get_template_part( 'template-parts/content/pagination' ); ?>
 				<?php get_template_part( 'template-parts/content/comments' ); ?>
