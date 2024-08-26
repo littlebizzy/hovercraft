@@ -3009,63 +3009,48 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	)
 ) );
 
-// footer callout background color setting
-$wp_customize->add_setting( 'hovercraft_footer_callout_background_color', array(
-	'default' => '#283593',
+// main background color setting
+$wp_customize->add_setting( 'hovercraft_main_background_color', array(
+	'default' => '#eceff1',
 	'sanitize_callback' => 'sanitize_hex_color',
 ) );
-
-// footer callout background color control
-$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_footer_callout_background_color', array(
-	'label' => 'Footer Callout Background Color',
-	'description' => 'Specify background color of the Footer Callout widget? Note: Choose a bold tone for best results, and avoid white or shades of gray, which may result in poor visibility or CSS conflicts.',
+ 
+// main background color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_main_background_color', array(
+	'label' => 'Main Background Color',
+	'description' => 'This is a description',
 	'section' => 'colors',
-	'settings' => 'hovercraft_footer_callout_background_color'
+	'settings' => 'hovercraft_main_background_color'
 	)
 ) );
 
-// footer callout border color setting
-$wp_customize->add_setting( 'hovercraft_footer_callout_border_color', array(
-	'default' => '#283593',
+// main background color (homepage) setting
+$wp_customize->add_setting( 'hovercraft_main_background_color_homepage', array(
+	'default' => '#eceff1',
 	'sanitize_callback' => 'sanitize_hex_color',
 ) );
-
-// footer callout border color control
-$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_footer_callout_border_color', array(
-	'label' => 'Footer Callout Border Color',
-	'description' => 'Specify border color of the Footer Callout widget?',
+ 
+// main background color (homepage) control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_main_background_color_homepage', array(
+	'label' => 'Main Background Color (Homepage)',
+	'description' => 'This is a description',
 	'section' => 'colors',
-	'settings' => 'hovercraft_footer_callout_border_color'
+	'settings' => 'hovercraft_main_background_color_homepage'
 	)
 ) );
 
-// footer callout text color setting
-$wp_customize->add_setting( 'hovercraft_footer_callout_text_color', array(
+// content background color setting
+$wp_customize->add_setting( 'hovercraft_content_background_color', array(
 	'default' => '#ffffff',
 	'sanitize_callback' => 'sanitize_hex_color',
 ) );
-
-// footer callout text color control
-$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_footer_callout_text_color', array(
-	'label' => 'Footer Callout Text Color',
-	'description' => 'Specify text color of the Footer Callout widget?',
+ 
+// content background color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_content_background_color', array(
+	'label' => 'Content Background Color',
+	'description' => 'This is a description',
 	'section' => 'colors',
-	'settings' => 'hovercraft_footer_callout_text_color'
-	)
-) );
-
-// footer callout link color setting
-$wp_customize->add_setting( 'hovercraft_footer_callout_link_color', array(
-	'default' => '#ffffff',
-	'sanitize_callback' => 'sanitize_hex_color',
-) );
-
-// footer callout link color control
-$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_footer_callout_link_color', array(
-	'label' => 'Footer Callout Link Color',
-	'description' => 'Specify link color of the Footer Callout widget?',
-	'section' => 'colors',
-	'settings' => 'hovercraft_footer_callout_link_color'
+	'settings' => 'hovercraft_content_background_color'
 	)
 ) );
 
@@ -3201,51 +3186,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	'description' => 'This is a description',
 	'section' => 'colors',
 	'settings' => 'hovercraft_column_border_color'
-	)
-) );
-
-// main background color setting
-$wp_customize->add_setting( 'hovercraft_main_background_color', array(
-	'default' => '#eceff1',
-	'sanitize_callback' => 'sanitize_hex_color',
-) );
- 
-// main background color control
-$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_main_background_color', array(
-	'label' => 'Main Background Color',
-	'description' => 'This is a description',
-	'section' => 'colors',
-	'settings' => 'hovercraft_main_background_color'
-	)
-) );
-
-// main background color (homepage) setting
-$wp_customize->add_setting( 'hovercraft_main_background_color_homepage', array(
-	'default' => '#eceff1',
-	'sanitize_callback' => 'sanitize_hex_color',
-) );
- 
-// main background color (homepage) control
-$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_main_background_color_homepage', array(
-	'label' => 'Main Background Color (Homepage)',
-	'description' => 'This is a description',
-	'section' => 'colors',
-	'settings' => 'hovercraft_main_background_color_homepage'
-	)
-) );
-
-// content background color setting
-$wp_customize->add_setting( 'hovercraft_content_background_color', array(
-	'default' => '#ffffff',
-	'sanitize_callback' => 'sanitize_hex_color',
-) );
- 
-// content background color control
-$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_content_background_color', array(
-	'label' => 'Content Background Color',
-	'description' => 'This is a description',
-	'section' => 'colors',
-	'settings' => 'hovercraft_content_background_color'
 	)
 ) );
 
@@ -3471,6 +3411,66 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	'description' => 'This is a description',
 	'section' => 'colors',
 	'settings' => 'hovercraft_footer_link_color'
+	)
+) );
+
+// footer callout background color setting
+$wp_customize->add_setting( 'hovercraft_footer_callout_background_color', array(
+	'default' => '#283593',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+
+// footer callout background color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_footer_callout_background_color', array(
+	'label' => 'Footer Callout Background Color',
+	'description' => 'Specify background color of the Footer Callout widget? Note: Choose a bold tone for best results, and avoid white or shades of gray, which may result in poor visibility or CSS conflicts.',
+	'section' => 'colors',
+	'settings' => 'hovercraft_footer_callout_background_color'
+	)
+) );
+
+// footer callout border color setting
+$wp_customize->add_setting( 'hovercraft_footer_callout_border_color', array(
+	'default' => '#283593',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+
+// footer callout border color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_footer_callout_border_color', array(
+	'label' => 'Footer Callout Border Color',
+	'description' => 'Specify border color of the Footer Callout widget?',
+	'section' => 'colors',
+	'settings' => 'hovercraft_footer_callout_border_color'
+	)
+) );
+
+// footer callout text color setting
+$wp_customize->add_setting( 'hovercraft_footer_callout_text_color', array(
+	'default' => '#ffffff',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+
+// footer callout text color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_footer_callout_text_color', array(
+	'label' => 'Footer Callout Text Color',
+	'description' => 'Specify text color of the Footer Callout widget?',
+	'section' => 'colors',
+	'settings' => 'hovercraft_footer_callout_text_color'
+	)
+) );
+
+// footer callout link color setting
+$wp_customize->add_setting( 'hovercraft_footer_callout_link_color', array(
+	'default' => '#ffffff',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+
+// footer callout link color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_footer_callout_link_color', array(
+	'label' => 'Footer Callout Link Color',
+	'description' => 'Specify link color of the Footer Callout widget?',
+	'section' => 'colors',
+	'settings' => 'hovercraft_footer_callout_link_color'
 	)
 ) );
 
