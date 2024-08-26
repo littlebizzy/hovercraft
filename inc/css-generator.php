@@ -4515,7 +4515,7 @@ form.woocommerce-ordering {
 }
 
 
-/* woocommerce other */
+/* woocommerce product details */
 	
 .price {
 	font-size: 24px !important;
@@ -4533,11 +4533,24 @@ p.stock {
 	margin-left: 0 !important;
 }
 
+@media screen and (max-width: 1200px) {
 .product_meta {
 	display: block;
 	font-size: 14px;
-	margin-bottom: 30px;
-	color: #607D8B;
+	line-height: 2;
+	margin: 20px 0;
+	color: <?php echo $breadcrumbs_text_color; ?>;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+.product_meta {
+	display: block;
+	font-size: 14px;
+	line-height: 2;
+	margin: 30px 0;
+	color: <?php echo $breadcrumbs_text_color; ?>;
+	}
 }
 
 .sku_wrapper {
