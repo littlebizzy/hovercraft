@@ -4274,6 +4274,17 @@ p.akismet_comment_form_privacy_notice {
 	border-radius: 0px;
 }
 
+#bbpress-forums {
+	background: 0 0;
+    clear: both;
+    margin: 0 !important;
+	padding: 0 !important;
+    overflow: hidden;
+    font-size: 12px;
+    line-height: 1.5 !important;
+}
+
+
 #bbpress-forums ul.bbp-forums, #bbpress-forums ul.bbp-lead-topic, #bbpress-forums ul.bbp-replies, #bbpress-forums ul.bbp-search-results, #bbpress-forums ul.bbp-topics {
 	border: none;
 }
@@ -4305,8 +4316,11 @@ li.bbp-header {
 }
 
 li.bbp-body {
+	margin: 0 !important;
+	padding: 0 !important;
+	line-height: 1.5 !important;
 	background: #ffffff !important;
-	color: #263238 !important;
+	color: <?php echo $default_text_color; ?>;
 }
 
 li.bbp-footer {
@@ -4324,11 +4338,11 @@ li.bbp-footer {
 }
 
 ul.forum {
-	background: #FFF !important;
+	background: #ffffff !important;
 }
 
 ul.topic {
-	background: #FFF !important;
+	background: #ffffff !important;
 	padding: 20px !important;
 }
 
