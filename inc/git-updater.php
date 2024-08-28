@@ -6,84 +6,89 @@ function hovercraft_check_git_updater() {
     if (!file_exists(WP_PLUGIN_DIR . '/git-updater/git-updater.php')) {
         // Plugin is not installed
         echo '<div class="notice notice-warning"><p>';
-        echo 'Git Updater plugin is not installed. <form method="post" style="display:inline;">
-                <input type="hidden" name="hovercraft_action" value="install_git_updater">
-                <input type="submit" class="button button-primary" value="Click here to install it automatically">
-              </form>';
-        echo '</p></div>';
+        echo 'Git Updater plugin is not installed. <form method="post" style="display:inline;">';
+        wp_nonce_field('hovercraft_install_nonce', 'hovercraft_nonce_field');
+        echo '<input type="hidden" name="hovercraft_action" value="install_git_updater">';
+        echo '<input type="submit" class="button button-primary" value="Click here to install it automatically">';
+        echo '</form></p></div>';
     } elseif (is_plugin_inactive('git-updater/git-updater.php')) {
         // Plugin is installed but not activated
         echo '<div class="notice notice-info"><p>';
-        echo 'Git Updater plugin is installed but not activated. <form method="post" style="display:inline;">
-                <input type="hidden" name="hovercraft_action" value="activate_git_updater">
-                <input type="submit" class="button button-primary" value="Click here to activate it">
-              </form>';
-        echo '</p></div>';
+        echo 'Git Updater plugin is installed but not activated. <form method="post" style="display:inline;">';
+        wp_nonce_field('hovercraft_activate_nonce', 'hovercraft_nonce_field');
+        echo '<input type="hidden" name="hovercraft_action" value="activate_git_updater">';
+        echo '<input type="submit" class="button button-primary" value="Click here to activate it">';
+        echo '</form></p></div>';
     }
 }
 
 function hovercraft_handle_git_updater_actions() {
-    if (!isset($_POST['hovercraft_action'])) {
-        return;
-    }
-
-    if ($_POST['hovercraft_action'] === 'install_git_updater') {
-        if (!current_user_can('install_plugins')) {
-            wp_die('You do not have permission to install plugins.');
+    // Ensure action is set and check the nonce
+    if (isset($_POST['hovercraft_action'])) {
+        if (!isset($_POST['hovercraft_nonce_field']) || !wp_verify_nonce($_POST['hovercraft_nonce_field'], 'hovercraft_' . sanitize_text_field($_POST['hovercraft_action']) . '_nonce')) {
+            wp_die('Security check failed.');
         }
 
-        include_once ABSPATH . 'wp-admin/includes/file.php';
-        include_once ABSPATH . 'wp-admin/includes/plugin.php';
-        include_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php';
-
-        // Ensure the filesystem is accessible
-        if (!WP_Filesystem()) {
-            wp_die('Filesystem error: could not initialize WP_Filesystem.');
-        }
-
-        $plugin_url = 'https://github.com/afragen/git-updater/archive/master.zip';
-        $tmp_file = download_url($plugin_url);
-
-        if (is_wp_error($tmp_file)) {
-            wp_die('Failed to download the plugin: ' . $tmp_file->get_error_message());
-        }
-
-        // Unzip the plugin into the plugins directory
-        $result = unzip_file($tmp_file, WP_PLUGIN_DIR);
-
-        if (is_wp_error($result)) {
-            @unlink($tmp_file);
-            wp_die('Failed to install the plugin: ' . $result->get_error_message());
-        }
-
-        @unlink($tmp_file);
-
-        // Find and rename the folder if it starts with 'git-updater-'
-        $folders = glob(WP_PLUGIN_DIR . '/git-updater-*');
-        foreach ($folders as $folder) {
-            if (is_dir($folder)) {
-                rename($folder, WP_PLUGIN_DIR . '/git-updater');
-                break;
+        // Handle plugin installation
+        if ($_POST['hovercraft_action'] === 'install_git_updater') {
+            if (!current_user_can('install_plugins')) {
+                wp_die('You do not have permission to install plugins.');
             }
+
+            include_once ABSPATH . 'wp-admin/includes/file.php';
+            include_once ABSPATH . 'wp-admin/includes/plugin.php';
+            include_once ABSPATH . 'wp-admin/includes/class-wp-upgrader.php';
+
+            // Ensure the filesystem is accessible
+            if (!WP_Filesystem()) {
+                wp_die('Filesystem error: could not initialize WP_Filesystem.');
+            }
+
+            $plugin_url = 'https://github.com/afragen/git-updater/archive/master.zip';
+            $tmp_file = download_url($plugin_url);
+
+            if (is_wp_error($tmp_file)) {
+                wp_die('Failed to download the plugin: ' . esc_html($tmp_file->get_error_message()));
+            }
+
+            // Unzip the plugin into the plugins directory
+            $result = unzip_file($tmp_file, WP_PLUGIN_DIR);
+
+            if (is_wp_error($result)) {
+                @unlink($tmp_file);
+                wp_die('Failed to install the plugin: ' . esc_html($result->get_error_message()));
+            }
+
+            @unlink($tmp_file);
+
+            // Find and rename the folder if it starts with 'git-updater-'
+            $folders = glob(WP_PLUGIN_DIR . '/git-updater-*');
+            foreach ($folders as $folder) {
+                if (is_dir($folder)) {
+                    rename($folder, WP_PLUGIN_DIR . '/git-updater');
+                    break;
+                }
+            }
+
+            wp_redirect(admin_url('plugins.php')); // Redirect to Plugins page
+            exit;
         }
 
-        wp_redirect(admin_url('plugins.php')); // Redirect to Plugins page
-        exit;
-    }
+        // Handle plugin activation
+        if ($_POST['hovercraft_action'] === 'activate_git_updater') {
+            if (!current_user_can('activate_plugins')) {
+                wp_die('You do not have permission to activate plugins.');
+            }
 
-    if ($_POST['hovercraft_action'] === 'activate_git_updater') {
-        if (!current_user_can('activate_plugins')) {
-            wp_die('You do not have permission to activate plugins.');
+            $result = activate_plugin('git-updater/git-updater.php');
+
+            if (is_wp_error($result)) {
+                wp_die('Failed to activate the plugin: ' . esc_html($result->get_error_message()));
+            }
+
+            wp_redirect(admin_url('plugins.php')); // Redirect to Plugins page
+            exit;
         }
-
-        $result = activate_plugin('git-updater/git-updater.php');
-
-        if (is_wp_error($result)) {
-            wp_die('Failed to activate the plugin: ' . $result->get_error_message());
-        }
-
-        wp_redirect(admin_url('plugins.php')); // Redirect to Plugins page
-        exit;
     }
 }
 
