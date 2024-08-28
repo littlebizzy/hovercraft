@@ -25,12 +25,14 @@ function hovercraft_check_git_updater() {
 function hovercraft_handle_git_updater_actions() {
     // Ensure action is set and check the nonce
     if (isset($_POST['hovercraft_action'])) {
-        if (!isset($_POST['hovercraft_nonce_field']) || !wp_verify_nonce($_POST['hovercraft_nonce_field'], 'hovercraft_' . sanitize_text_field($_POST['hovercraft_action']) . '_nonce')) {
-            wp_die('Security check failed.');
-        }
+        $action = sanitize_text_field($_POST['hovercraft_action']);
 
-        // Handle plugin installation
-        if ($_POST['hovercraft_action'] === 'install_git_updater') {
+        // Verify nonce for installation
+        if ($action === 'install_git_updater') {
+            if (!isset($_POST['hovercraft_nonce_field']) || !wp_verify_nonce($_POST['hovercraft_nonce_field'], 'hovercraft_install_nonce')) {
+                wp_die('Security check failed for installation.');
+            }
+
             if (!current_user_can('install_plugins')) {
                 wp_die('You do not have permission to install plugins.');
             }
@@ -74,8 +76,12 @@ function hovercraft_handle_git_updater_actions() {
             exit;
         }
 
-        // Handle plugin activation
-        if ($_POST['hovercraft_action'] === 'activate_git_updater') {
+        // Verify nonce for activation
+        if ($action === 'activate_git_updater') {
+            if (!isset($_POST['hovercraft_nonce_field']) || !wp_verify_nonce($_POST['hovercraft_nonce_field'], 'hovercraft_activate_nonce')) {
+                wp_die('Security check failed for activation.');
+            }
+
             if (!current_user_can('activate_plugins')) {
                 wp_die('You do not have permission to activate plugins.');
             }
