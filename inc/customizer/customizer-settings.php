@@ -2583,6 +2583,36 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	)
 ) );
 
+// search bar background color setting
+$wp_customize->add_setting( 'hovercraft_search_bar_background_color', array(
+	'default' => '#eceff1',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+
+// search bar background color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_search_bar_background_color', array(
+	'label' => 'Search Bar Background Color',
+	'description' => 'Specify background color of the search bar element?',
+	'section' => 'colors',
+	'settings' => 'hovercraft_search_bar_background_color'
+	)
+) );
+
+// search bar border color setting
+$wp_customize->add_setting( 'hovercraft_search_bar_border_color', array(
+	'default' => '#eceff1',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+
+// search bar border color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_search_bar_border_color', array(
+	'label' => 'Search Bar Border Color',
+	'description' => 'Specify border color of the search bar element?',
+	'section' => 'colors',
+	'settings' => 'hovercraft_search_bar_border_color'
+	)
+) );
+	
 // search input placeholder color setting
 $wp_customize->add_setting( 'hovercraft_search_input_placeholder_color', array(
 	'default' => '#757575',
@@ -2670,36 +2700,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	'description' => 'Specify background color of the Offcanvas Menu toggle elements?',
 	'section' => 'colors',
 	'settings' => 'hovercraft_offcanvas_toggle_background_color'
-	)
-) );
-
-// search bar background color setting
-$wp_customize->add_setting( 'hovercraft_search_bar_background_color', array(
-	'default' => '#eceff1',
-	'sanitize_callback' => 'sanitize_hex_color',
-) );
-
-// search bar background color control
-$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_search_bar_background_color', array(
-	'label' => 'Search Bar Background Color',
-	'description' => 'Specify background color of the search bar element?',
-	'section' => 'colors',
-	'settings' => 'hovercraft_search_bar_background_color'
-	)
-) );
-
-// search bar border color setting
-$wp_customize->add_setting( 'hovercraft_search_bar_border_color', array(
-	'default' => '#eceff1',
-	'sanitize_callback' => 'sanitize_hex_color',
-) );
-
-// search bar border color control
-$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_search_bar_border_color', array(
-	'label' => 'Search Bar Border Color',
-	'description' => 'Specify border color of the search bar element?',
-	'section' => 'colors',
-	'settings' => 'hovercraft_search_bar_border_color'
 	)
 ) );
  
