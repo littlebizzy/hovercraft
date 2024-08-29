@@ -1079,6 +1079,18 @@ a:hover {
 	color: <?php echo $hero_snippet_link_color; ?>;
 }
 
+@media screen and (max-width: 1200px) {
+.hero-snippet .tagcloud {
+	margin-top: 20px;
+	}
+}	
+
+@media screen and (min-width: 1200px) {
+.hero-snippet .tagcloud {
+	margin-top: 30px;
+	}
+}	
+
 /* headings (titles) */
 
 @media screen and (max-width: 1200px) {
