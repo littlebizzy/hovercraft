@@ -8,7 +8,7 @@
 	<?php } ?>
 
     <?php if ( is_active_sidebar( 'hovercraft_zigzag_two' ) ) { ?>
-	<div class="zigzag-section">
+	<div class="zigzag-section-reverse">
 		<?php dynamic_sidebar( 'hovercraft_zigzag_two' ); ?>
 		<div class="clear"></div>
 	</div><!-- zigzag-section -->
@@ -22,7 +22,7 @@
 	<?php } ?>
 
     <?php if ( is_active_sidebar( 'hovercraft_zigzag_four' ) ) { ?>
-	<div class="zigzag-section">
+	<div class="zigzag-section-reverse">
 		<?php dynamic_sidebar( 'hovercraft_zigzag_four' ); ?>
 		<div class="clear"></div>
 	</div><!-- zigzag-section -->
@@ -36,7 +36,7 @@
 	<?php } ?>
 
     <?php if ( is_active_sidebar( 'hovercraft_zigzag_six' ) ) { ?>
-	<div class="zigzag-section">
+	<div class="zigzag-section-reverse">
 		<?php dynamic_sidebar( 'hovercraft_zigzag_six' ); ?>
 		<div class="clear"></div>
 	</div><!-- zigzag-section -->
