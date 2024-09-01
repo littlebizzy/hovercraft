@@ -630,3 +630,98 @@ function hovercraft_after_loop() {
 
 }
 add_action( 'widgets_init', 'hovercraft_after_loop' );
+
+// zigzag one widgets
+function hovercraft_zigzag_one() {
+
+	register_sidebar( array(
+		'name'          => 'ZigZag #1',
+		'id'            => 'hovercraft_zigzag_one',
+		'before_widget' => '<div class="widget-zigzag-one widget-wrapper">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+}
+add_action( 'widgets_init', 'hovercraft_zigzag_one' );
+
+
+// zigzag two widgets
+function hovercraft_zigzag_two() {
+
+	register_sidebar( array(
+		'name'          => 'ZigZag #2',
+		'id'            => 'hovercraft_zigzag_two',
+		'before_widget' => '<div class="widget-zigzag-two widget-wrapper">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+}
+add_action( 'widgets_init', 'hovercraft_zigzag_two' );
+
+
+// zigzag three widgets
+function hovercraft_zigzag_three() {
+
+	register_sidebar( array(
+		'name'          => 'ZigZag #3',
+		'id'            => 'hovercraft_zigzag_three',
+		'before_widget' => '<div class="widget-zigzag-three widget-wrapper">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+}
+add_action( 'widgets_init', 'hovercraft_zigzag_three' );
+
+
+// zigzag four widgets
+function hovercraft_zigzag_four() {
+
+	register_sidebar( array(
+		'name'          => 'ZigZag #4',
+		'id'            => 'hovercraft_zigzag_four',
+		'before_widget' => '<div class="widget-zigzag-four widget-wrapper">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+}
+add_action( 'widgets_init', 'hovercraft_zigzag_four' );
+
+
+// zigzag five widgets
+function hovercraft_zigzag_five() {
+
+	register_sidebar( array(
+		'name'          => 'ZigZag #5',
+		'id'            => 'hovercraft_zigzag_five',
+		'before_widget' => '<div class="widget-zigzag-five widget-wrapper">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+}
+add_action( 'widgets_init', 'hovercraft_zigzag_five' );
+
+
+// zigzag six widgets
+function hovercraft_zigzag_six() {
+
+	register_sidebar( array(
+		'name'          => 'ZigZag #6',
+		'id'            => 'hovercraft_zigzag_six',
+		'before_widget' => '<div class="widget-zigzag-six widget-wrapper">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+}
+add_action( 'widgets_init', 'hovercraft_zigzag_six' );
