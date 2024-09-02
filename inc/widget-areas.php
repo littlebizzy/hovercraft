@@ -119,7 +119,7 @@ function hovercraft_register_sidebars() {
             'class'         => 'widget-copyright',
         ),
 
-        // Tile widgets
+        // Tile widgets (total 20 tiles)
         array(
             'name'          => 'Tile #1',
             'id'            => 'hovercraft_tile_one',
@@ -179,6 +179,46 @@ function hovercraft_register_sidebars() {
             'name'          => 'Tile #12',
             'id'            => 'hovercraft_tile_twelve',
             'class'         => 'widget-tile-twelve',
+        ),
+        array(
+            'name'          => 'Tile #13',
+            'id'            => 'hovercraft_tile_thirteen',
+            'class'         => 'widget-tile-thirteen',
+        ),
+        array(
+            'name'          => 'Tile #14',
+            'id'            => 'hovercraft_tile_fourteen',
+            'class'         => 'widget-tile-fourteen',
+        ),
+        array(
+            'name'          => 'Tile #15',
+            'id'            => 'hovercraft_tile_fifteen',
+            'class'         => 'widget-tile-fifteen',
+        ),
+        array(
+            'name'          => 'Tile #16',
+            'id'            => 'hovercraft_tile_sixteen',
+            'class'         => 'widget-tile-sixteen',
+        ),
+        array(
+            'name'          => 'Tile #17',
+            'id'            => 'hovercraft_tile_seventeen',
+            'class'         => 'widget-tile-seventeen',
+        ),
+        array(
+            'name'          => 'Tile #18',
+            'id'            => 'hovercraft_tile_eighteen',
+            'class'         => 'widget-tile-eighteen',
+        ),
+        array(
+            'name'          => 'Tile #19',
+            'id'            => 'hovercraft_tile_nineteen',
+            'class'         => 'widget-tile-nineteen',
+        ),
+        array(
+            'name'          => 'Tile #20',
+            'id'            => 'hovercraft_tile_twenty',
+            'class'         => 'widget-tile-twenty',
         ),
 
         // Column widgets
@@ -282,16 +322,6 @@ function hovercraft_register_sidebars() {
             'name'          => 'ZigZag #10',
             'id'            => 'hovercraft_zigzag_ten',
             'class'         => 'widget-zigzag-ten',
-        ),
-        array(
-            'name'          => 'ZigZag #11',
-            'id'            => 'hovercraft_zigzag_eleven',
-            'class'         => 'widget-zigzag-eleven',
-        ),
-        array(
-            'name'          => 'ZigZag #12',
-            'id'            => 'hovercraft_zigzag_twelve',
-            'class'         => 'widget-zigzag-twelve',
         )
     );
 
