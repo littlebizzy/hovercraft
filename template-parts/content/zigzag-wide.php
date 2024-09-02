@@ -42,4 +42,46 @@
 	</div><!-- zigzag-section -->
 	<?php } ?>
 
+	<?php if ( is_active_sidebar( 'hovercraft_zigzag_seven' ) ) { ?>
+	<div class="zigzag-section">
+		<?php dynamic_sidebar( 'hovercraft_zigzag_seven' ); ?>
+		<div class="clear"></div>
+	</div><!-- zigzag-section -->
+	<?php } ?>
+
+    <?php if ( is_active_sidebar( 'hovercraft_zigzag_eight' ) ) { ?>
+	<div class="zigzag-section-reverse">
+		<?php dynamic_sidebar( 'hovercraft_zigzag_eight' ); ?>
+		<div class="clear"></div>
+	</div><!-- zigzag-section -->
+	<?php } ?>
+
+	<?php if ( is_active_sidebar( 'hovercraft_zigzag_nine' ) ) { ?>
+	<div class="zigzag-section">
+		<?php dynamic_sidebar( 'hovercraft_zigzag_nine' ); ?>
+		<div class="clear"></div>
+	</div><!-- zigzag-section -->
+	<?php } ?>
+
+    <?php if ( is_active_sidebar( 'hovercraft_zigzag_ten' ) ) { ?>
+	<div class="zigzag-section-reverse">
+		<?php dynamic_sidebar( 'hovercraft_zigzag_ten' ); ?>
+		<div class="clear"></div>
+	</div><!-- zigzag-section -->
+	<?php } ?>
+
+	<?php if ( is_active_sidebar( 'hovercraft_zigzag_eleven' ) ) { ?>
+	<div class="zigzag-section">
+		<?php dynamic_sidebar( 'hovercraft_zigzag_eleven' ); ?>
+		<div class="clear"></div>
+	</div><!-- zigzag-section -->
+	<?php } ?>
+
+    <?php if ( is_active_sidebar( 'hovercraft_zigzag_twelve' ) ) { ?>
+	<div class="zigzag-section-reverse">
+		<?php dynamic_sidebar( 'hovercraft_zigzag_twelve' ); ?>
+		<div class="clear"></div>
+	</div><!-- zigzag-section -->
+	<?php } ?>
+
 </div><!-- zigzag-wide-wrapper -->
