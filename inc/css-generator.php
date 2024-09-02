@@ -2849,6 +2849,35 @@ p.biography-description {
 }
 
 
+/* zigzag (page template) */
+	
+.zigzag-section {
+}
+
+.zigzag-section-reverse {
+}
+
+.zigzag-section h3 {
+text-align: left;
+}
+
+.zigzag-section-reverse h3 {
+text-align: right;
+}
+
+.zigzag-section img {
+	float: left;
+	margin-right: 20px;
+	width: 300px !important;
+}
+
+.zigzag-section-reverse img {
+	float: right;
+	margin-left: 20px;
+	width: 300px !important;
+}
+
+
 /* sidebar */
 
 @media screen and (max-width: 1200px) {
