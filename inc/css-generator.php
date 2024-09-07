@@ -2852,9 +2852,11 @@ p.biography-description {
 /* zigzag (page template) */
 	
 .zigzag-section {
+	padding: 40px 40px;
 }
 
 .zigzag-section-reverse {
+	padding: 40px;
 }
 
 .zigzag-section h3 {
@@ -2867,13 +2869,13 @@ text-align: right;
 
 .zigzag-section img {
 	float: left;
-	margin-right: 20px;
+	margin-right: 40px;
 	width: 300px !important;
 }
 
 .zigzag-section-reverse img {
 	float: right;
-	margin-left: 20px;
+	margin-left: 40px;
 	width: 300px !important;
 }
 
