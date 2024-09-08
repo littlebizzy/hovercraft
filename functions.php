@@ -1,5 +1,11 @@
 <?php
 
+// Disable WordPress.org updates for this theme
+add_filter('gu_override_dot_org', function ($overrides) {
+    $overrides[] = 'hovercraft';
+    return $overrides;
+});
+
 // MENUS 
 
 // menu locations
