@@ -6,148 +6,147 @@ add_filter('gu_override_dot_org', function ($overrides) {
     return $overrides;
 });
 
-// MENUS 
+// MENUS
 
-// menu locations
+// Menu locations
 require get_template_directory() . '/inc/menus/menu-locations.php';
 
-// accordion menu
+// Accordion menu
 require get_template_directory() . '/inc/menus/accordion-menu.php';
 
-// offcanvas menu
+// Offcanvas menu
 require get_template_directory() . '/inc/menus/offcanvas-menu.php';
 
-// overlay menu
+// Overlay menu
 require get_template_directory() . '/inc/menus/overlay-menu.php';
 
-// select menu
+// Select menu
 // require get_template_directory() . '/inc/menus/select-menu.php';
 
-
-// back to top
+// Back to top
 require get_template_directory() . '/inc/back-to-top.php';
 
-// bbpress quick tags
+// bbPress quick tags
 require get_template_directory() . '/inc/bbpress-quick-tags.php';
 
-// bbpress search results
+// bbPress search results
 require get_template_directory() . '/inc/bbpress-search-results.php';
 
-// breadcrumbs
+// Breadcrumbs
 require get_template_directory() . '/inc/breadcrumbs.php';
 
-// bullets category
+// Bullets category
 require get_template_directory() . '/inc/bullets-category.php';
 
-// register portal category (customizer)
+// Register portal category (customizer)
 require get_template_directory() . '/inc/customizer/register-portal-category.php';
 
-// register snippets category (customizer)
+// Register snippets category (customizer)
 require get_template_directory() . '/inc/customizer/register-snippets-category.php';
 
-// css generator
+// CSS generator
 require get_template_directory() . '/inc/css-generator.php';
 
-// custom header
+// Custom header
 require get_template_directory() . '/inc/custom-header.php';
 
-// custom post test
+// Custom post test
 require get_template_directory() . '/inc/custom-post-test.php';
 
-// customizer settings
+// Customizer settings
 require get_template_directory() . '/inc/customizer/customizer-settings.php';
 
-// register blog category
+// Register blog category
 require get_template_directory() . '/inc/customizer/register-blog-category.php';
 
-// disable responsive images
+// Disable responsive images
 require get_template_directory() . '/inc/disable-responsive-images.php';
 
-// featured images
+// Featured images
 require get_template_directory() . '/inc/featured-images.php';
 
-// footer callout
+// Footer callout
 require get_template_directory() . '/inc/footer-callout.php';
 
-// full screen search
+// Full screen search
 require get_template_directory() . '/inc/full-screen-search.php';
 
-// suggest git updater
+// Suggest Git Updater
 require get_template_directory() . '/inc/git-updater.php';
 
-// google fonts
+// Google fonts
 require get_template_directory() . '/inc/google-fonts.php';
 
-// google fonts array (customizer)
+// Google fonts array (customizer)
 require get_template_directory() . '/inc/customizer/google-fonts-array.php';
 
-// header cleanup
+// Header cleanup
 require get_template_directory() . '/inc/header-cleanup.php';
 
-// video uploader
+// Video uploader
 require get_template_directory() . '/inc/header-video.php';
 
-// hide certain categories
+// Hide certain categories
 require get_template_directory() . '/inc/hide-certain-categories.php';
 
-// alternative logo
+// Alternative logo
 require get_template_directory() . '/inc/logo-alternative.php';
 
-// default logo
+// Default logo
 require get_template_directory() . '/inc/logo-default.php';
 
-// media sizes
+// Media sizes
 require get_template_directory() . '/inc/media-sizes-verify.php';
 
-// media sizes insert
+// Media sizes insert
 require get_template_directory() . '/inc/media-sizes-insert.php';
 
-// meta box
+// Meta box
 require get_template_directory() . '/inc/meta-box.php';
 
-// pagination
+// Pagination
 require get_template_directory() . '/inc/pagination.php';
 
-// portal category
+// Portal category
 require get_template_directory() . '/inc/portal-category.php';
 
-// sidebar callout
+// Sidebar callout
 require get_template_directory() . '/inc/sidebar-callout.php';
 
-// tags list
+// Tags list
 require get_template_directory() . '/inc/tags-list.php';
 
-// title homepage
+// Title homepage
 require get_template_directory() . '/inc/title-homepage.php';
 
-// title tag
+// Title tag
 require get_template_directory() . '/inc/title-tag.php';
 
-// widget areas
+// Widget areas
 require get_template_directory() . '/inc/widget-areas.php';
 
-// remove generator
+// Remove generator
 require get_template_directory() . '/inc/remove-generator.php';
 
-// woocommerce support
+// WooCommerce support
 require get_template_directory() . '/inc/woocommerce-support.php';
 
-// page excerpts
+// Page excerpts
 add_post_type_support( 'page', 'excerpt' );
 
-// rss feeds meta
+// RSS feeds meta
 add_theme_support( 'automatic-feed-links' );
 
-//Internationalization
+// Internationalization
 function hovercraft_load_theme_textdomain() {
     load_theme_textdomain( 'hovercraft', get_template_directory() . '/languages' );
 }
 add_action( 'after_setup_theme', 'hovercraft_load_theme_textdomain' );
 
-// disable post gallery inline css
+// Disable post gallery inline CSS
 add_filter( 'use_default_gallery_style', '__return_false' );
 
-// disable archive title prefixes
+// Disable archive title prefixes
 // https://wordpress.stackexchange.com/questions/179585/remove-category-tag-author-from-the-archive-title
 // https://wordpress.stackexchange.com/questions/245274/how-to-remove-archive-label-from-archive-title
 add_filter( 'get_the_archive_title_prefix', '__return_false' );
