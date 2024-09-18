@@ -3977,8 +3977,8 @@ form {
 input, select {
 	width: 100%;
 	max-width: 100%;
-	height: auto !important;
-	min-height: auto !important;
+	height: auto;
+	min-height: auto;
 	vertical-align: middle;
 	font-weight: 400;
 	line-height: 2;
@@ -4424,11 +4424,15 @@ visibility: hidden;
 	cursor: pointer !important;
 	white-space: nowrap !important;
 	line-height: 0 !important;
-	background-color: transparent !important;
+	background-color: transparent;
 	border: 0 !important;
 	color: <?php echo $default_text_color; ?>;
 }
 
+.quicktags-toolbar input:hover  {
+	background-color: rgba(0, 0, 0, 0.3);	
+}
+	
 
 /* woocommerce cart */
 
