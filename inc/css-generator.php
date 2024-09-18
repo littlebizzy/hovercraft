@@ -4407,19 +4407,25 @@ visibility: hidden;
 	color: #607D8B;
 }
 
+.quicktags-toolbar {
+	padding: 10px 10px !important;
+}
+
 .quicktags-toolbar input  {
-	display: inline-block;
-	width: auto;
+	display: inline-block !important;
+	width: auto !important;
+	height: 20px !important;
+	min-height: 20px !important;
 	padding: 0 10px !important;
 	margin: 0 !important;
 	font-size: 12px !important;
-	text-transform: uppercase;
-	text-decoration: none;
-	cursor: pointer;
-	white-space: nowrap;
+	text-transform: uppercase !important;
+	text-decoration: none !important;
+	cursor: pointer !important;
+	white-space: nowrap !important;
 	line-height: 0 !important;
-	background-color: transparent;
-	border: 0px solid transparent;
+	background-color: transparent !important;
+	border: 0 !important;
 	color: <?php echo $default_text_color; ?>;
 }
 
