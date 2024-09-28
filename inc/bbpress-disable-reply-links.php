@@ -12,17 +12,13 @@ add_filter( 'bbp_reply_admin_links', 'hovercraft_remove_all_reply_links' );
 
 // Disable replying to individual replies, allow only replying to the main topic
 function hovercraft_disable_reply_to_individual_replies( $can_publish, $reply_id = 0, $topic_id = 0 ) {
-    // Ensure that reply and topic IDs are valid
-    if ( ! $reply_id || ! $topic_id ) {
-        return $can_publish; // Return original capability if IDs are not set
-    }
-
-    // Disable replies to individual replies
-    if ( bbp_is_reply( $reply_id ) ) {
+    // If this is a valid reply, block further replies to it
+    if ( $reply_id && bbp_is_reply( $reply_id ) ) {
         return false; // Disable replies to individual replies
     }
 
-    return $can_publish; // Allow replies to the main topic
+    // Default behavior: allow replies to the main topic
+    return $can_publish;
 }
 add_filter( 'bbp_current_user_can_publish_replies', 'hovercraft_disable_reply_to_individual_replies', 10, 3 );
 
