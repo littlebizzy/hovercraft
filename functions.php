@@ -26,6 +26,9 @@ require get_template_directory() . '/inc/menus/overlay-menu.php';
 // Back to top
 require get_template_directory() . '/inc/back-to-top.php';
 
+// bbPress disable reply links
+require get_template_directory() . '/inc/bbpress-disable-reply-links.php';
+
 // bbPress quick tags
 require get_template_directory() . '/inc/bbpress-quick-tags.php';
 
