@@ -2852,10 +2852,12 @@ p.biography-description {
 /* zigzag (page template) */
 	
 .zigzag-section {
+	text-align: left;
 	padding: 40px 40px;
 }
 
 .zigzag-section-reverse {
+	text-align: right;
 	padding: 40px;
 }
 
