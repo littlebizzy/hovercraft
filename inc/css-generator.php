@@ -13,6 +13,7 @@ function hovercraft_generate_css(){
 	$site_name_mobile_font_size = get_theme_mod( 'hovercraft_site_name_mobile_font_size', '24' );
 	$site_name_desktop_font_size = get_theme_mod( 'hovercraft_site_name_desktop_font_size', '36' );
 	$site_name_font_weight = get_theme_mod( 'hovercraft_site_name_font_weight', '700' );
+	$site_name_text_transform = get_theme_mod( 'hovercraft_site_name_text_transform', 'none' );
 	$main_menu_font_family = get_theme_mod( 'hovercraft_main_menu_font', 'noto_sans' );
 	$main_menu_desktop_font_size = get_theme_mod( 'hovercraft_main_menu_desktop_font_size', '18' );
 	$main_menu_font_weight = get_theme_mod( 'hovercraft_main_menu_font_weight', '600' );
@@ -792,6 +793,7 @@ h1.mini-hero-title {
 	font-family: <?php echo ucwords(str_replace("_", " ", $site_name_font_family)); ?>;
 	font-weight: <?php echo $site_name_font_weight; ?>;
 	font-size: <?php echo $site_name_mobile_font_size; ?>px;
+	text-transform: <?php echo $site_name_text_transform; ?>;
 	line-height: 1; /* site-tagline is hidden on mobile anyways */
 	display: <?php echo $site_name_display_mobile; ?>;
 	}
@@ -802,6 +804,7 @@ h1.mini-hero-title {
 	font-family: <?php echo ucwords(str_replace("_", " ", $site_name_font_family)); ?>;
 	font-weight: <?php echo $site_name_font_weight; ?>;
 	font-size: <?php echo $site_name_desktop_font_size; ?>px;
+	text-transform: <?php echo $site_name_text_transform; ?>;
 	line-height: 1; /* therefore site-tagline requires padding-top */
 	display: block;
 	}
