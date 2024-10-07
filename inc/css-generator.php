@@ -94,6 +94,8 @@ function hovercraft_generate_css(){
 	$prefooter_top_align = get_theme_mod( 'hovercraft_prefooter_top_align', 'left' );
 	$prefooter_bottom_columns = get_theme_mod( 'hovercraft_prefooter_bottom_columns', '1' );
 	$prefooter_bottom_align = get_theme_mod( 'hovercraft_prefooter_bottom_align', 'left' );
+	$postcolumns_top_align = get_theme_mod( 'hovercraft_postcolumns_top_align', 'left' );
+	$postcolumns_bottom_align = get_theme_mod( 'hovercraft_postcolumns_bottom_align', 'left' );
 	
 	/* footer */
 	$footer_mobile_font_size = get_theme_mod( 'hovercraft_footer_mobile_font_size', '14' );
@@ -2815,7 +2817,7 @@ p.biography-description {
 .postcolumns-top {
 	width: 100%;
 	padding: 30px 20px;
-	text-align: center;
+	text-align: <?php echo $postcolumns_top_align; ?>;
 	background: <?php echo $postcolumns_top_background_color; ?>;
 	color: <?php echo $postcolumns_top_text_color; ?>;
 	}
@@ -2825,7 +2827,7 @@ p.biography-description {
 .postcolumns-top {
 	width: 100%;
 	padding: 30px 0px;
-	text-align: center;
+	text-align: <?php echo $postcolumns_top_align; ?>;
 	background: <?php echo $postcolumns_top_background_color; ?>;
 	color: <?php echo $postcolumns_top_text_color; ?>;
 	}
@@ -2835,7 +2837,7 @@ p.biography-description {
 .postcolumns-bottom {
 	width: 100%;
 	padding: 30px 20px;
-	text-align: center;
+	text-align: <?php echo $postcolumns_bottom_align; ?>;
 	background: <?php echo $postcolumns_bottom_background_color; ?>;
 	color: <?php echo $postcolumns_bottom_text_color; ?>;
 	}
@@ -2845,7 +2847,7 @@ p.biography-description {
 .postcolumns-bottom {
 	width: 100%;
 	padding: 30px 0px;
-	text-align: center;
+	text-align: <?php echo $postcolumns_bottom_align; ?>;
 	background: <?php echo $postcolumns_bottom_background_color; ?>;
 	color: <?php echo $postcolumns_bottom_text_color; ?>;
 	}
