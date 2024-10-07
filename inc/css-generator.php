@@ -2742,14 +2742,14 @@ p.biography-description {
 /* columns */
 
 @media screen and (max-width: 1200px) {
-#columns {
+.columns {
 	width: 100%;
 	padding: 30px 20px;
 	}
 }
 
 @media screen and (min-width: 1200px) {
-#columns {
+.columns {
 	width: 100%;
 	display: grid;
   	<?php if ( $columns_across == '3' ) { 
@@ -2812,7 +2812,7 @@ p.biography-description {
 /* postcolumns */
 	
 @media screen and (max-width: 1200px) {
-#postcolumns-top {
+.postcolumns-top {
 	width: 100%;
 	padding: 30px 20px;
 	text-align: center;
@@ -2822,7 +2822,7 @@ p.biography-description {
 }
 
 @media screen and (min-width: 1200px) {
-#postcolumns-top {
+.postcolumns-top {
 	width: 100%;
 	padding: 30px 0px;
 	text-align: center;
@@ -2832,7 +2832,7 @@ p.biography-description {
 }
 
 @media screen and (max-width: 1200px) {
-#postcolumns-bottom {
+.postcolumns-bottom {
 	width: 100%;
 	padding: 30px 20px;
 	text-align: center;
@@ -2842,7 +2842,7 @@ p.biography-description {
 }
 
 @media screen and (min-width: 1200px) {
-#postcolumns-bottom {
+.postcolumns-bottom {
 	width: 100%;
 	padding: 30px 0px;
 	text-align: center;
