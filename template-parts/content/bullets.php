@@ -76,7 +76,7 @@
 
                         // If there are FAQs without subcategories, display them
                         if ($the_query->have_posts()) : ?>
-                            <h2><?php _e('General FAQs', 'textdomain'); ?></h2>
+                            <h3><?php _e('General', 'textdomain'); ?></h3>
                             <div class="faq-item-list">
                                 <?php while ($the_query->have_posts()) : $the_query->the_post(); ?>
                                     <div class="faq-item">
