@@ -762,6 +762,54 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// postcolumns top text-align setting
+$wp_customize->add_setting( 'hovercraft_postcolumns_top_align', array(
+    'default'    => 'left',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// postcolumns top text-align control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_postcolumns_top_align',
+        array(
+            'label'     => __( 'Postcolumns Top Text Align', 'hovercraft' ),
+			'description' => __( 'How should content be aigned in the Postcolumns Top widget area?', 'hovercraft' ),
+            'section'   => 'hovercraft_widget_layouts',
+            'settings'  => 'hovercraft_postcolumns_top_align',
+            'type'      => 'select',
+			'choices' => array(
+        		'center' => 'Center',
+				'left' => 'Left'
+    			)
+        )
+) );
+
+// postcolumns bottom text-align setting
+$wp_customize->add_setting( 'hovercraft_postcolumns_bottom_align', array(
+    'default'    => 'left',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// postcolumns bottom text-align control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_postcolumns_bottom_align',
+        array(
+            'label'     => __( 'Postcolumns Bottom Text Align', 'hovercraft' ),
+			'description' => __( 'How should content be aigned in the Postcolumns Bottom widget area?', 'hovercraft' ),
+            'section'   => 'hovercraft_widget_layouts',
+            'settings'  => 'hovercraft_postcolumns_bottom_align',
+            'type'      => 'select',
+			'choices' => array(
+        		'center' => 'Center',
+				'left' => 'Left'
+    			)
+        )
+) );
+
 // category layouts section
 $wp_customize->add_section( 'hovercraft_category_layouts', array(
     'title'      => 'Category Layouts',
