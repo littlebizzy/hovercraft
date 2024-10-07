@@ -114,3 +114,6 @@
         <div class="clear"></div>
     </div><!-- inner -->
 </div><!-- main -->
+
+<!-- Ref: ChatGPT -->
+<!-- Ref: https://wordpress.stackexchange.com/questions/417119/display-posts-on-category-archive-organized-into-subcategories -->
