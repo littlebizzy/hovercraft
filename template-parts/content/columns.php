@@ -1,4 +1,4 @@
-<div id="columns">
+<div class="columns">
 	
 	<?php if ( is_active_sidebar( 'hovercraft_column_one' ) ) { ?>
 	<div class="column">
@@ -86,3 +86,17 @@
 		
 <div class="clear"></div>
 </div><!-- columns -->
+
+<?php if ( is_active_sidebar( 'hovercraft_postcolumns_top' ) ) { ?>
+<div class="postcolumns-top">
+	<?php dynamic_sidebar( 'hovercraft_postcolumns_top' ); ?>
+<div class="clear"></div>
+</div><!-- postcolumns-top -->
+<?php } ?>
+
+<?php if ( is_active_sidebar( 'hovercraft_postcolumns_bottom' ) ) { ?>
+<div class="postcolumns-bottom">
+	<?php dynamic_sidebar( 'hovercraft_postcolumns_bottom' ); ?>
+<div class="clear"></div>
+</div><!-- postcolumns-bottom -->
+<?php } ?>
