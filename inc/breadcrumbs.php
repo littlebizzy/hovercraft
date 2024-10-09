@@ -17,7 +17,7 @@ function ah_breadcrumb() {
         'separator'   => '«',
         'id'          => 'ah-breadcrumb',
         'classes'     => 'ah-breadcrumb',
-        'home_title'  => esc_html__( 'Home', 'hovercraft' ),
+        'home_title'  => __( 'Home', 'hovercraft' ),
     );
 
     $sep = '<li class="separator">' . esc_html( $defaults['separator'] ) . '</li>';
@@ -32,15 +32,15 @@ function ah_breadcrumb() {
     if ( function_exists( 'is_bbpress' ) && is_bbpress() ) {
 
         // Forum homepage link
-        echo '<li class="item"><a href="' . esc_url( bbp_get_forums_url() ) . '">' . esc_html__( 'Forum', 'hovercraft' ) . '</a></li>' . $sep;
+        echo '<li class="item"><a href="' . esc_url( bbp_get_forums_url() ) . '">' . __( 'Forum', 'hovercraft' ) . '</a></li>' . $sep;
 
         // Forum category
         if ( bbp_is_forum_category() ) {
-            echo '<li class="item-current item">' . esc_html__( 'Forum Category', 'hovercraft' ) . '</li>';
+            echo '<li class="item-current item">' . __( 'Forum Category', 'hovercraft' ) . '</li>';
 
         // Check if it is a forum archive (list of all forums)
         } elseif ( bbp_is_forum_archive() ) {
-            echo '<li class="item-current item">' . esc_html__( 'All Forums', 'hovercraft' ) . '</li>';
+            echo '<li class="item-current item">' . __( 'All Forums', 'hovercraft' ) . '</li>';
 
         // Check if it's a single forum or topic
         } elseif ( bbp_is_single_forum() || bbp_is_single_topic() ) {
@@ -56,15 +56,15 @@ function ah_breadcrumb() {
 
                     // Display parent forums (if any)
                     foreach ( $ancestors as $ancestor ) {
-                        echo '<li class="item"><a href="' . esc_url( get_permalink( $ancestor ) ) . '">' . esc_html( get_the_title( $ancestor ) ) . '</a></li>' . $sep;
+                        echo '<li class="item"><a href="' . get_permalink( $ancestor ) . '">' . get_the_title( $ancestor ) . '</a></li>' . $sep;
                     }
 
                     // Display current forum
-                    echo '<li class="item"><a href="' . esc_url( get_permalink( $forum_id ) ) . '">' . esc_html( get_the_title( $forum_id ) ) . '</a></li>' . $sep;
+                    echo '<li class="item"><a href="' . get_permalink( $forum_id ) . '">' . get_the_title( $forum_id ) . '</a></li>' . $sep;
                 }
 
                 // Current topic (no link, just Go back)
-                echo '<li class="item-current item">' . esc_html__( '« Go back', 'hovercraft' ) . '</li>';
+                echo '<li class="item-current item">' . __( '« Go back', 'hovercraft' ) . '</li>';
 
             } elseif ( bbp_is_single_forum() ) {
 
@@ -73,17 +73,17 @@ function ah_breadcrumb() {
                 $ancestors = array_reverse( $ancestors );
 
                 foreach ( $ancestors as $ancestor ) {
-                    echo '<li class="item"><a href="' . esc_url( get_permalink( $ancestor ) ) . '">' . esc_html( get_the_title( $ancestor ) ) . '</a></li>' . $sep;
+                    echo '<li class="item"><a href="' . get_permalink( $ancestor ) . '">' . get_the_title( $ancestor ) . '</a></li>' . $sep;
                 }
 
                 // Current forum
-                echo '<li class="item-current item">' . esc_html__( '« Go back', 'hovercraft' ) . '</li>';
+                echo '<li class="item-current item">' . __( '« Go back', 'hovercraft' ) . '</li>';
             }
 
         } elseif ( bbp_is_topic_archive() ) {
 
             // Topic archive (list of all topics)
-            echo '<li class="item-current item">' . esc_html__( 'All Topics', 'hovercraft' ) . '</li>';
+            echo '<li class="item-current item">' . __( 'All Topics', 'hovercraft' ) . '</li>';
 
         } elseif ( bbp_is_single_reply() ) {
 
@@ -99,16 +99,16 @@ function ah_breadcrumb() {
 
                 // Loop through parent forums
                 foreach ( $ancestors as $ancestor ) {
-                    echo '<li class="item"><a href="' . esc_url( get_permalink( $ancestor ) ) . '">' . esc_html( get_the_title( $ancestor ) ) . '</a></li>' . $sep;
+                    echo '<li class="item"><a href="' . get_permalink( $ancestor ) . '">' . get_the_title( $ancestor ) . '</a></li>' . $sep;
                 }
 
                 // Display current forum and topic
-                echo '<li class="item"><a href="' . esc_url( get_permalink( $forum_id ) ) . '">' . esc_html( get_the_title( $forum_id ) ) . '</a></li>' . $sep;
-                echo '<li class="item"><a href="' . esc_url( get_permalink( $topic_id ) ) . '">' . esc_html( get_the_title( $topic_id ) ) . '</a></li>' . $sep;
+                echo '<li class="item"><a href="' . get_permalink( $forum_id ) . '">' . get_the_title( $forum_id ) . '</a></li>' . $sep;
+                echo '<li class="item"><a href="' . get_permalink( $topic_id ) . '">' . get_the_title( $topic_id ) . '</a></li>' . $sep;
             }
 
             // Current reply (no link, just Go back)
-            echo '<li class="item-current item">' . esc_html__( '« Go back', 'hovercraft' ) . '</li>';
+            echo '<li class="item-current item">' . __( '« Go back', 'hovercraft' ) . '</li>';
 
         } elseif ( bbp_is_user_home() || bbp_is_single_user() ) {
 
@@ -116,32 +116,32 @@ function ah_breadcrumb() {
             $user_id = bbp_get_displayed_user_id();
             $user_display_name = bbp_get_user_display_name( $user_id );
 
-            echo '<li class="item-current item">' . esc_html__( 'User: ', 'hovercraft' ) . esc_html( $user_display_name ) . '</li>';
+            echo '<li class="item-current item">' . __( 'User: ', 'hovercraft' ) . esc_html( $user_display_name ) . '</li>';
 
         } elseif ( bbp_is_user_edit() ) {
             // User edit profile
-            echo '<li class="item-current item">' . esc_html__( 'Edit Profile', 'hovercraft' ) . '</li>';
+            echo '<li class="item-current item">' . __( 'Edit Profile', 'hovercraft' ) . '</li>';
 
         } elseif ( bbp_is_user_subscriptions() ) {
             // User subscriptions
-            echo '<li class="item-current item">' . esc_html__( 'Subscriptions', 'hovercraft' ) . '</li>';
+            echo '<li class="item-current item">' . __( 'Subscriptions', 'hovercraft' ) . '</li>';
 
         } elseif ( bbp_is_user_favorites() ) {
             // User favorites
-            echo '<li class="item-current item">' . esc_html__( 'Favorites', 'hovercraft' ) . '</li>';
+            echo '<li class="item-current item">' . __( 'Favorites', 'hovercraft' ) . '</li>';
 
         } elseif ( bbp_is_user_topics() ) {
             // User topics
-            echo '<li class="item-current item">' . esc_html__( 'User Topics', 'hovercraft' ) . '</li>';
+            echo '<li class="item-current item">' . __( 'User Topics', 'hovercraft' ) . '</li>';
 
         } elseif ( bbp_is_user_replies() ) {
             // User replies
-            echo '<li class="item-current item">' . esc_html__( 'User Replies', 'hovercraft' ) . '</li>';
+            echo '<li class="item-current item">' . __( 'User Replies', 'hovercraft' ) . '</li>';
 
         } elseif ( bbp_is_search() ) {
 
             // bbPress search results
-            echo '<li class="item-current item">' . esc_html__( 'Search Results', 'hovercraft' ) . '</li>';
+            echo '<li class="item-current item">' . __( 'Search Results', 'hovercraft' ) . '</li>';
 
         } elseif ( bbp_is_topic_tag() ) {
 
@@ -190,7 +190,7 @@ function ah_breadcrumb() {
             // Store category in $display_category
             $display_category = '';
             foreach ( $cat_parent as $p ) {
-                $display_category .= '<li class="item item-cat">' . esc_html( $p ) . '</li>' . $sep;
+                $display_category .= '<li class="item item-cat">' . $p . '</li>' . $sep;
             }
         }
 
@@ -212,16 +212,16 @@ function ah_breadcrumb() {
         if ( !empty( $get_last_category ) ) {
 
             echo $display_category;
-            echo '<li class="item item-current">' . esc_html__( 'Go back', 'hovercraft' ) . '</li>';
+            echo '<li class="item item-current">' . __( 'Go back', 'hovercraft' ) . '</li>';
 
         } elseif ( !empty( $cat_id ) ) {
 
             echo '<li class="item item-cat"><a href="' . esc_url( $cat_link ) . '">' . esc_html( $cat_name ) . '</a></li>' . $sep;
-            echo '<li class="item-current item">' . esc_html__( 'Go back', 'hovercraft' ) . '</li>';
+            echo '<li class="item-current item">' . __( 'Go back', 'hovercraft' ) . '</li>';
 
         } else {
 
-            echo '<li class="item-current item">' . esc_html__( 'Go back', 'hovercraft' ) . '</li>'; // probably remove this later
+            echo '<li class="item-current item">' . __( 'Go back', 'hovercraft' ) . '</li>'; // probably remove this later
         }
 
     } elseif ( is_archive() ) {
@@ -305,7 +305,7 @@ function ah_breadcrumb() {
             $userdata = get_userdata( $author_id );
 
             // Display author name
-            echo '<li class="item-current item">' . esc_html__( 'Author: ', 'hovercraft' ) . esc_html( $userdata->display_name ) . '</li>';
+            echo '<li class="item-current item">' . __( 'Author: ', 'hovercraft' ) . esc_html( $userdata->display_name ) . '</li>';
 
         } else {
 
@@ -329,30 +329,30 @@ function ah_breadcrumb() {
             }
             foreach ( $anc as $ancestor ) {
 
-                $parents .= '<li class="item-parent item"><a href="' . esc_url( get_permalink( $ancestor ) ) . '">' . esc_html( get_the_title( $ancestor ) ) . '</a></li>' . $sep;
+                $parents .= '<li class="item-parent item"><a href="' . get_permalink( $ancestor ) . '">' . get_the_title( $ancestor ) . '</a></li>' . $sep;
             }
 
             // Display parent pages
             echo $parents;
 
             // Current page
-            echo '<li class="item-current item">' . esc_html__( 'Go back', 'hovercraft' ) . '</li>';
+            echo '<li class="item-current item">' . __( 'Go back', 'hovercraft' ) . '</li>';
 
         } else {
 
             // Just display current page if no parents
-            echo '<li class="item-current item">' . esc_html__( 'Go back', 'hovercraft' ) . '</li>';
+            echo '<li class="item-current item">' . __( 'Go back', 'hovercraft' ) . '</li>';
         }
 
     } elseif ( is_search() ) {
 
         // Search results page
-        echo '<li class="item-current item">' . esc_html__( 'Search results for: ', 'hovercraft' ) . esc_html( get_search_query() ) . '</li>';
+        echo '<li class="item-current item">' . __( 'Search results for: ', 'hovercraft' ) . esc_html( get_search_query() ) . '</li>';
 
     } elseif ( is_404() ) {
 
         // 404 page
-        echo '<li class="item-current item">' . esc_html__( 'Error 404', 'hovercraft' ) . '</li>';
+        echo '<li class="item-current item">' . __( 'Error 404', 'hovercraft' ) . '</li>';
     }
 
     // End breadcrumb
