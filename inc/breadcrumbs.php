@@ -50,7 +50,7 @@ function ah_breadcrumb() {
                 // Get the forum the topic belongs to
                 $forum_id = bbp_get_topic_forum_id();
 
-                if ( $forum_id ) {
+                if ( $forum_id && ! is_wp_error( $forum_id ) ) {
                     $ancestors = get_post_ancestors( $forum_id );
                     $ancestors = array_reverse( $ancestors );
 
@@ -93,17 +93,19 @@ function ah_breadcrumb() {
             $forum_id = bbp_get_topic_forum_id( $topic_id );
 
             // Get ancestors (parent forums, if any)
-            $ancestors = get_post_ancestors( $forum_id );
-            $ancestors = array_reverse( $ancestors );
+            if ( $forum_id && ! is_wp_error( $forum_id ) ) {
+                $ancestors = get_post_ancestors( $forum_id );
+                $ancestors = array_reverse( $ancestors );
 
-            // Loop through parent forums
-            foreach ( $ancestors as $ancestor ) {
-                echo '<li class="item"><a href="' . esc_url( get_permalink( $ancestor ) ) . '">' . esc_html( get_the_title( $ancestor ) ) . '</a></li>' . $sep;
+                // Loop through parent forums
+                foreach ( $ancestors as $ancestor ) {
+                    echo '<li class="item"><a href="' . esc_url( get_permalink( $ancestor ) ) . '">' . esc_html( get_the_title( $ancestor ) ) . '</a></li>' . $sep;
+                }
+
+                // Display current forum and topic
+                echo '<li class="item"><a href="' . esc_url( get_permalink( $forum_id ) ) . '">' . esc_html( get_the_title( $forum_id ) ) . '</a></li>' . $sep;
+                echo '<li class="item"><a href="' . esc_url( get_permalink( $topic_id ) ) . '">' . esc_html( get_the_title( $topic_id ) ) . '</a></li>' . $sep;
             }
-
-            // Display current forum and topic
-            echo '<li class="item"><a href="' . esc_url( get_permalink( $forum_id ) ) . '">' . esc_html( get_the_title( $forum_id ) ) . '</a></li>' . $sep;
-            echo '<li class="item"><a href="' . esc_url( get_permalink( $topic_id ) ) . '">' . esc_html( get_the_title( $topic_id ) ) . '</a></li>' . $sep;
 
             // Current reply (no link, just Go back)
             echo '<li class="item-current item">' . esc_html__( '« Go back', 'hovercraft' ) . '</li>';
@@ -188,7 +190,7 @@ function ah_breadcrumb() {
             // Store category in $display_category
             $display_category = '';
             foreach ( $cat_parent as $p ) {
-                $display_category .= '<li class="item item-cat">' . $p . '</li>' . $sep;
+                $display_category .= '<li class="item item-cat">' . esc_html( $p ) . '</li>' . $sep;
             }
         }
 
@@ -198,9 +200,12 @@ function ah_breadcrumb() {
         if ( empty( $get_last_category ) && !empty( $custom_taxonomy ) && $taxonomy_exists ) {
 
             $taxonomy_terms = get_the_terms( $post->ID, $custom_taxonomy );
-            $cat_id = $taxonomy_terms[0]->term_id;
-            $cat_link = get_term_link( $cat_id, $custom_taxonomy );
-            $cat_name = $taxonomy_terms[0]->name;
+            if ( !empty( $taxonomy_terms ) && ! is_wp_error( $taxonomy_terms ) ) {
+                $cat_id = $taxonomy_terms[0]->term_id;
+                $cat_link = get_term_link( $cat_id, $custom_taxonomy );
+                $cat_name = $taxonomy_terms[0]->name;
+                echo '<li class="item item-cat"><a href="' . esc_url( $cat_link ) . '">' . esc_html( $cat_name ) . '</a></li>' . $sep;
+            }
         }
 
         // Check if the post is in a category
@@ -256,9 +261,9 @@ function ah_breadcrumb() {
             // Get tag information
             $term_id = get_query_var( 'tag_id' );
             $taxonomy = 'post_tag';
-            $args = array('include' => $term_id );
+            $args = array( 'include' => $term_id );
             $terms = get_terms( $taxonomy, $args );
-            $get_term_name = $terms[0]->name;
+            $get_term_name = ! empty( $terms ) ? $terms[0]->name : '';
 
             // Display the tag name
             echo '<li class="item-current item">' . esc_html( $get_term_name ) . '</li>';
