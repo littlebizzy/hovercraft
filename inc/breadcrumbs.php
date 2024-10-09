@@ -9,11 +9,6 @@ add_filter( 'bbp_no_breadcrumb', 'bm_bbp_no_breadcrumb' );
 // https://torquemag.io/2020/09/wordpress-breadcrumbs/
 function ah_breadcrumb() {
 
-    // Check if it is the front/home page and return
-    // if ( is_front_page() ) {
-    //     return;
-    // }
-
     // Define
     global $post;
     $custom_taxonomy = ''; // If you have custom taxonomy, place it here.
@@ -33,7 +28,87 @@ function ah_breadcrumb() {
     // Creating home link
     echo '<li class="item"><a href="' . esc_url( get_home_url() ) . '">' . esc_html( $defaults['home_title'] ) . '</a></li>' . $sep;
 
-    if ( is_single() ) {
+    // Check for bbPress-specific content
+    if ( function_exists( 'is_bbpress' ) && is_bbpress() ) {
+
+        // Forum homepage link
+        echo '<li class="item"><a href="' . esc_url( bbp_get_forums_url() ) . '">' . esc_html__( 'Forum', 'hovercraft' ) . '</a></li>' . $sep;
+
+        if ( bbp_is_single_forum() || bbp_is_single_topic() ) {
+
+            if ( bbp_is_single_topic() ) {
+
+                // Get the forum the topic belongs to
+                $forum_id = bbp_get_topic_forum_id();
+
+                if ( $forum_id ) {
+                    $ancestors = get_post_ancestors( $forum_id );
+                    $ancestors = array_reverse( $ancestors );
+
+                    // Display parent forums (if any)
+                    foreach ( $ancestors as $ancestor ) {
+                        echo '<li class="item"><a href="' . esc_url( get_permalink( $ancestor ) ) . '">' . esc_html( get_the_title( $ancestor ) ) . '</a></li>' . $sep;
+                    }
+
+                    // Display current forum
+                    echo '<li class="item"><a href="' . esc_url( get_permalink( $forum_id ) ) . '">' . esc_html( get_the_title( $forum_id ) ) . '</a></li>' . $sep;
+                }
+
+                // Current topic (no link, just Go back)
+                echo '<li class="item-current item">' . esc_html__( '« Go back', 'hovercraft' ) . '</li>';
+
+            } elseif ( bbp_is_single_forum() ) {
+
+                // Display parent forums (if any)
+                $ancestors = get_post_ancestors( get_the_ID() );
+                $ancestors = array_reverse( $ancestors );
+
+                foreach ( $ancestors as $ancestor ) {
+                    echo '<li class="item"><a href="' . esc_url( get_permalink( $ancestor ) ) . '">' . esc_html( get_the_title( $ancestor ) ) . '</a></li>' . $sep;
+                }
+
+                // Current forum
+                echo '<li class="item-current item">' . esc_html__( '« Go back', 'hovercraft' ) . '</li>';
+            }
+
+        } elseif ( bbp_is_topic_archive() ) {
+
+            // Topic archive (list of all topics)
+            echo '<li class="item-current item">' . esc_html__( 'All Topics', 'hovercraft' ) . '</li>';
+
+        } elseif ( bbp_is_single_reply() ) {
+
+            // Reply belongs to a topic, so we need to trace back to the topic and forum
+            $reply_id = bbp_get_reply_id();
+            $topic_id = bbp_get_reply_topic_id( $reply_id );
+            $forum_id = bbp_get_topic_forum_id( $topic_id );
+
+            // Get ancestors (parent forums, if any)
+            $ancestors = get_post_ancestors( $forum_id );
+            $ancestors = array_reverse( $ancestors );
+
+            // Loop through parent forums
+            foreach ( $ancestors as $ancestor ) {
+                echo '<li class="item"><a href="' . esc_url( get_permalink( $ancestor ) ) . '">' . esc_html( get_the_title( $ancestor ) ) . '</a></li>' . $sep;
+            }
+
+            // Display current forum and topic
+            echo '<li class="item"><a href="' . esc_url( get_permalink( $forum_id ) ) . '">' . esc_html( get_the_title( $forum_id ) ) . '</a></li>' . $sep;
+            echo '<li class="item"><a href="' . esc_url( get_permalink( $topic_id ) ) . '">' . esc_html( get_the_title( $topic_id ) ) . '</a></li>' . $sep;
+
+            // Current reply (no link, just Go back)
+            echo '<li class="item-current item">' . esc_html__( '« Go back', 'hovercraft' ) . '</li>';
+
+        } elseif ( bbp_is_user_home() || bbp_is_single_user() ) {
+
+            // User profile
+            $user_id = bbp_get_displayed_user_id();
+            $user_display_name = bbp_get_user_display_name( $user_id );
+
+            echo '<li class="item-current item">' . esc_html__( 'User: ', 'hovercraft' ) . esc_html( $user_display_name ) . '</li>';
+        }
+
+    } elseif ( is_single() ) {
 
         // Get post type
         $post_type = get_post_type();
