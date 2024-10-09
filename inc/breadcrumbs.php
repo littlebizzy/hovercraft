@@ -37,7 +37,7 @@ function ah_breadcrumb() {
         // Forum category
         if ( bbp_is_forum_category() ) {
             echo '<li class="item-current item">' . esc_html__( 'Forum Category', 'hovercraft' ) . '</li>';
-            
+
         // Check if it is a forum archive (list of all forums)
         } elseif ( bbp_is_forum_archive() ) {
             echo '<li class="item-current item">' . esc_html__( 'All Forums', 'hovercraft' ) . '</li>';
@@ -147,13 +147,18 @@ function ah_breadcrumb() {
             $tag_name = bbp_get_topic_tag_name();
             echo '<li class="item-current item">' . esc_html( $tag_name ) . '</li>';
 
+        // Add handling for single topic tag pages
+        } elseif ( bbp_is_single_topic_tag() ) {
+
+            $tag_name = bbp_get_topic_tag_name();
+            echo '<li class="item-current item">' . esc_html( $tag_name ) . '</li>';
+
         } elseif ( bbp_is_view() ) {
 
             // Custom views in bbPress (e.g., "Most popular topics")
             $view_name = bbp_get_view_title();
             echo '<li class="item-current item">' . esc_html( $view_name ) . '</li>';
         }
-
     } elseif ( is_single() ) {
 
         // Get post type
