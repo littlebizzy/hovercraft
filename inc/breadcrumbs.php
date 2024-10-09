@@ -31,6 +31,7 @@ function ah_breadcrumb() {
     echo '<ul id="' . esc_attr( $defaults['id'] ) . '" class="' . esc_attr( $defaults['classes'] ) . '">';
 
     // Creating home link
+    // echo '<li class="item"><a href="' . get_home_url() . '"><i class="material-icons home">home</i>' . esc_html( $defaults['home_title'] ) . '</a></li>' . $sep;
     echo '<li class="item"><a href="' . get_home_url() . '">' . esc_html( $defaults['home_title'] ) . '</a></li>' . $sep;
 
     if ( is_single() ) {
@@ -56,6 +57,7 @@ function ah_breadcrumb() {
             // Arrange category parent to child
             $category_values = array_values( $category );
             $get_last_category = end( $category_values );
+            // $get_last_category    = $category[count($category) - 1];
             $get_parent_category = rtrim( get_category_parents( $get_last_category->term_id, true, ',' ), ',' );
             $cat_parent = explode( ',', $get_parent_category );
 
