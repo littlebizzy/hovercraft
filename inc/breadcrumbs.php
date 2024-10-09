@@ -34,8 +34,12 @@ function ah_breadcrumb() {
         // Forum homepage link
         echo '<li class="item"><a href="' . esc_url( bbp_get_forums_url() ) . '">' . esc_html__( 'Forum', 'hovercraft' ) . '</a></li>' . $sep;
 
+        // Forum category
+        if ( bbp_is_forum_category() ) {
+            echo '<li class="item-current item">' . esc_html__( 'Forum Category', 'hovercraft' ) . '</li>';
+            
         // Check if it is a forum archive (list of all forums)
-        if ( bbp_is_forum_archive() ) {
+        } elseif ( bbp_is_forum_archive() ) {
             echo '<li class="item-current item">' . esc_html__( 'All Forums', 'hovercraft' ) . '</li>';
 
         // Check if it's a single forum or topic
@@ -111,6 +115,26 @@ function ah_breadcrumb() {
             $user_display_name = bbp_get_user_display_name( $user_id );
 
             echo '<li class="item-current item">' . esc_html__( 'User: ', 'hovercraft' ) . esc_html( $user_display_name ) . '</li>';
+
+        } elseif ( bbp_is_user_edit() ) {
+            // User edit profile
+            echo '<li class="item-current item">' . esc_html__( 'Edit Profile', 'hovercraft' ) . '</li>';
+
+        } elseif ( bbp_is_user_subscriptions() ) {
+            // User subscriptions
+            echo '<li class="item-current item">' . esc_html__( 'Subscriptions', 'hovercraft' ) . '</li>';
+
+        } elseif ( bbp_is_user_favorites() ) {
+            // User favorites
+            echo '<li class="item-current item">' . esc_html__( 'Favorites', 'hovercraft' ) . '</li>';
+
+        } elseif ( bbp_is_user_topics() ) {
+            // User topics
+            echo '<li class="item-current item">' . esc_html__( 'User Topics', 'hovercraft' ) . '</li>';
+
+        } elseif ( bbp_is_user_replies() ) {
+            // User replies
+            echo '<li class="item-current item">' . esc_html__( 'User Replies', 'hovercraft' ) . '</li>';
 
         } elseif ( bbp_is_search() ) {
 
