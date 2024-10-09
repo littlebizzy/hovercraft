@@ -9,7 +9,7 @@ add_filter( 'bbp_no_breadcrumb', 'bm_bbp_no_breadcrumb' );
 // https://torquemag.io/2020/09/wordpress-breadcrumbs/
 function ah_breadcrumb() {
 
-    // Check if is front/home page, return
+    // Check if it is the front/home page and return
     // if ( is_front_page() ) {
     //     return;
     // }
@@ -19,24 +19,23 @@ function ah_breadcrumb() {
     $custom_taxonomy = ''; // If you have custom taxonomy, place it here.
 
     $defaults = array(
-        'seperator'   => '«',
+        'separator'   => '«',
         'id'          => 'ah-breadcrumb',
         'classes'     => 'ah-breadcrumb',
         'home_title'  => esc_html__( 'Home', 'hovercraft' ),
     );
 
-    $sep = '<li class="seperator">' . esc_html( $defaults['seperator'] ) . '</li>';
+    $sep = '<li class="separator">' . esc_html( $defaults['separator'] ) . '</li>';
 
     // Start the breadcrumb with a link to your homepage
     echo '<ul id="' . esc_attr( $defaults['id'] ) . '" class="' . esc_attr( $defaults['classes'] ) . '">';
 
     // Creating home link
-    // echo '<li class="item"><a href="' . get_home_url() . '"><i class="material-icons home">home</i>' . esc_html( $defaults['home_title'] ) . '</a></li>' . $sep;
-    echo '<li class="item"><a href="' . get_home_url() . '">' . esc_html( $defaults['home_title'] ) . '</a></li>' . $sep;
+    echo '<li class="item"><a href="' . esc_url( get_home_url() ) . '">' . esc_html( $defaults['home_title'] ) . '</a></li>' . $sep;
 
     if ( is_single() ) {
 
-        // Get posts type
+        // Get post type
         $post_type = get_post_type();
 
         // If post type is not post
@@ -51,13 +50,12 @@ function ah_breadcrumb() {
         // Get categories
         $category = get_the_category( $post->ID );
 
-        // If category not empty
+        // If category is not empty
         if ( !empty( $category ) ) {
 
             // Arrange category parent to child
             $category_values = array_values( $category );
             $get_last_category = end( $category_values );
-            // $get_last_category    = $category[count($category) - 1];
             $get_parent_category = rtrim( get_category_parents( $get_last_category->term_id, true, ',' ), ',' );
             $cat_parent = explode( ',', $get_parent_category );
 
@@ -75,7 +73,7 @@ function ah_breadcrumb() {
 
             $taxonomy_terms = get_the_terms( $post->ID, $custom_taxonomy );
             $cat_id = $taxonomy_terms[0]->term_id;
-            $cat_link = get_term_link( $taxonomy_terms[0]->term_id, $custom_taxonomy );
+            $cat_link = get_term_link( $cat_id, $custom_taxonomy );
             $cat_name = $taxonomy_terms[0]->name;
         }
 
@@ -83,22 +81,22 @@ function ah_breadcrumb() {
         if ( !empty( $get_last_category ) ) {
 
             echo $display_category;
-            echo '<li class="item item-current">' . __( 'Go back', 'hovercraft' ) . '</li>';
+            echo '<li class="item item-current">' . esc_html__( 'Go back', 'hovercraft' ) . '</li>';
 
         } elseif ( !empty( $cat_id ) ) {
 
             echo '<li class="item item-cat"><a href="' . esc_url( $cat_link ) . '">' . esc_html( $cat_name ) . '</a></li>' . $sep;
-            echo '<li class="item-current item">' . __( 'Go back', 'hovercraft' ) . '</li>';
+            echo '<li class="item-current item">' . esc_html__( 'Go back', 'hovercraft' ) . '</li>';
 
         } else {
 
-            echo '<li class="item-current item">' . __( 'Go back', 'hovercraft' ) . '</li>'; // probably remove this later
+            echo '<li class="item-current item">' . esc_html__( 'Go back', 'hovercraft' ) . '</li>'; // probably remove this later
         }
 
     } elseif ( is_archive() ) {
 
         if ( is_tax() ) {
-            // Get posts type
+            // Get post type
             $post_type = get_post_type();
 
             // If post type is not post
@@ -132,7 +130,7 @@ function ah_breadcrumb() {
             // Get tag information
             $term_id = get_query_var( 'tag_id' );
             $taxonomy = 'post_tag';
-            $args = 'include=' . $term_id;
+            $args = array('include' => $term_id );
             $terms = get_terms( $taxonomy, $args );
             $get_term_name = $terms[0]->name;
 
@@ -172,8 +170,8 @@ function ah_breadcrumb() {
             // Author archive
 
             // Get the author information
-            global $author;
-            $userdata = get_userdata( $author );
+            $author_id = get_query_var('author');
+            $userdata = get_userdata( $author_id );
 
             // Display author name
             echo '<li class="item-current item">' . esc_html__( 'Author: ', 'hovercraft' ) . esc_html( $userdata->display_name ) . '</li>';
@@ -196,7 +194,7 @@ function ah_breadcrumb() {
 
             // Parent page loop
             if ( !isset( $parents ) ) {
-                $parents = null;
+                $parents = '';
             }
             foreach ( $anc as $ancestor ) {
 
@@ -207,12 +205,12 @@ function ah_breadcrumb() {
             echo $parents;
 
             // Current page
-            echo '<li class="item-current item">' . __( 'Go back', 'hovercraft' ) . '</li>';
+            echo '<li class="item-current item">' . esc_html__( 'Go back', 'hovercraft' ) . '</li>';
 
         } else {
 
-            // Just display current page if not parents
-            echo '<li class="item-current item">' . __( 'Go back', 'hovercraft' ) . '</li>';
+            // Just display current page if no parents
+            echo '<li class="item-current item">' . esc_html__( 'Go back', 'hovercraft' ) . '</li>';
         }
 
     } elseif ( is_search() ) {
