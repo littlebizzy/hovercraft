@@ -2,22 +2,25 @@
 
 function hovercraft_google_fonts() {
 
-    // new font families
+    // get the first font family and format for google fonts url
     $first_font_family = get_theme_mod( 'hovercraft_first_font_family', 'noto_sans' );
     $first_font_family_clean = str_replace( '_', '+', $first_font_family );
     $first_font_family_final = ( $first_font_family !== 'none' ) ? ucwords( $first_font_family_clean, '+' ) : '';
 
+    // get the second font family and format for google fonts url
     $second_font_family = get_theme_mod( 'hovercraft_second_font_family', 'open_sans' );
     $second_font_family_clean = str_replace( '_', '+', $second_font_family );
     $second_font_family_final = ( $second_font_family !== 'none' ) ? ucwords( $second_font_family_clean, '+' ) : '';
 
+    // get the third font family and format for google fonts url
     $third_font_family = get_theme_mod( 'hovercraft_third_font_family', 'roboto' );
     $third_font_family_clean = str_replace( '_', '+', $third_font_family );
     $third_font_family_final = ( $third_font_family !== 'none' ) ? ucwords( $third_font_family_clean, '+' ) : '';
 
-    // build Google Fonts URL
+    // build google fonts url parts
     $google_fonts = array();
 
+    // add each font family if it's not empty
     if ( ! empty( $first_font_family_final ) ) {
         $google_fonts[] = "family={$first_font_family_final}:ital,wght@0,400;0,600;0,700;1,400";
     }
@@ -30,6 +33,7 @@ function hovercraft_google_fonts() {
         $google_fonts[] = "family={$third_font_family_final}:ital,wght@0,400;0,600;0,700;1,400";
     }
 
+    // enqueue the google fonts stylesheet if there are any fonts to include
     if ( ! empty( $google_fonts ) ) {
         $google_fonts_url = 'https://fonts.googleapis.com/css2?' . implode( '&', $google_fonts ) . '&display=swap';
         wp_enqueue_style( 'google-fonts', $google_fonts_url, array(), null, 'all' );
