@@ -1,7 +1,24 @@
 <?php
 
 function hovercraft_google_fonts() {
-	
+
+	// new
+    $first_font_family = get_theme_mod( 'hovercraft_first_font_family', 'noto_sans' );
+    $first_font_family_clean = str_replace("_", "+", $first_font_family);
+    $first_font_family_almost = ucfirst($first_font_family_clean);
+    $first_font_family_final = ucwords($first_font_family_almost, "+");
+
+    $second_font_family = get_theme_mod( 'hovercraft_second_font_family', 'open_sans' );
+    $second_font_family_clean = str_replace("_", "+", $second_font_family);
+    $second_font_family_almost = ucfirst($second_font_family_clean);
+    $second_font_family_final = ucwords($second_font_family_almost, "+");
+
+    $third_font_family = get_theme_mod( 'hovercraft_third_font_family', 'roboto' );
+    $third_font_family_clean = str_replace("_", "+", $third_font_family);
+    $third_font_family_almost = ucfirst($third_font_family_clean);
+    $third_font_family_final = ucwords($third_font_family_almost, "+");
+
+	// old
 	$default_font = get_theme_mod( 'hovercraft_default_font', 'noto_sans' );
 	$default_font_clean = str_replace("_", "+", $default_font);
 	$default_font_almost = ucfirst($default_font_clean);
