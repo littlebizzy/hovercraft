@@ -14,20 +14,23 @@ function hovercraft_google_fonts() {
     $third_font_family = get_theme_mod( 'hovercraft_third_font_family', 'roboto' );
     $third_font_family_final = ucwords( ucfirst( str_replace( '_', '+', $third_font_family ) ), '+' );
 
+    // specify only the font variations 400, 600, and 700 for both regular and italic styles
+    $font_variations = 'ital,wght@0,400;0,600;0,700;1,400;1,600;1,700';
+
     // initialize an array to hold google fonts query parts
     $google_fonts = array();
 
     // add each font family to the array only if it is not 'none', null, or empty
     if ( ! empty( $first_font_family ) && $first_font_family !== 'none' ) {
-        $google_fonts[] = "family={$first_font_family_final}:ital,wght@0,400;0,600;0,700;1,400";
+        $google_fonts[] = "family={$first_font_family_final}:$font_variations";
     }
 
     if ( ! empty( $second_font_family ) && $second_font_family !== 'none' ) {
-        $google_fonts[] = "family={$second_font_family_final}:ital,wght@0,400;0,600;0,700;1,400";
+        $google_fonts[] = "family={$second_font_family_final}:$font_variations";
     }
 
     if ( ! empty( $third_font_family ) && $third_font_family !== 'none' ) {
-        $google_fonts[] = "family={$third_font_family_final}:ital,wght@0,400;0,600;0,700;1,400";
+        $google_fonts[] = "family={$third_font_family_final}:$font_variations";
     }
 
     // enqueue the google fonts stylesheet if any font families are set
@@ -38,7 +41,3 @@ function hovercraft_google_fonts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'hovercraft_google_fonts' );
-
-// Ref: ChatGPT
-// Ref: https://wordpress.org/support/topic/new-google-fonts-url-incompatible-with-wp_enqueue_style/
-// Ref: https://wordpress.stackexchange.com/questions/77227/enqueue-google-web-fonts-without-messing-up-symbols-in-url
