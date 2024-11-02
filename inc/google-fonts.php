@@ -41,3 +41,7 @@ function hovercraft_google_fonts() {
 }
 
 add_action( 'wp_enqueue_scripts', 'hovercraft_google_fonts' );
+
+// Ref: ChatGPT
+// Ref: https://wordpress.org/support/topic/new-google-fonts-url-incompatible-with-wp_enqueue_style/
+// Ref: https://wordpress.stackexchange.com/questions/77227/enqueue-google-web-fonts-without-messing-up-symbols-in-url
