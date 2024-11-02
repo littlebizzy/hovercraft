@@ -2,38 +2,41 @@
 
 function hovercraft_google_fonts() {
 
-    // get the first font family and format for google fonts url
+    // get the first font family from theme mod and format it for google fonts
     $first_font_family = get_theme_mod( 'hovercraft_first_font_family', 'noto_sans' );
     $first_font_family_clean = str_replace( '_', '+', $first_font_family );
-    $first_font_family_final = ( $first_font_family !== 'none' ) ? ucwords( $first_font_family_clean, '+' ) : '';
+    $first_font_family_almost = ucfirst( $first_font_family_clean );
+    $first_font_family_final = ucwords( $first_font_family_almost, '+' );
 
-    // get the second font family and format for google fonts url
+    // get the second font family from theme mod and format it for google fonts
     $second_font_family = get_theme_mod( 'hovercraft_second_font_family', 'open_sans' );
     $second_font_family_clean = str_replace( '_', '+', $second_font_family );
-    $second_font_family_final = ( $second_font_family !== 'none' ) ? ucwords( $second_font_family_clean, '+' ) : '';
+    $second_font_family_almost = ucfirst( $second_font_family_clean );
+    $second_font_family_final = ucwords( $second_font_family_almost, '+' );
 
-    // get the third font family and format for google fonts url
+    // get the third font family from theme mod and format it for google fonts
     $third_font_family = get_theme_mod( 'hovercraft_third_font_family', 'roboto' );
     $third_font_family_clean = str_replace( '_', '+', $third_font_family );
-    $third_font_family_final = ( $third_font_family !== 'none' ) ? ucwords( $third_font_family_clean, '+' ) : '';
+    $third_font_family_almost = ucfirst( $third_font_family_clean );
+    $third_font_family_final = ucwords( $third_font_family_almost, '+' );
 
-    // build google fonts url parts
+    // initialize an array to hold google fonts query parts
     $google_fonts = array();
 
-    // add each font family if it's not empty
-    if ( ! empty( $first_font_family_final ) ) {
+    // add each font family to the array only if not 'none'
+    if ( $first_font_family !== 'none' ) {
         $google_fonts[] = "family={$first_font_family_final}:ital,wght@0,400;0,600;0,700;1,400";
     }
 
-    if ( ! empty( $second_font_family_final ) ) {
+    if ( $second_font_family !== 'none' ) {
         $google_fonts[] = "family={$second_font_family_final}:ital,wght@0,400;0,600;0,700;1,400";
     }
 
-    if ( ! empty( $third_font_family_final ) ) {
+    if ( $third_font_family !== 'none' ) {
         $google_fonts[] = "family={$third_font_family_final}:ital,wght@0,400;0,600;0,700;1,400";
     }
 
-    // enqueue the google fonts stylesheet if there are any fonts to include
+    // enqueue the google fonts stylesheet if any font families are set
     if ( ! empty( $google_fonts ) ) {
         $google_fonts_url = 'https://fonts.googleapis.com/css2?' . implode( '&', $google_fonts ) . '&display=swap';
         wp_enqueue_style( 'google-fonts', $google_fonts_url, array(), null, 'all' );
