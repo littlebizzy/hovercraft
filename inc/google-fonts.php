@@ -17,22 +17,22 @@ function hovercraft_google_fonts() {
     // initialize an array to hold google fonts query parts
     $google_fonts = array();
 
-    // add each font family to the array only if not 'none'
-    if ( $first_font_family !== 'none' ) {
+    // add each font family to the array only if it is not 'none', null, or empty
+    if ( ! empty( $first_font_family ) && $first_font_family !== 'none' ) {
         $google_fonts[] = "family={$first_font_family_final}:ital,wght@0,400;0,600;0,700;1,400";
     }
 
-    if ( $second_font_family !== 'none' ) {
+    if ( ! empty( $second_font_family ) && $second_font_family !== 'none' ) {
         $google_fonts[] = "family={$second_font_family_final}:ital,wght@0,400;0,600;0,700;1,400";
     }
 
-    if ( $third_font_family !== 'none' ) {
+    if ( ! empty( $third_font_family ) && $third_font_family !== 'none' ) {
         $google_fonts[] = "family={$third_font_family_final}:ital,wght@0,400;0,600;0,700;1,400";
     }
 
     // enqueue the google fonts stylesheet if any font families are set
     if ( ! empty( $google_fonts ) ) {
-        $google_fonts_url = 'https://fonts.googleapis.com/css2?' . implode( '&', $google_fonts ) . '&display=swap';
+        $google_fonts_url = esc_url( 'https://fonts.googleapis.com/css2?' . implode( '&', $google_fonts ) . '&display=swap' );
         wp_enqueue_style( 'google-fonts', $google_fonts_url, array(), null, 'all' );
     }
 }
