@@ -1,43 +1,41 @@
 <?php
 
-function hovercraft_portal_category_register( $wp_customize ) {
- 
-    //Get an array with the category list
-	$rjs_categories_full_list = get_categories(array( 'orderby' => 'name', ));
- 
-    //Create an empty array
-	$rjs_choices_list = [ 'none' => 'None (Disabled)', ];
- 
-    //Loop through the array and add the correct values every time
-	foreach( $rjs_categories_full_list as $rjs_single_cat ) {
-    	$rjs_choices_list[$rjs_single_cat->slug] = __( $rjs_single_cat->name );
-	}
-	
-	// portal category setting
-	$wp_customize->add_setting( 'hovercraft_portal_category', array(
-    'default'    => 'none',
-	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
-	);
-	
-	// portal category control
-		$wp_customize->add_control( new WP_Customize_Control(
+function hovercraft_register_portal_category( $wp_customize ) {
+
+    // get an array of categories
+    $categories_list = get_categories( array( 'orderby' => 'name' ) );
+
+    // initialize choices list with default value
+    $choices_list = [ 'none' => 'None (Disabled)' ];
+
+    // populate choices list with categories
+    foreach ( $categories_list as $category ) {
+        $choices_list[ $category->slug ] = __( $category->name );
+    }
+
+    // portal category setting
+    $wp_customize->add_setting( 'hovercraft_portal_category', array(
+        'default'           => 'none',
+        'sanitize_callback' => 'hovercraft_sanitize_select',
+    ) );
+
+    // portal category control
+    $wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
         'hovercraft_portal_category',
         array(
-            'label'     => __( 'Portal Category', 'hovercraft' ),
-			'description' => __( 'Which post category should use the portal layout? Note: This works well with Support articles, but might not be needed in some cases.', 'hovercraft' ),
-            'section'   => 'hovercraft_category_layouts',
-            'settings'  => 'hovercraft_portal_category',
-            'type'      => 'select',
-			'choices' =>  $rjs_choices_list,
+            'label'       => __( 'Portal Category', 'hovercraft' ),
+            'description' => __( 'Which post category should use the portal layout? Note: This works well with Support articles, but might not be needed in some cases.', 'hovercraft' ),
+            'section'     => 'hovercraft_category_layouts',
+            'settings'    => 'hovercraft_portal_category',
+            'type'        => 'select',
+            'choices'     => $choices_list,
         )
-) );
- 
+    ) );
 }
- 
-add_action( 'customize_register', 'hovercraft_portal_category_register' );
 
-// https://ralphjsmit.com/create-a-category-dropdown-in-wordpress-customizer
-// $category = get_theme_mod( 'rjs_category_dropdown', 'Uncategorized');
-// https://stackoverflow.com/questions/43715567/how-to-add-extra-values-to-a-existing-array
+add_action( 'customize_register', 'hovercraft_register_portal_category' );
+
+// Ref: ChatGPT
+// Ref: https://ralphjsmit.com/create-a-category-dropdown-in-wordpress-customizer
+// Ref: https://stackoverflow.com/questions/43715567/how-to-add-extra-values-to-a-existing-array
