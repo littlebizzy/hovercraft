@@ -1,23 +1,24 @@
 <?php
 
 function hovercraft_customizer($wp_customize) {
-$hovercraft_google_fonts_array = hovercraft_google_fonts_array();
+    // load google fonts array
+    $hovercraft_google_fonts_array = hovercraft_google_fonts_array();
 
-// remove header text color control
-$wp_customize->remove_control( 'header_textcolor' );
+    // remove header text color control
+    $wp_customize->remove_control('header_textcolor');
 
-// hero media section
-$wp_customize->get_section( 'header_image' )->title = __( 'Hero Media', 'hovercraft' );
+    // hero media section
+    $wp_customize->get_section('header_image')->title = __('Hero Media', 'hovercraft');
 
-// homepage section
-$wp_customize->get_section( 'static_front_page' )->title = __( 'Homepage', 'hovercraft' );
-$wp_customize->get_section( 'static_front_page' )->priority = 31;
+    // homepage section
+    $wp_customize->get_section('static_front_page')->title = __('Homepage', 'hovercraft');
+    $wp_customize->get_section('static_front_page')->priority = 31;
 
-// general options section
-$wp_customize->add_section( 'hovercraft_general', array(
-    'title'      => 'General Options',
-    'priority'   => 30,
-) );
+    // general options section
+    $wp_customize->add_section('hovercraft_general', array(
+        'title'    => 'General Options',
+        'priority' => 30,
+    ));
 	
 // sitewide layout setting
 $wp_customize->add_setting( 'hovercraft_sitewide_layout', array(
