@@ -1502,33 +1502,35 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
-// get and format the first font family for google fonts
-$first_font_family = get_theme_mod( 'hovercraft_first_font_family', 'noto_sans' );
-$first_font_family_final = ucwords( str_replace( '_', ' ', ucfirst( $first_font_family ) ) );
+	// get and format the first font family for google fonts
+    $first_font_family = get_theme_mod( 'hovercraft_first_font_family', 'noto_sans' );
+    $first_font_family_final = ucwords( str_replace( '_', ' ', ucfirst( $first_font_family ) ) );
 
-// get and format the second font family for google fonts
-$second_font_family = get_theme_mod( 'hovercraft_second_font_family', 'open_sans' );
-$second_font_family_final = ucwords( str_replace( '_', ' ', ucfirst( $second_font_family ) ) );
+    // get and format the second font family for google fonts
+    $second_font_family = get_theme_mod( 'hovercraft_second_font_family', 'open_sans' );
+    $second_font_family_final = ucwords( str_replace( '_', ' ', ucfirst( $second_font_family ) ) );
 
-// get and format the third font family for google fonts
-$third_font_family = get_theme_mod( 'hovercraft_third_font_family', 'roboto' );
-$third_font_family_final = ucwords( str_replace( '_', ' ', ucfirst( $third_font_family ) ) );
+    // get and format the third font family for google fonts
+    $third_font_family = get_theme_mod( 'hovercraft_third_font_family', 'roboto' );
+    $third_font_family_final = ucwords( str_replace( '_', ' ', ucfirst( $third_font_family ) ) );
 
-// initialize an empty array for font families
-$hovercraft_font_families = array();
+    // initialize an array for font families with the default option included
+    $hovercraft_font_families = array(
+        '' => __( 'Default (Unspecified)', 'hovercraft' ), // always include this as the first option
+    );
 
-// add each formatted font family to the array if it's not empty or 'none'
-if ( ! empty( $first_font_family ) && $first_font_family !== 'none' ) {
-    $hovercraft_font_families[ $first_font_family ] = $first_font_family_final;
-}
+    // add each formatted font family to the array if it's not empty or 'none'
+    if ( ! empty( $first_font_family ) && $first_font_family !== 'none' ) {
+        $hovercraft_font_families[ $first_font_family ] = $first_font_family_final;
+    }
 
-if ( ! empty( $second_font_family ) && $second_font_family !== 'none' ) {
-    $hovercraft_font_families[ $second_font_family ] = $second_font_family_final;
-}
+    if ( ! empty( $second_font_family ) && $second_font_family !== 'none' ) {
+        $hovercraft_font_families[ $second_font_family ] = $second_font_family_final;
+    }
 
-if ( ! empty( $third_font_family ) && $third_font_family !== 'none' ) {
-    $hovercraft_font_families[ $third_font_family ] = $third_font_family_final;
-}
+    if ( ! empty( $third_font_family ) && $third_font_family !== 'none' ) {
+        $hovercraft_font_families[ $third_font_family ] = $third_font_family_final;
+    }
 
 // add setting for site name font family
 $wp_customize->add_setting( 'hovercraft_site_name_font', array(
