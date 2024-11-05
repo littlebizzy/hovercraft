@@ -1,6 +1,6 @@
 <?php
 
-function hovercraft_blog_category_register( $wp_customize ) {
+function hovercraft_register_blog_category( $wp_customize ) {
 
     // get an array of categories
     $categories_list = get_categories( array( 'orderby' => 'name' ) );
@@ -25,7 +25,7 @@ function hovercraft_blog_category_register( $wp_customize ) {
         'hovercraft_blog_category',
         array(
             'label'       => __( 'Feed Category', 'hovercraft' ),
-            'description' => __( 'Which post category should be displayed on the default feed and Posts page?', 'hovercraft' ),
+            'description' => __( 'Which post category should be displayed as the default feed and/or Posts page?', 'hovercraft' ),
             'section'     => 'hovercraft_category_layouts',
             'settings'    => 'hovercraft_blog_category',
             'type'        => 'select',
@@ -34,7 +34,7 @@ function hovercraft_blog_category_register( $wp_customize ) {
     ) );
 }
 
-add_action( 'customize_register', 'hovercraft_blog_category_register' );
+add_action( 'customize_register', 'hovercraft_register_blog_category' );
 
 // Ref: ChatGPT
 // Ref: https://ralphjsmit.com/create-a-category-dropdown-in-wordpress-customizer
