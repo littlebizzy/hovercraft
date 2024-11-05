@@ -1231,6 +1231,17 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// add a separator (horizontal line)
+$wp_customize->add_control( new WP_Customize_Control(
+    $wp_customize,
+    'hovercraft_separator_1',
+    array(
+        'type'        => 'hidden',
+        'section'     => 'hovercraft_fonts',
+        'description' => '<hr>', // output an HTML horizontal line
+    )
+) );
+
 // default font family setting
 $wp_customize->add_setting( 'hovercraft_default_font', array(
     'default'    => 'noto_sans',
