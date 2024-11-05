@@ -1504,25 +1504,31 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
-// site name font family setting
-$wp_customize->add_setting( 'hovercraft_site_name_font', array(
-    'default'    => 'noto_sans',
-	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+// create an array of font families for the customizer
+$hovercraft_font_families = array(
+    get_theme_mod( 'hovercraft_first_font_family', 'noto_sans' ) => 'noto sans',
+    get_theme_mod( 'hovercraft_second_font_family', 'open_sans' ) => 'open sans',
+    get_theme_mod( 'hovercraft_third_font_family', 'roboto' ) => 'roboto',
 );
 
-// site name font family control
+// add setting for site name font family
+$wp_customize->add_setting( 'hovercraft_site_name_font', array(
+    'default'    => 'noto_sans',
+    'sanitize_callback' => 'hovercraft_sanitize_select',
+) );
+
+// add control for site name font family
 $wp_customize->add_control( new WP_Customize_Control(
-        $wp_customize,
-        'hovercraft_site_name_font',
-        array(
-            'label'     => __('Site Name Font Family', 'hovercraft'),
-			'description' => __( 'Which Google Fonts family should be used for the site name in the header? Note: Display must be enabled under the Site Identity section.', 'hovercraft' ),
-            'section'   => 'hovercraft_fonts',
-            'settings'  => 'hovercraft_site_name_font',
-            'type'      => 'select',
-			'choices' => $hovercraft_google_fonts_array,
-        )
+    $wp_customize,
+    'hovercraft_site_name_font',
+    array(
+        'label'       => __( 'Site Name Font Family', 'hovercraft' ),
+        'description' => __( 'Which Google Fonts family should be used for the site name in the header? Note: Display must be enabled under the Site Identity section.', 'hovercraft' ),
+        'section'     => 'hovercraft_fonts',
+        'settings'    => 'hovercraft_site_name_font',
+        'type'        => 'select',
+        'choices'     => $hovercraft_font_families,
+    )
 ) );
 
 // site name font size (desktop) setting
@@ -1750,22 +1756,21 @@ $wp_customize->add_control( new WP_Customize_Control(
 // main menu font family setting
 $wp_customize->add_setting( 'hovercraft_main_menu_font', array(
     'default'    => 'noto_sans',
-	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
-);
+    'sanitize_callback' => 'hovercraft_sanitize_select',
+) );
 
 // main menu font family control
 $wp_customize->add_control( new WP_Customize_Control(
-        $wp_customize,
-        'hovercraft_main_menu_font',
-        array(
-            'label'     => __('Main Menu Font Family', 'hovercraft'),
-			'description' => __( 'Which Google Fonts family should be used for the main menu links?', 'hovercraft' ),
-            'section'   => 'hovercraft_fonts',
-            'settings'  => 'hovercraft_main_menu_font',
-            'type'      => 'select',
-			'choices' => $hovercraft_google_fonts_array,
-        )
+    $wp_customize,
+    'hovercraft_main_menu_font',
+    array(
+        'label'       => __( 'Main Menu Font Family', 'hovercraft' ),
+        'description' => __( 'Which Google Fonts family should be used for the main menu links?', 'hovercraft' ),
+        'section'     => 'hovercraft_fonts',
+        'settings'    => 'hovercraft_main_menu_font',
+        'type'        => 'select',
+        'choices'     => $hovercraft_font_families,
+    )
 ) );
 
 // main menu font size (desktop) setting
@@ -1948,22 +1953,21 @@ $wp_customize->add_control( new WP_Customize_Control(
 // h1 font family setting
 $wp_customize->add_setting( 'hovercraft_h1_font', array(
     'default'    => 'noto_sans',
-	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
-);
+    'sanitize_callback' => 'hovercraft_sanitize_select',
+) );
 
 // h1 font family control
 $wp_customize->add_control( new WP_Customize_Control(
-        $wp_customize,
-        'hovercraft_h1_font',
-        array(
-            'label'     => __('H1 Font Family', 'hovercraft'),
-			'description' => __( 'Which Google Fonts family should be used for all H1 titles site-wide?', 'hovercraft' ),
-            'section'   => 'hovercraft_fonts',
-            'settings'  => 'hovercraft_h1_font',
-            'type'      => 'select',
-			'choices' => $hovercraft_google_fonts_array,
-        )
+    $wp_customize,
+    'hovercraft_h1_font',
+    array(
+        'label'       => __( 'H1 Font Family', 'hovercraft' ),
+        'description' => __( 'Which Google Fonts family should be used for all H1 titles site-wide?', 'hovercraft' ),
+        'section'     => 'hovercraft_fonts',
+        'settings'    => 'hovercraft_h1_font',
+        'type'        => 'select',
+        'choices'     => $hovercraft_font_families,
+    )
 ) );
 
 // h1 font size (desktop) setting
@@ -2059,22 +2063,21 @@ $wp_customize->add_control( new WP_Customize_Control(
 // h2 font family setting
 $wp_customize->add_setting( 'hovercraft_h2_font', array(
     'default'    => 'noto_sans',
-	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
-);
+    'sanitize_callback' => 'hovercraft_sanitize_select',
+) );
 
 // h2 font family control
 $wp_customize->add_control( new WP_Customize_Control(
-        $wp_customize,
-        'hovercraft_h2_font',
-        array(
-            'label'     => __('H2 Font Family', 'hovercraft'),
-			'description' => __( 'Which Google Fonts family should be used for all h2 titles site-wide?', 'hovercraft' ),
-            'section'   => 'hovercraft_fonts',
-            'settings'  => 'hovercraft_h2_font',
-            'type'      => 'select',
-			'choices' => $hovercraft_google_fonts_array,
-        )
+    $wp_customize,
+    'hovercraft_h2_font',
+    array(
+        'label'       => __( 'H2 Font Family', 'hovercraft' ),
+        'description' => __( 'Which Google Fonts family should be used for all h2 titles site-wide?', 'hovercraft' ),
+        'section'     => 'hovercraft_fonts',
+        'settings'    => 'hovercraft_h2_font',
+        'type'        => 'select',
+        'choices'     => $hovercraft_font_families,
+    )
 ) );
 
 // h2 font size (desktop) setting
@@ -2169,22 +2172,21 @@ $wp_customize->add_control( new WP_Customize_Control(
 // h3 font family setting
 $wp_customize->add_setting( 'hovercraft_h3_font', array(
     'default'    => 'noto_sans',
-	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
-);
+    'sanitize_callback' => 'hovercraft_sanitize_select',
+) );
 
 // h3 font family control
 $wp_customize->add_control( new WP_Customize_Control(
-        $wp_customize,
-        'hovercraft_h3_font',
-        array(
-            'label'     => __('H3 Font Family', 'hovercraft'),
-			'description' => __( 'Which Google Fonts family should be used for all h3 titles site-wide?', 'hovercraft' ),
-            'section'   => 'hovercraft_fonts',
-            'settings'  => 'hovercraft_h3_font',
-            'type'      => 'select',
-			'choices' => $hovercraft_google_fonts_array,
-        )
+    $wp_customize,
+    'hovercraft_h3_font',
+    array(
+        'label'       => __( 'H3 Font Family', 'hovercraft' ),
+        'description' => __( 'Which Google Fonts family should be used for all h3 titles site-wide?', 'hovercraft' ),
+        'section'     => 'hovercraft_fonts',
+        'settings'    => 'hovercraft_h3_font',
+        'type'        => 'select',
+        'choices'     => $hovercraft_font_families,
+    )
 ) );
 
 // h3 font size (desktop) setting
@@ -2255,22 +2257,21 @@ $wp_customize->add_control( new WP_Customize_Control(
 // h4 font family setting
 $wp_customize->add_setting( 'hovercraft_h4_font', array(
     'default'    => 'noto_sans',
-	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
-);
+    'sanitize_callback' => 'hovercraft_sanitize_select',
+) );
 
 // h4 font family control
 $wp_customize->add_control( new WP_Customize_Control(
-        $wp_customize,
-        'hovercraft_h4_font',
-        array(
-            'label'     => __('H4 Font Family', 'hovercraft'),
-			'description' => __( 'Which Google Fonts family should be used for all h4 titles site-wide?', 'hovercraft' ),
-            'section'   => 'hovercraft_fonts',
-            'settings'  => 'hovercraft_h4_font',
-            'type'      => 'select',
-			'choices' => $hovercraft_google_fonts_array,
-        )
+    $wp_customize,
+    'hovercraft_h4_font',
+    array(
+        'label'       => __( 'H4 Font Family', 'hovercraft' ),
+        'description' => __( 'Which Google Fonts family should be used for all h4 titles site-wide?', 'hovercraft' ),
+        'section'     => 'hovercraft_fonts',
+        'settings'    => 'hovercraft_h4_font',
+        'type'        => 'select',
+        'choices'     => $hovercraft_font_families,
+    )
 ) );
 
 // h4 font size (desktop) setting
@@ -2341,22 +2342,21 @@ $wp_customize->add_control( new WP_Customize_Control(
 // h5 font family setting
 $wp_customize->add_setting( 'hovercraft_h5_font', array(
     'default'    => 'noto_sans',
-	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
-);
+    'sanitize_callback' => 'hovercraft_sanitize_select',
+) );
 
 // h5 font family control
 $wp_customize->add_control( new WP_Customize_Control(
-        $wp_customize,
-        'hovercraft_h5_font',
-        array(
-            'label'     => __('H5 Font Family', 'hovercraft'),
-			'description' => __( 'Which Google Fonts family should be used for all h5 titles site-wide?', 'hovercraft' ),
-            'section'   => 'hovercraft_fonts',
-            'settings'  => 'hovercraft_h5_font',
-            'type'      => 'select',
-			'choices' => $hovercraft_google_fonts_array,
-        )
+    $wp_customize,
+    'hovercraft_h5_font',
+    array(
+        'label'       => __( 'H5 Font Family', 'hovercraft' ),
+        'description' => __( 'Which Google Fonts family should be used for all h5 titles site-wide?', 'hovercraft' ),
+        'section'     => 'hovercraft_fonts',
+        'settings'    => 'hovercraft_h5_font',
+        'type'        => 'select',
+        'choices'     => $hovercraft_font_families,
+    )
 ) );
 
 // h5 font size (desktop) setting
