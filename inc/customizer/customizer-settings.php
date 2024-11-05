@@ -1163,74 +1163,71 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
-// fonts section
-$wp_customize->add_section( 'hovercraft_fonts', array(
-    'title'      => 'Fonts',
-    'priority'   => 43,
-) );
+    // fonts section
+    $wp_customize->add_section( 'hovercraft_fonts', array(
+        'title'    => 'Fonts',
+        'priority' => 43,
+    ) );
 
-// first font family setting
-$wp_customize->add_setting( 'hovercraft_first_font_family', array(
-    'default'    => 'noto_sans',
-	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
-);
+    // first font family setting
+    $wp_customize->add_setting( 'hovercraft_first_font_family', array(
+        'default'           => 'noto_sans',
+        'sanitize_callback' => 'hovercraft_sanitize_select',
+    ) );
 
-// first font family control
-$wp_customize->add_control( new WP_Customize_Control(
+    // first font family control
+    $wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
         'hovercraft_first_font_family',
         array(
-            'label'     => __('First Font Family', 'hovercraft'),
-			'description' => __( 'Which Google Fonts family should be loaded for the first font family?', 'hovercraft' ),
-            'section'   => 'hovercraft_fonts',
-            'settings'  => 'hovercraft_first_font_family',
-            'type'      => 'select',
-			'choices' => $hovercraft_google_fonts_array,
+            'label'       => __( 'First Font Family', 'hovercraft' ),
+            'description' => __( 'Which Google Fonts family should be loaded for the first font family?', 'hovercraft' ),
+            'section'     => 'hovercraft_fonts',
+            'settings'    => 'hovercraft_first_font_family',
+            'type'        => 'select',
+            'choices'     => $hovercraft_google_fonts_array,
         )
-) );
+    ) );
 
-// second font family setting
-$wp_customize->add_setting( 'hovercraft_second_font_family', array(
-    'default'    => 'noto_sans',
-	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
-);
+    // second font family setting
+    $wp_customize->add_setting( 'hovercraft_second_font_family', array(
+        'default'           => '',
+        'sanitize_callback' => 'hovercraft_sanitize_select',
+    ) );
 
-// second font family control
-$wp_customize->add_control( new WP_Customize_Control(
+    // second font family control
+    $wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
         'hovercraft_second_font_family',
         array(
-            'label'     => __('Second Font Family', 'hovercraft'),
-			'description' => __( 'Which Google Fonts family should be loaded for the second font family?', 'hovercraft' ),
-            'section'   => 'hovercraft_fonts',
-            'settings'  => 'hovercraft_second_font_family',
-            'type'      => 'select',
-			'choices' => $hovercraft_google_fonts_array,
+            'label'       => __( 'Second Font Family', 'hovercraft' ),
+            'description' => __( 'Which Google Fonts family should be loaded for the second font family?', 'hovercraft' ),
+            'section'     => 'hovercraft_fonts',
+            'settings'    => 'hovercraft_second_font_family',
+            'type'        => 'select',
+            'choices'     => $hovercraft_google_fonts_array,
         )
-) );
+    ) );
 
-// third font family setting
-$wp_customize->add_setting( 'hovercraft_third_font_family', array(
-    'default'    => 'noto_sans',
-	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
-);
+    // third font family setting
+    $wp_customize->add_setting( 'hovercraft_third_font_family', array(
+        'default'           => '',
+        'sanitize_callback' => 'hovercraft_sanitize_select',
+    ) );
 
-// third font family control
-$wp_customize->add_control( new WP_Customize_Control(
+    // third font family control
+    $wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
         'hovercraft_third_font_family',
         array(
-            'label'     => __('Third Font Family', 'hovercraft'),
-			'description' => __( 'Which Google Fonts family should be loaded for the third font family?', 'hovercraft' ),
-            'section'   => 'hovercraft_fonts',
-            'settings'  => 'hovercraft_third_font_family',
-            'type'      => 'select',
-			'choices' => $hovercraft_google_fonts_array,
+            'label'       => __( 'Third Font Family', 'hovercraft' ),
+            'description' => __( 'Which Google Fonts family should be loaded for the third font family?', 'hovercraft' ),
+            'section'     => 'hovercraft_fonts',
+            'settings'    => 'hovercraft_third_font_family',
+            'type'        => 'select',
+            'choices'     => $hovercraft_google_fonts_array,
         )
-) );
+    ) );
 
 // add a separator (horizontal line)
 $wp_customize->add_control( new WP_Customize_Control(
