@@ -1532,7 +1532,7 @@ if ( ! empty( $third_font_family ) && $third_font_family !== 'none' ) {
 
 // add setting for site name font family
 $wp_customize->add_setting( 'hovercraft_site_name_font', array(
-    'default'    => 'noto_sans',
+    'default'    => '',
     'sanitize_callback' => 'hovercraft_sanitize_select',
 ) );
 
@@ -1774,7 +1774,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 
 // main menu font family setting
 $wp_customize->add_setting( 'hovercraft_main_menu_font', array(
-    'default'    => 'noto_sans',
+    'default'    => '',
     'sanitize_callback' => 'hovercraft_sanitize_select',
 ) );
 
@@ -1971,7 +1971,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 	
 // h1 font family setting
 $wp_customize->add_setting( 'hovercraft_h1_font', array(
-    'default'    => 'noto_sans',
+    'default'    => '',
     'sanitize_callback' => 'hovercraft_sanitize_select',
 ) );
 
@@ -2081,7 +2081,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 
 // h2 font family setting
 $wp_customize->add_setting( 'hovercraft_h2_font', array(
-    'default'    => 'noto_sans',
+    'default'    => '',
     'sanitize_callback' => 'hovercraft_sanitize_select',
 ) );
 
@@ -2190,7 +2190,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 
 // h3 font family setting
 $wp_customize->add_setting( 'hovercraft_h3_font', array(
-    'default'    => 'noto_sans',
+    'default'    => '',
     'sanitize_callback' => 'hovercraft_sanitize_select',
 ) );
 
@@ -2275,7 +2275,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 
 // h4 font family setting
 $wp_customize->add_setting( 'hovercraft_h4_font', array(
-    'default'    => 'noto_sans',
+    'default'    => '',
     'sanitize_callback' => 'hovercraft_sanitize_select',
 ) );
 
@@ -2360,7 +2360,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 
 // h5 font family setting
 $wp_customize->add_setting( 'hovercraft_h5_font', array(
-    'default'    => 'noto_sans',
+    'default'    => '',
     'sanitize_callback' => 'hovercraft_sanitize_select',
 ) );
 
