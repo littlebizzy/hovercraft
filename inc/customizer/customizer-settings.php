@@ -1231,23 +1231,22 @@ $wp_customize->add_control( new WP_Customize_Control(
 
 // default font family setting
 $wp_customize->add_setting( 'hovercraft_default_font', array(
-    'default'    => 'noto_sans',
-	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
-);
+    'default'           => '',
+    'sanitize_callback' => 'hovercraft_sanitize_select',
+) );
 
 // default font family control
 $wp_customize->add_control( new WP_Customize_Control(
-        $wp_customize,
-        'hovercraft_default_font',
-        array(
-            'label'     => __('Default Font Family', 'hovercraft'),
-			'description' => __( 'Which Google Fonts family should be used for the default site-wide font?', 'hovercraft' ),
-            'section'   => 'hovercraft_fonts',
-            'settings'  => 'hovercraft_default_font',
-            'type'      => 'select',
-			'choices' => $hovercraft_google_fonts_array,
-        )
+    $wp_customize,
+    'hovercraft_default_font',
+    array(
+        'label'       => __( 'Default Font Family', 'hovercraft' ),
+        'description' => __( 'Which Google Fonts family should be used for the default site-wide font?', 'hovercraft' ),
+        'section'     => 'hovercraft_fonts',
+        'settings'    => 'hovercraft_default_font',
+        'type'        => 'select',
+        'choices'     => $hovercraft_font_families,
+    )
 ) );
 
 // default font size (desktop) setting
