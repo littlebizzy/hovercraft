@@ -1229,66 +1229,6 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
     ) );
 
-// default font family setting
-$wp_customize->add_setting( 'hovercraft_default_font', array(
-    'default'           => '',
-    'sanitize_callback' => 'hovercraft_sanitize_select',
-) );
-
-// default font family control
-$wp_customize->add_control( new WP_Customize_Control(
-    $wp_customize,
-    'hovercraft_default_font',
-    array(
-        'label'       => __( 'Default Font Family', 'hovercraft' ),
-        'description' => __( 'Which Google Fonts family should be used for the default site-wide font?', 'hovercraft' ),
-        'section'     => 'hovercraft_fonts',
-        'settings'    => 'hovercraft_default_font',
-        'type'        => 'select',
-        'choices'     => $hovercraft_font_families,
-    )
-) );
-
-// default font size (desktop) setting
-$wp_customize->add_setting( 'hovercraft_default_desktop_font_size', array(
-    'default'    => '16',
-	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
-);
-
-// default font size (desktop) control
-$wp_customize->add_control( new WP_Customize_Control(
-        $wp_customize,
-        'hovercraft_default_desktop_font_size',
-        array(
-            'label'     => __( 'Default Font Size (Desktop)', 'hovercraft' ),
-			'description' => __( 'Specify font size to use, in pixels, for the default on desktop devices?', 'hovercraft' ),
-            'section'   => 'hovercraft_fonts',
-            'settings'  => 'hovercraft_default_desktop_font_size',
-            'type' => 'text'
-        )
-) );
-
-// default font size (mobile) setting
-$wp_customize->add_setting( 'hovercraft_default_mobile_font_size', array(
-    'default'    => '16',
-	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
-);
-
-// default font size (mobile) control
-$wp_customize->add_control( new WP_Customize_Control(
-        $wp_customize,
-        'hovercraft_default_mobile_font_size',
-        array(
-            'label'     => __( 'Default Font Size (Mobile)', 'hovercraft' ),
-			'description' => __( 'Specify font size to use, in pixels, for the default on mobile devices?', 'hovercraft' ),
-            'section'   => 'hovercraft_fonts',
-            'settings'  => 'hovercraft_default_mobile_font_size',
-            'type' => 'text'
-        )
-) );
-
 // alternative font family setting
 $wp_customize->add_setting( 'hovercraft_alternative_font', array(
     'default'    => 'none',
@@ -1501,6 +1441,66 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// default font family setting
+$wp_customize->add_setting( 'hovercraft_default_font', array(
+    'default'           => '',
+    'sanitize_callback' => 'hovercraft_sanitize_select',
+) );
+
+// default font family control
+$wp_customize->add_control( new WP_Customize_Control(
+    $wp_customize,
+    'hovercraft_default_font',
+    array(
+        'label'       => __( 'Default Font Family', 'hovercraft' ),
+        'description' => __( 'Which Google Fonts family should be used for the default site-wide font?', 'hovercraft' ),
+        'section'     => 'hovercraft_fonts',
+        'settings'    => 'hovercraft_default_font',
+        'type'        => 'select',
+        'choices'     => $hovercraft_font_families,
+    )
+) );
+
+// default font size (desktop) setting
+$wp_customize->add_setting( 'hovercraft_default_desktop_font_size', array(
+    'default'    => '16',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
+	) 
+);
+
+// default font size (desktop) control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_default_desktop_font_size',
+        array(
+            'label'     => __( 'Default Font Size (Desktop)', 'hovercraft' ),
+			'description' => __( 'Specify font size to use, in pixels, for the default on desktop devices?', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_default_desktop_font_size',
+            'type' => 'text'
+        )
+) );
+
+// default font size (mobile) setting
+$wp_customize->add_setting( 'hovercraft_default_mobile_font_size', array(
+    'default'    => '16',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
+	) 
+);
+
+// default font size (mobile) control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_default_mobile_font_size',
+        array(
+            'label'     => __( 'Default Font Size (Mobile)', 'hovercraft' ),
+			'description' => __( 'Specify font size to use, in pixels, for the default on mobile devices?', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_default_mobile_font_size',
+            'type' => 'text'
+        )
+) );
+	
 	// get and format the first font family for google fonts
     $first_font_family = get_theme_mod( 'hovercraft_first_font_family', 'noto_sans' );
     $first_font_family_final = ucwords( str_replace( '_', ' ', ucfirst( $first_font_family ) ) );
