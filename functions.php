@@ -47,6 +47,12 @@ require get_template_directory() . '/inc/customizer/register-portal-category.php
 // Register snippets category (customizer)
 require get_template_directory() . '/inc/customizer/register-snippets-category.php';
 
+// google fonts array (customizer)
+require get_template_directory() . '/inc/customizer/google-fonts-array.php';
+
+// google fonts multilingual array (customizer)
+require get_template_directory() . '/inc/customizer/google-fonts-multilingual-array.php';
+
 // CSS generator
 require get_template_directory() . '/inc/css-generator.php';
 
@@ -79,9 +85,6 @@ require get_template_directory() . '/inc/git-updater.php';
 
 // Google fonts
 require get_template_directory() . '/inc/google-fonts.php';
-
-// Google fonts array (customizer)
-require get_template_directory() . '/inc/customizer/google-fonts-array.php';
 
 // Header cleanup
 require get_template_directory() . '/inc/header-cleanup.php';
