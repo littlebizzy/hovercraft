@@ -4,6 +4,9 @@ function hovercraft_customizer($wp_customize) {
     // load google fonts array
     $hovercraft_google_fonts_array = hovercraft_google_fonts_array();
 
+	// load google fonts multilingual array
+    $hovercraft_google_fonts_multilingual_array = hovercraft_google_fonts_multilingual_array();
+
     // remove header text color control
     $wp_customize->remove_control('header_textcolor');
 
@@ -1245,7 +1248,7 @@ $wp_customize->add_control( new WP_Customize_Control(
             'section'     => 'hovercraft_fonts',
             'settings'    => 'hovercraft_multilingual_font_family',
             'type'        => 'select',
-            'choices'     => $google_fonts_multilingual_array,
+            'choices'     => $hovercraft_google_fonts_multilingual_array,
         )
     ) );
 
