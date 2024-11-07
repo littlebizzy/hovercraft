@@ -14,6 +14,10 @@ function hovercraft_google_fonts() {
     $third_font_family = get_theme_mod( 'hovercraft_third_font_family', 'roboto' );
     $third_font_family_final = ucwords( ucfirst( str_replace( '_', '+', $third_font_family ) ), '+' );
 
+    // get and format the multilingual font family for google fonts
+    $multilingual_font_family = get_theme_mod( 'hovercraft_multilingual_font_family', 'none' );
+    $multilingual_font_family_final = ucwords( ucfirst( str_replace( '_', '+', $multilingual_font_family ) ), '+' );
+
     // specify only the font variations 400, 600, and 700 for both regular and italic styles
     $font_variations = 'ital,wght@0,400;0,600;0,700;1,400;1,600;1,700';
 
@@ -31,6 +35,10 @@ function hovercraft_google_fonts() {
 
     if ( ! empty( $third_font_family ) && $third_font_family !== 'none' ) {
         $google_fonts[] = "family={$third_font_family_final}:$font_variations";
+    }
+
+    if ( ! empty( $multilingual_font_family ) && $multilingual_font_family !== 'none' ) {
+        $google_fonts[] = "family={$multilingual_font_family_final}:$font_variations";
     }
 
     // enqueue the google fonts stylesheet if any font families are set
