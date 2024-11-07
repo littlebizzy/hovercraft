@@ -1180,8 +1180,8 @@ $wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
         'hovercraft_first_font_family',
         array(
-            'label'       => __( 'First Font Family (Load Only)', 'hovercraft' ),
-            'description' => __( 'Which Google Fonts family should be loaded for the first font family?', 'hovercraft' ),
+            'label'       => __( 'First Google Fonts Family', 'hovercraft' ),
+            'description' => __( 'This will load the chosen Google Fonts family, thus powering font options below. Note: Only font weights 400, 600, and 700 are loaded.', 'hovercraft' ),
             'section'     => 'hovercraft_fonts',
             'settings'    => 'hovercraft_first_font_family',
             'type'        => 'select',
@@ -1200,8 +1200,8 @@ $wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
         'hovercraft_second_font_family',
         array(
-            'label'       => __( 'Second Font Family (Load Only)', 'hovercraft' ),
-            'description' => __( 'Which Google Fonts family should be loaded for the second font family?', 'hovercraft' ),
+            'label'       => __( 'Second Google Fonts Family', 'hovercraft' ),
+            'description' => __( 'This will load the chosen Google Fonts family, thus powering font options below. Note: Only font weights 400, 600, and 700 are loaded.', 'hovercraft' ),
             'section'     => 'hovercraft_fonts',
             'settings'    => 'hovercraft_second_font_family',
             'type'        => 'select',
@@ -1220,8 +1220,8 @@ $wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
         'hovercraft_third_font_family',
         array(
-            'label'       => __( 'Third Font Family (Load Only)', 'hovercraft' ),
-            'description' => __( 'Which Google Fonts family should be loaded for the third font family?', 'hovercraft' ),
+            'label'       => __( 'Third Google Fonts Family', 'hovercraft' ),
+            'description' => __( 'This will load the chosen Google Fonts family, thus powering font options below. Note: Only font weights 400, 600, and 700 are loaded.', 'hovercraft' ),
             'section'     => 'hovercraft_fonts',
             'settings'    => 'hovercraft_third_font_family',
             'type'        => 'select',
@@ -1231,7 +1231,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 
     // multilingual font family setting
     $wp_customize->add_setting( 'hovercraft_multilingual_font_family', array(
-        'default'           => 'none',
+        'default'           => '',
         'sanitize_callback' => 'hovercraft_sanitize_select',
     ) );
 
@@ -1240,8 +1240,8 @@ $wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
         'hovercraft_multilingual_font_family',
         array(
-            'label'       => __( 'Multilingual Font Family', 'hovercraft' ),
-            'description' => __( 'Which Google Fonts family should be loaded for the multilingual font? Note: This is generally meant to be used on multilingual websites, and should usually be disabled otherwise.', 'hovercraft' ),
+            'label'       => __( 'Multilingual Google Fonts Family', 'hovercraft' ),
+            'description' => __( 'This will load the chosen Google Fonts family, thus powering font options below. Note: Only font weights 400, 600, and 700 are loaded. Be sure the font you choose here matches your other font families to avoid conflicts.', 'hovercraft' ),
             'section'     => 'hovercraft_fonts',
             'settings'    => 'hovercraft_multilingual_font_family',
             'type'        => 'select',
