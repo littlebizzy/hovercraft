@@ -1180,7 +1180,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
         'hovercraft_first_font_family',
         array(
-            'label'       => __( 'First Font Family', 'hovercraft' ),
+            'label'       => __( 'First Font Family (Load Only)', 'hovercraft' ),
             'description' => __( 'Which Google Fonts family should be loaded for the first font family?', 'hovercraft' ),
             'section'     => 'hovercraft_fonts',
             'settings'    => 'hovercraft_first_font_family',
@@ -1200,7 +1200,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
         'hovercraft_second_font_family',
         array(
-            'label'       => __( 'Second Font Family', 'hovercraft' ),
+            'label'       => __( 'Second Font Family (Load Only)', 'hovercraft' ),
             'description' => __( 'Which Google Fonts family should be loaded for the second font family?', 'hovercraft' ),
             'section'     => 'hovercraft_fonts',
             'settings'    => 'hovercraft_second_font_family',
@@ -1220,7 +1220,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
         'hovercraft_third_font_family',
         array(
-            'label'       => __( 'Third Font Family', 'hovercraft' ),
+            'label'       => __( 'Third Font Family (Load Only)', 'hovercraft' ),
             'description' => __( 'Which Google Fonts family should be loaded for the third font family?', 'hovercraft' ),
             'section'     => 'hovercraft_fonts',
             'settings'    => 'hovercraft_third_font_family',
