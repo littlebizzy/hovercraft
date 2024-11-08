@@ -1362,6 +1362,32 @@ $wp_customize->add_control( new WP_Customize_Control(
     )
 ) );
 
+// site name text transform setting
+$wp_customize->add_setting( 'hovercraft_site_name_text_transform', array(
+    'default'    => 'none',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// site name text transform control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_site_name_text_transform',
+        array(
+            'label'     => __( 'Site Name Text Transform', 'hovercraft' ),
+			'description' => __( 'Specify text transform for Site Name element?', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_site_name_text_transform',
+            'type' => 'select',
+			'choices' => array(
+				'none' => 'Default (None)',
+				'uppercase' => 'Uppercase',
+				'lowercase' => 'Lowercase',
+				'capitalize' => 'Capitalize',
+    			)
+        )
+) );
+
 // site name font size (desktop) setting
 $wp_customize->add_setting( 'hovercraft_site_name_desktop_font_size', array(
     'default'    => '36',
@@ -1427,22 +1453,22 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
-// site name text transform setting
-$wp_customize->add_setting( 'hovercraft_site_name_text_transform', array(
+// offcanvas menu text transform setting
+$wp_customize->add_setting( 'hovercraft_offcanvas_menu_text_transform', array(
     'default'    => 'none',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
 	) 
 );
 
-// site name text transform control
+// offcanvas menu text transform control
 $wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
-        'hovercraft_site_name_text_transform',
+        'hovercraft_offcanvas_menu_text_transform',
         array(
-            'label'     => __( 'Site Name Text Transform', 'hovercraft' ),
-			'description' => __( 'Specify text transform for Site Name element?', 'hovercraft' ),
+            'label'     => __( 'Offcanvas Menu Text Transform', 'hovercraft' ),
+			'description' => __( 'Specify text transform for Offcanvas menu list items?', 'hovercraft' ),
             'section'   => 'hovercraft_fonts',
-            'settings'  => 'hovercraft_site_name_text_transform',
+            'settings'  => 'hovercraft_offcanvas_menu_text_transform',
             'type' => 'select',
 			'choices' => array(
 				'none' => 'Default (None)',
@@ -1470,32 +1496,6 @@ $wp_customize->add_control( new WP_Customize_Control(
             'section'   => 'hovercraft_fonts',
             'settings'  => 'hovercraft_offcanvas_font_size',
             'type' => 'text'
-        )
-) );
-
-// offcanvas menu text transform setting
-$wp_customize->add_setting( 'hovercraft_offcanvas_menu_text_transform', array(
-    'default'    => 'none',
-	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
-);
-
-// offcanvas menu text transform control
-$wp_customize->add_control( new WP_Customize_Control(
-        $wp_customize,
-        'hovercraft_offcanvas_menu_text_transform',
-        array(
-            'label'     => __( 'Offcanvas Menu Text Transform', 'hovercraft' ),
-			'description' => __( 'Specify text transform for Offcanvas menu list items?', 'hovercraft' ),
-            'section'   => 'hovercraft_fonts',
-            'settings'  => 'hovercraft_offcanvas_menu_text_transform',
-            'type' => 'select',
-			'choices' => array(
-				'none' => 'Default (None)',
-				'uppercase' => 'Uppercase',
-				'lowercase' => 'Lowercase',
-				'capitalize' => 'Capitalize',
-    			)
         )
 ) );
 
@@ -1604,6 +1604,32 @@ $wp_customize->add_control( new WP_Customize_Control(
     )
 ) );
 
+// main menu text transform setting
+$wp_customize->add_setting( 'hovercraft_main_menu_text_transform', array(
+    'default'    => 'none',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// main menu text transform control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_main_menu_text_transform',
+        array(
+            'label'     => __( 'Main Menu Text Transform', 'hovercraft' ),
+			'description' => __( 'Specify text transform for Main Menu list items?', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_main_menu_text_transform',
+            'type' => 'select',
+			'choices' => array(
+				'none' => 'Default (None)',
+				'uppercase' => 'Uppercase',
+				'lowercase' => 'Lowercase',
+				'capitalize' => 'Capitalize',
+    			)
+        )
+) );
+
 // main menu font size (desktop) setting
 $wp_customize->add_setting( 'hovercraft_main_menu_desktop_font_size', array(
     'default'    => '18',
@@ -1649,32 +1675,6 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
-// main menu text transform setting
-$wp_customize->add_setting( 'hovercraft_main_menu_text_transform', array(
-    'default'    => 'none',
-	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
-);
-
-// main menu text transform control
-$wp_customize->add_control( new WP_Customize_Control(
-        $wp_customize,
-        'hovercraft_main_menu_text_transform',
-        array(
-            'label'     => __( 'Main Menu Text Transform', 'hovercraft' ),
-			'description' => __( 'Specify text transform for Main Menu list items?', 'hovercraft' ),
-            'section'   => 'hovercraft_fonts',
-            'settings'  => 'hovercraft_main_menu_text_transform',
-            'type' => 'select',
-			'choices' => array(
-				'none' => 'Default (None)',
-				'uppercase' => 'Uppercase',
-				'lowercase' => 'Lowercase',
-				'capitalize' => 'Capitalize',
-    			)
-        )
-) );
-
 // after byline (desktop) setting
 $wp_customize->add_setting( 'hovercraft_after_byline_desktop_font_size', array(
     'default'    => '12',
@@ -1715,6 +1715,32 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// back to top text transform setting
+$wp_customize->add_setting( 'hovercraft_back_to_top_text_transform', array(
+    'default'    => 'uppercase',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// back to top text transform control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_back_to_top_text_transform',
+        array(
+            'label'     => __( 'Back To Top Text Transform', 'hovercraft' ),
+			'description' => __( 'Specify text transform for the Back To Top element?', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_back_to_top_text_transform',
+            'type' => 'select',
+			'choices' => array(
+				'none' => 'Default (None)',
+				'uppercase' => 'Uppercase',
+				'lowercase' => 'Lowercase',
+				'capitalize' => 'Capitalize',
+    			)
+        )
+) );
+
 // back to top font size (desktop) setting
 $wp_customize->add_setting( 'hovercraft_back_to_top_desktop_font_size', array(
     'default'    => '12',
@@ -1752,32 +1778,6 @@ $wp_customize->add_control( new WP_Customize_Control(
             'section'   => 'hovercraft_fonts',
             'settings'  => 'hovercraft_back_to_top_mobile_font_size',
             'type' => 'text'
-        )
-) );
-
-// back to top text transform setting
-$wp_customize->add_setting( 'hovercraft_back_to_top_text_transform', array(
-    'default'    => 'uppercase',
-	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
-);
-
-// back to top text transform control
-$wp_customize->add_control( new WP_Customize_Control(
-        $wp_customize,
-        'hovercraft_back_to_top_text_transform',
-        array(
-            'label'     => __( 'Back To Top Text Transform', 'hovercraft' ),
-			'description' => __( 'Specify text transform for the Back To Top element?', 'hovercraft' ),
-            'section'   => 'hovercraft_fonts',
-            'settings'  => 'hovercraft_back_to_top_text_transform',
-            'type' => 'select',
-			'choices' => array(
-				'none' => 'Default (None)',
-				'uppercase' => 'Uppercase',
-				'lowercase' => 'Lowercase',
-				'capitalize' => 'Capitalize',
-    			)
         )
 ) );
 	
@@ -2255,6 +2255,32 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// sidebar widget title text transform setting
+$wp_customize->add_setting( 'hovercraft_sidebar_widget_title_text_transform', array(
+    'default'    => 'none',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// sidebar widget title text transform control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_sidebar_widget_title_text_transform',
+        array(
+            'label'     => __( 'Sidebar Widget Title Text Transform', 'hovercraft' ),
+			'description' => __( 'Specify text transform for sidebar widget titles?', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_sidebar_widget_title_text_transform',
+            'type' => 'select',
+			'choices' => array(
+				'none' => 'Default (None)',
+				'uppercase' => 'Uppercase',
+				'lowercase' => 'Lowercase',
+				'capitalize' => 'Capitalize',
+    			)
+        )
+) );
+
 // sidebar widget title font size (desktop) setting
 $wp_customize->add_setting( 'hovercraft_sidebar_widget_title_desktop_font_size', array(
     'default'    => '24',
@@ -2316,32 +2342,6 @@ $wp_customize->add_control( new WP_Customize_Control(
         		'700' => '700',
         		'600' => '600',
 				'400' => '400'
-    			)
-        )
-) );
-
-// sidebar widget title text transform setting
-$wp_customize->add_setting( 'hovercraft_sidebar_widget_title_text_transform', array(
-    'default'    => 'none',
-	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
-);
-
-// sidebar widget title text transform control
-$wp_customize->add_control( new WP_Customize_Control(
-        $wp_customize,
-        'hovercraft_sidebar_widget_title_text_transform',
-        array(
-            'label'     => __( 'Sidebar Widget Title Text Transform', 'hovercraft' ),
-			'description' => __( 'Specify text transform for sidebar widget titles?', 'hovercraft' ),
-            'section'   => 'hovercraft_fonts',
-            'settings'  => 'hovercraft_sidebar_widget_title_text_transform',
-            'type' => 'select',
-			'choices' => array(
-				'none' => 'Default (None)',
-				'uppercase' => 'Uppercase',
-				'lowercase' => 'Lowercase',
-				'capitalize' => 'Capitalize',
     			)
         )
 ) );
