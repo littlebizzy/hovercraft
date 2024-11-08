@@ -16,5 +16,6 @@ No maintenance WordPress theme
 - more messing around
 
 ### 0.0.x
-- support for Git Updater
+- requires PHP 7.0+
+- supports Git Updater
 - messing around
