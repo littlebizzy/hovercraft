@@ -1,5 +1,5 @@
 <?php
-function hovercraft_google_fonts() {
+function hovercraft_available_fonts() {
     // get and format the first font family for google fonts
     $first_font_family = get_theme_mod('hovercraft_first_font_family', 'noto_sans');
     $first_font_family_final = ucwords(str_replace('_', ' ', ucfirst($first_font_family)));
