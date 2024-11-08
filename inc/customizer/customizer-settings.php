@@ -1479,19 +1479,19 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
-// offcanvas menu font size setting
+// offcanvas menu font size (mobile) setting
 $wp_customize->add_setting( 'hovercraft_offcanvas_font_size', array(
     'default'    => '18',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
 	) 
 );
 
-// offcanvas menu font size control
+// offcanvas menu font size (mobile) control
 $wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
         'hovercraft_offcanvas_font_size',
         array(
-            'label'     => __( 'Offcanvas Menu Font Size', 'hovercraft' ),
+            'label'     => __( 'Offcanvas Menu Font Size (Mobile)', 'hovercraft' ),
 			'description' => __( 'Specify font size to use, in pixels, for the Offcanvas Menu on mobile devices?', 'hovercraft' ),
             'section'   => 'hovercraft_fonts',
             'settings'  => 'hovercraft_offcanvas_font_size',
@@ -1524,19 +1524,19 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
-// offcanvas submenu font size setting
+// offcanvas submenu font size (mobile) setting
 $wp_customize->add_setting( 'hovercraft_offcanvas_submenu_font_size', array(
     'default'    => '16',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
 	) 
 );
 
-// offcanvas submenu font size control
+// offcanvas submenu font size (mobile) control
 $wp_customize->add_control( new WP_Customize_Control(
         $wp_customize,
         'hovercraft_offcanvas_submenu_font_size',
         array(
-            'label'     => __( 'Offcanvas Submenu Font Size', 'hovercraft' ),
+            'label'     => __( 'Offcanvas Submenu Font Size (Mobile)', 'hovercraft' ),
 			'description' => __( 'Specify font size to use, in pixels, for the Offcanvas submenus on mobile devices?', 'hovercraft' ),
             'section'   => 'hovercraft_fonts',
             'settings'  => 'hovercraft_offcanvas_submenu_font_size',
@@ -1544,6 +1544,57 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// offcanvas submenu font weight setting
+$wp_customize->add_setting( 'hovercraft_offcanvas_submenu_font_weight', array(
+    'default'    => '400',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
+	) 
+);
+
+// offcanvas submenu font weight control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_offcanvas_submenu_font_weight',
+        array(
+            'label'     => __('Offcanvas Submenu Font Weight', 'hovercraft'),
+			'description' => __( 'Specify font weight to use for the Offcanvas Submenu? Note: Ensure your chosen font family supports the font weight that you choose.', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_offcanvas_submenu_font_weight',
+            'type'      => 'select',
+			'choices' => array(
+        		'700' => '700',
+        		'600' => '600',
+				'400' => '400'
+    			)
+        )
+) );
+
+// topbar text transform setting
+$wp_customize->add_setting( 'hovercraft_topbar_text_transform', array(
+    'default'    => 'none',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+	) 
+);
+
+// topbar text transform control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_topbar_text_transform',
+        array(
+            'label'     => __( 'Topbar Text Transform', 'hovercraft' ),
+			'description' => __( 'Specify text transform for Topbar area?', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_topbar_text_transform',
+            'type' => 'select',
+			'choices' => array(
+				'none' => 'Default (None)',
+				'uppercase' => 'Uppercase',
+				'lowercase' => 'Lowercase',
+				'capitalize' => 'Capitalize',
+    			)
+        )
+) );
+	
 // topbar font size (desktop) setting
 $wp_customize->add_setting( 'hovercraft_topbar_desktop_font_size', array(
     'default'    => '14',
@@ -1581,6 +1632,31 @@ $wp_customize->add_control( new WP_Customize_Control(
             'section'   => 'hovercraft_fonts',
             'settings'  => 'hovercraft_topbar_mobile_font_size',
             'type' => 'text'
+        )
+) );
+
+// topbar font weight setting
+$wp_customize->add_setting( 'hovercraft_topbar_font_weight', array(
+    'default'    => '400',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
+	) 
+);
+
+// topbar font weight control
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_topbar_font_weight',
+        array(
+            'label'     => __('Topbar Font Weight', 'hovercraft'),
+			'description' => __( 'Specify font weight to use for the Topbar area? Note: Ensure your chosen font family supports the font weight that you choose.', 'hovercraft' ),
+            'section'   => 'hovercraft_fonts',
+            'settings'  => 'hovercraft_topbar_font_weight',
+            'type'      => 'select',
+			'choices' => array(
+        		'700' => '700',
+        		'600' => '600',
+				'400' => '400'
+    			)
         )
 ) );
 
