@@ -28,14 +28,15 @@ function hovercraft_generate_css(){
 	$main_menu_font_weight = get_theme_mod( 'hovercraft_main_menu_font_weight', '600' );
 
 	/* fonts (offcanvas menu) */
+	$offcanvas_menu_text_transform = get_theme_mod( 'hovercraft_offcanvas_menu_text_transform', 'none' );
 	$offcanvas_font_size = get_theme_mod( 'hovercraft_offcanvas_font_size', '18' );
 	$offcanvas_font_weight = get_theme_mod( 'hovercraft_offcanvas_font_weight', '400' );
-	$offcanvas_menu_text_transform = get_theme_mod( 'hovercraft_offcanvas_menu_text_transform', 'none' );
 
 	/* fonts (offcanvas submenu) */
+	$offcanvas_submenu_text_transform = get_theme_mod( 'hovercraft_offcanvas_submenu_text_transform', 'none' );
 	$offcanvas_submenu_font_size = get_theme_mod( 'hovercraft_offcanvas_submenu_font_size', '16' );
 	$offcanvas_submenu_font_weight = get_theme_mod( 'hovercraft_offcanvas_submenu_font_weight', '400' );
-
+	
 	/* fonts (after byline) */
 	$after_byline_mobile_font_size = get_theme_mod( 'hovercraft_after_byline_mobile_font_size', '12' );
 	$after_byline_desktop_font_size = get_theme_mod( 'hovercraft_after_byline_desktop_font_size', '12' );
@@ -50,6 +51,10 @@ function hovercraft_generate_css(){
 	/* fonts (copyright) */
 	$copyright_mobile_font_size = get_theme_mod( 'hovercraft_copyright_mobile_font_size', '14' );
 	$copyright_desktop_font_size = get_theme_mod( 'hovercraft_copyright_desktop_font_size', '14' );
+
+	/* fonts (back to top) */
+	$back_to_top_text_transform = get_theme_mod( 'hovercraft_back_to_top_text_transform', 'uppercase' );
+	$back_to_top_font_weight = get_theme_mod( 'hovercraft_back_to_top_font_weight', '400' );
 
 	/* headings (fonts) */
 	$h1_font_family = get_theme_mod( 'hovercraft_h1_font', 'noto_sans' );
@@ -78,7 +83,6 @@ function hovercraft_generate_css(){
 	$sidebar_widget_title_mobile_font_size = get_theme_mod( 'hovercraft_sidebar_widget_title_mobile_font_size', '24' );
 	$sidebar_widget_title_text_transform = get_theme_mod( 'hovercraft_sidebar_widget_title_text_transform', 'none' );
 	$sidebar_widget_title_font_weight = get_theme_mod( 'hovercraft_sidebar_widget_title_font_weight', '600' );
-	$back_to_top_text_transform = get_theme_mod( 'hovercraft_back_to_top_text_transform', 'uppercase' );
 	
 	/* heros */
 	$hero_gradient_tones = get_theme_mod( 'hovercraft_hero_gradient_tones', 'two_tones' );
@@ -4285,7 +4289,7 @@ p.akismet_comment_form_privacy_notice {
 }
 
 
-/* back to top */
+/* back to top (scrollup) */
 
 @media screen and (max-width: 1200px) {
 .scrollup-wrapper {
@@ -4306,8 +4310,9 @@ p.akismet_comment_form_privacy_notice {
 	display: block;
 	width: 100%;
 	cursor: pointer;
-	font-size: <?php echo $back_to_top_mobile_font_size; ?>px;
 	text-transform: <?php echo $back_to_top_text_transform; ?>;
+	font-size: <?php echo $back_to_top_mobile_font_size; ?>px;
+	font-weight: <?php echo $back_to_top_font_weight; ?>;
 	line-height: 1;
 	padding: 10px 0px;
 	color: rgba(255, 255, 255, 0.5);
@@ -4325,8 +4330,9 @@ p.akismet_comment_form_privacy_notice {
 	display: block;
 	width: 100%;
 	cursor: pointer;
-	font-size: <?php echo $back_to_top_desktop_font_size; ?>px;
 	text-transform: <?php echo $back_to_top_text_transform; ?>;
+	font-size: <?php echo $back_to_top_desktop_font_size; ?>px;
+	font-weight: <?php echo $back_to_top_font_weight; ?>;
 	line-height: 1;
 	padding: 10px 0px;
 	color: rgba(255, 255, 255, 0.5);
@@ -5193,6 +5199,7 @@ ul.product_list_widget li a:hover:before {
 
 	ul.sub-menu {
 		display: none;
+		text-transform: <?php echo $offcanvas_submenu_text_transform; ?>;
 		font-weight: <?php echo $offcanvas_font_weight; ?>;
 		font-size: <?php echo $offcanvas_submenu_font_size; ?>px;
 		background: <?php echo $offcanvas_toggle_background_color; ?>;
