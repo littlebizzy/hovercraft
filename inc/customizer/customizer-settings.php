@@ -1268,7 +1268,7 @@ $wp_customize->add_control( new WP_Customize_Control(
             'section'     => 'hovercraft_fonts',
             'settings'    => 'hovercraft_default_font',
             'type'        => 'select',
-            'choices'     => $hovercraft_font_families,
+            'choices'     => hovercraft_get_font_families(),
         )
     ) );
 
@@ -1328,7 +1328,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'section'     => 'hovercraft_fonts',
         'settings'    => 'hovercraft_site_name_font',
         'type'        => 'select',
-        'choices'     => $hovercraft_font_families,
+        'choices'     => hovercraft_get_font_families(),
     )
 ) );
 
@@ -1646,7 +1646,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'section'     => 'hovercraft_fonts',
         'settings'    => 'hovercraft_main_menu_font',
         'type'        => 'select',
-        'choices'     => $hovercraft_font_families,
+        'choices'     => hovercraft_get_font_families(),
     )
 ) );
 
@@ -1843,7 +1843,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'section'     => 'hovercraft_fonts',
         'settings'    => 'hovercraft_h1_font',
         'type'        => 'select',
-        'choices'     => $hovercraft_font_families,
+        'choices'     => hovercraft_get_font_families(),
     )
 ) );
 
@@ -1953,7 +1953,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'section'     => 'hovercraft_fonts',
         'settings'    => 'hovercraft_h2_font',
         'type'        => 'select',
-        'choices'     => $hovercraft_font_families,
+        'choices'     => hovercraft_get_font_families(),
     )
 ) );
 
@@ -2062,7 +2062,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'section'     => 'hovercraft_fonts',
         'settings'    => 'hovercraft_h3_font',
         'type'        => 'select',
-        'choices'     => $hovercraft_font_families,
+        'choices'     => hovercraft_get_font_families(),
     )
 ) );
 
@@ -2147,7 +2147,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'section'     => 'hovercraft_fonts',
         'settings'    => 'hovercraft_h4_font',
         'type'        => 'select',
-        'choices'     => $hovercraft_font_families,
+        'choices'     => hovercraft_get_font_families(),
     )
 ) );
 
@@ -2232,7 +2232,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'section'     => 'hovercraft_fonts',
         'settings'    => 'hovercraft_h5_font',
         'type'        => 'select',
-        'choices'     => $hovercraft_font_families,
+        'choices'     => hovercraft_get_font_families(),
     )
 ) );
 
