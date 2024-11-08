@@ -1264,6 +1264,10 @@ $wp_customize->add_control( new WP_Customize_Control(
     $third_font_family = get_theme_mod( 'hovercraft_third_font_family', 'roboto' );
     $third_font_family_final = ucwords( str_replace( '_', ' ', ucfirst( $third_font_family ) ) );
 
+    // get and format the multilingual font family for google fonts
+    $multilingual_font_family = get_theme_mod( 'hovercraft_multilingual_font_family', 'none' );
+    $multilingual_font_family_final = ucwords( str_replace( '_', ' ', ucfirst( $multilingual_font_family ) ) );
+
     // initialize an array for font families with the default option included
     $hovercraft_font_families = array(
         '' => __( 'Default (Unspecified)', 'hovercraft' ), // always include this as the first option
@@ -1280,6 +1284,10 @@ $wp_customize->add_control( new WP_Customize_Control(
 
     if ( ! empty( $third_font_family ) && $third_font_family !== 'none' ) {
         $hovercraft_font_families[ $third_font_family ] = $third_font_family_final;
+    }
+
+    if ( ! empty( $multilingual_font_family ) && $multilingual_font_family !== 'none' ) {
+        $hovercraft_font_families[ $multilingual_font_family ] = $multilingual_font_family_final;
     }
 
     // default font family setting
