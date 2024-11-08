@@ -14,7 +14,7 @@ function hovercraft_generate_css(){
 	$topbar_desktop_font_size = get_theme_mod( 'hovercraft_topbar_desktop_font_size', '14' );
 	$topbar_font_weight = get_theme_mod( 'hovercraft_topbar_font_weight', '400' );
 
-	/* fonts (site name) */
+	/* fonts (site title) */
 	$site_name_font_family = get_theme_mod( 'hovercraft_site_name_font', 'noto_sans' );
 	$site_name_text_transform = get_theme_mod( 'hovercraft_site_name_text_transform', 'none' );
 	$site_name_mobile_font_size = get_theme_mod( 'hovercraft_site_name_mobile_font_size', '24' );
@@ -23,12 +23,14 @@ function hovercraft_generate_css(){
 
 	/* fonts (main menu) */
 	$main_menu_font_family = get_theme_mod( 'hovercraft_main_menu_font', 'noto_sans' );
+	$main_menu_text_transform = get_theme_mod( 'hovercraft_main_menu_text_transform', 'none' );
 	$main_menu_desktop_font_size = get_theme_mod( 'hovercraft_main_menu_desktop_font_size', '18' );
 	$main_menu_font_weight = get_theme_mod( 'hovercraft_main_menu_font_weight', '600' );
 
 	/* fonts (offcanvas menu) */
 	$offcanvas_font_size = get_theme_mod( 'hovercraft_offcanvas_font_size', '18' );
 	$offcanvas_font_weight = get_theme_mod( 'hovercraft_offcanvas_font_weight', '400' );
+	$offcanvas_menu_text_transform = get_theme_mod( 'hovercraft_offcanvas_menu_text_transform', 'none' );
 
 	/* fonts (offcanvas submenu) */
 	$offcanvas_submenu_font_size = get_theme_mod( 'hovercraft_offcanvas_submenu_font_size', '16' );
@@ -40,6 +42,14 @@ function hovercraft_generate_css(){
 
 	/* fonts (social sharing) */
 	$social_sharing_font_size = get_theme_mod( 'hovercraft_social_sharing_font_size', '18' );
+
+	/* fonts (footer) */
+	$footer_mobile_font_size = get_theme_mod( 'hovercraft_footer_mobile_font_size', '14' );
+	$footer_desktop_font_size = get_theme_mod( 'hovercraft_footer_desktop_font_size', '14' );
+
+	/* fonts (copyright) */
+	$copyright_mobile_font_size = get_theme_mod( 'hovercraft_copyright_mobile_font_size', '14' );
+	$copyright_desktop_font_size = get_theme_mod( 'hovercraft_copyright_desktop_font_size', '14' );
 
 	/* headings (fonts) */
 	$h1_font_family = get_theme_mod( 'hovercraft_h1_font', 'noto_sans' );
@@ -68,8 +78,6 @@ function hovercraft_generate_css(){
 	$sidebar_widget_title_mobile_font_size = get_theme_mod( 'hovercraft_sidebar_widget_title_mobile_font_size', '24' );
 	$sidebar_widget_title_text_transform = get_theme_mod( 'hovercraft_sidebar_widget_title_text_transform', 'none' );
 	$sidebar_widget_title_font_weight = get_theme_mod( 'hovercraft_sidebar_widget_title_font_weight', '600' );
-	$offcanvas_menu_text_transform = get_theme_mod( 'hovercraft_offcanvas_menu_text_transform', 'none' );
-	$main_menu_text_transform = get_theme_mod( 'hovercraft_main_menu_text_transform', 'none' );
 	$back_to_top_text_transform = get_theme_mod( 'hovercraft_back_to_top_text_transform', 'uppercase' );
 	
 	/* heros */
@@ -113,12 +121,7 @@ function hovercraft_generate_css(){
 	$prefooter_bottom_align = get_theme_mod( 'hovercraft_prefooter_bottom_align', 'left' );
 	$postcolumns_top_align = get_theme_mod( 'hovercraft_postcolumns_top_align', 'left' );
 	$postcolumns_bottom_align = get_theme_mod( 'hovercraft_postcolumns_bottom_align', 'left' );
-	
-	/* footer */
-	$footer_mobile_font_size = get_theme_mod( 'hovercraft_footer_mobile_font_size', '14' );
-	$footer_desktop_font_size = get_theme_mod( 'hovercraft_footer_desktop_font_size', '14' );
-	$copyright_mobile_font_size = get_theme_mod( 'hovercraft_copyright_mobile_font_size', '14' );
-	$copyright_desktop_font_size = get_theme_mod( 'hovercraft_copyright_desktop_font_size', '14' );
+
 	$back_to_top_desktop_font_size = get_theme_mod( 'hovercraft_back_to_top_desktop_font_size', '12' );
 	$back_to_top_mobile_font_size = get_theme_mod( 'hovercraft_back_to_top_mobile_font_size', '12' );
 
@@ -805,14 +808,14 @@ h1.mini-hero-title {
 }
 
 
-/* site title */
+/* site title (site name) */
 
 @media screen and (max-width: 1200px) {
 .site-title {
 	font-family: <?php echo ucwords(str_replace("_", " ", $site_name_font_family)); ?>;
-	font-weight: <?php echo $site_name_font_weight; ?>;
-	font-size: <?php echo $site_name_mobile_font_size; ?>px;
 	text-transform: <?php echo $site_name_text_transform; ?>;
+	font-size: <?php echo $site_name_mobile_font_size; ?>px;
+	font-weight: <?php echo $site_name_font_weight; ?>;
 	line-height: 1; /* site-tagline is hidden on mobile anyways */
 	display: <?php echo $site_name_display_mobile; ?>;
 	}
@@ -821,9 +824,9 @@ h1.mini-hero-title {
 @media screen and (min-width: 1200px) {
 .site-title {
 	font-family: <?php echo ucwords(str_replace("_", " ", $site_name_font_family)); ?>;
-	font-weight: <?php echo $site_name_font_weight; ?>;
-	font-size: <?php echo $site_name_desktop_font_size; ?>px;
 	text-transform: <?php echo $site_name_text_transform; ?>;
+	font-size: <?php echo $site_name_desktop_font_size; ?>px;
+	font-weight: <?php echo $site_name_font_weight; ?>;
 	line-height: 1; /* therefore site-tagline requires padding-top */
 	display: block;
 	}
@@ -1672,11 +1675,11 @@ button {
 .menu-desktop > .main-menu a {
 	font-family: <?php echo ucwords(str_replace("_", " ", $main_menu_font_family)); ?>;
 	font-size: <?php echo $main_menu_desktop_font_size; ?>px;
+	text-transform: <?php echo $main_menu_text_transform; ?>;
 	font-weight: <?php echo $main_menu_font_weight; ?>;
 	display: inline-block;
 	padding-left: 30px;
 	text-decoration: none !important;
-	text-transform: <?php echo $main_menu_text_transform; ?>;
 }
 
 
