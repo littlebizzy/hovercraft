@@ -8,7 +8,7 @@ function hovercraft_customizer($wp_customize) {
 	$hovercraft_google_fonts_multilingual_array = hovercraft_google_fonts_multilingual_array();
 
 	// load google fonts helper function (via functions.php)
-	$hovercraft_available_fonts = hovercraft_google_fonts();
+	$hovercraft_available_fonts = hovercraft_available_fonts();
 
     // remove header text color control
     $wp_customize->remove_control('header_textcolor');
