@@ -1,6 +1,6 @@
 <?php
 
-function hovercraft_google_fonts() {
+function hovercraft_enqueue_google_fonts() {
 
     // get and format the first font family for google fonts
     $first_font_family = get_theme_mod( 'hovercraft_first_font_family', 'noto_sans' );
@@ -48,7 +48,7 @@ function hovercraft_google_fonts() {
     }
 }
 
-add_action( 'wp_enqueue_scripts', 'hovercraft_google_fonts' );
+add_action( 'wp_enqueue_scripts', 'hovercraft_enqueue_google_fonts' );
 
 // Ref: ChatGPT
 // Ref: https://wordpress.org/support/topic/new-google-fonts-url-incompatible-with-wp_enqueue_style/
