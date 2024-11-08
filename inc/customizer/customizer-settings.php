@@ -1244,7 +1244,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_multilingual_font_family',
         array(
             'label'       => __( 'Multilingual Google Fonts Family', 'hovercraft' ),
-            'description' => __( 'This will load the chosen Google Fonts family, thus powering font options below. Note: Only font weights 400, 600, and 700 are loaded. Be sure the font you choose here matches your other font families to avoid conflicts.', 'hovercraft' ),
+            'description' => __( 'This will load the chosen Google Fonts family, thus powering font options below. Note: Only font weights 400, 600, and 700 are loaded. Be sure the font you choose here matches your other font families above to avoid conflicts.', 'hovercraft' ),
             'section'     => 'hovercraft_fonts',
             'settings'    => 'hovercraft_multilingual_font_family',
             'type'        => 'select',
@@ -1282,25 +1282,25 @@ $wp_customize->add_control( new WP_Customize_Control(
         $hovercraft_font_families[ $third_font_family ] = $third_font_family_final;
     }
 
-// default font family setting
-$wp_customize->add_setting( 'hovercraft_default_font', array(
-    'default'           => '',
-    'sanitize_callback' => 'hovercraft_sanitize_select',
-) );
+    // default font family setting
+    $wp_customize->add_setting( 'hovercraft_default_font', array(
+        'default'           => '',
+        'sanitize_callback' => 'hovercraft_sanitize_select',
+    ) );
 
-// default font family control
-$wp_customize->add_control( new WP_Customize_Control(
-    $wp_customize,
-    'hovercraft_default_font',
-    array(
-        'label'       => __( 'Default Font Family', 'hovercraft' ),
-        'description' => __( 'Which Google Fonts family should be used for the default site-wide font?', 'hovercraft' ),
-        'section'     => 'hovercraft_fonts',
-        'settings'    => 'hovercraft_default_font',
-        'type'        => 'select',
-        'choices'     => $hovercraft_font_families,
-    )
-) );
+    // default font family control
+    $wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_default_font',
+        array(
+            'label'       => __( 'Default Font Family', 'hovercraft' ),
+            'description' => __( 'Which Google Fonts family should be used for the default site-wide font?', 'hovercraft' ),
+            'section'     => 'hovercraft_fonts',
+            'settings'    => 'hovercraft_default_font',
+            'type'        => 'select',
+            'choices'     => $hovercraft_font_families,
+        )
+    ) );
 
 // default font size (desktop) setting
 $wp_customize->add_setting( 'hovercraft_default_desktop_font_size', array(
