@@ -3,25 +3,42 @@
 // css from customizer
 function hovercraft_generate_css(){
 
-	/* fonts */
+	/* fonts (default) */
 	$default_font_family = get_theme_mod( 'hovercraft_default_font', 'noto_sans' );
 	$default_desktop_font_size = get_theme_mod( 'hovercraft_default_desktop_font_size', '16' );
 	$default_mobile_font_size = get_theme_mod( 'hovercraft_default_mobile_font_size', '16' );
-	$topbar_desktop_font_size = get_theme_mod( 'hovercraft_topbar_desktop_font_size', '14' );
+
+	/* fonts (topbar) */
+	$topbar_text_transform = get_theme_mod( 'hovercraft_topbar_text_transform', 'none' );
 	$topbar_mobile_font_size = get_theme_mod( 'hovercraft_topbar_mobile_font_size', '14' );
+	$topbar_desktop_font_size = get_theme_mod( 'hovercraft_topbar_desktop_font_size', '14' );
+	$topbar_font_weight = get_theme_mod( 'hovercraft_topbar_font_weight', '400' );
+
+	/* fonts (site name) */
 	$site_name_font_family = get_theme_mod( 'hovercraft_site_name_font', 'noto_sans' );
+	$site_name_text_transform = get_theme_mod( 'hovercraft_site_name_text_transform', 'none' );
 	$site_name_mobile_font_size = get_theme_mod( 'hovercraft_site_name_mobile_font_size', '24' );
 	$site_name_desktop_font_size = get_theme_mod( 'hovercraft_site_name_desktop_font_size', '36' );
 	$site_name_font_weight = get_theme_mod( 'hovercraft_site_name_font_weight', '700' );
-	$site_name_text_transform = get_theme_mod( 'hovercraft_site_name_text_transform', 'none' );
+
+	/* fonts (main menu) */
 	$main_menu_font_family = get_theme_mod( 'hovercraft_main_menu_font', 'noto_sans' );
 	$main_menu_desktop_font_size = get_theme_mod( 'hovercraft_main_menu_desktop_font_size', '18' );
 	$main_menu_font_weight = get_theme_mod( 'hovercraft_main_menu_font_weight', '600' );
+
+	/* fonts (offcanvas menu) */
 	$offcanvas_font_size = get_theme_mod( 'hovercraft_offcanvas_font_size', '18' );
 	$offcanvas_font_weight = get_theme_mod( 'hovercraft_offcanvas_font_weight', '400' );
+
+	/* fonts (offcanvas submenu) */
 	$offcanvas_submenu_font_size = get_theme_mod( 'hovercraft_offcanvas_submenu_font_size', '16' );
+	$offcanvas_submenu_font_weight = get_theme_mod( 'hovercraft_offcanvas_submenu_font_weight', '400' );
+
+	/* fonts (after byline) */
 	$after_byline_mobile_font_size = get_theme_mod( 'hovercraft_after_byline_mobile_font_size', '12' );
 	$after_byline_desktop_font_size = get_theme_mod( 'hovercraft_after_byline_desktop_font_size', '12' );
+
+	/* fonts (social sharing) */
 	$social_sharing_font_size = get_theme_mod( 'hovercraft_social_sharing_font_size', '18' );
 
 	/* headings (fonts) */
@@ -1765,6 +1782,8 @@ button {
 	width: 100%;
 	padding: 10px 20px;
 	font-size: <?php echo $topbar_mobile_font_size; ?>px;
+	font-weight: <?php echo $topbar_font_weight; ?>;
+	text-transform: <?php echo $topbar_text_transform; ?>;
 	line-height: 1.5;
 	background: <?php echo $topbar_background_color; ?>;
 	color: <?php echo $topbar_text_color; ?>;
@@ -1776,6 +1795,8 @@ button {
 	width: 100%;
 	padding: 10px 0px;
 	font-size: <?php echo $topbar_desktop_font_size; ?>px;
+	font-weight: <?php echo $topbar_font_weight; ?>;
+	text-transform: <?php echo $topbar_text_transform; ?>;
 	line-height: 1.5;
 	display: table;
 	background: <?php echo $topbar_background_color; ?>;
