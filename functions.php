@@ -47,6 +47,9 @@ require get_template_directory() . '/inc/customizer/register-portal-category.php
 // Register snippets category (customizer)
 require get_template_directory() . '/inc/customizer/register-snippets-category.php';
 
+// font family helper (customizer)
+require get_template_directory() . '/inc/customizer/font-family-helper.php';
+
 // google fonts array (customizer)
 require get_template_directory() . '/inc/customizer/google-fonts-array.php';
 
