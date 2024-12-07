@@ -4473,6 +4473,34 @@ visibility: hidden;
 
 /* woocommerce cart */
 
+@media screen and (max-width: 1200px) {
+.add_to_cart_button {
+	width: 100%;
+	text-align: center;
+	font-size: 20px;
+	font-weight: 700;
+	color: #ffffff;
+	padding: 10px 0;
+	text-decoration: none;
+	display: block;
+	background: <?php echo $default_link_color; ?>;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+.add_to_cart_button {
+	width: 100%;
+	text-align: center;
+	font-size: 20px;
+	font-weight: 700;
+	color: #ffffff;
+	padding: 10px 0;
+	text-decoration: none;
+	display: block;
+	background: <?php echo $default_link_color; ?>;
+	}
+}
+
 a.checkout-button {
 	background: <?php echo $default_link_color; ?> !important;
 }
