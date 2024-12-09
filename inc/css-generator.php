@@ -387,14 +387,15 @@ ol > li::marker {
 
 blockquote {
 	margin: 30px 0px 30px 30px;
-	padding: 20px 30px;
+	padding: 30px 30px;
 	border-left: 5px solid <?php echo $blockquote_border_color; ?>;
-	color: $blockquote_text_color;
+	color: <?php echo $blockquote_text_color; ?>;
 }
 
 blockquote p {
 	font-size: 18px;
 	line-height: 2;
+	color: <?php echo $blockquote_text_color; ?>;
 }
 
 blockquote p:last-child {
