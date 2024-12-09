@@ -4504,6 +4504,11 @@ visibility: hidden;
 	}
 }
 
+ .add_to_cart_button:hover {
+	color: #ffffff;
+	background: <?php echo $default_hover_color; ?>;
+}
+
 a.checkout-button {
 	background: <?php echo $default_link_color; ?> !important;
 }
