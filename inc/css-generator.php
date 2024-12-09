@@ -259,6 +259,8 @@ function hovercraft_generate_css(){
 	$after_byline_link_color = get_theme_mod( 'hovercraft_after_byline_link_color', '#5C6BC0' );
 	$featured_image_position = get_theme_mod( 'hovercraft_featured_image_position', 'above_title' );
 	$title_divider_background_color = get_theme_mod( 'hovercraft_title_divider_background_color', '#757575' );
+	$blockquote_text_color = get_theme_mod( 'hovercraft_blockquote_text_color', '#616161' );
+	$blockquote_border_color = get_theme_mod( 'hovercraft_blockquote_border_color', '#757575' );
     ?>
 
 <style type="text/css" id="hovercraft_custom_css">
@@ -386,8 +388,8 @@ ol > li::marker {
 blockquote {
 	margin: 30px 0px 30px 30px;
 	padding: 20px 30px;
-	border-left: 5px solid #ECEFF1;
-	color: #607D8B;
+	border-left: 5px solid <?php echo $blockquote_border_color; ?>;
+	color: $blockquote_text_color;
 }
 
 blockquote p {
