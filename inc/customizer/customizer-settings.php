@@ -2726,6 +2726,21 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	)
 ) );
 
+// blockquote border color setting
+$wp_customize->add_setting( 'hovercraft_blockquote_border_color', array(
+	'default' => '#757575',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+ 
+// blockquote border color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_blockquote_border_color', array(
+	'label' => 'Blockquote Border Color',
+	'description' => 'Specificy the border-left color on blockquotes?',
+	'section' => 'colors',
+	'settings' => 'hovercraft_blockquote_border_color'
+	)
+) );
+
 // woocommerce price text color setting
 $wp_customize->add_setting( 'hovercraft_woocommerce_price_text_color', array(
 	'default' => '#9E9D24',
