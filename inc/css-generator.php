@@ -848,7 +848,13 @@ h1.mini-hero-title {
 
 @media screen and (max-width: 1200px) {
 .site-title {
-	font-family: <?php echo ucwords(str_replace("_", " ", $site_name_font_family)); ?>;
+	font-family: <?php 
+        echo !empty($site_name_font_family) 
+            ? ucwords(str_replace("_", " ", $site_name_font_family)) 
+            : (!empty($default_font_family) 
+                ? ucwords(str_replace("_", " ", $default_font_family)) 
+                : 'sans-serif'); 
+    ?>;
 	text-transform: <?php echo $site_name_text_transform; ?>;
 	font-size: <?php echo $site_name_mobile_font_size; ?>px;
 	font-weight: <?php echo $site_name_font_weight; ?>;
@@ -859,7 +865,13 @@ h1.mini-hero-title {
 
 @media screen and (min-width: 1200px) {
 .site-title {
-	font-family: <?php echo ucwords(str_replace("_", " ", $site_name_font_family)); ?>;
+	font-family: <?php 
+        echo !empty($site_name_font_family) 
+            ? ucwords(str_replace("_", " ", $site_name_font_family)) 
+            : (!empty($default_font_family) 
+                ? ucwords(str_replace("_", " ", $default_font_family)) 
+                : 'sans-serif'); 
+    ?>;
 	text-transform: <?php echo $site_name_text_transform; ?>;
 	font-size: <?php echo $site_name_desktop_font_size; ?>px;
 	font-weight: <?php echo $site_name_font_weight; ?>;
@@ -1717,7 +1729,13 @@ button {
 }	
 
 .menu-desktop > .main-menu a {
-	font-family: <?php echo ucwords(str_replace("_", " ", $main_menu_font_family)); ?>;
+	font-family: <?php 
+        echo !empty($main_menu_font_family) 
+            ? ucwords(str_replace("_", " ", $main_menu_font_family)) 
+            : (!empty($default_font_family) 
+                ? ucwords(str_replace("_", " ", $default_font_family)) 
+                : 'sans-serif'); 
+    ?>;
 	font-size: <?php echo $main_menu_desktop_font_size; ?>px;
 	text-transform: <?php echo $main_menu_text_transform; ?>;
 	font-weight: <?php echo $main_menu_font_weight; ?>;
