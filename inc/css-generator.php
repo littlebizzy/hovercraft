@@ -3,7 +3,13 @@
 // css from customizer
 function hovercraft_generate_css(){
 
-	/* fonts (default) */
+	/* google fonts */
+	$first_font_family = get_theme_mod( 'hovercraft_first_font_family', 'noto_sans' );
+	$second_font_family = get_theme_mod( 'hovercraft_second_font_family', '' );
+	$third_font_family = get_theme_mod( 'hovercraft_third_font_family', '' );
+	$multilingual_font_family = get_theme_mod( 'hovercraft_multilingual_font_family', '' );
+	
+	/* default fonts */
     $default_font_family = get_theme_mod( 'hovercraft_default_font', '' );
     $default_desktop_font_size = get_theme_mod( 'hovercraft_default_desktop_font_size', '16' );
     $default_mobile_font_size = get_theme_mod( 'hovercraft_default_mobile_font_size', '16' );
@@ -277,24 +283,36 @@ function hovercraft_generate_css(){
 <style type="text/css" id="hovercraft_custom_css">
 @media screen and (max-width: 1200px) {
 html, body {
-	height: 100%;
-	font-family: <?php echo !empty($default_font_family) ? ucwords(str_replace("_", " ", $default_font_family)) : 'sans-serif'; ?>;
-	font-size: <?php echo $default_mobile_font_size; ?>px;
-	line-height: 1.5;
-	color: <?php echo $default_text_color; ?>;
-	scroll-behavior: smooth;
-	}
+    height: 100%;
+    font-family: <?php 
+        echo !empty($default_font_family) 
+            ? ucwords(str_replace("_", " ", $default_font_family)) 
+            : (!empty($first_font_family) 
+                ? ucwords(str_replace("_", " ", $first_font_family)) 
+                : 'sans-serif'); 
+    ?>;
+    font-size: <?php echo $default_mobile_font_size; ?>px;
+    line-height: 1.5;
+    color: <?php echo $default_text_color; ?>;
+    scroll-behavior: smooth;
+    }
 }
 
 @media screen and (min-width: 1200px) {
 html, body {
-	height: 100%;
-	font-family: <?php echo !empty($default_font_family) ? ucwords(str_replace("_", " ", $default_font_family)) : 'sans-serif'; ?>;
-	font-size: <?php echo $default_desktop_font_size; ?>px;
-	line-height: 1.5;
-	color: <?php echo $default_text_color; ?>;
-	scroll-behavior: smooth;
-	}
+    height: 100%;
+    font-family: <?php 
+        echo !empty($default_font_family) 
+            ? ucwords(str_replace("_", " ", $default_font_family)) 
+            : (!empty($first_font_family) 
+                ? ucwords(str_replace("_", " ", $first_font_family)) 
+                : 'sans-serif'); 
+    ?>;
+    font-size: <?php echo $default_desktop_font_size; ?>px;
+    line-height: 1.5;
+    color: <?php echo $default_text_color; ?>;
+    scroll-behavior: smooth;
+    }
 }
 
 
