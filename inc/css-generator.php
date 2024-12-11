@@ -4,9 +4,9 @@
 function hovercraft_generate_css(){
 
 	/* fonts (default) */
-	$default_font_family = get_theme_mod( 'hovercraft_default_font', 'noto_sans' );
-	$default_desktop_font_size = get_theme_mod( 'hovercraft_default_desktop_font_size', '16' );
-	$default_mobile_font_size = get_theme_mod( 'hovercraft_default_mobile_font_size', '16' );
+    $default_font_family = get_theme_mod( 'hovercraft_default_font', '' );
+    $default_desktop_font_size = get_theme_mod( 'hovercraft_default_desktop_font_size', '16' );
+    $default_mobile_font_size = get_theme_mod( 'hovercraft_default_mobile_font_size', '16' );
 
 	/* fonts (topbar) */
 	$topbar_text_transform = get_theme_mod( 'hovercraft_topbar_text_transform', 'none' );
@@ -56,30 +56,34 @@ function hovercraft_generate_css(){
 	$back_to_top_text_transform = get_theme_mod( 'hovercraft_back_to_top_text_transform', 'uppercase' );
 	$back_to_top_font_weight = get_theme_mod( 'hovercraft_back_to_top_font_weight', '400' );
 
-	/* headings (fonts) */
+	/* h1 headings */
     $h1_font_family = get_theme_mod( 'hovercraft_h1_font', '' );
     $h1_mobile_font_size = get_theme_mod( 'hovercraft_h1_mobile_font_size', '36' );
     $h1_desktop_font_size = get_theme_mod( 'hovercraft_h1_desktop_font_size', '48' );
     $h1_font_weight = get_theme_mod( 'hovercraft_h1_font_weight', '700' );
     $h1_divider_display = get_theme_mod( 'hovercraft_h1_divider_display', 'none' );
 
+	/* h2 headings */
     $h2_font_family = get_theme_mod( 'hovercraft_h2_font', '' );
     $h2_mobile_font_size = get_theme_mod( 'hovercraft_h2_mobile_font_size', '30' );
     $h2_desktop_font_size = get_theme_mod( 'hovercraft_h2_desktop_font_size', '36' );
     $h2_font_weight = get_theme_mod( 'hovercraft_h2_font_weight', '700' );
     $h2_divider_display = get_theme_mod( 'hovercraft_h2_divider_display', 'none' );
 
+	/* h3 headings */
     $h3_font_family = get_theme_mod( 'hovercraft_h3_font', '' );
     $h3_mobile_font_size = get_theme_mod( 'hovercraft_h3_mobile_font_size', '24' );
     $h3_desktop_font_size = get_theme_mod( 'hovercraft_h3_desktop_font_size', '24' );
     $h3_font_weight = get_theme_mod( 'hovercraft_h3_font_weight', '700' );
     $h3_divider_display = get_theme_mod( 'hovercraft_h3_divider_display', 'none' );
 
+	/* h4 headings */
     $h4_font_family = get_theme_mod( 'hovercraft_h4_font', '' );
     $h4_mobile_font_size = get_theme_mod( 'hovercraft_h4_mobile_font_size', '20' );
     $h4_desktop_font_size = get_theme_mod( 'hovercraft_h4_desktop_font_size', '20' );
     $h4_font_weight = get_theme_mod( 'hovercraft_h4_font_weight', '700' );
 
+	/* h5 headings */
     $h5_font_family = get_theme_mod( 'hovercraft_h5_font', '' );
     $h5_mobile_font_size = get_theme_mod( 'hovercraft_h5_mobile_font_size', '18' );
     $h5_desktop_font_size = get_theme_mod( 'hovercraft_h5_desktop_font_size', '18' );
