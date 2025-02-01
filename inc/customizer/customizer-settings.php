@@ -30,7 +30,7 @@ function hovercraft_customizer($wp_customize) {
 $wp_customize->add_setting( 'hovercraft_sitewide_layout', array(
     'default'    => 'floating_islands',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // sitewide layout control
@@ -54,7 +54,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_mobile_menu', array(
     'default'    => 'accordion',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // mobile menu control
@@ -78,7 +78,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_tagline_display', array(
     'default'    => 'right_of_site_title',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // tagline display control
@@ -103,7 +103,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_site_name_display_mobile', array(
     'default'    => 'block',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // site name display control
@@ -127,7 +127,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_desktop_logo_width', array(
     'default'    => '150',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // logo width control (desktop)
@@ -147,7 +147,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_mobile_logo_width', array(
     'default'    => '100',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // logo width control (mobile)
@@ -167,7 +167,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_desktop_header_width', array(
     'default' => 'fixed',
 	'sanitize_callback' => 'hovercraft_sanitize_select'
-	) 
+	)
 );
 
 // header width control (desktop)
@@ -191,7 +191,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_after_byline_padding', array(
     'default'    => '0',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // after byline padding control (desktop)
@@ -211,7 +211,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_posthero_widget_display', array(
     'default'    => 'full_and_half_hero',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // posthero widget display control
@@ -236,7 +236,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_mobile_topbar', array(
     'default'    => 'topbar_left',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // mobile topbar control
@@ -260,7 +260,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_mobile_preheader', array(
     'default'    => 'none',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // mobile preheader control
@@ -285,7 +285,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_scroll_to_top', array(
     'default'    => 'mobile_only',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // scroll to top control
@@ -310,7 +310,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_search_icon', array(
     'default'    => 'desktop_only',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // search icon control
@@ -336,7 +336,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_breadcrumbs', array(
     'default'    => 'sitewide_except_homepage',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // breadcrumbs control
@@ -367,7 +367,7 @@ $wp_customize->add_section( 'hovercraft_seo', array(
 $wp_customize->add_setting( 'hovercraft_homepage_html_title', array(
     'default'    => 'site_name_site_tagline',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // homepage html title control
@@ -395,7 +395,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_faq_posts_noindex', array(
     'default'    => 'noindex',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // faq noindex control
@@ -425,7 +425,7 @@ $wp_customize->add_section( 'hovercraft_widget_layouts', array(
 $wp_customize->add_setting( 'hovercraft_home_premain_top_columns', array(
     'default'    => '1',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // home premain top widget columns control
@@ -459,7 +459,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_home_premain_top_align', array(
     'default'    => 'center',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // home premain top text-align control
@@ -483,7 +483,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_home_premain_bottom_columns', array(
     'default'    => '1',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // home premain bottom widget columns control
@@ -517,7 +517,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_home_premain_bottom_align', array(
     'default'    => 'center',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // home premain bottom text-align control
@@ -541,7 +541,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_home_postmain_top_columns', array(
     'default'    => '1',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // home postmain top widget columns control
@@ -575,7 +575,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_home_postmain_top_align', array(
     'default'    => 'center',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // home postmain top text-align control
@@ -599,7 +599,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_home_postmain_bottom_columns', array(
     'default'    => '1',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // home postmain bottom widget columns control
@@ -633,7 +633,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_home_postmain_bottom_align', array(
     'default'    => 'center',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // home postmain bottom text-align control
@@ -657,7 +657,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_prefooter_top_columns', array(
     'default'    => '1',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // prefooter top widget columns control
@@ -691,7 +691,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_prefooter_top_align', array(
     'default'    => 'left',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // prefooter top text-align control
@@ -715,7 +715,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_prefooter_bottom_columns', array(
     'default'    => '1',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // prefooter bottom widget columns control
@@ -749,7 +749,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_prefooter_bottom_align', array(
     'default'    => 'left',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // prefooter bottom text-align control
@@ -773,7 +773,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_postcolumns_top_align', array(
     'default'    => 'left',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // postcolumns top text-align control
@@ -797,7 +797,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_postcolumns_bottom_align', array(
     'default'    => 'left',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // postcolumns bottom text-align control
@@ -853,7 +853,7 @@ $wp_customize->add_section( 'hovercraft_page_layouts', array(
 $wp_customize->add_setting( 'hovercraft_tiles_across', array(
     'default'    => '3',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // tiles across control
@@ -886,7 +886,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_columns_across', array(
     'default'    => '4',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // columns across control
@@ -912,7 +912,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_gallery_captions', array(
     'default'    => 'none',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // gallery captions control
@@ -937,7 +937,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_tiles_captions', array(
     'default'    => 'none',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // tiles captions control
@@ -962,7 +962,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_blockquote_captions', array(
     'default'    => 'none',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // blockquote captions control
@@ -993,7 +993,7 @@ $wp_customize->add_section( 'hovercraft_blog', array(
 $wp_customize->add_setting( 'hovercraft_featured_image_position', array(
     'default'    => 'above_title',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // featured image position control
@@ -1017,7 +1017,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_social_sharing', array(
     'default'    => 'bottom_of_post',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // social sharing control
@@ -1043,7 +1043,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_biography', array(
     'default'    => 'native_posts_only',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // author biography display control
@@ -1068,7 +1068,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_biography_links', array(
     'default'    => 'none',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // author social media links control
@@ -1094,7 +1094,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_byline_photo', array(
     'default'    => 'none',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // author photo control
@@ -1120,7 +1120,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_byline_date', array(
     'default'    => 'updated_date_only',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // byline date control
@@ -1146,7 +1146,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_post_tags', array(
     'default'    => 'native_posts_only',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // post tags control
@@ -1279,7 +1279,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_default_desktop_font_size', array(
     'default'    => '16',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // default font size (desktop) control
@@ -1299,7 +1299,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_default_mobile_font_size', array(
     'default'    => '16',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // default font size (mobile) control
@@ -1339,7 +1339,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_site_name_text_transform', array(
     'default'    => 'none',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // site name text transform control
@@ -1365,7 +1365,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_site_name_desktop_font_size', array(
     'default'    => '36',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // site name font size (desktop) control
@@ -1385,7 +1385,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_site_name_mobile_font_size', array(
     'default'    => '24',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // site name font size (mobile) control
@@ -1405,7 +1405,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_site_name_font_weight', array(
     'default'    => '700',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // site name font weight control
@@ -1430,7 +1430,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_offcanvas_menu_text_transform', array(
     'default'    => 'none',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // offcanvas menu text transform control
@@ -1456,7 +1456,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_offcanvas_font_size', array(
     'default'    => '18',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // offcanvas menu font size (mobile) control
@@ -1476,7 +1476,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_offcanvas_font_weight', array(
     'default'    => '400',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // offcanvas menu font weight control
@@ -1501,7 +1501,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_offcanvas_submenu_text_transform', array(
     'default'    => 'none',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // offcanvas submenu text transform control
@@ -1527,7 +1527,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_offcanvas_submenu_font_size', array(
     'default'    => '16',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // offcanvas submenu font size (mobile) control
@@ -1547,7 +1547,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_offcanvas_submenu_font_weight', array(
     'default'    => '400',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // offcanvas submenu font weight control
@@ -1572,7 +1572,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_topbar_text_transform', array(
     'default'    => 'none',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // topbar text transform control
@@ -1598,7 +1598,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_topbar_desktop_font_size', array(
     'default'    => '14',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // topbar font size (desktop) control
@@ -1618,7 +1618,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_topbar_mobile_font_size', array(
     'default'    => '14',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // topbar font size (mobile) control
@@ -1638,7 +1638,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_topbar_font_weight', array(
     'default'    => '400',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // topbar font weight control
@@ -1683,7 +1683,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_main_menu_text_transform', array(
     'default'    => 'none',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // main menu text transform control
@@ -1709,7 +1709,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_main_menu_desktop_font_size', array(
     'default'    => '18',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // main menu font size (desktop) control
@@ -1729,7 +1729,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_main_menu_font_weight', array(
     'default'    => '600',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // main menu font weight control
@@ -1754,7 +1754,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_after_byline_desktop_font_size', array(
     'default'    => '12',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // after byline (desktop) control
@@ -1774,7 +1774,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_after_byline_mobile_font_size', array(
     'default'    => '12',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // after byline (mobile) control
@@ -1794,7 +1794,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_back_to_top_text_transform', array(
     'default'    => 'uppercase',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // back to top text transform control
@@ -1820,7 +1820,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_back_to_top_desktop_font_size', array(
     'default'    => '12',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // back to top font size (desktop) control
@@ -1840,7 +1840,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_back_to_top_mobile_font_size', array(
     'default'    => '12',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // back to top font size (mobile) control
@@ -1860,7 +1860,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_back_to_top_font_weight', array(
     'default'    => '400',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // back to top font weight control
@@ -1905,7 +1905,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_h1_desktop_font_size', array(
     'default'    => '48',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // h1 font size (desktop) control
@@ -1925,7 +1925,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_h1_mobile_font_size', array(
     'default'    => '36',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // h1 font size (mobile) control
@@ -1945,7 +1945,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_h1_font_weight', array(
     'default'    => '700',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // h1 font weight control
@@ -1970,7 +1970,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_h1_divider_display', array(
     'default'    => 'none',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // h1 divider display control
@@ -2015,7 +2015,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_h2_desktop_font_size', array(
     'default'    => '36',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // h2 font size (desktop) control
@@ -2035,7 +2035,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_h2_mobile_font_size', array(
     'default'    => '30',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // h2 font size (mobile) control
@@ -2055,7 +2055,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_h2_font_weight', array(
     'default'    => '700',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // h2 font weight control
@@ -2080,7 +2080,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_h2_divider_display', array(
     'default'    => 'none',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // h2 divider display control
@@ -2124,7 +2124,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_h3_desktop_font_size', array(
     'default'    => '24',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // h3 font size (desktop) control
@@ -2144,7 +2144,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_h3_mobile_font_size', array(
     'default'    => '24',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // h3 font size (mobile) control
@@ -2164,7 +2164,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_h3_font_weight', array(
     'default'    => '700',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // h3 font weight control
@@ -2209,7 +2209,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_h4_desktop_font_size', array(
     'default'    => '20',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // h4 font size (desktop) control
@@ -2229,7 +2229,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_h4_mobile_font_size', array(
     'default'    => '20',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // h4 font size (mobile) control
@@ -2249,7 +2249,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_h4_font_weight', array(
     'default'    => '700',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // h4 font weight control
@@ -2294,7 +2294,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_h5_desktop_font_size', array(
     'default'    => '18',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // h5 font size (desktop) control
@@ -2314,7 +2314,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_h5_mobile_font_size', array(
     'default'    => '18',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // h5 font size (mobile) control
@@ -2334,7 +2334,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_h5_font_weight', array(
     'default'    => '700',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // h5 font weight control
@@ -2359,7 +2359,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_sidebar_widget_title_text_transform', array(
     'default'    => 'none',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // sidebar widget title text transform control
@@ -2385,7 +2385,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_sidebar_widget_title_desktop_font_size', array(
     'default'    => '24',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // sidebar widget title font size (desktop) control
@@ -2405,7 +2405,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_sidebar_widget_title_mobile_font_size', array(
     'default'    => '24',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // sidebar widget title font size (mobile) control
@@ -2425,7 +2425,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_sidebar_widget_title_font_weight', array(
     'default'    => '600',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // sidebar widget title font weight control
@@ -2450,7 +2450,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_social_sharing_font_size', array(
     'default'    => '18',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // social sharing font size control
@@ -2470,7 +2470,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_footer_desktop_font_size', array(
     'default'    => '14',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // footer font size (desktop) control
@@ -2490,7 +2490,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_footer_mobile_font_size', array(
     'default'    => '14',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // footer font size (mobile) control
@@ -2510,7 +2510,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_copyright_desktop_font_size', array(
     'default'    => '14',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // copyright font size (desktop) control
@@ -2530,7 +2530,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_copyright_mobile_font_size', array(
     'default'    => '14',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // copyright font size (mobile) control
@@ -3815,7 +3815,7 @@ $wp_customize->add_section( 'hovercraft_sidebar', array(
 $wp_customize->add_setting( 'hovercraft_sidebar_appears', array(
     'default'    => 'everywhere',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // sidebar appears control
@@ -3840,7 +3840,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_primary_width', array(
     'default'    => 'narrow_centered',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // primary width control
@@ -3885,7 +3885,7 @@ $wp_customize->add_section( 'hovercraft_footer', array(
 	'title'      => 'Footer',
     'priority'    => 130,
     'description' => 'Allows you to customize how many footer columns',
- 	) 
+ 	)
 );
 
 // footer columns setting
@@ -3893,7 +3893,7 @@ $wp_customize->add_setting( 'hovercraft_footer_columns', array(
     'default'    => 'four_weighted',
     'type'       => 'theme_mod',
 	'sanitize_callback' => 'hovercraft_sanitize_radio',
- 	) 
+ 	)
 );
 
 // footer columns control
@@ -3925,7 +3925,7 @@ $wp_customize->add_section( 'hovercraft_effects', array(
 $wp_customize->add_setting( 'hovercraft_logo_effect', array(
     'default'    => 'default',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // hover effects logo control
@@ -3951,7 +3951,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_main_menu_links_effect', array(
     'default'    => 'default',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // hover effects main menu links control
@@ -3983,7 +3983,7 @@ $wp_customize->add_section( 'hovercraft_link_styling', array(
 $wp_customize->add_setting( 'hovercraft_default_link_decoration', array(
     'default'    => 'underline',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // default link decoration control
@@ -4007,7 +4007,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_topbar_link_decoration', array(
     'default'    => 'underline',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // topbar link decoration control
@@ -4031,7 +4031,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_posthero_link_decoration', array(
     'default'    => 'underline',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // posthero link decoration control
@@ -4055,7 +4055,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_premain_top_link_decoration', array(
     'default'    => 'underline',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // home premain (top) link decoration control
@@ -4079,7 +4079,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_premain_bottom_link_decoration', array(
     'default'    => 'underline',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // home premain (bottom) link decoration control
@@ -4103,7 +4103,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_postmain_top_link_decoration', array(
     'default'    => 'underline',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // home postmain (top) link decoration control
@@ -4127,7 +4127,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_postmain_bottom_link_decoration', array(
     'default'    => 'underline',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // home postmain (bottom) link decoration control
@@ -4151,7 +4151,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_prefooter_top_link_decoration', array(
     'default'    => 'underline',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // prefooter (top) link decoration control
@@ -4175,7 +4175,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_prefooter_bottom_link_decoration', array(
     'default'    => 'underline',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // prefooter (bottom) link decoration control
@@ -4199,7 +4199,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_footer_link_decoration', array(
     'default'    => 'underline',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // footer link decoration control
@@ -4223,7 +4223,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_footer_callout_link_decoration', array(
     'default'    => 'underline',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // footer callout link decoration control
@@ -4247,7 +4247,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_copyright_link_decoration', array(
     'default'    => 'underline',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // copyright link decoration control
@@ -4277,7 +4277,7 @@ $wp_customize->add_section( 'hovercraft_icons', array(
 $wp_customize->add_setting( 'hovercraft_layout_icons', array(
     'default'    => 'material_icons_classic',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // layout icons control
@@ -4302,7 +4302,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_material_icons', array(
     'default'    => 'classic_only',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // material icons control
@@ -4328,7 +4328,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_font_awesome', array(
     'default'    => 'none',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // font awesome control
@@ -4360,7 +4360,7 @@ $wp_customize->add_section( 'hovercraft_hero_styling', array(
 $wp_customize->add_setting( 'hovercraft_full_hero_background_position', array(
     'default'    => 'center_center',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // full hero background position control
@@ -4391,7 +4391,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_half_hero_background_position', array(
     'default'    => 'center_center',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // half hero background position control
@@ -4422,7 +4422,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_mini_hero_background_position', array(
     'default'    => 'center_center',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // mini hero background position control
@@ -4453,7 +4453,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_hero_content_width_desktop', array(
     'default'    => '900px',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // hero content width (desktop) control
@@ -4478,7 +4478,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_mini_hero_vertical_padding', array(
     'default'    => '80',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // mini hero vertical padding control (desktop)
@@ -4498,7 +4498,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_hero_gradient_angle', array(
     'default'    => '60deg',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // hero gradient angle control
@@ -4530,7 +4530,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_hero_gradient_status', array(
     'default'    => 'all_hero_instances',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // hero gradient status control
@@ -4555,7 +4555,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_hero_gradient_tones', array(
     'default'    => 'two_tones',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
-	) 
+	)
 );
 
 // hero gradient tones control
@@ -4579,7 +4579,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_full_hero_header_background_transparency', array(
     'default'    => '0.20',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // full hero header background transparency control
@@ -4621,7 +4621,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_hero_gradient_start_color_transparency', array(
     'default'    => '0.50',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // hero gradient start color transparency control
@@ -4663,7 +4663,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_hero_gradient_mid_color_transparency', array(
     'default'    => '0.50',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // hero gradient mid color transparency control
@@ -4705,7 +4705,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_hero_gradient_stop_color_transparency', array(
     'default'    => '0.50',
 	'sanitize_callback' => 'hovercraft_sanitize_float',
-	) 
+	)
 );
 
 // hero gradient stop color transparency control
@@ -4747,7 +4747,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_hero_gradient_start_color_length', array(
     'default'    => '30',
 	'sanitize_callback' => 'absint',
-	) 
+	)
 );
 
 // hero gradient start color length control
@@ -4790,7 +4790,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_hero_gradient_mid_color_length', array(
     'default'    => '30',
 	'sanitize_callback' => 'absint',
-	) 
+	)
 );
 
 // hero gradient mid color length control
@@ -4833,7 +4833,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 $wp_customize->add_setting( 'hovercraft_hero_gradient_stop_color_length', array(
     'default'    => '100',
 	'sanitize_callback' => 'absint',
-	) 
+	)
 );
 
 // hero gradient stop color length control
@@ -4881,8 +4881,8 @@ add_action('customize_register', 'hovercraft_customizer');
 function hovercraft_sanitize_select( $input, $setting ){
 		//input must be a slug: lowercase alphanumeric characters, dashes and underscores are allowed only
 		$input = sanitize_key($input);
-		//get the list of possible select options 
-		$choices = $setting->manager->get_control( $setting->id )->choices;           
+		//get the list of possible select options
+		$choices = $setting->manager->get_control( $setting->id )->choices;
 		//return input if valid or return default option
 		return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
 }
@@ -4891,7 +4891,7 @@ function hovercraft_sanitize_select( $input, $setting ){
 function hovercraft_sanitize_radio( $input, $setting ){
 	//input must be a slug: lowercase alphanumeric characters, dashes and underscores are allowed only
 	$input = sanitize_key($input);
-	//get the list of possible radio box options 
+	//get the list of possible radio box options
 	$choices = $setting->manager->get_control( $setting->id )->choices;
 	//return input if valid or return default option
 	return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
@@ -4908,12 +4908,34 @@ function hovercraft_sanitize_float( $input ){
 	return filter_var($input, FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
 }
 
-// https://themeshaper.com/2013/04/29/validation-sanitization-in-customizer/
-// https://divpusher.com/blog/wordpress-customizer-sanitization-examples/
-// https://wordpress.stackexchange.com/questions/225825/customizer-sanitize-callback-for-input-type-number
-// https://core.trac.wordpress.org/ticket/24528
-// https://wp-a2z.org/oik_api/twentytwenty_customizesanitize_checkbox/
-// https://wordpress.stackexchange.com/questions/261969/how-to-rename-and-rearrange-multiple-sections-in-the-customizer
-// https://wphelp.blog/how-to-remove-sections-from-wordpress-customizer/
-// https://stackoverflow.com/questions/7073672/how-to-load-return-array-from-a-php-file
-// https://stackoverflow.com/questions/53613871/how-to-check-whether-checkox-is-checked-in-wordpress-customizer
+// add license key section at the bottom
+$wp_customize->add_section( 'hovercraft_license_key', array(
+    'title'    => __( 'HoverCraft License Key', 'hovercraft' ),
+    'priority' => 999, // push to the bottom
+) );
+
+$wp_customize->add_setting( 'hovercraft_license_key', array(
+    'default'           => '',
+    'sanitize_callback' => 'sanitize_text_field',
+) );
+
+$wp_customize->add_control( 'hovercraft_license_key', array(
+    'label'   => __( 'Enter your license key', 'hovercraft' ),
+    'section' => 'hovercraft_license_key',
+    'type'    => 'text',
+    'input_attrs' => array(
+        'autocomplete' => 'off',
+        'spellcheck'   => 'false',
+    ),
+) );
+
+// Ref: ChatGPT
+// Ref: https://themeshaper.com/2013/04/29/validation-sanitization-in-customizer/
+// Ref: https://divpusher.com/blog/wordpress-customizer-sanitization-examples/
+// Ref: https://wordpress.stackexchange.com/questions/225825/customizer-sanitize-callback-for-input-type-number
+// Ref: https://core.trac.wordpress.org/ticket/24528
+// Ref: https://wp-a2z.org/oik_api/twentytwenty_customizesanitize_checkbox/
+// Ref: https://wordpress.stackexchange.com/questions/261969/how-to-rename-and-rearrange-multiple-sections-in-the-customizer
+// Ref: https://wphelp.blog/how-to-remove-sections-from-wordpress-customizer/
+// Ref: https://stackoverflow.com/questions/7073672/how-to-load-return-array-from-a-php-file
+// Ref: https://stackoverflow.com/questions/53613871/how-to-check-whether-checkox-is-checked-in-wordpress-customizer
