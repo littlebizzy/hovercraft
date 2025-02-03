@@ -4872,42 +4872,6 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
-// end function hovercraft_customizer
-}
-
-add_action('customize_register', 'hovercraft_customizer');
-
-// sanitize select function
-function hovercraft_sanitize_select( $input, $setting ){
-		//input must be a slug: lowercase alphanumeric characters, dashes and underscores are allowed only
-		$input = sanitize_key($input);
-		//get the list of possible select options
-		$choices = $setting->manager->get_control( $setting->id )->choices;
-		//return input if valid or return default option
-		return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
-}
-
-// sanitize radio function
-function hovercraft_sanitize_radio( $input, $setting ){
-	//input must be a slug: lowercase alphanumeric characters, dashes and underscores are allowed only
-	$input = sanitize_key($input);
-	//get the list of possible radio box options
-	$choices = $setting->manager->get_control( $setting->id )->choices;
-	//return input if valid or return default option
-	return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
-}
-
-// sanitize checkbox function
-function hovercraft_sanitize_checkbox( $checked ){
-	//returns true if checkbox is checked
-	return ( ( isset( $checked ) && true === $checked ) ? true : false );
-}
-
-// sanitize float function
-function hovercraft_sanitize_float( $input ){
-	return filter_var($input, FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
-}
-
 // license key section
 $wp_customize->add_section( 'hovercraft_license_key', array(
     'title' => 'HoverCraft License Key',
@@ -4917,9 +4881,8 @@ $wp_customize->add_section( 'hovercraft_license_key', array(
 // license key setting
 $wp_customize->add_setting( 'hovercraft_license_key', array(
     'default' => '',
-	'sanitize_callback' => 'hovercraft_sanitize_text',
-	)
-);
+    'sanitize_callback' => 'hovercraft_sanitize_text',
+) );
 
 // license key control
 $wp_customize->add_control( 'hovercraft_license_key', array(
@@ -4931,6 +4894,40 @@ $wp_customize->add_control( 'hovercraft_license_key', array(
         'spellcheck' => 'false',
     ),
 ) );
+
+// end function hovercraft_customizer
+}
+
+add_action('customize_register', 'hovercraft_customizer');
+
+// sanitize select input
+function hovercraft_sanitize_select( $input, $setting ) {
+    $input = sanitize_key( $input );
+    $choices = $setting->manager->get_control( $setting->id )->choices;
+    return array_key_exists( $input, $choices ) ? $input : $setting->default;
+}
+
+// sanitize radio input
+function hovercraft_sanitize_radio( $input, $setting ) {
+    $input = sanitize_key( $input );
+    $choices = $setting->manager->get_control( $setting->id )->choices;
+    return array_key_exists( $input, $choices ) ? $input : $setting->default;
+}
+
+// sanitize checkbox input
+function hovercraft_sanitize_checkbox( $checked ) {
+    return isset( $checked ) && true === $checked;
+}
+
+// sanitize float input
+function hovercraft_sanitize_float( $input ) {
+    return filter_var( $input, FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION );
+}
+
+// sanitize text input
+function hovercraft_sanitize_text( $input ) {
+    return sanitize_text_field( $input );
+}
 
 // Ref: ChatGPT
 // Ref: https://themeshaper.com/2013/04/29/validation-sanitization-in-customizer/
