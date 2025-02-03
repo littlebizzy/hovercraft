@@ -4908,24 +4908,27 @@ function hovercraft_sanitize_float( $input ){
 	return filter_var($input, FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION);
 }
 
-// add license key section at the bottom
+// license key section
 $wp_customize->add_section( 'hovercraft_license_key', array(
-    'title'    => __( 'HoverCraft License Key', 'hovercraft' ),
-    'priority' => 999, // push to the bottom
+    'title' => 'HoverCraft License Key',
+    'priority' => 999,
 ) );
 
+// license key setting
 $wp_customize->add_setting( 'hovercraft_license_key', array(
-    'default'           => '',
-    'sanitize_callback' => 'sanitize_text_field',
-) );
+    'default' => '',
+	'sanitize_callback' => 'hovercraft_sanitize_text',
+	)
+);
 
+// license key control
 $wp_customize->add_control( 'hovercraft_license_key', array(
-    'label'   => __( 'Enter your license key', 'hovercraft' ),
+    'label' => 'Enter your license key',
     'section' => 'hovercraft_license_key',
-    'type'    => 'text',
+    'type' => 'text',
     'input_attrs' => array(
         'autocomplete' => 'off',
-        'spellcheck'   => 'false',
+        'spellcheck' => 'false',
     ),
 ) );
 
