@@ -98,6 +98,9 @@ require get_template_directory() . '/inc/header-video.php';
 // Hide certain categories
 require get_template_directory() . '/inc/hide-certain-categories.php';
 
+// license key
+require_once get_template_directory() . '/inc/license.php';
+
 // Alternative logo
 require get_template_directory() . '/inc/logo-alternative.php';
 
