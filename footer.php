@@ -60,10 +60,15 @@
 <div id="copyright">
 	<div class="inner">
 		
-	<div class="copyright-left">
-		&copy; <?php echo date("Y"); ?> <?php echo get_bloginfo( 'name' ); ?>. Powered by <a rel="nofollow" href="https://hovercraft.vip">HoverCraft</a>.
-	<div class="clear"></div>
-	</div><!-- copyright-left -->
+    <div class="copyright-left">
+        &copy; <?php echo date("Y"); ?> <?php echo get_bloginfo( 'name' ); ?>. 
+        <?php 
+        $license_key = get_theme_mod( 'hovercraft_license_key' );
+        if ( empty( $license_key ) || ( function_exists( 'hovercraft_validate_license_key' ) && ! hovercraft_validate_license_key( $license_key ) ) ) : ?>
+            Powered by <a rel="nofollow" href="https://hovercraft.vip">HoverCraft</a>.
+        <?php endif; ?>
+        <div class="clear"></div>
+    </div><!-- copyright-left -->
 	
 	<?php if ( is_active_sidebar('hovercraft_copyright')) { ?>
 	<div class="copyright-right">
