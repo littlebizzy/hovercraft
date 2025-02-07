@@ -6,7 +6,7 @@
     
         <?php 
         $hovercraft_sidebar_status_checked = get_theme_mod( 'hovercraft_sidebar_status' ) ? true : false;
-        if ( $hovercraft_sidebar_status_checked ) { ?>
+        if ( $hovercraft_sidebar_status_checked == true ) { ?>
             <div id="primary">
         <?php } else { ?>
             <div id="primary-wide">
@@ -18,9 +18,7 @@
             
             <div id="content-padded">
         
-                <h1><?php _e( 'Search results for:', 'hovercraft' ); ?>&nbsp;
-                    <span class="search-query"><?php echo get_search_query(); ?></span>
-                </h1>
+                <h1><?php _e( 'Search results for:', 'hovercraft' ); ?>&nbsp;<span class="search-query"><?php echo get_search_query(); ?></span></h1>
                 
                 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 
