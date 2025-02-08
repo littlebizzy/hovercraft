@@ -23,7 +23,7 @@ if ( post_password_required() ) return;
 
         <?php 
         // check for multi-page comments
-        if ( get_comment_pages_count() > 1 ) : ?>
+        if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
             <nav class="navigation comment-navigation">
                 <p class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'hovercraft' ); ?></p>
                 <div class="nav-previous"><?php previous_comments_link( esc_html__( '&larr; Older Comments', 'hovercraft' ) ); ?></div>
