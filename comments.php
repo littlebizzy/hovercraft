@@ -9,7 +9,7 @@ if ( post_password_required() ) return; ?>
     if ( get_comments_number() > 0 && have_comments() ) : ?>
         <h3 class="comments-title">
             <?php printf( _nx( 'One thought on "%2$s"', '%1$s thoughts on "%2$s"', get_comments_number(), 'comments title', 'hovercraft' ),
-                number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' ); ?>
+                number_format_i18n( get_comments_number() ), '<span>' . esc_html( get_the_title() ) . '</span>' ); ?>
         </h3>
 
         <ol class="comment-list">
@@ -54,21 +54,18 @@ if ( ! has_filter( 'comment_form_default_fields' ) ) {
 
         // set author field
         $fields['author'] = sprintf( '<p class="comment-form-author"><label for="comment-author">%s</label> %s<input id="comment-author" name="author" type="text" value="%s" size="30"%s /></p>',
-            esc_attr__( 'Name' ), $required, esc_attr( $commenter['comment_author'] ), $aria_req );
+            esc_html__( 'Name', 'hovercraft' ), $required, esc_attr( $commenter['comment_author'] ), $aria_req );
 
         // set email field
         $fields['email'] = sprintf( '<p class="comment-form-email"><label for="comment-email">%s</label> %s<input id="comment-email" name="email" type="email" value="%s" size="30"%s /></p>',
-            esc_attr__( 'Email' ), $required, esc_attr( $commenter['comment_author_email'] ), $aria_req );
+            esc_html__( 'Email', 'hovercraft' ), $required, esc_attr( $commenter['comment_author_email'] ), $aria_req );
 
         // set url field
         $fields['url'] = sprintf( '<p class="comment-form-url"><label for="comment-url">%s</label><input id="comment-url" name="url" type="url" value="%s" size="30" /></p>',
-            esc_attr__( 'Website' ), esc_attr( $commenter['comment_author_url'] ) );
+            esc_html__( 'Website', 'hovercraft' ), esc_attr( $commenter['comment_author_url'] ) );
 
         return $fields;
     }, 10, 1 );
-
-    // remove filter to prevent persistence
-    remove_filter( 'comment_form_default_fields', 10, 1 ); // this line is ineffective, consider removing
 }
 
 // Ref: https://developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/comment-template/
