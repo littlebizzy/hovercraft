@@ -1,77 +1,66 @@
 <?php
 
-// if the current post is protected by a password and the visitor has not yet entered the password we will return early without loading the comments.
-if ( post_password_required() ) {
-    return;
-}
+// skip if post is password-protected
+if ( post_password_required() ) return; ?>
 
-if ( have_comments() ) : ?>
-    <div id="comments" class="comments-area">
-        <h2 class="comments-title">
-            <?php
-            printf(
-                _nx(
-                    'One thought on "%2$s"',
-                    '%1$s thoughts on "%2$s"',
-                    get_comments_number(),
-                    'comments title',
-                    'hovercraft'
-                ),
-                number_format_i18n( get_comments_number() ),
-                '<span>' . get_the_title() . '</span>'
-            );
-            ?>
-        </h2>
+<div id="comments" class="comments-area">
+    <?php if ( have_comments() ) : ?>
+        <h3 class="comments-title">
+            <?php printf( _nx( 'One thought on "%2$s"', '%1$s thoughts on "%2$s"', get_comments_number(), 'comments title', 'hovercraft' ),
+                number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' ); ?>
+        </h3>
 
         <ol class="comment-list">
-            <?php
-            wp_list_comments( array(
-                'style'       => 'ol',
-                'short_ping'  => true,
-                'avatar_size' => 74,
-            ) );
+            <?php 
+            // display comments 
+            wp_list_comments( array( 'style' => 'ol', 'short_ping' => true, 'avatar_size' => 74 ) ); 
             ?>
         </ol>
 
         <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
-            <nav class="navigation comment-navigation" role="navigation">
-                <h1 class="screen-reader-text section-heading"><?php _e( 'Comment navigation', 'hovercraft' ); ?></h1>
+            <nav class="navigation comment-navigation">
+                <p class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'hovercraft' ); ?></p>
                 <div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'hovercraft' ) ); ?></div>
                 <div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'hovercraft' ) ); ?></div>
             </nav>
         <?php endif; ?>
+    <?php endif; ?>
 
-        <?php if ( ! comments_open() && get_comments_number() ) : ?>
-            <p class="no-comments"><?php _e( 'Comments are closed.', 'hovercraft' ); ?></p>
-        <?php endif; ?>
-    </div>
-<?php endif; ?>
+    <?php if ( ! comments_open() && get_comments_number() ) : ?>
+        <p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'hovercraft' ); ?></p>
+    <?php endif; ?>
+
+    <?php 
+    // display comment form 
+    comment_form(); 
+    ?>
+</div>
 
 <?php
 
-$commenter      = wp_get_current_commenter();
-$req            = get_option( 'require_name_email' );
-$aria_req       = $req ? " aria-required='true'" : '';
-$required_attr  = '<span class="required">*</span>';
+// prevent duplicate filter registration
+if ( ! has_filter( 'comment_form_default_fields' ) ) {
+    add_filter( 'comment_form_default_fields', function( $fields ) {
+        $commenter = wp_get_current_commenter();
+        $req = get_option( 'require_name_email' );
+        $aria_req = $req ? " aria-required='true'" : '';
+        $required = $req ? '<span class="required">*</span>' : '';
 
-$fields = array(
-    'author' => '<p class="comment-form-author">
-                    <label for="comment-author">' . __( 'Name' ) . '</label> ' . ( $req ? $required_attr : '' ) . 
-                    '<input id="comment-author" name="author" type="text" value="' . esc_attr( $commenter['comment_author'] ) . '" size="30"' . $aria_req . ' />
-                 </p>',
+        // set author field
+        $fields['author'] = sprintf( '<p class="comment-form-author"><label for="comment-author">%s</label> %s<input id="comment-author" name="author" type="text" value="%s" size="30"%s /></p>',
+            __( 'Name' ), $required, esc_attr( $commenter['comment_author'] ), $aria_req );
 
-    'email'  => '<p class="comment-form-email">
-                    <label for="comment-email">' . __( 'Email' ) . '</label> ' . ( $req ? $required_attr : '' ) . 
-                    '<input id="comment-email" name="email" type="email" value="' . esc_attr( $commenter['comment_author_email'] ) . '" size="30"' . $aria_req . ' />
-                 </p>',
+        // set email field
+        $fields['email'] = sprintf( '<p class="comment-form-email"><label for="comment-email">%s</label> %s<input id="comment-email" name="email" type="email" value="%s" size="30"%s /></p>',
+            __( 'Email' ), $required, esc_attr( $commenter['comment_author_email'] ), $aria_req );
 
-    'url'    => '<p class="comment-form-url">
-                    <label for="comment-url">' . __( 'Website' ) . '</label> 
-                    <input id="comment-url" name="url" type="url" value="' . esc_attr( $commenter['comment_author_url'] ) . '" size="30" />
-                 </p>',
-);
+        // set url field
+        $fields['url'] = sprintf( '<p class="comment-form-url"><label for="comment-url">%s</label><input id="comment-url" name="url" type="url" value="%s" size="30" /></p>',
+            __( 'Website' ), esc_attr( $commenter['comment_author_url'] ) );
 
-comment_form( array( 'fields' => $fields ) );
+        return $fields;
+    });
+}
 
 // Ref: https://developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/comment-template/
 // Ref: https://stackoverflow.com/questions/20751219/undefined-variable-on-comments-wordpress
