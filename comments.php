@@ -45,27 +45,35 @@ if ( post_password_required() ) return;
 
 <?php
 
-// prevent duplicate filter registration
-remove_filter( 'comment_form_default_fields', 'custom_comment_fields' );
+// add custom fields to comment form
 add_filter( 'comment_form_default_fields', 'custom_comment_fields', 10, 1 );
 
 function custom_comment_fields( $fields ) {
+    // get commenter details
     $commenter = wp_get_current_commenter();
+
+    // check if name and email are required
     $req = get_option( 'require_name_email' );
     $aria_req = $req ? " aria-required='true'" : '';
     $required = $req ? '<span class="required">*</span>' : '';
 
     // set author field
-    $fields['author'] = sprintf( '<p class="comment-form-author"><label for="comment-author">%s</label> %s<input id="comment-author" name="author" type="text" value="%s" size="30"%s /></p>',
-        esc_html__( 'Name', 'hovercraft' ), $required, esc_attr( $commenter['comment_author'] ), $aria_req );
+    $fields['author'] = sprintf(
+        '<p class="comment-form-author"><label for="comment-author">%s</label> %s<input id="comment-author" name="author" type="text" value="%s" size="30"%s></p>',
+        esc_html__( 'Name', 'hovercraft' ), $required, esc_attr( $commenter['comment_author'] ), $aria_req
+    );
 
     // set email field
-    $fields['email'] = sprintf( '<p class="comment-form-email"><label for="comment-email">%s</label> %s<input id="comment-email" name="email" type="email" value="%s" size="30"%s /></p>',
-        esc_html__( 'Email', 'hovercraft' ), $required, esc_attr( $commenter['comment_author_email'] ), $aria_req );
+    $fields['email'] = sprintf(
+        '<p class="comment-form-email"><label for="comment-email">%s</label> %s<input id="comment-email" name="email" type="email" value="%s" size="30"%s></p>',
+        esc_html__( 'Email', 'hovercraft' ), $required, esc_attr( $commenter['comment_author_email'] ), $aria_req
+    );
 
     // set url field
-    $fields['url'] = sprintf( '<p class="comment-form-url"><label for="comment-url">%s</label><input id="comment-url" name="url" type="url" value="%s" size="30" /></p>',
-        esc_html__( 'Website', 'hovercraft' ), esc_attr( $commenter['comment_author_url'] ) );
+    $fields['url'] = sprintf(
+        '<p class="comment-form-url"><label for="comment-url">%s</label><input id="comment-url" name="url" type="url" value="%s" size="30"></p>',
+        esc_html__( 'Website', 'hovercraft' ), esc_attr( $commenter['comment_author_url'] )
+    );
 
     return $fields;
 }
