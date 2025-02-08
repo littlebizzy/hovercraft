@@ -24,8 +24,8 @@ if ( post_password_required() ) return; ?>
         if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
             <nav class="navigation comment-navigation">
                 <p class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'hovercraft' ); ?></p>
-                <div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'hovercraft' ) ); ?></div>
-                <div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'hovercraft' ) ); ?></div>
+                <div class="nav-previous"><?php previous_comments_link( esc_html__( '&larr; Older Comments', 'hovercraft' ) ); ?></div>
+                <div class="nav-next"><?php next_comments_link( esc_html__( 'Newer Comments &rarr;', 'hovercraft' ) ); ?></div>
             </nav>
         <?php endif; ?>
     <?php endif; ?>
@@ -54,21 +54,21 @@ if ( ! has_filter( 'comment_form_default_fields' ) ) {
 
         // set author field
         $fields['author'] = sprintf( '<p class="comment-form-author"><label for="comment-author">%s</label> %s<input id="comment-author" name="author" type="text" value="%s" size="30"%s /></p>',
-            __( 'Name' ), $required, esc_attr( $commenter['comment_author'] ), $aria_req );
+            esc_attr__( 'Name' ), $required, esc_attr( $commenter['comment_author'] ), $aria_req );
 
         // set email field
         $fields['email'] = sprintf( '<p class="comment-form-email"><label for="comment-email">%s</label> %s<input id="comment-email" name="email" type="email" value="%s" size="30"%s /></p>',
-            __( 'Email' ), $required, esc_attr( $commenter['comment_author_email'] ), $aria_req );
+            esc_attr__( 'Email' ), $required, esc_attr( $commenter['comment_author_email'] ), $aria_req );
 
         // set url field
         $fields['url'] = sprintf( '<p class="comment-form-url"><label for="comment-url">%s</label><input id="comment-url" name="url" type="url" value="%s" size="30" /></p>',
-            __( 'Website' ), esc_attr( $commenter['comment_author_url'] ) );
+            esc_attr__( 'Website' ), esc_attr( $commenter['comment_author_url'] ) );
 
         return $fields;
     }, 10, 1 );
 
     // remove filter to prevent persistence
-    remove_filter( 'comment_form_default_fields', 10, 1 );
+    remove_filter( 'comment_form_default_fields', 10, 1 ); // this line is ineffective, consider removing
 }
 
 // Ref: https://developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/comment-template/
