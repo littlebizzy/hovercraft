@@ -4,7 +4,9 @@
 if ( post_password_required() ) return; ?>
 
 <div id="comments" class="comments-area">
-    <?php if ( have_comments() ) : ?>
+    <?php 
+    // check if there are comments before displaying them
+    if ( get_comments_number() > 0 && have_comments() ) : ?>
         <h3 class="comments-title">
             <?php printf( _nx( 'One thought on "%2$s"', '%1$s thoughts on "%2$s"', get_comments_number(), 'comments title', 'hovercraft' ),
                 number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' ); ?>
@@ -17,7 +19,9 @@ if ( post_password_required() ) return; ?>
             ?>
         </ol>
 
-        <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
+        <?php 
+        // check for multi-page comments
+        if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
             <nav class="navigation comment-navigation">
                 <p class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'hovercraft' ); ?></p>
                 <div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'hovercraft' ) ); ?></div>
@@ -26,7 +30,9 @@ if ( post_password_required() ) return; ?>
         <?php endif; ?>
     <?php endif; ?>
 
-    <?php if ( ! comments_open() && get_comments_number() ) : ?>
+    <?php 
+    // check if comments are closed but still exist
+    if ( ! comments_open() && get_comments_number() ) : ?>
         <p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'hovercraft' ); ?></p>
     <?php endif; ?>
 
@@ -59,7 +65,10 @@ if ( ! has_filter( 'comment_form_default_fields' ) ) {
             __( 'Website' ), esc_attr( $commenter['comment_author_url'] ) );
 
         return $fields;
-    });
+    }, 10, 1 );
+
+    // remove filter to prevent persistence
+    remove_filter( 'comment_form_default_fields', 10, 1 );
 }
 
 // Ref: https://developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/comment-template/
