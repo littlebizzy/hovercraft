@@ -4874,7 +4874,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 
 // license key section
 $wp_customize->add_section( 'hovercraft_license_key', array(
-    'title' => 'HoverCraft License Key',
+    'title' => 'License Key',
     'priority' => 999,
 ) );
 
