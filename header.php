@@ -12,27 +12,36 @@
         <?php 
         // load material icons based on theme setting
         $hovercraft_material_icons = get_theme_mod( 'hovercraft_material_icons', 'classic_only' );
+        
+        // map of available material icons versions
         $icons = array(
             'classic_only' => 'Material+Icons',
             'classic_and_outlined' => 'Material+Icons&family=Material+Icons+Outlined',
             'classic_and_outlined_and_two_toned' => 'Material+Icons&family=Material+Icons+Outlined&family=Material+Icons+Two+Tone',
         );
+
+        // only load material icons if the setting is valid
         if ( isset( $icons[ $hovercraft_material_icons ] ) ) :
         ?>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=<?php echo esc_attr( $icons[ $hovercraft_material_icons ] ); ?>&display=block">
         <?php endif; ?>
 
-        <?php 
-        // load font awesome version based on theme setting
+        <?php
+        // get the selected font awesome version from theme settings
         $hovercraft_font_awesome = get_theme_mod( 'hovercraft_font_awesome', 'none' );
-        $font_awesome = array(
+
+        // map of available font awesome versions
+        $font_awesome_versions = array(
             'version_6' => 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css',
             'version_5' => 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css',
             'version_4' => 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/all.min.css',
         );
-        if ( isset( $font_awesome[ $hovercraft_font_awesome ] ) ) :
+
+        // only load font awesome if the setting is valid and not 'none'
+        if ( isset( $font_awesome_versions[ $hovercraft_font_awesome ] ) && $hovercraft_font_awesome !== 'none' ) :
+            $font_awesome_url = $font_awesome_versions[ $hovercraft_font_awesome ];
         ?>
-            <link rel="stylesheet" href="<?php echo esc_url( $font_awesome[ $hovercraft_font_awesome ] ); ?>">
+            <link rel="stylesheet" href="<?php echo esc_url( $font_awesome_url ); ?>">
         <?php endif; ?>
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=block">
