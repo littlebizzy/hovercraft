@@ -4,9 +4,13 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
+        <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+        <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+        <?php wp_resource_hints(); ?>
 
         <?php 
+        // load material icons based on theme setting
         $hovercraft_material_icons = get_theme_mod( 'hovercraft_material_icons', 'classic_only' );
         $icons = array(
             'classic_only' => 'Material+Icons',
@@ -19,6 +23,7 @@
         <?php endif; ?>
 
         <?php 
+        // load font awesome version based on theme setting
         $hovercraft_font_awesome = get_theme_mod( 'hovercraft_font_awesome', 'none' );
         $font_awesome = array(
             'version_6' => 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css',
@@ -34,6 +39,7 @@
 
         <style>
             <?php 
+            // inline the theme's main stylesheet
             $style_path = get_stylesheet_directory() . '/style.css';
             if ( file_exists( $style_path ) && is_readable( $style_path ) ) :
                 echo trim( file_get_contents( $style_path ) );
@@ -49,10 +55,10 @@
 
         <?php get_template_part( 'template-parts/header/mobile-menu' ); ?>
 
-        <div id="container">
+        <div id="container"><!-- main container -->
 
                 <?php if ( is_active_sidebar( 'hovercraft_topbar_left' ) || is_active_sidebar( 'hovercraft_topbar_right' ) ) : ?>
-                    <div id="topbar">
+                    <div id="topbar"><!-- topbar section -->
                         <div class="inner">
 
                             <?php if ( is_active_sidebar( 'hovercraft_topbar_left' ) && is_active_sidebar( 'hovercraft_topbar_right' ) ) : ?>
@@ -62,14 +68,14 @@
                                     dynamic_sidebar( 'hovercraft_topbar_left' );
                                     remove_filter( 'widget_title', '__return_false' ); 
                                     ?>
-                                </div>
+                                </div><!-- topbar-left -->
                                 <div class="topbar-right">
                                     <?php 
                                     add_filter( 'widget_title', '__return_false' );
                                     dynamic_sidebar( 'hovercraft_topbar_right' );
                                     remove_filter( 'widget_title', '__return_false' ); 
                                     ?>
-                                </div>
+                                </div><!-- topbar-right -->
                             <?php else : ?>
                                 <div class="topbar-center">
                                     <?php 
@@ -78,15 +84,14 @@
                                     dynamic_sidebar( $sidebar );
                                     remove_filter( 'widget_title', '__return_false' ); 
                                     ?>
-                                </div>
+                                </div><!-- topbar-center -->
                             <?php endif; ?>
 
-                            <div class="clear"></div>
+                            <div class="clear"></div><!-- clear floats -->
 
-                        </div>
-                    </div>
+                        </div><!-- inner -->
+                    </div><!-- topbar -->
                 <?php endif; ?>
-
 
 <!-- Ref: ChatGPT -->
 <!-- Ref: https://stackoverflow.com/questions/13903918/apply-widget-title-filter-only-to-wordpress-widgets-from-a-certain-sidebar -->
