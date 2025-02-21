@@ -45,12 +45,9 @@
         <?php 
         // inline the theme's main stylesheet
         $style_path = get_stylesheet_directory() . '/style.css';
-        if ( is_readable( $style_path ) ) { 
-            echo "<style>\n";
-            readfile( $style_path ); 
-            echo "\n</style>\n";
-        }
-        ?>
+        if ( is_readable( $style_path ) ) {
+        ?><style><?php readfile( $style_path ); ?></style><?php 
+        } ?>
 
         <?php wp_head(); ?>
     </head>
