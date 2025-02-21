@@ -7,7 +7,6 @@
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
         <link rel="dns-prefetch" href="https://fonts.googleapis.com">
         <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-        <?php wp_resource_hints(); ?>
 
         <?php 
         // get material icons setting
@@ -46,9 +45,12 @@
         <?php 
         // inline the theme's main stylesheet
         $style_path = get_stylesheet_directory() . '/style.css';
-        if ( is_readable( $style_path ) ) {
-        ?><style><?php readfile( $style_path ); ?></style><?php 
-        } ?>
+        if ( is_readable( $style_path ) ) { 
+            echo "<style>\n";
+            readfile( $style_path ); 
+            echo "\n</style>\n";
+        }
+        ?>
 
         <?php wp_head(); ?>
     </head>
@@ -61,7 +63,7 @@
         <div id="container"><!-- main container -->
 
             <?php if ( is_active_sidebar( 'hovercraft_topbar_left' ) || is_active_sidebar( 'hovercraft_topbar_right' ) ) : ?>
-                <div id="topbar"><!-- topbar section -->
+                <div id="topbar">
                     <div class="inner">
 
                         <?php 
@@ -77,13 +79,18 @@
                             </div><!-- topbar-right -->
                         <?php else : ?>
                             <div class="topbar-center">
-                                <?php dynamic_sidebar( is_active_sidebar( 'hovercraft_topbar_left' ) ? 'hovercraft_topbar_left' : 'hovercraft_topbar_right' ); ?>
+                                <?php 
+                                if ( is_active_sidebar( 'hovercraft_topbar_left' ) ) {
+                                    dynamic_sidebar( 'hovercraft_topbar_left' );
+                                } else {
+                                    dynamic_sidebar( 'hovercraft_topbar_right' );
+                                }
+                                ?>
                             </div><!-- topbar-center -->
                         <?php endif;
 
                         // restore widget titles after topbar
-                        remove_filter( 'widget_title', '__return_false' );
-                        ?>
+                        remove_filter( 'widget_title', '__return_false' ); ?>
 
                         <div class="clear"></div><!-- clear floats -->
 
