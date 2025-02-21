@@ -10,35 +10,35 @@
         <?php wp_resource_hints(); ?>
 
         <?php 
-        // load material icons based on theme setting
-        $hovercraft_material_icons = get_theme_mod( 'hovercraft_material_icons', 'classic_only' );
-        
-        // map of available material icons versions
-        $icons = array(
+        // get material icons setting
+        $material_icons_setting = get_theme_mod( 'hovercraft_material_icons', 'classic_only' );
+
+        // map available material icons
+        $material_icons_map = array(
             'classic_only' => 'Material+Icons',
             'classic_and_outlined' => 'Material+Icons&family=Material+Icons+Outlined',
             'classic_and_outlined_and_two_toned' => 'Material+Icons&family=Material+Icons+Outlined&family=Material+Icons+Two+Tone',
         );
 
-        // only load material icons if the setting is valid
-        if ( isset( $icons[ $hovercraft_material_icons ] ) ) : ?>
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=<?php echo esc_attr( $icons[ $hovercraft_material_icons ] ); ?>&display=block">
+        // load material icons if not set to 'none' and valid
+        if ( $material_icons_setting !== 'none' && isset( $material_icons_map[ $material_icons_setting ] ) ) : ?>
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=<?php echo esc_attr( $material_icons_map[ $material_icons_setting ] ); ?>&display=block">
         <?php endif; ?>
 
         <?php
-        // get the selected font awesome version from theme settings
-        $hovercraft_font_awesome = get_theme_mod( 'hovercraft_font_awesome', 'none' );
+        // get font awesome setting
+        $font_awesome_setting = get_theme_mod( 'hovercraft_font_awesome', 'none' );
 
-        // map of available font awesome versions
-        $font_awesome_versions = array(
+        // map available font awesome versions
+        $font_awesome_map = array(
             'version_6' => 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css',
             'version_5' => 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css',
             'version_4' => 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/all.min.css',
         );
 
-        // only load font awesome if the setting is valid and not 'none'
-        if ( isset( $font_awesome_versions[ $hovercraft_font_awesome ] ) && $hovercraft_font_awesome !== 'none' ) : $font_awesome_url = $font_awesome_versions[ $hovercraft_font_awesome ]; ?>
-            <link rel="stylesheet" href="<?php echo esc_url( $font_awesome_url ); ?>">
+        // load font awesome if not set to 'none' and valid
+        if ( $font_awesome_setting !== 'none' && isset( $font_awesome_map[ $font_awesome_setting ] ) ) : ?>
+            <link rel="stylesheet" href="<?php echo esc_url( $font_awesome_map[ $font_awesome_setting ] ); ?>">
         <?php endif; ?>
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=block">
