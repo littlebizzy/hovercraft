@@ -21,8 +21,7 @@
         );
 
         // only load material icons if the setting is valid
-        if ( isset( $icons[ $hovercraft_material_icons ] ) ) :
-        ?>
+        if ( isset( $icons[ $hovercraft_material_icons ] ) ) : ?>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=<?php echo esc_attr( $icons[ $hovercraft_material_icons ] ); ?>&display=block">
         <?php endif; ?>
 
@@ -38,9 +37,7 @@
         );
 
         // only load font awesome if the setting is valid and not 'none'
-        if ( isset( $font_awesome_versions[ $hovercraft_font_awesome ] ) && $hovercraft_font_awesome !== 'none' ) :
-            $font_awesome_url = $font_awesome_versions[ $hovercraft_font_awesome ];
-        ?>
+        if ( isset( $font_awesome_versions[ $hovercraft_font_awesome ] ) && $hovercraft_font_awesome !== 'none' ) : $font_awesome_url = $font_awesome_versions[ $hovercraft_font_awesome ]; ?>
             <link rel="stylesheet" href="<?php echo esc_url( $font_awesome_url ); ?>">
         <?php endif; ?>
 
