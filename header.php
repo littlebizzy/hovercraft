@@ -20,12 +20,12 @@
             'classic_and_outlined_and_two_toned' => 'Material+Icons&family=Material+Icons+Outlined&family=Material+Icons+Two+Tone',
         );
 
-        // load material icons if not set to 'none' and valid
-        if ( $material_icons_setting !== 'none' && isset( $material_icons_map[ $material_icons_setting ] ) ) : ?>
-            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=<?php echo esc_attr( $material_icons_map[ $material_icons_setting ] ); ?>&display=block">
-        <?php endif; ?>
+        // output material icons if not 'none' and valid
+        if ( $material_icons_setting !== 'none' && isset( $material_icons_map[ $material_icons_setting ] ) ) {
+        ?><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=<?php echo esc_attr( $material_icons_map[ $material_icons_setting ] ); ?>&display=block"><?php 
+        } ?>
 
-        <?php
+        <?php 
         // get font awesome setting
         $font_awesome_setting = get_theme_mod( 'hovercraft_font_awesome', 'none' );
 
@@ -36,10 +36,10 @@
             'version_4' => 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/all.min.css',
         );
 
-        // load font awesome if not set to 'none' and valid
-        if ( $font_awesome_setting !== 'none' && isset( $font_awesome_map[ $font_awesome_setting ] ) ) : ?>
-            <link rel="stylesheet" href="<?php echo esc_url( $font_awesome_map[ $font_awesome_setting ] ); ?>">
-        <?php endif; ?>
+        // output font awesome if not 'none' and valid
+        if ( $font_awesome_setting !== 'none' && isset( $font_awesome_map[ $font_awesome_setting ] ) ) {
+        ?><link rel="stylesheet" href="<?php echo esc_url( $font_awesome_map[ $font_awesome_setting ] ); ?>"><?php 
+        } ?>
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=block">
 
@@ -47,9 +47,9 @@
             <?php 
             // inline the theme's main stylesheet
             $style_path = get_stylesheet_directory() . '/style.css';
-            if ( file_exists( $style_path ) && is_readable( $style_path ) ) :
+            if ( file_exists( $style_path ) && is_readable( $style_path ) ) {
                 echo trim( file_get_contents( $style_path ) );
-            endif;
+            }
             ?>
         </style>
 
@@ -67,31 +67,26 @@
                 <div id="topbar"><!-- topbar section -->
                     <div class="inner">
 
-                        <?php if ( is_active_sidebar( 'hovercraft_topbar_left' ) && is_active_sidebar( 'hovercraft_topbar_right' ) ) : ?>
+                        <?php 
+                        // disable widget titles for topbar
+                        add_filter( 'widget_title', '__return_false' );
+
+                        if ( is_active_sidebar( 'hovercraft_topbar_left' ) && is_active_sidebar( 'hovercraft_topbar_right' ) ) : ?>
                             <div class="topbar-left">
-                                <?php 
-                                add_filter( 'widget_title', '__return_false' );
-                                dynamic_sidebar( 'hovercraft_topbar_left' );
-                                remove_filter( 'widget_title', '__return_false' ); 
-                                ?>
+                                <?php dynamic_sidebar( 'hovercraft_topbar_left' ); ?>
                             </div><!-- topbar-left -->
                             <div class="topbar-right">
-                                <?php 
-                                add_filter( 'widget_title', '__return_false' );
-                                dynamic_sidebar( 'hovercraft_topbar_right' );
-                                remove_filter( 'widget_title', '__return_false' ); 
-                                ?>
+                                <?php dynamic_sidebar( 'hovercraft_topbar_right' ); ?>
                             </div><!-- topbar-right -->
                         <?php else : ?>
                             <div class="topbar-center">
-                                <?php 
-                                $sidebar = is_active_sidebar( 'hovercraft_topbar_left' ) ? 'hovercraft_topbar_left' : 'hovercraft_topbar_right';
-                                add_filter( 'widget_title', '__return_false' );
-                                dynamic_sidebar( $sidebar );
-                                remove_filter( 'widget_title', '__return_false' ); 
-                                ?>
+                                <?php dynamic_sidebar( is_active_sidebar( 'hovercraft_topbar_left' ) ? 'hovercraft_topbar_left' : 'hovercraft_topbar_right' ); ?>
                             </div><!-- topbar-center -->
-                        <?php endif; ?>
+                        <?php endif;
+
+                        // restore widget titles after topbar
+                        remove_filter( 'widget_title', '__return_false' );
+                        ?>
 
                         <div class="clear"></div><!-- clear floats -->
 
