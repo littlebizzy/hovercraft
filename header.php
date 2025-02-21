@@ -57,41 +57,41 @@
 
         <div id="container"><!-- main container -->
 
-                <?php if ( is_active_sidebar( 'hovercraft_topbar_left' ) || is_active_sidebar( 'hovercraft_topbar_right' ) ) : ?>
-                    <div id="topbar"><!-- topbar section -->
-                        <div class="inner">
+            <?php if ( is_active_sidebar( 'hovercraft_topbar_left' ) || is_active_sidebar( 'hovercraft_topbar_right' ) ) : ?>
+                <div id="topbar"><!-- topbar section -->
+                    <div class="inner">
 
-                            <?php if ( is_active_sidebar( 'hovercraft_topbar_left' ) && is_active_sidebar( 'hovercraft_topbar_right' ) ) : ?>
-                                <div class="topbar-left">
-                                    <?php 
-                                    add_filter( 'widget_title', '__return_false' );
-                                    dynamic_sidebar( 'hovercraft_topbar_left' );
-                                    remove_filter( 'widget_title', '__return_false' ); 
-                                    ?>
-                                </div><!-- topbar-left -->
-                                <div class="topbar-right">
-                                    <?php 
-                                    add_filter( 'widget_title', '__return_false' );
-                                    dynamic_sidebar( 'hovercraft_topbar_right' );
-                                    remove_filter( 'widget_title', '__return_false' ); 
-                                    ?>
-                                </div><!-- topbar-right -->
-                            <?php else : ?>
-                                <div class="topbar-center">
-                                    <?php 
-                                    $sidebar = is_active_sidebar( 'hovercraft_topbar_left' ) ? 'hovercraft_topbar_left' : 'hovercraft_topbar_right';
-                                    add_filter( 'widget_title', '__return_false' );
-                                    dynamic_sidebar( $sidebar );
-                                    remove_filter( 'widget_title', '__return_false' ); 
-                                    ?>
-                                </div><!-- topbar-center -->
-                            <?php endif; ?>
+                        <?php if ( is_active_sidebar( 'hovercraft_topbar_left' ) && is_active_sidebar( 'hovercraft_topbar_right' ) ) : ?>
+                            <div class="topbar-left">
+                                <?php 
+                                add_filter( 'widget_title', '__return_false' );
+                                dynamic_sidebar( 'hovercraft_topbar_left' );
+                                remove_filter( 'widget_title', '__return_false' ); 
+                                ?>
+                            </div><!-- topbar-left -->
+                            <div class="topbar-right">
+                                <?php 
+                                add_filter( 'widget_title', '__return_false' );
+                                dynamic_sidebar( 'hovercraft_topbar_right' );
+                                remove_filter( 'widget_title', '__return_false' ); 
+                                ?>
+                            </div><!-- topbar-right -->
+                        <?php else : ?>
+                            <div class="topbar-center">
+                                <?php 
+                                $sidebar = is_active_sidebar( 'hovercraft_topbar_left' ) ? 'hovercraft_topbar_left' : 'hovercraft_topbar_right';
+                                add_filter( 'widget_title', '__return_false' );
+                                dynamic_sidebar( $sidebar );
+                                remove_filter( 'widget_title', '__return_false' ); 
+                                ?>
+                            </div><!-- topbar-center -->
+                        <?php endif; ?>
 
-                            <div class="clear"></div><!-- clear floats -->
+                        <div class="clear"></div><!-- clear floats -->
 
-                        </div><!-- inner -->
-                    </div><!-- topbar -->
-                <?php endif; ?>
+                    </div><!-- inner -->
+                </div><!-- topbar -->
+            <?php endif; ?>
 
 <!-- Ref: ChatGPT -->
 <!-- Ref: https://stackoverflow.com/questions/13903918/apply-widget-title-filter-only-to-wordpress-widgets-from-a-certain-sidebar -->
