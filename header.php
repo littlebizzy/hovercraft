@@ -43,15 +43,12 @@
 
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=block">
 
-        <style>
-            <?php 
-            // inline the theme's main stylesheet
-            $style_path = get_stylesheet_directory() . '/style.css';
-            if ( file_exists( $style_path ) && is_readable( $style_path ) ) {
-                echo trim( file_get_contents( $style_path ) );
-            }
-            ?>
-        </style>
+        <?php 
+        // inline the theme's main stylesheet
+        $style_path = get_stylesheet_directory() . '/style.css';
+        if ( is_readable( $style_path ) ) {
+        ?><style><?php readfile( $style_path ); ?></style><?php 
+        } ?>
 
         <?php wp_head(); ?>
     </head>
