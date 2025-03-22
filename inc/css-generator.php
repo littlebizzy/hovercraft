@@ -4856,69 +4856,81 @@ section.upsells {
 
 /* woocommerce product list widget */
 
-@media screen and (max-width: 1200px) {
-ul.product_list_widget {
-	width: 100% !important;
-	list-style-type:none;
-  columns: 2;
-  column-fill: balance;
-	column-gap: 20px;
+@media screen and (max-width: 1199px) {
+	ul.product_list_widget {
+		width: 100%;
+		list-style: none;
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: 20px;
+		padding: 0;
+		margin: 0;
 	}
 }
 
 @media screen and (min-width: 1200px) {
-ul.product_list_widget {
-	width: 100% !important;
-	list-style-type:none;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 300px);
-    grid-gap: 60px;
-	grid-template-columns: auto auto auto auto;
+	ul.product_list_widget {
+		width: 100%;
+		list-style: none;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		gap: 60px;
+		padding: 0;
+		margin: 0;
 	}
 }
 
 ul.product_list_widget li {
-	height: 250px;
+	margin-bottom: 20px;
+}
+
+ul.product_list_widget li a {
+	display: block;
 	position: relative;
 }
 
-ul.product_list_widget .product-title {
+ul.product_list_widget li img {
 	width: 100%;
-	font-size: 16px;
-	bottom:0;
-	position: absolute;
+	aspect-ratio: 1 / 1;
+	object-fit: cover;
 	display: block;
-	padding: 10px;
+}
+
+ul.product_list_widget .product-title {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 8px 10px;
+	font-size: 14px;
+	line-height: 1.2;
 	background: rgba(0, 0, 0, 0.7);
+	color: #fff;
+	text-align: center;
+	box-sizing: border-box;
+	z-index: 2;
 }
 
 ul.product_list_widget .wcpbc-price {
-	display: none !important;
-}
-
-ul.product_list_widget .woocommerce-Price-amount {
-	display: none !important;
-}
-
-ul.product_list_widget li img {
 	display: block;
-	width: 100% !important;
-	height: auto !important;
-	margin-bottom: 10px;
-	margin-left: 0 !important;
-	float: none !important;
-	object-fit: cover;
-}
-	
-ul.product_list_widget li a:before {
-	content: "";
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background: rgba(0, 0, 0, 0.1);
+	margin-top: 6px;
+	text-align: center;
 }
 
-ul.product_list_widget li a:hover:before {
+ul.product_list_widget li a::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.1);
+	z-index: 1;
+	pointer-events: none;
+	transition: background 0.3s ease;
+}
+
+ul.product_list_widget li a:hover::before {
 	background: rgba(0, 0, 0, 0.0);
 }
 
