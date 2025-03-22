@@ -4898,18 +4898,15 @@ ul.product_list_widget .woocommerce-Price-amount {
 }
 
 ul.product_list_widget li img {
-	display: block !important;
-	margin-bottom: 10px;
-	object-fit: cover;
+	display: block;
 	width: 100%;
-	height: 100%;
-	display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border: 0px solid #263238;
+	height: auto;
+	margin-bottom: 10px;
+	margin-left: 0 !important;
+	float: none !important;
+	object-fit: cover;
 }
-
+	
 ul.product_list_widget li a:before {
 	content: "";
   width: 100%;
