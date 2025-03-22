@@ -4892,15 +4892,18 @@ ul.product_list_widget .product-title {
 	background: rgba(0, 0, 0, 0.7);
 }
 
+ul.product_list_widget .wcpbc-price {
+	display: none !important;
+}
+
 ul.product_list_widget .woocommerce-Price-amount {
-	display: none;
-	font-weight: 700;
+	display: none !important;
 }
 
 ul.product_list_widget li img {
 	display: block;
-	width: 100%;
-	height: auto;
+	width: 100% !important;
+	height: auto !important;
 	margin-bottom: 10px;
 	margin-left: 0 !important;
 	float: none !important;
