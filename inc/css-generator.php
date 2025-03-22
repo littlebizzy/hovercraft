@@ -4873,15 +4873,30 @@ section.upsells {
 		width: 100%;
 		list-style: none;
 		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+		grid-template-columns: repeat(4, 1fr);
 		gap: 60px;
 		padding: 0;
 		margin: 0;
 	}
 }
 
+ul.product_list_widget {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
 ul.product_list_widget li {
-	margin-bottom: 20px;
+	background: #fff;
+	border-radius: 6px;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+	overflow: hidden;
+	padding-bottom: 12px;
+	transition: box-shadow 0.2s ease;
+}
+
+ul.product_list_widget li:hover {
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 ul.product_list_widget li a {
@@ -4890,9 +4905,10 @@ ul.product_list_widget li a {
 }
 
 ul.product_list_widget li img {
-	width: 100%;
-	aspect-ratio: 1 / 1;
-	object-fit: cover;
+	width: 100% !important;
+	aspect-ratio: 1 / 1 !important;
+	height: auto !important;
+	object-fit: cover !important;
 	display: block;
 }
 
@@ -4913,7 +4929,10 @@ ul.product_list_widget .product-title {
 
 ul.product_list_widget .wcpbc-price {
 	display: block;
-	margin-top: 6px;
+	margin-top: 10px;
+	font-size: 15px;
+	font-weight: 600;
+	color: #222;
 	text-align: center;
 }
 
@@ -4924,14 +4943,14 @@ ul.product_list_widget li a::before {
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background: rgba(0, 0, 0, 0.1);
+	background: rgba(0, 0, 0, 0.05);
 	z-index: 1;
 	pointer-events: none;
 	transition: background 0.3s ease;
 }
 
 ul.product_list_widget li a:hover::before {
-	background: rgba(0, 0, 0, 0.0);
+	background: rgba(0, 0, 0, 0);
 }
 
 
