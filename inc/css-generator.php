@@ -4888,10 +4888,11 @@ ul.product_list_widget {
 
 ul.product_list_widget li {
 	background: #fff;
-	border-radius: 6px;
+	border-radius: 0px;
 	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 	overflow: hidden;
-	padding-bottom: 12px;
+	padding: 0 !important;
+	position: relative;
 	transition: box-shadow 0.2s ease;
 }
 
@@ -4906,10 +4907,13 @@ ul.product_list_widget li a {
 
 ul.product_list_widget li img {
 	width: 100% !important;
-	aspect-ratio: 1 / 1 !important;
 	height: auto !important;
+	aspect-ratio: 1 / 1 !important;
 	object-fit: cover !important;
-	display: block;
+	display: block !important;
+	float: none !important;
+	margin-left: 0 !important;
+	box-shadow: none !important;
 }
 
 ul.product_list_widget .product-title {
