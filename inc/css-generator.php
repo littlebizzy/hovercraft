@@ -4924,7 +4924,7 @@ ul.product_list_widget .product-title {
 	padding: 8px 10px;
 	font-size: 14px;
 	line-height: 1.2;
-	background: rgba(0, 0, 0, 0.7);
+	background: rgba(0, 0, 0, 0.6);
 	color: #fff;
 	text-align: center;
 	box-sizing: border-box;
@@ -4933,11 +4933,17 @@ ul.product_list_widget .product-title {
 
 ul.product_list_widget .wcpbc-price {
 	display: block;
-	margin-top: 10px;
-	font-size: 15px;
+	margin-top: 0;
+	font-size: 24px;
 	font-weight: 600;
-	color: #222;
 	text-align: center;
+	color: #444;
+	background: #f0f0f0;
+	padding: 8px 10px;
+}
+
+ul.product_list_widget .wcpbc-price del {
+    display: none;
 }
 
 ul.product_list_widget li a::before {
