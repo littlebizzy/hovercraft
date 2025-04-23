@@ -2286,6 +2286,24 @@ video.hero-background-video {
 	background: <?php echo $default_hover_color; ?>;
 	color: #ffffff !important;
 }
+
+/* inline button: primary */
+a.button-primary {
+	font-family: <?php echo ucwords(str_replace("_", " ", $main_menu_font_family)); ?>;
+	font-size: <?php echo $main_menu_desktop_font_size; ?>px;
+	font-weight: 700;
+	text-transform: <?php echo $main_menu_text_transform; ?>;
+	display: inline-block;
+	padding: 10px 20px;
+	background: <?php echo $default_link_color; ?>;
+	text-decoration: none !important;
+	color: #ffffff !important;
+}
+
+a.button-primary:hover {
+	background: <?php echo $default_hover_color; ?>;
+	color: #ffffff !important;
+}
 	
 
 /* header secondary cta */
@@ -2353,6 +2371,28 @@ video.hero-background-video {
 	color: <?php echo $half_hero_header_link_color; ?>;
 }
 
+
+/* inline button: secondary */
+a.button-secondary {
+	font-family: <?php echo ucwords(str_replace("_", " ", $main_menu_font_family)); ?>;
+	font-size: <?php echo $main_menu_desktop_font_size; ?>px;
+	font-weight: 400;
+	text-transform: <?php echo $main_menu_text_transform; ?>;
+	display: inline-block;
+	padding: 10px 20px;
+	background: transparent;
+	text-decoration: none;
+	color: <?php echo $default_text_color; ?>;
+	box-shadow: inset 0px 0px 0px 1px <?php echo $default_text_color; ?>;
+}
+
+a.button-secondary:hover {
+	background: <?php echo $default_text_color; ?>;
+	color: #ffffff !important;
+}
+
+
+	
 
 
 @media screen and (min-width: 1200px) {
