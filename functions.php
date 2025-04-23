@@ -93,6 +93,9 @@ require get_template_directory() . '/inc/widget-areas.php';
 // woocommerce
 require get_template_directory() . '/inc/woocommerce-support.php';
 
+// shortcodes
+require get_template_directory() . '/inc/shortcodes.php';
+
 // utility
 require get_template_directory() . '/inc/custom-post-test.php';
 require get_template_directory() . '/inc/remove-generator.php';
