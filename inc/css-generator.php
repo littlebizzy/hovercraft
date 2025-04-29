@@ -2290,7 +2290,7 @@ video.hero-background-video {
 /* inline button: primary */
 a.button-primary {
 	font-family: <?php echo ucwords(str_replace("_", " ", $main_menu_font_family)); ?>;
-	font-size: <?php echo $main_menu_desktop_font_size; ?>px;
+	font-size: 20px;
 	font-weight: 700;
 	text-transform: <?php echo $main_menu_text_transform; ?>;
 	display: inline-block;
@@ -2298,6 +2298,8 @@ a.button-primary {
 	background: <?php echo $default_link_color; ?>;
 	text-decoration: none !important;
 	color: #ffffff !important;
+	width: 100%;
+	box-sizing: border-box;
 }
 
 a.button-primary:hover {
@@ -2375,7 +2377,7 @@ a.button-primary:hover {
 /* inline button: secondary */
 a.button-secondary {
 	font-family: <?php echo ucwords(str_replace("_", " ", $main_menu_font_family)); ?>;
-	font-size: <?php echo $main_menu_desktop_font_size; ?>px;
+	font-size: 20px;
 	font-weight: 400;
 	text-transform: <?php echo $main_menu_text_transform; ?>;
 	display: inline-block;
@@ -2384,6 +2386,8 @@ a.button-secondary {
 	text-decoration: none;
 	color: <?php echo $default_text_color; ?>;
 	box-shadow: inset 0px 0px 0px 1px <?php echo $default_text_color; ?>;
+	width: 100%;
+	box-sizing: border-box;
 }
 
 a.button-secondary:hover {
