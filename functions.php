@@ -67,6 +67,7 @@ require get_template_directory() . '/inc/logo-default.php';
 
 // meta
 require get_template_directory() . '/inc/meta-box.php';
+require get_template_directory() . '/inc/open-graph.php';
 
 // pagination
 require get_template_directory() . '/inc/pagination.php';
