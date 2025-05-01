@@ -1,7 +1,9 @@
 <?php
 
 // output og:image meta tag for single posts and pages
-add_action( 'wp_head', function() {
+add_action( 'wp_head', 'hovercraft_og_image' );
+
+function hovercraft_og_image() {
 	// only run on single posts, pages, or custom post types
 	if ( ! is_singular() ) {
 		return;
@@ -26,6 +28,6 @@ add_action( 'wp_head', function() {
 		$image_url = esc_url( $image_url );
 		echo '<meta property="og:image" content="' . $image_url . '">' . "\n";
 	}
-} );
+}
 
 // Ref: ChatGPT
