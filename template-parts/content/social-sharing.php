@@ -23,13 +23,10 @@ if ( post_type_exists( 'product' ) && is_product() ) {
 	<a rel="noopener noreferrer nofollow" target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=<?php echo $url_encoded; ?>" title="Share via LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
 	<a rel="noopener noreferrer nofollow" target="_blank" href="https://pinterest.com/pin/create/link/?url=<?php echo $url_encoded; ?>&media=<?php echo $image_encoded; ?>&description=<?php echo $title_encoded; ?>" title="Share via Pinterest"><i class="fa-brands fa-pinterest"></i></a>
 	<a rel="noopener noreferrer nofollow" target="_blank" href="mailto:?subject=Check out this article&amp;body=<?php echo $url_encoded; ?>" title="Share via Email"><i class="fa-solid fa-envelope"></i></a>
-
-	<a rel="noopener noreferrer nofollow" target="_blank" href="https://wa.me/?text=<?php echo esc_url( $url_raw ); ?>" title="Share via WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-	<a rel="noopener noreferrer nofollow" target="_blank" href="https://telegram.me/share/url?url=<?php echo esc_url( $url_raw ); ?>" title="Share via Telegram"><i class="fa-brands fa-telegram"></i></a>
-	<a rel="noopener noreferrer nofollow" target="_blank" href="https://signal.me/?url=<?php echo esc_url( $url_raw ); ?>" title="Share via Signal"><i class="fa-brands fa-signal-messenger"></i></a>
-	<a rel="noopener noreferrer nofollow" target="_blank" href="https://social-plugins.line.me/lineit/share?url=<?php echo esc_url( $url_raw ); ?>" title="Share via LINE"><i class="fa-brands fa-line"></i></a>
-	<a rel="noopener noreferrer nofollow" target="_blank" href="viber://forward?text=<?php echo esc_url( $url_raw ); ?>" title="Share via Viber"><i class="fa-brands fa-viber"></i></a>
-
+	<a rel="noopener noreferrer nofollow" target="_blank" href="https://wa.me/?text=<?php echo $url_encoded; ?>" title="Share via WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+	<a rel="noopener noreferrer nofollow" target="_blank" href="https://t.me/share/url?url=<?php echo $url_encoded; ?>" title="Share via Telegram"><i class="fa-brands fa-telegram"></i></a>
+	<a rel="noopener noreferrer nofollow" target="_blank" href="https://line.me/R/share?text=<?php echo $url_encoded; ?>" title="Share via LINE"><i class="fa-brands fa-line"></i></a>
+	<a rel="noopener noreferrer nofollow" target="_blank" href="viber://forward?text=<?php echo $url_encoded; ?>" title="Share via Viber"><i class="fa-brands fa-viber"></i></a>
 	<div class="clear"></div>
 </div><!-- social-sharing -->
 
