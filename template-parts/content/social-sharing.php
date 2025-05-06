@@ -8,6 +8,7 @@ $url_encoded = urlencode( $url_raw );
 $title_encoded = urlencode( $title_raw );
 
 // hide sharing on product pages
+// make this conditional later based on Customizer settings
 if ( post_type_exists( 'product' ) && is_product() ) {
 	return;
 }
@@ -16,10 +17,10 @@ if ( post_type_exists( 'product' ) && is_product() ) {
 
 <div class="social-sharing">
 	<span class="social-sharing-label"><?php _e( 'Share: ', 'hovercraft' ); ?></span>
-
-	<a rel="noopener noreferrer nofollow" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo esc_url( $url_raw ); ?>" title="Share via Facebook"><i class="fa-brands fa-facebook"></i></a>
+	<a rel="noopener noreferrer nofollow" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=<?php echo $url_encoded; ?>" title="Share via Facebook"><i class="fa-brands fa-facebook"></i></a>
 	<a rel="noopener noreferrer nofollow" target="_blank" href="https://twitter.com/intent/tweet?url=<?php echo $url_encoded; ?>" title="Share via X"><i class="fa-brands fa-x-twitter"></i></a>
-	<a rel="noopener noreferrer nofollow" target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=<?php echo esc_url( $url_raw ); ?>" title="Share via LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+	<a rel="noopener noreferrer nofollow" target="_blank" href="https://www.linkedin.com/shareArticle?mini=true&url=<?php echo $url_encoded; ?>" title="Share via LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+
 	<a rel="noopener noreferrer nofollow" target="_blank" href="https://pinterest.com/pin/create/button/?url=<?php echo esc_url( $url_raw ); ?>&media=<?php echo esc_url( $image_raw ); ?>&description=<?php echo $title_encoded; ?>" title="Share via Pinterest"><i class="fa-brands fa-pinterest"></i></a>
 	<a rel="noopener noreferrer nofollow" target="_blank" href="mailto:?subject=Check out this article&amp;body=<?php echo esc_url( $url_raw ); ?>" title="Share via Email"><i class="fa-solid fa-envelope"></i></a>
 	<a rel="noopener noreferrer nofollow" target="_blank" href="https://wa.me/?text=<?php echo esc_url( $url_raw ); ?>" title="Share via WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
