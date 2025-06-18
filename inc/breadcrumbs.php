@@ -4,7 +4,7 @@
 add_filter( 'bbp_no_breadcrumb', '__return_true' );
 
 function ah_breadcrumb() {
-    echo '<ul id="ah-breadcrumb" class="ah-breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">';
+    echo '<ul id="ah-breadcrumb" class="ah-breadcrumb breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">';
     ah_breadcrumb_home();
 
     if ( function_exists( 'is_bbpress' ) && is_bbpress() ) {
@@ -29,6 +29,10 @@ function ah_breadcrumb() {
 }
 
 function ah_breadcrumb_item( $url, $name, $position, $is_current = false ) {
+    if ( $position > 1 ) {
+        ah_breadcrumb_separator();
+    }
+
     $class = $is_current ? 'item-current item' : 'item';
     echo '<li class="' . esc_attr( $class ) . '" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">';
     if ( $url && ! $is_current ) {
@@ -40,11 +44,10 @@ function ah_breadcrumb_item( $url, $name, $position, $is_current = false ) {
     }
     echo '<meta itemprop="position" content="' . intval( $position ) . '" />';
     echo '</li>';
-    ah_breadcrumb_separator();
 }
 
 function ah_breadcrumb_separator() {
-    echo '<li class="separator">«</li>';
+    echo '<li class="separator">»</li>';
 }
 
 function ah_breadcrumb_home() {
