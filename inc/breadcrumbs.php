@@ -150,10 +150,11 @@ function ah_breadcrumb_single() {
         $cats = get_the_category( $post->ID );
         if ( $cats ) {
             $cat = end( $cats );
-            $parents = explode( ',', rtrim( get_category_parents( $cat->term_id, true, ',' ), ',' ) );
-            foreach ( $parents as $p ) {
-                ah_breadcrumb_item( '', strip_tags( $p ), $pos++ );
+            $ancestors = array_reverse( get_ancestors( $cat->term_id, 'category' ) );
+            foreach ( $ancestors as $p_id ) {
+                ah_breadcrumb_item( get_category_link( $p_id ), get_cat_name( $p_id ), $pos++ );
             }
+            ah_breadcrumb_item( get_category_link( $cat->term_id ), $cat->name, $pos++ );
         }
     }
 
@@ -189,7 +190,7 @@ function ah_breadcrumb_archive() {
         ah_breadcrumb_item( '', __( 'Author: ', 'hovercraft' ) . $author->display_name, $pos++, true );
 
     } elseif ( is_year() ) {
-        ah_breadcrumb_item( '', get_the_time( 'Y' ) . ' Archives', $pos++, true );
+        ah_breadcrumb_item( get_year_link( get_the_time( 'Y' ) ), get_the_time( 'Y' ) . ' Archives', $pos++ );
 
     } elseif ( is_month() ) {
         ah_breadcrumb_item( get_year_link( get_the_time( 'Y' ) ), get_the_time( 'Y' ) . ' Archives', $pos++ );
