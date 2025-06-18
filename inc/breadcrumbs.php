@@ -119,6 +119,45 @@ function ah_breadcrumb_bbpress_hierarchy( $post_id, &$position ) {
     ah_breadcrumb_item( get_permalink( $post_id ), get_the_title( $post_id ), $position++ );
 }
 
+function ah_breadcrumb_woocommerce() {
+    $pos =& $GLOBALS['ah_position'];
+
+    if ( is_shop() ) {
+        ah_breadcrumb_item( '', woocommerce_page_title( false ), $pos++, true );
+        return;
+    }
+
+    $shop_page_id = wc_get_page_id( 'shop' );
+    if ( $shop_page_id && ! is_shop() ) {
+        ah_breadcrumb_item( get_permalink( $shop_page_id ), get_the_title( $shop_page_id ), $pos++ );
+    }
+
+    if ( is_product_category() || is_product_tag() ) {
+        $term = get_queried_object();
+        $ancestors = get_ancestors( $term->term_id, $term->taxonomy );
+        $ancestors = array_reverse( $ancestors );
+        foreach ( $ancestors as $ancestor_id ) {
+            $ancestor = get_term( $ancestor_id, $term->taxonomy );
+            ah_breadcrumb_item( get_term_link( $ancestor ), $ancestor->name, $pos++ );
+        }
+        ah_breadcrumb_item( '', $term->name, $pos++, true );
+
+    } elseif ( is_singular( 'product' ) ) {
+        $terms = wc_get_product_terms( get_the_ID(), 'product_cat' );
+        if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
+            $primary = $terms[0];
+            $ancestors = get_ancestors( $primary->term_id, 'product_cat' );
+            $ancestors = array_reverse( $ancestors );
+            foreach ( $ancestors as $ancestor_id ) {
+                $ancestor = get_term( $ancestor_id, 'product_cat' );
+                ah_breadcrumb_item( get_term_link( $ancestor ), $ancestor->name, $pos++ );
+            }
+            ah_breadcrumb_item( get_term_link( $primary ), $primary->name, $pos++ );
+        }
+        ah_breadcrumb_item( '', get_the_title(), $pos++, true );
+    }
+}
+
 function ah_breadcrumb_cpt_fallback( $post_type ) {
     $fallback = array(
         'book' => array( 'url' => '/library/', 'label' => 'Library' ),
