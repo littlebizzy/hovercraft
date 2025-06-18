@@ -57,40 +57,55 @@ function ah_breadcrumb_home() {
 
 function ah_breadcrumb_bbpress() {
     $pos =& $GLOBALS['ah_position'];
+
     ah_breadcrumb_item( bbp_get_forums_url(), __( 'Forum', 'hovercraft' ), $pos++ );
 
     if ( bbp_is_forum_archive() ) {
         ah_breadcrumb_item( '', __( 'All Forums', 'hovercraft' ), $pos++, true );
+
     } elseif ( bbp_is_single_reply() ) {
         $reply_id = bbp_get_reply_id();
         $topic_id = bbp_get_reply_topic_id( $reply_id );
         $forum_id = bbp_get_topic_forum_id( $topic_id );
+
         ah_breadcrumb_bbpress_hierarchy( $forum_id, $pos );
         ah_breadcrumb_item( get_permalink( $topic_id ), get_the_title( $topic_id ), $pos++ );
-        ah_breadcrumb_item( '', __( '« Go back', 'hovercraft' ), $pos++, true );
+        ah_breadcrumb_item( '', get_the_title( $reply_id ), $pos++, true );
+
     } elseif ( bbp_is_single_topic() ) {
         $forum_id = bbp_get_topic_forum_id();
+
         ah_breadcrumb_bbpress_hierarchy( $forum_id, $pos );
-        ah_breadcrumb_item( '', __( '« Go back', 'hovercraft' ), $pos++, true );
+        ah_breadcrumb_item( '', get_the_title(), $pos++, true );
+
     } elseif ( bbp_is_single_forum() ) {
         ah_breadcrumb_bbpress_hierarchy( get_the_ID(), $pos );
-        ah_breadcrumb_item( '', __( '« Go back', 'hovercraft' ), $pos++, true );
+        ah_breadcrumb_item( '', get_the_title(), $pos++, true );
+
     } elseif ( bbp_is_topic_tag() || bbp_is_single_topic_tag() ) {
         ah_breadcrumb_item( '', bbp_get_topic_tag_name(), $pos++, true );
+
     } elseif ( bbp_is_view() ) {
         ah_breadcrumb_item( '', bbp_get_view_title(), $pos++, true );
+
     } elseif ( bbp_is_search() ) {
         ah_breadcrumb_item( '', __( 'Search Results', 'hovercraft' ), $pos++, true );
+
     } elseif ( bbp_is_user_home() || bbp_is_single_user() ) {
         ah_breadcrumb_item( '', __( 'User: ', 'hovercraft' ) . bbp_get_user_display_name( bbp_get_displayed_user_id() ), $pos++, true );
+
     } elseif ( bbp_is_user_edit() ) {
         ah_breadcrumb_item( '', __( 'Edit Profile', 'hovercraft' ), $pos++, true );
+
     } elseif ( bbp_is_user_subscriptions() ) {
         ah_breadcrumb_item( '', __( 'Subscriptions', 'hovercraft' ), $pos++, true );
+
     } elseif ( bbp_is_user_favorites() ) {
         ah_breadcrumb_item( '', __( 'Favorites', 'hovercraft' ), $pos++, true );
+
     } elseif ( bbp_is_user_topics() ) {
         ah_breadcrumb_item( '', __( 'User Topics', 'hovercraft' ), $pos++, true );
+
     } elseif ( bbp_is_user_replies() ) {
         ah_breadcrumb_item( '', __( 'User Replies', 'hovercraft' ), $pos++, true );
     }
