@@ -11,6 +11,8 @@ function ah_breadcrumb() {
         ah_breadcrumb_bbpress();
     } elseif ( function_exists( 'is_woocommerce' ) && is_woocommerce() ) {
         ah_breadcrumb_woocommerce();
+    } elseif ( is_home() && ! is_front_page() ) {
+        ah_breadcrumb_home_blog();
     } elseif ( is_singular() ) {
         ah_breadcrumb_single();
     } elseif ( is_archive() ) {
@@ -22,6 +24,7 @@ function ah_breadcrumb() {
     } elseif ( is_404() ) {
         ah_breadcrumb_404();
     }
+
     echo '</ul>';
 }
 
@@ -106,6 +109,16 @@ function ah_breadcrumb_cpt_fallback( $post_type ) {
     return $fallback[ $post_type ] ?? false;
 }
 
+function ah_breadcrumb_home_blog() {
+    $pos =& $GLOBALS['ah_position'];
+    $page_for_posts = get_option( 'page_for_posts' );
+    if ( $page_for_posts ) {
+        ah_breadcrumb_item( '', get_the_title( $page_for_posts ), $pos++, true );
+    } else {
+        ah_breadcrumb_item( '', __( 'Blog', 'hovercraft' ), $pos++, true );
+    }
+}
+
 function ah_breadcrumb_single() {
     global $post;
     $pos =& $GLOBALS['ah_position'];
@@ -121,14 +134,23 @@ function ah_breadcrumb_single() {
                 ah_breadcrumb_item( $fallback['url'], $fallback['label'], $pos++ );
             }
         }
+
+        if ( is_post_type_hierarchical( $post_type ) ) {
+            $ancestors = array_reverse( get_post_ancestors( $post->ID ) );
+            foreach ( $ancestors as $ancestor_id ) {
+                ah_breadcrumb_item( get_permalink( $ancestor_id ), get_the_title( $ancestor_id ), $pos++ );
+            }
+        }
     }
 
-    $cats = get_the_category( $post->ID );
-    if ( $cats ) {
-        $cat = end( $cats );
-        $parents = explode( ',', rtrim( get_category_parents( $cat->term_id, true, ',' ), ',' ) );
-        foreach ( $parents as $p ) {
-            ah_breadcrumb_item( '', strip_tags( $p ), $pos++ );
+    if ( $post_type === 'post' ) {
+        $cats = get_the_category( $post->ID );
+        if ( $cats ) {
+            $cat = end( $cats );
+            $parents = explode( ',', rtrim( get_category_parents( $cat->term_id, true, ',' ), ',' ) );
+            foreach ( $parents as $p ) {
+                ah_breadcrumb_item( '', strip_tags( $p ), $pos++ );
+            }
         }
     }
 
