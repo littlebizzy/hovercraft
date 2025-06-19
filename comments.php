@@ -1,10 +1,14 @@
 <?php
 // exit early if post is password-protected
-if ( post_password_required() ) return;
+if ( post_password_required() ) {
+    return;
+}
 ?>
 
 <div id="comments" class="comments-area">
-    <?php if ( have_comments() ) : ?>
+
+    <?php if ( have_comments() ) { ?>
+
         <h3 class="comments-title">
             <?php
             // display comment count with post title
@@ -23,14 +27,16 @@ if ( post_password_required() ) return;
             wp_list_comments( apply_filters( 'hovercraft_comments_args', array(
                 'style'       => 'ol',
                 'short_ping'  => true,
-                'avatar_size' => 74
+                'avatar_size' => 74,
             ) ) );
             ?>
         </ol>
 
-        <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
+        <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) { ?>
             <nav class="comment-navigation" aria-label="<?php esc_attr_e( 'Comment Navigation', 'hovercraft' ); ?>">
-                <p class="screen-reader-text"><?php esc_html_e( 'Comment navigation', 'hovercraft' ); ?></p>
+                <p class="screen-reader-text">
+                    <?php esc_html_e( 'Comment navigation', 'hovercraft' ); ?>
+                </p>
                 <div class="comment-nav-prev">
                     <?php previous_comments_link( esc_html__( '&larr; Older Comments', 'hovercraft' ) ); ?>
                 </div>
@@ -38,17 +44,22 @@ if ( post_password_required() ) return;
                     <?php next_comments_link( esc_html__( 'Newer Comments &rarr;', 'hovercraft' ) ); ?>
                 </div>
             </nav>
-        <?php endif; ?>
-    <?php endif; ?>
+        <?php } ?>
 
-    <?php if ( ! comments_open() && get_comments_number() ) : ?>
-        <p class="no-comments"><?php esc_html_e( 'Comments are closed.', 'hovercraft' ); ?></p>
-    <?php endif; ?>
+    <?php } ?>
+
+    <?php if ( ! comments_open() && get_comments_number() ) { ?>
+        <p class="no-comments">
+            <?php esc_html_e( 'Comments are closed.', 'hovercraft' ); ?>
+        </p>
+    <?php } ?>
 
     <?php
     // display the comment form
     comment_form();
     ?>
+
+</div>
 
 <?php
 // Ref: ChatGPT
