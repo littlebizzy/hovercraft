@@ -29,6 +29,9 @@ require get_template_directory() . '/inc/bullets-category.php';
 require get_template_directory() . '/inc/portal-category.php';
 require get_template_directory() . '/inc/hide-certain-categories.php';
 
+// comments
+require get_template_directory() . '/inc/comment-fields.php';
+
 // customizer
 require get_template_directory() . '/inc/customizer/customizer-settings.php';
 require get_template_directory() . '/inc/customizer/register-blog-category.php';
