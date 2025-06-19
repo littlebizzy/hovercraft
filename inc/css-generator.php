@@ -4237,14 +4237,25 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 }
 
 
-/* comments */
+/* comments: general layout */
+
+#comments {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #fff;
+    border-top: 1px solid #eee;
+}
+
+#respond {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #fafafa;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+}
 
 @media screen and (max-width: 1200px) {
-    #comments {
-        margin-top: 0;
-        padding: 20px;
-    }
-
+    #comments,
     #respond {
         margin-top: 0;
         padding: 20px;
@@ -4256,30 +4267,24 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 }
 
 @media screen and (min-width: 1200px) {
-    #comments {
-        margin-top: 40px;
-    }
-
-    #respond {
-        margin-top: 40px;
-    }
-
     p.akismet_comment_form_privacy_notice {
         padding: 0;
     }
 }
 
-/* avatar */
+/* avatar styling */
+
 .avatar {
     width: 48px;
     height: 48px;
     border-radius: 50%;
     display: inline-block;
     vertical-align: top;
-    margin-right: 1rem;
+    margin-right: 16px;
 }
 
 /* comment list */
+
 .comment-list {
     list-style: none;
     margin: 0;
@@ -4288,28 +4293,29 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 
 .comment-body {
     margin-bottom: 30px;
-    border-bottom: 1px solid #ddd;
     padding-bottom: 20px;
+    border-bottom: 1px solid #ddd;
 }
 
 .comment-author {
     font-weight: bold;
     margin-bottom: 4px;
+    font-size: 16px;
 }
 
 .comment-metadata {
-    font-size: 0.9em;
+    font-size: 14px;
     color: #666;
     margin-bottom: 10px;
 }
 
 .comment-content {
-    font-size: 1em;
-    line-height: 1.6;
+    font-size: 16px;
+    line-height: 24px;
 }
 
 .comment-reply-link {
-    font-size: 0.9em;
+    font-size: 14px;
     display: inline-block;
     margin-top: 10px;
     color: #0073aa;
@@ -4321,18 +4327,25 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 }
 
 /* nested comments */
+
 .comment-list .children {
-    margin-left: 2rem;
-    margin-top: 1rem;
     list-style: none;
+    margin-left: 32px;
+    margin-top: 16px;
+}
+
+.comment-list .children .comment-body {
+    border-left: 2px solid #eee;
+    padding-left: 16px;
 }
 
 /* comment pagination */
+
 .comment-navigation {
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
-    font-size: 0.9em;
+    font-size: 14px;
 }
 
 .comment-nav-prev,
@@ -4341,16 +4354,18 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 }
 
 /* comment form */
+
 #respond textarea,
 #respond input[type="text"],
 #respond input[type="email"],
 #respond input[type="url"] {
     width: 100%;
-    max-width: 100%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
-    font-size: 1em;
+    font-size: 16px;
+    border-radius: 4px;
+    background-color: #fff;
 }
 
 #respond input[type="submit"] {
@@ -4358,12 +4373,15 @@ button[type="submit"]:hover, input[type="submit"]:hover {
     background-color: #0073aa;
     color: #fff;
     border: none;
+    border-radius: 4px;
+    font-size: 15px;
     cursor: pointer;
 }
 
 #respond input[type="submit"]:hover {
     background-color: #005f8d;
 }
+
 
 
 /* search icon and full screen search */
