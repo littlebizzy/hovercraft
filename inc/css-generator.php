@@ -4240,41 +4240,129 @@ button[type="submit"]:hover, input[type="submit"]:hover {
 /* comments */
 
 @media screen and (max-width: 1200px) {
-#comments {
-	margin-top: 0;
-	padding: 20px;
-	}
+    #comments {
+        margin-top: 0;
+        padding: 20px;
+    }
+
+    #respond {
+        margin-top: 0;
+        padding: 20px;
+    }
+
+    p.akismet_comment_form_privacy_notice {
+        padding: 0 20px;
+    }
 }
 
 @media screen and (min-width: 1200px) {
-#comments {
-	margin-top: 40px;
-	}
+    #comments {
+        margin-top: 40px;
+    }
+
+    #respond {
+        margin-top: 40px;
+    }
+
+    p.akismet_comment_form_privacy_notice {
+        padding: 0;
+    }
 }
 
-@media screen and (max-width: 1200px) {
-#respond {
-	margin-top: 0;
-	padding: 20px;
-	}
+/* avatar */
+.avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 1rem;
 }
 
-@media screen and (min-width: 1200px) {
-#respond {
-	margin-top: 40px;
-	}
+/* comment list */
+.comment-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-@media screen and (max-width: 1200px) {
-p.akismet_comment_form_privacy_notice {
-	padding: 0 20px;
-	}
+.comment-body {
+    margin-bottom: 30px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 20px;
 }
 
-@media screen and (min-width: 1200px) {
-p.akismet_comment_form_privacy_notice {
-	padding: 0;
-	}
+.comment-author {
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+.comment-metadata {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.comment-content {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.comment-reply-link {
+    font-size: 0.9em;
+    display: inline-block;
+    margin-top: 10px;
+    color: #0073aa;
+    text-decoration: none;
+}
+
+.comment-reply-link:hover {
+    text-decoration: underline;
+}
+
+/* nested comments */
+.comment-list .children {
+    margin-left: 2rem;
+    margin-top: 1rem;
+    list-style: none;
+}
+
+/* comment pagination */
+.comment-navigation {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.9em;
+}
+
+.comment-nav-prev,
+.comment-nav-next {
+    flex: 1;
+}
+
+/* comment form */
+#respond textarea,
+#respond input[type="text"],
+#respond input[type="email"],
+#respond input[type="url"] {
+    width: 100%;
+    max-width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+#respond input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #0073aa;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+#respond input[type="submit"]:hover {
+    background-color: #005f8d;
 }
 
 
