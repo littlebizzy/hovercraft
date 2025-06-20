@@ -53,11 +53,11 @@ if ( ! comments_open() && ! $comments ) {
 
     <?php endif; ?>
 
-    <?php if ( ! comments_open() && get_comments_number() ) { ?>
+    <?php if ( ! comments_open() && get_comments_number() ) : ?>
         <p class="no-comments">
             <?php esc_html_e( 'Comments are closed.', 'hovercraft' ); ?>
         </p>
-    <?php } ?>
+    <?php endif; ?>
 
     <?php
     // display the comment form
