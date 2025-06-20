@@ -1,13 +1,18 @@
 <?php
-// exit early if post is password-protected
+// exit if post is password-protected
 if ( post_password_required() ) {
+    return;
+}
+
+// exit if comments are closed and none exist
+if ( ! comments_open() && ! $comments ) {
     return;
 }
 ?>
 
 <div id="comments" class="comments-area">
 
-    <?php if ( have_comments() ) { ?>
+    <?php if ( have_comments() ) : ?>
 
         <h3 class="comments-title">
             <?php
@@ -17,7 +22,7 @@ if ( post_password_required() ) {
                 esc_html__( 'One comment on', 'hovercraft' ),
                 esc_html__( '% comments on', 'hovercraft' )
             );
-            echo ' <span>' . esc_html( get_the_title() ) . '</span>';
+            echo esc_html( ' ' . get_the_title() );
             ?>
         </h3>
 
@@ -46,7 +51,7 @@ if ( post_password_required() ) {
             </nav>
         <?php } ?>
 
-    <?php } ?>
+    <?php endif; ?>
 
     <?php if ( ! comments_open() && get_comments_number() ) { ?>
         <p class="no-comments">
