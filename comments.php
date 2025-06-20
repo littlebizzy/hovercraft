@@ -22,7 +22,7 @@ if ( ! comments_open() && ! $comments ) {
                 esc_html__( 'One comment on', 'hovercraft' ),
                 esc_html__( '% comments on', 'hovercraft' )
             );
-            echo esc_html( ' ' . get_the_title() );
+            echo ' ' . esc_html( get_the_title() );
             ?>
         </h3>
 
@@ -37,10 +37,10 @@ if ( ! comments_open() && ! $comments ) {
             ?>
         </ol>
 
-        <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) { ?>
+        <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
             <nav class="comment-navigation" aria-label="<?php esc_attr_e( 'Comment Navigation', 'hovercraft' ); ?>">
                 <p class="screen-reader-text">
-                    <?php esc_html_e( 'Comment navigation', 'hovercraft' ); ?>
+                    <?php esc_html_e( 'Comment Navigation', 'hovercraft' ); ?>
                 </p>
                 <div class="comment-nav-prev">
                     <?php previous_comments_link( esc_html__( '&larr; Older Comments', 'hovercraft' ) ); ?>
@@ -49,7 +49,7 @@ if ( ! comments_open() && ! $comments ) {
                     <?php next_comments_link( esc_html__( 'Newer Comments &rarr;', 'hovercraft' ) ); ?>
                 </div>
             </nav>
-        <?php } ?>
+        <?php endif; ?>
 
     <?php endif; ?>
 
