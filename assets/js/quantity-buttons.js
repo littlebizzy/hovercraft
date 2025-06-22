@@ -1,19 +1,19 @@
 document.addEventListener('DOMContentLoaded', function () {
-    const qtyContainers = document.querySelectorAll('div.quantity:not(.buttons-added)');
-    qtyContainers.forEach(function(container) {
-        const input = container.querySelector('input.qty');
+    const quantityContainers = document.querySelectorAll('div.quantity:not(.buttons-added)');
+    quantityContainers.forEach(function(container) {
+        const input = container.querySelector('input.quantity');
         if (!input) return;
 
         container.classList.add('buttons-added');
 
         const minus = document.createElement('button');
         minus.type = 'button';
-        minus.className = 'qty-button minus';
+        minus.className = 'quantity-button minus';
         minus.textContent = '-';
 
         const plus = document.createElement('button');
         plus.type = 'button';
-        plus.className = 'qty-button plus';
+        plus.className = 'quantity-button plus';
         plus.textContent = '+';
 
         input.readOnly = true;
