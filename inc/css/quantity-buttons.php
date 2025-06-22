@@ -12,7 +12,7 @@
     background: #fff !important;
 }
 
-.qty-button {
+.quantity-button {
     width: 40px !important;
     height: 40px !important;
     font-size: 20px !important;
@@ -30,11 +30,11 @@
     transition: background 0.2s ease !important;
 }
 
-.qty-button:hover {
+.quantity-button:hover {
     background: #e0e0e0 !important;
 }
 
-.quantity input.qty {
+.quantity input.quantity {
     width: 60px !important;
     height: 40px !important;
     font-size: 16px !important;
@@ -50,12 +50,12 @@
     cursor: default !important;
 }
 
-.quantity input.qty::-webkit-outer-spin-button,
-.quantity input.qty::-webkit-inner-spin-button {
+.quantity input.quantity::-webkit-outer-spin-button,
+.quantity input.quantity::-webkit-inner-spin-button {
     -webkit-appearance: none !important;
     margin: 0 !important;
 }
 
-.quantity input.qty[type="number"] {
+.quantity input.quantity[type="number"] {
     -moz-appearance: textfield !important;
 }
