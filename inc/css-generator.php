@@ -2419,34 +2419,13 @@ body.home #content-wide {
 }
 
 
-/* post byline */
-
-.post-byline {
-	margin-bottom: 30px;
-	line-height: 16px;
+/* byline */
+<?php
+$hovercraft_byline_css = get_template_directory() . '/inc/css/byline.php';
+if ( file_exists( $hovercraft_byline_css ) ) {
+    include $hovercraft_byline_css;
 }
-
-.post-byline-archive {
-	margin-bottom: 20px;
-	line-height: 1;
-}
-
-.byline-photo {
-	display: inline-block;
-	margin-right: 5px;
-	vertical-align: middle;
-	clip-path: circle();
-	width: 25px;
-	height: 25px;
-}
-
-.post-author {
-	display: inline;
-}
-
-.post-updated {
-	display: inline;
-}
+?>
 
 
 /* alignment */
