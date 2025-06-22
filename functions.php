@@ -95,6 +95,7 @@ require get_template_directory() . '/inc/git-updater.php';
 require get_template_directory() . '/inc/widget-areas.php';
 
 // woocommerce
+require get_template_directory() . '/inc/quantity-buttons.php';
 require get_template_directory() . '/inc/woocommerce-support.php';
 
 // shortcodes
