@@ -4494,6 +4494,15 @@ visibility: hidden;
 .quicktags-toolbar input:hover  {
 	background-color: rgba(0, 0, 0, 0.3);	
 }
+
+
+/* quantity buttons (woocommerce) */
+<?php
+$hovercraft_quantity_buttons_css = get_template_directory() . '/inc/css/quantity-buttons.php';
+if ( file_exists( $hovercraft_quantity_buttons_css ) ) {
+    include $hovercraft_quantity_buttons_css;
+}
+?>
 	
 
 /* woocommerce cart */
