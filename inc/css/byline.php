@@ -17,29 +17,32 @@
 	margin-right: 5px;
 	vertical-align: middle;
 	clip-path: circle();
-	border-radius: 50%;
 	width: 25px;
 	height: 25px;
+}
+
+.byline-avatar {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.avatar {
+	border-radius: 50%;
 }
 
 .post-author {
 	display: inline;
 }
 
-.post-updated {
-	display: inline;
+.author-name {
+	font-weight: 600;
 }
 
 .date-published {
 	display: inline;
 }
 
-.author-name {
-	font-weight: bold;
+.date-updated {
 	display: inline;
-}
-
-.byline-separator {
-	margin: 0 6px;
-	color: #888;
 }
