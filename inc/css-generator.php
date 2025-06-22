@@ -402,56 +402,21 @@ if ( file_exists( $hovercraft_lists_css ) ) {
 
 
 /* blockquotes */
-
-blockquote {
-	margin: 30px 0px 30px 30px;
-	padding: 30px 30px;
-	border-left: 5px solid <?php echo $blockquote_border_color; ?>;
-	color: <?php echo $blockquote_text_color; ?>;
+<?php
+$hovercraft_blockquotes_css = get_template_directory() . '/inc/css/blockquotes.php';
+if ( file_exists( $hovercraft_blockquotes_css ) ) {
+    include $hovercraft_blockquotes_css;
 }
-
-blockquote p {
-	font-size: 18px;
-	line-height: 2;
-	color: <?php echo $blockquote_text_color; ?>;
-}
-
-blockquote p:last-child {
-	margin-bottom: 0;
-}
-
-blockquote .wp-caption-text {
-	<?php if ( $blockquote_captions == 'none') { echo "display: none;"; } ?>
-}
+?>
 
 
 /* tables */
-
-@media screen and (max-width: 1200px) {
-table {
-	margin-bottom: 20px;
-	border: 1px solid grey;
-	border-collapse: collapse;
-	}
+<?php
+$hovercraft_tables_css = get_template_directory() . '/inc/css/tables.php';
+if ( file_exists( $hovercraft_tables_css ) ) {
+    include $hovercraft_tables_css;
 }
-
-@media screen and (min-width: 1200px) {
-table {
-	margin-bottom: 30px;
-	border: 1px solid grey;
-	border-collapse: collapse;
-	}
-}
-	
-table tr:first-child {
-  background: #eee !important;
-}
-
-table th,
-table td {
-	padding: 5px;
-  border: 1px solid lightgrey;
-}
+?>
 
 
 /* wordpress video/media container */
@@ -517,22 +482,12 @@ hr {
 
 
 /* tags */
-
-@media screen and (max-width: 1200px) {
-.tags {
-	margin-top: 20px;
-	font-size: 14px;
-	color: <?php echo $breadcrumbs_text_color; ?>;
-	}
+<?php
+$hovercraft_tags_css = get_template_directory() . '/inc/css/tags.php';
+if ( file_exists( $hovercraft_tags_css ) ) {
+    include $hovercraft_tags_css;
 }
-
-@media screen and (min-width: 1200px) {
-.tags {
-	margin-top: 30px;
-	font-size: 14px;
-	color: <?php echo $breadcrumbs_text_color; ?>;
-	}
-}
+?>
 	
 
 /* social sharing */
