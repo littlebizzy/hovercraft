@@ -6,7 +6,7 @@ if ( is_singular( 'product' ) ) {
 ?>
 
 <div class="post-byline">
-    <span class="post-author">
+    <span class="post-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
         <?php
         $author_id = get_the_author_meta( 'ID' );
         $author_name = get_the_author_meta( 'display_name', $author_id );
@@ -15,15 +15,15 @@ if ( is_singular( 'product' ) ) {
         $hovercraft_byline_photo = get_theme_mod( 'hovercraft_byline_photo', 'none' );
         if ( $hovercraft_byline_photo === 'byline_only' || $hovercraft_byline_photo === 'byline_and_biography' ) : ?>
             <span class="byline-photo">
-                <img class="avatar byline-avatar" src="<?php echo esc_url( $author_avatar_url ); ?>" alt="<?php echo esc_attr( $author_name ); ?>">
+                <img class="avatar byline-avatar" src="<?php echo esc_url( $author_avatar_url ); ?>" alt="<?php echo esc_attr( $author_name ); ?>" itemprop="image">
             </span>
         <?php endif;
 
         $hovercraft_biography = get_theme_mod( 'hovercraft_biography', 'native_posts_only' );
         if ( $hovercraft_biography === 'native_posts_only' || $hovercraft_biography === 'all_post_types' ) : ?>
-            <a href="#author" rel="author"><strong><?php echo esc_html( $author_name ); ?></strong></a>
+            <a href="#author" rel="author"><span class="author-name" itemprop="name"><?php echo esc_html( $author_name ); ?></span></a>
         <?php else : ?>
-            <strong><?php echo esc_html( $author_name ); ?></strong>
+            <span class="author-name" itemprop="name"><?php echo esc_html( $author_name ); ?></span>
         <?php endif; ?>
     </span><!-- post-author -->
 			
@@ -32,22 +32,22 @@ if ( is_singular( 'product' ) ) {
 
     if ( $hovercraft_byline_date === 'published_date_only' ) : ?>
         <span class="byline-separator">|</span>
-        <span class="date-published">
+        <span class="date-published" itemprop="datePublished">
             <?php echo esc_html__( 'Published on', 'hovercraft' ) . ' ' . esc_html( get_the_date( 'M j, Y' ) ); ?>
         </span>
 
     <?php elseif ( $hovercraft_byline_date === 'updated_date_only' ) : ?>
         <span class="byline-separator">|</span>
-        <span class="date-updated">
+        <span class="date-updated" itemprop="dateModified">
             <?php echo esc_html__( 'Updated on', 'hovercraft' ) . ' ' . esc_html( get_the_modified_date( 'M j, Y' ) ); ?>
         </span>
 
     <?php elseif ( $hovercraft_byline_date === 'updated_and_published_dates' ) : ?>
         <span class="byline-separator">|</span>
-        <span class="date-published">
+        <span class="date-published" itemprop="datePublished">
             <?php echo esc_html__( 'Published on', 'hovercraft' ) . ' ' . esc_html( get_the_date( 'M j, Y' ) ); ?>
         </span>
-        <span class="date-updated">
+        <span class="date-updated" itemprop="dateModified">
             <?php echo esc_html__( 'Updated on', 'hovercraft' ) . ' ' . esc_html( get_the_modified_date( 'M j, Y' ) ); ?>
         </span>
     <?php endif; ?>
