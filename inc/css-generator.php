@@ -392,24 +392,13 @@ p {
 }
 
 
-/* unordered and ordered lists */
-
-ul {
-	list-style-position: inside;
+/* lists */
+<?php
+$hovercraft_lists_css = get_template_directory() . '/inc/css/lists.php';
+if ( file_exists( $hovercraft_lists_css ) ) {
+    include $hovercraft_lists_css;
 }
-
-ol {
-	list-style-position: inside;
-}
-
-li {
-	margin-bottom: 5px;
-	line-height: 2;
-}
-
-ol > li::marker {
-  font-weight: 700;
-}
+?>
 
 
 /* blockquotes */
