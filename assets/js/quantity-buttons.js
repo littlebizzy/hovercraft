@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const quantityContainers = document.querySelectorAll('div.quantity:not(.buttons-added)');
     quantityContainers.forEach(function(container) {
-        const input = container.querySelector('input.quantity');
+        const input = container.querySelector('input.qty');
         if (!input) return;
 
         container.classList.add('buttons-added');
