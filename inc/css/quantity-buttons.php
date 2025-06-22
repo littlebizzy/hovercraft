@@ -34,7 +34,7 @@
     background: #e0e0e0 !important;
 }
 
-.quantity input.quantity {
+.quantity input.qty {
     width: 60px !important;
     height: 40px !important;
     font-size: 16px !important;
@@ -50,12 +50,12 @@
     cursor: default !important;
 }
 
-.quantity input.quantity::-webkit-outer-spin-button,
-.quantity input.quantity::-webkit-inner-spin-button {
+.quantity input.qty::-webkit-outer-spin-button,
+.quantity input.qty::-webkit-inner-spin-button {
     -webkit-appearance: none !important;
     margin: 0 !important;
 }
 
-.quantity input.quantity[type="number"] {
+.quantity input.qty[type="number"] {
     -moz-appearance: textfield !important;
 }
