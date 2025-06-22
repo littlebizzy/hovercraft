@@ -491,33 +491,12 @@ if ( file_exists( $hovercraft_tags_css ) ) {
 	
 
 /* social sharing */
-
-@media screen and (max-width: 1200px) {
-.social-sharing {
-	margin: 40px 0px;
-	line-height: 1;
-	}
+<?php
+$hovercraft_social_sharing_css = get_template_directory() . '/inc/css/social-sharing.php';
+if ( file_exists( $hovercraft_social_sharing_css ) ) {
+    include $hovercraft_social_sharing_css;
 }
-
-@media screen and (min-width: 1200px) {
-.social-sharing {
-	margin: 60px 0px;
-	line-height: 1;
-	}
-}
-
-.social-sharing i {
-	font-size: <?php echo $social_sharing_font_size; ?>px;
-	line-height: 1;
-	margin-right: 20px !important;
-	vertical-align: middle;
-}
-
-.social-sharing-label {
-	margin-right: 10px;
-	vertical-align: middle;
-	color: <?php echo $breadcrumbs_text_color; ?>;
-}
+?>
 
 
 /* after byline (widget area) */
@@ -736,56 +715,21 @@ h1.mini-hero-title {
 
 
 /* logo */
-
-@media screen and (max-width: 1200px) {
-.site-logo {
-	width: <?php echo $mobile_logo_width; ?>px !important;
-	max-width: <?php echo $mobile_logo_width; ?>px !important;
-	height: auto;
-	margin-right: 10px;
-	display: inline-block;
-	}
+<?php
+$hovercraft_logo_css = get_template_directory() . '/inc/css/logo.php';
+if ( file_exists( $hovercraft_logo_css ) ) {
+    include $hovercraft_logo_css;
 }
-
-@media screen and (min-width: 1200px) {
-.site-logo {
-	width: <?php echo $desktop_logo_width; ?>px !important;
-	max-width: <?php echo $desktop_logo_width; ?>px !important;
-	height: auto;
-	margin-right: 20px;
-	display: inline-block;
-	}
-}
+?>
 
 
 /* branding */
-
-#branding {
-	display: table;
+<?php
+$hovercraft_branding_css = get_template_directory() . '/inc/css/branding.php';
+if ( file_exists( $hovercraft_branding_css ) ) {
+    include $hovercraft_branding_css;
 }
-
-#branding a {
-	text-decoration: none !important;
-}
-
-.branding-media {
-	display: table-cell;
-    vertical-align: middle;
-	height: inherit;
-	min-width: auto;
-	white-space: nowrap;
-}
-
-
-/* branding text */
-
-.branding-text {
-	display: table-cell;
-    vertical-align: middle;
-	height: inherit;
-	text-align: left;
-	width: 100%;
-}
+?>
 
 
 /* site title (site name) */
