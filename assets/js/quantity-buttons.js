@@ -25,7 +25,8 @@ document.addEventListener('DOMContentLoaded', function () {
             let value = parseFloat(input.value) || 0;
             let step = parseFloat(input.step) || 1;
             input.value = Math.max(value - step, parseFloat(input.min) || 0);
-            input.dispatchEvent(new Event('change'));
+            input.dispatchEvent(new Event('input', { bubbles: true }));
+            input.dispatchEvent(new Event('change', { bubbles: true }));
         });
 
         plus.addEventListener('click', function () {
@@ -35,7 +36,8 @@ document.addEventListener('DOMContentLoaded', function () {
             let newVal = value + step;
             if (!isNaN(max)) newVal = Math.min(newVal, max);
             input.value = newVal;
-            input.dispatchEvent(new Event('change'));
+            input.dispatchEvent(new Event('input', { bubbles: true }));
+            input.dispatchEvent(new Event('change', { bubbles: true }));
         });
     });
 });
