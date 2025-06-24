@@ -19,7 +19,7 @@ table {
 }
 	
 table tr:first-child {
-  background: #eee !important;
+  background: #eee;
 }
 
 table th,
