@@ -69,16 +69,16 @@
 }
 
 .woocommerce-cart .actions {
+	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
 	flex-wrap: wrap;
-	gap: 15px;
-	width: 100%;
+	gap: 20px;
 	margin-top: 20px;
 }
 
-.woocommerce-cart .actions .coupon {
+.woocommerce-cart .coupon {
 	display: flex;
 	flex-grow: 1;
 	gap: 10px;
@@ -99,7 +99,7 @@
 }
 
 .woocommerce-cart .coupon .button {
-	padding: 10px 16px;
+	padding: 10px 20px;
 	font-size: 14px;
 	border: 1px solid #ccc;
 	border-radius: 4px;
