@@ -4223,6 +4223,15 @@ if ( file_exists( $hovercraft_quantity_buttons_css ) ) {
 	
 
 /* woocommerce cart */
+<?php
+$hovercraft_woocommerce_cart_css = get_template_directory() . '/inc/css/woocommerce-cart.php';
+if ( file_exists( $hovercraft_woocommerce_cart_css ) ) {
+    include $hovercraft_woocommerce_cart_css;
+}
+?>
+
+
+/* woocommerce other */
 
 @media screen and (max-width: 1200px) {
 .add_to_cart_button {
@@ -4257,37 +4266,10 @@ if ( file_exists( $hovercraft_quantity_buttons_css ) ) {
 	background: <?php echo $default_hover_color; ?>;
 }
 
-a.checkout-button {
-	background: <?php echo $default_link_color; ?> !important;
-}
-
-a.checkout-button:hover {
-	background: <?php echo $default_hover_color; ?> !important;
-}
-
-@media screen and (max-width: 1200px) {
-	div.woocommerce-notices-wrapper {
-		margin-bottom: 20px;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-	div.woocommerce-notices-wrapper {
-		margin-bottom: 30px;
-	}
-}
-
-div.woocommerce-notices-wrapper ul {
-	margin: 0 !important;
-	font-size: 18px !important;
-}
-
 div.coupon {
 	display: flex;
 }
 
-
-/* woocommerce other */
 
 .term-description {
 	font-size: 18px;
@@ -4410,97 +4392,21 @@ form.woocommerce-ordering {
 
 
 /* woocommerce product details */
-	
-.price {
-	font-size: 24px !important;
-	font-weight: 600 !important;
-	color: <?php echo $woocommerce_price_text_color; ?> !important;
+<?php
+$hovercraft_woocommerce_product_details_css = get_template_directory() . '/inc/css/woocommerce-product-details.php';
+if ( file_exists( $hovercraft_woocommerce_product_details_css ) ) {
+    include $hovercraft_woocommerce_product_details_css;
 }
-
-p.stock {
-	font-size: 12px !important;
-	font-weight: 400 !important;
-	color: <?php echo $woocommerce_price_text_color; ?> !important;
-}
-
-.woocommerce .summary ul {
-	margin-left: 0 !important;
-}
-
-@media screen and (max-width: 1200px) {
-.product_meta {
-	display: block;
-	font-size: 14px;
-	line-height: 2;
-	margin: 20px 0;
-	color: <?php echo $breadcrumbs_text_color; ?>;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-.product_meta {
-	display: block;
-	font-size: 14px;
-	line-height: 2;
-	margin: 30px 0;
-	color: <?php echo $breadcrumbs_text_color; ?>;
-	}
-}
-
-.sku_wrapper {
-	display: block;
-}
-
-.posted_in {
-	display: block;
-}
+?>
 
 
-/* woocommerce add to cart form */
-
-form.variations_form {
-	display: block !important;
+/* woocommerce add to cart */
+<?php
+$hovercraft_woocommerce_add_to_cart_css = get_template_directory() . '/inc/css/woocommerce-add-to-cart.php';
+if ( file_exists( $hovercraft_woocommerce_add_to_cart_css ) ) {
+    include $hovercraft_woocommerce_add_to_cart_css;
 }
-
-form.cart {
-	display: flex;
-}
-	
-div.single_variation_wrap {
-	clear: both;
-	display: flex;
-}
-
-table.variations {
-	display: block;
-	width: 100%;
-	margin-bottom: 30px !important;
-	border: 0;
-}
-
-form.cart input {
-	vertical-align: middle;
-	font-size: 16px;
-	font-weight: 400;
-	line-height: 2;
-	text-align: center;
-	margin-right: 5px;
-	padding: 5px 0px !important;
-	border: 0;
-	outline: none;
-	box-shadow: inset 0px 0px 0px 1px #BDBDBD;
-}
-
-form.cart button {
-	vertical-align: middle;
-	font-size: 16px !important;
-	font-weight: 700 !important;
-	padding: 0 20px;
-	border: 0;
-	outline: none;
-	cursor: pointer;
-	border-radius: 0 !important;
-}
+?>
 
 
 /* woocommerce login page */
