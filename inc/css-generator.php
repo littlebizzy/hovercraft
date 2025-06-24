@@ -4409,24 +4409,13 @@ if ( file_exists( $hovercraft_woocommerce_add_to_cart_css ) ) {
 ?>
 
 
-/* woocommerce login page */
-
-.show-password-input {
-	position: absolute !important;
-	top: .4em !important;
+/* woocommerce login */
+<?php
+$hovercraft_woocommerce_login_css = get_template_directory() . '/inc/css/woocommerce-login.php';
+if ( file_exists( $hovercraft_woocommerce_login_css ) ) {
+    include $hovercraft_woocommerce_login_css;
 }
-
-.woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea {
-    border: 1px solid #d3ced2 !important;
-	padding: 5px 10px !important;
-	box-shadow: inset 0px 0px 0px 0px #bdbdbd !important;
-	font-size: 18px !important;
-}
-
-.woocommerce-form__input-checkbox {
-	width: auto;
-	box-shadow: inset 0px 0px 0px 0px #bdbdbd !important;
-}
+?>
 
 
 /* woocommerce */
