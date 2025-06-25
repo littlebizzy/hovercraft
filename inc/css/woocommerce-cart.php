@@ -14,48 +14,43 @@
 }
 
 .woocommerce-cart .shop_table thead tr {
-	background: #eee;
+	background: #eeeeee;
 }
 
 .woocommerce-cart .shop_table th,
 .woocommerce-cart .shop_table td {
 	text-align: left;
 	padding: 12px 10px;
-	border-bottom: 1px solid #e0e0e0;
+	border: 1px solid #e0e0e0;
 	vertical-align: middle;
 	line-height: 1.5;
-}
-
-.woocommerce-cart .shop_table td {
-	border-top: 1px solid #e0e0e0;
+	background: #ffffff;
 }
 
 .woocommerce-cart .shop_table th {
 	font-weight: 600;
-	color: #212121;
-}
-
-.woocommerce-cart .shop_table td strong {
-	font-size: 18px;
-	color: #212121;
 }
 
 .woocommerce-cart .product-thumbnail img {
 	max-width: 80px;
 	height: auto;
+	display: block;
+	object-fit: cover;
 	border-radius: 4px;
 }
 
 .woocommerce-cart .shop_table .product-remove {
-	padding: 0;
 	text-align: center;
 }
 
 .woocommerce-cart .shop_table .product-remove a.remove {
+	display: block;
 	font-size: 24px;
-	color: #ff1744;
+	font-weight: 700;
+	line-height: 1;
+	color: #ff1744 !important;
 	text-decoration: none;
-	display: inline-block;
+	border-radius: 50%;
 }
 
 .woocommerce-cart .shop_table .product-remove a.remove:hover {
@@ -64,18 +59,7 @@
 }
 
 .woocommerce-cart .shop_table td.actions {
-	width: 100%;
-	padding: 15px 10px;
-}
-
-.woocommerce-cart .actions {
-	width: 100%;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	flex-wrap: wrap;
-	gap: 20px;
-	margin-top: 20px;
+	width: 100% !important;
 }
 
 .woocommerce-cart .coupon {
@@ -271,11 +255,12 @@
 
 @media screen and (max-width: 600px) {
 	.woocommerce-cart .actions {
+  		display: flex;
 		flex-direction: column;
 		align-items: stretch;
+		width: 100%;
 	}
 
 	.woocommerce-cart .actions > .button[name="update_cart"] {
-		width: 100%;
 	}
 }
