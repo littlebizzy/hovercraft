@@ -75,9 +75,11 @@
 	background: #ff1744;
 }
 
+/* actions table cell (coupons and update cart) */
 .woocommerce-cart .shop_table td.actions {
 	width: 100% !important;
 	border: 0 !important;
+	padding: 20px !important;
 }
 
 /* cart coupon */
@@ -108,7 +110,6 @@
 	line-height: 1.5;
 	border: 1px solid transparent;
 	border-radius: 4px;
-	color: inherit;
 	cursor: pointer;
 	box-sizing: border-box;
 	color: #ffffff !important;
@@ -116,6 +117,18 @@
 
 .woocommerce-cart .coupon .button:hover {
 	background: #f2f2f2;
+}
+
+/* update cart button */
+form.woocommerce-cart-form button[name="update_cart"] {
+	padding: 10px 16px;
+	font-size: 18px;
+	line-height: 1.5;
+	border: 1px solid transparent;
+	border-radius: 4px;
+	box-sizing: border-box;
+	cursor: pointer;
+	color: #ffffff !important;
 }
 
 .woocommerce-cart .woocommerce-shipping-methods {
