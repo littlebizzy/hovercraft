@@ -2,6 +2,20 @@
 // styles for woocommerce cart
 ?>
 
+/* cart notices */
+@media screen and (max-width: 1200px) {
+	.woocommerce-cart .woocommerce-notices-wrapper {
+		margin-bottom: 20px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.woocommerce-cart .woocommerce-notices-wrapper {
+		margin-bottom: 30px;
+	}
+}
+
+/* cart product table */
 .woocommerce-cart .woocommerce-cart-form {
 	margin-bottom: 30px;
 }
@@ -10,18 +24,20 @@
 	width: 100%;
 	table-layout: auto;
 	border-collapse: collapse;
+	border: 1px solid #e0e0e0 !important;
 	margin-bottom: 30px;
+	border-radius: 4px;
 }
 
-.woocommerce-cart .shop_table thead tr {
-	background: #eeeeee;
+.woocommerce-cart .shop_table thead th {
+	background: #eeeeee !important;
 }
 
 .woocommerce-cart .shop_table th,
 .woocommerce-cart .shop_table td {
 	text-align: left;
 	padding: 12px 10px;
-	border: 1px solid #e0e0e0;
+	border: 1px solid #e0e0e0 !important;
 	vertical-align: middle;
 	line-height: 1.5;
 	background: #ffffff;
@@ -44,30 +60,32 @@
 }
 
 .woocommerce-cart .shop_table .product-remove a.remove {
-	display: block;
+	display: inline-block;
+	text-align: center;
 	font-size: 24px;
 	font-weight: 700;
 	line-height: 1;
 	color: #ff1744 !important;
 	text-decoration: none;
-	border-radius: 50%;
+	border-radius: 50% !important;
 }
 
 .woocommerce-cart .shop_table .product-remove a.remove:hover {
-	color: #fff;
+	color: #ffffff !important;
 	background: #ff1744;
 }
 
 .woocommerce-cart .shop_table td.actions {
 	width: 100% !important;
+	border: 0 !important;
 }
 
+/* cart coupon */
 .woocommerce-cart .coupon {
 	display: flex;
 	flex-grow: 1;
 	gap: 10px;
 	align-items: center;
-	min-width: 240px;
 }
 
 .woocommerce-cart .coupon label {
@@ -75,40 +93,29 @@
 }
 
 .woocommerce-cart .coupon input.input-text {
-	width: 100%;
+	width: auto !important;
 	padding: 10px;
-	font-size: 14px;
-	border: 1px solid #bdbdbd;
+	font-size: 18px;
+	border: 1px solid #e0e0e0;
+	line-height: 1.5;
 	border-radius: 4px;
+	box-sizing: border-box;
 }
 
 .woocommerce-cart .coupon .button {
-	padding: 10px 20px;
-	font-size: 14px;
-	border: 1px solid #ccc;
+	padding: 10px 16px;
+	font-size: 18px;
+	line-height: 1.5;
+	border: 1px solid transparent;
 	border-radius: 4px;
-	background: none;
 	color: inherit;
 	cursor: pointer;
+	box-sizing: border-box;
+	color: #ffffff !important;
 }
 
 .woocommerce-cart .coupon .button:hover {
 	background: #f2f2f2;
-}
-
-.woocommerce-cart .actions > .button[name="update_cart"] {
-	margin-left: auto;
-	padding: 10px 20px;
-	font-size: 14px;
-	background-color: #212121;
-	color: #fff;
-	border: none;
-	border-radius: 4px;
-	cursor: pointer;
-}
-
-.woocommerce-cart .actions > .button[name="update_cart"]:hover {
-	background-color: #000;
 }
 
 .woocommerce-cart .woocommerce-shipping-methods {
@@ -239,28 +246,4 @@
 .woocommerce-cart div.woocommerce-notices-wrapper ul {
 	margin: 0;
 	font-size: 18px;
-}
-
-@media screen and (max-width: 1200px) {
-	.woocommerce-cart div.woocommerce-notices-wrapper {
-		margin-bottom: 20px;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-	.woocommerce-cart div.woocommerce-notices-wrapper {
-		margin-bottom: 30px;
-	}
-}
-
-@media screen and (max-width: 600px) {
-	.woocommerce-cart .actions {
-  		display: flex;
-		flex-direction: column;
-		align-items: stretch;
-		width: 100%;
-	}
-
-	.woocommerce-cart .actions > .button[name="update_cart"] {
-	}
 }
