@@ -98,7 +98,7 @@
 	width: auto !important;
 	padding: 10px;
 	font-size: 18px;
-	border: 1px solid #e0e0e0;
+	border: 1px solid #e0e0e0 !important;
 	line-height: 1.5;
 	border-radius: 4px;
 	box-sizing: border-box;
@@ -108,7 +108,7 @@
 	padding: 10px 16px;
 	font-size: 18px;
 	line-height: 1.5;
-	border: 1px solid transparent;
+	border: 1px solid transparent !important;
 	border-radius: 4px;
 	cursor: pointer;
 	box-sizing: border-box;
@@ -124,7 +124,7 @@ form.woocommerce-cart-form button[name="update_cart"] {
 	padding: 10px 16px;
 	font-size: 18px;
 	line-height: 1.5;
-	border: 1px solid transparent;
+	border: 1px solid transparent !important;
 	border-radius: 4px;
 	box-sizing: border-box;
 	cursor: pointer;
