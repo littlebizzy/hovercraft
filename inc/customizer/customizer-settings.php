@@ -2560,6 +2560,19 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	'settings' => 'hovercraft_default_text_color'
 	)
 ) );
+
+// divider above default link colors setting
+$wp_customize->add_setting( 'hovercraft_divider_default_link_colors', array(
+	'sanitize_callback' => '__return_null',
+));
+
+// divider above default link colors control
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'hovercraft_divider_default_link_colors', array(
+	'description' => '<hr style="margin: 16px 0; border: 0; border-top: 2px solid #ddd;">',
+	'type' => 'hidden',
+	'section' => 'colors',
+	'settings' => 'hovercraft_divider_default_link_colors',
+)));
 	
 // default link color setting
 $wp_customize->add_setting( 'hovercraft_default_link_color', array(
@@ -2591,6 +2604,19 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	)
 ) );
 
+// divider above hero snippet colors setting
+$wp_customize->add_setting( 'hovercraft_divider_hero_snippet_colors', array(
+	'sanitize_callback' => '__return_null',
+));
+
+// divider above hero snippet colors control
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'hovercraft_divider_hero_snippet_colors', array(
+	'description' => '<hr style="margin: 16px 0; border: 0; border-top: 2px solid #ddd;">',
+	'type' => 'hidden',
+	'section' => 'colors',
+	'settings' => 'hovercraft_divider_hero_snippet_colors',
+)));
+
 // hero snippet text color setting
 $wp_customize->add_setting( 'hovercraft_hero_snippet_text_color', array(
 	'default' => '#ffffff',
@@ -2620,6 +2646,19 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	'settings' => 'hovercraft_hero_snippet_link_color'
 	)
 ) );
+
+// divider above breadcrumbs colors setting
+$wp_customize->add_setting( 'hovercraft_divider_breadcrumbs_colors', array(
+	'sanitize_callback' => '__return_null',
+));
+
+// divider above breadcrumbs colors control
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'hovercraft_divider_breadcrumbs_colors', array(
+	'description' => '<hr style="margin: 16px 0; border: 0; border-top: 2px solid #ddd;">',
+	'type' => 'hidden',
+	'section' => 'colors',
+	'settings' => 'hovercraft_divider_breadcrumbs_colors',
+)));
 	
 // breadcrumbs text color setting
 $wp_customize->add_setting( 'hovercraft_breadcrumbs_text_color', array(
@@ -2650,6 +2689,19 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	'settings' => 'hovercraft_breadcrumbs_link_color'
 	)
 ) );
+
+// divider above search bar colors setting
+$wp_customize->add_setting( 'hovercraft_divider_search_bar_colors', array(
+	'sanitize_callback' => '__return_null',
+));
+
+// divider above search bar colors control
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'hovercraft_divider_search_bar_colors', array(
+	'description' => '<hr style="margin: 16px 0; border: 0; border-top: 2px solid #ddd;">',
+	'type' => 'hidden',
+	'section' => 'colors',
+	'settings' => 'hovercraft_divider_search_bar_colors',
+)));
 
 // search bar background color setting
 $wp_customize->add_setting( 'hovercraft_search_bar_background_color', array(
@@ -2711,6 +2763,19 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	)
 ) );
 
+// divider above heading colors setting
+$wp_customize->add_setting( 'hovercraft_divider_heading_colors', array(
+	'sanitize_callback' => '__return_null',
+));
+
+// divider above heading colors control
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'hovercraft_divider_heading_colors', array(
+	'description' => '<hr style="margin: 16px 0; border: 0; border-top: 2px solid #ddd;">',
+	'type' => 'hidden',
+	'section' => 'colors',
+	'settings' => 'hovercraft_divider_heading_colors',
+)));
+
 // h1 h2 title divider background color setting
 $wp_customize->add_setting( 'hovercraft_title_divider_background_color', array(
 	'default' => '#757575',
@@ -2725,6 +2790,19 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	'settings' => 'hovercraft_title_divider_background_color'
 	)
 ) );
+
+// divider above blockquote colors setting
+$wp_customize->add_setting( 'hovercraft_divider_blockquote_colors', array(
+	'sanitize_callback' => '__return_null',
+));
+
+// divider above blockquote colors control
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'hovercraft_divider_blockquote_colors', array(
+	'description' => '<hr style="margin: 16px 0; border: 0; border-top: 2px solid #ddd;">',
+	'type' => 'hidden',
+	'section' => 'colors',
+	'settings' => 'hovercraft_divider_blockquote_colors',
+)));
 
 // blockquote text color setting
 $wp_customize->add_setting( 'hovercraft_blockquote_text_color', array(
@@ -2756,6 +2834,19 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	)
 ) );
 
+// divider above woocommerce price colors setting
+$wp_customize->add_setting( 'hovercraft_divider_woocommerce_price_colors', array(
+	'sanitize_callback' => '__return_null',
+));
+
+// divider above woocommerce price colors control
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'hovercraft_divider_woocommerce_price_colors', array(
+	'description' => '<hr style="margin: 16px 0; border: 0; border-top: 2px solid #ddd;">',
+	'type' => 'hidden',
+	'section' => 'colors',
+	'settings' => 'hovercraft_divider_woocommerce_price_colors',
+)));
+
 // woocommerce price text color setting
 $wp_customize->add_setting( 'hovercraft_woocommerce_price_text_color', array(
 	'default' => '#9E9D24',
@@ -2770,6 +2861,19 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	'settings' => 'hovercraft_woocommerce_price_text_color'
 	)
 ) );
+
+// divider above offcanvas menu colors setting
+$wp_customize->add_setting( 'hovercraft_divider_offcanvas_menu_colors', array(
+	'sanitize_callback' => '__return_null',
+));
+
+// divider above offcanvas menu colors control
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'hovercraft_divider_offcanvas_menu_colors', array(
+	'description' => '<hr style="margin: 16px 0; border: 0; border-top: 2px solid #ddd;">',
+	'type' => 'hidden',
+	'section' => 'colors',
+	'settings' => 'hovercraft_divider_offcanvas_menu_colors',
+)));
 
 // offcanvas menu background color setting
 $wp_customize->add_setting( 'hovercraft_offcanvas_background_color', array(
@@ -2800,6 +2904,19 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	'settings' => 'hovercraft_offcanvas_toggle_background_color'
 	)
 ) );
+
+// divider above topbar colors setting
+$wp_customize->add_setting( 'hovercraft_divider_topbar_colors', array(
+	'sanitize_callback' => '__return_null',
+));
+
+// divider above topbar colors control
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'hovercraft_divider_topbar_colors', array(
+	'description' => '<hr style="margin: 16px 0; border: 0; border-top: 2px solid #ddd;">',
+	'type' => 'hidden',
+	'section' => 'colors',
+	'settings' => 'hovercraft_divider_topbar_colors',
+)));
  
 // topbar background color setting
 $wp_customize->add_setting( 'hovercraft_topbar_background_color', array(
@@ -2846,6 +2963,19 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	)
 ) );
 
+// divider above full hero colors setting
+$wp_customize->add_setting( 'hovercraft_divider_full_hero_colors', array(
+	'sanitize_callback' => '__return_null',
+));
+
+// divider above full hero colors control
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'hovercraft_divider_full_hero_colors', array(
+	'description' => '<hr style="margin: 16px 0; border: 0; border-top: 2px solid #ddd;">',
+	'type' => 'hidden',
+	'section' => 'colors',
+	'settings' => 'hovercraft_divider_full_hero_colors',
+)));
+
 // full hero header background color setting
 $wp_customize->add_setting( 'hovercraft_full_hero_header_background_color', array(
 	'default' => '#37474f',
@@ -2860,6 +2990,19 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	'settings' => 'hovercraft_full_hero_header_background_color'
 	)
 ) );
+
+// divider above hero gradient colors setting
+$wp_customize->add_setting( 'hovercraft_divider_hero_gradient_colors', array(
+	'sanitize_callback' => '__return_null',
+));
+
+// divider above hero gradient colors control
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'hovercraft_divider_hero_gradient_colors', array(
+	'description' => '<hr style="margin: 16px 0; border: 0; border-top: 2px solid #ddd;">',
+	'type' => 'hidden',
+	'section' => 'colors',
+	'settings' => 'hovercraft_divider_hero_gradient_colors',
+)));
 
 // hero gradient start color setting
 $wp_customize->add_setting( 'hovercraft_hero_gradient_start_color', array(
@@ -2905,6 +3048,19 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	'settings' => 'hovercraft_hero_gradient_stop_color'
 	)
 ) );
+
+// divider above half hero colors setting
+$wp_customize->add_setting( 'hovercraft_divider_half_hero_colors', array(
+	'sanitize_callback' => '__return_null',
+));
+
+// divider above half hero colors control
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'hovercraft_divider_half_hero_colors', array(
+	'description' => '<hr style="margin: 16px 0; border: 0; border-top: 2px solid #ddd;">',
+	'type' => 'hidden',
+	'section' => 'colors',
+	'settings' => 'hovercraft_divider_half_hero_colors',
+)));
 	
 // header half hero background color setting
 $wp_customize->add_setting( 'hovercraft_header_half_hero_background_color', array(
@@ -2950,6 +3106,19 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	'settings' => 'hovercraft_header_half_hero_link_color'
 	)
 ) );
+
+// divider above mini hero colors setting
+$wp_customize->add_setting( 'hovercraft_divider_mini_hero_colors', array(
+	'sanitize_callback' => '__return_null',
+));
+
+// divider above mini hero colors control
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'hovercraft_divider_mini_hero_colors', array(
+	'description' => '<hr style="margin: 16px 0; border: 0; border-top: 2px solid #ddd;">',
+	'type' => 'hidden',
+	'section' => 'colors',
+	'settings' => 'hovercraft_divider_mini_hero_colors',
+)));
 	
 // header mini hero background color setting
 $wp_customize->add_setting( 'hovercraft_header_mini_hero_background_color', array(
@@ -2995,6 +3164,19 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	'settings' => 'hovercraft_mini_hero_header_link_color'
 	)
 ) );
+
+// divider above header basic colors setting
+$wp_customize->add_setting( 'hovercraft_divider_header_basic_colors', array(
+	'sanitize_callback' => '__return_null',
+));
+
+// divider above header basic colors control
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'hovercraft_divider_header_basic_colors', array(
+	'description' => '<hr style="margin: 16px 0; border: 0; border-top: 2px solid #ddd;">',
+	'type' => 'hidden',
+	'section' => 'colors',
+	'settings' => 'hovercraft_divider_header_basic_colors',
+)));
 	
 // header basic background color setting
 $wp_customize->add_setting( 'hovercraft_header_basic_background_color', array(
@@ -3040,6 +3222,19 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	'settings' => 'hovercraft_basic_hero_header_link_color'
 	)
 ) );
+
+// divider above posthero colors setting
+$wp_customize->add_setting( 'hovercraft_divider_posthero_colors', array(
+	'sanitize_callback' => '__return_null',
+));
+
+// divider above posthero colors control
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'hovercraft_divider_posthero_colors', array(
+	'description' => '<hr style="margin: 16px 0; border: 0; border-top: 2px solid #ddd;">',
+	'type' => 'hidden',
+	'section' => 'colors',
+	'settings' => 'hovercraft_divider_posthero_colors',
+)));
 	
 // posthero background color setting
 $wp_customize->add_setting( 'hovercraft_posthero_background_color', array(
@@ -3086,6 +3281,19 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	)
 ) );
 
+// divider above after byline colors setting
+$wp_customize->add_setting( 'hovercraft_divider_after_byline_colors', array(
+	'sanitize_callback' => '__return_null',
+));
+
+// divider above after byline colors control
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'hovercraft_divider_after_byline_colors', array(
+	'description' => '<hr style="margin: 16px 0; border: 0; border-top: 2px solid #ddd;">',
+	'type' => 'hidden',
+	'section' => 'colors',
+	'settings' => 'hovercraft_divider_after_byline_colors',
+)));
+
 // after byline background color setting
 $wp_customize->add_setting( 'hovercraft_after_byline_background_color', array(
 	'default' => '#fff8e1',
@@ -3130,6 +3338,19 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	'settings' => 'hovercraft_after_byline_link_color'
 	)
 ) );
+
+// divider above sidebar callout colors setting
+$wp_customize->add_setting( 'hovercraft_divider_sidebar_callout_colors', array(
+	'sanitize_callback' => '__return_null',
+));
+
+// divider above sidebar callout colors control
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'hovercraft_divider_sidebar_callout_colors', array(
+	'description' => '<hr style="margin: 16px 0; border: 0; border-top: 2px solid #ddd;">',
+	'type' => 'hidden',
+	'section' => 'colors',
+	'settings' => 'hovercraft_divider_sidebar_callout_colors',
+)));
 	
 // sidebar callout background color setting
 $wp_customize->add_setting( 'hovercraft_sidebar_callout_background_color', array(
@@ -3251,6 +3472,19 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	)
 ) );
 
+// divider above main background colors setting
+$wp_customize->add_setting( 'hovercraft_divider_main_background_colors', array(
+	'sanitize_callback' => '__return_null',
+));
+
+// divider above main background colors control
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'hovercraft_divider_main_background_colors', array(
+	'description' => '<hr style="margin: 16px 0; border: 0; border-top: 2px solid #ddd;">',
+	'type' => 'hidden',
+	'section' => 'colors',
+	'settings' => 'hovercraft_divider_main_background_colors',
+)));
+
 // main background color setting
 $wp_customize->add_setting( 'hovercraft_main_background_color', array(
 	'default' => '#eceff1',
@@ -3281,6 +3515,19 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	)
 ) );
 
+// divider above content background colors setting
+$wp_customize->add_setting( 'hovercraft_divider_content_background_colors', array(
+	'sanitize_callback' => '__return_null',
+));
+
+// divider above content background colors control
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'hovercraft_divider_content_background_colors', array(
+	'description' => '<hr style="margin: 16px 0; border: 0; border-top: 2px solid #ddd;">',
+	'type' => 'hidden',
+	'section' => 'colors',
+	'settings' => 'hovercraft_divider_content_background_colors',
+)));
+
 // content background color setting
 $wp_customize->add_setting( 'hovercraft_content_background_color', array(
 	'default' => '#ffffff',
@@ -3295,6 +3542,19 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	'settings' => 'hovercraft_content_background_color'
 	)
 ) );
+
+// divider above sidebar widgets colors setting
+$wp_customize->add_setting( 'hovercraft_divider_sidebar_widgets_colors', array(
+	'sanitize_callback' => '__return_null',
+));
+
+// divider above sidebar widgets colors control
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'hovercraft_divider_sidebar_widgets_colors', array(
+	'description' => '<hr style="margin: 16px 0; border: 0; border-top: 2px solid #ddd;">',
+	'type' => 'hidden',
+	'section' => 'colors',
+	'settings' => 'hovercraft_divider_sidebar_widgets_colors',
+)));
 
 // sidebar widgets background color setting
 $wp_customize->add_setting( 'hovercraft_sidebar_widget_background_color', array(
@@ -3371,6 +3631,19 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	)
 ) );
 
+// divider above tile colors setting
+$wp_customize->add_setting( 'hovercraft_divider_tile_colors', array(
+	'sanitize_callback' => '__return_null',
+));
+
+// divider above tile colors control
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'hovercraft_divider_tile_colors', array(
+	'description' => '<hr style="margin: 16px 0; border: 0; border-top: 2px solid #ddd;">',
+	'type' => 'hidden',
+	'section' => 'colors',
+	'settings' => 'hovercraft_divider_tile_colors',
+)));
+
 // tile background color setting
 $wp_customize->add_setting( 'hovercraft_tile_background_color', array(
 	'default' => '#eceff1',
@@ -3401,6 +3674,19 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	)
 ) );
 
+// divider above column colors setting
+$wp_customize->add_setting( 'hovercraft_divider_column_colors', array(
+	'sanitize_callback' => '__return_null',
+));
+
+// divider above column colors control
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'hovercraft_divider_column_colors', array(
+	'description' => '<hr style="margin: 16px 0; border: 0; border-top: 2px solid #ddd;">',
+	'type' => 'hidden',
+	'section' => 'colors',
+	'settings' => 'hovercraft_divider_column_colors',
+)));
+
 // column background color setting
 $wp_customize->add_setting( 'hovercraft_column_background_color', array(
 	'default' => '#eceff1',
@@ -3430,6 +3716,19 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	'settings' => 'hovercraft_column_border_color'
 	)
 ) );
+
+// divider above postmain top colors setting
+$wp_customize->add_setting( 'hovercraft_divider_postmain_top_colors', array(
+	'sanitize_callback' => '__return_null',
+));
+
+// divider above postmain top colors control
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'hovercraft_divider_postmain_top_colors', array(
+	'description' => '<hr style="margin: 16px 0; border: 0; border-top: 2px solid #ddd;">',
+	'type' => 'hidden',
+	'section' => 'colors',
+	'settings' => 'hovercraft_divider_postmain_top_colors',
+)));
 
 // home postmain (top) background color setting
 $wp_customize->add_setting( 'hovercraft_postmain_top_background_color', array(
@@ -3476,6 +3775,19 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	)
 ) );
 
+// divider above postmain bottom colors setting
+$wp_customize->add_setting( 'hovercraft_divider_postmain_bottom_colors', array(
+	'sanitize_callback' => '__return_null',
+));
+
+// divider above postmain bottom colors control
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'hovercraft_divider_postmain_bottom_colors', array(
+	'description' => '<hr style="margin: 16px 0; border: 0; border-top: 2px solid #ddd;">',
+	'type' => 'hidden',
+	'section' => 'colors',
+	'settings' => 'hovercraft_divider_postmain_bottom_colors',
+)));
+
 // home postmain (bottom) background color setting
 $wp_customize->add_setting( 'hovercraft_postmain_bottom_background_color', array(
 	'default' => '#eceff1',
@@ -3520,6 +3832,19 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	'settings' => 'hovercraft_postmain_bottom_link_color'
 	)
 ) );
+
+// divider above prefooter top colors setting
+$wp_customize->add_setting( 'hovercraft_divider_prefooter_top_colors', array(
+	'sanitize_callback' => '__return_null',
+));
+
+// divider above prefooter top colors control
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'hovercraft_divider_prefooter_top_colors', array(
+	'description' => '<hr style="margin: 16px 0; border: 0; border-top: 2px solid #ddd;">',
+	'type' => 'hidden',
+	'section' => 'colors',
+	'settings' => 'hovercraft_divider_prefooter_top_colors',
+)));
 
 // prefooter (top) background color setting
 $wp_customize->add_setting( 'hovercraft_prefooter_top_background_color', array(
@@ -3566,6 +3891,19 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	)
 ) );
 
+// divider above prefooter bottom colors setting
+$wp_customize->add_setting( 'hovercraft_divider_prefooter_bottom_colors', array(
+	'sanitize_callback' => '__return_null',
+));
+
+// divider above prefooter bottom colors control
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'hovercraft_divider_prefooter_bottom_colors', array(
+	'description' => '<hr style="margin: 16px 0; border: 0; border-top: 2px solid #ddd;">',
+	'type' => 'hidden',
+	'section' => 'colors',
+	'settings' => 'hovercraft_divider_prefooter_bottom_colors',
+)));
+
 // prefooter (bottom) background color setting
 $wp_customize->add_setting( 'hovercraft_prefooter_bottom_background_color', array(
 	'default' => '#263238',
@@ -3610,6 +3948,19 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	'settings' => 'hovercraft_prefooter_bottom_link_color'
 	)
 ) );
+
+// divider above footer colors setting
+$wp_customize->add_setting( 'hovercraft_divider_footer_colors', array(
+	'sanitize_callback' => '__return_null',
+));
+
+// divider above footer colors control
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'hovercraft_divider_footer_colors', array(
+	'description' => '<hr style="margin: 16px 0; border: 0; border-top: 2px solid #ddd;">',
+	'type' => 'hidden',
+	'section' => 'colors',
+	'settings' => 'hovercraft_divider_footer_colors',
+)));
 
 // footer background color setting
 $wp_customize->add_setting( 'hovercraft_footer_background_color', array(
@@ -3716,6 +4067,19 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	)
 ) );
 
+// divider above copyright colors setting
+$wp_customize->add_setting( 'hovercraft_divider_copyright_colors', array(
+	'sanitize_callback' => '__return_null',
+));
+
+// divider above copyright colors control
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'hovercraft_divider_copyright_colors', array(
+	'description' => '<hr style="margin: 16px 0; border: 0; border-top: 2px solid #ddd;">',
+	'type' => 'hidden',
+	'section' => 'colors',
+	'settings' => 'hovercraft_divider_copyright_colors',
+)));
+
 // copyright background color setting
 $wp_customize->add_setting( 'hovercraft_copyright_background_color', array(
         'default' => '#ffffff',
@@ -3759,6 +4123,19 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	'settings' => 'hovercraft_copyright_link_color'
 	)
 ) );
+
+// divider above back to top colors setting
+$wp_customize->add_setting( 'hovercraft_divider_back_to_top', array(
+	'sanitize_callback' => '__return_null',
+));
+
+// divider above back to top colors control
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'hovercraft_divider_back_to_top', array(
+	'description' => '<hr style="margin: 16px 0; border: 0; border-top: 2px solid #ddd;">',
+	'type' => 'hidden',
+	'section' => 'colors',
+	'settings' => 'hovercraft_divider_back_to_top',
+)));
 
 // back to top background color setting
 $wp_customize->add_setting( 'hovercraft_back_to_top_background_color', array(
