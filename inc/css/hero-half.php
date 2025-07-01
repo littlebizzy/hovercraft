@@ -2,6 +2,25 @@
 // styles for half hero
 ?>
 
+#hero-half-container {
+	width: 100%; /* correct */
+	height: 100%; /* correct */
+	padding: 0; /* correct */
+	display: table; /* correct */
+	position: relative; /* required to keep video background from escaping esp on mobile */
+}
+
+.hero-half-wrapper {
+	display: table-row; /* correct */
+}
+
+.hero-half {
+	width: 100%;
+	height: 100%;
+	display: table-cell;
+	vertical-align: middle;
+}
+
 @media screen and (max-width: 1200px) {
 #header-half-hero {
 	width: 100%;
