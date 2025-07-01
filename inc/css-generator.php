@@ -500,34 +500,12 @@ if ( file_exists( $hovercraft_social_sharing_css ) ) {
 
 
 /* after byline (widget area) */
-
-@media screen and (max-width: 1200px) {
-.after-byline {
-	background: <?php echo $after_byline_background_color; ?>;
-	font-size: <?php echo $after_byline_mobile_font_size; ?>px;
-	padding: <?php echo $after_byline_padding; ?>px;
-	margin-bottom: 20px;
-	color: <?php echo $after_byline_text_color; ?>;
-	}
+<?php
+$hovercraft_after_byline_css = get_template_directory() . '/inc/css/after-byline.php';
+if ( file_exists( $hovercraft_after_byline_css ) ) {
+    include $hovercraft_after_byline_css;
 }
-
-@media screen and (min-width: 1200px) {
-.after-byline {
-	background: <?php echo $after_byline_background_color; ?>;
-	font-size: <?php echo $after_byline_desktop_font_size; ?>px;
-	padding: <?php echo $after_byline_padding; ?>px;
-	margin-bottom: 30px;
-	color: <?php echo $after_byline_text_color; ?>;
-	}
-}
-
-.after-byline p:last-child {
-	margin-bottom: 0;
-}
-
-.after-byline a {
-	color: <?php echo $after_byline_link_color; ?>;
-}
+?>
 
 
 /* full hero */
