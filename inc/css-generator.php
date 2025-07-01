@@ -596,28 +596,6 @@ h1.full-hero-title {
 
 
 /* half hero */
-
-#hero-half-container {
-	width: 100%; /* correct */
-	height: 100%; /* correct */
-	padding: 0; /* correct */
-	display: table; /* correct */
-	position: relative; /* required to keep video background from escaping esp on mobile */
-}
-
-.hero-half-wrapper {
-	display: table-row; /* correct */
-}
-
-.hero-half {
-	width: 100%;
-	height: 100%;
-	display: table-cell;
-	vertical-align: middle;
-}
-
-
-/* half hero */
 <?php
 $hovercraft_hero_half_css = get_template_directory() . '/inc/css/hero-half.php';
 if ( file_exists( $hovercraft_hero_half_css ) ) {
