@@ -617,79 +617,22 @@ h1.full-hero-title {
 }
 
 
-/* half hero header */
-
-@media screen and (max-width: 1200px) {
-#header-half-hero {
-	width: 100%;
-	display: table;
-	padding: 10px 20px;
-	background: #ffffff;
-	color: <?php echo $half_hero_text_color; ?>;
-	}
+/* half hero */
+<?php
+$hovercraft_hero_half_css = get_template_directory() . '/inc/css/hero-half.php';
+if ( file_exists( $hovercraft_hero_half_css ) ) {
+    include $hovercraft_hero_half_css;
 }
-
-@media screen and (min-width: 1200px) {
-#header-half-hero {
-	width: 100%;
-	display: table;
-	margin: 0px auto;
-	padding: 20px 0px;
-	background: #ffffff;
-	color: <?php echo $half_hero_text_color; ?>;
-	}
-}
-
-@media screen and (max-width: 1200px) {
-h1.half-hero-title {
-	font-weight: 700;
-	margin-bottom: 30px;
-	color: #ffffff;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-h1.half-hero-title {
-	font-weight: 700;
-	margin-bottom: 30px;
-	color: #ffffff;
-	}
-}
+?>
 
 
 /* mini hero */
-
-@media screen and (max-width: 1200px) {
-#hero-mini {
-	width:100%; /* correct */
-	padding:0px; /* correct */
-	display:table; /* correct */
-	}
+<?php
+$hovercraft_hero_mini_css = get_template_directory() . '/inc/css/hero-mini.php';
+if ( file_exists( $hovercraft_hero_mini_css ) ) {
+    include $hovercraft_hero_mini_css;
 }
-
-@media screen and (min-width: 1200px) {
-#hero-mini {
-	width:100%; /* correct */
-	padding:0px; /* correct */
-	display:table; /* correct */
-	}
-}
-
-@media screen and (max-width: 1200px) {
-h1.mini-hero-title {
-	font-weight: 700;
-	margin-bottom: 0;
-	color: #ffffff;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-h1.mini-hero-title {
-	font-weight: 700;
-	margin-bottom: 0;
-	color: #ffffff;
-	}
-}
+?>
 
 
 /* logo */
