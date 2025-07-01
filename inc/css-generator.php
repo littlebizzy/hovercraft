@@ -1780,56 +1780,20 @@ a.button-secondary:hover {
 	color: #ffffff !important;
 }
 
-
-	
-
-
 @media screen and (min-width: 1200px) {
 .welcome-wrapper {
 	max-width: <?php echo $hero_content_width_desktop; ?>;
 	}
 }
 
-@media screen and (max-width: 1200px) {
-#posthero {
-	width: 100%;
-	padding: 30px 20px;
-	text-align: center;
-	background: <?php echo $posthero_background_color; ?>;
-	color: <?php echo $posthero_text_color; ?>;
-	}
+/* posthero */
+<?php
+$hovercraft_posthero_css = get_template_directory() . '/inc/css/posthero.php';
+if ( file_exists( $hovercraft_posthero_css ) ) {
+	include $hovercraft_posthero_css;
 }
+?>
 
-@media screen and (min-width: 1200px) {
-#posthero {
-	width: 100%;
-	padding: 30px 0px;
-	text-align: center;
-	background: <?php echo $posthero_background_color; ?>;
-	color: <?php echo $posthero_text_color; ?>;
-	}
-}
-
-#posthero .widget-wrapper {
-	display: inline-block;
-}
-
-#posthero .widget_text {
-	display: block;
-}
-	
-#posthero img {
-	margin-right: 30px;
-}
-	
-#posthero img:last-of-type {
-	margin-right: 0;
-}
-
-#posthero a {
-	color: <?php echo $posthero_link_color; ?>;
-	text-decoration: <?php echo $posthero_link_decoration; ?>;
-}
 
 /* no bottom margin if the only thing in posthero is a paragraph or heading title */
 #posthero p:last-child, #posthero h2:last-child, #posthero h3:last-child, #posthero h4:last-child, #posthero h5:last-child {
