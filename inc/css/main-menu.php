@@ -33,25 +33,49 @@
 	list-style-type: none;
 	display: inline-block;
 	vertical-align: middle;
+	position: relative;
 }
 
+/* hide dropdowns by default */
 .menu-desktop > .main-menu ul ul,
 .menu-desktop > .main-menu ul ul ul {
 	display: none;
 	position: absolute;
 }
 
-.menu-desktop > .main-menu ul ul {
-	top: 36px;
-}
-
-.menu-desktop > .main-menu ul li:hover > ul,
-.menu-desktop > .main-menu li:hover ul,
-.menu-desktop > .main-menu li ul li {
+/* show when JS adds .open */
+.menu-desktop > .main-menu li.open > ul {
 	display: block;
 	z-index: 100;
 }
 
+/* first tier offset */
+.menu-desktop > .main-menu ul ul {
+	top: 36px;
+}
+
+/* deeper tiers */
+.menu-desktop > .main-menu ul ul ul li {
+	position: relative;
+	top: -56px;
+	left: 250px;
+}
+
+/* dropdown links */
+.menu-desktop > .main-menu ul ul li {
+	width: 250px;
+	display: list-item;
+	position: relative;
+	text-align: left;
+}
+
+.menu-desktop > .main-menu ul ul a,
+.main-menu ul ul ul a {
+	display: block !important;
+	line-height: 60px;
+}
+
+/* top-level links */
 .menu-desktop > .main-menu a {
 	font-family: <?php 
 		echo !empty($main_menu_font_family) 
@@ -68,50 +92,7 @@
 	text-decoration: none !important;
 }
 
-
-/* first tier dropdown */
-.menu-desktop > .main-menu ul ul li {
-	width: 250px;
-	display: list-item;
-	position: relative;
-	text-align: left;
-}
-
-/* optional older dropdown rules */
-.menu-desktop > .main-menu li ul {
-	position: absolute;
-	display: none;
-}
-
-/* force block + line height only on dropdown links */
-.menu-desktop > .main-menu ul ul a,
-.main-menu ul ul ul a {
-	display: block !important;
-	line-height: 60px;
-}
-
-/* second, third, and deeper tiers */
-.menu-desktop > .main-menu ul ul ul li {
-	position: relative;
-	top: -56px;
-	left: 250px;
-}
-
-/*
-dropdown symbol should only appear in .main-menu context in header (not e.g. menu widgets in footer or sidebar)
-
-.main-menu .menu-item-has-children > a:after {
-	font-family: "Material Icons";
-	font-size: 24px;
-	content: '\e5cf';
-	vertical-align: middle;
-}
-
-.main-menu li > a:only-child:after {
-	content: '';
-}
-*/
-
+/* toggle icon button */
 .main-menu .menu-item-has-children > a.menu-toggle {
 	position: relative;
 	vertical-align: top;
@@ -125,3 +106,18 @@ dropdown symbol should only appear in .main-menu context in header (not e.g. men
 	content: "\f078";
 	padding-left: 0;
 }
+
+/*
+dropdown symbol should only appear in .main-menu context in header (not e.g. menu widgets)
+
+.main-menu .menu-item-has-children > a:after {
+	font-family: "Material Icons";
+	font-size: 24px;
+	content: '\e5cf';
+	vertical-align: middle;
+}
+
+.main-menu li > a:only-child:after {
+	content: '';
+}
+*/
