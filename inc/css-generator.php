@@ -612,36 +612,12 @@ if ( file_exists( $hovercraft_branding_css ) ) {
 
 
 /* tagline */
-	
-@media screen and (max-width: 1200px) {
-.tagline {
-	font-size: 14px;
-	line-height: 1;
-	display: none;
-	}
+<?php
+$hovercraft_tagline_css = get_template_directory() . '/inc/css/tagline.php';
+if ( file_exists( $hovercraft_tagline_css ) ) {
+	include $hovercraft_tagline_css;
 }
-
-@media screen and (min-width: 1200px) {
-.tagline {
-	<?php if ( $tagline_display == 'right_of_site_title' ) { 
-			echo "margin-left: 30px;\n"; 
-		} else { 
-			echo "margin-left: 0;\n"; 
-		}  ?>
-	padding-top: 10px;
-	font-size: 14px;
-	line-height: 1;
-	<?php if ( $tagline_display == 'right_of_site_title' ) { 
-			echo "display: inline-block;\n";
-		} elseif ( $tagline_display == 'below_site_title' ) {
-			echo "display: block;\n";
-		} elseif ( $tagline_display == 'none' ) { 
-			echo "display: none;\n"; 
-		} else { 
-			echo "display: inline-block;\n";
-		}  ?>
-	}
-}
+?>
 
 
 /* general */
@@ -855,36 +831,12 @@ a:hover {
 
 
 /* hero snippet */
-
-@media screen and (max-width: 1200px) {
-.hero-snippet {
-	font-size: 16px;
-	color: <?php echo $hero_snippet_text_color; ?>;
-	}
+<?php
+$hovercraft_hero_snippet_css = get_template_directory() . '/inc/css/hero-snippet.php';
+if ( file_exists( $hovercraft_hero_snippet_css ) ) {
+	include $hovercraft_hero_snippet_css;
 }
-
-@media screen and (min-width: 1200px) {
-.hero-snippet {
-	font-size: 18px;
-	color: <?php echo $hero_snippet_text_color; ?>;
-	}
-}
-
-.hero-snippet a {
-	color: <?php echo $hero_snippet_link_color; ?>;
-}
-
-@media screen and (max-width: 1200px) {
-.hero-snippet .tagcloud {
-	margin-top: 20px;
-	}
-}	
-
-@media screen and (min-width: 1200px) {
-.hero-snippet .tagcloud {
-	margin-top: 30px;
-	}
-}	
+?>
 
 /* headings (titles) */
 
@@ -1052,55 +1004,14 @@ h5.author-biography-intro {
 	margin-right: auto; 
 }
 
-
-/* code styling */
-
-code {
-	font-family: 'Noto Sans Mono', monospace;
-	font-weight: 400;
-	background: #ECEFF1;
-	padding: 0px 5px;
+	
+/* code snippets */
+<?php
+$hovercraft_code_snippets_css = get_template_directory() . '/inc/css/code-snippets.php';
+if ( file_exists( $hovercraft_code_snippets_css ) ) {
+	include $hovercraft_code_snippets_css;
 }
-
-@media screen and (max-width: 1200px) {
-pre {
-	width: calc(100% - 40px) !important;
-	font-family: 'Noto Sans Mono', monospace;
-	font-weight: 400;
-	background: #ECEFF1; /* correct */
-	padding: 10px;
-	margin-bottom: 30px;
-	overflow-x: scroll;
-	white-space: pre;
-	color: <?php echo $default_text_color; ?>;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-pre {
-	width: 100%;
-	font-family: 'Noto Sans Mono', monospace;
-	font-weight: 400;
-	background: #ECEFF1; /* correct */
-	padding: 10px;
-	margin-bottom: 30px;
-	overflow-x: scroll;
-	white-space: pre;
-	color: <?php echo $default_text_color; ?>;
-	}
-}
-
-.pre {
-	width: 100%;
-	font-family: 'Noto Sans Mono', monospace;
-	background: #ECEFF1; /* correct */
-	padding: 10px;
-	margin-bottom: 30px;
-	overflow-x: scroll;
-	white-space: pre;
-	color: <?php echo $default_text_color; ?>;
-}
-
+?>
 
 /* buttons */
 <?php
@@ -1110,142 +1021,21 @@ if ( file_exists( $hovercraft_buttons_css ) ) {
 }
 ?>
 
-
 /* tiles */
-
-@media screen and (max-width: 1200px) {
-#tiles {
-	width: 100%;
-	padding: 30px 20px;
-	}
+<?php
+$hovercraft_tiles_css = get_template_directory() . '/inc/css/tiles.php';
+if ( file_exists( $hovercraft_tiles_css ) ) {
+	include $hovercraft_tiles_css;
 }
-
-@media screen and (min-width: 1200px) {
-#tiles {
-	width: 100%;
-	display: grid;
-  	<?php if ( $tiles_across == '3' ) { 
-			echo "grid-template-columns: repeat(3, 1fr);\n"; 
-		} elseif ( $tiles_across == '4' ) { 
-			echo "grid-template-columns: repeat(4, 1fr);\n"; 
-	} ?>
-  	gap: 30px;
-	}
-}
-
-@media screen and (max-width: 1200px) {
-#tiles-wide {
-	width: 100%;
-	padding: 0px;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-#tiles-wide {
-	width: 100%;
-	display: grid;
-  	<?php if ( $tiles_across == '3' ) { 
-			/* echo "grid-template-columns: repeat(3, 1fr);\n"; */
-			echo "grid-template-columns: repeat(3, minmax(200px, 1fr));\n";
-		} elseif ( $tiles_across == '4' ) { 
-			/* echo "grid-template-columns: repeat(4, 1fr);\n"; */
-			echo "grid-template-columns: repeat(4, minmax(200px, 1fr));\n";
-	} ?>
-  	gap: 30px;
-	}
-}
-
-@media screen and (max-width: 1200px) {
-.tile {
-	width: 100%;
-	margin-bottom: 30px;
-	padding: 30px;
-	text-align: center;
-	box-shadow: inset 0px 0px 0px 1px <?php echo $tile_border_color; ?>;
-	background: <?php echo $tile_background_color; ?>;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-.tile {
-	max-width: 100%;
-	padding: 30px;
-  	justify-content: center;
-  	align-items: center;
-	text-align: center;
-	box-shadow: inset 0px 0px 0px 1px <?php echo $tile_border_color; ?>;
-	display: inline-block;
-	background: <?php echo $tile_background_color; ?>;
-	}
-}
-
-.tile i {
-	margin-bottom: 20px;
-	font-size: 48px;
-	display: block;
-	color: <?php echo $default_link_color; ?>;
-}
-
-.tile img {
-	display: block;
-	margin: 0 auto;
-}
-
-.tile p:last-child {
-	margin-bottom: 0;
-}
-
-
-.tile p.wp-caption-text {
-	<?php if ( $tiles_captions == 'none') { echo "display: none;"; } ?>
-}
-
+?>
 
 /* bullets */
-
-@media screen and (max-width: 1200px) {
-	#bullets {
-	columns: 1;
-  column-fill: balance;
-	column-gap: 0;
-	}
+<?php
+$hovercraft_bullets_css = get_template_directory() . '/inc/css/bullets.php';
+if ( file_exists( $hovercraft_bullets_css ) ) {
+	include $hovercraft_bullets_css;
 }
-
-@media screen and (min-width: 1200px) {
-	#bullets {
-	columns: 2;
-  column-fill: balance;
-	column-gap: 40px;
-	}
-}
-
-@media screen and (max-width: 1200px) {
-#bullets p {
-	font-size: 14px;
-	margin-bottom: 20px;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-#bullets p {
-	font-size: 14px;
-	margin-bottom: 30px;
-	}
-}
-	
-#bullets ul, #bullets ol {
-	font-size: 14px;
-	margin-bottom: 40px;
-}
-
-#bullets li {
-	font-size: 14px;
-	margin-bottom: 10px;
-}
-
-.faq-item {
-	display: inline-block;
-}
+?>
 
 
 /* main menu (desktop) */
@@ -1525,103 +1315,6 @@ video.hero-background-video {
 	margin-left: 20px;
 	font-size: 36px;
 	color: <?php echo $default_text_color; ?>;
-}
-
-/* mini header */
-
-#hero-mini {
-<?php if ( $hero_gradient_tones == 'two_tones' ) { ?>
-	background: linear-gradient(<?php echo $hero_gradient_angle; ?>, <?php 
-		list($r1, $g1, $b1) = sscanf($hero_gradient_start_color, "#%02x%02x%02x");
-		echo "rgba({$r1}, {$g1}, {$b1}, {$hero_gradient_start_color_transparency})"; 
-		?> <?php echo $hero_gradient_start_color_length; ?>%, <?php 
-		list($r2, $g2, $b2) = sscanf($hero_gradient_stop_color, "#%02x%02x%02x");
-		echo "rgba({$r2}, {$g2}, {$b2}, {$hero_gradient_stop_color_transparency})"; 
-		?> <?php echo $hero_gradient_stop_color_length; ?>%)<?php if (!empty( $hero_image )) echo ", url({$hero_image})" ?>;
-<?php } elseif ( $hero_gradient_tones == 'three_tones' ) { ?>
-	background: linear-gradient(<?php echo $hero_gradient_angle; ?>, <?php 
-		list($r1, $g1, $b1) = sscanf($hero_gradient_start_color, "#%02x%02x%02x");
-		echo "rgba({$r1}, {$g1}, {$b1}, {$hero_gradient_start_color_transparency})"; 
-		?> <?php echo $hero_gradient_start_color_length; ?>%, <?php 
-		list($r1, $g1, $b1) = sscanf($hero_gradient_mid_color, "#%02x%02x%02x");
-		echo "rgba({$r1}, {$g1}, {$b1}, {$hero_gradient_mid_color_transparency})"; 
-		?> <?php echo $hero_gradient_mid_color_length; ?>%, <?php 
-		list($r2, $g2, $b2) = sscanf($hero_gradient_stop_color, "#%02x%02x%02x");
-		echo "rgba({$r2}, {$g2}, {$b2}, {$hero_gradient_stop_color_transparency})"; 
-		?> <?php echo $hero_gradient_stop_color_length; ?>%)<?php if (!empty( $hero_image )) echo ", url({$hero_image})" ?>;
-<?php } ?>
-	background-position: <?php $minipos = str_replace('_',' ',$mini_hero_background_position); echo $minipos; ?>;
-	background-size: cover;
-	background-repeat: no-repeat;
-}
-
-.hero-main-mini {
-<?php if ( $hero_gradient_tones == 'two_tones' ) { ?>
-	background: linear-gradient(<?php echo $hero_gradient_angle; ?>, <?php 
-		list($r1, $g1, $b1) = sscanf($hero_gradient_start_color, "#%02x%02x%02x");
-		echo "rgba({$r1}, {$g1}, {$b1}, {$hero_gradient_start_color_transparency})"; 
-		?> <?php echo $hero_gradient_start_color_length; ?>%, <?php 
-		list($r2, $g2, $b2) = sscanf($hero_gradient_stop_color, "#%02x%02x%02x");
-		echo "rgba({$r2}, {$g2}, {$b2}, {$hero_gradient_stop_color_transparency})"; 
-		?> <?php echo $hero_gradient_stop_color_length; ?>%)<?php if (!empty( $hero_image )) echo ", url({$hero_image})" ?>;
-<?php } elseif ( $hero_gradient_tones == 'three_tones' ) { ?>
-	background: linear-gradient(<?php echo $hero_gradient_angle; ?>, <?php 
-		list($r1, $g1, $b1) = sscanf($hero_gradient_start_color, "#%02x%02x%02x");
-		echo "rgba({$r1}, {$g1}, {$b1}, {$hero_gradient_start_color_transparency})"; 
-		?> <?php echo $hero_gradient_start_color_length; ?>%, <?php 
-		list($r1, $g1, $b1) = sscanf($hero_gradient_mid_color, "#%02x%02x%02x");
-		echo "rgba({$r1}, {$g1}, {$b1}, {$hero_gradient_mid_color_transparency})"; 
-		?> <?php echo $hero_gradient_mid_color_length; ?>%, <?php 
-		list($r2, $g2, $b2) = sscanf($hero_gradient_stop_color, "#%02x%02x%02x");
-		echo "rgba({$r2}, {$g2}, {$b2}, {$hero_gradient_stop_color_transparency})"; 
-		?> <?php echo $hero_gradient_stop_color_length; ?>%)<?php if (!empty( $hero_image )) echo ", url({$hero_image})" ?>;
-<?php } ?>
-	background-position: <?php $minipos = str_replace('_',' ',$mini_hero_background_position); echo $minipos; ?>;
-	background-size: cover;
-	background-repeat: no-repeat;
-}
-
-@media screen and (max-width: 1200px) {
-.hero-main-mini {
-	padding: 60px 20px; /* correct */
-	}
-}
-
-@media screen and (min-width: 1200px) {
-.hero-main-mini {
-	padding: <?php echo $mini_hero_vertical_padding; ?>px 0px;
-	}
-}
-
-@media screen and (max-width: 1200px) {
-#header-mini-hero {
-	width: 100%;
-	display: table;
-	padding: 10px 20px;
-	background: <?php echo $mini_hero_background_color; ?>;
-	color: <?php echo $mini_hero_header_text_color; ?>;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-#header-mini-hero {
-	width: 100%;
-	display: table;
-	margin: 0px auto;
-	padding: 20px 0px;
-	background: <?php echo $mini_hero_background_color; ?>;
-	color: <?php echo $mini_hero_header_text_color; ?>;
-	}
-}
-	
-#header-mini-hero .menu-mobile-wrapper i {
-	margin-left: 20px;
-	font-size: 36px;
-	color: <?php echo $mini_hero_header_text_color; ?>;
-}
-
-#header-mini-hero a {
-	color: <?php echo $mini_hero_header_link_color; ?>;
 }
 
 /* basic header */
