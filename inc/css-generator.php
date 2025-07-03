@@ -466,19 +466,13 @@ hr {
 }
 
 
-/* related posts... we use #related for simple user-friendly anchor */
-
-@media screen and (max-width: 1200px) {
-#related {
-	margin-top: 20px;
-	}
+/* related posts */
+<?php
+$hovercraft_related_posts_css = get_template_directory() . '/inc/css/related-posts.php';
+if ( file_exists( $hovercraft_related_posts_css ) ) {
+	include $hovercraft_related_posts_css;
 }
-
-@media screen and (min-width: 1200px) {
-#related {
-	margin-top: 30px;
-	}
-}
+?>
 
 
 /* tags */
