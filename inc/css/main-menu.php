@@ -106,18 +106,3 @@
 	content: "\f078";
 	padding-left: 0;
 }
-
-/*
-dropdown symbol should only appear in .main-menu context in header (not e.g. menu widgets)
-
-.main-menu .menu-item-has-children > a:after {
-	font-family: "Material Icons";
-	font-size: 24px;
-	content: '\e5cf';
-	vertical-align: middle;
-}
-
-.main-menu li > a:only-child:after {
-	content: '';
-}
-*/
