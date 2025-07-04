@@ -36,14 +36,14 @@
 	position: relative;
 }
 
-/* hide dropdowns by default */
+/* hide all dropdowns by default */
 .menu-desktop > .main-menu ul ul,
 .menu-desktop > .main-menu ul ul ul {
 	display: none;
 	position: absolute;
 }
 
-/* show when JS adds .open */
+/* show submenu only when .open class is present */
 .menu-desktop > .main-menu li.open > ul {
 	display: block;
 	z-index: 100;
@@ -55,10 +55,12 @@
 }
 
 /* deeper tiers */
-.menu-desktop > .main-menu ul ul ul li {
-	position: relative;
-	top: -56px;
+.menu-desktop > .main-menu ul ul ul {
+	top: 0;
 	left: 250px;
+	background: #fff;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+	min-width: 250px;
 }
 
 /* dropdown links */
@@ -73,6 +75,7 @@
 .main-menu ul ul ul a {
 	display: block !important;
 	line-height: 60px;
+	white-space: nowrap;
 }
 
 /* top-level links */
@@ -105,4 +108,9 @@
 	font-size: 12px;
 	content: "\f078";
 	padding-left: 0;
+}
+
+/* prevent legacy or duplicate caret styles */
+.main-menu .menu-item-has-children > a:after {
+	content: none;
 }
