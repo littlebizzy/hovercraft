@@ -12,6 +12,7 @@
 		var openTimer, closeTimer;
 
 		$li.on('mouseenter', function () {
+			clearTimeout(openTimer);
 			clearTimeout(closeTimer);
 			openTimer = setTimeout(function () {
 				$menu.find('li.open').not($li.parents()).removeClass('open');
@@ -21,6 +22,7 @@
 
 		$li.on('mouseleave', function () {
 			clearTimeout(openTimer);
+			clearTimeout(closeTimer);
 			closeTimer = setTimeout(function () {
 				$li.removeClass('open');
 			}, delayOut);
