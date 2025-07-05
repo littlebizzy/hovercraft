@@ -2,20 +2,20 @@
 // styles for main menu
 ?>
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 	.menu-desktop {
 		display: none;
 	}
 }
 
-.menu-desktop > .main-menu {
-	display: inline-block;
+@media screen and (min-width: 1200px) {
+	.menu-desktop {
+		display: block;
+	}
 }
 
-.menu-desktop > .main-menu:after {
-	content: "";
-	display: table;
-	clear: both;
+.menu-desktop > .main-menu {
+	display: inline-block;
 }
 
 .menu-desktop > .main-menu ul {
@@ -24,7 +24,7 @@
 	list-style-type: none;
 	position: relative;
 	text-align: right;
-	display: inline-table;
+	display: inline-block;
 }
 
 .menu-desktop > .main-menu ul li {
@@ -39,63 +39,57 @@
 /* hide all dropdowns by default */
 .menu-desktop > .main-menu ul ul,
 .menu-desktop > .main-menu ul ul ul {
-	display: block;
-	opacity: 0;
-	visibility: hidden;
-	pointer-events: none;
+	display: none;
 	position: absolute;
-	transition: opacity 0.2s ease, transform 0.2s ease;
-	transform: translateY(10px);
 }
 
-/* show submenu when open */
+/* show submenu only when .open class is present */
 .menu-desktop > .main-menu li.open > ul {
-	opacity: 1;
-	visibility: visible;
-	pointer-events: auto;
-	transform: translateY(0);
+	display: block;
 	z-index: 100;
 }
 
 /* first tier offset */
 .menu-desktop > .main-menu ul ul {
 	top: 36px;
-	min-width: 250px;
+	left: 0;
 	background: #fff;
-	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-	border: 1px solid #eee;
-	border-radius: 4px;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+	min-width: 250px;
 }
 
 /* deeper tiers */
 .menu-desktop > .main-menu ul ul ul {
 	top: 0;
-	left: 100%;
+	left: 250px;
+	background: #fff;
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
 	min-width: 250px;
 }
 
 /* dropdown links */
 .menu-desktop > .main-menu ul ul li {
+	width: 250px;
 	display: list-item;
 	position: relative;
 	text-align: left;
-	max-width: 300px;
 }
 
 .menu-desktop > .main-menu ul ul a,
 .main-menu ul ul ul a {
 	display: block !important;
-	line-height: 50px;
+	line-height: 60px;
 	white-space: normal;
-	font-size: 14px;
-	padding: 0 15px;
-	text-align: left;
-	text-decoration: none;
+	font-size: 90%;
+	background-color: #fff;
+	transition: background-color 0.2s ease;
+	padding-right: 20px;
+	padding-left: 20px;
 }
 
-/* hover background for submenu */
-.menu-desktop > .main-menu ul ul a:hover {
-	background: #f9f9f9;
+.menu-desktop > .main-menu ul ul a:hover,
+.main-menu ul ul ul a:hover {
+	background-color: #f9f9f9;
 }
 
 /* top-level links */
@@ -112,35 +106,27 @@
 	font-weight: <?php echo $main_menu_font_weight; ?>;
 	display: inline-block;
 	padding-left: 30px;
-	padding-right: 25px;
 	text-decoration: none !important;
 	position: relative;
 }
 
-/* caret icon */
+/* dropdown caret icon for items with children */
+.main-menu .menu-item-has-children > a {
+	padding-right: 25px;
+}
+
 .main-menu .menu-item-has-children > a:after {
 	content: "\f078";
 	font-family: FontAwesome;
 	font-size: 12px;
 	position: absolute;
-	right: 10px;
+	right: 5px;
 	top: 50%;
 	transform: translateY(-50%);
-	transition: transform 0.3s ease;
+	pointer-events: none;
 }
 
-/* caret rotates when open */
-.main-menu .menu-item-has-children.open > a:after {
-	transform: translateY(-50%) rotate(180deg);
-}
-
-/* accessibility focus */
-.menu-desktop > .main-menu a:focus {
-	outline: 2px solid #0073aa;
-	outline-offset: 2px;
-}
-
-/* hide legacy toggle links if any */
+/* prevent legacy or duplicate caret styles */
 .main-menu .menu-item-has-children > a.menu-toggle,
 .main-menu .menu-item-has-children > a.menu-toggle:after {
 	display: none !important;
