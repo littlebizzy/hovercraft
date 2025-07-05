@@ -2,27 +2,28 @@
 	'use strict';
 
 	var $menu = $('.menu-desktop');
-
 	if (!$menu.length) return;
 
-	$menu.find('.menu-toggle').on('click', function (e) {
-		e.preventDefault();
-		e.stopPropagation();
+	var delayIn = 100;  // submenu open delay
+	var delayOut = 150; // submenu close delay
 
-		var $toggle = $(this);
-		var $li = $toggle.closest('li');
-		var isOpen = $li.hasClass('open');
+	$menu.find('.menu-item-has-children').each(function () {
+		var $li = $(this);
+		var openTimer, closeTimer;
 
-		$menu.find('li.open').removeClass('open');
+		$li.on('mouseenter', function () {
+			clearTimeout(closeTimer);
+			openTimer = setTimeout(function () {
+				$menu.find('li.open').not($li.parents()).removeClass('open');
+				$li.addClass('open');
+			}, delayIn);
+		});
 
-		if (!isOpen) {
-			$li.addClass('open');
-		}
-	});
-
-	$(document).on('click', function (e) {
-		if (!$menu.has(e.target).length) {
-			$menu.find('li.open').removeClass('open');
-		}
+		$li.on('mouseleave', function () {
+			clearTimeout(openTimer);
+			closeTimer = setTimeout(function () {
+				$li.removeClass('open');
+			}, delayOut);
+		});
 	});
 })(jQuery);
