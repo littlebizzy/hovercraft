@@ -53,7 +53,10 @@
 	top: 100%;
 	left: 0;
 	background: #ffffff;
-	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+	box-shadow:
+		-2px 8px 12px rgba(0, 0, 0, 0.06),
+		 2px 8px 12px rgba(0, 0, 0, 0.06),
+		 0 10px 12px rgba(0, 0, 0, 0.08);
 	min-width: 180px;
 	max-width: 280px;
 	width: max-content;
@@ -65,7 +68,10 @@
 	top: 0;
 	left: 100%;
 	background: #ffffff;
-	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+	box-shadow:
+		-2px 6px 10px rgba(0, 0, 0, 0.05),
+		 2px 6px 10px rgba(0, 0, 0, 0.05),
+		 0 8px 10px rgba(0, 0, 0, 0.07);
 	min-width: 180px;
 	max-width: 280px;
 	width: max-content;
