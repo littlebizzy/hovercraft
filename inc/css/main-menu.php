@@ -53,7 +53,7 @@
 	top: 100%;
 	left: 0;
 	background: #ffffff;
-	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 	min-width: 180px;
 	max-width: 280px;
 	width: max-content;
@@ -65,7 +65,7 @@
 	top: 0;
 	left: 100%;
 	background: #ffffff;
-	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 	min-width: 180px;
 	max-width: 280px;
 	width: max-content;
@@ -75,27 +75,11 @@
 /* dropdown links */
 .menu-desktop > .main-menu ul ul li {
 	width: 100%;
-	display: list-item;
-	position: relative;
+	display: block;
 	text-align: left;
 }
 
-.menu-desktop > .main-menu ul ul a,
-.menu-desktop > .main-menu ul ul ul a {
-	display: block;
-	white-space: normal;
-	background-color: #ffffff;
-	transition: background-color 0.2s ease;
-	padding: 20px 20px;
-	line-height: 1.5;
-}
-
-.menu-desktop > .main-menu ul ul a:hover,
-.menu-desktop > .main-menu ul ul ul a:hover {
-	background-color: #f9f9f9;
-}
-
-/* top-level links */
+/* main menu links */
 .menu-desktop > .main-menu a {
 	font-family: <?php 
 		echo !empty($main_menu_font_family) 
@@ -110,26 +94,40 @@
 	display: inline-block;
 	padding-left: 30px;
 	text-decoration: none !important;
-	position: relative;
 }
 
-/* dropdown caret icon inserted by PHP as <span class="toggle"> */
+/* submenu links */
+.menu-desktop > .main-menu ul ul a,
+.menu-desktop > .main-menu ul ul ul a {
+	display: block;
+	background-color: #ffffff;
+	transition: background-color 0.2s ease;
+	padding: 15px 30px;
+	line-height: 1.5;
+}
+
+.menu-desktop > .main-menu ul ul a:hover,
+.menu-desktop > .main-menu ul ul ul a:hover {
+	background-color: #f5f5f5;
+}
+
+/* placeholder: not needed currently but keeping selector */
 .menu-desktop > .main-menu .menu-item-has-children > a {
-	padding-right: 2.5em;
 	position: relative;
 }
 
+/* style the .toggle span */
 .menu-desktop > .main-menu .menu-item-has-children > a .toggle {
-	position: absolute;
-	right: 20px;
-	top: 50%;
-	transform: translateY(-50%);
-	font-family: "Font Awesome 5 Free", FontAwesome, sans-serif;
-	font-size: 1em;
+	display: inline-block;
+	margin-left: 10px;
+	font-family: FontAwesome;
+	font-size: 0.75em;
 	pointer-events: none;
 	transition: transform 0.2s ease;
+	transform: rotate(0deg);
 }
 
+/* rotate .toggle when open */
 .menu-desktop > .main-menu .menu-item-has-children.open > a .toggle {
-	transform: translateY(-50%) rotate(180deg);
+	transform: rotate(180deg);
 }
