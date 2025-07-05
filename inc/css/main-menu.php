@@ -113,24 +113,23 @@
 	position: relative;
 }
 
-/* dropdown caret icon for items with children */
+/* dropdown caret icon inserted by PHP as <span class="toggle"> */
 .menu-desktop > .main-menu .menu-item-has-children > a {
 	padding-right: 2.5em;
 	position: relative;
 }
 
-.menu-desktop > .main-menu .menu-item-has-children > a:after {
-	content: "\f078";
-	font-family: "Font Awesome 5 Free", FontAwesome, sans-serif;
-	font-size: 1em;
+.menu-desktop > .main-menu .menu-item-has-children > a .toggle {
 	position: absolute;
 	right: 20px;
 	top: 50%;
 	transform: translateY(-50%);
+	font-family: "Font Awesome 5 Free", FontAwesome, sans-serif;
+	font-size: 1em;
 	pointer-events: none;
 	transition: transform 0.2s ease;
 }
 
-.menu-desktop > .main-menu .menu-item-has-children.open > a:after {
+.menu-desktop > .main-menu .menu-item-has-children.open > a .toggle {
 	transform: translateY(-50%) rotate(180deg);
 }
