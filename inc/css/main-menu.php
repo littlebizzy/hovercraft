@@ -30,7 +30,6 @@
 .menu-desktop > .main-menu ul li {
 	margin: 0;
 	padding: 0;
-	list-style-type: none;
 	display: inline-block;
 	vertical-align: middle;
 	position: relative;
@@ -51,44 +50,48 @@
 
 /* first tier offset */
 .menu-desktop > .main-menu ul ul {
-	top: 36px;
+	top: 100%;
 	left: 0;
-	background: #fff;
+	background: #ffffff;
 	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-	min-width: 250px;
+	min-width: 180px;
+	max-width: 280px;
+	width: max-content;
+	padding: 0;
 }
 
 /* deeper tiers */
 .menu-desktop > .main-menu ul ul ul {
 	top: 0;
-	left: 250px;
-	background: #fff;
+	left: 100%;
+	background: #ffffff;
 	box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-	min-width: 250px;
+	min-width: 180px;
+	max-width: 280px;
+	width: max-content;
+	padding: 0;
 }
 
 /* dropdown links */
 .menu-desktop > .main-menu ul ul li {
-	width: 250px;
+	width: 100%;
 	display: list-item;
 	position: relative;
 	text-align: left;
 }
 
 .menu-desktop > .main-menu ul ul a,
-.main-menu ul ul ul a {
-	display: block !important;
-	line-height: 60px;
+.menu-desktop > .main-menu ul ul ul a {
+	display: block;
 	white-space: normal;
-	font-size: 90%;
-	background-color: #fff;
+	background-color: #ffffff;
 	transition: background-color 0.2s ease;
-	padding-right: 20px;
-	padding-left: 20px;
+	padding: 20px 20px;
+	line-height: 1.5;
 }
 
 .menu-desktop > .main-menu ul ul a:hover,
-.main-menu ul ul ul a:hover {
+.menu-desktop > .main-menu ul ul ul a:hover {
 	background-color: #f9f9f9;
 }
 
@@ -111,23 +114,23 @@
 }
 
 /* dropdown caret icon for items with children */
-.main-menu .menu-item-has-children > a {
-	padding-right: 25px;
+.menu-desktop > .main-menu .menu-item-has-children > a {
+	padding-right: 2.5em;
+	position: relative;
 }
 
-.main-menu .menu-item-has-children > a:after {
+.menu-desktop > .main-menu .menu-item-has-children > a:after {
 	content: "\f078";
-	font-family: FontAwesome;
-	font-size: 12px;
+	font-family: "Font Awesome 5 Free", FontAwesome, sans-serif;
+	font-size: 1em;
 	position: absolute;
-	right: 5px;
+	right: 20px;
 	top: 50%;
 	transform: translateY(-50%);
 	pointer-events: none;
+	transition: transform 0.2s ease;
 }
 
-/* prevent legacy or duplicate caret styles */
-.main-menu .menu-item-has-children > a.menu-toggle,
-.main-menu .menu-item-has-children > a.menu-toggle:after {
-	display: none !important;
+.menu-desktop > .main-menu .menu-item-has-children.open > a:after {
+	transform: translateY(-50%) rotate(180deg);
 }
