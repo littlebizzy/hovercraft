@@ -66,6 +66,11 @@ function hovercraft_get_hero_background(
     background-position: <?php echo str_replace('_',' ', $full_hero_background_position); ?>;
     background-size: cover;
     background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    display: table;
+    position: relative;
 }
 
 video.hero-background-video {
@@ -101,14 +106,6 @@ video.hero-background-video {
     background-position: top center;
     background-size: cover;
     background-repeat: no-repeat;
-}
-
-#hero-full-container {
-    width: 100%; /* correct */
-    height: 100%; /* correct */
-    padding: 0; /* correct */
-    display: table; /* correct */
-    position: relative; /* required to keep video background from escaping esp on mobile */
 }
 
 .hero-full-wrapper {
