@@ -86,9 +86,7 @@ function ah_breadcrumb_bbpress() {
         ah_breadcrumb_bbpress_hierarchy( get_the_ID(), $pos );
         ah_breadcrumb_item( '', get_the_title(), $pos++, true );
 
-    } elseif (
-        bbp_is_topic_tag() || bbp_is_single_topic_tag()
-    ) {
+    } elseif ( bbp_is_topic_tag() ) {
         ah_breadcrumb_item( '', bbp_get_topic_tag_name(), $pos++, true );
 
     } elseif ( bbp_is_view() ) {
