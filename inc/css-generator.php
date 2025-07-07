@@ -658,35 +658,12 @@ if ( file_exists( $hovercraft_cta_hero_css ) ) {
 ?>
 
 /* hero title */
-
-@media screen and (max-width: 1200px) {
-.welcome-wrapper {
-	width: 100%;
-	padding: 30px 20px;
-	}
+<?php
+$hovercraft_hero_title_css = get_template_directory() . '/inc/css/hero-title.php';
+if ( file_exists( $hovercraft_hero_title_css ) ) {
+	include $hovercraft_hero_title_css;
 }
-
-@media screen and (min-width: 1200px) {
-.welcome-wrapper {
-	max-width: 900px;
-	}
-}
-
-@media screen and (max-width: 1200px) {
-.title-wrapper {
-	width: 100%;
-	padding: 0px 20px;
-	text-align: center;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-.title-wrapper {
-	width: 100%;
-	text-align: center;
-	}
-}
-
+?>
 
 /* hero snippet */
 <?php
