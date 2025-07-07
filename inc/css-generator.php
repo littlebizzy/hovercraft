@@ -2050,78 +2050,12 @@ button[type="submit"] {
 
 
 /* forms */
-	
-form {
-	margin: 0 !important;
-	padding: 0 !important;
+<?php
+$hovercraft_forms_css = get_template_directory() . '/inc/css/forms.php';
+if ( file_exists( $hovercraft_forms_css ) ) {
+	include $hovercraft_forms_css;
 }
-	
-input, select {
-	width: 100%;
-	max-width: 100%;
-	height: auto;
-	min-height: auto;
-	vertical-align: middle;
-	font-weight: 400;
-	line-height: 2;
-	padding: 10px 20px !important;
-	border: 0;
-	outline: none;
-	font-size: 16px;
-	background: #ffffff;
-	display: inline-block;
-	box-shadow: inset 0px 0px 0px 1px <?php echo $breadcrumbs_text_color; ?>;
-}
-
-option {
-	line-height: 1.5;
-	padding: 0 !important;
-	display: block;
-	white-space: nowrap;
-}
-
-#topbar input, .hero-half input {
-	box-shadow: none;
-}
-
-textarea {
-	width: 100%;
-	font-size: 18px;
-	font-weight: 400;
-	display: inline-block;
-	padding: 10px 20px !important;
-	background: #ffffff;
-	border-radius: 0px;
-	border: 0;
-	box-shadow: inset 0px 0px 0px 1px #BDBDBD;
-}
-
-input[type="checkbox"] {
-	width: auto;
-	font-size: 18px;
-	display: inline-block;
-	outline: none;
-	box-shadow: none;
-}
-
-input[type="submit"] {
-	width: 100%;
-	font-size: 18px;
-	font-weight: 600;
-	display: inline-block;
-	padding: 10px 20px !important;
-	background: <?php echo $default_link_color; ?>;
-	text-decoration: none;
-	color: #ffffff;
-	border-radius: 0px;
-	border: 0;
-	cursor: pointer;
-	box-shadow: none;
-}
-	
-button[type="submit"]:hover, input[type="submit"]:hover {
-	background: <?php echo $default_hover_color; ?> !important;
-}
+?>
 
 
 /* searchform.php style June 2024 */
@@ -2181,102 +2115,14 @@ button[type="submit"]:hover, input[type="submit"]:hover {
   outline: none;
 }
 
-/*comments */
 
-/* remove bullets from all comment lists */
-ul.comments-list,
-ul.comment-list,
-ul.comment-list ul,
-ul.children,
-ul.comment-list .children,
-ul.comment-list li {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+/* comments */
+<?php
+$hovercraft_comments_css = get_template_directory() . '/inc/css/comments.php';
+if ( file_exists( $hovercraft_comments_css ) ) {
+	include $hovercraft_comments_css;
 }
-
-/* comment body styling */
-.comment-body {
-    margin-bottom: 30px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 20px;
-}
-
-/* author name */
-.comment-author {
-    font-weight: bold;
-    margin-bottom: 4px;
-}
-
-/* comment meta */
-.comment-meta {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 10px;
-}
-
-/* comment content */
-.comment-content {
-    font-size: 16px;
-    line-height: 1.6;
-}
-
-/* reply link */
-.comment-reply-link {
-    font-size: 14px;
-    display: inline-block;
-    margin-top: 10px;
-    color: #0073aa;
-    text-decoration: none;
-}
-
-.comment-reply-link:hover {
-    text-decoration: underline;
-}
-
-/* nested comments */
-.comment-list .children {
-    margin-left: 2rem;
-    margin-top: 1rem;
-}
-
-/* pagination */
-.comment-navigation {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 14px;
-}
-
-.comment-nav-prev,
-.comment-nav-next {
-    flex: 1;
-}
-
-/* comment form */
-#respond textarea,
-#respond input[type="text"],
-#respond input[type="email"],
-#respond input[type="url"] {
-    width: 100%;
-    max-width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-}
-
-#respond input[type="submit"] {
-    padding: 10px 20px;
-    background-color: #0073aa;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-}
-
-#respond input[type="submit"]:hover {
-    background-color: #005f8d;
-}
+?>
 
 
 /* search icon and full screen search */
@@ -2392,187 +2238,21 @@ ul.comment-list li {
 }
 
 
-/* back to top (scrollup) */
-
-@media screen and (max-width: 1200px) {
-.scrollup-wrapper {
-	<?php if ( $scroll_to_top == 'none') { echo "display: none;"; } ?>
-	margin-top: 20px;
-	}
+/* back to top */
+<?php
+$hovercraft_back_to_top_css = get_template_directory() . '/inc/css/back-to-top.php';
+if ( file_exists( $hovercraft_back_to_top_css ) ) {
+	include $hovercraft_back_to_top_css;
 }
-	
-@media screen and (min-width: 1200px) {
-.scrollup-wrapper {
-	<?php if ( $scroll_to_top == 'mobile_only') { echo "display: none;"; } ?>
-	margin-top: 30px;
-	}
-}
-
-@media screen and (max-width: 1200px) {
-.scrollup-link {
-	display: block;
-	width: 100%;
-	cursor: pointer;
-	text-transform: <?php echo $back_to_top_text_transform; ?>;
-	font-size: <?php echo $back_to_top_mobile_font_size; ?>px;
-	font-weight: <?php echo $back_to_top_font_weight; ?>;
-	line-height: 1;
-	padding: 10px 0px;
-	color: rgba(255, 255, 255, 0.5);
-	color: <?php echo $back_to_top_link_color; ?>;
-	text-decoration: none !important;
-	text-align: center;
-	vertical-align: middle;
-	background: rgba(0, 0, 0, 0.1);
-	background: <?php echo $back_to_top_background_color; ?>;
-	}
-}
-	
-@media screen and (min-width: 1200px) {
-.scrollup-link {
-	display: block;
-	width: 100%;
-	cursor: pointer;
-	text-transform: <?php echo $back_to_top_text_transform; ?>;
-	font-size: <?php echo $back_to_top_desktop_font_size; ?>px;
-	font-weight: <?php echo $back_to_top_font_weight; ?>;
-	line-height: 1;
-	padding: 10px 0px;
-	color: rgba(255, 255, 255, 0.5);
-	color: <?php echo $back_to_top_link_color; ?>;
-	text-decoration: none !important;
-	text-align: center;
-	vertical-align: middle;
-	background: rgba(0, 0, 0, 0.1);
-	background: <?php echo $back_to_top_background_color; ?>;
-	}
-}
-
-.scrollup-link:active, .scrollup-link:hover {
-	background: rgba(0, 0, 0, 0.2);
-	background: <?php echo $back_to_top_background_hover_color; ?>;
-	color: #ffffff;
-	color: <?php echo $back_to_top_link_color; ?>;
-	outline: none !important;
-}
-
+?>
 	
 /* bbpress */
-
-.forums {
-	border-radius: 0px;
+<?php
+$hovercraft_bbpress_css = get_template_directory() . '/inc/css/bbpress.php';
+if ( file_exists( $hovercraft_bbpress_css ) ) {
+	include $hovercraft_bbpress_css;
 }
-
-#bbpress-forums {
-	background: 0 0;
-    clear: both;
-    margin: 0 !important;
-	padding: 0 !important;
-    overflow: hidden;
-    font-size: 12px;
-    line-height: 1.5 !important;
-}
-
-
-#bbpress-forums ul.bbp-forums, #bbpress-forums ul.bbp-lead-topic, #bbpress-forums ul.bbp-replies, #bbpress-forums ul.bbp-search-results, #bbpress-forums ul.bbp-topics {
-	border: none;
-}
-
-#bbpress-forums li.bbp-body ul.forum, #bbpress-forums li.bbp-body ul.topic {
-	border-top: none;
-}
-
-div.bbp-forum-header, div.bbp-reply-header, div.bbp-topic-header {
-    border-top: none;
-    clear: both;
-}
-
-.bbp-template-notice {
-	display: none;
-}
-
-.bbp-pagination-count {
-	display: none;
-}
-
-li.bbp-header {
-	margin: 0 !important;
-	background: #ECEFF1 !important;
-	font-size: 12px !important;
-	font-weight: 600 !important;
-	text-transform: uppercase !important;
-	color: <?php echo $default_text_color; ?>;
-}
-
-li.bbp-body {
-	margin: 0 !important;
-	padding: 0 !important;
-	line-height: 1.5 !important;
-	background: #ffffff !important;
-	color: <?php echo $default_text_color; ?>;
-}
-
-li.bbp-footer {
-	display: none;
-}
-
-	
-.bbp-topic-title {
-	font-size: 16px !important;
-}
-
-.bbp-reply-content p {
-	font-size: 16px !important;
-	line-height: 1.5 !important;
-}
-
-ul.forum {
-	background: #ffffff !important;
-}
-
-ul.topic {
-	background: #ffffff !important;
-	padding: 20px !important;
-}
-
-ul.forum-titles {
-	font-size: 16px !important;
-}
-
-.bbp-topic-voice-count {
-visibility: hidden;
-}
-
-.bbp-topics-widget div {
-	color: #607D8B;
-}
-
-.quicktags-toolbar {
-	padding: 10px 10px !important;
-}
-
-.quicktags-toolbar input  {
-	display: inline-block !important;
-	width: auto !important;
-	height: 20px !important;
-	min-height: 20px !important;
-	padding: 0 10px !important;
-	margin: 0 !important;
-	font-size: 12px !important;
-	text-transform: uppercase !important;
-	text-decoration: none !important;
-	cursor: pointer !important;
-	white-space: nowrap !important;
-	line-height: 0 !important;
-	background-color: transparent;
-	border: 0 !important;
-	color: <?php echo $default_text_color; ?>;
-}
-
-.quicktags-toolbar input:hover  {
-	background-color: rgba(0, 0, 0, 0.3);	
-}
-
+?>
 
 /* quantity buttons (woocommerce) */
 <?php
@@ -2813,111 +2493,20 @@ if ( file_exists( $hovercraft_woocommerce_widget_products_css ) ) {
 
 
 /* pagination */
-
-.navigation {
-	padding-top: 30px;
+<?php
+$hovercraft_pagination_css = get_template_directory() . '/inc/css/pagination.php';
+if ( file_exists( $hovercraft_pagination_css ) ) {
+	include $hovercraft_pagination_css;
 }
-
-.navigation ul {
-	margin: 0 !important;
-}
-
-.navigation li {
-    display: inline-block;
-}
-  
-.navigation li a,
-.navigation li a:hover,
-.navigation li.active a,
-.navigation li.disabled {
-    background-color: #ECEFF1;
-	color: #263238;
-    cursor: pointer;
-    padding: 5px 10px;
-	text-decoration: none;
-	font-size: 14px;
-	line-height: 1;
-}
-  
-.navigation li a:hover,
-.navigation li.active a {
-	background-color: <?php echo $default_text_color; ?>;
-	color: #ffffff;
-}
-
+?>
 
 /* mobile menu */
-
-.nav-icon {
-    outline: none !important;
+<?php
+$hovercraft_mobile_menu_css = get_template_directory() . '/inc/css/mobile-menu.php';
+if ( file_exists( $hovercraft_mobile_menu_css ) ) {
+	include $hovercraft_mobile_menu_css;
 }
-
-.nav-icon:focus {
-    outline: none !important;
-}
-
-@media screen and (max-width: 1200px) {
-.mobile-nav {
-	display: none;
-	clear: both;
-	width: 100%;
-	list-style:none;
-	background: #212121;
-	padding: 20px;
-	}
-
-.mobile-nav ul li {
-	font-size: 18px;
-	list-style-type: none;
- 	vertical-align: middle;
-	display: block;
-	margin: 0px;
-	padding: 0px;
-	border-bottom: 1px solid rgba(255,255,255, 0.2);
-}
-
-.mobile-nav ul li:last-child {
-	border-bottom: 0;
-}
-	
-.mobile-nav a {
-	display: block;
-	width: 100%;
-	line-height:40px;
-	color: #ffffff !important;
-	font-size: 18px;
-	text-decoration: none;
-}
-
-/* js will toggle this to display: block */
- .mobile-nav li > ul { display:none; width: 100%; position:relative; }
-
-}
-
-@media screen and (min-width: 1200px) {
-.mobile-nav {
-	display: none !important;
-	}
-}
-
-@media screen and (max-width: 1200px) {
-.menu-mobile-wrapper {
-	display: inline-block;
-	text-align: right;
- 	vertical-align: middle;
-	}
-}
-	
-@media screen and (min-width: 1200px) {
-.menu-mobile-wrapper {
- 	display: none;	
-	}
-}
-
-#header-full-hero .menu-mobile-wrapper i {
-	font-size: 36px; /* correct */
-	color: #ffffff; /* correct */
-}
+?>
 
 
 /* cart (desktop) */
