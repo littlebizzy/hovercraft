@@ -649,155 +649,13 @@ a:hover {
 }
 
 
-/* hero cta primary */
-
-.cta-hero-wrapper {
-	margin-top: 30px;
+/* cta hero */
+<?php
+$hovercraft_cta_hero_css = get_template_directory() . '/inc/css/cta-hero.php';
+if ( file_exists( $hovercraft_cta_hero_css ) ) {
+	include $hovercraft_cta_hero_css;
 }
-
-@media screen and (max-width: 1200px) {
-.cta-hero-primary {
-	display: block;
-	width: 100%;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-.cta-hero-primary {
-	display: inline-block;
-	margin-right: 30px;
-	}
-}
-
-@media screen and (max-width: 1200px) {
-.cta-hero-primary ul li {
-	list-style-type: none;
-	display: block;
-	margin: 0;
-	padding: 0;
-	vertical-align: middle;
-	text-align: center;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-.cta-hero-primary ul li {
-	list-style-type: none;
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-	vertical-align: middle;
-	text-align: center;
-	}
-}
-
-@media screen and (max-width: 1200px) {
-.cta-hero-primary ul li a {
-	font-family: <?php echo ucwords(str_replace("_", " ", $main_menu_font_family)); ?>;
-	width: 100%;
-	font-size: 20px;
-	font-weight: 700;
-	color: #ffffff;
-	padding: 10px 0px;
-	text-decoration: none;
-	display: block;
-	background: <?php echo $default_link_color; ?>;
-	margin-bottom: 20px;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-.cta-hero-primary ul li a {
-	<?php if ( has_nav_menu( 'cta-hero-secondary' ) ) { echo "width: 200px;"; } else { echo "width: auto;"; } ?>
-	font-family: <?php echo ucwords(str_replace("_", " ", $main_menu_font_family)); ?>;
-	font-size: 20px;
-	font-weight: 700;
-	color: #ffffff;
-	<?php if ( has_nav_menu( 'cta-hero-secondary' ) ) { echo "padding: 10px 0px;"; } else { echo "padding: 10px 20px;"; } ?>
-	text-decoration: none;
-	display: inline-block;
-	background: <?php echo $default_link_color; ?>;
-	}
-}
-
-.cta-hero-primary ul li a:hover {
-	background: <?php echo $default_hover_color; ?>;
-}
-
-
-/* hero cta secondary */
-
-@media screen and (max-width: 1200px) {
-.cta-hero-secondary {
-	display: block;
-	width: 100%;
-}
-}
-
-@media screen and (min-width: 1200px) {
-.cta-hero-secondary {
-	display: inline-block;
-}
-}
-
-@media screen and (max-width: 1200px) {
-.cta-hero-secondary ul li {
-	list-style-type: none;
-	display: block;
-	margin: 0;
-	padding: 0;
-	vertical-align: middle;
-	text-align: center;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-.cta-hero-secondary ul li {
-	list-style-type: none;
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-	vertical-align: middle;
-	text-align: center;
-	}
-}
-
-@media screen and (max-width: 1200px) {
-.cta-hero-secondary ul li a {
-	font-family: <?php echo ucwords(str_replace("_", " ", $main_menu_font_family)); ?>;
-	width: 100%;
-	font-size: 20px;
-	font-weight: 400;
-	color: #ffffff;
-	padding: 10px 0px;
-	text-decoration: none;
-	display: block;
-	background: transparent;
-	margin-bottom: 0;
-	box-shadow: inset 0px 0px 0px 1px #ffffff;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-.cta-hero-secondary ul li a {
-	font-family: <?php echo ucwords(str_replace("_", " ", $main_menu_font_family)); ?>;
-	width: 200px;
-	font-size: 20px;
-	font-weight: 400;
-	color: #ffffff;
-	padding: 10px 0px;
-	text-decoration: none;
-	display: inline-block;
-	background: transparent;
-	box-shadow: inset 0px 0px 0px 1px #ffffff;
-	}
-}
-
-.cta-hero-secondary ul li:hover a {
-	color: <?php echo $default_text_color; ?>;
-	background: #ffffff;
-}
-
+?>
 
 /* hero title */
 
@@ -1077,126 +935,17 @@ if ( file_exists( $hovercraft_header_basic_css ) ) {
 }
 ?>
 
-
-/* header primary cta */
-
-.cta-header-primary {
-	display: inline-block;
-	margin-left: 30px;
+/* cta header */
+<?php
+$hovercraft_cta_header_css = get_template_directory() . '/inc/css/cta-header.php';
+if ( file_exists( $hovercraft_cta_header_css ) ) {
+	include $hovercraft_cta_header_css;
 }
-
-.cta-header-primary ul li {
-	list-style-type: none;
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-	vertical-align: middle;
-	text-align: center;
-}
-
-.cta-header-primary ul li a {
-	font-family: <?php echo ucwords(str_replace("_", " ", $main_menu_font_family)); ?>;
-	font-size: <?php echo $main_menu_desktop_font_size; ?>px;
-	font-weight: 700;
-	text-transform: <?php echo $main_menu_text_transform; ?>;
-	display: inline-block;
-	padding: 10px 20px;
-	background: <?php echo $default_link_color; ?>;
-	text-decoration: none !important;
-	color: #ffffff !important;
-}
-
-.cta-header-primary ul li a:hover {
-	background: <?php echo $default_hover_color; ?>;
-	color: #ffffff !important;
-}
-
-/* inline button: primary */
-a.button-primary {
-	font-family: <?php echo ucwords(str_replace("_", " ", $main_menu_font_family)); ?>;
-	font-size: 20px;
-	font-weight: 700;
-	text-transform: <?php echo $main_menu_text_transform; ?>;
-	display: inline-block;
-	padding: 10px 20px;
-	background: <?php echo $default_link_color; ?>;
-	text-decoration: none !important;
-	color: #ffffff !important;
-	width: 100%;
-	box-sizing: border-box;
-}
-
-a.button-primary:hover {
-	background: <?php echo $default_hover_color; ?>;
-	color: #ffffff !important;
-}
+?>
 	
-
-/* header secondary cta */
-
-.cta-header-secondary {
-	display: inline-block;
-	margin-left: 30px;
-}
-
-#header-full-hero .cta-header-secondary ul li {
-	list-style-type: none;
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-	vertical-align: middle;
-	text-align: center;
-}
-
-#header-half-hero .cta-header-secondary ul li, #header-mini-hero .cta-header-secondary ul li, #header-basic .cta-header-secondary ul li {
-	list-style-type: none;
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-	vertical-align: middle;
-	text-align: center;
-}
-
-#header-full-hero .cta-header-secondary ul li a {
-	font-family: <?php echo ucwords(str_replace("_", " ", $main_menu_font_family)); ?>;
-	font-size: <?php echo $main_menu_desktop_font_size; ?>px;
-	font-weight: 400;
-	text-transform: <?php echo $main_menu_text_transform; ?>;
-	display: inline-block;
-	padding: 10px 20px;
-	background: transparent;
-	text-decoration: none;
-	color: #ffffff;
-	box-shadow: inset 0px 0px 0px 1px #ffffff;
-}
-
-#header-half-hero .cta-header-secondary ul li a, #header-mini-hero .cta-header-secondary ul li a, #header-basic .cta-header-secondary ul li a {
-	font-family: <?php echo ucwords(str_replace("_", " ", $main_menu_font_family)); ?>;
-	font-size: <?php echo $main_menu_desktop_font_size; ?>px;
-	font-weight: 400;
-	text-transform: <?php echo $main_menu_text_transform; ?>;
-	display: inline-block;
-	padding: 10px 20px;
-	background: transparent;
-	text-decoration: none;
-	color: <?php echo $default_text_color; ?>;
-	box-shadow: inset 0px 0px 0px 1px #263238;
-}
-
-#header-full-hero .cta-header-secondary ul li a:hover {
-	background: #ffffff;
-	color: <?php echo $default_text_color; ?> !important;
-}
-
-#header-half-hero .cta-header-secondary ul li a:hover, #header-mini-hero .cta-header-secondary ul li a:hover, #header-basic .cta-header-secondary ul li a:hover {
-	background: <?php echo $default_text_color; ?>;
-	color: #ffffff !important;
-}
-
 #header-half-hero a {
 	color: <?php echo $half_hero_header_link_color; ?>;
 }
-
 
 /* inline button: secondary */
 a.button-secondary {
@@ -1268,56 +1017,12 @@ body.home #content-wide {
 
 
 /* primary */
-
-@media screen and (max-width: 1200px) {
-#primary {
-	width: 100%;
-	padding: 0px 0px;
-	}
+<?php
+$hovercraft_primary_css = get_template_directory() . '/inc/css/primary.php';
+if ( file_exists( $hovercraft_primary_css ) ) {
+	include $hovercraft_primary_css;
 }
-
-@media screen and (min-width: 1200px) {
-#primary {
-	float: left;
-	padding: 0px 0px;
-	<?php if ( $sitewide_layout == 'floating_islands' ) { 
-			echo "width: 768px;\n"; 
-		} else { 
-			echo "width: 768px;\n"; 
-		}  ?>
-	}
-}
-	
-/* primary-wide */
-
-@media screen and (max-width: 1200px) {
-#primary-wide {
-	width: 100%;
-	padding: 0px 0px;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-#primary-wide {
-	width: 100%;
-	}
-}
-	
-/* primary-center */
-
-@media screen and (max-width: 1200px) {
-#primary-center {
-	width: 100%;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-#primary-center {
-	width: 768px;
-	margin: 0px auto;
-	}
-}
-
+?>
 
 /* byline */
 <?php
@@ -1451,51 +1156,13 @@ img.featured-image-archive {
 	}
 }
 
-
 /* breadcrumbs */
-
-@media screen and (max-width: 1200px) {
-.breadcrumbs {
-	width: 100%;
-	margin-bottom: 20px;
-	font-size: 14px;
-	line-height: 18px !important;
-	color: <?php echo $breadcrumbs_text_color; ?>;
-	white-space: normal;
-	}
+<?php
+$hovercraft_breadcrumbs_css = get_template_directory() . '/inc/css/breadcrumbs.php';
+if ( file_exists( $hovercraft_breadcrumbs_css ) ) {
+	include $hovercraft_breadcrumbs_css;
 }
-
-@media screen and (min-width: 1200px) {
-.breadcrumbs {
-	margin-bottom: 30px;
-	font-size: 14px;
-	line-height: 20px !important;
-	color: <?php echo $breadcrumbs_text_color; ?>;
-	white-space: normal;
-	}
-}
-
-.breadcrumbs ul {
-	display: inline;
-	list-style-position: unset;
-	margin-left: 0 !important;
-}
-
-.breadcrumbs ul li {
-	display: inline;
-	word-break: break-all;
-	margin-right: 5px;
-}
-
-.breadcrumbs i {
-	font-size: 18px !important;
-	margin-right: 5px;
-}
-
-.breadcrumbs a {
-	color: <?php echo $breadcrumbs_link_color; ?>;
-}
-
+?>
 
 /* content (primary area) */
 
