@@ -990,31 +990,12 @@ if ( file_exists( $hovercraft_posthero_css ) ) {
 
 
 /* main */
-/* main refers to everything between header/splash and footer */
-
-@media screen and (max-width: 1200px) {
-#main {
-	width: 100%;
-	padding: 0;
-	background: <?php echo $main_background_color; ?>;
-	}
+<?php
+$hovercraft_main_css = get_template_directory() . '/inc/css/main.php';
+if ( file_exists( $hovercraft_main_css ) ) {
+	include $hovercraft_main_css;
 }
-
-@media screen and (min-width: 1200px) {
-#main {
-	padding: 40px 0px;
-	background: <?php echo $main_background_color; ?>;
-	}
-}
-
-body.home #main {
-	background: <?php echo $main_background_color_homepage; ?>;
-}
-
-body.home #content-wide {
-	background: <?php echo $main_background_color_homepage; ?>;
-}
-
+?>
 
 /* primary */
 <?php
@@ -1090,42 +1071,13 @@ if ( file_exists( $hovercraft_byline_css ) ) {
 }
 
 	
-/* featured images */
-
-.featured-image-wrapper img {
-	margin-bottom: 0 !important;
+/* featured image */
+<?php
+$hovercraft_featured_image_css = get_template_directory() . '/inc/css/images-featured.php';
+if ( file_exists( $hovercraft_featured_image_css ) ) {
+	include $hovercraft_featured_image_css;
 }
-
-@media screen and (max-width: 1200px) {
-img.featured-image {
-	width: 100%;
-	height: auto;
-	display: block;
-	margin-bottom: 0;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-img.featured-image {
-	<?php if ( $sitewide_layout == 'floating_islands' ) { 
-			echo "width: 768px;\n"; 
-		} else { 
-			echo "width: 768px;\n"; 
-		}  ?>
-	height: auto;
-	display: block;
-	margin-bottom: 0;
-	}
-}
-	
-.featured-image-caption {
-	position: absolute;
-	font-size: 12px;
-	bottom: 0px;
-	color: #ffffff;
-	padding: 5px 10px;
-	right: 0px;
-}
+?>
 
 
 /* archives */
