@@ -2,6 +2,43 @@
 // styles for featured images
 ?>
 
+/* featured image wrapper */
+
+@media screen and (max-width: 1200px) {
+.featured-image-wrapper {
+	position: relative;
+	margin-bottom: 20px;
+	width: 100%;
+	height: auto;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+.featured-image-wrapper {
+	position: relative;
+	margin-bottom: 30px;
+	width: 768px;
+	height: auto;
+	<?php if ( $sitewide_layout == 'floating_islands' ) { 
+		
+		if ( $featured_image_position == 'below_title' ) { 
+			echo "margin-left: -40px;\n"; 
+		} elseif ( $featured_image_position == 'above_title' ) { 
+			echo "margin-left: 0;\n"; 
+		} 
+		
+	} elseif ( $sitewide_layout == 'classic_clean' ) { 
+
+		if ( $featured_image_position == 'below_title' ) { 
+			echo "margin-left: 0;\n"; 
+		} elseif ( $featured_image_position == 'above_title' ) { 
+			echo "margin-left: 0;\n"; 
+		} 
+
+	} ?>
+	}
+}
+
 /* featured images */
 
 .featured-image-wrapper img {
