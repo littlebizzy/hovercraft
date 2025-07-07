@@ -1010,43 +1010,6 @@ if ( file_exists( $hovercraft_byline_css ) ) {
 }
 
 
-/* featured image wrapper */
-
-@media screen and (max-width: 1200px) {
-.featured-image-wrapper {
-	position: relative;
-	margin-bottom: 20px;
-	width: 100%;
-	height: auto;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-.featured-image-wrapper {
-	position: relative;
-	margin-bottom: 30px;
-	width: 768px;
-	height: auto;
-	<?php if ( $sitewide_layout == 'floating_islands' ) { 
-		
-		if ( $featured_image_position == 'below_title' ) { 
-			echo "margin-left: -40px;\n"; 
-		} elseif ( $featured_image_position == 'above_title' ) { 
-			echo "margin-left: 0;\n"; 
-		} 
-		
-	} elseif ( $sitewide_layout == 'classic_clean' ) { 
-
-		if ( $featured_image_position == 'below_title' ) { 
-			echo "margin-left: 0;\n"; 
-		} elseif ( $featured_image_position == 'above_title' ) { 
-			echo "margin-left: 0;\n"; 
-		} 
-
-	} ?>
-	}
-}
-
 	
 /* featured image */
 <?php
@@ -1056,34 +1019,13 @@ if ( file_exists( $hovercraft_featured_image_css ) ) {
 }
 ?>
 
-
 /* archives */
-
-.post-tease-archive {
-	margin-bottom: 40px;
+<?php
+$hovercraft_archives_css = get_template_directory() . '/inc/css/archives.php';
+if ( file_exists( $hovercraft_archives_css ) ) {
+	include $hovercraft_archives_css;
 }
-
-.post-excerpt-archive p {
-	margin: 0;
-}
-
-@media screen and (max-width: 1200px) {
-img.featured-image-archive {
-	width: 100%;
-	height: auto;
-	display: block;
-	margin-bottom: 20px;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-img.featured-image-archive {
-	width: 768px;
-	height: auto;
-	display: block;
-	margin-bottom: 20px;
-	}
-}
+?>
 
 /* breadcrumbs */
 <?php
@@ -1093,104 +1035,13 @@ if ( file_exists( $hovercraft_breadcrumbs_css ) ) {
 }
 ?>
 
-/* content (primary area) */
-
-@media screen and (max-width: 1200px) {
-#content-wrapper {
-	background: <?php echo $content_background_color; ?>;
-	}
+/* content */
+<?php
+$hovercraft_content_css = get_template_directory() . '/inc/css/content.php';
+if ( file_exists( $hovercraft_content_css ) ) {
+	include $hovercraft_content_css;
 }
-	
-@media screen and (min-width: 1200px) {
-#content-wrapper {
-	background: <?php echo $content_background_color; ?>;
-	}
-}
-
-/* content (primary area) unordered and ordered lists */
-	
-#content-wrapper ul {
-	margin-left: 30px;
-	margin-bottom: 30px;
-}
-
-#content-wrapper ol {
-	margin-left: 30px;
-	margin-bottom: 30px;
-}
-
-#content-wrapper ol li {
-	margin-bottom: 5px;
-}
-	
-
-/* content-wide */
-
-@media screen and (max-width: 1200px) {
-#content-wide {
-	padding: 20px;
-	width: 100%;
-	max-width: 100%;
-	display: block;
-    overflow: hidden;
-	overflow-wrap: break-word;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-#content-wide {
-	<?php if ( $sitewide_layout == 'floating_islands' ) { 
-			echo "padding: 40px 40px 40px 40px;\n"; 
-		} else { 
-			echo "padding: 0px 0px 0px 0px;\n"; 
-		}  ?>
-	display: block;
-	overflow: hidden;
-	overflow-wrap: break-word;
-	}
-}
-
-	
-/* content-padded */
-
-@media screen and (max-width: 1200px) {
-#content-padded {
-	<?php if ( $sitewide_layout == 'floating_islands' ) { 
-			echo "padding: 0px 20px 20px 20px;\n"; 
-		} else { 
-			echo "padding: 0px 20px 20px 20px;\n"; 
-		}  ?>
-	width: 100%;
-	max-width: 100%;
-	display: block;
-    overflow: hidden;
-	overflow-wrap: break-word;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-#content-padded {
-	<?php if ( $sitewide_layout == 'floating_islands' ) { 
-			echo "padding: 40px 40px 40px 40px;\n"; 
-		} else { 
-			echo "padding: 0px 0px 40px 0px;\n"; 
-		}  ?>
-	display: block;
-	overflow: hidden;
-	overflow-wrap: break-word;
-	}
-}
-
-#content-padded iframe {
-	margin-bottom: 30px;
-}
-	
-#content-padded img {
-	margin-bottom: 30px;
-	max-width: 100%;
-	height: auto;
-	display: block;
-}
+?>
 
 .wp-caption {
 	margin-bottom: 30px;
@@ -1211,28 +1062,13 @@ if ( file_exists( $hovercraft_breadcrumbs_css ) ) {
     color: #444;
 }
 
-/* author biography box */
-
-#author {
-	margin-top: 30px;
-	padding: 40px;
-	box-shadow: inset 0px 0px 0px 1px #cccccc;
-	border-radius: 0px;
+/* author box */
+<?php
+$hovercraft_author_box_css = get_template_directory() . '/inc/css/author-box.php';
+if ( file_exists( $hovercraft_author_box_css ) ) {
+	include $hovercraft_author_box_css;
 }
-
-#author p {
-	margin-bottom: 0;
-}
-
-.biography-photo img {
-	float: left; 
-	margin: 0 20px 0 0; 
-}
-
-p.biography-description {
-	font-size: 14px;
-}
-	
+?>
 
 /* columns */
 
