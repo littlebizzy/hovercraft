@@ -1,10 +1,12 @@
 <?php
-if ( function_exists( 'is_product' ) && is_product() ) {
+global $post;
+
+// skip if single product page
+if ( is_singular( 'product' ) ) {
 	return;
 }
 
 // get author id safely
-global $post;
 $author_id = isset( $post ) && is_object( $post ) ? $post->post_author : 0;
 ?>
 
