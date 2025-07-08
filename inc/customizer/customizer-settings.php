@@ -3339,6 +3339,77 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	)
 ) );
 
+// divider above main background colors setting
+$wp_customize->add_setting( 'hovercraft_divider_main_background_colors', array(
+	'sanitize_callback' => '__return_null',
+));
+
+// divider above main background colors control
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'hovercraft_divider_main_background_colors', array(
+	'description' => '<hr style="margin: 16px 0; border: 0; border-top: 2px solid #ddd;">',
+	'type' => 'hidden',
+	'section' => 'colors',
+	'settings' => 'hovercraft_divider_main_background_colors',
+)));
+
+// main background color setting
+$wp_customize->add_setting( 'hovercraft_main_background_color', array(
+	'default' => '#eceff1',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+ 
+// main background color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_main_background_color', array(
+	'label' => 'Main Background Color',
+	'description' => 'This is a description',
+	'section' => 'colors',
+	'settings' => 'hovercraft_main_background_color'
+	)
+) );
+
+// main background color (homepage) setting
+$wp_customize->add_setting( 'hovercraft_main_background_color_homepage', array(
+	'default' => '#eceff1',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+ 
+// main background color (homepage) control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_main_background_color_homepage', array(
+	'label' => 'Main Background Color (Homepage)',
+	'description' => 'This is a description',
+	'section' => 'colors',
+	'settings' => 'hovercraft_main_background_color_homepage'
+	)
+) );
+
+// divider above content background colors setting
+$wp_customize->add_setting( 'hovercraft_divider_content_background_colors', array(
+	'sanitize_callback' => '__return_null',
+));
+
+// divider above content background colors control
+$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'hovercraft_divider_content_background_colors', array(
+	'description' => '<hr style="margin: 16px 0; border: 0; border-top: 2px solid #ddd;">',
+	'type' => 'hidden',
+	'section' => 'colors',
+	'settings' => 'hovercraft_divider_content_background_colors',
+)));
+
+// content background color setting
+$wp_customize->add_setting( 'hovercraft_content_background_color', array(
+	'default' => '#ffffff',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+ 
+// content background color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_content_background_color', array(
+	'label' => 'Content Background Color',
+	'description' => 'This is a description',
+	'section' => 'colors',
+	'settings' => 'hovercraft_content_background_color'
+	)
+) );
+
 // divider above sidebar callout colors setting
 $wp_customize->add_setting( 'hovercraft_divider_sidebar_callout_colors', array(
 	'sanitize_callback' => '__return_null',
@@ -3472,77 +3543,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hove
 	)
 ) );
 
-// divider above main background colors setting
-$wp_customize->add_setting( 'hovercraft_divider_main_background_colors', array(
-	'sanitize_callback' => '__return_null',
-));
-
-// divider above main background colors control
-$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'hovercraft_divider_main_background_colors', array(
-	'description' => '<hr style="margin: 16px 0; border: 0; border-top: 2px solid #ddd;">',
-	'type' => 'hidden',
-	'section' => 'colors',
-	'settings' => 'hovercraft_divider_main_background_colors',
-)));
-
-// main background color setting
-$wp_customize->add_setting( 'hovercraft_main_background_color', array(
-	'default' => '#eceff1',
-	'sanitize_callback' => 'sanitize_hex_color',
-) );
- 
-// main background color control
-$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_main_background_color', array(
-	'label' => 'Main Background Color',
-	'description' => 'This is a description',
-	'section' => 'colors',
-	'settings' => 'hovercraft_main_background_color'
-	)
-) );
-
-// main background color (homepage) setting
-$wp_customize->add_setting( 'hovercraft_main_background_color_homepage', array(
-	'default' => '#eceff1',
-	'sanitize_callback' => 'sanitize_hex_color',
-) );
- 
-// main background color (homepage) control
-$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_main_background_color_homepage', array(
-	'label' => 'Main Background Color (Homepage)',
-	'description' => 'This is a description',
-	'section' => 'colors',
-	'settings' => 'hovercraft_main_background_color_homepage'
-	)
-) );
-
-// divider above content background colors setting
-$wp_customize->add_setting( 'hovercraft_divider_content_background_colors', array(
-	'sanitize_callback' => '__return_null',
-));
-
-// divider above content background colors control
-$wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'hovercraft_divider_content_background_colors', array(
-	'description' => '<hr style="margin: 16px 0; border: 0; border-top: 2px solid #ddd;">',
-	'type' => 'hidden',
-	'section' => 'colors',
-	'settings' => 'hovercraft_divider_content_background_colors',
-)));
-
-// content background color setting
-$wp_customize->add_setting( 'hovercraft_content_background_color', array(
-	'default' => '#ffffff',
-	'sanitize_callback' => 'sanitize_hex_color',
-) );
- 
-// content background color control
-$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_content_background_color', array(
-	'label' => 'Content Background Color',
-	'description' => 'This is a description',
-	'section' => 'colors',
-	'settings' => 'hovercraft_content_background_color'
-	)
-) );
-
 // divider above sidebar widgets colors setting
 $wp_customize->add_setting( 'hovercraft_divider_sidebar_widgets_colors', array(
 	'sanitize_callback' => '__return_null',
@@ -3555,6 +3555,21 @@ $wp_customize->add_control( new WP_Customize_Control( $wp_customize, 'hovercraft
 	'section' => 'colors',
 	'settings' => 'hovercraft_divider_sidebar_widgets_colors',
 )));
+
+// sidebar left border color setting
+$wp_customize->add_setting( 'hovercraft_sidebar_left_border_color', array(
+	'default' => '#e0e0e0',
+	'sanitize_callback' => 'sanitize_hex_color',
+) );
+
+// sidebar left border color control
+$wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_sidebar_left_border_color', array(
+	'label' => 'Sidebar Left Border Color',
+	'description' => 'Specify the color of the left border of the sidebar.',
+	'section' => 'colors',
+	'settings' => 'hovercraft_sidebar_left_border_color'
+) ) );
+
 
 // sidebar widgets background color setting
 $wp_customize->add_setting( 'hovercraft_sidebar_widget_background_color', array(
