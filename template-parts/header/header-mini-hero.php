@@ -52,7 +52,8 @@
 		<?php endif; ?> <!--End the hide title-->
 			
 			<?php $portal_category = get_theme_mod( 'hovercraft_portal_category', 'none' );
-			if (is_category( $portal_category )) { ?>
+			if ( is_category( $portal_category ) ) {
+				$category_id = get_queried_object_id(); ?>
 			<br>
 	
 			<?php $category_id = get_queried_object_id(); ?>
