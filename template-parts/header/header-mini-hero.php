@@ -55,7 +55,8 @@
 			if (is_category( $portal_category )) { ?>
 			<br>
 	
-			<form role="search" method="get" class="searchform" action="<?php $category_link = get_category_link( $category_id ); echo esc_url( $category_link ); ?>">
+			<?php $category_id = get_queried_object_id(); ?>
+			<form role="search" method="get" class="searchform" action="<?php echo esc_url( get_category_link( $category_id ) ); ?>">
 				<div class="input-container">
 					<input type="search" class="search-input" value="<?php echo esc_attr( get_search_query() ); ?>" name="s" placeholder="<?php 
 						$cattitle = single_cat_title('', false);
