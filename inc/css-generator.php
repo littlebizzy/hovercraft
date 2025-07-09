@@ -220,6 +220,7 @@ function hovercraft_generate_css(){
 	$sidebar_widget_text_color = get_theme_mod( 'hovercraft_sidebar_widget_text_color', '#263238' );
 	$sidebar_widget_link_color = get_theme_mod( 'hovercraft_sidebar_widget_link_color', '#5C6BC0' );
 	$sidebar_widget_border_color = get_theme_mod( 'hovercraft_sidebar_widget_border_color', '#ffffff' );
+	$sidebar_left_border_color = get_theme_mod( 'hovercraft_sidebar_left_border_color', '#e0e0e0' );
 	$tile_background_color = get_theme_mod( 'hovercraft_tile_background_color', '#eceff1' );
 	$tile_border_color = get_theme_mod( 'hovercraft_tile_border_color', '#eceff1' );
 	$column_background_color = get_theme_mod( 'hovercraft_column_background_color', '#eceff1' );
