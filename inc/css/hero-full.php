@@ -161,3 +161,12 @@ h1.full-hero-title {
     color: #ffffff;
     }
 }
+
+#header-full-hero .main-menu ul li a {
+	text-decoration: none;
+	color: #ffffff; /* correct */
+}
+
+#header-full-hero a {
+	color: #ffffff; /* correct */
+}
