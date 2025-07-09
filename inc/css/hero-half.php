@@ -21,41 +21,14 @@
 	vertical-align: middle;
 }
 
-@media screen and (max-width: 1200px) {
 #header-half-hero {
-	width: 100%;
-	display: table;
-	padding: 10px 20px;
-	background: #ffffff;
-	color: <?php echo $half_hero_text_color; ?>;
-	}
+	background: <?php echo $half_hero_background_color; ?>;
 }
 
-@media screen and (min-width: 1200px) {
-#header-half-hero {
-	width: 100%;
-	display: table;
-	margin: 0px auto;
-	padding: 20px 0px;
-	background: #ffffff;
-	color: <?php echo $half_hero_text_color; ?>;
-	}
-}
-
-@media screen and (max-width: 1200px) {
-h1.half-hero-title {
-	font-weight: 700;
-	margin-bottom: 30px;
-	color: #ffffff;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-h1.half-hero-title {
-	font-weight: 700;
-	margin-bottom: 30px;
-	color: #ffffff;
-	}
+#header-half-hero .menu-mobile-wrapper i {
+	margin-left: 20px;
+	font-size: 36px;
+	color: <?php echo $default_text_color; ?>;
 }
 
 .hero-half {
@@ -84,12 +57,39 @@ h1.half-hero-title {
 	background-repeat: no-repeat;
 }
 
-#header-half-hero {
-	background: <?php echo $half_hero_background_color; ?>;
+@media screen and (max-width: 1200px) {
+	#header-half-hero {
+		width: 100%;
+		display: table;
+		padding: 10px 20px;
+		background: #ffffff;
+		color: <?php echo $half_hero_text_color; ?>;
+	}
 }
 
-#header-half-hero .menu-mobile-wrapper i {
-	margin-left: 20px;
-	font-size: 36px;
-	color: <?php echo $default_text_color; ?>;
+@media screen and (min-width: 1200px) {
+	#header-half-hero {
+		width: 100%;
+		display: table;
+		margin: 0px auto;
+		padding: 20px 0px;
+		background: #ffffff;
+		color: <?php echo $half_hero_text_color; ?>;
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	h1.half-hero-title {
+		font-weight: 700;
+		margin-bottom: 30px;
+		color: #ffffff;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	h1.half-hero-title {
+		font-weight: 700;
+		margin-bottom: 30px;
+		color: #ffffff;
+	}
 }
