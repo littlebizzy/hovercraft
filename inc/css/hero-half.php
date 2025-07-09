@@ -21,16 +21,6 @@
 	vertical-align: middle;
 }
 
-#header-half-hero {
-	background: <?php echo $half_hero_background_color; ?>;
-}
-
-#header-half-hero .menu-mobile-wrapper i {
-	margin-left: 20px;
-	font-size: 36px;
-	color: <?php echo $default_text_color; ?>;
-}
-
 .hero-half {
 <?php if ( $hero_gradient_tones == 'two_tones' ) { ?>
 	background: linear-gradient(<?php echo $hero_gradient_angle; ?>, <?php 
@@ -55,6 +45,25 @@
 	background-position: <?php $halfpos = str_replace('_',' ',$half_hero_background_position); echo $halfpos; ?>;
 	background-size: cover;
 	background-repeat: no-repeat;
+}
+
+#header-half-hero {
+	background: <?php echo $half_hero_background_color; ?>;
+}
+
+#header-half-hero .menu-mobile-wrapper i {
+	margin-left: 20px;
+	font-size: 36px;
+	color: <?php echo $default_text_color; ?>;
+}
+
+#header-half-hero .main-menu ul li a {
+	text-decoration: none;
+	color: <?php echo $half_hero_link_color; ?>;
+}
+
+#header-half-hero a {
+	color: <?php echo $half_hero_link_color; ?>;
 }
 
 @media screen and (max-width: 1200px) {
@@ -92,13 +101,4 @@
 		margin-bottom: 30px;
 		color: #ffffff;
 	}
-}
-
-#header-half-hero .main-menu ul li a {
-	text-decoration: none;
-	color: <?php echo $half_hero_link_color; ?>;
-}
-
-#header-half-hero a {
-	color: <?php echo $half_hero_link_color; ?>;
 }
