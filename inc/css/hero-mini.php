@@ -138,3 +138,8 @@
 		color: #ffffff;
 	}
 }
+
+.hero-main-mini .search-input {
+	background: #ffffff !important;
+	box-shadow: inset 0px 0px 0px 1px #ffffff !important;
+}
