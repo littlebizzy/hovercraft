@@ -9,8 +9,24 @@ form {
 	padding: 0 !important;
 }
 
-input, select, textarea, button {
+input, select, textarea {
 	width: 100%;
+	height: auto;
+	vertical-align: middle;
+	font-weight: 400;
+	line-height: 2;
+	padding: 10px 20px !important;
+	border: 0;
+	outline: none;
+	font-size: 16px;
+	background: #ffffff;
+	display: inline-block;
+	box-shadow: inset 0px 0px 0px 1px <?php echo $breadcrumbs_text_color; ?>;
+	font-family: inherit;
+	transition: all 0.15s ease-in-out;
+}
+
+button {
 	height: auto;
 	vertical-align: middle;
 	font-weight: 400;
@@ -114,7 +130,7 @@ input[type="range"]::-moz-range-track {
 	border-radius: 2px;
 }
 
-input[type="submit"], button, button[type="submit"] {
+input[type="submit"], button[type="submit"] {
 	font-size: 18px;
 	font-weight: 600;
 	padding: 10px 20px !important;
@@ -127,7 +143,7 @@ input[type="submit"], button, button[type="submit"] {
 	transition: background 0.15s ease-in-out;
 }
 
-input[type="submit"]:hover, button:hover, button[type="submit"]:hover {
+input[type="submit"]:hover, button[type="submit"]:hover {
 	background: <?php echo $default_hover_color; ?> !important;
 }
 
@@ -158,15 +174,11 @@ input:focus, select:focus, textarea:focus, button:focus {
 	box-shadow: 0 0 0 2px rgba(100, 100, 100, 0.15);
 }
 
-/* placeholder text */
-
 input::placeholder, textarea::placeholder {
 	color: #999999;
 	font-style: italic;
 	opacity: 1;
 }
-
-/* disabled inputs */
 
 input:disabled, select:disabled, textarea:disabled, button:disabled {
 	background: #f5f5f5;
@@ -175,15 +187,11 @@ input:disabled, select:disabled, textarea:disabled, button:disabled {
 	box-shadow: inset 0px 0px 0px 1px #dddddd;
 }
 
-/* readonly inputs */
-
 input[readonly], textarea[readonly] {
 	background: #f5f5f5;
 	color: #333333;
 	box-shadow: inset 0px 0px 0px 1px #cccccc;
 }
-
-/* rtl support */
 
 [dir="rtl"] input, [dir="rtl"] select, [dir="rtl"] textarea {
 	text-align: right;
@@ -195,9 +203,33 @@ input[readonly], textarea[readonly] {
 	padding-right: 20px !important;
 }
 
-/* invalid field styling */
-
 input:invalid, select:invalid, textarea:invalid {
 	background-color: #fff8f8;
 	box-shadow: inset 0px 0px 0px 1px #e57373;
+}
+
+/* responsive button widths */
+
+@media (max-width: 1199px) {
+	input[type="submit"], button[type="submit"] {
+		width: 100%;
+	}
+	button {
+		width: 100%;
+	}
+	button.button, input.button {
+		width: 100%;
+	}
+}
+
+@media (min-width: 1200px) {
+	input[type="submit"], button[type="submit"] {
+		width: 100%;
+	}
+	button {
+		width: auto;
+	}
+	button.button, input.button {
+		width: auto;
+	}
 }
