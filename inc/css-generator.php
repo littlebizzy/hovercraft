@@ -1448,64 +1448,13 @@ if ( file_exists( $hovercraft_forms_css ) ) {
 }
 ?>
 
-
-/* searchform.php style June 2024 */
-
-.input-container {
-	display: flex;
+/* searchform */
+<?php
+$hovercraft_searchform_css = get_template_directory() . '/inc/css/searchform.php';
+if ( file_exists( $hovercraft_searchform_css ) ) {
+	include $hovercraft_searchform_css;
 }
-
-::placeholder {
-	color: <?php echo $search_input_placeholder_color; ?>;
-	opacity: 1;
-}
-
-.search-input {
-	background: <?php echo $search_bar_background_color; ?>;
-	color: <?php echo $search_input_text_color; ?>;
-	vertical-align: middle;
-	font-size: 16px;
-	line-height: 2;
-	padding: 10px 20px;
-	border: 0;
-	outline: none;
-	box-shadow: inset 0 -1px 1px -1px <?php echo $search_bar_border_color; ?>, inset 0 1px 1px -1px <?php echo $search_bar_border_color; ?>, inset 1px 0 1px -1px <?php echo $search_bar_border_color; ?>;
-}
-
-.hero-main-mini .search-input {
-	background: #ffffff !important;
-	box-shadow: inset 0px 0px 0px 1px #ffffff !important;
-}
-
-.search-submit {
-	background: #D500F9;
-	color: #ffffff;
-	vertical-align: middle;
-	padding: 0 20px;
-	border: 0;
-	outline: none;
-	cursor: pointer;
-}
-
-.search-submit:hover {
-	background: #AB47BC;
-}
-
-.search-submit i {
-	font-size: 24px;
-}
-	
-
-/* search bar */
-
-.searchinput::placeholder {
-	color: <?php echo $search_input_placeholder_color; ?>;
-}
-
-.searchinput:focus {
-  outline: none;
-}
-
+?>
 
 /* comments */
 <?php
