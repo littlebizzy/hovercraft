@@ -6,11 +6,6 @@
 	display: flex;
 }
 
-::placeholder {
-	color: <?php echo $search_input_placeholder_color; ?>;
-	opacity: 1;
-}
-
 .search-input {
 	background: <?php echo $search_bar_background_color; ?>;
 	color: <?php echo $search_input_text_color; ?>;
@@ -20,7 +15,22 @@
 	padding: 10px 20px;
 	border: 0;
 	outline: none;
-	box-shadow: inset 0 -1px 1px -1px <?php echo $search_bar_border_color; ?>, inset 0 1px 1px -1px <?php echo $search_bar_border_color; ?>, inset 1px 0 1px -1px <?php echo $search_bar_border_color; ?>;
+	box-shadow: inset 0 -1px 1px -1px <?php echo $search_bar_border_color; ?>,
+		inset 0 1px 1px -1px <?php echo $search_bar_border_color; ?>,
+		inset 1px 0 1px -1px <?php echo $search_bar_border_color; ?>;
+}
+
+.search-input::placeholder {
+	color: <?php echo $search_input_placeholder_color; ?>;
+	opacity: 1;
+}
+
+.searchinput::placeholder {
+	color: <?php echo $search_input_placeholder_color; ?>;
+}
+
+.searchinput:focus {
+	outline: none;
 }
 
 .search-submit {
@@ -39,12 +49,4 @@
 
 .search-submit i {
 	font-size: 24px;
-}
-
-.searchinput::placeholder {
-	color: <?php echo $search_input_placeholder_color; ?>;
-}
-
-.searchinput:focus {
-  outline: none;
 }
