@@ -1464,119 +1464,13 @@ if ( file_exists( $hovercraft_comments_css ) ) {
 }
 ?>
 
-
-/* search icon and full screen search */
-
-.search-icon-wrapper {
-	display: inline-block;
-	padding-left: 30px;
-	vertical-align: middle;
-	text-align: center;
-	cursor: pointer;
+/* search modal */
+<?php
+$hovercraft_search_modal_css = get_template_directory() . '/inc/css/search-modal.php';
+if ( file_exists( $hovercraft_search_modal_css ) ) {
+	include $hovercraft_search_modal_css;
 }
-
-.search-icon-wrapper i {
-	padding: 10px 0px;
-	text-decoration: none !important;
-	font-size: 24px;
-}
-
-#sidebar ul li {
-	line-height: 2;
-}
-
-
-/**
-* Background
-*/
-#full-screen-search {
-    visibility: hidden;
-    opacity: 0;
-	position: static;
-    width: 100%;
-    height: 0;
-    background: rgba(0,0,0,0.7);
-    transition: opacity 0.1s linear;
-	top: 0;
-	left: 0;
-	z-index: -1;
-}
-
-/**
-* Display Full Screen Search when Open
-*/
-#full-screen-search.open {
-    /**
-    * Because we're using visibility and opacity for CSS transition support,
-    * we define position: fixed; here so that the Full Screen Search doesn't block
-    * the underlying HTML elements when not open
-    */
-	height: 100%;
-    visibility: visible;
-    opacity: 1;
-	position: fixed;
-	z-index: 999998;
-}
-
-/**
-* Search Form
-*/
-#full-screen-search form {
-    position: relative;
-    width: 100%;
-    height: 100%;
-}
-
-/**
-* Close Button
-*/
-#full-screen-search button.close {
-    position: absolute;
-    z-index: 999999;
-    top: 20px;
-    right: 20px;
-	padding: 0 !important;
-	background: transparent;
-    color: #ffffff;
-    cursor: pointer;
-}
-	
-#full-screen-search button.close i {
-	font-size: 48px;
-}
-
-/**
-* Search Form Div
-*/
-#full-screen-search form div {
-    position: absolute;
-    width: 50%;
-    height: 100px;
-    top: 50%;
-    left: 50%;
-    margin: -50px 0 0 -25%;
-}
-
-/**
-* Search Form Input Placeholder Color
-*/
-#full-screen-search form div input::placeholder { 
-    color: #ccc;
-}
-
-/**
-* Search Form Input
-*/
-#full-screen-search form div input {
-    width: 100%;
-    height: 100px;
-    background: #ffffff;
-    padding: 20px;
-    font-size: 36px;
-    line-height: 60px;
-	box-shadow: none;
-}
-
+?>
 
 /* back to top */
 <?php
