@@ -709,11 +709,11 @@ if ( file_exists( $hovercraft_code_snippets_css ) ) {
 }
 ?>
 
-/* buttons */
+/* general cta (buttons) */
 <?php
-$hovercraft_buttons_css = get_template_directory() . '/inc/css/buttons.php';
-if ( file_exists( $hovercraft_buttons_css ) ) {
-	include $hovercraft_buttons_css;
+$hovercraft_general_cta_css = get_template_directory() . '/inc/css/cta-general.php';
+if ( file_exists( $hovercraft_general_cta_css ) ) {
+	include $hovercraft_general_cta_css;
 }
 ?>
 
