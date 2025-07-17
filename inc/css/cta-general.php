@@ -1,5 +1,5 @@
 <?php
-// styles for buttons
+// styles for general cta (a.k.a. buttons)
 ?>
 
 button {
