@@ -8,7 +8,38 @@ form.variations_form {
 
 form.cart {
 	display: flex;
-	align-items: stretch;
+}
+
+@media (max-width: 1199px) {
+	form.cart {
+		flex-direction: column;
+	}
+
+	.quantity {
+		margin-bottom: 15px !important;
+		margin-right: 0 !important;
+		width: 100%;
+	}
+
+	form.cart button {
+		width: 100%;
+	}
+}
+
+@media (min-width: 1200px) {
+	form.cart {
+		flex-direction: row;
+	}
+
+	.quantity {
+		margin-bottom: 0 !important;
+		margin-right: 10px !important;
+		width: auto;
+	}
+
+	form.cart button {
+		width: auto;
+	}
 }
 
 div.single_variation_wrap {
@@ -34,23 +65,22 @@ form.cart input {
 	line-height: 40px !important;
 	text-align: center;
 	vertical-align: middle;
-	height: 40px;
+	height: 40px !important;
 	padding: 0;
-	border: 0;
-	border-radius: 4px !important;
+	border: 0 !important;
 	outline: none;
 	box-shadow: inset 0px 0px 0px 1px #BDBDBD;
 }
 
 form.cart button {
+	float: none !important;
 	font-size: 16px !important;
 	font-weight: 700 !important;
 	line-height: 40px !important;
 	padding: 0 20px;
 	vertical-align: middle;
-	height: 40px;
-	border: 0;
-	border-radius: 4px !important;
+	height: 40px !important;
+	border: 0 !important;
 	outline: none;
 	cursor: pointer;
 }
@@ -76,36 +106,4 @@ form.cart button {
 	overflow: hidden;
 	clip: rect(0, 0, 0, 0);
 	white-space: nowrap;
-}
-
-@media (max-width: 1199px) {
-	form.cart {
-		flex-direction: column;
-	}
-
-	.quantity.buttons-added {
-		margin-bottom: 15px;
-		margin-right: 0;
-		width: 100%;
-	}
-
-	form.cart button {
-		width: 100%;
-	}
-}
-
-@media (min-width: 1200px) {
-	form.cart {
-		flex-direction: row;
-	}
-
-	.quantity.buttons-added {
-		margin-bottom: 0;
-		margin-right: 10px;
-		width: auto;
-	}
-
-	form.cart button {
-		width: auto;
-	}
 }
