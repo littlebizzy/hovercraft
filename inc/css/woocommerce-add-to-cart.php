@@ -57,9 +57,14 @@ form.cart button {
 }
 
 .quantity-button, .quantity .plus, .quantity .minus {
-	background: transparent;
+	background: #f5f5f5;
+	color: #333;
 	border: none !important;
 	box-shadow: none !important;
+}
+
+.quantity-button:hover, .quantity .plus:hover, .quantity .minus:hover {
+	background: #e0e0e0;
 }
 
 .screen-reader-text {
