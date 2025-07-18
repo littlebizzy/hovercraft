@@ -3,51 +3,73 @@
 ?>
 
 form.variations_form {
-display: block !important;
+	display: block !important;
 }
 
 form.cart {
-display: flex;
+	display: block;
 }
 
 div.single_variation_wrap {
-clear: both;
-display: flex;
+	display: flex;
 }
 
 table.variations {
-display: block;
-width: 100%;
-margin-bottom: 30px !important;
-border: 0;
+	width: 100%;
+	margin-bottom: 30px !important;
+	border: 0;
+	border-collapse: collapse;
+}
+
+.quantity.buttons-added {
+	margin-right: 10px;
+}
+
+input.qty {
+	appearance: textfield;
+	-moz-appearance: textfield;
+	-webkit-appearance: none;
 }
 
 form.cart input {
-vertical-align: middle;
-font-size: 16px;
-font-weight: 400;
-line-height: 2;
-text-align: center;
-margin-right: 5px;
-padding: 5px 0px !important;
-border: 0;
-outline: none;
-box-shadow: inset 0px 0px 0px 1px #BDBDBD;
+	font-size: 16px !important;
+	font-weight: 400 !important;
+	text-align: center;
+	vertical-align: middle;
+	height: 40px;
+	padding: 0;
+	border: 0;
+	border-radius: 4px !important;
+	outline: none;
+	box-shadow: inset 0px 0px 0px 1px #BDBDBD;
 }
 
 form.cart button {
-vertical-align: middle;
-font-size: 16px !important;
-font-weight: 700 !important;
-padding: 0 20px;
-border: 0;
-outline: none;
-cursor: pointer;
-border-radius: 0 !important;
+	font-size: 16px !important;
+	font-weight: 700 !important;
+	padding: 0 20px;
+	vertical-align: middle;
+	height: 40px;
+	border: 0;
+	border-radius: 4px !important;
+	outline: none;
+	cursor: pointer;
 }
 
 .quantity-button, .quantity .plus, .quantity .minus {
-box-shadow: none !important;
-border: none !important;
-background: transparent;
+	background: transparent;
+	border: none !important;
+	box-shadow: none !important;
+}
+
+.screen-reader-text {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	padding: 0;
+	margin: -1px;
+	border: 0;
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	white-space: nowrap;
 }
