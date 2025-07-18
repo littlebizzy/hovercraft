@@ -63,13 +63,13 @@ form.cart input {
 	font-size: 16px !important;
 	font-weight: 400 !important;
 	line-height: 40px !important;
-	text-align: center;
-	vertical-align: middle;
+	text-align: center !important;
+	vertical-align: middle !important;
 	height: 40px !important;
-	padding: 0;
+	padding: 0 !important;
 	border: 0 !important;
-	outline: none;
-	box-shadow: inset 0px 0px 0px 1px #BDBDBD;
+	outline: none !important;
+	box-shadow: inset 0px 0px 0px 1px #BDBDBD !important;
 }
 
 form.cart button {
@@ -77,12 +77,12 @@ form.cart button {
 	font-size: 16px !important;
 	font-weight: 700 !important;
 	line-height: 40px !important;
-	padding: 0 20px;
-	vertical-align: middle;
+	padding: 0 20px !important;
+	vertical-align: middle !important;
 	height: 40px !important;
 	border: 0 !important;
-	outline: none;
-	cursor: pointer;
+	outline: none !important;
+	cursor: pointer !important;
 }
 
 .quantity-button, .quantity .plus, .quantity .minus {
