@@ -54,10 +54,23 @@ table.variations {
 	border-collapse: collapse;
 }
 
+/* remove default browser styling from quantity input */
 input.qty {
 	appearance: textfield;
 	-moz-appearance: textfield;
 	-webkit-appearance: none;
+}
+
+/* hide chrome/safari spin buttons on number inputs */
+.quantity input.qty::-webkit-outer-spin-button,
+.quantity input.qty::-webkit-inner-spin-button {
+	-webkit-appearance: none !important;
+	margin: 0 !important;
+}
+
+/* hide firefox spin buttons on number inputs */
+.quantity input.qty[type="number"] {
+	-moz-appearance: textfield !important;
 }
 
 form.cart input {
@@ -73,6 +86,50 @@ form.cart input {
 	border: 0 !important;
 	outline: none !important;
 	box-shadow: inset 0px 0px 0px 1px #BDBDBD !important;
+}
+
+.quantity.buttons-added {
+    display: inline-flex !important;
+    align-items: center !important;
+    border: 1px solid #ccc !important;
+    border-radius: 4px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    background: #fff !important;
+}
+
+.quantity-button {
+    width: 40px !important;
+    height: 40px !important;
+    font-size: 20px !important;
+    background: #f2f2f2 !important;
+    color: #333 !important;
+    border: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    cursor: pointer !important;
+    user-select: none !important;
+    line-height: 1 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: background 0.2s ease !important;
+}
+
+.quantity input.qty {
+    width: 60px !important;
+    height: 40px !important;
+    font-size: 16px !important;
+    text-align: center !important;
+    border: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    outline: none !important;
+    background: #fff !important;
+    color: #000 !important;
+    -moz-appearance: textfield !important;
+    cursor: default !important;
 }
 
 form.cart button {
