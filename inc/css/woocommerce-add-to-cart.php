@@ -3,11 +3,12 @@
 ?>
 
 form.variations_form {
-	display: block !important;
+	display: block;
 }
 
 form.cart {
 	display: flex;
+	align-items: stretch;
 }
 
 @media (max-width: 1199px) {
@@ -49,7 +50,7 @@ div.single_variation_wrap {
 table.variations {
 	width: 100%;
 	margin-bottom: 30px !important;
-	border: 0;
+	border: 0 !important;
 	border-collapse: collapse;
 }
 
@@ -60,12 +61,14 @@ input.qty {
 }
 
 form.cart input {
+	display: block !important;
 	font-size: 16px !important;
 	font-weight: 400 !important;
 	line-height: 40px !important;
 	text-align: center !important;
 	vertical-align: middle !important;
 	height: 40px !important;
+	margin: 0 !important;
 	padding: 0 !important;
 	border: 0 !important;
 	outline: none !important;
@@ -73,16 +76,19 @@ form.cart input {
 }
 
 form.cart button {
+	display: block !important;
 	float: none !important;
 	font-size: 16px !important;
 	font-weight: 700 !important;
 	line-height: 40px !important;
+	margin: 0 !important;
 	padding: 0 20px !important;
 	vertical-align: middle !important;
 	height: 40px !important;
 	border: 0 !important;
 	outline: none !important;
 	cursor: pointer !important;
+	box-shadow: inset 0px 0px 0px 1px transparent !important;
 }
 
 .quantity-button, .quantity .plus, .quantity .minus {
