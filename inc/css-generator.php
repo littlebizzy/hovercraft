@@ -1488,15 +1488,6 @@ if ( file_exists( $hovercraft_bbpress_css ) ) {
 }
 ?>
 
-/* quantity buttons (woocommerce) */
-<?php
-$hovercraft_quantity_buttons_css = get_template_directory() . '/inc/css/quantity-buttons.php';
-if ( file_exists( $hovercraft_quantity_buttons_css ) ) {
-    include $hovercraft_quantity_buttons_css;
-}
-?>
-	
-
 /* woocommerce cart */
 <?php
 $hovercraft_woocommerce_cart_css = get_template_directory() . '/inc/css/woocommerce-cart.php';
@@ -1674,15 +1665,13 @@ if ( file_exists( $hovercraft_woocommerce_product_details_css ) ) {
 }
 ?>
 
-
-/* woocommerce add to cart */
+/* woocommerce add to cart (and quantity buttons) */
 <?php
 $hovercraft_woocommerce_add_to_cart_css = get_template_directory() . '/inc/css/woocommerce-add-to-cart.php';
 if ( file_exists( $hovercraft_woocommerce_add_to_cart_css ) ) {
     include $hovercraft_woocommerce_add_to_cart_css;
 }
 ?>
-
 
 /* woocommerce login */
 <?php
@@ -1691,7 +1680,7 @@ if ( file_exists( $hovercraft_woocommerce_login_css ) ) {
     include $hovercraft_woocommerce_login_css;
 }
 ?>
-
+	
 
 /* woocommerce */
 
