@@ -2,7 +2,7 @@
 // styles for woocommerce add to cart
 ?>
 
-/* layout for variation form */
+/* block layout for variation form */
 form.variations_form {
 	display: block;
 }
@@ -13,13 +13,13 @@ form.cart {
 	align-items: stretch !important;
 }
 
-/* mobile layout: stack quantity and button */
+/* mobile layout (stack quantity and button vertically) */
 @media (max-width: 1199px) {
 	form.cart {
 		flex-direction: column !important;
 	}
 
-	.quantity {
+	div.quantity {
 		margin-bottom: 15px !important;
 		margin-right: 0 !important;
 		width: 100%;
@@ -30,13 +30,13 @@ form.cart {
 	}
 }
 
-/* desktop layout: row direction */
+/* desktop layout (display quantity and button inline) */
 @media (min-width: 1200px) {
 	form.cart {
 		flex-direction: row !important;
 	}
 
-	.quantity {
+	div.quantity {
 		margin-bottom: 0 !important;
 		margin-right: 10px !important;
 		width: auto;
@@ -47,7 +47,7 @@ form.cart {
 	}
 }
 
-/* wrap for variation details */
+/* flex layout for variation details */
 div.single_variation_wrap {
 	display: flex;
 }
@@ -57,7 +57,7 @@ table.variations {
 	width: 100%;
 	margin-bottom: 30px !important;
 	border: 0 !important;
-	border-collapse: collapse;
+	border-collapse: collapse !important;
 }
 
 /* reset native number input styles */
@@ -68,8 +68,7 @@ input.qty {
 }
 
 /* hide webkit spin buttons */
-.quantity input.qty::-webkit-outer-spin-button,
-.quantity input.qty::-webkit-inner-spin-button {
+.quantity input.qty::-webkit-outer-spin-button, .quantity input.qty::-webkit-inner-spin-button {
 	-webkit-appearance: none !important;
 	margin: 0 !important;
 }
@@ -100,7 +99,6 @@ form.cart input {
 	align-items: center !important;
 	overflow: hidden !important;
 	padding: 0 !important;
-	box-shadow: inset 0px 0px 0px 1px #BDBDBD !important;
 }
 
 /* plus/minus button styles */
@@ -130,7 +128,6 @@ form.cart input {
 	border: none !important;
 	padding: 0 !important;
 	margin: 0 !important;
-	box-shadow: none !important;
 	outline: none !important;
 	background: #f2f2f2 !important;
 	color: #000 !important;
@@ -150,7 +147,6 @@ form.cart button {
 	border: 0 !important;
 	outline: none !important;
 	cursor: pointer !important;
-	box-shadow: inset 0px 0px 0px 1px transparent !important;
 }
 
 /* base style for quantity buttons */
@@ -158,7 +154,6 @@ form.cart button {
 	background: #f5f5f5 !important;
 	color: #333 !important;
 	border: none !important;
-	box-shadow: none !important;
 }
 
 /* hover style for quantity buttons */
