@@ -2,18 +2,21 @@
 // styles for woocommerce add to cart
 ?>
 
+/* layout for variation form */
 form.variations_form {
 	display: block;
 }
 
+/* flex layout for add to cart form */
 form.cart {
-	display: flex;
-	align-items: stretch;
+	display: flex !important;
+	align-items: stretch !important;
 }
 
+/* mobile layout: stack quantity and button */
 @media (max-width: 1199px) {
 	form.cart {
-		flex-direction: column;
+		flex-direction: column !important;
 	}
 
 	.quantity {
@@ -27,9 +30,10 @@ form.cart {
 	}
 }
 
+/* desktop layout: row direction */
 @media (min-width: 1200px) {
 	form.cart {
-		flex-direction: row;
+		flex-direction: row !important;
 	}
 
 	.quantity {
@@ -43,10 +47,12 @@ form.cart {
 	}
 }
 
+/* wrap for variation details */
 div.single_variation_wrap {
 	display: flex;
 }
 
+/* style for variations table */
 table.variations {
 	width: 100%;
 	margin-bottom: 30px !important;
@@ -54,25 +60,26 @@ table.variations {
 	border-collapse: collapse;
 }
 
-/* remove default browser styling from quantity input */
+/* reset native number input styles */
 input.qty {
 	appearance: textfield;
 	-moz-appearance: textfield;
 	-webkit-appearance: none;
 }
 
-/* hide chrome/safari spin buttons on number inputs */
+/* hide webkit spin buttons */
 .quantity input.qty::-webkit-outer-spin-button,
 .quantity input.qty::-webkit-inner-spin-button {
 	-webkit-appearance: none !important;
 	margin: 0 !important;
 }
 
-/* hide firefox spin buttons on number inputs */
+/* hide firefox spin buttons */
 .quantity input.qty[type="number"] {
 	-moz-appearance: textfield !important;
 }
 
+/* base style for all inputs in cart form */
 form.cart input {
 	display: block !important;
 	font-size: 16px !important;
@@ -85,56 +92,54 @@ form.cart input {
 	padding: 0 !important;
 	border: 0 !important;
 	outline: none !important;
+}
+
+/* flex layout when plus/minus buttons exist */
+.quantity.buttons-added {
+	display: inline-flex !important;
+	align-items: center !important;
+	overflow: hidden !important;
+	padding: 0 !important;
 	box-shadow: inset 0px 0px 0px 1px #BDBDBD !important;
 }
 
-.quantity.buttons-added {
-    display: inline-flex !important;
-    align-items: center !important;
-    border: 1px solid #ccc !important;
-    border-radius: 4px !important;
-    overflow: hidden !important;
-    padding: 0 !important;
-    background: #fff !important;
-}
-
+/* plus/minus button styles */
 .quantity-button {
-    width: 40px !important;
-    height: 40px !important;
-    font-size: 20px !important;
-    background: #f2f2f2 !important;
-    color: #333 !important;
-    border: none !important;
-    margin: 0 !important;
-    padding: 0 !important;
-    cursor: pointer !important;
-    user-select: none !important;
-    line-height: 1 !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    transition: background 0.2s ease !important;
+	width: 40px !important;
+	height: 40px !important;
+	font-size: 20px !important;
+	color: #333 !important;
+	border: none !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	cursor: pointer !important;
+	user-select: none !important;
+	line-height: 1 !important;
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	transition: background 0.2s ease !important;
 }
 
+/* style for quantity input inside wrapper */
 .quantity input.qty {
-    width: 60px !important;
-    height: 40px !important;
-    font-size: 16px !important;
-    text-align: center !important;
-    border: none !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    box-shadow: none !important;
-    outline: none !important;
-    background: #fff !important;
-    color: #000 !important;
-    -moz-appearance: textfield !important;
-    cursor: default !important;
+	width: 60px !important;
+	height: 40px !important;
+	font-size: 16px !important;
+	text-align: center !important;
+	border: none !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	box-shadow: none !important;
+	outline: none !important;
+	background: #f2f2f2 !important;
+	color: #000 !important;
+	-moz-appearance: textfield !important;
+	cursor: default !important;
 }
 
+/* style for add to cart button */
 form.cart button {
-	display: block !important;
-	float: none !important;
 	font-size: 16px !important;
 	font-weight: 700 !important;
 	line-height: 40px !important;
@@ -148,6 +153,7 @@ form.cart button {
 	box-shadow: inset 0px 0px 0px 1px transparent !important;
 }
 
+/* base style for quantity buttons */
 .quantity-button, .quantity .plus, .quantity .minus {
 	background: #f5f5f5 !important;
 	color: #333 !important;
@@ -155,10 +161,12 @@ form.cart button {
 	box-shadow: none !important;
 }
 
+/* hover style for quantity buttons */
 .quantity-button:hover, .quantity .plus:hover, .quantity .minus:hover {
 	background: #e0e0e0 !important;
 }
 
+/* hide screen reader text from layout */
 .screen-reader-text {
 	position: absolute;
 	width: 1px;
