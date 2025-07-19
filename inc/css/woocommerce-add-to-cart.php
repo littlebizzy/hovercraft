@@ -60,6 +60,20 @@ table.variations {
 	border-collapse: collapse !important;
 }
 
+/* style for add to cart button */
+form.cart button {
+	font-size: 16px !important;
+	font-weight: 700 !important;
+	line-height: 40px !important;
+	padding: 0 20px !important;
+	vertical-align: middle !important;
+	height: 40px !important;
+	border: none !important;
+	box-shadow: none !important;
+	outline: none !important;
+	cursor: pointer !important;
+}
+
 /* reset native number input styles */
 input.qty {
 	appearance: textfield;
@@ -78,8 +92,9 @@ input.qty[type="number"] {
 	-moz-appearance: textfield !important;
 }
 
-/* style for quantity input */
+/* style for quantity input (unclickable number) */
 input.qty {
+	width: 60px !important;
 	font-size: 16px !important;
 	font-weight: 400 !important;
 	line-height: 40px !important;
@@ -91,62 +106,36 @@ input.qty {
 	border: none !important;
 	box-shadow: none !important;
 	outline: none !important;
+	cursor: default !important;
+	background: #f2f2f2 !important;
+	color: <?php echo $default_text_color; ?> !important;
 }
 
-/* flex layout when plus/minus buttons exist */
-.quantity.buttons-added {
+/* flex layout when plus and minus buttons exist */
+.buttons-added {
 	display: inline-flex !important;
 	align-items: center !important;
 	overflow: hidden !important;
 	padding: 0 !important;
 }
 
-/* plus/minus button styles */
+/* plus and minus button styles (must load after form.cart button) */
 .quantity-button {
 	width: 40px !important;
 	height: 40px !important;
-	font-size: 20px !important;
-	color: #333 !important;
+	font-size: 30px !important;
+	color: <?php echo $default_text_color; ?> !important;
 	border: none !important;
+	box-shadow: none !important;
 	margin: 0 !important;
 	padding: 0 !important;
 	cursor: pointer !important;
 	user-select: none !important;
-	line-height: 1 !important;
+	line-height: 40px !important;
 	display: flex !important;
 	align-items: center !important;
 	justify-content: center !important;
 	transition: background 0.2s ease !important;
-}
-
-/* style for quantity input inside wrapper */
-input.qty {
-	width: 60px !important;
-	height: 40px !important;
-	font-size: 16px !important;
-	text-align: center !important;
-	border: none !important;
-	padding: 0 !important;
-	margin: 0 !important;
-	outline: none !important;
-	background: #f2f2f2 !important;
-	color: #000 !important;
-	-moz-appearance: textfield !important;
-	cursor: default !important;
-}
-
-/* style for add to cart button */
-form.cart button {
-	font-size: 16px !important;
-	font-weight: 700 !important;
-	line-height: 40px !important;
-	margin: 0 !important;
-	padding: 0 20px !important;
-	vertical-align: middle !important;
-	height: 40px !important;
-	border: 0 !important;
-	outline: none !important;
-	cursor: pointer !important;
 }
 
 /* base style for quantity buttons */
