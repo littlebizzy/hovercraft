@@ -68,19 +68,18 @@ input.qty {
 }
 
 /* hide webkit spin buttons */
-.quantity input.qty::-webkit-outer-spin-button, .quantity input.qty::-webkit-inner-spin-button {
+input.qty::-webkit-outer-spin-button, input.qty::-webkit-inner-spin-button {
 	-webkit-appearance: none !important;
 	margin: 0 !important;
 }
 
 /* hide firefox spin buttons */
-.quantity input.qty[type="number"] {
+input.qty[type="number"] {
 	-moz-appearance: textfield !important;
 }
 
-/* base style for all inputs in cart form */
-form.cart input {
-	display: block !important;
+/* style for quantity input */
+input.qty {
 	font-size: 16px !important;
 	font-weight: 400 !important;
 	line-height: 40px !important;
@@ -89,7 +88,8 @@ form.cart input {
 	height: 40px !important;
 	margin: 0 !important;
 	padding: 0 !important;
-	border: 0 !important;
+	border: none !important;
+	box-shadow: none !important;
 	outline: none !important;
 }
 
@@ -120,7 +120,7 @@ form.cart input {
 }
 
 /* style for quantity input inside wrapper */
-.quantity input.qty {
+input.qty {
 	width: 60px !important;
 	height: 40px !important;
 	font-size: 16px !important;
@@ -151,17 +151,18 @@ form.cart button {
 
 /* base style for quantity buttons */
 .quantity-button, .quantity .plus, .quantity .minus {
-	background: #f5f5f5 !important;
-	color: #333 !important;
+	background: #e0e0e0 !important;
+	color: <?php echo $default_text_color; ?> !important;
 	border: none !important;
+	box-shadow: none !important;
 }
 
 /* hover style for quantity buttons */
 .quantity-button:hover, .quantity .plus:hover, .quantity .minus:hover {
-	background: #e0e0e0 !important;
+	background: #bdbdbd !important;
 }
 
-/* hide screen reader text from layout */
+/* hide screen reader text */
 .screen-reader-text {
 	position: absolute;
 	width: 1px;
