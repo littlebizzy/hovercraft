@@ -71,7 +71,6 @@
 		width: 100%;
 		display: table;
 		padding: 10px 20px;
-		background: #ffffff;
 		color: <?php echo $half_hero_text_color; ?>;
 	}
 }
@@ -82,7 +81,6 @@
 		display: table;
 		margin: 0px auto;
 		padding: 20px 0px;
-		background: #ffffff;
 		color: <?php echo $half_hero_text_color; ?>;
 	}
 }
