@@ -163,6 +163,32 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// alternative logo location setting
+$wp_customize->add_setting( 'hovercraft_logo_alternative_location', array(
+    'default' => 'none',
+    'sanitize_callback' => 'hovercraft_sanitize_select',
+) );
+
+// alternative logo location control
+$wp_customize->add_control( new WP_Customize_Control(
+    $wp_customize,
+    'hovercraft_logo_alternative_location',
+    array(
+        'label' => __( 'Alternative Logo Location', 'hovercraft' ),
+        'description' => __( 'Where should the alternative logo appear?', 'hovercraft' ),
+        'section' => 'title_tagline',
+        'settings' => 'hovercraft_logo_alternative_location',
+        'type' => 'select',
+        'priority' => 9,
+        'choices' => array(
+            'none' => 'None',
+            'full_hero_only' => 'Full Hero Only',
+            'full_and_half_hero' => 'Full &amp; Half Hero',
+            'full_and_half_and_mini_hero' => 'Full &amp; Half &amp; Mini Hero',
+        ),
+    )
+) );
+
 // header width setting (desktop)
 $wp_customize->add_setting( 'hovercraft_desktop_header_width', array(
     'default' => 'fixed',
