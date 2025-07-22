@@ -12,21 +12,21 @@ $logo_url = $default_logo;
 
 if ( $alternative_logo && $logo_location !== 'none' ) {
     $location_map = array(
-        'full_hero_only' => array( 'full-hero' ),
-        'half_hero_only' => array( 'half-hero' ),
-        'mini_hero_only' => array( 'mini-hero' ),
-        'basic_hero_only' => array( 'basic-hero' ),
-        'full_and_half_hero' => array( 'full-hero', 'half-hero' ),
-        'full_and_mini_hero' => array( 'full-hero', 'mini-hero' ),
-        'full_and_basic_hero' => array( 'full-hero', 'basic-hero' ),
-        'half_and_mini_hero' => array( 'half-hero', 'mini-hero' ),
-        'half_and_basic_hero' => array( 'half-hero', 'basic-hero' ),
-        'mini_and_basic_hero' => array( 'mini-hero', 'basic-hero' ),
-        'full_half_mini_hero' => array( 'full-hero', 'half-hero', 'mini-hero' ),
-        'full_half_basic_hero' => array( 'full-hero', 'half-hero', 'basic-hero' ),
-        'full_mini_basic_hero' => array( 'full-hero', 'mini-hero', 'basic-hero' ),
-        'half_mini_basic_hero' => array( 'half-hero', 'mini-hero', 'basic-hero' ),
-        'full_half_mini_basic_hero' => array( 'full-hero', 'half-hero', 'mini-hero', 'basic-hero' ),
+        'full_only' => array( 'full-hero' ),
+        'half_only' => array( 'half-hero' ),
+        'mini_only' => array( 'mini-hero' ),
+        'basic_only' => array( 'basic-' ),
+        'full_and_half' => array( 'full-hero', 'half-hero' ),
+        'full_and_mini' => array( 'full-hero', 'mini-hero' ),
+        'full_and_basic' => array( 'full-hero', 'basic-' ),
+        'half_and_mini' => array( 'half-hero', 'mini-hero' ),
+        'half_and_basic' => array( 'half-hero', 'basic-' ),
+        'mini_and_basic' => array( 'mini-hero', 'basic-' ),
+        'full_half_mini' => array( 'full-hero', 'half-hero', 'mini-hero' ),
+        'full_half_basic' => array( 'full-hero', 'half-hero', 'basic-' ),
+        'full_mini_basic' => array( 'full-hero', 'mini-hero', 'basic-' ),
+        'half_mini_basic' => array( 'half-hero', 'mini-hero', 'basic-' ),
+        'full_half_mini_basic' => array( 'full-hero', 'half-hero', 'mini-hero', 'basic-' ),
     );
 
     if ( isset( $location_map[ $logo_location ] ) ) {
