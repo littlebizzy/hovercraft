@@ -143,7 +143,11 @@ $wp_customize->add_control( new WP_Customize_Control(
         'choices' => array(
             'none' => 'None',
             'full_hero_only' => 'Full Hero Only',
+            'half_hero_only' => 'Half Hero Only',
+            'mini_hero_only' => 'Mini Hero Only',
             'full_and_half_hero' => 'Full &amp; Half Hero',
+            'full_and_mini_hero' => 'Full &amp; Mini Hero',
+            'half_and_mini_hero' => 'Half &amp; Mini Hero',
             'full_and_half_and_mini_hero' => 'Full &amp; Half &amp; Mini Hero',
         ),
     )
