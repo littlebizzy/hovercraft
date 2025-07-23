@@ -42,17 +42,17 @@ if ( $alternative_logo && $logo_setting !== 'none' ) {
     }
 }
 
-// bail if no logo
-if ( ! $logo_url ) {
-    return;
-}
+// check if a logo should be rendered
+$has_logo = $logo_url ? true : false;
 ?>
 
+<?php if ( $has_logo ) : ?>
 <div class="branding-media">
     <a href="<?php echo esc_url( home_url() ); ?>" class="custom-logo-link" rel="home">
         <img class="site-logo custom-logo" src="<?php echo esc_url( $logo_url ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?> logo" />
     </a>
 </div><!-- branding-media -->
+<?php endif; ?>
 
 <?php if ( display_header_text() ) : ?>
 <div class="branding-text">
