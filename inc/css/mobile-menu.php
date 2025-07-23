@@ -2,7 +2,7 @@
 // styles for mobile menu
 ?>
 
-/* hide default focus outline on nav icon */
+/* remove default focus outline from nav icon */
 .nav-icon {
 	outline: none !important;
 }
@@ -11,7 +11,7 @@
 	outline: none !important;
 }
 
-/* mobile nav container and styling */
+/* mobile nav container */
 @media screen and (max-width: 1200px) {
 .mobile-nav {
 	display: none;
@@ -22,7 +22,7 @@
 	padding: 20px;
 	}
 
-/* top-level mobile menu items */
+/* mobile nav list items */
 .mobile-nav ul li {
 	font-size: 18px;
 	list-style-type: none;
@@ -33,7 +33,7 @@
 	border-bottom: 1px solid rgba(255,255,255, 0.2);
 }
 
-/* remove border on last menu item */
+/* remove border on last item */
 .mobile-nav ul li:last-child {
 	border-bottom: 0;
 }
@@ -48,12 +48,12 @@
 	text-decoration: none;
 }
 
-/* nested submenus hidden by default */
+/* hide submenus by default */
  .mobile-nav li > ul { display: none; width: 100%; position: relative; }
 
 }
 
-/* force-hide mobile nav on desktop */
+/* hide mobile nav on desktop */
 @media screen and (min-width: 1200px) {
 .mobile-nav {
 	display: none !important;
@@ -81,7 +81,7 @@
 	}
 }
 
-/* hamburger menu icon styles */
+/* menu icon styling for font awesome and material icons */
 #header-full-hero .menu-mobile-wrapper i,
 #header-full-hero .menu-mobile-wrapper .material-icons,
 #header-full-hero .menu-mobile-wrapper .fa,
