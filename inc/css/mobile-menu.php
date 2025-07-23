@@ -60,12 +60,17 @@
 	}
 }
 
-/* hamburger icon wrapper styles */
+/* hamburger icon wrapper with touch-safe area */
 @media screen and (max-width: 1200px) {
 .menu-mobile-wrapper {
-	display: inline-block;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	min-width: 44px;
+	min-height: 44px;
 	text-align: right;
- 	vertical-align: middle;
+	vertical-align: middle;
 	}
 }
 	
@@ -77,7 +82,10 @@
 }
 
 /* hamburger menu icon styles */
-#header-full-hero .menu-mobile-wrapper i {
-	font-size: 36px; /* good for visibility on mobile */
-	color: #ffffff; /* matches menu background */
+#header-full-hero .menu-mobile-wrapper i,
+#header-full-hero .menu-mobile-wrapper .material-icons,
+#header-full-hero .menu-mobile-wrapper .fa,
+#header-full-hero .menu-mobile-wrapper .fa-solid {
+	font-size: 28px;
+	color: #ffffff;
 }
