@@ -52,6 +52,20 @@
 	background-position: <?php $minipos = str_replace('_',' ',$mini_hero_background_position); echo $minipos; ?>;
 	background-size: cover;
 	background-repeat: no-repeat;
+	position: relative;
+}
+
+.mini-hero-caption {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.6);
+	color: #ffffff;
+	padding: 6px 10px;
+	font-size: 14px;
+	z-index: 10;
+	max-width: 90%;
+	text-align: right;
 }
 
 #header-mini-hero .menu-mobile-wrapper i {
@@ -76,23 +90,23 @@
 
 @media screen and (max-width: 1200px) {
 	#hero-mini {
-		width:100%; /* correct */
-		padding:0px; /* correct */
-		display:table; /* correct */
+		width: 100%;
+		padding: 0px;
+		display: table;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 	#hero-mini {
-		width:100%; /* correct */
-		padding:0px; /* correct */
-		display:table; /* correct */
+		width: 100%;
+		padding: 0px;
+		display: table;
 	}
 }
 
 @media screen and (max-width: 1200px) {
 	.hero-main-mini {
-		padding: 60px 20px; /* correct */
+		padding: 60px 20px;
 	}
 }
 
