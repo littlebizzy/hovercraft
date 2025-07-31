@@ -55,6 +55,11 @@
 	position: relative;
 }
 
+.hero-main-mini .search-input {
+	background: #ffffff !important;
+	box-shadow: inset 0px 0px 0px 1px #ffffff !important;
+}
+
 .mini-hero-caption {
 	position: absolute;
 	bottom: 0;
@@ -88,7 +93,7 @@
 	color: <?php echo $header_basic_hero_link_color; ?>;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 	#hero-mini {
 		width: 100%;
 		padding: 0px;
@@ -104,7 +109,7 @@
 	}
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 	.hero-main-mini {
 		padding: 60px 20px;
 	}
@@ -116,7 +121,7 @@
 	}
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 	#header-mini-hero {
 		width: 100%;
 		display: table;
@@ -137,7 +142,7 @@
 	}
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 	h1.mini-hero-title {
 		font-weight: 700;
 		margin-bottom: 0;
@@ -151,9 +156,4 @@
 		margin-bottom: 0;
 		color: #ffffff;
 	}
-}
-
-.hero-main-mini .search-input {
-	background: #ffffff !important;
-	box-shadow: inset 0px 0px 0px 1px #ffffff !important;
 }
