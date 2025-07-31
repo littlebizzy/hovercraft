@@ -205,17 +205,3 @@
 		color: <?php echo $mini_hero_header_link_color; ?>;
 	}
 }
-
-@media screen and (max-width: 1199px) {
-	#header-basic .main-menu ul li a {
-		text-decoration: none;
-		color: <?php echo $header_basic_hero_link_color; ?>;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-	#header-basic .main-menu ul li a {
-		text-decoration: none;
-		color: <?php echo $header_basic_hero_link_color; ?>;
-	}
-}
