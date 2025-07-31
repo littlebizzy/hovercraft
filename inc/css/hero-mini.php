@@ -2,6 +2,7 @@
 // styles for mini hero
 ?>
 
+/* hero mini container background with gradient and optional image */
 #hero-mini {
 <?php if ( $hero_gradient_tones == 'two_tones' ) { ?>
 	background: linear-gradient(<?php echo $hero_gradient_angle; ?>, <?php 
@@ -28,6 +29,7 @@
 	background-repeat: no-repeat;
 }
 
+/* hero main container background and positioning */
 .hero-main-mini {
 <?php if ( $hero_gradient_tones == 'two_tones' ) { ?>
 	background: linear-gradient(<?php echo $hero_gradient_angle; ?>, <?php 
@@ -55,6 +57,7 @@
 	position: relative;
 }
 
+/* mobile: mini hero layout */
 @media screen and (max-width: 1199px) {
 	#hero-mini {
 		width: 100%;
@@ -63,6 +66,7 @@
 	}
 }
 
+/* desktop: mini hero layout */
 @media screen and (min-width: 1200px) {
 	#hero-mini {
 		width: 100%;
@@ -71,18 +75,21 @@
 	}
 }
 
+/* mobile: mini hero main */
 @media screen and (max-width: 1199px) {
 	.hero-main-mini {
 		padding: 60px 20px;
 	}
 }
 
+/* desktop: mini hero main */
 @media screen and (min-width: 1200px) {
 	.hero-main-mini {
 		padding: <?php echo $mini_hero_vertical_padding; ?>px 0px;
 	}
 }
 
+/* mobile: mini hero header layout */
 @media screen and (max-width: 1199px) {
 	#header-mini-hero {
 		width: 100%;
@@ -93,6 +100,7 @@
 	}
 }
 
+/* desktop: mini hero header layout */
 @media screen and (min-width: 1200px) {
 	#header-mini-hero {
 		width: 100%;
@@ -104,6 +112,7 @@
 	}
 }
 
+/* mobile: h1 title style */
 @media screen and (max-width: 1199px) {
 	h1.mini-hero-title {
 		font-weight: 700;
@@ -112,6 +121,7 @@
 	}
 }
 
+/* desktop: h1 title style */
 @media screen and (min-width: 1200px) {
 	h1.mini-hero-title {
 		font-weight: 700;
@@ -120,6 +130,7 @@
 	}
 }
 
+/* mobile: search input field */
 @media screen and (max-width: 1199px) {
 	.hero-main-mini .search-input {
 		background: #ffffff !important;
@@ -127,6 +138,7 @@
 	}
 }
 
+/* desktop: search input field */
 @media screen and (min-width: 1200px) {
 	.hero-main-mini .search-input {
 		background: #ffffff !important;
@@ -134,36 +146,37 @@
 	}
 }
 
+/* mobile: caption box */
 @media screen and (max-width: 1199px) {
 	.mini-hero-caption {
 		position: absolute;
 		bottom: 0;
 		right: 0;
-		background: rgba(0, 0, 0, 0.6);
+		background: rgba(0, 0, 0, 0.5);
 		color: #ffffff;
-		padding: 6px 10px;
-		font-size: 14px;
+		padding: 5px 10px;
+		font-size: 12px;
 		z-index: 10;
-		max-width: 90%;
 		text-align: right;
 	}
 }
 
+/* desktop: caption box */
 @media screen and (min-width: 1200px) {
 	.mini-hero-caption {
 		position: absolute;
 		bottom: 0;
 		right: 0;
-		background: rgba(0, 0, 0, 0.6);
+		background: rgba(0, 0, 0, 0.5);
 		color: #ffffff;
-		padding: 6px 10px;
+		padding: 5px 10px;
 		font-size: 14px;
 		z-index: 10;
-		max-width: 90%;
 		text-align: right;
 	}
 }
 
+/* mobile: menu icon */
 @media screen and (max-width: 1199px) {
 	#header-mini-hero .menu-mobile-wrapper i {
 		margin-left: 20px;
@@ -172,26 +185,21 @@
 	}
 }
 
-@media screen and (min-width: 1200px) {
-	#header-mini-hero .menu-mobile-wrapper i {
-		margin-left: 20px;
-		font-size: 36px;
-		color: <?php echo $mini_hero_header_text_color; ?>;
-	}
-}
-
+/* mobile: general anchor color */
 @media screen and (max-width: 1199px) {
 	#header-mini-hero a {
 		color: <?php echo $mini_hero_header_link_color; ?>;
 	}
 }
 
+/* desktop: general anchor color */
 @media screen and (min-width: 1200px) {
 	#header-mini-hero a {
 		color: <?php echo $mini_hero_header_link_color; ?>;
 	}
 }
 
+/* mobile: main menu links */
 @media screen and (max-width: 1199px) {
 	#header-mini-hero .main-menu ul li a {
 		text-decoration: none;
@@ -199,6 +207,7 @@
 	}
 }
 
+/* desktop: main menu links */
 @media screen and (min-width: 1200px) {
 	#header-mini-hero .main-menu ul li a {
 		text-decoration: none;
