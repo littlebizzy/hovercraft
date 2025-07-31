@@ -4,6 +4,7 @@
 
 /* desktop: cart icon wrapper */
 .cart-icon-wrapper {
+	position: relative;
 	display: inline-block;
 	padding-left: 30px;
 	text-align: center;
@@ -12,7 +13,6 @@
 
 /* desktop: cart icon */
 .cart-icon-wrapper i {
-	position: relative;
 	font-size: 24px;
 	padding: 10px 0;
 	text-decoration: none !important;
@@ -21,8 +21,8 @@
 /* desktop: red notification dot */
 .notification-dot {
 	position: absolute;
-	top: -8px;
-	right: -8px;
+	top: -6px;
+	right: -6px;
 	display: inline-block;
 	background-color: #f44336;
 	border-radius: 50%;
