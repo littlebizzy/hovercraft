@@ -42,6 +42,7 @@
 
 /* mobile: cart button */
 .cart-button-offcanvas {
+	position: relative;
 	width: 100%;
 	display: inline-block;
 	text-align: center;
