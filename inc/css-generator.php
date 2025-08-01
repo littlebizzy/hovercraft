@@ -393,33 +393,6 @@ p {
 }
 
 
-/* lists */
-<?php
-$hovercraft_lists_css = get_template_directory() . '/inc/css/lists.php';
-if ( file_exists( $hovercraft_lists_css ) ) {
-    include $hovercraft_lists_css;
-}
-?>
-
-
-/* blockquotes */
-<?php
-$hovercraft_blockquotes_css = get_template_directory() . '/inc/css/blockquotes.php';
-if ( file_exists( $hovercraft_blockquotes_css ) ) {
-    include $hovercraft_blockquotes_css;
-}
-?>
-
-
-/* tables */
-<?php
-$hovercraft_tables_css = get_template_directory() . '/inc/css/tables.php';
-if ( file_exists( $hovercraft_tables_css ) ) {
-    include $hovercraft_tables_css;
-}
-?>
-
-
 /* wordpress video/media container */
 @media screen and (max-width: 1200px) {
 .mejs-container {
@@ -467,42 +440,6 @@ hr {
 }
 
 
-/* related posts */
-<?php
-$hovercraft_related_posts_css = get_template_directory() . '/inc/css/related-posts.php';
-if ( file_exists( $hovercraft_related_posts_css ) ) {
-	include $hovercraft_related_posts_css;
-}
-?>
-
-
-/* tags */
-<?php
-$hovercraft_tags_css = get_template_directory() . '/inc/css/tags.php';
-if ( file_exists( $hovercraft_tags_css ) ) {
-    include $hovercraft_tags_css;
-}
-?>
-	
-
-/* social sharing */
-<?php
-$hovercraft_social_sharing_css = get_template_directory() . '/inc/css/social-sharing.php';
-if ( file_exists( $hovercraft_social_sharing_css ) ) {
-    include $hovercraft_social_sharing_css;
-}
-?>
-
-
-/* after byline (widget area) */
-<?php
-$hovercraft_after_byline_css = get_template_directory() . '/inc/css/after-byline.php';
-if ( file_exists( $hovercraft_after_byline_css ) ) {
-    include $hovercraft_after_byline_css;
-}
-?>
-
-
 /* header elements */
 
 .header-left {
@@ -530,7 +467,6 @@ if ( file_exists( $hovercraft_hero_full_css ) ) {
 }
 ?>
 
-
 /* half hero */
 <?php
 $hovercraft_hero_half_css = get_template_directory() . '/inc/css/hero-half.php';
@@ -538,7 +474,6 @@ if ( file_exists( $hovercraft_hero_half_css ) ) {
     include $hovercraft_hero_half_css;
 }
 ?>
-
 
 /* mini hero */
 <?php
@@ -548,6 +483,13 @@ if ( file_exists( $hovercraft_hero_mini_css ) ) {
 }
 ?>
 
+/* branding */
+<?php
+$hovercraft_branding_css = get_template_directory() . '/inc/css/branding.php';
+if ( file_exists( $hovercraft_branding_css ) ) {
+    include $hovercraft_branding_css;
+}
+?>
 
 /* logo */
 <?php
@@ -557,66 +499,75 @@ if ( file_exists( $hovercraft_logo_css ) ) {
 }
 ?>
 
-
-/* branding */
+/* site title */
 <?php
-$hovercraft_branding_css = get_template_directory() . '/inc/css/branding.php';
-if ( file_exists( $hovercraft_branding_css ) ) {
-    include $hovercraft_branding_css;
+$hovercraft_site_title_css = get_template_directory() . '/inc/css/site-title.php';
+if ( file_exists( $hovercraft_site_title_css ) ) {
+	include $hovercraft_site_title_css;
 }
 ?>
-
-
-/* site title (site name) */
-
-@media screen and (max-width: 1200px) {
-.site-title {
-	font-family: <?php 
-        echo !empty($site_name_font_family) 
-            ? ucwords(str_replace("_", " ", $site_name_font_family)) 
-            : (!empty($default_font_family) 
-                ? ucwords(str_replace("_", " ", $default_font_family)) 
-                : 'sans-serif'); 
-    ?>;
-	text-transform: <?php echo $site_name_text_transform; ?>;
-	font-size: <?php echo $site_name_mobile_font_size; ?>px;
-	font-weight: <?php echo $site_name_font_weight; ?>;
-	line-height: 1; /* site-tagline is hidden on mobile anyways */
-	display: <?php echo $site_name_display_mobile; ?>;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-.site-title {
-	font-family: <?php 
-        echo !empty($site_name_font_family) 
-            ? ucwords(str_replace("_", " ", $site_name_font_family)) 
-            : (!empty($default_font_family) 
-                ? ucwords(str_replace("_", " ", $default_font_family)) 
-                : 'sans-serif'); 
-    ?>;
-	text-transform: <?php echo $site_name_text_transform; ?>;
-	font-size: <?php echo $site_name_desktop_font_size; ?>px;
-	font-weight: <?php echo $site_name_font_weight; ?>;
-	line-height: 1; /* therefore site-tagline requires padding-top */
-	display: block;
-	}
-}
-
-.site-title-link {
-	<?php if ( $tagline_display == 'right_of_site_title' ) { 
-			echo "display: inline-block;\n"; 
-		} else { 
-			echo "display: block;\n"; 
-		}  ?>
-}
-
 
 /* tagline */
 <?php
 $hovercraft_tagline_css = get_template_directory() . '/inc/css/tagline.php';
 if ( file_exists( $hovercraft_tagline_css ) ) {
 	include $hovercraft_tagline_css;
+}
+?>
+
+/* related posts */
+<?php
+$hovercraft_related_posts_css = get_template_directory() . '/inc/css/related-posts.php';
+if ( file_exists( $hovercraft_related_posts_css ) ) {
+	include $hovercraft_related_posts_css;
+}
+?>
+
+/* tags */
+<?php
+$hovercraft_tags_css = get_template_directory() . '/inc/css/tags.php';
+if ( file_exists( $hovercraft_tags_css ) ) {
+    include $hovercraft_tags_css;
+}
+?>
+
+/* social sharing */
+<?php
+$hovercraft_social_sharing_css = get_template_directory() . '/inc/css/social-sharing.php';
+if ( file_exists( $hovercraft_social_sharing_css ) ) {
+    include $hovercraft_social_sharing_css;
+}
+?>
+
+/* after byline (widget area) */
+<?php
+$hovercraft_after_byline_css = get_template_directory() . '/inc/css/after-byline.php';
+if ( file_exists( $hovercraft_after_byline_css ) ) {
+    include $hovercraft_after_byline_css;
+}
+?>
+
+/* lists */
+<?php
+$hovercraft_lists_css = get_template_directory() . '/inc/css/lists.php';
+if ( file_exists( $hovercraft_lists_css ) ) {
+    include $hovercraft_lists_css;
+}
+?>
+
+/* blockquotes */
+<?php
+$hovercraft_blockquotes_css = get_template_directory() . '/inc/css/blockquotes.php';
+if ( file_exists( $hovercraft_blockquotes_css ) ) {
+    include $hovercraft_blockquotes_css;
+}
+?>
+
+/* tables */
+<?php
+$hovercraft_tables_css = get_template_directory() . '/inc/css/tables.php';
+if ( file_exists( $hovercraft_tables_css ) ) {
+    include $hovercraft_tables_css;
 }
 ?>
 
@@ -682,24 +633,13 @@ if ( file_exists( $hovercraft_headings_css ) ) {
 }
 ?>
 
-/* images */
-	
-.alignright { 
-	float: right; 
-	margin: 0 0 20px 20px; 
+/* images (general) */
+<?php
+$hovercraft_images_general_css = get_template_directory() . '/inc/css/images-general.php';
+if ( file_exists( $hovercraft_images_general_css ) ) {
+	include $hovercraft_images_general_css;
 }
-
-.alignleft { 
-	float: left; 
-	margin: 0 20px 20px 0; 
-}
-
-.aligncenter { 
-	display: block; 
-	margin-left: auto; 
-	margin-right: auto; 
-}
-
+?>
 	
 /* code snippets */
 <?php
