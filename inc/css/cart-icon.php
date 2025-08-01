@@ -21,8 +21,8 @@
 /* desktop: red notification dot */
 .notification-dot {
 	position: absolute;
-	top: -6px;
-	right: -6px;
+	top: -2px;
+	right: -15px;
 	display: inline-block;
 	background-color: #f44336;
 	border-radius: 50%;
@@ -66,8 +66,8 @@
 /* mobile: red notification dot */
 .notification-dot-offcanvas {
 	position: absolute;
-	top: -5px;
-	right: -5px;
+	top: -2px;
+	right: -15px;
 	display: inline-block;
 	background-color: #f44336;
 	border-radius: 50%;
