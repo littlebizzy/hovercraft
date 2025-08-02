@@ -2,6 +2,8 @@
 // styles for basic header
 ?>
 
+#header-basic .menu-desktop > .main-menu ul li ul li { background: <?php echo $header_basic_hero_background_color; ?>; }
+
 /* mobile: header container */
 @media screen and (max-width: 1199px) {
 	#header-basic {
