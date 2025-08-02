@@ -57,6 +57,8 @@
 	position: relative;
 }
 
+#header-mini-hero .menu-desktop > .main-menu ul li ul li { background: <?php echo $mini_hero_background_color; ?>; }
+
 /* mobile: mini hero layout */
 @media screen and (max-width: 1199px) {
 	#hero-mini {
