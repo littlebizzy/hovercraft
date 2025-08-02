@@ -2,6 +2,11 @@
 // styles for cart icon
 ?>
 
+/* shopping cart icon mobile */
+.menu-mobile-wrapper i.shopping_cart {
+	font-size: 36px;
+}
+
 /* desktop: cart icon wrapper */
 .cart-icon-wrapper {
 	position: relative;
