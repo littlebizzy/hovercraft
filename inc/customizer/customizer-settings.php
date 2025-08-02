@@ -225,6 +225,30 @@ $wp_customize->add_control( new WP_Customize_Control(
         )
 ) );
 
+// copyright width setting (desktop)
+$wp_customize->add_setting( 'hovercraft_desktop_copyright_width', array(
+    'default' => 'fixed',
+	'sanitize_callback' => 'hovercraft_sanitize_select'
+	)
+);
+
+// copyright width control (desktop)
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_desktop_copyright_width',
+        array(
+            'label'     => __( 'Copyright Width (Desktop)', 'hovercraft' ),
+			'description' => __( 'What should the copyright width be on desktop? Note: Always Full Width on mobile.', 'hovercraft' ),
+            'section'   => 'hovercraft_general',
+            'settings'  => 'hovercraft_desktop_copyright_width',
+            'type'      => 'select',
+			'choices' => array(
+				'full' => 'Full Width',
+				'fixed' => 'Fixed Width (1200px)'
+    			)
+        )
+) );
+
 // after byline padding setting (desktop)
 $wp_customize->add_setting( 'hovercraft_after_byline_padding', array(
     'default'    => '0',
