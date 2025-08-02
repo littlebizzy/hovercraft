@@ -4,6 +4,10 @@
 
 #header-half-hero .menu-desktop > .main-menu ul li ul li { background: <?php echo $half_hero_background_color; ?>; }
 
+#header-half-hero a {
+	color: <?php echo $half_hero_header_link_color; ?>;
+}
+
 #hero-half-container {
 	width: 100%; /* correct */
 	height: 100%; /* correct */
