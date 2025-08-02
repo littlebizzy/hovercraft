@@ -1109,6 +1109,14 @@ if ( file_exists( $hovercraft_bbpress_css ) ) {
 }
 ?>
 
+/* pagination */
+<?php
+$hovercraft_pagination_css = get_template_directory() . '/inc/css/pagination.php';
+if ( file_exists( $hovercraft_pagination_css ) ) {
+	include $hovercraft_pagination_css;
+}
+?>
+
 /* woocommerce cart */
 <?php
 $hovercraft_woocommerce_cart_css = get_template_directory() . '/inc/css/woocommerce-cart.php';
@@ -1120,38 +1128,7 @@ if ( file_exists( $hovercraft_woocommerce_cart_css ) ) {
 
 /* woocommerce other */
 
-@media screen and (max-width: 1200px) {
-.add_to_cart_button {
-	width: 100%;
-	text-align: center;
-	font-size: 20px;
-	font-weight: 700;
-	color: #ffffff;
-	padding: 10px 0;
-	text-decoration: none;
-	display: block;
-	background: <?php echo $default_link_color; ?>;
-	}
-}
 
-@media screen and (min-width: 1200px) {
-.add_to_cart_button {
-	width: 100%;
-	text-align: center;
-	font-size: 20px;
-	font-weight: 700;
-	color: #ffffff;
-	padding: 10px 0;
-	text-decoration: none;
-	display: block;
-	background: <?php echo $default_link_color; ?>;
-	}
-}
-
- .add_to_cart_button:hover {
-	color: #ffffff;
-	background: <?php echo $default_hover_color; ?>;
-}
 
 div.coupon {
 	display: flex;
@@ -1305,11 +1282,6 @@ if ( file_exists( $hovercraft_woocommerce_login_css ) ) {
 
 /* woocommerce */
 
-/* shopping cart icon mobile */
-.menu-mobile-wrapper i.shopping_cart {
-	font-size: 36px;
-}
-
 section.related {
 	clear: both;
 	display: block;
@@ -1332,15 +1304,6 @@ section.upsells {
 $hovercraft_woocommerce_widget_products_css = get_template_directory() . '/inc/css/woocommerce-widget-products.php';
 if ( file_exists( $hovercraft_woocommerce_widget_products_css ) ) {
     include $hovercraft_woocommerce_widget_products_css;
-}
-?>
-
-
-/* pagination */
-<?php
-$hovercraft_pagination_css = get_template_directory() . '/inc/css/pagination.php';
-if ( file_exists( $hovercraft_pagination_css ) ) {
-	include $hovercraft_pagination_css;
 }
 ?>
 
