@@ -48,6 +48,8 @@ function hovercraft_get_hero_background(
 }
 ?>
 
+#header-full-hero .menu-desktop > .main-menu ul li ul li { background: <?php echo $default_text_color; ?>; }
+
 #hero-full-container {
     background: <?php echo hovercraft_get_hero_background(
         $hero_gradient_tones,
