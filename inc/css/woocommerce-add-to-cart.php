@@ -2,6 +2,39 @@
 // styles for woocommerce add to cart
 ?>
 
+@media screen and (max-width: 1200px) {
+.add_to_cart_button {
+	width: 100%;
+	text-align: center;
+	font-size: 20px;
+	font-weight: 700;
+	color: #ffffff;
+	padding: 10px 0;
+	text-decoration: none;
+	display: block;
+	background: <?php echo $default_link_color; ?>;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+.add_to_cart_button {
+	width: 100%;
+	text-align: center;
+	font-size: 20px;
+	font-weight: 700;
+	color: #ffffff;
+	padding: 10px 0;
+	text-decoration: none;
+	display: block;
+	background: <?php echo $default_link_color; ?>;
+	}
+}
+
+ .add_to_cart_button:hover {
+	color: #ffffff;
+	background: <?php echo $default_hover_color; ?>;
+}
+
 /* block layout for variation form */
 form.variations_form {
 	display: block;
