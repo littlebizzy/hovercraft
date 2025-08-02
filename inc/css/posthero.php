@@ -2,6 +2,11 @@
 // styles for posthero
 ?>
 
+/* no bottom margin if the only thing in posthero is a paragraph or heading title */
+#posthero p:last-child, #posthero h2:last-child, #posthero h3:last-child, #posthero h4:last-child, #posthero h5:last-child {
+	margin-bottom: 0;
+}
+
 @media screen and (max-width: 1200px) {
 #posthero {
 	width: 100%;
