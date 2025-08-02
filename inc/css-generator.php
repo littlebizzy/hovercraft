@@ -601,7 +601,7 @@ a:hover {
 }
 
 
-/* cta hero */
+/* cta (hero) */
 <?php
 $hovercraft_cta_hero_css = get_template_directory() . '/inc/css/cta-hero.php';
 if ( file_exists( $hovercraft_cta_hero_css ) ) {
@@ -638,6 +638,14 @@ if ( file_exists( $hovercraft_headings_css ) ) {
 $hovercraft_images_general_css = get_template_directory() . '/inc/css/images-general.php';
 if ( file_exists( $hovercraft_images_general_css ) ) {
 	include $hovercraft_images_general_css;
+}
+?>
+
+/* images (featured) */
+<?php
+$hovercraft_featured_image_css = get_template_directory() . '/inc/css/images-featured.php';
+if ( file_exists( $hovercraft_featured_image_css ) ) {
+	include $hovercraft_featured_image_css;
 }
 ?>
 	
@@ -689,16 +697,6 @@ if ( file_exists( $hovercraft_mobile_menu_css ) ) {
 }
 ?>
 
-	
-#header-full-hero .menu-desktop > .main-menu ul li ul li { background: <?php echo $default_text_color; ?>; }
-	
-#header-half-hero .menu-desktop > .main-menu ul li ul li { background: <?php echo $half_hero_background_color; ?>; }
-
-#header-mini-hero .menu-desktop > .main-menu ul li ul li { background: <?php echo $mini_hero_background_color; ?>; }
-	
-#header-basic .menu-desktop > .main-menu ul li ul li { background: <?php echo $header_basic_hero_background_color; ?>; }
-
-
 /* topbar */
 <?php
 $hovercraft_topbar_css = get_template_directory() . '/inc/css/topbar.php';
@@ -730,10 +728,6 @@ if ( file_exists( $hovercraft_cta_header_css ) ) {
 	include $hovercraft_cta_header_css;
 }
 ?>
-	
-#header-half-hero a {
-	color: <?php echo $half_hero_header_link_color; ?>;
-}
 
 /* inline button: secondary */
 a.button-secondary {
@@ -769,13 +763,6 @@ if ( file_exists( $hovercraft_posthero_css ) ) {
 	include $hovercraft_posthero_css;
 }
 ?>
-
-
-/* no bottom margin if the only thing in posthero is a paragraph or heading title */
-#posthero p:last-child, #posthero h2:last-child, #posthero h3:last-child, #posthero h4:last-child, #posthero h5:last-child {
-	margin-bottom: 0;
-}
-
 
 /* main */
 <?php
@@ -822,13 +809,7 @@ if ( file_exists( $hovercraft_byline_css ) ) {
 
 
 	
-/* featured image */
-<?php
-$hovercraft_featured_image_css = get_template_directory() . '/inc/css/images-featured.php';
-if ( file_exists( $hovercraft_featured_image_css ) ) {
-	include $hovercraft_featured_image_css;
-}
-?>
+
 
 /* archives */
 <?php
@@ -854,6 +835,22 @@ if ( file_exists( $hovercraft_content_css ) ) {
 }
 ?>
 
+/* author box */
+<?php
+$hovercraft_author_box_css = get_template_directory() . '/inc/css/author-box.php';
+if ( file_exists( $hovercraft_author_box_css ) ) {
+	include $hovercraft_author_box_css;
+}
+?>
+
+/* columns */
+<?php
+$hovercraft_columns_css = get_template_directory() . '/inc/css/columns.php';
+if ( file_exists( $hovercraft_columns_css ) ) {
+	include $hovercraft_columns_css;
+}
+?>
+
 .wp-caption {
 	margin-bottom: 30px;
 	max-width: 100%;
@@ -872,22 +869,6 @@ if ( file_exists( $hovercraft_content_css ) ) {
 	line-height: 2;
     color: #444;
 }
-
-/* author box */
-<?php
-$hovercraft_author_box_css = get_template_directory() . '/inc/css/author-box.php';
-if ( file_exists( $hovercraft_author_box_css ) ) {
-	include $hovercraft_author_box_css;
-}
-?>
-
-/* columns */
-<?php
-$hovercraft_columns_css = get_template_directory() . '/inc/css/columns.php';
-if ( file_exists( $hovercraft_columns_css ) ) {
-	include $hovercraft_columns_css;
-}
-?>
 
 
 /* zigzag (page template) */
@@ -931,7 +912,7 @@ if ( file_exists( $hovercraft_sidebar_css ) ) {
 }
 ?>
 
-/* footer callout */
+/* callout (footer) */
 <?php
 $hovercraft_footer_callout_css = get_template_directory() . '/inc/css/footer-callout.php';
 if ( file_exists( $hovercraft_footer_callout_css ) ) {
@@ -1003,321 +984,13 @@ if ( file_exists( $hovercraft_prefooter_bottom_css ) ) {
 }
 ?>
 
-
-/* footer */
-
-@media screen and (max-width: 1200px) {
-#footer {
-	width: 100%;
-	padding: 20px 20px;
-	font-size: <?php echo $footer_mobile_font_size; ?>px;
-	background: <?php echo $footer_background_color; ?>;
-	color: <?php echo $footer_text_color; ?>;
-	}
+/* footer layout */
+<?php
+$hovercraft_footer_layout_css = get_template_directory() . '/inc/css/footer-layout.php';
+if ( file_exists( $hovercraft_footer_layout_css ) ) {
+	include $hovercraft_footer_layout_css;
 }
-
-@media screen and (min-width: 1200px) {
-#footer {
-	width: 100%;
-	margin: 0px auto;
-	padding: 40px 0px;
-	font-size: <?php echo $footer_desktop_font_size; ?>px;
-	background: <?php echo $footer_background_color; ?>;
-	color: <?php echo $footer_text_color; ?>;
-	}
-}
-
-#footer .widget-wrapper{
-    margin-bottom: 30px;
-}
-#footer .widget-wrapper:last-child{
-    margin-bottom: 0;
-}
-
-#footer a {
-	color: <?php echo $footer_link_color; ?>;
-	text-decoration: <?php echo $footer_link_decoration; ?>;
-}
-
-
-/* footer column one (four unequal columns) */
-
-@media screen and (max-width: 1200px) {
-.footer-column-one-four-unequal {
-	width: 100%;
-	display: block;
-    vertical-align: top;
-	margin-bottom: 30px;
-	padding: 0;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-.footer-column-one-four-unequal {
-	float: left;
-	width: 420px;
-	display: inline-block;
-    vertical-align: top;
-	padding-right: 30px;
-	}
-}
-
-
-/* footer column two, three, and four (four unequal columns) */
-
-@media screen and (max-width: 1200px) {
-.footer-column-two-four-unequal, .footer-column-three-four-unequal, .footer-column-four-four-unequal {
-	width: 100%;
-	display: block;
-    vertical-align: top;
-	margin-bottom: 30px;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-.footer-column-two-four-unequal, .footer-column-three-four-unequal, .footer-column-four-four-unequal {
-	float: left;
-	width: 260px;
-	display: inline-block;
-	vertical-align: top;
-	padding-left: 60px;
-	}
-}
-
-
-/* footer column one (four equal columns) */
-
-@media screen and (max-width: 1200px) {
-.footer-column-one-four-equal {
-	width: 100%;
-	display: block;
-    vertical-align: top;
-	margin-bottom: 30px;
-	padding: 0;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-.footer-column-one-four-equal {
-	float: left;
-	width: 255px;
-	display: inline-block;
-    vertical-align: top;
-	margin-right: 60px;
-	}
-}
-
-
-/* footer column two (four equal columns) */
-
-@media screen and (max-width: 1200px) {
-.footer-column-two-four-equal {
-	width: 100%;
-	display: block;
-    vertical-align: top;
-	margin-bottom: 30px;
-	padding: 0;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-.footer-column-two-four-equal {
-	float: left;
-	width: 255px;
-	display: inline-block;
-    vertical-align: top;
-	margin-right: 60px;
-	}
-}
-
-
-/* footer column three (four equal columns) */
-
-@media screen and (max-width: 1200px) {
-.footer-column-three-four-equal {
-	width: 100%;
-	display: block;
-    vertical-align: top;
-	margin-bottom: 30px;
-	padding: 0;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-.footer-column-three-four-equal {
-	float: left;
-	width: 255px;
-	display: inline-block;
-    vertical-align: top;
-	margin-right: 60px;
-	}
-}
-
-
-/* footer column four (four equal columns) */
-
-@media screen and (max-width: 1200px) {
-.footer-column-four-four-equal {
-	width: 100%;
-	display: block;
-    vertical-align: top;
-	margin-bottom: 30px;
-	padding: 0;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-.footer-column-four-four-equal {
-	float: left;
-	width: 255px;
-	display: inline-block;
-    vertical-align: top;
-	margin-right: 0;
-	}
-}
-
-
-/* footer column one (three unequal columns) */
-
-@media screen and (max-width: 1200px) {
-.footer-column-one-three-unequal {
-	width: 100%;
-	display: block;
-    vertical-align: top;
-	margin-bottom: 30px;
-	padding: 0;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-.footer-column-one-three-unequal {
-	float: left;
-	width: 440px;
-	display: inline-block;
-    vertical-align: top;
-	margin-right: 30px;
-	}
-}
-
-
-/* footer column two (three unequal columns) */
-
-@media screen and (max-width: 1200px) {
-.footer-column-two-three-unequal {
-	width: 100%;
-	display: block;
-    vertical-align: top;
-	margin-bottom: 30px;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-.footer-column-two-three-unequal {
-	float: left;
-	width: 350px;
-	display: inline-block;
-	vertical-align: top;
-	margin-right: 30px;
-	}
-}
-
-
-/* footer column three (three unequal columns) */
-
-@media screen and (max-width: 1200px) {
-.footer-column-three-three-unequal {
-	width: 100%;
-	display: block;
-    vertical-align: top;
-	margin-bottom: 30px;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-.footer-column-three-three-unequal {
-	float: left;
-	width: 350px;
-	display: inline-block;
-	vertical-align: top;
-	margin-right: 0;
-	}
-}
-
-
-/* footer column one (three equal columns) */
-
-@media screen and (max-width: 1200px) {
-.footer-column-one-three-equal {
-	width: 100%;
-	display: block;
-    vertical-align: top;
-	margin-bottom: 30px;
-	padding: 0;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-.footer-column-one-three-equal {
-	float: left;
-	width: 360px;
-	display: inline-block;
-    vertical-align: top;
-	margin-right: 60px;
-	}
-}
-
-
-/* footer column two (three equal columns) */
-
-@media screen and (max-width: 1200px) {
-.footer-column-two-three-equal {
-	width: 100%;
-	display: block;
-    vertical-align: top;
-	margin-bottom: 30px;
-	padding: 0;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-.footer-column-two-three-equal {
-	float: left;
-	width: 360px;
-	display: inline-block;
-    vertical-align: top;
-	margin-right: 60px;
-	}
-}
-
-
-/* footer column three (three equal columns) */
-
-@media screen and (max-width: 1200px) {
-.footer-column-three-three-equal {
-	width: 100%;
-	display: block;
-    vertical-align: top;
-	margin-bottom: 30px;
-	padding: 0;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-.footer-column-three-three-equal {
-	float: left;
-	width: 360px;
-	display: inline-block;
-    vertical-align: top;
-	margin-right: 0;
-	}
-}
-
-
-/* footer ul */
-
-#footer ul {
-	margin-left: 10px;
-}
+?>
 
 /* copyright */
 <?php
