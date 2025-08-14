@@ -2,25 +2,17 @@
 // styles for woocommerce ordering
 ?>
 
-/*
-https://codepen.io/jpdanks/pen/KKBarq 
-https://codepen.io/rabakilgur/pen/zyggOe
-*/
-
 @media screen and (max-width: 1200px) {
 	form.woocommerce-ordering {
 		float: none !important;
 		width: 100%;
-		max-width: 100%;
 	} 
 }
-
 
 @media screen and (min-width: 1200px) {
 	form.woocommerce-ordering {
 		float: right !important;
 		width: auto;
-  		max-width: 100%;
 	} 
 }
 
@@ -62,14 +54,6 @@ form.woocommerce-ordering {
 }
 
 /*
-.woocommerce-ordering:after {
-	position: relative;
-	margin: 0px 0px 0px -10px; 
-        left: 95%;
-        bottom: 1.6ch;
-        pointer-events: none;
-        font-family: "Material Icons";
-        font-size: 24px;
-        content: ' \e5cf';
-}
+https://codepen.io/jpdanks/pen/KKBarq 
+https://codepen.io/rabakilgur/pen/zyggOe
 */
