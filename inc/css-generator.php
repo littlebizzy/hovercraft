@@ -1000,51 +1000,13 @@ if ( file_exists( $hovercraft_copyright_css ) ) {
 }
 ?>
 
-/* post image galleries */
-
-@media screen and (max-width: 1200px) {
-.gallery {
-	columns: 1;
-	column-fill: balance;
-	}
+/* gallery */
+<?php
+$hovercraft_gallery_css = get_template_directory() . '/inc/css/gallery.php';
+if ( file_exists( $hovercraft_gallery_css ) ) {
+	include $hovercraft_gallery_css;
 }
-
-@media screen and (min-width: 1200px) {
-.gallery-narrow-wrapper > .gallery {
-	columns: 2;
-	column-fill: balance;
-	column-gap: 20px;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-.gallery-wide-wrapper > .gallery {
-	columns: 3;
-	column-fill: balance;
-	column-gap: 2px;
-	}
-}
-
-@media screen and (max-width: 1200px) {
-.gallery img {
-	width: 100%;
-	display: block;
-	margin-bottom: 20px;
-	border: 0;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-.gallery img {
-	width: 354px;
-	margin-bottom: 20px;
-	border: 0;
-	}
-}
-
-.gallery-caption {
-	<?php if ( $gallery_captions == 'none') { echo "display: none;"; } ?>
-}
+?>
 
 
 /* buttons and submits */
