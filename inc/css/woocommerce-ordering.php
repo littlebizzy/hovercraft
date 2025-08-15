@@ -17,6 +17,7 @@
 }
 
 form.woocommerce-ordering select {
+	vertical-align: middle !important;
 	line-height: 1.5 !important;
 	font-size: 16px !important;
 	background: transparent !important;
