@@ -440,24 +440,6 @@ hr {
 }
 
 
-/* header elements */
-
-.header-left {
-	display: table-cell;
-    vertical-align: middle;
-	height: inherit;
-	min-width: auto; /* https://developer.mozilla.org/en-US/docs/Web/CSS/min-width */
-	white-space: nowrap;
-}
-
-.header-right {
-	display: table-cell;
-    vertical-align: middle;
-	height: inherit;
-	text-align: right;
-	width: 100%;
-}
-
 
 /* full hero */
 <?php
@@ -713,7 +695,15 @@ if ( file_exists( $hovercraft_preheader_css ) ) {
 }
 ?>
 
-/* basic header */
+/* header (general) */
+<?php
+$hovercraft_header_general_css = get_template_directory() . '/inc/css/header-general.php';
+if ( file_exists( $hovercraft_header_general_css ) ) {
+	include $hovercraft_header_general_css;
+}
+?>
+
+/* header (basic) */
 <?php
 $hovercraft_header_basic_css = get_template_directory() . '/inc/css/header-basic.php';
 if ( file_exists( $hovercraft_header_basic_css ) ) {
