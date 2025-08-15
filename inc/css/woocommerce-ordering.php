@@ -20,11 +20,10 @@ form.woocommerce-ordering select {
 	line-height: 1.5 !important;
 	font-size: 16px !important;
 	background: transparent !important;
-	box-shadow: inset 0 0 0 1px #cccccc !important;
 }
 
 form.woocommerce-ordering select:active, form.woocommerce-ordering select:focus {
-	box-shadow: inset 0 0 0 1px #cccccc !important;
+	positive: relative; // dummy placeholder
 }
 
 /*
