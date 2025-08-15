@@ -17,8 +17,8 @@ input, select, textarea {
 	font-weight: 400;
 	line-height: 2;
 	padding: 10px 20px !important;
-	border: 0;
-	outline: none;
+	border: none !important;
+	outline: none !important;
 	font-size: 16px;
 	background: #ffffff;
 	display: inline-block;
