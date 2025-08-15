@@ -1090,8 +1090,6 @@ if ( file_exists( $hovercraft_woocommerce_cart_css ) ) {
 
 /* woocommerce other */
 
-
-
 div.coupon {
 	display: flex;
 }
@@ -1176,26 +1174,6 @@ if ( file_exists( $hovercraft_woocommerce_login_css ) ) {
     include $hovercraft_woocommerce_login_css;
 }
 ?>
-	
-
-/* woocommerce */
-
-section.related {
-	clear: both;
-	display: block;
-	margin-top: 30px !important;
-}
-
-section.upsells {
-	clear: both;
-	display: block;
-}
-
-.woo-related-products-container {
-	clear: both;
-	display: block;
-}
-
 
 /* woocommerce product list widget */
 <?php
