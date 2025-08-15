@@ -134,11 +134,13 @@ input[type="range"]::-moz-range-track {
 input[type="submit"], button[type="submit"] {
 	font-size: 18px;
 	font-weight: 600;
+	line-height: 1;
 	padding: 10px 20px !important;
 	background: <?php echo $default_link_color; ?>;
 	text-decoration: none;
 	color: #ffffff;
 	border-radius: 0;
+	border: 0;
 	cursor: pointer;
 	box-shadow: none;
 	transition: background 0.15s ease-in-out;
