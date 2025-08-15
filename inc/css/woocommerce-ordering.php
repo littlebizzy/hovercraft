@@ -19,8 +19,6 @@
 form.woocommerce-ordering select {
 	line-height: 1.5 !important;
 	font-size: 16px !important;
-	color: #757575;
-	padding: 5px 40px 5px 10px !important;
 	background: transparent !important;
 	box-shadow: inset 0 0 0 1px #cccccc !important;
 }
