@@ -998,21 +998,6 @@ if ( file_exists( $hovercraft_gallery_css ) ) {
 }
 ?>
 
-
-/* buttons and submits */
-
-button[type="submit"] {
-	font-weight: 600;
-	line-height: 1;
-	background: <?php echo $default_link_color; ?> !important;
-	text-decoration: none;
-	color: #ffffff;
-	border-radius: 0px;
-	border: 0;
-	cursor: pointer;
-}
-
-
 /* forms */
 <?php
 $hovercraft_forms_css = get_template_directory() . '/inc/css/forms.php';
