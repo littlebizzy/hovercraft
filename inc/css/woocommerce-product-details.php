@@ -45,3 +45,19 @@ p.stock {
 .posted_in {
 	display: block;
 }
+
+section.related {
+	clear: both;
+	display: block;
+	margin-top: 30px !important;
+}
+
+section.upsells {
+	clear: both;
+	display: block;
+}
+
+.woo-related-products-container {
+	clear: both;
+	display: block;
+}
