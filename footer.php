@@ -57,37 +57,60 @@
 </div><!-- footer -->
 <?php } ?>
 
-<div id="copyright">
-	<div class="inner">
-		
-    <div class="copyright-left">
-        &copy; <?php echo date("Y"); ?> <?php echo get_bloginfo( 'name' ); ?>. 
-        <?php 
-        $license_key = get_theme_mod( 'hovercraft_license_key' );
-        if ( empty( $license_key ) || ( function_exists( 'hovercraft_validate_license_key' ) && ! hovercraft_validate_license_key( $license_key ) ) ) : ?>
-            Powered by <a rel="nofollow" href="https://hovercraft.vip">HoverCraft</a>.
-        <?php endif; ?>
-        <div class="clear"></div>
-    </div><!-- copyright-left -->
-	
-	<?php if ( is_active_sidebar('hovercraft_copyright')) { ?>
-	<div class="copyright-right">
-		<?php add_filter('widget_title', '__return_false');
-		dynamic_sidebar( 'hovercraft_copyright' ); // https://stackoverflow.com/questions/13903918/apply-widget-title-filter-only-to-wordpress-widgets-from-a-certain-sidebar
-		remove_filter('widget_title', '__return_false'); ?>
-	<div class="clear"></div>
-	</div><!-- copyright-right -->
-	<?php } ?>
-	
-	<?php $hovercraft_scroll_to_top = get_theme_mod( 'hovercraft_scroll_to_top', 'mobile_only' );
-	if ( $hovercraft_scroll_to_top != 'none' ) { ?>
-		<div class="scrollup-wrapper">
-			<span class="scrollup-link"><?php _e( 'Back to top', 'hovercraft' ); ?></span>
-		</div><!-- scrollup-wrapper -->
-	<?php } ?>
+<?php
+// get desktop copyright width setting
+$hovercraft_copyright_width = get_theme_mod( 'hovercraft_desktop_copyright_width', 'fixed' );
 
-	<div class="clear"></div>
-</div><!--inner -->
+// map to css class
+if ( $hovercraft_copyright_width === 'full' ) {
+	$hovercraft_copyright_class = 'is-full';
+} else {
+	$hovercraft_copyright_class = 'is-fixed';
+}
+?>
+
+<div id="copyright" class="<?php echo esc_attr( $hovercraft_copyright_class ); ?>">
+	<div class="inner">
+
+		<div class="copyright-left">
+			&copy; <?php echo date( 'Y' ); ?> <?php echo get_bloginfo( 'name' ); ?>. 
+			<?php
+			$license_key = get_theme_mod( 'hovercraft_license_key' );
+			if ( empty( $license_key ) || ( function_exists( 'hovercraft_validate_license_key' ) && ! hovercraft_validate_license_key( $license_key ) ) ) {
+				?>
+				Powered by <a rel="nofollow" href="https://hovercraft.vip">HoverCraft</a>.
+				<?php
+			}
+			?>
+			<div class="clear"></div>
+		</div><!-- copyright-left -->
+
+		<?php if ( is_active_sidebar( 'hovercraft_copyright' ) ) { ?>
+			<div class="copyright-right">
+				<?php
+				// remove widget titles for this sidebar only
+				add_filter( 'widget_title', '__return_false' );
+				dynamic_sidebar( 'hovercraft_copyright' );
+				remove_filter( 'widget_title', '__return_false' );
+				?>
+				<div class="clear"></div>
+			</div><!-- copyright-right -->
+		<?php } ?>
+
+		<?php
+		// scroll to top link logic
+		$hovercraft_scroll_to_top = get_theme_mod( 'hovercraft_scroll_to_top', 'mobile_only' );
+		if ( $hovercraft_scroll_to_top != 'none' ) {
+			?>
+			<div class="scrollup-wrapper">
+				<span class="scrollup-link"><?php _e( 'Back to top', 'hovercraft' ); ?></span>
+			</div><!-- scrollup-wrapper -->
+			<?php
+		}
+		?>
+
+		<div class="clear"></div>
+	</div><!-- inner -->
 </div><!-- copyright -->
 
 </div><!-- container -->
