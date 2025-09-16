@@ -137,3 +137,5 @@ if ( $hovercraft_copyright_width === 'full' ) {
 
 </body><!-- body -->
 </html><!-- html -->
+
+<!-- Ref: https://stackoverflow.com/questions/13903918/apply-widget-title-filter-only-to-wordpress-widgets-from-a-certain-sidebar -->
