@@ -58,6 +58,7 @@
 
 	#copyright.is-full .inner {
 		max-width: none;
+		padding: 0 40px;
 	}
 
 	.copyright-left {
