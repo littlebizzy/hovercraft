@@ -1,34 +1,38 @@
-  var winwidth = $(window).width();
-  if (winwidth <= 480) {
-      
-jQuery(".menu").click(function() {
-  var is_open = jQuery(this).hasClass("open");
-  if (is_open) {
-    jQuery(this).removeClass("open");
-  } else {
-    jQuery(this).addClass("open");
-  }
-});
+// select menu dropdown
+jQuery( function( $ ) {
 
-jQuery(".menu li").click(function() {
+	var winWidth = $( window ).width();
 
-  var selected_value = jQuery(this).html();
-  var first_li = jQuery(".menu li:first-child").html();
+	if ( winWidth <= 480 ) {
 
-  jQuery(".menu li:first-child").html(selected_value);
-  jQuery(this).html(first_li);
+		// toggle menu open state
+		$( '.menu' ).on( 'click', function() {
+			var isOpen = $( this ).hasClass( 'open' );
+			if ( isOpen ) {
+				$( this ).removeClass( 'open' );
+			} else {
+				$( this ).addClass( 'open' );
+			}
+		} );
 
-});
+		// swap selected item with first item
+		$( '.menu li' ).on( 'click', function() {
+			var selectedValue = $( this ).html();
+			var firstLi = $( '.menu li:first-child' ).html();
+			$( '.menu li:first-child' ).html( selectedValue );
+			$( this ).html( firstLi );
+		} );
 
-jQuery(document).mouseup(function(event) {
+		// close menu when clicking outside
+		$( document ).on( 'mouseup', function( event ) {
+			var target = event.target;
+			var select = $( '.menu' );
+			if ( ! select.is( target ) && select.has( target ).length === 0 ) {
+				select.removeClass( 'open' );
+			}
+		} );
+	}
 
-  var target = event.target;
-  var select = jQuery(".menu");
+} );
 
-  if (!select.is(target) && select.has(target).length === 0) {
-    select.removeClass("open");
-  }
-
-});
-      
-}
+// Ref: ChatGPT
