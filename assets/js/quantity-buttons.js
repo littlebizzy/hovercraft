@@ -1,4 +1,6 @@
+// quantity buttons for woocommerce
 (function () {
+
 	// add quantity buttons to cart inputs
 	function initQuantityButtons() {
 		const quantityContainers = document.querySelectorAll( 'div.quantity:not(.buttons-added)' );
@@ -78,6 +80,7 @@
 			}
 		}
 	} ).observe( document.body, { childList: true, subtree: true } );
+
 })();
 
 // Ref: ChatGPT
