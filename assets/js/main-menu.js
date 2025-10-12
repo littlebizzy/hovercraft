@@ -1,22 +1,25 @@
-// hover delays for submenus
+// main menu
 jQuery( function( $ ) {
-
 	'use strict';
 
+	// check menu exists
 	var $menu = $( '.menu-desktop' );
 	if ( ! $menu.length ) {
 		return;
 	}
 
-	var delayIn = 100;  // submenu open delay
+	// submenu delays
+	var delayIn  = 100; // submenu open delay
 	var delayOut = 150; // submenu close delay
 
+	// bind hover events
 	$menu.find( '.menu-item-has-children' ).each( function() {
 		var $li = $( this );
 		var openTimer;
 		var closeTimer;
 
-		$li.on( 'mouseenter.hovercraftMenu', function() {
+		// mouse enter
+		$li.on( 'mouseenter', function() {
 			clearTimeout( openTimer );
 			clearTimeout( closeTimer );
 
@@ -26,7 +29,8 @@ jQuery( function( $ ) {
 			}, delayIn );
 		} );
 
-		$li.on( 'mouseleave.hovercraftMenu', function() {
+		// mouse leave
+		$li.on( 'mouseleave', function() {
 			clearTimeout( openTimer );
 			clearTimeout( closeTimer );
 
@@ -35,7 +39,6 @@ jQuery( function( $ ) {
 			}, delayOut );
 		} );
 	} );
-
 } );
 
 // Ref: ChatGPT
