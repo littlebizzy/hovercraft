@@ -1,6 +1,5 @@
 // main menu
 jQuery( function( $ ) {
-	'use strict';
 
 	// check menu exists
 	var $menu = $( '.menu-desktop' );
