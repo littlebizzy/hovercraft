@@ -18,4 +18,4 @@ jQuery( function( $ ) {
 } );
 
 // Ref: ChatGPT
-// https://codepen.io/abhi_pawar/pen/qzpEJL
+// Ref: https://codepen.io/abhi_pawar/pen/qzpEJL
