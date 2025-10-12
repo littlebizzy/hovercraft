@@ -1,45 +1,28 @@
-jQuery(document).ready(function($){
+// full screen search
+jQuery( function( $ ) {
 
-	$(document).ready(function(){
-		
-		$('.search-icon-wrapper').on('click', function(event){
-        
-			// Prevent the default action
-        	event.preventDefault();
+	// open search overlay
+	$( '.search-icon-wrapper' ).on( 'click', function( event ) {
+		event.preventDefault();
+		$( '#full-screen-search' ).addClass( 'open' );
+		$( '#full-screen-search input' ).focus();
+	} );
 
-        	// Display the Full Screen Search
-        	$( '#full-screen-search' ).addClass( 'open' );
+	// close search overlay via button
+	$( '#full-screen-search button.close' ).on( 'click', function( event ) {
+		event.preventDefault();
+		$( '#full-screen-search' ).removeClass( 'open' );
+	} );
 
-        	// Focus on the Full Screen Search Input Field
-        	$( '#full-screen-search input' ).focus();
-			
-    	});
+	// close search overlay via esc key
+	$( document ).on( 'keydown', function( event ) {
+		if ( event.key === 'Escape' ) {
+			$( '#full-screen-search' ).removeClass( 'open' );
+		}
+	} );
 
-		$( '#full-screen-search button.close' ).on( 'click', function( event ) {
-    	
-			// Prevent the default event
-        	event.preventDefault();
+} );
 
-        	// Hide the Full Screen Search
-        	$( '#full-screen-search' ).removeClass( 'open' );
-			
-    	});
-	
-		// Hide the Full Screen search when the user clicks the esc key
-		$( document ).on( 'keydown', function( event ) {
-		
-			if (event.key == "Escape") {
-			
-				// Hide the Full Screen Search
-        		$( '#full-screen-search' ).removeClass( 'open' );
-		
-			}
-
-		});
-
-	});
-
-});
-
-// https://wordpress.org/plugins/full-screen-search-overlay/
-// https://www.geeksforgeeks.org/how-to-detect-escape-key-press-using-jquery/
+// Ref: ChatGPT
+// Ref: https://wordpress.org/plugins/full-screen-search-overlay/
+// Ref: https://www.geeksforgeeks.org/how-to-detect-escape-key-press-using-jquery/
