@@ -2,35 +2,45 @@
 // styles for woocommerce add to cart
 ?>
 
+/* mobile button layout */
 @media screen and (max-width: 1200px) {
-.add_to_cart_button {
-	width: 100%;
-	text-align: center;
-	font-size: 20px;
-	font-weight: 700;
-	color: #ffffff;
-	padding: 10px 0;
-	text-decoration: none;
-	display: block;
-	background: <?php echo $default_link_color; ?>;
+	.add_to_cart_button,
+	.single_add_to_cart_button {
+		width: 100%;
+		text-align: center;
+		font-size: 20px;
+		font-weight: 700;
+		color: #ffffff;
+		padding: 10px 0;
+		text-decoration: none;
+		display: block;
+		background: <?php echo $default_link_color; ?>;
 	}
 }
 
+/* desktop button layout */
 @media screen and (min-width: 1200px) {
-.add_to_cart_button {
-	width: 100%;
-	text-align: center;
-	font-size: 20px;
-	font-weight: 700;
-	color: #ffffff;
-	padding: 10px 0;
-	text-decoration: none;
-	display: block;
-	background: <?php echo $default_link_color; ?>;
+	.add_to_cart_button,
+	.single_add_to_cart_button {
+		width: 100%;
+		text-align: center;
+		font-size: 20px;
+		font-weight: 700;
+		color: #ffffff;
+		padding: 10px 0;
+		text-decoration: none;
+		display: block;
+		background: <?php echo $default_link_color; ?>;
 	}
 }
 
- .add_to_cart_button:hover {
+/* hover and focus states for add to cart buttons */
+.add_to_cart_button:hover,
+.add_to_cart_button:focus,
+.add_to_cart_button:active,
+.single_add_to_cart_button:hover,
+.single_add_to_cart_button:focus,
+.single_add_to_cart_button:active {
 	color: #ffffff;
 	background: <?php echo $default_hover_color; ?>;
 }
@@ -93,7 +103,7 @@ table.variations {
 	border-collapse: collapse !important;
 }
 
-/* style for add to cart button */
+/* style for add to cart button element */
 form.cart button {
 	font-size: 16px !important;
 	font-weight: 700 !important;
@@ -115,7 +125,8 @@ input.qty {
 }
 
 /* hide webkit spin buttons */
-input.qty::-webkit-outer-spin-button, input.qty::-webkit-inner-spin-button {
+input.qty::-webkit-outer-spin-button,
+input.qty::-webkit-inner-spin-button {
 	-webkit-appearance: none !important;
 	margin: 0 !important;
 }
@@ -152,7 +163,7 @@ input.qty {
 	padding: 0 !important;
 }
 
-/* plus and minus button styles (must load after form.cart button) */
+/* plus and minus button styles */
 .quantity-button {
 	width: 40px !important;
 	height: 40px !important;
@@ -172,7 +183,9 @@ input.qty {
 }
 
 /* base style for quantity buttons */
-.quantity-button, .quantity .plus, .quantity .minus {
+.quantity-button,
+.quantity .plus,
+.quantity .minus {
 	background: #e0e0e0 !important;
 	color: <?php echo $default_text_color; ?> !important;
 	border: none !important;
@@ -180,7 +193,9 @@ input.qty {
 }
 
 /* hover style for quantity buttons */
-.quantity-button:hover, .quantity .plus:hover, .quantity .minus:hover {
+.quantity-button:hover,
+.quantity .plus:hover,
+.quantity .minus:hover {
 	background: #bdbdbd !important;
 }
 
