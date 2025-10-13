@@ -2,47 +2,45 @@
 // styles for woocommerce add to cart
 ?>
 
-/* mobile button layout */
-@media screen and (max-width: 1199px) {
-	.add_to_cart_button,
-	.single_add_to_cart_button {
-		width: 100%;
-		text-align: center;
-		font-size: 20px;
-		font-weight: 700;
-		color: #ffffff;
-		padding: 10px 0;
-		text-decoration: none;
-		display: block;
-		background: <?php echo $default_link_color; ?> !important;
-	}
+/* base layout for add to cart buttons */
+.add_to_cart_button,
+.single_add_to_cart_button {
+	display: block;
+	text-align: center;
+	font-size: 20px;
+	font-weight: 700;
+	padding: 10px 0;
+	text-decoration: none;
+	border: none;
+	cursor: pointer;
 }
 
-/* desktop button layout */
-@media screen and (min-width: 1200px) {
-	.add_to_cart_button,
-	.single_add_to_cart_button {
-		width: 100%;
-		text-align: center;
-		font-size: 20px;
-		font-weight: 700;
-		color: #ffffff;
-		padding: 10px 0;
-		text-decoration: none;
-		display: block;
-		background: <?php echo $default_link_color; ?> !important;
-	}
+/* single add to cart button uses theme link color with white text */
+.single_add_to_cart_button {
+	background: <?php echo $default_link_color; ?> !important;
+	color: #ffffff !important;
 }
 
-/* hover and focus states for add to cart buttons */
-.add_to_cart_button:hover,
-.add_to_cart_button:focus,
-.add_to_cart_button:active,
+/* hover and focus for single add to cart button */
 .single_add_to_cart_button:hover,
 .single_add_to_cart_button:focus,
 .single_add_to_cart_button:active {
-	color: #ffffff;
-	background: <?php echo $default_hover_color; ?>;
+	background: <?php echo $default_hover_color; ?> !important;
+	color: #ffffff !important;
+}
+
+/* other add to cart buttons (archives, related products, etc) use gray and theme text color */
+.add_to_cart_button {
+	background: #e0e0e0 !important;
+	color: <?php echo $default_text_color; ?> !important;
+}
+
+/* hover and focus for other add to cart buttons */
+.add_to_cart_button:hover,
+.add_to_cart_button:focus,
+.add_to_cart_button:active {
+	background: #bdbdbd !important;
+	color: <?php echo $default_text_color; ?> !important;
 }
 
 /* block layout for variation form */
