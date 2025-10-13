@@ -14,7 +14,7 @@
 		padding: 10px 0;
 		text-decoration: none;
 		display: block;
-		background: <?php echo $default_link_color; ?>;
+		background: <?php echo $default_link_color; ?> !important;
 	}
 }
 
@@ -30,7 +30,7 @@
 		padding: 10px 0;
 		text-decoration: none;
 		display: block;
-		background: <?php echo $default_link_color; ?>;
+		background: <?php echo $default_link_color; ?> !important;
 	}
 }
 
