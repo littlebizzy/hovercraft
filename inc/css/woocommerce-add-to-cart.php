@@ -3,7 +3,7 @@
 ?>
 
 /* mobile button layout */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 	.add_to_cart_button,
 	.single_add_to_cart_button {
 		width: 100%;
