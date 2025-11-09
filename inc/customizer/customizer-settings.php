@@ -4369,6 +4369,26 @@ $wp_customize->add_control( new WP_Customize_Control(
 			)
 ) );
 
+// footer callout padding (desktop)
+$wp_customize->add_setting( 'hovercraft_footer_callout_padding', array(
+    'default'    => '40',
+	'sanitize_callback' => 'hovercraft_sanitize_float',
+	)
+);
+
+// footer callout padding (desktop)
+$wp_customize->add_control( new WP_Customize_Control(
+        $wp_customize,
+        'hovercraft_footer_callout_padding',
+        array(
+            'label'     => __( 'Footer Callout Padding', 'hovercraft' ),
+			'description' => __( 'Specify Footer Callout widget padding in pixels?', 'hovercraft' ),
+            'section'   => 'hovercraft_footer',
+            'settings'  => 'hovercraft_footer_callout_padding',
+            'type' => 'text'
+        )
+) );
+	
 // hover effects section
 $wp_customize->add_section( 'hovercraft_effects', array(
     'title'      => 'Hover Effects',
