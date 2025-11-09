@@ -3,10 +3,10 @@
 ?>
 
 #footer .widget-footer-callout {
-   	background: <?php echo $footer_callout_background_color; ?> !important;
+	background: <?php echo $footer_callout_background_color; ?> !important;
 	color: <?php echo $footer_callout_text_color; ?> !important;
-	box-shadow: inset 0px 0px 0px 1px <?php echo $footer_callout_border_color; ?> !important;
-	padding: 40px;
+	box-shadow: inset 0 0 0 1px <?php echo $footer_callout_border_color; ?> !important;
+	padding: <?php echo $footer_callout_padding; ?>px;
 }
 
 #footer .widget-footer-callout .widget-title {
@@ -23,17 +23,17 @@
 }
 
 @media screen and (max-width: 1200px) {
-.cta-footer-callout {
-	display: block;
-	width: 100%;
-	margin-top: 40px;
-}
+	.cta-footer-callout {
+		display: block;
+		width: 100%;
+		margin-top: 40px;
+	}
 }
 
 @media screen and (min-width: 1200px) {
-.cta-footer-callout {
-	display: block;
-	width: 100%;
-	margin-top: 40px;
-}
+	.cta-footer-callout {
+		display: block;
+		width: 100%;
+		margin-top: 40px;
+	}
 }
