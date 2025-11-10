@@ -49,6 +49,50 @@ form.variations_form {
 	width: 100% !important;
 }
 
+/* ensure variation table stacks above add-to-cart row */
+.single-product .summary .variations_form table.variations {
+	display: block !important;
+	width: 100% !important;
+	border: 0;
+	border-collapse: collapse !important;
+	margin: 0 0 30px 0 !important;
+}
+.single-product .summary .variations_form table.variations tbody,
+.single-product .summary .variations_form table.variations tr {
+	display: block !important;
+	width: 100% !important;
+}
+.single-product .summary .variations_form table.variations th.label,
+.single-product .summary .variations_form table.variations td.value {
+	display: block !important;
+	float: none !important;
+	width: 100% !important;
+	padding: 0 !important;
+	border: 0 !important;
+	clear: both !important;
+}
+.single-product .summary .variations_form table.variations th.label label {
+	display: block;
+	margin: 0 0 6px 0;
+	font-weight: 500;
+}
+.single-product .summary .variations_form table.variations td.value select {
+	display: block !important;
+	width: 100% !important;
+	height: 44px;
+	padding: 8px 12px;
+	border: 1px solid #cfcfcf;
+	border-radius: 4px;
+	background: #fff;
+	line-height: 1.2;
+}
+.single-product .summary .variations_form .reset_variations {
+	display: inline-block;
+	margin-top: 6px;
+	font-size: 13px;
+	color: <?php echo $default_text_color; ?>;
+}
+
 /* flex layout for add to cart form */
 form.cart {
 	display: flex !important;
