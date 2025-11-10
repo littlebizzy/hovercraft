@@ -266,6 +266,27 @@ input.qty {
 	align-items: stretch !important;
 }
 
+/* keep variation select from growing on focus and lock colors */
+.single-product .summary .variations_form table.variations td.value select {
+	box-sizing: border-box !important;
+	width: 100% !important;
+	max-width: 100% !important;
+	border-width: 1px !important;
+	border-color: #cfcfcf !important;
+	background: #ffffff !important;
+	color: <?php echo $default_text_color; ?> !important;
+	outline: none !important;
+}
+.single-product .summary .variations_form table.variations td.value select:focus,
+.single-product .summary .variations_form table.variations td.value select:active {
+	border-width: 1px !important;
+	border-color: <?php echo $default_link_color; ?> !important;
+	background: #ffffff !important;
+	color: <?php echo $default_text_color; ?> !important;
+	outline: none !important;
+	box-shadow: 0 0 0 2px rgba(0,0,0,0.05) inset !important;
+}
+
 /* hide screen reader text */
 .screen-reader-text {
 	position: absolute;
