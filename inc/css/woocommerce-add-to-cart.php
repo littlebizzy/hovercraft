@@ -47,6 +47,7 @@
 form.variations_form {
 	display: block !important;
 	width: 100% !important;
+	background: #ffffff !important;
 }
 
 /* ensure variation table stacks above add-to-cart row */
