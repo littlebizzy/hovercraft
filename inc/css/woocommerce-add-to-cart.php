@@ -45,7 +45,8 @@
 
 /* block layout for variation form */
 form.variations_form {
-	display: block;
+	display: block !important;
+	width: 100% !important;
 }
 
 /* flex layout for add to cart form */
