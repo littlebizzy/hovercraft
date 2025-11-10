@@ -94,14 +94,6 @@ div.single_variation_wrap {
 	display: flex;
 }
 
-/* style for variations table */
-table.variations {
-	width: 100%;
-	margin-bottom: 30px !important;
-	border: 0 !important;
-	border-collapse: collapse !important;
-}
-
 /* style for add to cart button element */
 form.cart button {
 	font-size: 16px !important;
@@ -160,16 +152,17 @@ input.qty {
 	align-items: center !important;
 	overflow: hidden !important;
 	padding: 0 !important;
+	border-radius: 4px !important;
+	box-shadow: 0 2px 3px rgba(0,0,0,0.1) !important;
 }
 
-/* plus and minus button styles */
+/* 3d-style plus and minus buttons */
 .quantity-button {
 	width: 40px !important;
 	height: 40px !important;
-	font-size: 30px !important;
+	font-size: 26px !important;
 	color: <?php echo $default_text_color; ?> !important;
 	border: none !important;
-	box-shadow: none !important;
 	margin: 0 !important;
 	padding: 0 !important;
 	cursor: pointer !important;
@@ -178,24 +171,23 @@ input.qty {
 	display: flex !important;
 	align-items: center !important;
 	justify-content: center !important;
-	transition: background 0.2s ease !important;
+	background: linear-gradient(to bottom, #fafafa, #e0e0e0) !important;
+	box-shadow: inset 0 1px 0 rgba(255,255,255,0.6), inset 0 -1px 2px rgba(0,0,0,0.1) !important;
+	transition: all 0.2s ease !important;
 }
 
-/* base style for quantity buttons */
-.quantity-button,
-.quantity .plus,
-.quantity .minus {
-	background: #e0e0e0 !important;
-	color: <?php echo $default_text_color; ?> !important;
-	border: none !important;
-	box-shadow: none !important;
+/* hover lift for 3d buttons */
+.quantity-button:hover {
+	background: linear-gradient(to bottom, #ffffff, #d6d6d6) !important;
+	transform: translateY(-1px);
+	box-shadow: inset 0 1px 0 rgba(255,255,255,0.7), 0 2px 4px rgba(0,0,0,0.1) !important;
 }
 
-/* hover style for quantity buttons */
-.quantity-button:hover,
-.quantity .plus:hover,
-.quantity .minus:hover {
-	background: #bdbdbd !important;
+/* press state */
+.quantity-button:active {
+	transform: translateY(0);
+	background: linear-gradient(to bottom, #e8e8e8, #d0d0d0) !important;
+	box-shadow: inset 0 1px 2px rgba(0,0,0,0.2) !important;
 }
 
 /* hide screen reader text */
