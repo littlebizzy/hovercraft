@@ -94,6 +94,28 @@ form.variations_form {
 	color: <?php echo $default_text_color; ?>;
 }
 
+/* normalize variation table appearance (white + compact) */
+.single-product .summary .variations_form table.variations tr,
+.single-product .summary .variations_form table.variations th,
+.single-product .summary .variations_form table.variations td {
+	background: #ffffff !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	line-height: 1.3 !important;
+	min-height: 0 !important;
+}
+
+/* don't reserve space when the "clear" link is hidden */
+.single-product .summary .variations_form .reset_variations {
+	display: inline-block !important;
+	margin-top: 4px !important;
+}
+.single-product .summary .variations_form .reset_variations[style*="visibility: hidden"],
+.single-product .summary .variations_form .reset_variations[aria-hidden="true"] {
+	display: none !important;
+	visibility: hidden !important;
+}
+
 /* flex layout for add to cart form */
 form.cart {
 	display: flex !important;
