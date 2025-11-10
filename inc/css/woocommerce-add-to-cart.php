@@ -190,23 +190,25 @@ input.qty {
 	color: <?php echo $default_text_color; ?> !important;
 }
 
-/* flex layout when plus and minus buttons exist */
+/* subtle buttons group container (flatter) */
 .buttons-added {
 	display: inline-flex !important;
 	align-items: center !important;
 	overflow: hidden !important;
 	padding: 0 !important;
 	border-radius: 4px !important;
-	box-shadow: 0 2px 3px rgba(0,0,0,0.1) !important;
+	border: 1px solid #d9d9d9 !important;
+	box-shadow: none !important;
+	background: #f7f7f7 !important;
 }
 
-/* 3d-style plus and minus buttons */
+/* subtle + / - buttons (no lift, low-contrast) */
 .quantity-button {
 	width: 40px !important;
 	height: 40px !important;
-	font-size: 26px !important;
+	font-size: 22px !important;
 	color: <?php echo $default_text_color; ?> !important;
-	border: none !important;
+	border: 0 !important;
 	margin: 0 !important;
 	padding: 0 !important;
 	cursor: pointer !important;
@@ -215,23 +217,23 @@ input.qty {
 	display: flex !important;
 	align-items: center !important;
 	justify-content: center !important;
-	background: linear-gradient(to bottom, #fafafa, #e0e0e0) !important;
-	box-shadow: inset 0 1px 0 rgba(255,255,255,0.6), inset 0 -1px 2px rgba(0,0,0,0.1) !important;
-	transition: all 0.2s ease !important;
+	background: #eaeaea !important;
+	box-shadow: inset 0 1px 0 rgba(255,255,255,0.45),
+	            inset 0 -1px 0 rgba(0,0,0,0.06) !important;
+	transition: background 0.15s ease, box-shadow 0.15s ease !important;
 }
 
-/* hover lift for 3d buttons */
+/* hover: tiny darken, no translate */
 .quantity-button:hover {
-	background: linear-gradient(to bottom, #ffffff, #d6d6d6) !important;
-	transform: translateY(-1px);
-	box-shadow: inset 0 1px 0 rgba(255,255,255,0.7), 0 2px 4px rgba(0,0,0,0.1) !important;
+	background: #e3e3e3 !important;
+	box-shadow: inset 0 1px 0 rgba(255,255,255,0.4),
+	            inset 0 -1px 0 rgba(0,0,0,0.08) !important;
 }
 
-/* press state */
+/* active: slightly flatter/darker */
 .quantity-button:active {
-	transform: translateY(0);
-	background: linear-gradient(to bottom, #e8e8e8, #d0d0d0) !important;
-	box-shadow: inset 0 1px 2px rgba(0,0,0,0.2) !important;
+	background: #dddddd !important;
+	box-shadow: inset 0 1px 2px rgba(0,0,0,0.12) !important;
 }
 
 /* enforce stacked layout when woo uses both classes on one form */
