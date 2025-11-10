@@ -234,6 +234,13 @@ input.qty {
 	box-shadow: inset 0 1px 2px rgba(0,0,0,0.2) !important;
 }
 
+/* enforce stacked layout when woo uses both classes on one form */
+.single-product .summary form.variations_form.cart {
+	display: block !important;
+	flex-direction: column !important;
+	align-items: stretch !important;
+}
+
 /* hide screen reader text */
 .screen-reader-text {
 	position: absolute;
