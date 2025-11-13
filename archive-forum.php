@@ -9,7 +9,7 @@
 		<div id="content-wrapper">
 				
 			<div id="content-wide">
-				<?php get_template_part( 'template-parts/content/breadcrumbs' ); ?>
+				<?php get_template_part( 'template-parts/misc/breadcrumbs' ); ?>
 				<h1><?php $forum_page = get_page_by_path( 'forum' ); echo get_the_title( $forum_page ); ?></h1>
 			                
 				<?php $forum_page = get_page_by_path( 'forum' );
