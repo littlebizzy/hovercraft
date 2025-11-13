@@ -2,22 +2,26 @@
 // styles for main menu
 ?>
 
+/* hide desktop menu on mobile and tablet */
 @media screen and (max-width: 1199px) {
 	.menu-desktop {
 		display: none;
 	}
 }
 
+/* show desktop menu on large screens */
 @media screen and (min-width: 1200px) {
 	.menu-desktop {
 		display: block;
 	}
 }
 
+/* wrapper for the desktop main menu container */
 .menu-desktop > .main-menu {
 	display: inline-block;
 }
 
+/* base styles for all main menu unordered lists */
 .menu-desktop > .main-menu ul {
 	margin: 0;
 	padding: 0;
@@ -27,6 +31,7 @@
 	display: inline-block;
 }
 
+/* base styles for all main menu list items */
 .menu-desktop > .main-menu ul li {
 	margin: 0;
 	padding: 0;
@@ -35,20 +40,20 @@
 	position: relative;
 }
 
-/* hide all dropdowns by default */
+/* hide all dropdown menus by default */
 .menu-desktop > .main-menu ul ul,
 .menu-desktop > .main-menu ul ul ul {
 	display: none;
 	position: absolute;
 }
 
-/* show submenu only when .open class is present */
+/* display dropdown when parent li has open class */
 .menu-desktop > .main-menu li.open > ul {
 	display: block;
 	z-index: 100;
 }
 
-/* first tier offset */
+/* position and layout for first tier dropdown */
 .menu-desktop > .main-menu ul ul {
 	top: 100%;
 	left: 0;
@@ -62,7 +67,7 @@
 		 0 12px 16px rgba(0, 0, 0, 0.05);
 }
 
-/* deeper tiers */
+/* position and layout for second tier dropdown */
 .menu-desktop > .main-menu ul ul ul {
 	top: 0;
 	left: 100%;
@@ -76,14 +81,14 @@
 		 0 10px 14px rgba(0, 0, 0, 0.045);
 }
 
-/* dropdown links */
+/* layout for dropdown list items */
 .menu-desktop > .main-menu ul ul li {
 	width: 100%;
 	display: block;
 	text-align: left;
 }
 
-/* main menu links */
+/* base styles for all main menu links */
 .menu-desktop > .main-menu a {
 	font-family: <?php 
 		echo !empty($main_menu_font_family) 
@@ -100,7 +105,7 @@
 	text-decoration: none !important;
 }
 
-/* submenu links (layout only — NO COLORS HERE) */
+/* layout for submenu link elements */
 .menu-desktop > .main-menu ul ul a,
 .menu-desktop > .main-menu ul ul ul a {
 	display: block;
@@ -109,16 +114,16 @@
 	line-height: 1.5;
 }
 
-/* hover — color added by header contexts */
+/* hover styles applied by header specific rules */
 .menu-desktop > .main-menu ul ul a:hover,
 .menu-desktop > .main-menu ul ul ul a:hover {}
 
-/* placeholder */
+/* anchor for positioning child indicators */
 .menu-desktop > .main-menu .menu-item-has-children > a {
 	position: relative;
 }
 
-/* toggle arrow */
+/* base styles for submenu toggle arrow */
 .menu-desktop > .main-menu .menu-item-has-children > a .toggle {
 	display: inline-block;
 	margin-left: 10px;
@@ -129,6 +134,7 @@
 	transform: rotate(0deg);
 }
 
+/* rotate toggle arrow when submenu is open */
 .menu-desktop > .main-menu .menu-item-has-children.open > a .toggle {
 	transform: rotate(180deg);
 }
