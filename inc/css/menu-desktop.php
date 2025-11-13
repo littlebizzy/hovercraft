@@ -100,7 +100,7 @@
 	text-decoration: none !important;
 }
 
-/* submenu links (no colors; only spacing + hover behavior) */
+/* submenu links (layout only — NO COLORS HERE) */
 .menu-desktop > .main-menu ul ul a,
 .menu-desktop > .main-menu ul ul ul a {
 	display: block;
@@ -109,18 +109,16 @@
 	line-height: 1.5;
 }
 
-/* hover (no colors in generic selectors) */
+/* hover — color added by header contexts */
 .menu-desktop > .main-menu ul ul a:hover,
-.menu-desktop > .main-menu ul ul ul a:hover {
-	/* background-color applied by header context */
-}
+.menu-desktop > .main-menu ul ul ul a:hover {}
 
-/* placeholder: not needed currently but keeping selector */
+/* placeholder */
 .menu-desktop > .main-menu .menu-item-has-children > a {
 	position: relative;
 }
 
-/* style the .toggle span */
+/* toggle arrow */
 .menu-desktop > .main-menu .menu-item-has-children > a .toggle {
 	display: inline-block;
 	margin-left: 10px;
@@ -131,16 +129,15 @@
 	transform: rotate(0deg);
 }
 
-/* rotate .toggle when open */
 .menu-desktop > .main-menu .menu-item-has-children.open > a .toggle {
 	transform: rotate(180deg);
 }
 
 /* ------------------------------------------------------ */
-/* HEADER-SPECIFIC COLORS (the only place with colors)    */
+/* HEADER-SPECIFIC COLORS (HEX ONLY, NO VARIABLES)         */
 /* ------------------------------------------------------ */
 
-/* BASIC HEADER (dark text on white header) */
+/* BASIC HEADER (dark text, white submenu) */
 #header-basic .menu-desktop > .main-menu > ul > li > a {
 	color: #212121;
 }
@@ -160,34 +157,27 @@
 	background-color: #f5f5f5;
 }
 
-/* MINI-HERO / FULL-HERO WHITE HEADER (like basic header) */
-#header-mini-hero .menu-desktop > .main-menu > ul > li > a,
-#header-full-hero-white .menu-desktop > .main-menu > ul > li > a {
+/* MINI HERO HEADER (also white header) */
+#header-mini-hero .menu-desktop > .main-menu > ul > li > a {
 	color: #212121;
 }
 
 #header-mini-hero .menu-desktop ul ul,
-#header-mini-hero .menu-desktop ul ul ul,
-#header-full-hero-white .menu-desktop ul ul,
-#header-full-hero-white .menu-desktop ul ul ul {
+#header-mini-hero .menu-desktop ul ul ul {
 	background-color: #ffffff;
 }
 
 #header-mini-hero .menu-desktop ul ul a,
-#header-mini-hero .menu-desktop ul ul ul a,
-#header-full-hero-white .menu-desktop ul ul a,
-#header-full-hero-white .menu-desktop ul ul ul a {
+#header-mini-hero .menu-desktop ul ul ul a {
 	color: #212121;
 }
 
 #header-mini-hero .menu-desktop ul ul a:hover,
-#header-mini-hero .menu-desktop ul ul ul a:hover,
-#header-full-hero-white .menu-desktop ul ul a:hover,
-#header-full-hero-white .menu-desktop ul ul ul a:hover {
+#header-mini-hero .menu-desktop ul ul ul a:hover {
 	background-color: #f5f5f5;
 }
 
-/* FULL HERO OVERLAY (transparent / video background) */
+/* FULL HERO OVERLAY (transparent on hero, white dropdowns) */
 #header-full-hero .menu-desktop > .main-menu > ul > li > a {
 	color: #ffffff;
 }
