@@ -52,30 +52,28 @@
 .menu-desktop > .main-menu ul ul {
 	top: 100%;
 	left: 0;
-	background: #ffffff;
-	box-shadow:
-		-1px 10px 16px rgba(0, 0, 0, 0.04),
-		 1px 10px 16px rgba(0, 0, 0, 0.04),
-		 0 12px 16px rgba(0, 0, 0, 0.05);
 	min-width: 180px;
 	max-width: 280px;
 	width: max-content;
 	padding: 0;
+	box-shadow:
+		-1px 10px 16px rgba(0, 0, 0, 0.04),
+		 1px 10px 16px rgba(0, 0, 0, 0.04),
+		 0 12px 16px rgba(0, 0, 0, 0.05);
 }
 
 /* deeper tiers */
 .menu-desktop > .main-menu ul ul ul {
 	top: 0;
 	left: 100%;
-	background: #ffffff;
-	box-shadow:
-		-1px 8px 14px rgba(0, 0, 0, 0.035),
-		 1px 8px 14px rgba(0, 0, 0, 0.035),
-		 0 10px 14px rgba(0, 0, 0, 0.045);
 	min-width: 180px;
 	max-width: 280px;
 	width: max-content;
 	padding: 0;
+	box-shadow:
+		-1px 8px 14px rgba(0, 0, 0, 0.035),
+		 1px 8px 14px rgba(0, 0, 0, 0.035),
+		 0 10px 14px rgba(0, 0, 0, 0.045);
 }
 
 /* dropdown links */
@@ -102,19 +100,19 @@
 	text-decoration: none !important;
 }
 
-/* submenu links */
+/* submenu links (no colors; only spacing + hover behavior) */
 .menu-desktop > .main-menu ul ul a,
 .menu-desktop > .main-menu ul ul ul a {
 	display: block;
-	background-color: #ffffff;
 	transition: background-color 0.2s ease;
 	padding: 15px 30px;
 	line-height: 1.5;
 }
 
+/* hover (no colors in generic selectors) */
 .menu-desktop > .main-menu ul ul a:hover,
 .menu-desktop > .main-menu ul ul ul a:hover {
-	background-color: #f5f5f5;
+	/* background-color applied by header context */
 }
 
 /* placeholder: not needed currently but keeping selector */
@@ -136,4 +134,75 @@
 /* rotate .toggle when open */
 .menu-desktop > .main-menu .menu-item-has-children.open > a .toggle {
 	transform: rotate(180deg);
+}
+
+/* ------------------------------------------------------ */
+/* HEADER-SPECIFIC COLORS (the only place with colors)    */
+/* ------------------------------------------------------ */
+
+/* BASIC HEADER (dark text on white header) */
+#header-basic .menu-desktop > .main-menu > ul > li > a {
+	color: #212121;
+}
+
+#header-basic .menu-desktop ul ul,
+#header-basic .menu-desktop ul ul ul {
+	background-color: #ffffff;
+}
+
+#header-basic .menu-desktop ul ul a,
+#header-basic .menu-desktop ul ul ul a {
+	color: #212121;
+}
+
+#header-basic .menu-desktop ul ul a:hover,
+#header-basic .menu-desktop ul ul ul a:hover {
+	background-color: #f5f5f5;
+}
+
+/* MINI-HERO / FULL-HERO WHITE HEADER (like basic header) */
+#header-mini-hero .menu-desktop > .main-menu > ul > li > a,
+#header-full-hero-white .menu-desktop > .main-menu > ul > li > a {
+	color: #212121;
+}
+
+#header-mini-hero .menu-desktop ul ul,
+#header-mini-hero .menu-desktop ul ul ul,
+#header-full-hero-white .menu-desktop ul ul,
+#header-full-hero-white .menu-desktop ul ul ul {
+	background-color: #ffffff;
+}
+
+#header-mini-hero .menu-desktop ul ul a,
+#header-mini-hero .menu-desktop ul ul ul a,
+#header-full-hero-white .menu-desktop ul ul a,
+#header-full-hero-white .menu-desktop ul ul ul a {
+	color: #212121;
+}
+
+#header-mini-hero .menu-desktop ul ul a:hover,
+#header-mini-hero .menu-desktop ul ul ul a:hover,
+#header-full-hero-white .menu-desktop ul ul a:hover,
+#header-full-hero-white .menu-desktop ul ul ul a:hover {
+	background-color: #f5f5f5;
+}
+
+/* FULL HERO OVERLAY (transparent / video background) */
+#header-full-hero .menu-desktop > .main-menu > ul > li > a {
+	color: #ffffff;
+}
+
+#header-full-hero .menu-desktop ul ul,
+#header-full-hero .menu-desktop ul ul ul {
+	background-color: #ffffff;
+}
+
+#header-full-hero .menu-desktop ul ul a,
+#header-full-hero .menu-desktop ul ul ul a {
+	color: #212121;
+}
+
+#header-full-hero .menu-desktop ul ul a:hover,
+#header-full-hero .menu-desktop ul ul ul a:hover {
+	background-color: #f5f5f5;
 }
