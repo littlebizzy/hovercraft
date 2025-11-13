@@ -1,6 +1,6 @@
 <div id="primary-wide">
 
-	<?php get_template_part( 'template-parts/content/breadcrumbs' ); ?>
+	<?php get_template_part( 'template-parts/misc/breadcrumbs' ); ?>
 	
 	<div id="content-wrapper">
 	
