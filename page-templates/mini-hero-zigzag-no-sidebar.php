@@ -19,7 +19,7 @@ if ( !is_front_page() || ( is_front_page() && $hovercraft_homepage_hide_main_che
 		<div id="content-wrapper">
 							
 				<div id="content-padded">
-					<?php get_template_part( 'template-parts/content/breadcrumbs' ); ?>
+					<?php get_template_part( 'template-parts/misc/breadcrumbs' ); ?>
 					<?php get_template_part( 'template-parts/content/loop' ); ?>
 					<?php get_template_part( 'template-parts/content/zigzag-wide' ); ?>
 					<?php get_template_part( 'template-parts/content/pagination' ); ?>
