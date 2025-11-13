@@ -22,7 +22,7 @@
 									
 			<div id="content-padded">
 								
-				<?php get_template_part( 'template-parts/content/breadcrumbs' ); ?>
+				<?php get_template_part( 'template-parts/misc/breadcrumbs' ); ?>
 
 				<?php
 				
