@@ -6,7 +6,7 @@
 
 <?php if ( get_theme_mod( 'hovercraft_sidebar_status' ) == 1 ) { ?><div id="primary"><?php } else { ?><div id="primary-wide"><?php } ?>
 
-	<?php get_template_part( 'template-parts/content/breadcrumbs' ); ?>
+	<?php get_template_part( 'template-parts/misc/breadcrumbs' ); ?>
 	
 	<div id="content-wrapper">
 	
