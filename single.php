@@ -76,7 +76,7 @@
 					
 					<?php get_template_part( 'template-parts/content/biography' ); ?>
 
-					<?php get_template_part( 'template-parts/content/tags' ); ?>
+					<?php get_template_part( 'template-parts/misc/tags' ); ?>
 					
 					<?php get_template_part( 'template-parts/content/link-pages' ); ?>
 					
