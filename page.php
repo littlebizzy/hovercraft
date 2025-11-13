@@ -28,7 +28,7 @@ if ( ! is_front_page() || ( is_front_page() && $hide_main !== true ) ) {
                         <?php get_template_part( 'template-parts/content/featured-image' ); ?>
 
                         <div id="content-padded">
-                            <?php get_template_part( 'template-parts/content/breadcrumbs' ); ?>
+                            <?php get_template_part( 'template-parts/misc/breadcrumbs' ); ?>
                             <?php get_template_part( 'template-parts/content/title' ); ?>
                             <?php get_template_part( 'template-parts/content/loop' ); ?>
                             <?php get_template_part( 'template-parts/content/pagination' ); ?>
