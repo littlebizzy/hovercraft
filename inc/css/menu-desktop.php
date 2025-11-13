@@ -139,65 +139,93 @@
 	transform: rotate(180deg);
 }
 
-/* ------------------------------------------------------ */
-/* HEADER-SPECIFIC COLORS (HEX ONLY, NO VARIABLES)         */
-/* ------------------------------------------------------ */
-
-/* BASIC HEADER (dark text, white submenu) */
+/* colors for basic header top level links */
 #header-basic .menu-desktop > .main-menu > ul > li > a {
-	color: #212121;
+	color: <?php echo $header_basic_hero_text_color; ?>;
 }
 
+/* background for basic header submenu panels */
 #header-basic .menu-desktop ul ul,
 #header-basic .menu-desktop ul ul ul {
 	background-color: #ffffff;
 }
 
+/* text color for basic header submenu links */
 #header-basic .menu-desktop ul ul a,
 #header-basic .menu-desktop ul ul ul a {
-	color: #212121;
+	color: <?php echo $header_basic_hero_text_color; ?>;
 }
 
+/* hover background for basic header submenu links */
 #header-basic .menu-desktop ul ul a:hover,
 #header-basic .menu-desktop ul ul ul a:hover {
 	background-color: #f5f5f5;
 }
 
-/* MINI HERO HEADER (also white header) */
+/* colors for mini hero header top level links */
 #header-mini-hero .menu-desktop > .main-menu > ul > li > a {
-	color: #212121;
+	color: <?php echo $header_mini_hero_text_color; ?>;
 }
 
+/* background for mini hero header submenu panels */
 #header-mini-hero .menu-desktop ul ul,
 #header-mini-hero .menu-desktop ul ul ul {
 	background-color: #ffffff;
 }
 
-#header-mini-hero .menu-desktop ul ul a,
-#header-mini-hero .menu-desktop ul ul ul a {
-	color: #212121;
+/* colors for half hero header top level links */
+#header-half-hero .menu-desktop > .main-menu > ul > li > a {
+	color: <?php echo $header_half_hero_text_color; ?>;
 }
 
+/* background for half hero header submenu panels */
+#header-half-hero .menu-desktop ul ul,
+#header-half-hero .menu-desktop ul ul ul {
+	background-color: #ffffff;
+}
+
+/* text color for half hero header submenu links */
+#header-half-hero .menu-desktop ul ul a,
+#header-half-hero .menu-desktop ul ul ul a {
+	color: <?php echo $header_half_hero_text_color; ?>;
+}
+
+/* hover background for half hero header submenu links */
+#header-half-hero .menu-desktop ul ul a:hover,
+#header-half-hero .menu-desktop ul ul ul a:hover {
+	background-color: #f5f5f5;
+}
+
+/* text color for mini hero header submenu links */
+#header-mini-hero .menu-desktop ul ul a,
+#header-mini-hero .menu-desktop ul ul ul a {
+	color: <?php echo $header_mini_hero_text_color; ?>;
+}
+
+/* hover background for mini hero header submenu links */
 #header-mini-hero .menu-desktop ul ul a:hover,
 #header-mini-hero .menu-desktop ul ul ul a:hover {
 	background-color: #f5f5f5;
 }
 
-/* FULL HERO OVERLAY (transparent on hero, white dropdowns) */
+/* colors for full hero header top level links */
 #header-full-hero .menu-desktop > .main-menu > ul > li > a {
-	color: #ffffff;
+	color: <?php echo $header_full_hero_text_color; ?>;
 }
 
+/* background for full hero header submenu panels */
 #header-full-hero .menu-desktop ul ul,
 #header-full-hero .menu-desktop ul ul ul {
 	background-color: #ffffff;
 }
 
+/* text color for full hero header submenu links */
 #header-full-hero .menu-desktop ul ul a,
 #header-full-hero .menu-desktop ul ul ul a {
-	color: #212121;
+	color: <?php echo $header_full_hero_text_color; ?>;
 }
 
+/* hover background for full hero header submenu links */
 #header-full-hero .menu-desktop ul ul a:hover,
 #header-full-hero .menu-desktop ul ul ul a:hover {
 	background-color: #f5f5f5;
