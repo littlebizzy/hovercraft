@@ -2,15 +2,15 @@
 // styles for woocommerce messages
 ?>
 
-/* wrapper */
-.woocommerce-notices-wrapper .woocommerce-message {
+/* success message wrapper */
+.woocommerce-message {
     position: relative;
     display: flex !important;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 14px;
-    padding: 16px 18px 16px 52px;
+    padding: 16px 18px;
     margin-bottom: 30px !important;
     background: #f3faf4;
     color: <?php echo $default_text_color; ?> !important;
@@ -18,7 +18,7 @@
     border-radius: 4px;
 }
 
-/* remove default borders and icons from woo messages */
+/* remove all woo pseudo icons */
 .woocommerce-message::before,
 .woocommerce-message::after,
 .woocommerce-info::before,
@@ -30,7 +30,7 @@
     border: none !important;
 }
 
-/* remove default borders and icons from woo messages */
+/* remove all woo borders and shadows */
 .woocommerce-message,
 .woocommerce-info,
 .woocommerce-error {
@@ -38,7 +38,7 @@
     box-shadow: none !important;
 }
 
-/* style any buttons inside woo messages */
+/* style any buttons inside success messages */
 .woocommerce-message .button {
     margin-left: auto !important;
     order: 2;
@@ -51,7 +51,7 @@
     border: none !important;
 }
 
-/* hover any buttons inside woo messages */
+/* hover state for success message buttons */
 .woocommerce-message .button:hover {
     background: <?php echo $default_hover_color; ?> !important;
     color: #ffffff !important;
