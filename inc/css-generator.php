@@ -1143,6 +1143,14 @@ if ( file_exists( $hovercraft_woocommerce_add_to_cart_css ) ) {
 }
 ?>
 
+/* woocommerce messages */
+<?php
+$hovercraft_woocommerce_messages_css = get_template_directory() . '/inc/css/woocommerce-messages.php';
+if ( file_exists( $hovercraft_woocommerce_messages_css ) ) {
+    include $hovercraft_woocommerce_messages_css;
+}
+?>
+
 /* woocommerce login */
 <?php
 $hovercraft_woocommerce_login_css = get_template_directory() . '/inc/css/woocommerce-login.php';
