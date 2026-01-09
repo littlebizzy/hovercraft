@@ -274,6 +274,11 @@ function hovercraft_register_sidebars() {
 
         // Zigzag widgets
         array(
+            'name'          => 'ZigZag (HoverCraft)',
+            'id'            => 'hovercraft_widget_area_zigzag',
+            'class'         => 'widget-zigzag',
+        ),
+        array(
             'name'          => 'ZigZag #1',
             'id'            => 'hovercraft_zigzag_one',
             'class'         => 'widget-zigzag-one',
