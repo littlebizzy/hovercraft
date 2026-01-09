@@ -4,9 +4,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-/*
- * register zigzag customizer section
- */
+// load zigzag repeater control only in customizer
+function hovercraft_load_zigzag_customizer_controls() {
+	require get_template_directory() . '/inc/customizer-controls/class-zigzag-repeater.php';
+}
+add_action( 'customize_register', 'hovercraft_load_zigzag_customizer_controls', 5 );
+
+// register zigzag customizer section
 function hovercraft_customize_register_zigzag( $wp_customize ) {
 
 	$wp_customize->add_section(
