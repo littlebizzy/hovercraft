@@ -327,6 +327,11 @@ function hovercraft_register_sidebars() {
             'name'          => 'ZigZag #10',
             'id'            => 'hovercraft_zigzag_ten',
             'class'         => 'widget-zigzag-ten',
+        ),
+        array(
+            'name'          => 'ZigZag #11',
+            'id'            => 'hovercraft_zigzag_eleven',
+            'class'         => 'widget-zigzag-eleven',
         )
     );
 
