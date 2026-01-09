@@ -1,11 +1,16 @@
 <?php
 
+if ( ! class_exists( 'WP_Customize_Control' ) ) {
+	return;
+}
+
 class HoverCraft_ZigZag_Repeater_Control extends WP_Customize_Control {
 
 	public $type = 'hovercraft_zigzag_repeater';
 
 	public function enqueue() {
 		wp_enqueue_media();
+
 		wp_enqueue_script(
 			'hovercraft-zigzag-customizer',
 			get_template_directory_uri() . '/assets/js/customizer-zigzag.js',
@@ -16,7 +21,9 @@ class HoverCraft_ZigZag_Repeater_Control extends WP_Customize_Control {
 	}
 
 	public function render_content() {
+
 		$value = $this->value();
+
 		if ( ! is_array( $value ) ) {
 			$value = array();
 		}
@@ -39,6 +46,7 @@ class HoverCraft_ZigZag_Repeater_Control extends WP_Customize_Control {
 			</script>
 
 		</div>
+
 		<?php
 	}
 
@@ -55,7 +63,9 @@ class HoverCraft_ZigZag_Repeater_Control extends WP_Customize_Control {
 
 			<input type="hidden" class="zigzag-image-id" value="<?php echo esc_attr( $image_id ); ?>">
 
-			<p><button type="button" class="button select-zigzag-image">select image</button></p>
+			<p>
+				<button type="button" class="button select-zigzag-image">select image</button>
+			</p>
 
 			<p>
 				<input type="text" class="widefat zigzag-title" placeholder="title" value="<?php echo esc_attr( $title ); ?>">
