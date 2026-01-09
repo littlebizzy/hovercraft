@@ -86,6 +86,13 @@ if ( function_exists( 'hovercraft_render_zigzag' ) && get_theme_mod( 'hovercraft
 			</div><!-- zigzag-section-reverse -->
 		<?php } ?>
 
+		<?php if ( is_active_sidebar( 'hovercraft_zigzag_eleven' ) ) { ?>
+			<div class="zigzag-section">
+				<?php dynamic_sidebar( 'hovercraft_zigzag_eleven' ); ?>
+				<div class="clear"></div>
+			</div><!-- zigzag-section -->
+		<?php } ?>
+
 	<?php } ?>
 
 </div><!-- zigzag-wide-wrapper -->
