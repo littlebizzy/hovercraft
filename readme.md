@@ -6,6 +6,10 @@ No maintenance WordPress theme
 
 ## Changelog
 
+### 0.3.x
+- still a little bit alpha
+- experimenting with ACF support
+
 ### 0.2.x
 - still a little bit alpha
 - forced update (fixes versioning conflict)
