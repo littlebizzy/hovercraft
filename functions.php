@@ -132,6 +132,11 @@ add_filter( 'get_the_archive_title_prefix', '__return_false' );
 require get_template_directory() . '/inc/layouts/layout-zigzag.php';
 require get_template_directory() . '/inc/layouts/render-zigzag.php';
 
+// 0.3.0 shift to ACF integration
+if ( is_admin() ) {
+	require get_template_directory() . '/inc/schema/zigzag-schema.php';
+}
+
 // Ref: ChatGPT
 // Ref: https://wordpress.stackexchange.com/questions/179585/remove-category-tag-author-from-the-archive-title
 // Ref: https://wordpress.stackexchange.com/questions/245274/how-to-remove-archive-label-from-archive-title
