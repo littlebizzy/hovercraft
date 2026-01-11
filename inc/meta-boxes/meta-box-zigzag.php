@@ -9,7 +9,7 @@ function hovercraft_admin_register_zigzag_meta_box() {
 
 	add_meta_box(
 		'hovercraft_zigzag_meta_box',
-		'ZigZag Section',
+		'ZigZag Section (HoverCraft Theme)',
 		'hovercraft_admin_render_zigzag_meta_box',
 		'page',
 		'normal',
