@@ -1,5 +1,9 @@
 <?php
 
+if ( ! defined( 'HOVERCRAFT_VERSION' ) ) {
+	define( 'HOVERCRAFT_VERSION', '0.3.2' );
+}
+
 // disable wordpress.org updates for this theme
 add_filter( 'gu_override_dot_org', function ( $overrides ) {
     $overrides[] = 'hovercraft';
