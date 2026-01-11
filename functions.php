@@ -128,14 +128,8 @@ add_filter( 'use_default_gallery_style', '__return_false' );
 // disable archive title prefixes
 add_filter( 'get_the_archive_title_prefix', '__return_false' );
 
-// zigzag layout module
-require get_template_directory() . '/inc/layouts/layout-zigzag.php';
-require get_template_directory() . '/inc/layouts/render-zigzag.php';
-
-// 0.3.0 shift to ACF integration
-if ( is_admin() ) {
-	require get_template_directory() . '/inc/schema/zigzag-schema.php';
-}
+// meta boxes
+require get_template_directory() . '/inc/meta-box-zigzag.php';
 
 // Ref: ChatGPT
 // Ref: https://wordpress.stackexchange.com/questions/179585/remove-category-tag-author-from-the-archive-title
