@@ -96,9 +96,6 @@ require get_template_directory() . '/inc/git-updater.php';
 // widget areas
 require get_template_directory() . '/inc/widget-areas.php';
 
-// custom theme widgets
-require get_template_directory() . '/inc/widgets/widget-zigzag.php';
-
 // woocommerce
 require get_template_directory() . '/inc/quantity-buttons.php';
 require get_template_directory() . '/inc/woocommerce-support.php';
