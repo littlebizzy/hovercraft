@@ -45,39 +45,49 @@ function hovercraft_admin_render_zigzag_meta_box( $post ) {
 		$link_url  = get_post_meta( $post->ID, "hovercraft_zigzag_row_{$i}_link_url", true );
 		$link_text = get_post_meta( $post->ID, "hovercraft_zigzag_row_{$i}_link_text", true );
 
-		echo '<hr>';
-		echo '<h4>zigzag row ' . intval( $i ) . '</h4>';
+		echo '<div class="hovercraft-meta-group">';
 
-		// image field
-		echo '<p>';
-		echo '<label>image</label><br>';
-		echo '<input type="hidden" name="hovercraft_zigzag_row_' . $i . '_image_id" value="' . esc_attr( $image_id ) . '">';
-		echo '<input type="button" class="button hovercraft-zigzag-upload" value="select image" data-target="hovercraft_zigzag_row_' . $i . '_image_id">';
-		echo '</p>';
+			echo '<div class="hovercraft-meta-group-header">';
+				echo 'zigzag row ' . intval( $i );
+				echo '<span class="hovercraft-meta-group-toggle">▸</span>';
+			echo '</div>';
 
-		// title field
-		echo '<p>';
-		echo '<label>title</label><br>';
-		echo '<input type="text" class="widefat" name="hovercraft_zigzag_row_' . $i . '_title" value="' . esc_attr( $title ) . '">';
-		echo '</p>';
+			echo '<div class="hovercraft-meta-group-body">';
 
-		// text field
-		echo '<p>';
-		echo '<label>text</label><br>';
-		echo '<textarea class="widefat" rows="4" name="hovercraft_zigzag_row_' . $i . '_text">' . esc_textarea( $text ) . '</textarea>';
-		echo '</p>';
+				// image field
+				echo '<p>';
+				echo '<label>image</label><br>';
+				echo '<input type="hidden" name="hovercraft_zigzag_row_' . $i . '_image_id" value="' . esc_attr( $image_id ) . '">';
+				echo '<input type="button" class="button hovercraft-zigzag-upload" value="select image" data-target="hovercraft_zigzag_row_' . $i . '_image_id">';
+				echo '</p>';
 
-		// link url field
-		echo '<p>';
-		echo '<label>link url</label><br>';
-		echo '<input type="url" class="widefat" name="hovercraft_zigzag_row_' . $i . '_link_url" value="' . esc_attr( $link_url ) . '">';
-		echo '</p>';
+				// title field
+				echo '<p>';
+				echo '<label>title</label><br>';
+				echo '<input type="text" class="widefat" name="hovercraft_zigzag_row_' . $i . '_title" value="' . esc_attr( $title ) . '">';
+				echo '</p>';
 
-		// link text field
-		echo '<p>';
-		echo '<label>link text</label><br>';
-		echo '<input type="text" class="widefat" name="hovercraft_zigzag_row_' . $i . '_link_text" value="' . esc_attr( $link_text ) . '">';
-		echo '</p>';
+				// text field
+				echo '<p>';
+				echo '<label>text</label><br>';
+				echo '<textarea class="widefat" rows="4" name="hovercraft_zigzag_row_' . $i . '_text">' . esc_textarea( $text ) . '</textarea>';
+				echo '</p>';
+
+				// link url field
+				echo '<p>';
+				echo '<label>link url</label><br>';
+				echo '<input type="url" class="widefat" name="hovercraft_zigzag_row_' . $i . '_link_url" value="' . esc_attr( $link_url ) . '">';
+				echo '</p>';
+
+				// link text field
+				echo '<p>';
+				echo '<label>link text</label><br>';
+				echo '<input type="text" class="widefat" name="hovercraft_zigzag_row_' . $i . '_link_text" value="' . esc_attr( $link_text ) . '">';
+				echo '</p>';
+
+			echo '</div>';
+
+		echo '</div>';
 	}
 }
 
@@ -122,5 +132,3 @@ function hovercraft_admin_save_zigzag_meta_box( $post_id ) {
 	}
 }
 add_action( 'save_post', 'hovercraft_admin_save_zigzag_meta_box' );
-
-// Ref: ChatGPT
