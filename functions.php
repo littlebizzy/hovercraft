@@ -129,7 +129,7 @@ add_filter( 'use_default_gallery_style', '__return_false' );
 add_filter( 'get_the_archive_title_prefix', '__return_false' );
 
 // meta boxes
-require get_template_directory() . '/inc/meta-box-zigzag.php';
+require get_template_directory() . '/inc/meta-boxes/meta-box-zigzag.php';
 
 // Ref: ChatGPT
 // Ref: https://wordpress.stackexchange.com/questions/179585/remove-category-tag-author-from-the-archive-title
