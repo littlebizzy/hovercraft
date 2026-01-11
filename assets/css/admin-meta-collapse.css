@@ -1,0 +1,30 @@
+.hovercraft-meta-group {
+	border: 1px solid #ccd0d4;
+	margin-bottom: 12px;
+	background: #fff;
+}
+
+.hovercraft-meta-group-header {
+	padding: 10px 12px;
+	background: #f6f7f7;
+	border-bottom: 1px solid #ccd0d4;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	font-weight: 600;
+}
+
+.hovercraft-meta-group-header:hover {
+	background: #f0f0f1;
+}
+
+.hovercraft-meta-group-toggle {
+	font-size: 18px;
+	line-height: 1;
+}
+
+.hovercraft-meta-group-body {
+	padding: 12px;
+	display: none;
+}
