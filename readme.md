@@ -8,7 +8,7 @@ No maintenance WordPress theme
 
 ### 0.3.x
 - still a little bit alpha
-- experimenting with ACF support
+- experimenting with meta boxes
 
 ### 0.2.x
 - still a little bit alpha
