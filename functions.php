@@ -129,6 +129,9 @@ add_filter( 'use_default_gallery_style', '__return_false' );
 // disable archive title prefixes
 add_filter( 'get_the_archive_title_prefix', '__return_false' );
 
+// meta boxes ui
+require get_template_directory() . '/inc/admin/admin-meta-ui.php';
+
 // meta boxes
 require get_template_directory() . '/inc/meta-boxes/meta-box-zigzag.php';
 
