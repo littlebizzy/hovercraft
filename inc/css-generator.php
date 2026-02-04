@@ -1063,6 +1063,13 @@ if ( file_exists( $hovercraft_woocommerce_cart_css ) ) {
 }
 ?>
 
+/* woocommerce checkout */
+<?php
+$hovercraft_woocommerce_checkout_css = get_template_directory() . '/inc/css/woocommerce-checkout.php';
+if ( file_exists( $hovercraft_woocommerce_checkout_css ) ) {
+    include $hovercraft_woocommerce_checkout_css;
+}
+?>
 
 /* woocommerce other */
 
