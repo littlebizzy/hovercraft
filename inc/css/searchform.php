@@ -52,7 +52,7 @@
 	height: 46px;
 	border: 0;
 	border-radius: 0 8px 8px 0;
-	background: #D500F9;
+	background: <?php echo $default_link_color; ?>;
 	color: #ffffff;
 	display: inline-flex;
 	align-items: center;
@@ -64,7 +64,7 @@
 }
 
 .search-submit:hover {
-	background: #AB47BC;
+	background: <?php echo $default_hover_color; ?>;
 }
 
 .search-submit:focus {
