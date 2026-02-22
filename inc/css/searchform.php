@@ -1,5 +1,18 @@
 <?php
 // styles for search form
+
+// convert hex to rgb for focus glow
+$hovercraft_hex = ltrim( $default_link_color, '#' );
+
+if ( strlen( $hovercraft_hex ) === 3 ) {
+	$hovercraft_hex = $hovercraft_hex[0] . $hovercraft_hex[0]
+		. $hovercraft_hex[1] . $hovercraft_hex[1]
+		. $hovercraft_hex[2] . $hovercraft_hex[2];
+}
+
+$hovercraft_r = hexdec( substr( $hovercraft_hex, 0, 2 ) );
+$hovercraft_g = hexdec( substr( $hovercraft_hex, 2, 2 ) );
+$hovercraft_b = hexdec( substr( $hovercraft_hex, 4, 2 ) );
 ?>
 
 .input-container {
@@ -16,7 +29,7 @@
 }
 
 .input-container:focus-within {
-	box-shadow: 0 0 16px rgba(171, 71, 188, 0.45);
+	box-shadow: 0 0 16px rgba(<?php echo $hovercraft_r; ?>, <?php echo $hovercraft_g; ?>, <?php echo $hovercraft_b; ?>, 0.45);
 }
 
 .search-input {
