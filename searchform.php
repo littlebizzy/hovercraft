@@ -1,18 +1,16 @@
 <form role="search" method="get" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
-    <div class="input-container">
-        <input type="search" class="search-input" value="<?php echo esc_attr( get_search_query() ); ?>" name="s" placeholder="<?php esc_attr_e( 'Search entire website...', 'hovercraft' ); ?>" />
-        
-        <button type="submit" class="search-submit" name="submit">
-            <?php 
-            $hovercraft_layout_icons = get_theme_mod( 'hovercraft_layout_icons', 'material_icons_classic' );
+	<label class="screen-reader-text" for="site-search"><?php esc_html_e( 'Search', 'hovercraft' ); ?></label>
 
-            if ( $hovercraft_layout_icons === 'material_icons_classic' ) { ?>
-                <i class="material-icons search">search</i>
-            <?php } elseif ( $hovercraft_layout_icons === 'font_awesome_version_6' ) { ?>
-                <i class="fas fa-search"></i>
-            <?php } ?>
-        </button>
-    </div><!-- input-container -->
+	<div class="input-container">
+		<input id="site-search" type="search" class="search-input" name="s" value="<?php echo esc_attr( get_search_query() ); ?>" placeholder="<?php esc_attr_e( 'Search entire website...', 'hovercraft' ); ?>" />
+
+		<button type="submit" class="search-submit" aria-label="<?php esc_attr_e( 'Submit search', 'hovercraft' ); ?>">
+			<svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" focusable="false">
+				<circle cx="11" cy="11" r="7"></circle>
+				<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+			</svg>
+		</button>
+	</div><!-- input-container -->
 </form><!-- searchform -->
 
 <!-- Ref: ChatGPT -->
