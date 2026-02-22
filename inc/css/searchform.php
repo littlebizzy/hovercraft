@@ -5,6 +5,7 @@
 .input-container {
 	display: inline-flex;
 	align-items: stretch;
+	width: 100%;
 	border-radius: 8px;
 	overflow: hidden;
 	transition: box-shadow 0.18s ease;
@@ -19,7 +20,7 @@
 }
 
 .search-input {
-	width: min(420px, 70vw);
+	flex: 1 1 auto;
 	min-width: 0;
 	height: 46px;
 	padding: 0 16px;
@@ -48,7 +49,7 @@
 }
 
 .search-submit {
-	width: 64px;
+	flex: 0 0 64px;
 	height: 46px;
 	border: 0;
 	border-radius: 0 8px 8px 0;
