@@ -1,7 +1,7 @@
 <?php
 
 if ( ! defined( 'HOVERCRAFT_VERSION' ) ) {
-	define( 'HOVERCRAFT_VERSION', '0.3.19' );
+	define( 'HOVERCRAFT_VERSION', '0.3.20' );
 }
 
 // disable wordpress.org updates for this theme
@@ -58,6 +58,7 @@ require get_template_directory() . '/inc/footer-callout.php';
 
 // header
 require get_template_directory() . '/inc/custom-header.php';
+require get_template_directory() . '/inc/header-assets.php';
 require get_template_directory() . '/inc/header-cleanup.php';
 require get_template_directory() . '/inc/header-video.php';
 
