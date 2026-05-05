@@ -158,6 +158,13 @@
   	text-decoration: none;
 }
 
+.overlay .closebtn {
+	background: transparent;
+	border: 0;
+	cursor: pointer;
+	padding: 0;
+}
+
 .overlay .closebtn i {
   	position: absolute;
   	top: 20px;
@@ -187,7 +194,7 @@
 /*end mobile menu overlay*/
 /*************************/
 	
-#offcanvas {
+#hovercraft-offcanvas-menu {
 	top: 0;
 	left: -100%;
 	width: 100%;
@@ -286,13 +293,13 @@
 	}
 }
 
-#offcanvas.active {
+#hovercraft-offcanvas-menu.active {
 	left: 0;
 	transform: translate3d(0, 0, 0);
 	transition: all 500ms ease-in-out;
 }
 
-.overlay-main {
+.hovercraft-offcanvas-overlay {
 	background-color: #000000c2;
 	position: absolute;
 	visibility: hidden;
@@ -305,7 +312,7 @@
 	z-index: 99;
 }
 	
-.overlay-main.active {
+.hovercraft-offcanvas-overlay.active {
 	visibility: visible;
 	opacity: 1;
 }
