@@ -17,6 +17,39 @@ function hovercraft_menu_locations() {
 }
 add_action( 'init', 'hovercraft_menu_locations' );
 
+// render mobile menu with fallback
+function hovercraft_mobile_menu_output() {
+	if ( has_nav_menu( 'mobile-menu' ) ) {
+		wp_nav_menu(
+			array(
+				'theme_location'  => 'mobile-menu',
+				'menu_class'      => 'menu',
+				'container_class' => 'mobile-menu',
+			)
+		);
+		return;
+	}
+
+	if ( has_nav_menu( 'main-menu' ) ) {
+		wp_nav_menu(
+			array(
+				'theme_location'  => 'main-menu',
+				'menu_class'      => 'menu',
+				'container_class' => 'main-menu',
+			)
+		);
+		return;
+	}
+
+	echo '<div class="main-menu"><ul class="menu">';
+	wp_list_pages(
+		array(
+			'title_li' => '',
+		)
+	);
+	echo '</ul></div>';
+}
+
 // limit cta menus to one top-level link
 function hovercraft_limit_cta_menu_items( $items, $args ) {
 	$limited_locations = array(
