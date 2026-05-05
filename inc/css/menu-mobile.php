@@ -44,7 +44,7 @@
 	width: 100%;
 	line-height: 40px;
 	color: #ffffff !important;
-	font-size: 18px;
+	font-size: 18px;	
 	text-decoration: none;
 }
 
@@ -95,6 +95,9 @@
 /***************************/
 .mobile-menu-trig {
 	/*display: none;*/
+	background: transparent;
+	border: 0;
+	padding: 0;
 }
 
 .mobile-menu-trig:hover {
