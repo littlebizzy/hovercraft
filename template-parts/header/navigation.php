@@ -55,7 +55,6 @@ if ( 'fixed' === $hovercraft_desktop_header_width ) {
 					} elseif ( 'font_awesome_version_6' === $hovercraft_layout_icons ) {
 						?>
 						<i class="fas fa-shopping-cart"></i>
-						<?php
 					}
 					?>
 				</a>
@@ -67,11 +66,11 @@ if ( 'fixed' === $hovercraft_desktop_header_width ) {
 
 			if ( 'overlay' === $hovercraft_mobile_menu ) {
 				?>
-				<a class="nav-icon mobile-menu-trig" onclick="hovercraftOpenNav()">
+				<button type="button" class="nav-icon mobile-menu-trig" onclick="hovercraftOpenNav()">
 				<?php
 			} else {
 				?>
-				<a class="nav-icon mobile-menu-trig hovercraft-offcanvas-trigger">
+				<button type="button" class="nav-icon mobile-menu-trig hovercraft-offcanvas-trigger">
 				<?php
 			}
 
@@ -87,7 +86,7 @@ if ( 'fixed' === $hovercraft_desktop_header_width ) {
 				<?php
 			}
 			?>
-			</a>
+			</button>
 			
 		</div><!--menu-mobile-wrapper -->
 		
