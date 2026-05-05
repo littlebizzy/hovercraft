@@ -9,6 +9,8 @@
 		<?php get_template_part( 'template-parts/content/posthero' ); ?>
 	<?php endif; ?>
 
+<?php if ( hovercraft_should_show_main_content() ) { ?>
+
 <div id="main">
 <div class="inner">
 	
@@ -24,5 +26,7 @@
 <div class="clear"></div>
 </div><!-- inner -->
 </div><!-- main -->
+	
+<?php } // if show main content ?>
 	
 <?php get_template_part( 'footer' ); ?>
