@@ -1,7 +1,6 @@
 <div id="hovercraft-overlay-menu" class="overlay">
 
-	<!-- button to close the overlay navigation -->
-	<a href="javascript:void(0)" class="closebtn" onclick="hovercraftCloseNav()">
+	<button type="button" class="closebtn" onclick="hovercraftCloseNav()">
 		<?php
 		// choose icon set
 		$hovercraft_layout_icons = get_theme_mod( 'hovercraft_layout_icons', 'material_icons_classic' );
@@ -16,73 +15,18 @@
 			<?php
 		}
 		?>
-	</a>
+	</button>
 
-	<!-- overlay content -->
 	<div class="overlay-content">
-		<?php
-		// render mobile or main menu, fallback to pages list
-		if ( has_nav_menu( 'mobile-menu' ) ) {
-			wp_nav_menu(
-				array(
-					'theme_location'  => 'mobile-menu',
-					'menu_class'      => 'menu',
-					'container_class' => 'mobile-menu',
-				)
-			);
-		} elseif ( has_nav_menu( 'main-menu' ) ) {
-			wp_nav_menu(
-				array(
-					'theme_location'  => 'main-menu',
-					'menu_class'      => 'menu',
-					'container_class' => 'main-menu',
-				)
-			);
-		} else {
-			echo '<div class="main-menu"><ul class="menu">';
-			wp_list_pages(
-				array(
-					'title_li' => '',
-				)
-			);
-			echo '</ul></div>';
-		}
-		?>
+		<?php hovercraft_mobile_menu_output(); ?>
 	</div>
 </div><!-- hovercraft-overlay-menu -->
 
-<div id="offcanvas">
+<div id="hovercraft-offcanvas-menu">
 	<h4 class="sitename-offcanvas"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></h4>
-	<?php
-	// render mobile or main menu, fallback to pages list
-	if ( has_nav_menu( 'mobile-menu' ) ) {
-		wp_nav_menu(
-			array(
-				'theme_location'  => 'mobile-menu',
-				'menu_class'      => 'menu',
-				'container_class' => 'mobile-menu',
-			)
-		);
-	} elseif ( has_nav_menu( 'main-menu' ) ) {
-		wp_nav_menu(
-			array(
-				'theme_location'  => 'main-menu',
-				'menu_class'      => 'menu',
-				'container_class' => 'main-menu',
-			)
-		);
-	} else {
-		echo '<div class="main-menu"><ul class="menu">';
-		wp_list_pages(
-			array(
-				'title_li' => '',
-			)
-		);
-		echo '</ul></div>';
-	}
-	?>
+	<?php hovercraft_mobile_menu_output(); ?>
 </div>
 
-<div class="overlay-main"></div>
+<div class="hovercraft-offcanvas-overlay"></div>
 
 <!-- Ref: https://codepen.io/abhi_pawar/pen/qzpEJL -->
