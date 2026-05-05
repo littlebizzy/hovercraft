@@ -2,17 +2,17 @@
 jQuery( function( $ ) {
 
 	// toggle menu open and overlay
-	$( '.burger' ).on( 'click', function() {
-		$( '#offcanvas' ).toggleClass( 'active' );
+	$( '.hovercraft-offcanvas-trigger' ).on( 'click', function() {
+		$( '#hovercraft-offcanvas-menu' ).toggleClass( 'active' );
 		$( 'body' ).toggleClass( 'frozen' );
-		$( '.overlay-main' ).toggleClass( 'active' );
+		$( '.hovercraft-offcanvas-overlay' ).toggleClass( 'active' );
 	} );
 
 	// close menu when overlay is clicked
-	$( '.overlay-main' ).on( 'click', function() {
-		$( '#offcanvas' ).removeClass( 'active' );
+	$( '.hovercraft-offcanvas-overlay' ).on( 'click', function() {
+		$( '#hovercraft-offcanvas-menu' ).removeClass( 'active' );
 		$( 'body' ).removeClass( 'frozen' );
-		$( '.overlay-main' ).removeClass( 'active' );
+		$( '.hovercraft-offcanvas-overlay' ).removeClass( 'active' );
 	} );
 
 } );
