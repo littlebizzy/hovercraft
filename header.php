@@ -3,46 +3,6 @@
     <head>
         <meta charset="<?php echo esc_attr( get_bloginfo( 'charset' ) ); ?>">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin="anonymous">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous">
-        <link rel="dns-prefetch" href="https://fonts.googleapis.com">
-        <link rel="dns-prefetch" href="https://fonts.gstatic.com">
-
-        <?php 
-        // get material icons setting
-        $material_icons_setting = get_theme_mod( 'hovercraft_material_icons', 'classic_only' );
-
-        // map available material icons
-        $material_icons_map = array(
-            'classic_only' => 'Material+Icons',
-            'classic_and_outlined' => 'Material+Icons&family=Material+Icons+Outlined',
-            'classic_and_outlined_and_two_toned' => 'Material+Icons&family=Material+Icons+Outlined&family=Material+Icons+Two+Tone',
-        );
-
-        // output material icons if not 'none' and valid
-        if ( $material_icons_setting !== 'none' && isset( $material_icons_map[ $material_icons_setting ] ) ) {
-            $material_icons_url = 'https://fonts.googleapis.com/css2?family=' . $material_icons_map[ $material_icons_setting ] . '&display=block';
-        ?><link rel="stylesheet" href="<?php echo esc_url( $material_icons_url ); ?>"><?php 
-        } ?>
-
-        <?php 
-        // get font awesome setting
-        $font_awesome_setting = get_theme_mod( 'hovercraft_font_awesome', 'none' );
-
-        // map available font awesome versions
-        $font_awesome_map = array(
-            'version_6' => 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css',
-            'version_5' => 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css',
-            'version_4' => 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/all.min.css',
-        );
-
-        // output font awesome if not 'none' and valid
-        if ( $font_awesome_setting !== 'none' && isset( $font_awesome_map[ $font_awesome_setting ] ) ) {
-        ?><link rel="stylesheet" href="<?php echo esc_url( $font_awesome_map[ $font_awesome_setting ] ); ?>"><?php 
-        } ?>
-
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=block">
-
         <?php 
         // inline parent theme's stylesheet
         $parent_style_path = get_template_directory() . '/style.css';
