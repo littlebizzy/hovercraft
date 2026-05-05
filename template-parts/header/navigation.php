@@ -71,7 +71,7 @@ if ( 'fixed' === $hovercraft_desktop_header_width ) {
 				<?php
 			} else {
 				?>
-				<a class="nav-icon mobile-menu-trig burger">
+				<a class="nav-icon mobile-menu-trig hovercraft-offcanvas-trigger">
 				<?php
 			}
 
