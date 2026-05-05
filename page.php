@@ -2,9 +2,7 @@
 <?php get_template_part( 'template-parts/header/header-basic' ); ?>
 
 <?php
-$hide_main = (bool) get_theme_mod( 'hovercraft_homepage_hide_main' );
-
-if ( ! is_front_page() || ! $hide_main ) {
+if ( hovercraft_should_show_main_content() ) {
     ?>
     <div id="main">
         <div class="inner">
