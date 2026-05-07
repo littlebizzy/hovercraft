@@ -22,14 +22,6 @@ function hovercraft_get_google_font_families() {
 		$first_font_family = 'noto_sans';
 	}
 
-	hovercraft_add_google_font_family( $font_families, get_theme_mod( 'hovercraft_default_font', $first_font_family ), 3 );
-	hovercraft_add_google_font_family( $font_families, get_theme_mod( 'hovercraft_site_name_font', $first_font_family ), 3 );
-	hovercraft_add_google_font_family( $font_families, get_theme_mod( 'hovercraft_main_menu_font', $first_font_family ), 3 );
-	hovercraft_add_google_font_family( $font_families, get_theme_mod( 'hovercraft_h1_font', '' ), 3 );
-	hovercraft_add_google_font_family( $font_families, get_theme_mod( 'hovercraft_h2_font', '' ), 3 );
-	hovercraft_add_google_font_family( $font_families, get_theme_mod( 'hovercraft_h3_font', '' ), 3 );
-	hovercraft_add_google_font_family( $font_families, get_theme_mod( 'hovercraft_h4_font', '' ), 3 );
-	hovercraft_add_google_font_family( $font_families, get_theme_mod( 'hovercraft_h5_font', '' ), 3 );
 	hovercraft_add_google_font_family( $font_families, $first_font_family, 3 );
 	hovercraft_add_google_font_family( $font_families, get_theme_mod( 'hovercraft_second_font_family', '' ), 3 );
 	hovercraft_add_google_font_family( $font_families, get_theme_mod( 'hovercraft_third_font_family', '' ), 3 );
