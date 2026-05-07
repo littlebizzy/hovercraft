@@ -90,13 +90,7 @@
 
 /* base styles for all main menu links */
 .menu-desktop > .main-menu a {
-	font-family: <?php 
-		echo !empty($main_menu_font_family) 
-			? ucwords(str_replace("_", " ", $main_menu_font_family)) 
-			: (!empty($default_font_family) 
-				? ucwords(str_replace("_", " ", $default_font_family)) 
-				: 'sans-serif'); 
-	?>;
+	font-family: <?php echo hovercraft_format_css_font_family( $main_menu_font_family, $default_font_family ); ?>;
 	font-size: <?php echo $main_menu_desktop_font_size; ?>px;
 	text-transform: <?php echo $main_menu_text_transform; ?>;
 	font-weight: <?php echo $main_menu_font_weight; ?>;
