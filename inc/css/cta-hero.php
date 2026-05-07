@@ -46,7 +46,7 @@
 
 @media screen and (max-width: 1200px) {
 .cta-hero-primary ul li a {
-	font-family: <?php echo ucwords(str_replace("_", " ", $main_menu_font_family)); ?>;
+	font-family: <?php echo hovercraft_format_css_font_family( $main_menu_font_family, $default_font_family ); ?>;
 	width: 100%;
 	font-size: 20px;
 	font-weight: 700;
@@ -62,7 +62,7 @@
 @media screen and (min-width: 1200px) {
 .cta-hero-primary ul li a {
 	<?php if ( has_nav_menu( 'cta-hero-secondary' ) ) { echo "width: 200px;"; } else { echo "width: auto;"; } ?>
-	font-family: <?php echo ucwords(str_replace("_", " ", $main_menu_font_family)); ?>;
+	font-family: <?php echo hovercraft_format_css_font_family( $main_menu_font_family, $default_font_family ); ?>;
 	font-size: 20px;
 	font-weight: 700;
 	color: #ffffff;
@@ -117,7 +117,7 @@
 
 @media screen and (max-width: 1200px) {
 .cta-hero-secondary ul li a {
-	font-family: <?php echo ucwords(str_replace("_", " ", $main_menu_font_family)); ?>;
+	font-family: <?php echo hovercraft_format_css_font_family( $main_menu_font_family, $default_font_family ); ?>;
 	width: 100%;
 	font-size: 20px;
 	font-weight: 400;
@@ -133,7 +133,7 @@
 
 @media screen and (min-width: 1200px) {
 .cta-hero-secondary ul li a {
-	font-family: <?php echo ucwords(str_replace("_", " ", $main_menu_font_family)); ?>;
+	font-family: <?php echo hovercraft_format_css_font_family( $main_menu_font_family, $default_font_family ); ?>;
 	width: 200px;
 	font-size: 20px;
 	font-weight: 400;
