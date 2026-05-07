@@ -3,7 +3,7 @@
 ?>
 
 code {
-	font-family: 'Noto Sans Mono', monospace;
+	font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
 	font-weight: 400;
 	background: #ECEFF1;
 	padding: 0px 5px;
@@ -12,7 +12,7 @@ code {
 @media screen and (max-width: 1200px) {
 pre {
 	width: calc(100% - 40px) !important;
-	font-family: 'Noto Sans Mono', monospace;
+	font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
 	font-weight: 400;
 	background: #ECEFF1; /* correct */
 	padding: 10px;
@@ -26,7 +26,7 @@ pre {
 @media screen and (min-width: 1200px) {
 pre {
 	width: 100%;
-	font-family: 'Noto Sans Mono', monospace;
+	font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
 	font-weight: 400;
 	background: #ECEFF1; /* correct */
 	padding: 10px;
@@ -39,7 +39,7 @@ pre {
 
 .pre {
 	width: 100%;
-	font-family: 'Noto Sans Mono', monospace;
+	font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
 	background: #ECEFF1; /* correct */
 	padding: 10px;
 	margin-bottom: 30px;
