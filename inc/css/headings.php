@@ -4,7 +4,7 @@
 
 @media screen and (max-width: 1200px) {
 h1 {
-	font-family: <?php echo !empty($h1_font_family) ? ucwords(str_replace("_", " ", $h1_font_family)) : ucwords(str_replace("_", " ", $default_font_family)); ?>;
+	font-family: <?php echo hovercraft_format_css_font_family( $h1_font_family, $default_font_family ); ?>;
 	font-weight: <?php echo $h1_font_weight; ?>;
 	font-size: <?php echo $h1_mobile_font_size; ?>px;
 	margin-bottom: 20px;
@@ -13,7 +13,7 @@ h1 {
 
 @media screen and (min-width: 1200px) {
 h1 {
-	font-family: <?php echo !empty($h1_font_family) ? ucwords(str_replace("_", " ", $h1_font_family)) : ucwords(str_replace("_", " ", $default_font_family)); ?>;
+	font-family: <?php echo hovercraft_format_css_font_family( $h1_font_family, $default_font_family ); ?>;
 	font-weight: <?php echo $h1_font_weight; ?>;
 	font-size: <?php echo $h1_desktop_font_size; ?>px;
 	margin-bottom: 30px;
@@ -42,7 +42,7 @@ h1.divide:after {
 
 @media screen and (max-width: 1200px) {
 h2 {
-	font-family: <?php echo !empty($h2_font_family) ? ucwords(str_replace("_", " ", $h2_font_family)) : ucwords(str_replace("_", " ", $default_font_family)); ?>;
+	font-family: <?php echo hovercraft_format_css_font_family( $h2_font_family, $default_font_family ); ?>;
 	font-weight: <?php echo $h2_font_weight; ?>;
 	font-size: <?php echo $h2_mobile_font_size; ?>px;
 	margin-bottom: 20px;
@@ -51,7 +51,7 @@ h2 {
 
 @media screen and (min-width: 1200px) {
 h2 {
-	font-family: <?php echo !empty($h2_font_family) ? ucwords(str_replace("_", " ", $h2_font_family)) : ucwords(str_replace("_", " ", $default_font_family)); ?>;
+	font-family: <?php echo hovercraft_format_css_font_family( $h2_font_family, $default_font_family ); ?>;
 	font-weight: <?php echo $h2_font_weight; ?>;
 	font-size: <?php echo $h2_desktop_font_size; ?>px;
 	margin-bottom: 30px;
@@ -80,7 +80,7 @@ h2:after {
 
 @media screen and (max-width: 1200px) {
 h3 {
-	font-family: <?php echo !empty($h3_font_family) ? ucwords(str_replace("_", " ", $h3_font_family)) : ucwords(str_replace("_", " ", $default_font_family)); ?>;
+	font-family: <?php echo hovercraft_format_css_font_family( $h3_font_family, $default_font_family ); ?>;
 	font-weight: <?php echo $h3_font_weight; ?>;
 	font-size: <?php echo $h3_mobile_font_size; ?>px;
 	margin-bottom: 20px;
@@ -89,7 +89,7 @@ h3 {
 
 @media screen and (min-width: 1200px) {
 h3 {
-	font-family: <?php echo !empty($h3_font_family) ? ucwords(str_replace("_", " ", $h3_font_family)) : ucwords(str_replace("_", " ", $default_font_family)); ?>;
+	font-family: <?php echo hovercraft_format_css_font_family( $h3_font_family, $default_font_family ); ?>;
 	font-weight: <?php echo $h3_font_weight; ?>;
 	font-size: <?php echo $h3_desktop_font_size; ?>px;
 	margin-bottom: 20px;
@@ -98,7 +98,7 @@ h3 {
 
 @media screen and (max-width: 1200px) {
 h4 {
-	font-family: <?php echo !empty($h4_font_family) ? ucwords(str_replace("_", " ", $h4_font_family)) : ucwords(str_replace("_", " ", $default_font_family)); ?>;
+	font-family: <?php echo hovercraft_format_css_font_family( $h4_font_family, $default_font_family ); ?>;
 	font-weight: <?php echo $h4_font_weight; ?>;
 	font-size: <?php echo $h4_mobile_font_size; ?>px;
 	margin-bottom: 20px;
@@ -107,7 +107,7 @@ h4 {
 
 @media screen and (min-width: 1200px) {
 h4 {
-	font-family: <?php echo !empty($h4_font_family) ? ucwords(str_replace("_", " ", $h4_font_family)) : ucwords(str_replace("_", " ", $default_font_family)); ?>;
+	font-family: <?php echo hovercraft_format_css_font_family( $h4_font_family, $default_font_family ); ?>;
 	font-weight: <?php echo $h4_font_weight; ?>;
 	font-size: <?php echo $h4_desktop_font_size; ?>px;
 	margin-bottom: 20px;
@@ -124,7 +124,7 @@ h4.sitename-offcanvas {
 
 @media screen and (max-width: 1200px) {
 h5 {
-	font-family: <?php echo !empty($h5_font_family) ? ucwords(str_replace("_", " ", $h5_font_family)) : ucwords(str_replace("_", " ", $default_font_family)); ?>;
+	font-family: <?php echo hovercraft_format_css_font_family( $h5_font_family, $default_font_family ); ?>;
 	font-weight: <?php echo $h5_font_weight; ?>;
 	font-size: <?php echo $h5_mobile_font_size; ?>px;
 	margin-bottom: 20px;
@@ -133,7 +133,7 @@ h5 {
 
 @media screen and (min-width: 1200px) {
 h5 {
-	font-family: <?php echo !empty($h5_font_family) ? ucwords(str_replace("_", " ", $h5_font_family)) : ucwords(str_replace("_", " ", $default_font_family)); ?>;
+	font-family: <?php echo hovercraft_format_css_font_family( $h5_font_family, $default_font_family ); ?>;
 	font-weight: <?php echo $h5_font_weight; ?>;
 	font-size: <?php echo $h5_desktop_font_size; ?>px;
 	margin-bottom: 20px;
