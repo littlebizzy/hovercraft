@@ -5,15 +5,15 @@ function hovercraft_available_fonts() {
     $first_font_family_final = ucwords( str_replace( '_', ' ', ucfirst( $first_font_family ) ) );
 
     // get and format the second font family for google fonts
-    $second_font_family = get_theme_mod( 'hovercraft_second_font_family', 'open_sans' );
+    $second_font_family = get_theme_mod( 'hovercraft_second_font_family', '' );
     $second_font_family_final = ucwords( str_replace( '_', ' ', ucfirst( $second_font_family ) ) );
 
     // get and format the third font family for google fonts
-    $third_font_family = get_theme_mod( 'hovercraft_third_font_family', 'roboto' );
+    $third_font_family = get_theme_mod( 'hovercraft_third_font_family', '' );
     $third_font_family_final = ucwords( str_replace( '_', ' ', ucfirst( $third_font_family ) ) );
 
     // get and format the multilingual font family for google fonts
-    $multilingual_font_family = get_theme_mod( 'hovercraft_multilingual_font_family', 'none' );
+    $multilingual_font_family = get_theme_mod( 'hovercraft_multilingual_font_family', '' );
     $multilingual_font_family_final = ucwords( str_replace( '_', ' ', ucfirst( $multilingual_font_family ) ) );
 
     // initialize an array for font families with the default option included
