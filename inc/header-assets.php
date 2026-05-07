@@ -57,7 +57,5 @@ function hovercraft_enqueue_header_assets() {
     if ( 'none' !== $font_awesome_setting && isset( $font_awesome_map[ $font_awesome_setting ] ) ) {
         wp_enqueue_style( 'hovercraft_font_awesome', $font_awesome_map[ $font_awesome_setting ]['url'], array(), $font_awesome_map[ $font_awesome_setting ]['version'] );
     }
-
-    wp_enqueue_style( 'hovercraft_noto_sans_mono', 'https://fonts.googleapis.com/css2?family=Noto+Sans+Mono&display=block', array(), HOVERCRAFT_VERSION );
 }
 add_action( 'wp_enqueue_scripts', 'hovercraft_enqueue_header_assets' );
