@@ -1,5 +1,18 @@
 <?php
 
+function hovercraft_get_raw_font_theme_mod( $setting_id, $default_value = '' ) {
+    global $hovercraft_reading_font_theme_mod;
+
+    $previous_value = ! empty( $hovercraft_reading_font_theme_mod );
+    $hovercraft_reading_font_theme_mod = true;
+
+    $theme_mod_value = get_theme_mod( $setting_id, $default_value );
+
+    $hovercraft_reading_font_theme_mod = $previous_value;
+
+    return $theme_mod_value;
+}
+
 function hovercraft_normalize_font_family( $font_family ) {
     $font_family = sanitize_key( $font_family );
 
@@ -25,7 +38,7 @@ function hovercraft_add_font_family( &$font_families, $font_family, $limit = 0 )
 }
 
 function hovercraft_get_primary_font_family() {
-    $first_font_family = hovercraft_normalize_font_family( get_theme_mod( 'hovercraft_first_font_family', 'noto_sans' ) );
+    $first_font_family = hovercraft_normalize_font_family( hovercraft_get_raw_font_theme_mod( 'hovercraft_first_font_family', 'noto_sans' ) );
 
     if ( empty( $first_font_family ) ) {
         return 'noto_sans';
@@ -38,8 +51,8 @@ function hovercraft_get_configured_text_font_families() {
     $font_families = array();
 
     hovercraft_add_font_family( $font_families, hovercraft_get_primary_font_family(), 3 );
-    hovercraft_add_font_family( $font_families, get_theme_mod( 'hovercraft_second_font_family', '' ), 3 );
-    hovercraft_add_font_family( $font_families, get_theme_mod( 'hovercraft_third_font_family', '' ), 3 );
+    hovercraft_add_font_family( $font_families, hovercraft_get_raw_font_theme_mod( 'hovercraft_second_font_family', '' ), 3 );
+    hovercraft_add_font_family( $font_families, hovercraft_get_raw_font_theme_mod( 'hovercraft_third_font_family', '' ), 3 );
 
     if ( empty( $font_families ) ) {
         $font_families[] = 'noto_sans';
@@ -50,14 +63,14 @@ function hovercraft_get_configured_text_font_families() {
 
 function hovercraft_get_active_font_family_settings() {
     return array(
-        get_theme_mod( 'hovercraft_default_font', '' ),
-        get_theme_mod( 'hovercraft_site_name_font', '' ),
-        get_theme_mod( 'hovercraft_main_menu_font', '' ),
-        get_theme_mod( 'hovercraft_h1_font', '' ),
-        get_theme_mod( 'hovercraft_h2_font', '' ),
-        get_theme_mod( 'hovercraft_h3_font', '' ),
-        get_theme_mod( 'hovercraft_h4_font', '' ),
-        get_theme_mod( 'hovercraft_h5_font', '' ),
+        hovercraft_get_raw_font_theme_mod( 'hovercraft_default_font', '' ),
+        hovercraft_get_raw_font_theme_mod( 'hovercraft_site_name_font', '' ),
+        hovercraft_get_raw_font_theme_mod( 'hovercraft_main_menu_font', '' ),
+        hovercraft_get_raw_font_theme_mod( 'hovercraft_h1_font', '' ),
+        hovercraft_get_raw_font_theme_mod( 'hovercraft_h2_font', '' ),
+        hovercraft_get_raw_font_theme_mod( 'hovercraft_h3_font', '' ),
+        hovercraft_get_raw_font_theme_mod( 'hovercraft_h4_font', '' ),
+        hovercraft_get_raw_font_theme_mod( 'hovercraft_h5_font', '' ),
     );
 }
 
@@ -72,7 +85,7 @@ function hovercraft_get_loaded_text_font_families() {
 }
 
 function hovercraft_get_multilingual_font_family() {
-    return hovercraft_normalize_font_family( get_theme_mod( 'hovercraft_multilingual_font_family', '' ) );
+    return hovercraft_normalize_font_family( hovercraft_get_raw_font_theme_mod( 'hovercraft_multilingual_font_family', '' ) );
 }
 
 function hovercraft_get_loaded_font_families() {
@@ -87,6 +100,12 @@ function hovercraft_get_loaded_font_families() {
 }
 
 function hovercraft_filter_primary_font_family_setting( $font_family ) {
+    global $hovercraft_reading_font_theme_mod;
+
+    if ( ! empty( $hovercraft_reading_font_theme_mod ) ) {
+        return $font_family;
+    }
+
     $font_family = hovercraft_normalize_font_family( $font_family );
     $loaded_font_families = hovercraft_get_loaded_font_families();
 
@@ -98,6 +117,12 @@ function hovercraft_filter_primary_font_family_setting( $font_family ) {
 }
 
 function hovercraft_filter_optional_font_family_setting( $font_family ) {
+    global $hovercraft_reading_font_theme_mod;
+
+    if ( ! empty( $hovercraft_reading_font_theme_mod ) ) {
+        return $font_family;
+    }
+
     $font_family = hovercraft_normalize_font_family( $font_family );
     $loaded_font_families = hovercraft_get_loaded_font_families();
 
