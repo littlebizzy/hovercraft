@@ -1,22 +1,24 @@
 <?php
 
-function hovercraft_enqueue_google_fonts() {
-
+function hovercraft_get_primary_font_family() {
     $first_font_family = sanitize_key( get_theme_mod( 'hovercraft_first_font_family', 'noto_sans' ) );
 
     if ( empty( $first_font_family ) || 'none' === $first_font_family ) {
-        $first_font_family = 'noto_sans';
+        return 'noto_sans';
     }
 
+    return $first_font_family;
+}
+
+function hovercraft_get_loaded_font_families() {
     $font_families = array(
-        $first_font_family,
+        hovercraft_get_primary_font_family(),
         get_theme_mod( 'hovercraft_second_font_family', '' ),
         get_theme_mod( 'hovercraft_third_font_family', '' ),
         get_theme_mod( 'hovercraft_multilingual_font_family', '' ),
     );
 
-    $font_variations = 'ital,wght@0,400;0,600;0,700;1,400;1,600;1,700';
-    $google_fonts = array();
+    $loaded_font_families = array();
 
     foreach ( $font_families as $font_family ) {
         $font_family = sanitize_key( $font_family );
@@ -25,6 +27,39 @@ function hovercraft_enqueue_google_fonts() {
             continue;
         }
 
+        $loaded_font_families[] = $font_family;
+    }
+
+    return array_unique( $loaded_font_families );
+}
+
+function hovercraft_filter_primary_font_family_setting( $font_family ) {
+    $font_family = sanitize_key( $font_family );
+    $loaded_font_families = hovercraft_get_loaded_font_families();
+
+    if ( ! empty( $font_family ) && in_array( $font_family, $loaded_font_families, true ) ) {
+        return $font_family;
+    }
+
+    return hovercraft_get_primary_font_family();
+}
+
+function hovercraft_filter_optional_font_family_setting( $font_family ) {
+    $font_family = sanitize_key( $font_family );
+    $loaded_font_families = hovercraft_get_loaded_font_families();
+
+    if ( ! empty( $font_family ) && in_array( $font_family, $loaded_font_families, true ) ) {
+        return $font_family;
+    }
+
+    return '';
+}
+
+function hovercraft_enqueue_google_fonts() {
+    $font_variations = 'ital,wght@0,400;0,600;0,700;1,400;1,600;1,700';
+    $google_fonts = array();
+
+    foreach ( hovercraft_get_loaded_font_families() as $font_family ) {
         $font_family = ucwords( str_replace( '_', '+', $font_family ), '+' );
         $google_fonts[] = 'family=' . $font_family . ':' . $font_variations;
     }
@@ -37,6 +72,14 @@ function hovercraft_enqueue_google_fonts() {
     }
 }
 
+add_filter( 'theme_mod_hovercraft_default_font', 'hovercraft_filter_primary_font_family_setting' );
+add_filter( 'theme_mod_hovercraft_site_name_font', 'hovercraft_filter_primary_font_family_setting' );
+add_filter( 'theme_mod_hovercraft_main_menu_font', 'hovercraft_filter_primary_font_family_setting' );
+add_filter( 'theme_mod_hovercraft_h1_font', 'hovercraft_filter_optional_font_family_setting' );
+add_filter( 'theme_mod_hovercraft_h2_font', 'hovercraft_filter_optional_font_family_setting' );
+add_filter( 'theme_mod_hovercraft_h3_font', 'hovercraft_filter_optional_font_family_setting' );
+add_filter( 'theme_mod_hovercraft_h4_font', 'hovercraft_filter_optional_font_family_setting' );
+add_filter( 'theme_mod_hovercraft_h5_font', 'hovercraft_filter_optional_font_family_setting' );
 add_action( 'wp_enqueue_scripts', 'hovercraft_enqueue_google_fonts' );
 
 // Ref: ChatGPT
