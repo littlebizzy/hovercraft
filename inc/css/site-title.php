@@ -6,13 +6,7 @@
 
 @media screen and (max-width: 1200px) {
 .site-title {
-	font-family: <?php 
-        echo !empty($site_name_font_family) 
-            ? ucwords(str_replace("_", " ", $site_name_font_family)) 
-            : (!empty($default_font_family) 
-                ? ucwords(str_replace("_", " ", $default_font_family)) 
-                : 'sans-serif'); 
-    ?>;
+	font-family: <?php echo hovercraft_format_css_font_family( $site_name_font_family, $default_font_family ); ?>;
 	text-transform: <?php echo $site_name_text_transform; ?>;
 	font-size: <?php echo $site_name_mobile_font_size; ?>px;
 	font-weight: <?php echo $site_name_font_weight; ?>;
@@ -23,13 +17,7 @@
 
 @media screen and (min-width: 1200px) {
 .site-title {
-	font-family: <?php 
-        echo !empty($site_name_font_family) 
-            ? ucwords(str_replace("_", " ", $site_name_font_family)) 
-            : (!empty($default_font_family) 
-                ? ucwords(str_replace("_", " ", $default_font_family)) 
-                : 'sans-serif'); 
-    ?>;
+	font-family: <?php echo hovercraft_format_css_font_family( $site_name_font_family, $default_font_family ); ?>;
 	text-transform: <?php echo $site_name_text_transform; ?>;
 	font-size: <?php echo $site_name_desktop_font_size; ?>px;
 	font-weight: <?php echo $site_name_font_weight; ?>;
