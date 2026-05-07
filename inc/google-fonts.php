@@ -2,8 +2,14 @@
 
 function hovercraft_enqueue_google_fonts() {
 
+    $first_font_family = sanitize_key( get_theme_mod( 'hovercraft_first_font_family', 'noto_sans' ) );
+
+    if ( empty( $first_font_family ) || 'none' === $first_font_family ) {
+        $first_font_family = 'noto_sans';
+    }
+
     $font_families = array(
-        get_theme_mod( 'hovercraft_first_font_family', 'noto_sans' ),
+        $first_font_family,
         get_theme_mod( 'hovercraft_second_font_family', '' ),
         get_theme_mod( 'hovercraft_third_font_family', '' ),
         get_theme_mod( 'hovercraft_multilingual_font_family', '' ),
@@ -15,7 +21,7 @@ function hovercraft_enqueue_google_fonts() {
     foreach ( $font_families as $font_family ) {
         $font_family = sanitize_key( $font_family );
 
-        if ( empty( $font_family ) || $font_family === 'none' ) {
+        if ( empty( $font_family ) || 'none' === $font_family ) {
             continue;
         }
 
