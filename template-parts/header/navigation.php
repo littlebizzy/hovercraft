@@ -43,7 +43,7 @@ if ( 'fixed' === $hovercraft_desktop_header_width ) {
 			}
 			?>
 			
-			<?php if ( class_exists( 'WooCommerce' ) && function_exists( 'WC' ) && WC()->cart ) { ?>
+			<?php if ( class_exists( 'WooCommerce' ) && function_exists( 'WC' ) && WC()->cart ) : ?>
 				<a href="<?php echo esc_url( wc_get_cart_url() ); ?>">
 					<?php
 					$hovercraft_layout_icons = get_theme_mod( 'hovercraft_layout_icons', 'material_icons_classic' );
@@ -55,11 +55,12 @@ if ( 'fixed' === $hovercraft_desktop_header_width ) {
 					} elseif ( 'font_awesome_version_6' === $hovercraft_layout_icons ) {
 						?>
 						<i class="fas fa-shopping-cart"></i>
+						<?php
 					}
 					?>
 				</a>
 				<div class="notification-dot"><?php echo esc_html( WC()->cart->get_cart_contents_count() ); ?></div><!-- notification-dot -->
-			<?php } ?>
+			<?php endif; ?>
 			
 	 		<?php
 			$hovercraft_mobile_menu = get_theme_mod( 'hovercraft_mobile_menu', 'accordion' );
@@ -129,7 +130,7 @@ if ( 'fixed' === $hovercraft_desktop_header_width ) {
 			}
 			?>
 			
-			<?php if ( class_exists( 'WooCommerce' ) && function_exists( 'WC' ) && WC()->cart ) { ?>
+			<?php if ( class_exists( 'WooCommerce' ) && function_exists( 'WC' ) && WC()->cart ) : ?>
 				<div class="cart-icon-wrapper">
 					<a href="<?php echo esc_url( wc_get_cart_url() ); ?>">
 						<?php
@@ -148,7 +149,7 @@ if ( 'fixed' === $hovercraft_desktop_header_width ) {
 					</a>
 					<div class="notification-dot"><?php echo esc_html( WC()->cart->get_cart_contents_count() ); ?></div>
 				</div><!-- cart-icon-wrapper -->
-			<?php } ?>
+			<?php endif; ?>
 			
 			<?php
 			if ( has_nav_menu( 'cta-header-secondary' ) ) {
