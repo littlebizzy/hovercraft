@@ -1,10 +1,10 @@
 <div id="header-basic">
 
-	<?php if ( is_active_sidebar( 'hovercraft_preheader_left' ) || is_active_sidebar( 'hovercraft_preheader_right' ) ) { ?>
+	<?php if ( is_active_sidebar( 'hovercraft_preheader_left' ) || is_active_sidebar( 'hovercraft_preheader_right' ) ) : ?>
 	<div id="preheader">
 		<div class="inner">
 
-			<?php if ( is_active_sidebar( 'hovercraft_preheader_left' ) && is_active_sidebar( 'hovercraft_preheader_right' ) ) { ?>
+			<?php if ( is_active_sidebar( 'hovercraft_preheader_left' ) && is_active_sidebar( 'hovercraft_preheader_right' ) ) : ?>
 
 			<!-- preheader-left -->
 			<div class="preheader-left">
@@ -26,7 +26,7 @@
 				?>
 			</div>
 
-			<?php } elseif ( is_active_sidebar( 'hovercraft_preheader_left' ) xor is_active_sidebar( 'hovercraft_preheader_right' ) ) { ?>
+			<?php elseif ( is_active_sidebar( 'hovercraft_preheader_left' ) xor is_active_sidebar( 'hovercraft_preheader_right' ) ) : ?>
 
 			<!-- preheader-center -->
 			<div class="preheader-center">
@@ -45,13 +45,13 @@
 				?>
 			</div>
 
-			<?php } ?>
+			<?php endif; ?>
 
 			<div class="clear"></div>
 
 		</div><!-- inner -->
 	</div><!-- preheader -->
-	<?php } ?><!-- if preheader widgets active -->
+	<?php endif; ?><!-- if preheader widgets active -->
 
 	<?php get_template_part( 'template-parts/header/navigation' ); ?>
 

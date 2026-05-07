@@ -6,7 +6,7 @@
 		<?php get_template_part( 'template-parts/content/posthero' ); ?>
 	<?php endif; ?>
 
-<?php if ( hovercraft_should_show_main_content() ) { ?>
+<?php if ( hovercraft_should_show_main_content() ) : ?>
 
 <div id="main">
 <div class="inner">
@@ -26,6 +26,6 @@
 </div><!-- inner -->
 </div><!-- main -->
 
-<?php } ?>
+<?php endif; ?>
 
 <?php get_template_part( 'footer' ); ?>

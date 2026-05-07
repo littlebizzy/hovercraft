@@ -6,11 +6,11 @@
     
         <?php 
         $hovercraft_sidebar_status_checked = get_theme_mod( 'hovercraft_sidebar_status' ) ? true : false;
-        if ( $hovercraft_sidebar_status_checked ) { ?>
+        if ( $hovercraft_sidebar_status_checked ) : ?>
             <div id="primary">
-        <?php } else { ?>
+        <?php else : ?>
             <div id="primary-wide">
-        <?php } ?>
+        <?php endif; ?>
         
         <div id="content-wrapper">
             
@@ -49,8 +49,8 @@
     </div><!-- primary -->
 
     <?php 
-    if ( get_theme_mod( 'hovercraft_sidebar_status' ) === 1 ) { 
-        get_template_part( 'sidebar' ); 
+    if ( get_theme_mod( 'hovercraft_sidebar_status' ) === 1 ) {
+        get_template_part( 'sidebar' );
     } ?>
     
     <div class="clear"></div>

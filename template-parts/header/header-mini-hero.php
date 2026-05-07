@@ -2,10 +2,10 @@
 
 <div id="header-mini-hero">
 
-	<?php if ( is_active_sidebar( 'hovercraft_preheader_left' ) || is_active_sidebar( 'hovercraft_preheader_right' ) ) { ?>
+	<?php if ( is_active_sidebar( 'hovercraft_preheader_left' ) || is_active_sidebar( 'hovercraft_preheader_right' ) ) : ?>
 	<div id="preheader">
 		<div class="inner">
-			<?php if ( is_active_sidebar( 'hovercraft_preheader_left' ) && is_active_sidebar( 'hovercraft_preheader_right' ) ) { ?>
+			<?php if ( is_active_sidebar( 'hovercraft_preheader_left' ) && is_active_sidebar( 'hovercraft_preheader_right' ) ) : ?>
 			<div class="preheader-left">
 				<?php add_filter( 'widget_title', '__return_false' );
 				dynamic_sidebar( 'hovercraft_preheader_left' );
@@ -16,7 +16,7 @@
 				dynamic_sidebar( 'hovercraft_preheader_right' );
 				remove_filter( 'widget_title', '__return_false' ); ?>
 			</div>
-			<?php } elseif ( is_active_sidebar( 'hovercraft_preheader_left' ) xor is_active_sidebar( 'hovercraft_preheader_right' ) ) { ?>
+			<?php elseif ( is_active_sidebar( 'hovercraft_preheader_left' ) xor is_active_sidebar( 'hovercraft_preheader_right' ) ) : ?>
 			<div class="preheader-center">
 				<?php if ( is_active_sidebar( 'hovercraft_preheader_left' ) ) {
 					add_filter( 'widget_title', '__return_false' );
@@ -28,11 +28,11 @@
 					remove_filter( 'widget_title', '__return_false' );
 				} ?>
 			</div>
-			<?php } ?>
+			<?php endif; ?>
 			<div class="clear"></div>
 		</div>
 	</div>
-	<?php } ?>
+	<?php endif; ?>
 
 	<?php get_template_part( 'template-parts/header/navigation' ); ?>
 </div>
@@ -58,7 +58,7 @@
 
 		<?php
 		$portal_category = get_theme_mod( 'hovercraft_portal_category', 'none' );
-		if ( is_category( $portal_category ) ) {
+		if ( is_category( $portal_category ) ) :
 			$category_id = get_queried_object_id();
 		?>
 		<br>
@@ -78,7 +78,7 @@
 				?></button>
 			</div>
 		</form>
-		<?php } ?>
+		<?php endif; ?>
 
 		<?php if ( is_front_page() ) : ?>
 			<?php if ( is_active_sidebar( 'hovercraft_hero_snippet' ) || has_excerpt() ) : ?>

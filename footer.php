@@ -1,42 +1,42 @@
 <div class="clear"></div>
 
-<?php if ( is_active_sidebar( 'hovercraft_home_postmain_top' ) && is_front_page() ) { ?>
+<?php if ( is_active_sidebar( 'hovercraft_home_postmain_top' ) && is_front_page() ) : ?>
 	<div id="home-postmain-top">
 		<div class="inner">
 			<?php dynamic_sidebar( 'hovercraft_home_postmain_top' ); ?>
 			<div class="clear"></div>
 		</div><!--inner -->
 	</div><!-- home-postmain-top -->
-<?php } ?>
+<?php endif; ?>
 
-<?php if ( is_active_sidebar( 'hovercraft_home_postmain_bottom' ) && is_front_page() ) { ?>
+<?php if ( is_active_sidebar( 'hovercraft_home_postmain_bottom' ) && is_front_page() ) : ?>
 	<div id="home-postmain-bottom">
 		<div class="inner">
 			<?php dynamic_sidebar( 'hovercraft_home_postmain_bottom' ); ?>
 			<div class="clear"></div>
 		</div><!--inner -->
 	</div><!-- home-postmain-bottom -->
-<?php } ?>
+<?php endif; ?>
 
-<?php if ( is_active_sidebar( 'hovercraft_prefooter_top' ) ) { ?>
+<?php if ( is_active_sidebar( 'hovercraft_prefooter_top' ) ) : ?>
 	<div id="prefooter-top">
 		<div class="inner">
 			<?php dynamic_sidebar( 'hovercraft_prefooter_top' ); ?>
 			<div class="clear"></div>
 		</div><!--inner -->
 	</div><!-- prefooter-top -->
-<?php } ?>
+<?php endif; ?>
 
-<?php if ( is_active_sidebar( 'hovercraft_prefooter_bottom' ) ) { ?>
+<?php if ( is_active_sidebar( 'hovercraft_prefooter_bottom' ) ) : ?>
 	<div id="prefooter-bottom">
 		<div class="inner">
 			<?php dynamic_sidebar( 'hovercraft_prefooter_bottom' ); ?>
 			<div class="clear"></div>
 		</div><!--inner -->
 	</div><!-- prefooter-bottom -->
-<?php } ?>
+<?php endif; ?>
 
-<?php if ( is_active_sidebar( 'hovercraft_footer_one' ) || is_active_sidebar( 'hovercraft_footer_two' ) || is_active_sidebar( 'hovercraft_footer_three' ) ) { ?>
+<?php if ( is_active_sidebar( 'hovercraft_footer_one' ) || is_active_sidebar( 'hovercraft_footer_two' ) || is_active_sidebar( 'hovercraft_footer_three' ) ) : ?>
 	<div id="footer">
 		<div class="inner">
 
@@ -59,7 +59,7 @@
 			<div class="clear"></div>
 		</div><!--inner -->
 	</div><!-- footer -->
-<?php } ?>
+<?php endif; ?>
 
 <?php
 // get desktop copyright width setting
@@ -89,7 +89,7 @@ if ( $hovercraft_copyright_width === 'full' ) {
 			<div class="clear"></div>
 		</div><!-- copyright-left -->
 
-		<?php if ( is_active_sidebar( 'hovercraft_copyright' ) ) { ?>
+		<?php if ( is_active_sidebar( 'hovercraft_copyright' ) ) : ?>
 			<div class="copyright-right">
 				<?php
 				// remove widget titles for this sidebar only
@@ -99,7 +99,7 @@ if ( $hovercraft_copyright_width === 'full' ) {
 				?>
 				<div class="clear"></div>
 			</div><!-- copyright-right -->
-		<?php } ?>
+		<?php endif; ?>
 
 		<?php
 		// scroll to top link logic

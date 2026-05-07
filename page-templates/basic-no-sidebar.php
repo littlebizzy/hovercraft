@@ -2,7 +2,7 @@
 <?php get_template_part( 'header' ); ?>
 <?php get_template_part( 'template-parts/header/header-basic' ); ?>
 
-<?php if ( hovercraft_should_show_main_content() ) { ?>
+<?php if ( hovercraft_should_show_main_content() ) : ?>
 
 <div id="main">
 <div class="inner">
@@ -31,6 +31,6 @@
 </div><!-- inner -->
 </div><!-- main -->
 
-<?php } //endif is_front_page ?>
+<?php endif; // endif is_front_page ?>
 
 <?php get_template_part( 'footer' ); ?>
