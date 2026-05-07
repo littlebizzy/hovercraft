@@ -19,7 +19,7 @@
 }
 
 .cta-header-primary ul li a {
-	font-family: <?php echo ucwords(str_replace("_", " ", $main_menu_font_family)); ?>;
+	font-family: <?php echo hovercraft_format_css_font_family( $main_menu_font_family, $default_font_family ); ?>;
 	font-size: <?php echo $main_menu_desktop_font_size; ?>px;
 	font-weight: 700;
 	text-transform: <?php echo $main_menu_text_transform; ?>;
@@ -37,7 +37,7 @@
 
 /* inline button: primary */
 a.button-primary {
-	font-family: <?php echo ucwords(str_replace("_", " ", $main_menu_font_family)); ?>;
+	font-family: <?php echo hovercraft_format_css_font_family( $main_menu_font_family, $default_font_family ); ?>;
 	font-size: 20px;
 	font-weight: 700;
 	text-transform: <?php echo $main_menu_text_transform; ?>;
@@ -82,7 +82,7 @@ a.button-primary:hover {
 }
 
 #header-full-hero .cta-header-secondary ul li a {
-	font-family: <?php echo ucwords(str_replace("_", " ", $main_menu_font_family)); ?>;
+	font-family: <?php echo hovercraft_format_css_font_family( $main_menu_font_family, $default_font_family ); ?>;
 	font-size: <?php echo $main_menu_desktop_font_size; ?>px;
 	font-weight: 400;
 	text-transform: <?php echo $main_menu_text_transform; ?>;
@@ -95,7 +95,7 @@ a.button-primary:hover {
 }
 
 #header-half-hero .cta-header-secondary ul li a, #header-mini-hero .cta-header-secondary ul li a, #header-basic .cta-header-secondary ul li a {
-	font-family: <?php echo ucwords(str_replace("_", " ", $main_menu_font_family)); ?>;
+	font-family: <?php echo hovercraft_format_css_font_family( $main_menu_font_family, $default_font_family ); ?>;
 	font-size: <?php echo $main_menu_desktop_font_size; ?>px;
 	font-weight: 400;
 	text-transform: <?php echo $main_menu_text_transform; ?>;
