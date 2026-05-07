@@ -4,17 +4,12 @@
 		<?php
 		// choose icon set
 		$hovercraft_layout_icons = get_theme_mod( 'hovercraft_layout_icons', 'material_icons_classic' );
-
-		if ( $hovercraft_layout_icons === 'material_icons_classic' ) {
-			?>
-			<i class="material-icons close">close</i>
-			<?php
-		} elseif ( $hovercraft_layout_icons === 'font_awesome_version_6' ) {
-			?>
-			<i class="fa-solid fa-x"></i>
-			<?php
-		}
 		?>
+		<?php if ( $hovercraft_layout_icons === 'material_icons_classic' ) : ?>
+			<i class="material-icons close">close</i>
+		<?php elseif ( $hovercraft_layout_icons === 'font_awesome_version_6' ) : ?>
+			<i class="fa-solid fa-x"></i>
+		<?php endif; ?>
 	</button>
 
 	<div class="overlay-content">

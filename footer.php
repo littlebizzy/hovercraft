@@ -78,14 +78,10 @@ if ( $hovercraft_copyright_width === 'full' ) {
 
 		<div class="copyright-left">
 			&copy; <?php echo esc_html( wp_date( 'Y' ) ); ?> <?php echo esc_html( get_bloginfo( 'name' ) ); ?>.
-			<?php
-			$license_key = get_theme_mod( 'hovercraft_license_key' );
-			if ( empty( $license_key ) || ( function_exists( 'hovercraft_validate_license_key' ) && ! hovercraft_validate_license_key( $license_key ) ) ) {
-				?>
+			<?php $license_key = get_theme_mod( 'hovercraft_license_key' ); ?>
+			<?php if ( empty( $license_key ) || ( function_exists( 'hovercraft_validate_license_key' ) && ! hovercraft_validate_license_key( $license_key ) ) ) : ?>
 				Powered by <a rel="nofollow" href="https://hovercraft.vip">HoverCraft</a>.
-				<?php
-			}
-			?>
+			<?php endif; ?>
 			<div class="clear"></div>
 		</div><!-- copyright-left -->
 
@@ -104,14 +100,12 @@ if ( $hovercraft_copyright_width === 'full' ) {
 		<?php
 		// scroll to top link logic
 		$hovercraft_scroll_to_top = get_theme_mod( 'hovercraft_scroll_to_top', 'mobile_only' );
-		if ( $hovercraft_scroll_to_top !== 'none' ) {
-			?>
+		?>
+		<?php if ( $hovercraft_scroll_to_top !== 'none' ) : ?>
 			<div class="scrollup-wrapper">
 				<span class="scrollup-link"><?php esc_html_e( 'Back to top', 'hovercraft' ); ?></span>
 			</div><!-- scrollup-wrapper -->
-			<?php
-		}
-		?>
+		<?php endif; ?>
 
 		<div class="clear"></div>
 	</div><!-- inner -->
@@ -120,34 +114,22 @@ if ( $hovercraft_copyright_width === 'full' ) {
 </div><!-- container -->
 
 <div id="full-screen-search">
-	<?php
-	$hovercraft_layout_icons = get_theme_mod( 'hovercraft_layout_icons', 'material_icons_classic' );
-	if ( $hovercraft_layout_icons === 'material_icons_classic' ) {
-		?>
+	<?php $hovercraft_layout_icons = get_theme_mod( 'hovercraft_layout_icons', 'material_icons_classic' ); ?>
+	<?php if ( $hovercraft_layout_icons === 'material_icons_classic' ) : ?>
 		<button type="button" class="close"><i class="material-icons close">close</i></button>
-		<?php
-	} elseif ( $hovercraft_layout_icons === 'font_awesome_version_6' ) {
-		?>
+	<?php elseif ( $hovercraft_layout_icons === 'font_awesome_version_6' ) : ?>
 		<button type="button" class="close"><i class="fa-solid fa-x"></i></button>
-		<?php
-	}
-	?>
+	<?php endif; ?>
 
 	<form role="search" method="get" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 		<div class="input-container">
 			<input type="search" class="search-input" value="<?php echo esc_attr( get_search_query() ); ?>" name="s" placeholder="<?php esc_attr_e( 'Search entire website... ', 'hovercraft' ); ?>" />
 			<button type="submit" class="search-submit" name="submit">
-				<?php
-				if ( $hovercraft_layout_icons === 'material_icons_classic' ) {
-					?>
+				<?php if ( $hovercraft_layout_icons === 'material_icons_classic' ) : ?>
 					<i class="material-icons search">search</i>
-					<?php
-				} elseif ( $hovercraft_layout_icons === 'font_awesome_version_6' ) {
-					?>
+				<?php elseif ( $hovercraft_layout_icons === 'font_awesome_version_6' ) : ?>
 					<i class="fa-solid fa-search"></i>
-					<?php
-				}
-				?>
+				<?php endif; ?>
 			</button>
 		</div><!-- input-container -->
 	</form><!-- searchform -->

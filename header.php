@@ -6,16 +6,18 @@
         <?php 
         // inline parent theme's stylesheet
         $parent_style_path = get_template_directory() . '/style.css';
-        if ( is_readable( $parent_style_path ) ) {
-        ?><style><?php readfile( $parent_style_path ); ?></style><?php 
-        } ?>
+        ?>
+        <?php if ( is_readable( $parent_style_path ) ) : ?>
+            <style><?php readfile( $parent_style_path ); ?></style>
+        <?php endif; ?>
 
         <?php 
         // inline child theme's stylesheet
         $child_style_path = get_stylesheet_directory() . '/style.css';
-        if ( is_readable( $child_style_path ) ) {
-        ?><style><?php readfile( $child_style_path ); ?></style><?php 
-        } ?>
+        ?>
+        <?php if ( is_readable( $child_style_path ) ) : ?>
+            <style><?php readfile( $child_style_path ); ?></style>
+        <?php endif; ?>
 
         <?php wp_head(); ?>
     </head>
@@ -44,13 +46,11 @@
                             </div><!-- topbar-right -->
                         <?php else : ?>
                             <div class="topbar-center">
-                                <?php 
-                                if ( is_active_sidebar( 'hovercraft_topbar_left' ) ) {
-                                    dynamic_sidebar( 'hovercraft_topbar_left' );
-                                } else {
-                                    dynamic_sidebar( 'hovercraft_topbar_right' );
-                                }
-                                ?>
+                                <?php if ( is_active_sidebar( 'hovercraft_topbar_left' ) ) : ?>
+                                    <?php dynamic_sidebar( 'hovercraft_topbar_left' ); ?>
+                                <?php else : ?>
+                                    <?php dynamic_sidebar( 'hovercraft_topbar_right' ); ?>
+                                <?php endif; ?>
                             </div><!-- topbar-center -->
                         <?php endif;
 

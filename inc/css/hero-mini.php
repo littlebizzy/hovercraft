@@ -4,15 +4,15 @@
 
 /* hero mini container background with gradient and optional image */
 #hero-mini {
-<?php if ( $hero_gradient_tones == 'two_tones' ) { ?>
+<?php if ( $hero_gradient_tones == 'two_tones' ) : ?>
 	background: linear-gradient(<?php echo $hero_gradient_angle; ?>, <?php 
 		list($r1, $g1, $b1) = sscanf($hero_gradient_start_color, "#%02x%02x%02x");
 		echo "rgba({$r1}, {$g1}, {$b1}, {$hero_gradient_start_color_transparency})"; 
 		?> <?php echo $hero_gradient_start_color_length; ?>%, <?php 
 		list($r2, $g2, $b2) = sscanf($hero_gradient_stop_color, "#%02x%02x%02x");
 		echo "rgba({$r2}, {$g2}, {$b2}, {$hero_gradient_stop_color_transparency})"; 
-		?> <?php echo $hero_gradient_stop_color_length; ?>%)<?php if (!empty($hero_image)) echo ", url({$hero_image})" ?>;
-<?php } elseif ( $hero_gradient_tones == 'three_tones' ) { ?>
+		?> <?php echo $hero_gradient_stop_color_length; ?>%)<?php if ( ! empty( $hero_image ) ) : ?>, url(<?php echo $hero_image; ?>)<?php endif; ?>;
+<?php elseif ( $hero_gradient_tones == 'three_tones' ) : ?>
 	background: linear-gradient(<?php echo $hero_gradient_angle; ?>, <?php 
 		list($r1, $g1, $b1) = sscanf($hero_gradient_start_color, "#%02x%02x%02x");
 		echo "rgba({$r1}, {$g1}, {$b1}, {$hero_gradient_start_color_transparency})"; 
@@ -22,8 +22,8 @@
 		?> <?php echo $hero_gradient_mid_color_length; ?>%, <?php 
 		list($r2, $g2, $b2) = sscanf($hero_gradient_stop_color, "#%02x%02x%02x");
 		echo "rgba({$r2}, {$g2}, {$b2}, {$hero_gradient_stop_color_transparency})"; 
-		?> <?php echo $hero_gradient_stop_color_length; ?>%)<?php if (!empty($hero_image)) echo ", url({$hero_image})" ?>;
-<?php } ?>
+		?> <?php echo $hero_gradient_stop_color_length; ?>%)<?php if ( ! empty( $hero_image ) ) : ?>, url(<?php echo $hero_image; ?>)<?php endif; ?>;
+<?php endif; ?>
 	background-position: <?php $minipos = str_replace('_', ' ', $mini_hero_background_position); echo $minipos; ?>;
 	background-size: cover;
 	background-repeat: no-repeat;
@@ -31,15 +31,15 @@
 
 /* hero main container background and positioning */
 .hero-main-mini {
-<?php if ( $hero_gradient_tones == 'two_tones' ) { ?>
+<?php if ( $hero_gradient_tones == 'two_tones' ) : ?>
 	background: linear-gradient(<?php echo $hero_gradient_angle; ?>, <?php 
 		list($r1, $g1, $b1) = sscanf($hero_gradient_start_color, "#%02x%02x%02x");
 		echo "rgba({$r1}, {$g1}, {$b1}, {$hero_gradient_start_color_transparency})"; 
 		?> <?php echo $hero_gradient_start_color_length; ?>%, <?php 
 		list($r2, $g2, $b2) = sscanf($hero_gradient_stop_color, "#%02x%02x%02x");
 		echo "rgba({$r2}, {$g2}, {$b2}, {$hero_gradient_stop_color_transparency})"; 
-		?> <?php echo $hero_gradient_stop_color_length; ?>%)<?php if (!empty($hero_image)) echo ", url({$hero_image})" ?>;
-<?php } elseif ( $hero_gradient_tones == 'three_tones' ) { ?>
+		?> <?php echo $hero_gradient_stop_color_length; ?>%)<?php if ( ! empty( $hero_image ) ) : ?>, url(<?php echo $hero_image; ?>)<?php endif; ?>;
+<?php elseif ( $hero_gradient_tones == 'three_tones' ) : ?>
 	background: linear-gradient(<?php echo $hero_gradient_angle; ?>, <?php 
 		list($r1, $g1, $b1) = sscanf($hero_gradient_start_color, "#%02x%02x%02x");
 		echo "rgba({$r1}, {$g1}, {$b1}, {$hero_gradient_start_color_transparency})"; 
@@ -49,8 +49,8 @@
 		?> <?php echo $hero_gradient_mid_color_length; ?>%, <?php 
 		list($r2, $g2, $b2) = sscanf($hero_gradient_stop_color, "#%02x%02x%02x");
 		echo "rgba({$r2}, {$g2}, {$b2}, {$hero_gradient_stop_color_transparency})"; 
-		?> <?php echo $hero_gradient_stop_color_length; ?>%)<?php if (!empty($hero_image)) echo ", url({$hero_image})" ?>;
-<?php } ?>
+		?> <?php echo $hero_gradient_stop_color_length; ?>%)<?php if ( ! empty( $hero_image ) ) : ?>, url(<?php echo $hero_image; ?>)<?php endif; ?>;
+<?php endif; ?>
 	background-position: <?php $minipos = str_replace('_', ' ', $mini_hero_background_position); echo $minipos; ?>;
 	background-size: cover;
 	background-repeat: no-repeat;

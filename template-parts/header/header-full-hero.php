@@ -4,17 +4,15 @@
 $url_header_image = get_header_image();
 $hovercraft_video_id = absint( get_theme_mod( 'hovercraft_video' ) );
 $url_hovercraft_video = wp_get_attachment_url( $hovercraft_video_id );
+?>
 
-if ( ! empty( $url_hovercraft_video ) ) {
-	?>
+<?php if ( ! empty( $url_hovercraft_video ) ) : ?>
 	<video class="hero-background-video" playsinline autoplay muted loop poster="<?php echo esc_url( $url_header_image ); ?>">
 		<source src="<?php echo esc_url( $url_hovercraft_video ); ?>" type="video/mp4">
 		<?php esc_html_e( 'Your browser does not support the video tag.', 'hovercraft' ); ?>
 	</video>
 	<div class="hero-background-video-overlay"></div>
-	<?php
-}
-?>
+<?php endif; ?>
 
 <div id="header-full-hero">
 	
@@ -34,15 +32,19 @@ if ( ! empty( $url_hovercraft_video ) ) {
 			</div><!-- preheader-right -->
 			<?php elseif ( is_active_sidebar( 'hovercraft_preheader_left' ) xor is_active_sidebar( 'hovercraft_preheader_right' ) ) : ?>
 			<div class="preheader-center">
-				<?php if ( is_active_sidebar( 'hovercraft_preheader_left' ) ) {
+				<?php if ( is_active_sidebar( 'hovercraft_preheader_left' ) ) : ?>
+					<?php
 					add_filter( 'widget_title', '__return_false' );
 					dynamic_sidebar( 'hovercraft_preheader_left' );
 					remove_filter( 'widget_title', '__return_false' );
-				} elseif ( is_active_sidebar( 'hovercraft_preheader_right' ) ) {
+					?>
+				<?php elseif ( is_active_sidebar( 'hovercraft_preheader_right' ) ) : ?>
+					<?php
 					add_filter( 'widget_title', '__return_false' );
 					dynamic_sidebar( 'hovercraft_preheader_right' );
 					remove_filter( 'widget_title', '__return_false' );
-				} ?>
+					?>
+				<?php endif; ?>
 			</div><!-- preheader-center -->
 			<?php endif; ?>
 			<div class="clear"></div>
@@ -85,29 +87,29 @@ if ( ! empty( $url_hovercraft_video ) ) {
 							}
 						?>"><?php echo esc_html( single_post_title( '', false ) ); ?></h1>
 					<?php endif; ?>
-					<?php
-					if ( is_active_sidebar( 'hovercraft_hero_snippet' ) ) {
+					<?php if ( is_active_sidebar( 'hovercraft_hero_snippet' ) ) : ?>
+						<?php
 						add_filter( 'widget_title', '__return_false' );
 						dynamic_sidebar( 'hovercraft_hero_snippet' );
 						remove_filter( 'widget_title', '__return_false' );
-					} else {
-						the_excerpt();
-					}
-					?>
+						?>
+					<?php else : ?>
+						<?php the_excerpt(); ?>
+					<?php endif; ?>
 				</div><!-- hero-snippet -->
 			<?php endif; ?>
 
 			<?php if ( is_active_sidebar( 'hovercraft_hero_window' ) || has_excerpt() ) : ?>
 				<div class="hero-window">
-					<?php
-					if ( is_active_sidebar( 'hovercraft_hero_window' ) ) {
+					<?php if ( is_active_sidebar( 'hovercraft_hero_window' ) ) : ?>
+						<?php
 						add_filter( 'widget_title', '__return_false' );
 						dynamic_sidebar( 'hovercraft_hero_window' );
 						remove_filter( 'widget_title', '__return_false' );
-					} else {
-						the_excerpt();
-					}
-					?>
+						?>
+					<?php else : ?>
+						<?php the_excerpt(); ?>
+					<?php endif; ?>
 				</div><!-- hero-window -->
 			<?php endif; ?>
 			

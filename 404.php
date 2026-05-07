@@ -4,7 +4,11 @@
 <div id="main">
 <div class="inner">
 
-<?php if ( get_theme_mod( 'hovercraft_sidebar_status' ) === 1 ) { ?><div id="primary"><?php } else { ?><div id="primary-wide"><?php } ?>
+<?php if ( get_theme_mod( 'hovercraft_sidebar_status' ) === 1 ) : ?>
+	<div id="primary">
+<?php else : ?>
+	<div id="primary-wide">
+<?php endif; ?>
 
 	<?php get_template_part( 'template-parts/misc/breadcrumbs' ); ?>
 	
@@ -21,9 +25,9 @@
 </div><!-- primary -->
 
 
-<?php if ( get_theme_mod( 'hovercraft_sidebar_status' ) === 1 ) { 
-	get_template_part( 'sidebar' ); 
-} ?>
+<?php if ( get_theme_mod( 'hovercraft_sidebar_status' ) === 1 ) : ?>
+	<?php get_template_part( 'sidebar' ); ?>
+<?php endif; ?>
 
 <?php get_template_part( 'template-parts/content/pagination' ); ?>
 <div class="clear"></div>

@@ -45,12 +45,9 @@ if ( ! $has_meta_rows && ! $has_sidebar_rows ) {
 
 <div class="zigzag-wide-wrapper">
 
-	<?php
-	// meta box layout first
-	if ( $has_meta_rows ) {
-
-		for ( $i = 1; $i <= 15; $i++ ) {
-
+	<?php if ( $has_meta_rows ) : ?>
+		<?php for ( $i = 1; $i <= 15; $i++ ) : ?>
+			<?php
 			$image_id  = get_post_meta( get_the_ID(), 'hovercraft_zigzag_row_' . $i . '_image_id', true );
 			$title     = get_post_meta( get_the_ID(), 'hovercraft_zigzag_row_' . $i . '_title', true );
 			$text      = get_post_meta( get_the_ID(), 'hovercraft_zigzag_row_' . $i . '_text', true );
@@ -89,14 +86,10 @@ if ( ! $has_meta_rows && ! $has_sidebar_rows ) {
 				<div class="clear"></div>
 
 			</div>
-
-		<?php }
-
-	// sidebar fallback
-	} else {
-
-		foreach ( $zigzag_sidebars as $index => $sidebar_id ) {
-
+		<?php endfor; ?>
+	<?php else : ?>
+		<?php foreach ( $zigzag_sidebars as $index => $sidebar_id ) : ?>
+			<?php
 			if ( ! is_active_sidebar( $sidebar_id ) ) {
 				continue;
 			}
@@ -108,9 +101,7 @@ if ( ! $has_meta_rows && ! $has_sidebar_rows ) {
 				<?php dynamic_sidebar( $sidebar_id ); ?>
 				<div class="clear"></div>
 			</div>
-
-		<?php }
-	}
-	?>
+		<?php endforeach; ?>
+	<?php endif; ?>
 
 </div>

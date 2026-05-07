@@ -18,15 +18,19 @@
 			</div>
 			<?php elseif ( is_active_sidebar( 'hovercraft_preheader_left' ) xor is_active_sidebar( 'hovercraft_preheader_right' ) ) : ?>
 			<div class="preheader-center">
-				<?php if ( is_active_sidebar( 'hovercraft_preheader_left' ) ) {
+				<?php if ( is_active_sidebar( 'hovercraft_preheader_left' ) ) : ?>
+					<?php
 					add_filter( 'widget_title', '__return_false' );
 					dynamic_sidebar( 'hovercraft_preheader_left' );
 					remove_filter( 'widget_title', '__return_false' );
-				} elseif ( is_active_sidebar( 'hovercraft_preheader_right' ) ) {
+					?>
+				<?php elseif ( is_active_sidebar( 'hovercraft_preheader_right' ) ) : ?>
+					<?php
 					add_filter( 'widget_title', '__return_false' );
 					dynamic_sidebar( 'hovercraft_preheader_right' );
 					remove_filter( 'widget_title', '__return_false' );
-				} ?>
+					?>
+				<?php endif; ?>
 			</div>
 			<?php endif; ?>
 			<div class="clear"></div>
@@ -83,15 +87,15 @@
 		<?php if ( is_front_page() ) : ?>
 			<?php if ( is_active_sidebar( 'hovercraft_hero_snippet' ) || has_excerpt() ) : ?>
 				<div class="hero-snippet">
-					<?php
-					if ( is_active_sidebar( 'hovercraft_hero_snippet' ) ) {
+					<?php if ( is_active_sidebar( 'hovercraft_hero_snippet' ) ) : ?>
+						<?php
 						add_filter( 'widget_title', '__return_false' );
 						dynamic_sidebar( 'hovercraft_hero_snippet' );
 						remove_filter( 'widget_title', '__return_false' );
-					} else {
-						the_excerpt();
-					}
-					?>
+						?>
+					<?php else : ?>
+						<?php the_excerpt(); ?>
+					<?php endif; ?>
 				</div>
 			<?php endif; ?>
 		<?php endif; ?>

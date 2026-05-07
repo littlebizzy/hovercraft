@@ -48,10 +48,9 @@
         <div class="clear"></div>
     </div><!-- primary -->
 
-    <?php 
-    if ( get_theme_mod( 'hovercraft_sidebar_status' ) === 1 ) {
-        get_template_part( 'sidebar' );
-    } ?>
+    <?php if ( get_theme_mod( 'hovercraft_sidebar_status' ) === 1 ) : ?>
+        <?php get_template_part( 'sidebar' ); ?>
+    <?php endif; ?>
     
     <div class="clear"></div>
     </div><!-- inner -->

@@ -7,16 +7,17 @@
 	<?php 
 	$hovercraft_sidebar_appears = get_theme_mod( 'hovercraft_sidebar_appears', 'everywhere' );
 	$hovercraft_primary_width = get_theme_mod( 'hovercraft_primary_width', 'wide' );
+	?>
 
-	if ( $hovercraft_sidebar_appears === 'everywhere' ) { ?><div id="primary"><?php } 
-	elseif ( $hovercraft_sidebar_appears === 'posts_only' || $hovercraft_sidebar_appears === 'none' ) {
-		if ( $hovercraft_primary_width === 'narrow_centered' ) { ?>
+	<?php if ( $hovercraft_sidebar_appears === 'everywhere' ) : ?>
+		<div id="primary">
+	<?php elseif ( $hovercraft_sidebar_appears === 'posts_only' || $hovercraft_sidebar_appears === 'none' ) : ?>
+		<?php if ( $hovercraft_primary_width === 'narrow_centered' ) : ?>
 			<div id="primary-center">
-		<?php } 
-		elseif ( $hovercraft_primary_width === 'wide' ) { ?>
+		<?php elseif ( $hovercraft_primary_width === 'wide' ) : ?>
 			<div id="primary-wide">
-		<?php } 
-	} ?>
+		<?php endif; ?>
+	<?php endif; ?>
 
 		<div id="content-wrapper">
 									
@@ -28,70 +29,84 @@
 				
 				// hovercraft blog category
 				$blog_category = get_theme_mod( 'hovercraft_blog_category', 'none' );
-				
-				if ( is_home() ) {
-				
-        		// the query
-				// https://wordpress.stackexchange.com/questions/145125/display-content-from-a-specific-category
-				// https://wordpress.stackexchange.com/questions/14768/determine-if-page-is-the-posts-page
-				if ( $blog_category !== 'none' ) {
-					// https://wordpress.stackexchange.com/questions/133754/pagination-shows-same-contents-all-pages
-        			$the_query = new WP_Query(array(
-            			'category_name' => $blog_category,
-						'post_type' => 'post',
-            			'post_status' => 'publish',
-						'paged' => get_query_var( 'paged' )
-						)
-					);	
-				} else {
-					$the_query = new WP_Query(array(
-						'post_type' => 'post',
-            			'post_status' => 'publish',
-						'paged' => get_query_var( 'paged' )
-						)
-					);					
-				} // end else if hovercraft blog category not defined
-				
-				// custom query syntax for is_home
+				?>
 
-					if ( $the_query->have_posts() ) {
-					while ( $the_query->have_posts() ) {
-					$the_query->the_post(); ?>
-						
-						<div class="post-tease-archive">
+				<?php if ( is_home() ) : ?>
+					<?php
 					
-				<?php 
-				$hovercraft_primary_width = get_theme_mod( 'hovercraft_primary_width', 'wide' );
-				if ( $hovercraft_primary_width === 'wide' ) { get_template_part( 'template-parts/content/featured-image-archive-large' ); } 
-				else { get_template_part( 'template-parts/content/featured-image-archive' ); } ?>
-				
-				<h4><a href="<?php echo esc_url( get_permalink() ); ?>"><?php echo esc_html( get_the_title() ); ?></a></h4>
+        			// the query
+					// https://wordpress.stackexchange.com/questions/145125/display-content-from-a-specific-category
+					// https://wordpress.stackexchange.com/questions/14768/determine-if-page-is-the-posts-page
+					if ( $blog_category !== 'none' ) {
+						// https://wordpress.stackexchange.com/questions/133754/pagination-shows-same-contents-all-pages
+        				$the_query = new WP_Query(array(
+            				'category_name' => $blog_category,
+							'post_type' => 'post',
+            				'post_status' => 'publish',
+							'paged' => get_query_var( 'paged' )
+							)
+						); 
+					} else {
+						$the_query = new WP_Query(array(
+							'post_type' => 'post',
+            				'post_status' => 'publish',
+							'paged' => get_query_var( 'paged' )
+							)
+						); 					
+					} // end else if hovercraft blog category not defined
+					
+					// custom query syntax for is_home
+					?>
 
-				<?php get_template_part( 'template-parts/content/byline-archive' ); ?>
-		
-				<div class="post-excerpt-archive"><?php the_excerpt(); ?></div>
-				</div><!-- post-tease-archive -->
+					<?php if ( $the_query->have_posts() ) : ?>
+						<?php while ( $the_query->have_posts() ) : ?>
+							<?php $the_query->the_post(); ?>
+							
+							<div class="post-tease-archive">
 						
-					<?php } // end while
-					} else { ?>
+						<?php 
+						$hovercraft_primary_width = get_theme_mod( 'hovercraft_primary_width', 'wide' );
+
+						if ( $hovercraft_primary_width === 'wide' ) {
+							get_template_part( 'template-parts/content/featured-image-archive-large' );
+						} else {
+							get_template_part( 'template-parts/content/featured-image-archive' );
+						}
+						?>
+						
+						<h4><a href="<?php echo esc_url( get_permalink() ); ?>"><?php echo esc_html( get_the_title() ); ?></a></h4>
+
+						<?php get_template_part( 'template-parts/content/byline-archive' ); ?>
+			
+						<div class="post-excerpt-archive"><?php the_excerpt(); ?></div>
+						</div><!-- post-tease-archive -->
+							
+						<?php endwhile; ?>
+					<?php else : ?>
 						<p><?php esc_html_e( 'No posts found.', 'hovercraft' ); ?></p>
-					<?php } // end if
+					<?php endif; ?>
+				<?php else : ?>
 					
-				} else { ?>
-				
 				<h1><?php echo esc_html( get_the_archive_title() ); ?></h1>
 				
 				<div class="category-description"><?php echo wp_kses_post( category_description() ); ?></div> 
 				
-				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+				<?php if ( have_posts() ) : ?>
+					<?php while ( have_posts() ) : ?>
+						<?php the_post(); ?>
 
 		
 				<div class="post-tease-archive">
 					
 				<?php 
 				$hovercraft_primary_width = get_theme_mod( 'hovercraft_primary_width', 'wide' );
-				if ( $hovercraft_primary_width === 'wide' ) { get_template_part( 'template-parts/content/featured-image-archive-large' ); } 
-				else { get_template_part( 'template-parts/content/featured-image-archive' ); } ?>
+
+				if ( $hovercraft_primary_width === 'wide' ) {
+					get_template_part( 'template-parts/content/featured-image-archive-large' );
+				} else {
+					get_template_part( 'template-parts/content/featured-image-archive' );
+				}
+				?>
 				
 				<h4><a href="<?php echo esc_url( get_permalink() ); ?>"><?php echo esc_html( get_the_title() ); ?></a></h4>
 
@@ -100,11 +115,11 @@
 				<div class="post-excerpt-archive"><?php the_excerpt(); ?></div>
 				</div><!-- post-tease-archive -->
 		
-				<?php endwhile; else : ?>
+					<?php endwhile; ?>
+				<?php else : ?>
 					<p><?php esc_html_e( 'No posts found.', 'hovercraft' ); ?></p>
 				<?php endif; ?><!-- the loop -->
-				
-				<?php } ?>
+				<?php endif; ?>
 					
 				<?php get_template_part( 'template-parts/content/pagination' ); ?>
 						
@@ -115,10 +130,10 @@
 	<div class="clear"></div>
   	</div><!-- primary -->
   
-    <?php $hovercraft_sidebar_appears = get_theme_mod( 'hovercraft_sidebar_appears', 'everywhere' );
-		if ( $hovercraft_sidebar_appears === 'everywhere' ) { 
-			get_template_part( 'sidebar' ); 
-		} ?>
+    <?php $hovercraft_sidebar_appears = get_theme_mod( 'hovercraft_sidebar_appears', 'everywhere' ); ?>
+	<?php if ( $hovercraft_sidebar_appears === 'everywhere' ) : ?>
+		<?php get_template_part( 'sidebar' ); ?>
+	<?php endif; ?>
     
 <div class="clear"></div>
 </div><!-- inner -->
