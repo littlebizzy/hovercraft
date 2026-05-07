@@ -1,40 +1,93 @@
 <?php
 
-function hovercraft_get_primary_font_family() {
-    $first_font_family = sanitize_key( get_theme_mod( 'hovercraft_first_font_family', 'noto_sans' ) );
+function hovercraft_normalize_font_family( $font_family ) {
+    $font_family = sanitize_key( $font_family );
 
-    if ( empty( $first_font_family ) || 'none' === $first_font_family ) {
+    if ( empty( $font_family ) || 'none' === $font_family ) {
+        return '';
+    }
+
+    return $font_family;
+}
+
+function hovercraft_add_font_family( &$font_families, $font_family, $limit = 0 ) {
+    $font_family = hovercraft_normalize_font_family( $font_family );
+
+    if ( empty( $font_family ) || in_array( $font_family, $font_families, true ) ) {
+        return;
+    }
+
+    if ( ! empty( $limit ) && count( $font_families ) >= $limit ) {
+        return;
+    }
+
+    $font_families[] = $font_family;
+}
+
+function hovercraft_get_primary_font_family() {
+    $first_font_family = hovercraft_normalize_font_family( get_theme_mod( 'hovercraft_first_font_family', 'noto_sans' ) );
+
+    if ( empty( $first_font_family ) ) {
         return 'noto_sans';
     }
 
     return $first_font_family;
 }
 
-function hovercraft_get_loaded_font_families() {
-    $font_families = array(
-        hovercraft_get_primary_font_family(),
-        get_theme_mod( 'hovercraft_second_font_family', '' ),
-        get_theme_mod( 'hovercraft_third_font_family', '' ),
-        get_theme_mod( 'hovercraft_multilingual_font_family', '' ),
-    );
+function hovercraft_get_configured_text_font_families() {
+    $font_families = array();
 
-    $loaded_font_families = array();
+    hovercraft_add_font_family( $font_families, hovercraft_get_primary_font_family(), 3 );
+    hovercraft_add_font_family( $font_families, get_theme_mod( 'hovercraft_second_font_family', '' ), 3 );
+    hovercraft_add_font_family( $font_families, get_theme_mod( 'hovercraft_third_font_family', '' ), 3 );
 
-    foreach ( $font_families as $font_family ) {
-        $font_family = sanitize_key( $font_family );
-
-        if ( empty( $font_family ) || 'none' === $font_family ) {
-            continue;
-        }
-
-        $loaded_font_families[] = $font_family;
+    if ( empty( $font_families ) ) {
+        $font_families[] = 'noto_sans';
     }
 
-    return array_unique( $loaded_font_families );
+    return $font_families;
+}
+
+function hovercraft_get_active_font_family_settings() {
+    return array(
+        get_theme_mod( 'hovercraft_default_font', '' ),
+        get_theme_mod( 'hovercraft_site_name_font', '' ),
+        get_theme_mod( 'hovercraft_main_menu_font', '' ),
+        get_theme_mod( 'hovercraft_h1_font', '' ),
+        get_theme_mod( 'hovercraft_h2_font', '' ),
+        get_theme_mod( 'hovercraft_h3_font', '' ),
+        get_theme_mod( 'hovercraft_h4_font', '' ),
+        get_theme_mod( 'hovercraft_h5_font', '' ),
+    );
+}
+
+function hovercraft_get_loaded_text_font_families() {
+    $font_families = hovercraft_get_configured_text_font_families();
+
+    foreach ( hovercraft_get_active_font_family_settings() as $font_family ) {
+        hovercraft_add_font_family( $font_families, $font_family, 3 );
+    }
+
+    return $font_families;
+}
+
+function hovercraft_get_multilingual_font_family() {
+    return hovercraft_normalize_font_family( get_theme_mod( 'hovercraft_multilingual_font_family', '' ) );
+}
+
+function hovercraft_get_loaded_font_families() {
+    $font_families = hovercraft_get_loaded_text_font_families();
+    $multilingual_font_family = hovercraft_get_multilingual_font_family();
+
+    if ( ! empty( $multilingual_font_family ) && ! in_array( $multilingual_font_family, $font_families, true ) ) {
+        $font_families[] = $multilingual_font_family;
+    }
+
+    return $font_families;
 }
 
 function hovercraft_filter_primary_font_family_setting( $font_family ) {
-    $font_family = sanitize_key( $font_family );
+    $font_family = hovercraft_normalize_font_family( $font_family );
     $loaded_font_families = hovercraft_get_loaded_font_families();
 
     if ( ! empty( $font_family ) && in_array( $font_family, $loaded_font_families, true ) ) {
@@ -45,7 +98,7 @@ function hovercraft_filter_primary_font_family_setting( $font_family ) {
 }
 
 function hovercraft_filter_optional_font_family_setting( $font_family ) {
-    $font_family = sanitize_key( $font_family );
+    $font_family = hovercraft_normalize_font_family( $font_family );
     $loaded_font_families = hovercraft_get_loaded_font_families();
 
     if ( ! empty( $font_family ) && in_array( $font_family, $loaded_font_families, true ) ) {
