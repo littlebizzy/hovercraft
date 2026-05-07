@@ -46,15 +46,13 @@ function hovercraft_add_available_font( &$font_families, $font_family ) {
 
 function hovercraft_available_fonts() {
 	$font_families = array(
-		'' => __( 'Default (unspecified)', 'hovercraft' ),
+		'' => __( 'Default (first loaded font)', 'hovercraft' ),
 	);
 
 	hovercraft_add_available_font( $font_families, get_theme_mod( 'hovercraft_first_font_family', 'noto_sans' ) );
 	hovercraft_add_available_font( $font_families, get_theme_mod( 'hovercraft_second_font_family', '' ) );
 	hovercraft_add_available_font( $font_families, get_theme_mod( 'hovercraft_third_font_family', '' ) );
 	hovercraft_add_available_font( $font_families, get_theme_mod( 'hovercraft_multilingual_font_family', '' ) );
-	hovercraft_add_available_font( $font_families, 'open_sans' );
-	hovercraft_add_available_font( $font_families, 'roboto' );
 
 	return $font_families;
 }
