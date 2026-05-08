@@ -17,7 +17,6 @@ require get_template_directory() . '/inc/menus/main-menu-toggle.php';
 require get_template_directory() . '/inc/menus/accordion-menu.php';
 require get_template_directory() . '/inc/menus/offcanvas-menu.php';
 require get_template_directory() . '/inc/menus/overlay-menu.php';
-// require get_template_directory() . '/inc/menus/select-menu.php';
 
 // back to top
 require get_template_directory() . '/inc/back-to-top.php';
