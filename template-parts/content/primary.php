@@ -44,8 +44,6 @@
 	
 	<div class="clear"></div>
 	</div><!-- content-wrapper -->
-
-	<?php get_template_part( 'template-parts/content/last-modified' ); ?>
 	
 	<?php comments_template(); ?> 
 
