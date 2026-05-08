@@ -174,7 +174,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_desktop_logo_width',
         array(
             'label'     => __( 'Logo Width (Desktop)', 'hovercraft' ),
-			'description' => __( 'Specificy desktop logo width in pixels? The height will be determined automatically.', 'hovercraft' ),
+			'description' => __( 'Specify desktop logo width in pixels? The height will be determined automatically.', 'hovercraft' ),
             'section'   => 'hovercraft_general',
             'settings'  => 'hovercraft_desktop_logo_width',
             'type' => 'text'
@@ -194,7 +194,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_mobile_logo_width',
         array(
             'label'     => __( 'Logo Width (Mobile)', 'hovercraft' ),
-			'description' => __( 'Specificy mobile logo width in pixels? The height will be determined automatically.', 'hovercraft' ),
+			'description' => __( 'Specify mobile logo width in pixels? The height will be determined automatically.', 'hovercraft' ),
             'section'   => 'hovercraft_general',
             'settings'  => 'hovercraft_mobile_logo_width',
             'type' => 'text'
@@ -262,7 +262,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_after_byline_padding',
         array(
             'label'     => __( 'After Byline Padding', 'hovercraft' ),
-			'description' => __( 'Specificy After Byline widget padding in pixels?', 'hovercraft' ),
+			'description' => __( 'Specify After Byline widget padding in pixels?', 'hovercraft' ),
             'section'   => 'hovercraft_general',
             'settings'  => 'hovercraft_after_byline_padding',
             'type' => 'text'
@@ -530,7 +530,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_home_premain_top_align',
         array(
             'label'     => __( 'Home Premain Top Text Align', 'hovercraft' ),
-			'description' => __( 'How should content be aigned in the Home Premain Top widget area?', 'hovercraft' ),
+			'description' => __( 'How should content be aligned in the Home Premain Top widget area?', 'hovercraft' ),
             'section'   => 'hovercraft_widget_layouts',
             'settings'  => 'hovercraft_home_premain_top_align',
             'type'      => 'select',
@@ -588,7 +588,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_home_premain_bottom_align',
         array(
             'label'     => __( 'Home Premain Bottom Text Align', 'hovercraft' ),
-			'description' => __( 'How should content be aigned in the Home Premain Bottom widget area?', 'hovercraft' ),
+			'description' => __( 'How should content be aligned in the Home Premain Bottom widget area?', 'hovercraft' ),
             'section'   => 'hovercraft_widget_layouts',
             'settings'  => 'hovercraft_home_premain_bottom_align',
             'type'      => 'select',
@@ -646,7 +646,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_home_postmain_top_align',
         array(
             'label'     => __( 'Home Postmain Top Text Align', 'hovercraft' ),
-			'description' => __( 'How should content be aigned in the Home Postmain Top widget area?', 'hovercraft' ),
+			'description' => __( 'How should content be aligned in the Home Postmain Top widget area?', 'hovercraft' ),
             'section'   => 'hovercraft_widget_layouts',
             'settings'  => 'hovercraft_home_postmain_top_align',
             'type'      => 'select',
@@ -704,7 +704,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_home_postmain_bottom_align',
         array(
             'label'     => __( 'Home Postmain Bottom Text Align', 'hovercraft' ),
-			'description' => __( 'How should content be aigned in the Home Postmain Bottom widget area?', 'hovercraft' ),
+			'description' => __( 'How should content be aligned in the Home Postmain Bottom widget area?', 'hovercraft' ),
             'section'   => 'hovercraft_widget_layouts',
             'settings'  => 'hovercraft_home_postmain_bottom_align',
             'type'      => 'select',
@@ -762,7 +762,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_prefooter_top_align',
         array(
             'label'     => __( 'Prefooter Top Text Align', 'hovercraft' ),
-			'description' => __( 'How should content be aigned in the Prefooter Top widget area?', 'hovercraft' ),
+			'description' => __( 'How should content be aligned in the Prefooter Top widget area?', 'hovercraft' ),
             'section'   => 'hovercraft_widget_layouts',
             'settings'  => 'hovercraft_prefooter_top_align',
             'type'      => 'select',
@@ -820,7 +820,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_prefooter_bottom_align',
         array(
             'label'     => __( 'Prefooter Bottom Text Align', 'hovercraft' ),
-			'description' => __( 'How should content be aigned in the Prefooter Bottom widget area?', 'hovercraft' ),
+			'description' => __( 'How should content be aligned in the Prefooter Bottom widget area?', 'hovercraft' ),
             'section'   => 'hovercraft_widget_layouts',
             'settings'  => 'hovercraft_prefooter_bottom_align',
             'type'      => 'select',
@@ -844,7 +844,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_postcolumns_top_align',
         array(
             'label'     => __( 'Postcolumns Top Text Align', 'hovercraft' ),
-			'description' => __( 'How should content be aigned in the Postcolumns Top widget area?', 'hovercraft' ),
+			'description' => __( 'How should content be aligned in the Postcolumns Top widget area?', 'hovercraft' ),
             'section'   => 'hovercraft_widget_layouts',
             'settings'  => 'hovercraft_postcolumns_top_align',
             'type'      => 'select',
@@ -868,7 +868,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_postcolumns_bottom_align',
         array(
             'label'     => __( 'Postcolumns Bottom Text Align', 'hovercraft' ),
-			'description' => __( 'How should content be aigned in the Postcolumns Bottom widget area?', 'hovercraft' ),
+			'description' => __( 'How should content be aligned in the Postcolumns Bottom widget area?', 'hovercraft' ),
             'section'   => 'hovercraft_widget_layouts',
             'settings'  => 'hovercraft_postcolumns_bottom_align',
             'type'      => 'select',
@@ -2847,7 +2847,7 @@ $wp_customize->add_setting( 'hovercraft_title_divider_background_color', array(
 // h1 h2 title divider background color color control
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_title_divider_background_color', array(
 	'label' => 'H1 H2 Divider Background Color',
-	'description' => 'Specificy the background color of the H1 H2 divider line?',
+	'description' => 'Specify the background color of the H1 H2 divider line?',
 	'section' => 'colors',
 	'settings' => 'hovercraft_title_divider_background_color'
 	)
@@ -2875,7 +2875,7 @@ $wp_customize->add_setting( 'hovercraft_blockquote_text_color', array(
 // blockquote text color control
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_blockquote_text_color', array(
 	'label' => 'Blockquote Text Color',
-	'description' => 'Specificy the text color on blockquotes?',
+	'description' => 'Specify the text color on blockquotes?',
 	'section' => 'colors',
 	'settings' => 'hovercraft_blockquote_text_color'
 	)
@@ -2890,7 +2890,7 @@ $wp_customize->add_setting( 'hovercraft_blockquote_border_color', array(
 // blockquote border color control
 $wp_customize->add_control( new WP_Customize_Color_Control( $wp_customize, 'hovercraft_blockquote_border_color', array(
 	'label' => 'Blockquote Border Color',
-	'description' => 'Specificy the border-left color on blockquotes?',
+	'description' => 'Specify the border-left color on blockquotes?',
 	'section' => 'colors',
 	'settings' => 'hovercraft_blockquote_border_color'
 	)
@@ -4961,7 +4961,7 @@ $wp_customize->add_control( new WP_Customize_Control(
         'hovercraft_mini_hero_vertical_padding',
         array(
             'label'     => __( 'Mini Hero Padding (Desktop)', 'hovercraft' ),
-			'description' => __( 'Specificy mini hero vertical padding in pixels?', 'hovercraft' ),
+			'description' => __( 'Specify mini hero vertical padding in pixels?', 'hovercraft' ),
             'section'   => 'hovercraft_hero_styling',
             'settings'  => 'hovercraft_mini_hero_vertical_padding',
             'type' => 'text'
