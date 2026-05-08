@@ -55,8 +55,8 @@ function hovercraft_enqueue_header_assets() {
 
     $font_awesome_map = array(
         'version_6' => array(
-            'url' => 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css',
-            'version' => '6.5.2',
+            'url' => 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css',
+            'version' => '6.7.2',
         ),
         'version_5' => array(
             'url' => 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css',
