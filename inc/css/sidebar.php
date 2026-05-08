@@ -4,7 +4,7 @@
 
 /* sidebar */
 
-@media screen and (max-width: 1200px) {a
+@media screen and (max-width: 1200px) {
 #sidebar {
 	width: 100%;
 	padding: 20px;
