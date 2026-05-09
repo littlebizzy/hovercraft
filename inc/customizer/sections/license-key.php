@@ -18,7 +18,7 @@ $wp_customize->add_setting( 'hovercraft_license_key', array(
 
 // license key control
 $wp_customize->add_control( 'hovercraft_license_key', array(
-    'label' => 'Enter your license key',
+    'label' => 'License Key',
     'section' => 'hovercraft_license_key',
     'type' => 'text',
     'input_attrs' => array(
