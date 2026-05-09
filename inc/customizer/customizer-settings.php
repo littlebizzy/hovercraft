@@ -22,21 +22,21 @@ function hovercraft_customizer( $wp_customize ) {
 
 
 	// load customizer sections
-	require get_template_directory() . '/inc/customizer/sections/general.php';
-	require get_template_directory() . '/inc/customizer/sections/seo.php';
-	require get_template_directory() . '/inc/customizer/sections/widget-areas.php';
-	require get_template_directory() . '/inc/customizer/sections/category-layouts.php';
-	require get_template_directory() . '/inc/customizer/sections/page-layouts.php';
-	require get_template_directory() . '/inc/customizer/sections/blog.php';
-	require get_template_directory() . '/inc/customizer/sections/fonts.php';
-	require get_template_directory() . '/inc/customizer/sections/colors.php';
-	require get_template_directory() . '/inc/customizer/sections/sidebar.php';
-	require get_template_directory() . '/inc/customizer/sections/footer.php';
-	require get_template_directory() . '/inc/customizer/sections/effects.php';
-	require get_template_directory() . '/inc/customizer/sections/link-styling.php';
-	require get_template_directory() . '/inc/customizer/sections/icons.php';
-	require get_template_directory() . '/inc/customizer/sections/hero-styling.php';
-	require get_template_directory() . '/inc/customizer/sections/license-key.php';
+	require get_template_directory() . '/inc/customizer/general.php';
+	require get_template_directory() . '/inc/customizer/seo.php';
+	require get_template_directory() . '/inc/customizer/widget-areas.php';
+	require get_template_directory() . '/inc/customizer/category-layouts.php';
+	require get_template_directory() . '/inc/customizer/page-layouts.php';
+	require get_template_directory() . '/inc/customizer/blog.php';
+	require get_template_directory() . '/inc/customizer/fonts.php';
+	require get_template_directory() . '/inc/customizer/colors.php';
+	require get_template_directory() . '/inc/customizer/sidebar.php';
+	require get_template_directory() . '/inc/customizer/footer.php';
+	require get_template_directory() . '/inc/customizer/effects.php';
+	require get_template_directory() . '/inc/customizer/link-styling.php';
+	require get_template_directory() . '/inc/customizer/icons.php';
+	require get_template_directory() . '/inc/customizer/hero-styling.php';
+	require get_template_directory() . '/inc/customizer/license-key.php';
 
 // end function hovercraft_customizer
 }
