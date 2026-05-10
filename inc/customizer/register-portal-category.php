@@ -1,5 +1,9 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 function hovercraft_register_portal_category( $wp_customize ) {
 
     // get an array of categories
