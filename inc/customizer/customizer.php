@@ -1,7 +1,7 @@
 <?php
 
 if ( ! defined( 'ABSPATH' ) ) {
-    exit;
+	exit;
 }
 
 function hovercraft_customizer( $wp_customize ) {
@@ -14,16 +14,15 @@ function hovercraft_customizer( $wp_customize ) {
 	// load google fonts helper function (via functions.php)
 	$hovercraft_available_fonts = hovercraft_available_fonts();
 
-    // remove header text color control
-    $wp_customize->remove_control('header_textcolor');
+	// remove header text color control
+	$wp_customize->remove_control( 'header_textcolor' );
 
-    // hero media section
-    $wp_customize->get_section('header_image')->title = __('Hero Media', 'hovercraft');
+	// hero media section
+	$wp_customize->get_section( 'header_image' )->title = __( 'Hero Media', 'hovercraft' );
 
-    // homepage section
-    $wp_customize->get_section('static_front_page')->title = __('Homepage', 'hovercraft');
-    $wp_customize->get_section('static_front_page')->priority = 31;
-
+	// homepage section
+	$wp_customize->get_section( 'static_front_page' )->title = __( 'Homepage', 'hovercraft' );
+	$wp_customize->get_section( 'static_front_page' )->priority = 31;
 
 	// load customizer sections
 	require get_template_directory() . '/inc/customizer/general.php';
@@ -50,40 +49,39 @@ add_action( 'customize_register', 'hovercraft_customizer' );
 
 // sanitize select input
 function hovercraft_sanitize_select( $input, $setting ) {
-    $input = sanitize_key( $input );
-    $choices = $setting->manager->get_control( $setting->id )->choices;
-    return array_key_exists( $input, $choices ) ? $input : $setting->default;
+	$input = sanitize_key( $input );
+	$choices = $setting->manager->get_control( $setting->id )->choices;
+
+	if ( array_key_exists( $input, $choices ) ) {
+		return $input;
+	}
+
+	return $setting->default;
 }
 
 // sanitize radio input
 function hovercraft_sanitize_radio( $input, $setting ) {
-    $input = sanitize_key( $input );
-    $choices = $setting->manager->get_control( $setting->id )->choices;
-    return array_key_exists( $input, $choices ) ? $input : $setting->default;
+	$input = sanitize_key( $input );
+	$choices = $setting->manager->get_control( $setting->id )->choices;
+
+	if ( array_key_exists( $input, $choices ) ) {
+		return $input;
+	}
+
+	return $setting->default;
 }
 
 // sanitize checkbox input
 function hovercraft_sanitize_checkbox( $checked ) {
-    return isset( $checked ) && true === $checked;
+	return isset( $checked ) && true === $checked;
 }
 
 // sanitize float input
 function hovercraft_sanitize_float( $input ) {
-    return filter_var( $input, FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION );
+	return filter_var( $input, FILTER_SANITIZE_NUMBER_FLOAT, FILTER_FLAG_ALLOW_FRACTION );
 }
 
 // sanitize text input
 function hovercraft_sanitize_text( $input ) {
-    return sanitize_text_field( $input );
+	return sanitize_text_field( $input );
 }
-
-// Ref: ChatGPT
-// Ref: https://themeshaper.com/2013/04/29/validation-sanitization-in-customizer/
-// Ref: https://divpusher.com/blog/wordpress-customizer-sanitization-examples/
-// Ref: https://wordpress.stackexchange.com/questions/225825/customizer-sanitize-callback-for-input-type-number
-// Ref: https://core.trac.wordpress.org/ticket/24528
-// Ref: https://wp-a2z.org/oik_api/twentytwenty_customizesanitize_checkbox/
-// Ref: https://wordpress.stackexchange.com/questions/261969/how-to-rename-and-rearrange-multiple-sections-in-the-customizer
-// Ref: https://wphelp.blog/how-to-remove-sections-from-wordpress-customizer/
-// Ref: https://stackoverflow.com/questions/7073672/how-to-load-return-array-from-a-php-file
-// Ref: https://stackoverflow.com/questions/53613871/how-to-check-whether-checkox-is-checked-in-wordpress-customizer

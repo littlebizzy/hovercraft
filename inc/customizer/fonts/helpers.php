@@ -1,7 +1,7 @@
 <?php
 
 if ( ! defined( 'ABSPATH' ) ) {
-    exit;
+	exit;
 }
 
 function hovercraft_normalize_font_family( $font_family ) {
@@ -96,5 +96,3 @@ add_filter( 'theme_mod_hovercraft_h2_font', 'hovercraft_validate_role_font_famil
 add_filter( 'theme_mod_hovercraft_h3_font', 'hovercraft_validate_role_font_family' );
 add_filter( 'theme_mod_hovercraft_h4_font', 'hovercraft_validate_role_font_family' );
 add_filter( 'theme_mod_hovercraft_h5_font', 'hovercraft_validate_role_font_family' );
-
-// Ref: ChatGPT

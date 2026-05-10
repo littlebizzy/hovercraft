@@ -1,13 +1,13 @@
 <?php
 
 if ( ! defined( 'ABSPATH' ) ) {
-    exit;
+	exit;
 }
 
 // fonts section
 $wp_customize->add_section( 'hovercraft_fonts', array(
-    'title' => 'Fonts',
-    'priority' => 43,
+	'title' => 'Fonts',
+	'priority' => 43,
 ) );
 
 // font controls
