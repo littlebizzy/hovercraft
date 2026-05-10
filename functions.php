@@ -38,13 +38,13 @@ require get_template_directory() . '/inc/hide-certain-categories.php';
 require get_template_directory() . '/inc/comment-fields.php';
 
 // customizer
-require get_template_directory() . '/inc/customizer/customizer-settings.php';
+require get_template_directory() . '/inc/customizer/customizer.php';
 require get_template_directory() . '/inc/customizer/register-blog-category.php';
 require get_template_directory() . '/inc/customizer/register-portal-category.php';
-require get_template_directory() . '/inc/customizer/register-snippets-category.php';
-require get_template_directory() . '/inc/customizer/font-family-helper.php';
-require get_template_directory() . '/inc/customizer/google-fonts-array.php';
-require get_template_directory() . '/inc/customizer/google-fonts-multilingual-array.php';
+require get_template_directory() . '/inc/customizer/register-faq-category.php';
+require get_template_directory() . '/inc/customizer/fonts/helpers.php';
+require get_template_directory() . '/inc/customizer/fonts/google-fonts.php';
+require get_template_directory() . '/inc/customizer/fonts/google-fonts-multilingual.php';
 
 // css
 require get_template_directory() . '/inc/css-generator.php';
