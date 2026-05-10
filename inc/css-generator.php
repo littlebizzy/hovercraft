@@ -295,7 +295,7 @@ if ( file_exists( $hovercraft_global_css ) ) {
 
 /* full hero */
 <?php
-$hovercraft_hero_full_css = get_template_directory() . '/inc/css/hero-full.php';
+$hovercraft_hero_full_css = get_template_directory() . '/inc/css/hero/full.php';
 if ( file_exists( $hovercraft_hero_full_css ) ) {
 	include $hovercraft_hero_full_css;
 }
@@ -303,7 +303,7 @@ if ( file_exists( $hovercraft_hero_full_css ) ) {
 
 /* half hero */
 <?php
-$hovercraft_hero_half_css = get_template_directory() . '/inc/css/hero-half.php';
+$hovercraft_hero_half_css = get_template_directory() . '/inc/css/hero/half.php';
 if ( file_exists( $hovercraft_hero_half_css ) ) {
     include $hovercraft_hero_half_css;
 }
@@ -311,7 +311,7 @@ if ( file_exists( $hovercraft_hero_half_css ) ) {
 
 /* mini hero */
 <?php
-$hovercraft_hero_mini_css = get_template_directory() . '/inc/css/hero-mini.php';
+$hovercraft_hero_mini_css = get_template_directory() . '/inc/css/hero/mini.php';
 if ( file_exists( $hovercraft_hero_mini_css ) ) {
     include $hovercraft_hero_mini_css;
 }
@@ -319,7 +319,7 @@ if ( file_exists( $hovercraft_hero_mini_css ) ) {
 
 /* branding */
 <?php
-$hovercraft_branding_css = get_template_directory() . '/inc/css/branding.php';
+$hovercraft_branding_css = get_template_directory() . '/inc/css/header/branding.php';
 if ( file_exists( $hovercraft_branding_css ) ) {
     include $hovercraft_branding_css;
 }
@@ -327,7 +327,7 @@ if ( file_exists( $hovercraft_branding_css ) ) {
 
 /* logo */
 <?php
-$hovercraft_logo_css = get_template_directory() . '/inc/css/logo.php';
+$hovercraft_logo_css = get_template_directory() . '/inc/css/header/logo.php';
 if ( file_exists( $hovercraft_logo_css ) ) {
     include $hovercraft_logo_css;
 }
@@ -335,7 +335,7 @@ if ( file_exists( $hovercraft_logo_css ) ) {
 
 /* site title */
 <?php
-$hovercraft_site_title_css = get_template_directory() . '/inc/css/site-title.php';
+$hovercraft_site_title_css = get_template_directory() . '/inc/css/header/site-title.php';
 if ( file_exists( $hovercraft_site_title_css ) ) {
 	include $hovercraft_site_title_css;
 }
@@ -343,7 +343,7 @@ if ( file_exists( $hovercraft_site_title_css ) ) {
 
 /* tagline */
 <?php
-$hovercraft_tagline_css = get_template_directory() . '/inc/css/tagline.php';
+$hovercraft_tagline_css = get_template_directory() . '/inc/css/header/tagline.php';
 if ( file_exists( $hovercraft_tagline_css ) ) {
 	include $hovercraft_tagline_css;
 }
@@ -425,7 +425,7 @@ if ( file_exists( $hovercraft_links_css ) ) {
 
 /* cta (hero) */
 <?php
-$hovercraft_cta_hero_css = get_template_directory() . '/inc/css/cta-hero.php';
+$hovercraft_cta_hero_css = get_template_directory() . '/inc/css/hero/cta.php';
 if ( file_exists( $hovercraft_cta_hero_css ) ) {
 	include $hovercraft_cta_hero_css;
 }
@@ -433,7 +433,7 @@ if ( file_exists( $hovercraft_cta_hero_css ) ) {
 
 /* hero title */
 <?php
-$hovercraft_hero_title_css = get_template_directory() . '/inc/css/hero-title.php';
+$hovercraft_hero_title_css = get_template_directory() . '/inc/css/hero/title.php';
 if ( file_exists( $hovercraft_hero_title_css ) ) {
 	include $hovercraft_hero_title_css;
 }
@@ -441,7 +441,7 @@ if ( file_exists( $hovercraft_hero_title_css ) ) {
 
 /* hero snippet */
 <?php
-$hovercraft_hero_snippet_css = get_template_directory() . '/inc/css/hero-snippet.php';
+$hovercraft_hero_snippet_css = get_template_directory() . '/inc/css/hero/snippet.php';
 if ( file_exists( $hovercraft_hero_snippet_css ) ) {
 	include $hovercraft_hero_snippet_css;
 }
@@ -505,7 +505,7 @@ if ( file_exists( $hovercraft_bullets_css ) ) {
 
 /* desktop menu */
 <?php
-$hovercraft_main_menu_css = get_template_directory() . '/inc/css/menu-desktop.php';
+$hovercraft_main_menu_css = get_template_directory() . '/inc/css/header/menu-desktop.php';
 if ( file_exists( $hovercraft_main_menu_css ) ) {
 	include $hovercraft_main_menu_css;
 }
@@ -513,7 +513,7 @@ if ( file_exists( $hovercraft_main_menu_css ) ) {
 
 /* mobile menu */
 <?php
-$hovercraft_mobile_menu_css = get_template_directory() . '/inc/css/menu-mobile.php';
+$hovercraft_mobile_menu_css = get_template_directory() . '/inc/css/header/menu-mobile.php';
 if ( file_exists( $hovercraft_mobile_menu_css ) ) {
 	include $hovercraft_mobile_menu_css;
 }
@@ -521,7 +521,7 @@ if ( file_exists( $hovercraft_mobile_menu_css ) ) {
 
 /* topbar */
 <?php
-$hovercraft_topbar_css = get_template_directory() . '/inc/css/topbar.php';
+$hovercraft_topbar_css = get_template_directory() . '/inc/css/header/topbar.php';
 if ( file_exists( $hovercraft_topbar_css ) ) {
 	include $hovercraft_topbar_css;
 }
@@ -529,7 +529,7 @@ if ( file_exists( $hovercraft_topbar_css ) ) {
 
 /* preheader */
 <?php
-$hovercraft_preheader_css = get_template_directory() . '/inc/css/preheader.php';
+$hovercraft_preheader_css = get_template_directory() . '/inc/css/header/preheader.php';
 if ( file_exists( $hovercraft_preheader_css ) ) {
 	include $hovercraft_preheader_css;
 }
@@ -537,7 +537,7 @@ if ( file_exists( $hovercraft_preheader_css ) ) {
 
 /* header (general) */
 <?php
-$hovercraft_header_general_css = get_template_directory() . '/inc/css/header-general.php';
+$hovercraft_header_general_css = get_template_directory() . '/inc/css/header/general.php';
 if ( file_exists( $hovercraft_header_general_css ) ) {
 	include $hovercraft_header_general_css;
 }
@@ -545,7 +545,7 @@ if ( file_exists( $hovercraft_header_general_css ) ) {
 
 /* header (basic) */
 <?php
-$hovercraft_header_basic_css = get_template_directory() . '/inc/css/header-basic.php';
+$hovercraft_header_basic_css = get_template_directory() . '/inc/css/header/basic.php';
 if ( file_exists( $hovercraft_header_basic_css ) ) {
 	include $hovercraft_header_basic_css;
 }
@@ -553,7 +553,7 @@ if ( file_exists( $hovercraft_header_basic_css ) ) {
 
 /* cta header */
 <?php
-$hovercraft_cta_header_css = get_template_directory() . '/inc/css/cta-header.php';
+$hovercraft_cta_header_css = get_template_directory() . '/inc/css/header/cta.php';
 if ( file_exists( $hovercraft_cta_header_css ) ) {
 	include $hovercraft_cta_header_css;
 }
@@ -785,7 +785,7 @@ if ( file_exists( $hovercraft_forms_css ) ) {
 
 /* searchform */
 <?php
-$hovercraft_searchform_css = get_template_directory() . '/inc/css/searchform.php';
+$hovercraft_searchform_css = get_template_directory() . '/inc/css/header/searchform.php';
 if ( file_exists( $hovercraft_searchform_css ) ) {
 	include $hovercraft_searchform_css;
 }
@@ -801,7 +801,7 @@ if ( file_exists( $hovercraft_comments_css ) ) {
 
 /* search modal */
 <?php
-$hovercraft_search_modal_css = get_template_directory() . '/inc/css/search-modal.php';
+$hovercraft_search_modal_css = get_template_directory() . '/inc/css/header/search-modal.php';
 if ( file_exists( $hovercraft_search_modal_css ) ) {
 	include $hovercraft_search_modal_css;
 }
@@ -833,7 +833,7 @@ if ( file_exists( $hovercraft_pagination_css ) ) {
 
 /* woocommerce cart */
 <?php
-$hovercraft_woocommerce_cart_css = get_template_directory() . '/inc/css/woocommerce-cart.php';
+$hovercraft_woocommerce_cart_css = get_template_directory() . '/inc/css/woocommerce/cart.php';
 if ( file_exists( $hovercraft_woocommerce_cart_css ) ) {
     include $hovercraft_woocommerce_cart_css;
 }
@@ -841,7 +841,7 @@ if ( file_exists( $hovercraft_woocommerce_cart_css ) ) {
 
 /* woocommerce checkout */
 <?php
-$hovercraft_woocommerce_checkout_css = get_template_directory() . '/inc/css/woocommerce-checkout.php';
+$hovercraft_woocommerce_checkout_css = get_template_directory() . '/inc/css/woocommerce/checkout.php';
 if ( file_exists( $hovercraft_woocommerce_checkout_css ) ) {
     include $hovercraft_woocommerce_checkout_css;
 }
@@ -849,7 +849,7 @@ if ( file_exists( $hovercraft_woocommerce_checkout_css ) ) {
 
 /* woocommerce general */
 <?php
-$hovercraft_woocommerce_general_css = get_template_directory() . '/inc/css/woocommerce-general.php';
+$hovercraft_woocommerce_general_css = get_template_directory() . '/inc/css/woocommerce/general.php';
 if ( file_exists( $hovercraft_woocommerce_general_css ) ) {
 	include $hovercraft_woocommerce_general_css;
 }
@@ -857,7 +857,7 @@ if ( file_exists( $hovercraft_woocommerce_general_css ) ) {
 
 /* woocommerce ordering */
 <?php
-$hovercraft_wc_ordering_css = get_template_directory() . '/inc/css/woocommerce-ordering.php';
+$hovercraft_wc_ordering_css = get_template_directory() . '/inc/css/woocommerce/ordering.php';
 if ( file_exists( $hovercraft_wc_ordering_css ) ) {
 	include $hovercraft_wc_ordering_css;
 }
@@ -866,7 +866,7 @@ if ( file_exists( $hovercraft_wc_ordering_css ) ) {
 
 /* woocommerce products */
 <?php
-$hovercraft_woocommerce_products_css = get_template_directory() . '/inc/css/woocommerce-products.php';
+$hovercraft_woocommerce_products_css = get_template_directory() . '/inc/css/woocommerce/products.php';
 if ( file_exists( $hovercraft_woocommerce_products_css ) ) {
 	include $hovercraft_woocommerce_products_css;
 }
@@ -875,7 +875,7 @@ if ( file_exists( $hovercraft_woocommerce_products_css ) ) {
 
 /* woocommerce product details */
 <?php
-$hovercraft_woocommerce_product_details_css = get_template_directory() . '/inc/css/woocommerce-product-details.php';
+$hovercraft_woocommerce_product_details_css = get_template_directory() . '/inc/css/woocommerce/product-details.php';
 if ( file_exists( $hovercraft_woocommerce_product_details_css ) ) {
     include $hovercraft_woocommerce_product_details_css;
 }
@@ -883,7 +883,7 @@ if ( file_exists( $hovercraft_woocommerce_product_details_css ) ) {
 
 /* woocommerce add to cart (and quantity buttons) */
 <?php
-$hovercraft_woocommerce_add_to_cart_css = get_template_directory() . '/inc/css/woocommerce-add-to-cart.php';
+$hovercraft_woocommerce_add_to_cart_css = get_template_directory() . '/inc/css/woocommerce/add-to-cart.php';
 if ( file_exists( $hovercraft_woocommerce_add_to_cart_css ) ) {
     include $hovercraft_woocommerce_add_to_cart_css;
 }
@@ -891,7 +891,7 @@ if ( file_exists( $hovercraft_woocommerce_add_to_cart_css ) ) {
 
 /* woocommerce messages */
 <?php
-$hovercraft_woocommerce_messages_css = get_template_directory() . '/inc/css/woocommerce-messages.php';
+$hovercraft_woocommerce_messages_css = get_template_directory() . '/inc/css/woocommerce/messages.php';
 if ( file_exists( $hovercraft_woocommerce_messages_css ) ) {
     include $hovercraft_woocommerce_messages_css;
 }
@@ -899,7 +899,7 @@ if ( file_exists( $hovercraft_woocommerce_messages_css ) ) {
 
 /* woocommerce login */
 <?php
-$hovercraft_woocommerce_login_css = get_template_directory() . '/inc/css/woocommerce-login.php';
+$hovercraft_woocommerce_login_css = get_template_directory() . '/inc/css/woocommerce/login.php';
 if ( file_exists( $hovercraft_woocommerce_login_css ) ) {
     include $hovercraft_woocommerce_login_css;
 }
@@ -907,7 +907,7 @@ if ( file_exists( $hovercraft_woocommerce_login_css ) ) {
 
 /* woocommerce product list widget */
 <?php
-$hovercraft_woocommerce_widget_products_css = get_template_directory() . '/inc/css/woocommerce-widget-products.php';
+$hovercraft_woocommerce_widget_products_css = get_template_directory() . '/inc/css/woocommerce/widget-products.php';
 if ( file_exists( $hovercraft_woocommerce_widget_products_css ) ) {
     include $hovercraft_woocommerce_widget_products_css;
 }
@@ -915,7 +915,7 @@ if ( file_exists( $hovercraft_woocommerce_widget_products_css ) ) {
 
 /* cart icon */
 <?php
-$hovercraft_cart_icon_css = get_template_directory() . '/inc/css/cart-icon.php';
+$hovercraft_cart_icon_css = get_template_directory() . '/inc/css/header/cart-icon.php';
 if ( file_exists( $hovercraft_cart_icon_css ) ) {
 	include $hovercraft_cart_icon_css;
 }
