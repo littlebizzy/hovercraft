@@ -1,5 +1,9 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+    exit;
+}
+
 function hovercraft_customizer( $wp_customize ) {
 	// load google fonts array (via functions.php)
 	$hovercraft_google_fonts_array = hovercraft_google_fonts_array();
