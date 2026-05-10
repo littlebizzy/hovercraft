@@ -283,150 +283,13 @@ function hovercraft_generate_css(){
     ?>
 
 <style type="text/css" id="hovercraft_custom_css">
-@media screen and (max-width: 1200px) {
-html, body {
-    height: 100%;
-    font-family: <?php echo hovercraft_format_css_font_family( $default_font_family, $first_font_family ); ?>;
-    font-size: <?php echo $default_mobile_font_size; ?>px;
-    line-height: 1.5;
-    color: <?php echo $default_text_color; ?>;
-    scroll-behavior: smooth;
-    }
+/* global */
+<?php
+$hovercraft_global_css = get_template_directory() . '/inc/css/global.php';
+if ( file_exists( $hovercraft_global_css ) ) {
+	include $hovercraft_global_css;
 }
-
-@media screen and (min-width: 1200px) {
-html, body {
-    height: 100%;
-    font-family: <?php echo hovercraft_format_css_font_family( $default_font_family, $first_font_family ); ?>;
-    font-size: <?php echo $default_desktop_font_size; ?>px;
-    line-height: 1.5;
-    color: <?php echo $default_text_color; ?>;
-    scroll-behavior: smooth;
-    }
-}
-
-
-/* body frozen (triggered by offcanvas menu js) */
-
-body.frozen {
-	overflow: hidden;
-}
-
-
-/* misc */
-
-strong {
-	font-weight: 700;
-}
-
-em {
-    font-style: italic;
-}
-
-
-/* paragraphs */
-
-@media screen and (max-width: 1200px) {
-p {
-	margin-bottom: 20px;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-p {
-	margin-bottom: 30px;
-	}
-}
-
-.clear {
-	clear: both;
-}
-
-
-/* general */
-
-@media screen and (max-width: 1200px) {
-#container {
-	width: 100%;
-	height: 100%;
-	position: relative; /* required for mobile menu transform */
-	transform: translate3d(0, 0, 0);
-  	transition: transform 0.5s;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-#container {
-	width: 100%;
-	height: 100%;
-	}
-}
-
-.inner {
-	margin:0px auto;
-	max-width:1200px;
-}
-
-@media screen and (max-width: 1200px) {
-.full {
-	max-width: 100%;
-	padding: 0px 0px;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-.full {
-	max-width: 100%;
-	padding: 0px 40px;
-	}
-}
-
-
-/* wordpress video/media container */
-@media screen and (max-width: 1200px) {
-.mejs-container {
-	margin-bottom: 20px;
-	}
-}
-
-/* wordpress video/media container */
-@media screen and (min-width: 1200px) {
-.mejs-container {
-	margin-bottom: 30px;
-	}
-}
-
-
-iframe {
-	position: relative;
-    display: block;
-}
-
-@media screen and (max-width: 1200px) {
-hr {
-	background: <?php echo $default_text_color; ?>;
-	height: 1px;
-	margin-bottom: 20px;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-hr {
-	background: <?php echo $default_text_color; ?>;
-	height: 1px;
-	margin-bottom: 30px;
-	}
-}
-	
-/*
-#content-wrapper iframe {
-	aspect-ratio: 16 / 9;
-}
-*/
-
-#footer iframe {
-	aspect-ratio: 1 / 1.5;
-}
+?>
 
 
 
@@ -542,33 +405,22 @@ if ( file_exists( $hovercraft_tables_css ) ) {
 }
 ?>
 
-/* general */
-	
-.white {
-	color: #ffffff !important;
+/* utilities */
+<?php
+$hovercraft_utilities_css = get_template_directory() . '/inc/css/utilities.php';
+if ( file_exists( $hovercraft_utilities_css ) ) {
+	include $hovercraft_utilities_css;
 }
-
-.full-width {
-	width: 100%;
-}
-
-.center {
-	text-align: center;
-}
+?>
 
 
 /* links */
-
-a {
-	color: <?php echo $default_link_color; ?>;
-	text-decoration: <?php echo $default_link_decoration; ?>;
-	cursor: pointer;
+<?php
+$hovercraft_links_css = get_template_directory() . '/inc/css/links.php';
+if ( file_exists( $hovercraft_links_css ) ) {
+	include $hovercraft_links_css;
 }
-	
-a:hover {
-	color: <?php echo $default_hover_color; ?>;
-	cursor: pointer;
-}
+?>
 
 
 /* cta (hero) */
@@ -707,32 +559,21 @@ if ( file_exists( $hovercraft_cta_header_css ) ) {
 }
 ?>
 
-/* inline button: secondary */
-a.button-secondary {
-	font-family: <?php echo hovercraft_format_css_font_family( $main_menu_font_family, $default_font_family ); ?>;
-	font-size: 20px;
-	font-weight: 400;
-	text-transform: <?php echo $main_menu_text_transform; ?>;
-	display: inline-block;
-	padding: 10px 20px;
-	background: transparent;
-	text-decoration: none;
-	color: <?php echo $default_text_color; ?>;
-	box-shadow: inset 0px 0px 0px 1px <?php echo $default_text_color; ?>;
-	width: 100%;
-	box-sizing: border-box;
+/* secondary button */
+<?php
+$hovercraft_button_secondary_css = get_template_directory() . '/inc/css/button-secondary.php';
+if ( file_exists( $hovercraft_button_secondary_css ) ) {
+	include $hovercraft_button_secondary_css;
 }
+?>
 
-a.button-secondary:hover {
-	background: <?php echo $default_text_color; ?>;
-	color: #ffffff !important;
+/* welcome */
+<?php
+$hovercraft_welcome_css = get_template_directory() . '/inc/css/welcome.php';
+if ( file_exists( $hovercraft_welcome_css ) ) {
+	include $hovercraft_welcome_css;
 }
-
-@media screen and (min-width: 1200px) {
-.welcome-wrapper {
-	max-width: <?php echo $hero_content_width_desktop; ?>;
-	}
-}
+?>
 
 /* posthero */
 <?php
@@ -768,22 +609,12 @@ if ( file_exists( $hovercraft_byline_css ) ) {
 
 
 /* alignment */
-	
-.aligncenter {
-	text-align: center;
-	margin: 0 auto;
-	display: block;
+<?php
+$hovercraft_alignment_css = get_template_directory() . '/inc/css/alignment.php';
+if ( file_exists( $hovercraft_alignment_css ) ) {
+	include $hovercraft_alignment_css;
 }
-	
-.alignleft {
-	text-align: left;
-	display: inline-block;
-}
-
-.alignright {
-	text-align: right;
-	display: inline-block;
-}
+?>
 
 
 	
@@ -829,57 +660,22 @@ if ( file_exists( $hovercraft_columns_css ) ) {
 }
 ?>
 
-.wp-caption {
-	margin-bottom: 30px;
-	max-width: 100%;
-	height: auto;
-	display: block;
+/* captions */
+<?php
+$hovercraft_captions_css = get_template_directory() . '/inc/css/captions.php';
+if ( file_exists( $hovercraft_captions_css ) ) {
+	include $hovercraft_captions_css;
 }
-	
-.wp-caption img {
-	margin-bottom: 0 !important;
-}
-
-.wp-caption-text {
-	margin-bottom: 0 !important;
-    text-align: left;
-    font-size: 12px;
-	line-height: 2;
-    color: #444;
-}
+?>
 
 
-/* zigzag (page template) */
-	
-.zigzag-section {
-	text-align: left;
-	padding: 40px 40px;
+/* zigzag */
+<?php
+$hovercraft_zigzag_css = get_template_directory() . '/inc/css/zigzag.php';
+if ( file_exists( $hovercraft_zigzag_css ) ) {
+	include $hovercraft_zigzag_css;
 }
-
-.zigzag-section-reverse {
-	text-align: right;
-	padding: 40px;
-}
-
-.zigzag-section h3 {
-text-align: left;
-}
-
-.zigzag-section-reverse h3 {
-text-align: right;
-}
-
-.zigzag-section img {
-	float: left;
-	margin-right: 40px;
-	width: 300px !important;
-}
-
-.zigzag-section-reverse img {
-	float: right;
-	margin-left: 40px;
-	width: 300px !important;
-}
+?>
 
 
 /* sidebar */
@@ -900,19 +696,12 @@ if ( file_exists( $hovercraft_footer_callout_css ) ) {
 
 
 /* widgets */
-
-.widget-wrapper ul li ul {
-    margin-left: 0 !important;
+<?php
+$hovercraft_widgets_css = get_template_directory() . '/inc/css/widgets.php';
+if ( file_exists( $hovercraft_widgets_css ) ) {
+	include $hovercraft_widgets_css;
 }
-
-.widget-wrapper ul li ul li {
-    margin-left: 0 !important;
-    list-style-type: circle;
-}
-	
- .widget-wrapper iframe {
-	max-width: 100%;
-}
+?>
 
 /* home-premain-top */
 <?php
@@ -1058,42 +847,13 @@ if ( file_exists( $hovercraft_woocommerce_checkout_css ) ) {
 }
 ?>
 
-/* woocommerce other */
-
-div.coupon {
-	display: flex;
+/* woocommerce general */
+<?php
+$hovercraft_woocommerce_general_css = get_template_directory() . '/inc/css/woocommerce-general.php';
+if ( file_exists( $hovercraft_woocommerce_general_css ) ) {
+	include $hovercraft_woocommerce_general_css;
 }
-
-
-.term-description {
-	font-size: 18px;
-	color: #607D8B;
-}
-
-@media screen and (max-width: 1200px) {
-p.woocommerce-result-count {
-	float: none !important;
-	display: block;
-	margin: 0 0 20px 0 !important;
-	padding: 0 !important;
-	font-size: 16px;
-	font-weight: 600;
-	color: <?php echo $breadcrumbs_text_color; ?>;
-	line-height: 1.5 !important;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-p.woocommerce-result-count {
-	float: left !important;
-	margin: 0 !important;
-	padding: 5px 0px !important;
-	font-size: 16px;
-	font-weight: 600;
-	color: <?php echo $breadcrumbs_text_color; ?>;
-	line-height: 1.5 !important;
-	}
-}
+?>
 
 /* woocommerce ordering */
 <?php
@@ -1104,21 +864,13 @@ if ( file_exists( $hovercraft_wc_ordering_css ) ) {
 ?>
 
 
-/* woocommerce products unordered list */
-	
-.woocommerce ul.products {
-	margin: 0 !important;
-	padding: 30px 0 0 0 !important;
+/* woocommerce products */
+<?php
+$hovercraft_woocommerce_products_css = get_template_directory() . '/inc/css/woocommerce-products.php';
+if ( file_exists( $hovercraft_woocommerce_products_css ) ) {
+	include $hovercraft_woocommerce_products_css;
 }
-
-.woocommerce ul.products li.product {
-	float: left;
-    list-style: none outside !important;
-	position: relative;
-	margin-bottom: 30px !important;
-	padding: 0;
-	line-height: 1 !important;
-}
+?>
 
 
 /* woocommerce product details */
