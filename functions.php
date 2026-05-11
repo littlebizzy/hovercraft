@@ -1,14 +1,18 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 if ( ! defined( 'HOVERCRAFT_VERSION' ) ) {
 	define( 'HOVERCRAFT_VERSION', '0.3.37' );
 }
 
 // disable wordpress.org updates for this theme
 add_filter( 'gu_override_dot_org', function ( $overrides ) {
-    $overrides[] = 'hovercraft';
-    return $overrides;
-});
+	$overrides[] = 'hovercraft';
+	return $overrides;
+} );
 
 // menus
 require get_template_directory() . '/inc/menus/menu-locations.php';
@@ -128,7 +132,7 @@ add_theme_support( 'automatic-feed-links' );
 
 // internationalization
 function hovercraft_load_theme_textdomain() {
-    load_theme_textdomain( 'hovercraft', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'hovercraft', get_template_directory() . '/languages' );
 }
 add_action( 'after_setup_theme', 'hovercraft_load_theme_textdomain' );
 
@@ -143,7 +147,3 @@ require get_template_directory() . '/inc/admin/admin-meta-ui.php';
 
 // meta boxes
 require get_template_directory() . '/inc/meta-boxes/meta-box-zigzag.php';
-
-// Ref: ChatGPT
-// Ref: https://wordpress.stackexchange.com/questions/179585/remove-category-tag-author-from-the-archive-title
-// Ref: https://wordpress.stackexchange.com/questions/245274/how-to-remove-archive-label-from-archive-title
