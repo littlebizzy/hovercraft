@@ -1,94 +1,103 @@
 <?php
-// https://www.wpbeginner.com/wp-themes/how-to-add-numeric-pagination-in-your-wordpress-theme/
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
 
 function hovercraft_pagination_nav() {
 
-    if ( is_singular() ) {
-        return;
-    }
+	if ( is_singular() ) {
+		return;
+	}
 
-    global $wp_query;
+	global $wp_query;
 
-    /** Stop execution if there's only 1 page */
-    if ( $wp_query->max_num_pages <= 1 ) {
-        return;
-    }
+	// stop execution if there is only 1 page
+	if ( $wp_query->max_num_pages <= 1 ) {
+		return;
+	}
 
-    $paged = get_query_var( 'paged' ) ? absint( get_query_var( 'paged' ) ) : 1;
-    $max = intval( $wp_query->max_num_pages );
+	$paged = 1;
 
-    /** Add current page to the array */
-    if ( $paged >= 1 ) {
-        $links[] = $paged;
-    }
+	if ( get_query_var( 'paged' ) ) {
+		$paged = absint( get_query_var( 'paged' ) );
+	}
 
-    /** Add the pages around the current page to the array */
-    if ( $paged >= 3 ) {
-        $links[] = $paged - 1;
-        $links[] = $paged - 2;
-    }
+	$max = intval( $wp_query->max_num_pages );
+	$links = array();
 
-    if ( ( $paged + 2 ) <= $max ) {
-        $links[] = $paged + 2;
-        $links[] = $paged + 1;
-    }
+	// add current page to the array
+	if ( $paged >= 1 ) {
+		$links[] = $paged;
+	}
 
-    echo '<div class="navigation"><ul>' . "\n";
+	// add the pages around the current page to the array
+	if ( $paged >= 3 ) {
+		$links[] = $paged - 1;
+		$links[] = $paged - 2;
+	}
 
-    /** Previous Post Link */
-    if ( get_previous_posts_link() ) {
-        printf( '<li>%s</li>' . "\n", get_previous_posts_link() );
-    }
+	if ( ( $paged + 2 ) <= $max ) {
+		$links[] = $paged + 2;
+		$links[] = $paged + 1;
+	}
 
-    /** Link to first page, plus ellipses if necessary */
-    if ( ! in_array( 1, $links, true ) ) {
-        $class = '';
+	echo '<div class="navigation"><ul>' . "\n";
 
-        if ( 1 === $paged ) {
-            $class = ' class="active"';
-        }
+	// previous post link
+	if ( get_previous_posts_link() ) {
+		printf( '<li>%s</li>' . "\n", get_previous_posts_link() );
+	}
 
-        printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( 1 ) ), '1' );
+	// link to first page, plus ellipses if necessary
+	if ( ! in_array( 1, $links, true ) ) {
+		$class = '';
 
-        if ( ! in_array( 2, $links, true ) ) {
-            echo '<li>…</li>';
-        }
-    }
+		if ( 1 === $paged ) {
+			$class = ' class="active"';
+		}
 
-    /** Link to current page, plus 2 pages in either direction if necessary */
-    sort( $links );
+		printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( 1 ) ), '1' );
 
-    foreach ( (array) $links as $link ) {
-        $class = '';
+		if ( ! in_array( 2, $links, true ) ) {
+			echo '<li>…</li>';
+		}
+	}
 
-        if ( $paged === $link ) {
-            $class = ' class="active"';
-        }
+	// link to current page, plus 2 pages in either direction if necessary
+	sort( $links );
 
-        printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $link ) ), $link );
-    }
+	foreach ( (array) $links as $link ) {
+		$class = '';
 
-    /** Link to last page, plus ellipses if necessary */
-    if ( ! in_array( $max, $links, true ) ) {
-        if ( ! in_array( $max - 1, $links, true ) ) {
-            echo '<li>…</li>' . "\n";
-        }
+		if ( $paged === $link ) {
+			$class = ' class="active"';
+		}
 
-        $class = '';
+		printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $link ) ), $link );
+	}
 
-        if ( $paged === $max ) {
-            $class = ' class="active"';
-        }
+	// link to last page, plus ellipses if necessary
+	if ( ! in_array( $max, $links, true ) ) {
+		if ( ! in_array( $max - 1, $links, true ) ) {
+			echo '<li>…</li>' . "\n";
+		}
 
-        printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $max ) ), $max );
-    }
+		$class = '';
 
-    /** Next Post Link */
-    if ( get_next_posts_link() ) {
-        printf( '<li>%s</li>' . "\n", get_next_posts_link() );
-    }
+		if ( $paged === $max ) {
+			$class = ' class="active"';
+		}
 
-    echo '</ul></div>' . "\n";
+		printf( '<li%s><a href="%s">%s</a></li>' . "\n", $class, esc_url( get_pagenum_link( $max ) ), $max );
+	}
+
+	// next post link
+	if ( get_next_posts_link() ) {
+		printf( '<li>%s</li>' . "\n", get_next_posts_link() );
+	}
+
+	echo '</ul></div>' . "\n";
 }
 
 // https://stackoverflow.com/questions/30108550/wordpress-category-php-pagination-404-errors
@@ -100,10 +109,10 @@ function hovercraft_pagination_nav() {
 // https://generatepress.com/forums/topic/pagnation/
 
 add_filter( 'request', function ( $query_string ) {
-    if ( isset( $query_string['page'], $query_string['name'] ) && 'page' === $query_string['name'] ) {
-        unset( $query_string['name'] );
-        $query_string['paged'] = $query_string['page'];
-    }
+	if ( isset( $query_string['page'], $query_string['name'] ) && 'page' === $query_string['name'] ) {
+		unset( $query_string['name'] );
+		$query_string['paged'] = $query_string['page'];
+	}
 
-    return $query_string;
+	return $query_string;
 } );

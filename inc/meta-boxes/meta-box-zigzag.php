@@ -120,11 +120,31 @@ function hovercraft_admin_save_zigzag_meta_box( $post_id ) {
 
 	for ( $i = 1; $i <= 15; $i++ ) {
 
-		$image_id = isset( $_POST["hovercraft_zigzag_row_{$i}_image_id"] ) ? absint( wp_unslash( $_POST["hovercraft_zigzag_row_{$i}_image_id"] ) ) : '';
-		$title = isset( $_POST["hovercraft_zigzag_row_{$i}_title"] ) ? sanitize_text_field( wp_unslash( $_POST["hovercraft_zigzag_row_{$i}_title"] ) ) : '';
-		$text = isset( $_POST["hovercraft_zigzag_row_{$i}_text"] ) ? sanitize_textarea_field( wp_unslash( $_POST["hovercraft_zigzag_row_{$i}_text"] ) ) : '';
-		$link_url = isset( $_POST["hovercraft_zigzag_row_{$i}_link_url"] ) ? esc_url_raw( wp_unslash( $_POST["hovercraft_zigzag_row_{$i}_link_url"] ) ) : '';
-		$link_text = isset( $_POST["hovercraft_zigzag_row_{$i}_link_text"] ) ? sanitize_text_field( wp_unslash( $_POST["hovercraft_zigzag_row_{$i}_link_text"] ) ) : '';
+		$image_id = '';
+		$title = '';
+		$text = '';
+		$link_url = '';
+		$link_text = '';
+
+		if ( isset( $_POST["hovercraft_zigzag_row_{$i}_image_id"] ) ) {
+			$image_id = absint( wp_unslash( $_POST["hovercraft_zigzag_row_{$i}_image_id"] ) );
+		}
+
+		if ( isset( $_POST["hovercraft_zigzag_row_{$i}_title"] ) ) {
+			$title = sanitize_text_field( wp_unslash( $_POST["hovercraft_zigzag_row_{$i}_title"] ) );
+		}
+
+		if ( isset( $_POST["hovercraft_zigzag_row_{$i}_text"] ) ) {
+			$text = sanitize_textarea_field( wp_unslash( $_POST["hovercraft_zigzag_row_{$i}_text"] ) );
+		}
+
+		if ( isset( $_POST["hovercraft_zigzag_row_{$i}_link_url"] ) ) {
+			$link_url = esc_url_raw( wp_unslash( $_POST["hovercraft_zigzag_row_{$i}_link_url"] ) );
+		}
+
+		if ( isset( $_POST["hovercraft_zigzag_row_{$i}_link_text"] ) ) {
+			$link_text = sanitize_text_field( wp_unslash( $_POST["hovercraft_zigzag_row_{$i}_link_text"] ) );
+		}
 
 		update_post_meta( $post_id, "hovercraft_zigzag_row_{$i}_image_id", $image_id );
 		update_post_meta( $post_id, "hovercraft_zigzag_row_{$i}_title", $title );

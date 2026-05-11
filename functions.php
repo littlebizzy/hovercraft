@@ -35,7 +35,7 @@ require get_template_directory() . '/inc/portal-category.php';
 require get_template_directory() . '/inc/hide-certain-categories.php';
 
 // comments
-require get_template_directory() . '/inc/comment-fields.php';
+require get_template_directory() . '/inc/comments/fields.php';
 
 // customizer
 require get_template_directory() . '/inc/customizer/customizer.php';
@@ -71,8 +71,8 @@ require get_template_directory() . '/inc/media/sizes-insert.php';
 require_once get_template_directory() . '/inc/license.php';
 
 // logo
-require get_template_directory() . '/inc/logo-alternative.php';
-require get_template_directory() . '/inc/logo-default.php';
+require get_template_directory() . '/inc/header/logo-alternative.php';
+require get_template_directory() . '/inc/header/logo-default.php';
 
 // main content
 require get_template_directory() . '/inc/main-content.php';
@@ -104,7 +104,7 @@ require get_template_directory() . '/inc/title-tag.php';
 require get_template_directory() . '/inc/git-updater.php';
 
 // widget areas
-require get_template_directory() . '/inc/widget-areas.php';
+require get_template_directory() . '/inc/widgets/areas.php';
 
 // woocommerce
 require get_template_directory() . '/inc/woocommerce/quantity-buttons.php';

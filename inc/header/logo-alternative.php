@@ -1,5 +1,9 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 // add alternative logo setting to customizer
 function hovercraft_logo_alternative( $wp_customize ) {
 	$wp_customize->add_setting(
@@ -14,8 +18,8 @@ function hovercraft_logo_alternative( $wp_customize ) {
 			$wp_customize,
 			'hovercraft_logo_alternative',
 			array(
-				'label'    => esc_html__( 'Alternative Logo', 'hovercraft' ),
-				'section'  => 'title_tagline',
+				'label' => esc_html__( 'Alternative Logo', 'hovercraft' ),
+				'section' => 'title_tagline',
 				'settings' => 'hovercraft_logo_alternative',
 				'priority' => 8,
 			)
@@ -28,8 +32,8 @@ add_action( 'customize_register', 'hovercraft_logo_alternative' );
 function hovercraft_sanitize_image( $file, $setting ) {
 	$mimes = array(
 		'jpg|jpeg' => 'image/jpeg',
-		'png'      => 'image/png',
-		'gif'      => 'image/gif',
+		'png' => 'image/png',
+		'gif' => 'image/gif',
 	);
 
 	$file_ext = wp_check_filetype( $file, $mimes );
@@ -41,4 +45,3 @@ function hovercraft_sanitize_image( $file, $setting ) {
 	return $setting->default;
 }
 
-// Ref: ChatGPT
