@@ -1,10 +1,14 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 function hovercraft_custom_header() {
 	$args = array(
-		'width'       => 1920,
-		'height'      => 1080,
-		'flex-width'  => true,
+		'width' => 1920,
+		'height' => 1080,
+		'flex-width' => true,
 		'flex-height' => true,
 	);
 
