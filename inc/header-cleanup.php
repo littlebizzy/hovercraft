@@ -1,5 +1,9 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 function hovercraft_remove_feed_links() {
 	remove_theme_support( 'automatic-feed-links' );
 	remove_action( 'wp_head', 'feed_links_extra', 3 );
