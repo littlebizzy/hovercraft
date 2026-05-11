@@ -4,13 +4,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// check if posthero should display
 function hovercraft_should_show_posthero( $hero_type ) {
 	if ( ! is_active_sidebar( 'hovercraft_posthero' ) ) {
 		return false;
 	}
 
-	$posthero_display = get_theme_mod( 'hovercraft_posthero_widget_display' );
+	$posthero_display = get_theme_mod( 'hovercraft_posthero_widget_display', '' );
 
 	$allowed_display_options = array(
 		'full' => array(
