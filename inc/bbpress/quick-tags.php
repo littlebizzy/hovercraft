@@ -1,5 +1,9 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 add_action( 'wp_footer', 'hovercraft_swap_js_body_tags' );
 
 function hovercraft_swap_js_body_tags() {

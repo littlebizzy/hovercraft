@@ -19,12 +19,12 @@ require get_template_directory() . '/inc/menus/offcanvas-menu.php';
 require get_template_directory() . '/inc/menus/overlay-menu.php';
 
 // back to top
-require get_template_directory() . '/inc/back-to-top.php';
+require get_template_directory() . '/inc/ui/back-to-top.php';
 
 // bbpress
-require get_template_directory() . '/inc/bbpress-disable-reply-links.php';
-require get_template_directory() . '/inc/bbpress-quick-tags.php';
-require get_template_directory() . '/inc/bbpress-search-results.php';
+require get_template_directory() . '/inc/bbpress/disable-reply-links.php';
+require get_template_directory() . '/inc/bbpress/quick-tags.php';
+require get_template_directory() . '/inc/bbpress/search-results.php';
 
 // breadcrumbs
 require get_template_directory() . '/inc/breadcrumbs.php';
@@ -62,10 +62,10 @@ require get_template_directory() . '/inc/header-cleanup.php';
 require get_template_directory() . '/inc/header-video.php';
 
 // images
-require get_template_directory() . '/inc/disable-responsive-images.php';
-require get_template_directory() . '/inc/featured-images.php';
-require get_template_directory() . '/inc/media-sizes-verify.php';
-require get_template_directory() . '/inc/media-sizes-insert.php';
+require get_template_directory() . '/inc/media/disable-responsive-images.php';
+require get_template_directory() . '/inc/media/featured-images.php';
+require get_template_directory() . '/inc/media/sizes-verify.php';
+require get_template_directory() . '/inc/media/sizes-insert.php';
 
 // license
 require_once get_template_directory() . '/inc/license.php';
@@ -88,7 +88,7 @@ require get_template_directory() . '/inc/open-graph.php';
 require get_template_directory() . '/inc/pagination.php';
 
 // search
-require get_template_directory() . '/inc/full-screen-search.php';
+require get_template_directory() . '/inc/ui/full-screen-search.php';
 
 // sidebar
 require get_template_directory() . '/inc/sidebar-callout.php';
@@ -107,8 +107,8 @@ require get_template_directory() . '/inc/git-updater.php';
 require get_template_directory() . '/inc/widget-areas.php';
 
 // woocommerce
-require get_template_directory() . '/inc/quantity-buttons.php';
-require get_template_directory() . '/inc/woocommerce-support.php';
+require get_template_directory() . '/inc/woocommerce/quantity-buttons.php';
+require get_template_directory() . '/inc/woocommerce/support.php';
 
 // shortcodes
 require get_template_directory() . '/inc/shortcodes.php';

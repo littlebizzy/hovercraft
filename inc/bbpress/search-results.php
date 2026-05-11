@@ -1,5 +1,9 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 // include bbpress topics in wordpress search results
 function hovercraft_bbp_topic_search( $topic_search ) {
 	$topic_search['exclude_from_search'] = false;
