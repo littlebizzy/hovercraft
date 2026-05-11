@@ -1,5 +1,9 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 function hovercraft_main_menu_toggle( $item_output, $item, $depth, $args ) {
 	if (
 		isset( $args->theme_location ) &&
