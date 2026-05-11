@@ -17,7 +17,7 @@ function hovercraft_footer_callout() {
 	);
 
 	$footer_callout_array = array(
-		'name' => 'Footer Callout',
+		'name' => esc_html__( 'Footer Callout', 'hovercraft' ),
 		'id' => 'hovercraft_footer_callout',
 		'before_widget' => '<div class="widget-footer-callout widget-wrapper">',
 		'after_widget' => '</div>',
@@ -32,9 +32,3 @@ function hovercraft_footer_callout() {
 	register_sidebar( $footer_callout_array );
 }
 add_action( 'widgets_init', 'hovercraft_footer_callout' );
-
-// https://stackoverflow.com/questions/17577861/wordpress-insert-html-or-custom-function-into-a-dynamic-sidebarmy-sidebar
-// https://support.advancedcustomfields.com/forums/topic/add-field-to-before_widget-in-functions-php/
-// https://samhermes.com/posts/caching-menu-in-transient-in-wordpress/
-// https://wordpress.stackexchange.com/questions/185814/if-test-for-has-nav-menu-does-not-return-echo-when-no-menu-exists
-// https://wordpress.stackexchange.com/questions/425726/only-display-nav-menu-if-it-is-populated-with-menu-items
