@@ -1,3 +1,10 @@
+<?php
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+?>
 <div id="hovercraft-overlay-menu" class="overlay">
 
 	<button type="button" class="closebtn" onclick="hovercraftCloseNav()">
@@ -5,9 +12,9 @@
 		// choose icon set
 		$hovercraft_layout_icons = get_theme_mod( 'hovercraft_layout_icons', 'material_icons_classic' );
 		?>
-		<?php if ( $hovercraft_layout_icons === 'material_icons_classic' ) : ?>
+		<?php if ( 'material_icons_classic' === $hovercraft_layout_icons ) : ?>
 			<i class="material-icons close">close</i>
-		<?php elseif ( $hovercraft_layout_icons === 'font_awesome_version_6' ) : ?>
+		<?php elseif ( 'font_awesome_version_6' === $hovercraft_layout_icons ) : ?>
 			<i class="fa-solid fa-x"></i>
 		<?php endif; ?>
 	</button>
