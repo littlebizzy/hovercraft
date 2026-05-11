@@ -1,58 +1,65 @@
+<?php
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+?>
 <div id="header-basic">
 
 	<?php if ( is_active_sidebar( 'hovercraft_preheader_left' ) || is_active_sidebar( 'hovercraft_preheader_right' ) ) : ?>
-	<div id="preheader">
-		<div class="inner">
+		<div id="preheader">
+			<div class="inner">
 
-			<?php if ( is_active_sidebar( 'hovercraft_preheader_left' ) && is_active_sidebar( 'hovercraft_preheader_right' ) ) : ?>
+				<?php if ( is_active_sidebar( 'hovercraft_preheader_left' ) && is_active_sidebar( 'hovercraft_preheader_right' ) ) : ?>
 
-			<!-- preheader-left -->
-			<div class="preheader-left">
-				<?php
-				// remove widget titles for this sidebar only
-				add_filter( 'widget_title', '__return_false' );
-				dynamic_sidebar( 'hovercraft_preheader_left' );
-				remove_filter( 'widget_title', '__return_false' );
-				?>
-			</div>
-
-			<!-- preheader-right -->
-			<div class="preheader-right">
-				<?php
-				// remove widget titles for this sidebar only
-				add_filter( 'widget_title', '__return_false' );
-				dynamic_sidebar( 'hovercraft_preheader_right' );
-				remove_filter( 'widget_title', '__return_false' );
-				?>
-			</div>
-
-			<?php elseif ( is_active_sidebar( 'hovercraft_preheader_left' ) xor is_active_sidebar( 'hovercraft_preheader_right' ) ) : ?>
-
-				<!-- preheader-center -->
-				<div class="preheader-center">
-					<?php if ( is_active_sidebar( 'hovercraft_preheader_left' ) ) : ?>
+					<!-- preheader-left -->
+					<div class="preheader-left">
 						<?php
 						// remove widget titles for this sidebar only
 						add_filter( 'widget_title', '__return_false' );
 						dynamic_sidebar( 'hovercraft_preheader_left' );
 						remove_filter( 'widget_title', '__return_false' );
 						?>
-					<?php elseif ( is_active_sidebar( 'hovercraft_preheader_right' ) ) : ?>
+					</div>
+
+					<!-- preheader-right -->
+					<div class="preheader-right">
 						<?php
 						// remove widget titles for this sidebar only
 						add_filter( 'widget_title', '__return_false' );
 						dynamic_sidebar( 'hovercraft_preheader_right' );
 						remove_filter( 'widget_title', '__return_false' );
 						?>
-					<?php endif; ?>
-				</div>
+					</div>
 
-			<?php endif; ?>
+				<?php elseif ( is_active_sidebar( 'hovercraft_preheader_left' ) xor is_active_sidebar( 'hovercraft_preheader_right' ) ) : ?>
 
-			<div class="clear"></div>
+					<!-- preheader-center -->
+					<div class="preheader-center">
+						<?php if ( is_active_sidebar( 'hovercraft_preheader_left' ) ) : ?>
+							<?php
+							// remove widget titles for this sidebar only
+							add_filter( 'widget_title', '__return_false' );
+							dynamic_sidebar( 'hovercraft_preheader_left' );
+							remove_filter( 'widget_title', '__return_false' );
+							?>
+						<?php elseif ( is_active_sidebar( 'hovercraft_preheader_right' ) ) : ?>
+							<?php
+							// remove widget titles for this sidebar only
+							add_filter( 'widget_title', '__return_false' );
+							dynamic_sidebar( 'hovercraft_preheader_right' );
+							remove_filter( 'widget_title', '__return_false' );
+							?>
+						<?php endif; ?>
+					</div>
 
-		</div><!-- inner -->
-	</div><!-- preheader -->
+				<?php endif; ?>
+
+				<div class="clear"></div>
+
+			</div><!-- inner -->
+		</div><!-- preheader -->
 	<?php endif; ?><!-- if preheader widgets active -->
 
 	<?php get_template_part( 'template-parts/header/navigation' ); ?>
