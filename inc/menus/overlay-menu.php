@@ -1,9 +1,13 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 function hovercraft_overlay_menu() {
 	wp_enqueue_script(
 		'hovercraft_overlay_menu',
-		get_template_directory_uri() . '/assets/js/overlay-menu.js',
+		esc_url_raw( get_template_directory_uri() . '/assets/js/overlay-menu.js' ),
 		array( 'jquery' ),
 		HOVERCRAFT_VERSION,
 		true
