@@ -1,17 +1,21 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 // register menu locations
 function hovercraft_menu_locations() {
 	register_nav_menus(
 		array(
-			'main-menu'           => 'Main Menu',
-			'mobile-menu'         => 'Mobile Menu',
-			'cta-header-primary'  => 'Header Primary CTA',
+			'main-menu' => 'Main Menu',
+			'mobile-menu' => 'Mobile Menu',
+			'cta-header-primary' => 'Header Primary CTA',
 			'cta-header-secondary' => 'Header Secondary CTA',
-			'cta-hero-primary'    => 'Hero Primary CTA',
-			'cta-hero-secondary'  => 'Hero Secondary CTA',
+			'cta-hero-primary' => 'Hero Primary CTA',
+			'cta-hero-secondary' => 'Hero Secondary CTA',
 			'cta-sidebar-callout' => 'Sidebar Callout CTA',
-			'cta-footer-callout'  => 'Footer Callout CTA',
+			'cta-footer-callout' => 'Footer Callout CTA',
 		)
 	);
 }
@@ -22,8 +26,8 @@ function hovercraft_mobile_menu_output() {
 	if ( has_nav_menu( 'mobile-menu' ) ) {
 		wp_nav_menu(
 			array(
-				'theme_location'  => 'mobile-menu',
-				'menu_class'      => 'menu',
+				'theme_location' => 'mobile-menu',
+				'menu_class' => 'menu',
 				'container_class' => 'mobile-menu',
 			)
 		);
@@ -33,8 +37,8 @@ function hovercraft_mobile_menu_output() {
 	if ( has_nav_menu( 'main-menu' ) ) {
 		wp_nav_menu(
 			array(
-				'theme_location'  => 'main-menu',
-				'menu_class'      => 'menu',
+				'theme_location' => 'main-menu',
+				'menu_class' => 'menu',
 				'container_class' => 'main-menu',
 			)
 		);
