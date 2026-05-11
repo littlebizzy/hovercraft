@@ -1,9 +1,13 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 function hovercraft_offcanvas_menu() {
 	wp_enqueue_script(
 		'hovercraft_offcanvas_menu',
-		get_template_directory_uri() . '/assets/js/offcanvas-menu.js',
+		esc_url_raw( get_template_directory_uri() . '/assets/js/offcanvas-menu.js' ),
 		array( 'jquery' ),
 		HOVERCRAFT_VERSION,
 		true
