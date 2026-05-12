@@ -21,7 +21,7 @@ function hovercraft_video( $wp_customize ) {
 			'video_upload',
 			array(
 				'label' => esc_html__( 'Background Video', 'hovercraft' ),
-				'description' => esc_html__( 'This is the description for the Media Control', 'hovercraft' ),
+				'description' => esc_html__( 'Upload or select a background video for the site header.', 'hovercraft' ),
 				'section' => 'header_image',
 				'mime_type' => 'video',
 				'settings' => 'hovercraft_video',
