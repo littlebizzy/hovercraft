@@ -60,11 +60,11 @@ require get_template_directory() . '/inc/google-fonts.php';
 require get_template_directory() . '/inc/footer-callout.php';
 
 // header
-require get_template_directory() . '/inc/custom-header.php';
-require get_template_directory() . '/inc/header-assets.php';
-require get_template_directory() . '/inc/header-cleanup.php';
-require get_template_directory() . '/inc/header-video.php';
+require get_template_directory() . '/inc/header/assets.php';
+require get_template_directory() . '/inc/header/cleanup.php';
+require get_template_directory() . '/inc/header/custom-header.php';
 require get_template_directory() . '/inc/header/posthero.php';
+require get_template_directory() . '/inc/header/video.php';
 
 // images
 require get_template_directory() . '/inc/media/disable-responsive-images.php';
