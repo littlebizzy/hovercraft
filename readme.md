@@ -76,6 +76,8 @@ The goal is simple, fast, maintainable WordPress sites using a small set of reli
 - Keep business data, schema systems, SEO systems, and reusable content models out of the theme unless there is a narrow presentation reason.
 - Preserve existing template behavior unless the change explicitly targets it.
 - Prefer boring, explicit, maintainable PHP over clever abstraction.
+- Add `ABSPATH` guards to PHP files when appropriate.
+- Add simple, concise, lowercase comments above code blocks when they improve readability.
 - Keep Customizer settings for global design and layout defaults, not page-specific content modeling.
 - Keep WooCommerce support lightweight and presentation-focused.
 - Avoid speculative features, unused abstractions, and client-specific bloat.
