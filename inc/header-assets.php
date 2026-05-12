@@ -4,7 +4,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// add external font resource hints
 function hovercraft_resource_hints( $urls, $relation_type ) {
 	if ( 'preconnect' === $relation_type ) {
 		$urls[] = array(
@@ -27,7 +26,6 @@ function hovercraft_resource_hints( $urls, $relation_type ) {
 }
 add_filter( 'wp_resource_hints', 'hovercraft_resource_hints', 10, 2 );
 
-// enqueue header font assets
 function hovercraft_enqueue_header_assets() {
 	$material_icons_setting = get_theme_mod( 'hovercraft_material_icons', 'classic_only' );
 
