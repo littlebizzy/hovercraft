@@ -28,7 +28,3 @@ function hovercraft_accordion_menu_toggle( $item_output, $item, $depth, $args ) 
 	return $item_output;
 }
 add_filter( 'walker_nav_menu_start_el', 'hovercraft_accordion_menu_toggle', 10, 4 );
-
-// https://wpmudev.com/blog/adding-jquery-scripts-wordpress/
-// https://codepen.io/keithchis/pen/GpdbLm
-// https://wordpress.stackexchange.com/questions/345410/adding-toggle-able-element-after-menu-item
