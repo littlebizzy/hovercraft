@@ -4,9 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// enqueue admin ui helpers
 function hovercraft_admin_meta_ui_assets( $hook ) {
-
 	if ( ! in_array( $hook, array( 'post.php', 'post-new.php' ), true ) ) {
 		return;
 	}
