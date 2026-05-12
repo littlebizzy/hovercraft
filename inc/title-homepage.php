@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 function hovercraft_homepage_title( $title ) {
 	if ( ! is_front_page() ) {
-		return $title; // return original title if not on homepage
+		return $title;
 	}
 
 	$hovercraft_homepage_html_title = get_theme_mod( 'hovercraft_homepage_html_title', 'site_name_site_tagline' );
@@ -46,12 +46,6 @@ function hovercraft_homepage_title( $title ) {
 		return get_the_title( $id_frontpage );
 	}
 
-	return $title; // default return
+	return $title;
 }
-
 add_filter( 'pre_get_document_title', 'hovercraft_homepage_title', 10, 2 );
-
-// Ref: ChatGPT
-// Ref: https://wordpress.stackexchange.com/questions/176940/add-theme-support-title-tag-in-conflict-with-custom-titles-function
-// Ref: https://wordpress.stackexchange.com/questions/305353/cant-change-the-title-tag-with-wp-title-filter
-// Ref: https://stackoverflow.com/questions/29956708/is-there-any-reason-to-use-html-entities-over-the-characters-themselves
