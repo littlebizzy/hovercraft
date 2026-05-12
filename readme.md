@@ -76,6 +76,8 @@ The goal is simple, fast, maintainable WordPress sites using a small set of reli
 - Keep business data, schema systems, SEO systems, and reusable content models out of the theme unless there is a narrow presentation reason.
 - Preserve existing template behavior unless the change explicitly targets it.
 - Prefer boring, explicit, maintainable PHP over clever abstraction.
+- Maintain PHP backwards compatibility to PHP 7.0 unless the minimum requirement is intentionally changed.
+- Avoid fancy modern PHP syntax when simpler code is clearer, including ternary operators and null coalescing operators.
 - Add `ABSPATH` guards to PHP files when appropriate.
 - Add simple, concise, lowercase comments above code blocks when they improve readability.
 - Keep Customizer settings for global design and layout defaults, not page-specific content modeling.
