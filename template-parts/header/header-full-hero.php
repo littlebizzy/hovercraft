@@ -23,7 +23,7 @@ $url_hovercraft_video = wp_get_attachment_url( $hovercraft_video_id );
 
 <div id="header-full-hero">
 	
-	<?php get_template_part( 'template-parts/header/hero-preheader' ); ?>
+	<?php get_template_part( 'template-parts/header/preheader' ); ?>
 	<?php get_template_part( 'template-parts/header/navigation' ); ?>
 </div><!-- header-full-hero -->
 	
