@@ -9,42 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div id="header-mini-hero">
 
-	<?php if ( is_active_sidebar( 'hovercraft_preheader_left' ) || is_active_sidebar( 'hovercraft_preheader_right' ) ) : ?>
-	<div id="preheader">
-		<div class="inner">
-			<?php if ( is_active_sidebar( 'hovercraft_preheader_left' ) && is_active_sidebar( 'hovercraft_preheader_right' ) ) : ?>
-			<div class="preheader-left">
-				<?php add_filter( 'widget_title', '__return_false' );
-				dynamic_sidebar( 'hovercraft_preheader_left' );
-				remove_filter( 'widget_title', '__return_false' ); ?>
-			</div>
-			<div class="preheader-right">
-				<?php add_filter( 'widget_title', '__return_false' );
-				dynamic_sidebar( 'hovercraft_preheader_right' );
-				remove_filter( 'widget_title', '__return_false' ); ?>
-			</div>
-			<?php elseif ( is_active_sidebar( 'hovercraft_preheader_left' ) xor is_active_sidebar( 'hovercraft_preheader_right' ) ) : ?>
-			<div class="preheader-center">
-				<?php if ( is_active_sidebar( 'hovercraft_preheader_left' ) ) : ?>
-					<?php
-					add_filter( 'widget_title', '__return_false' );
-					dynamic_sidebar( 'hovercraft_preheader_left' );
-					remove_filter( 'widget_title', '__return_false' );
-					?>
-				<?php elseif ( is_active_sidebar( 'hovercraft_preheader_right' ) ) : ?>
-					<?php
-					add_filter( 'widget_title', '__return_false' );
-					dynamic_sidebar( 'hovercraft_preheader_right' );
-					remove_filter( 'widget_title', '__return_false' );
-					?>
-				<?php endif; ?>
-			</div>
-			<?php endif; ?>
-			<div class="clear"></div>
-		</div>
-	</div>
-	<?php endif; ?>
-
+	<?php get_template_part( 'template-parts/header/hero-preheader' ); ?>
 	<?php get_template_part( 'template-parts/header/navigation' ); ?>
 </div>
 
@@ -107,26 +72,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php endif; ?>
 		<?php endif; ?>
 
-		<?php if ( is_front_page() ) : ?>
-		<div class="cta-hero-wrapper">
-			<?php
-			if ( has_nav_menu( 'cta-hero-primary' ) ) {
-				wp_nav_menu( array(
-					'theme_location'  => 'cta-hero-primary',
-					'menu_class'      => 'cta',
-					'container_class' => 'cta-hero-primary',
-				) );
-			}
-			if ( has_nav_menu( 'cta-hero-secondary' ) ) {
-				wp_nav_menu( array(
-					'theme_location'  => 'cta-hero-secondary',
-					'menu_class'      => 'cta',
-					'container_class' => 'cta-hero-secondary',
-				) );
-			}
-			?>
-		</div>
-		<?php endif; ?>
+		<?php get_template_part( 'template-parts/header/hero-cta' ); ?>
 
 	</div><!-- title-wrapper -->
 
