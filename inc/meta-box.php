@@ -45,7 +45,12 @@ function hovercraft_hide_title_callback( $post ) {
 		$value = get_post_meta( $post->ID, '_mysite_meta_hide_title', true );
 	}
 	?>
-	<label for="hovercraft-hide-title"><?php esc_html_e( 'Hide Page Title:', 'hovercraft' ); ?> </label><input type="checkbox" id="hovercraft-hide-title" name="hovercraft_hide_title" <?php checked( $value, 'on' ); ?>>
+	<p>
+		<label for="hovercraft-hide-title">
+			<input type="checkbox" id="hovercraft-hide-title" name="hovercraft_hide_title" <?php checked( $value, 'on' ); ?>>
+			<?php esc_html_e( 'Hide Page Title', 'hovercraft' ); ?>
+		</label>
+	</p>
 	<?php
 }
 
@@ -58,7 +63,9 @@ function hovercraft_save_postdata( $post_id ) {
 		return;
 	}
 
-	if ( ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['hovercraft_hide_title_nonce'] ) ), 'hovercraft_hide_title_action' ) ) {
+	$nonce = sanitize_text_field( wp_unslash( $_POST['hovercraft_hide_title_nonce'] ) );
+
+	if ( ! wp_verify_nonce( $nonce, 'hovercraft_hide_title_action' ) ) {
 		return;
 	}
 
