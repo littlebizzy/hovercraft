@@ -1,5 +1,10 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+
 // check if meta-based zigzag rows have content
 $has_meta_rows = false;
 

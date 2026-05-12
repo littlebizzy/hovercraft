@@ -1,4 +1,10 @@
-<?php $hovercraft_post_tags = get_theme_mod( 'hovercraft_post_tags', 'native_posts_only' ); ?>
+<?php
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+ $hovercraft_post_tags = get_theme_mod( 'hovercraft_post_tags', 'native_posts_only' ); ?>
 
 <?php if ( $hovercraft_post_tags === 'native_posts_only' ) : ?>
 	<?php if ( is_single() && 'post' === get_post_type() ) : ?>

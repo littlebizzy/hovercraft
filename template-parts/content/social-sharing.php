@@ -1,5 +1,10 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+
 // hide sharing on product pages
 // make this conditional later based on Customizer settings
 if ( function_exists( 'is_product' ) && is_product() ) {

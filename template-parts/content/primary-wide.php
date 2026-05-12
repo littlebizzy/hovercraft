@@ -1,3 +1,10 @@
+<?php
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+?>
 <div id="primary-wide">
 
 	<?php get_template_part( 'template-parts/misc/breadcrumbs' ); ?>

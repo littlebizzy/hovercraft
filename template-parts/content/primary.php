@@ -1,4 +1,10 @@
-<?php if ( get_theme_mod( 'hovercraft_sidebar_status' ) === 1 ) : ?>
+<?php
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+ if ( get_theme_mod( 'hovercraft_sidebar_status' ) === 1 ) : ?>
 	<div id="primary">
 <?php else : ?>
 	<div id="primary-wide">

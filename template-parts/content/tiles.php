@@ -1,3 +1,10 @@
+<?php
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+?>
 <div id="tiles">
 	
 	<?php if ( is_active_sidebar( 'hovercraft_tile_one' ) ) : ?>

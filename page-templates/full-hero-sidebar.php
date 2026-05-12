@@ -1,4 +1,11 @@
-<?php /* Template Name: Full Hero (Sidebar) */ ?>
+<?php
+/* Template Name: Full Hero (Sidebar) */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+?>
 <?php get_template_part( 'header' ); ?>
 <?php get_template_part( 'template-parts/header/header-full-hero' ); ?>
 

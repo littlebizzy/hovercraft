@@ -1,3 +1,10 @@
+<?php
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+?>
 <div class="footer-columns-three-equal">
 
 	<div class="footer-column-one-three-equal">

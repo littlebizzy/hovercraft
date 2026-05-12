@@ -1,4 +1,9 @@
 <?php
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 global $post;
 
 // fallback to global post id if currentID is missing or invalid

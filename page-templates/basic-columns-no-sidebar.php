@@ -1,4 +1,11 @@
-<?php /* Template Name: Basic Columns (No Sidebar) */ ?>
+<?php
+/* Template Name: Basic Columns (No Sidebar) */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+?>
 <?php get_template_part( 'header' ); ?>
 <?php get_template_part( 'template-parts/header/header-basic' ); ?>
 <?php if ( hovercraft_should_show_main_content() ) : ?>

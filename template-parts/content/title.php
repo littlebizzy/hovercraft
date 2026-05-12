@@ -1,4 +1,10 @@
-<?php if ( ! hovercraft_is_title_hidden() ) : ?>
+<?php
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+ if ( ! hovercraft_is_title_hidden() ) : ?>
 	<?php
 	$h1_divider_display = get_theme_mod( 'hovercraft_h1_divider_display', 'none' );
 	$hovercraft_title_class = '';

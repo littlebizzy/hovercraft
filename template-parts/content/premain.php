@@ -1,4 +1,10 @@
-<?php if ( is_front_page() ) : ?>
+<?php
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+ if ( is_front_page() ) : ?>
 
 		<?php if ( is_active_sidebar( 'hovercraft_home_premain_top' ) ) : ?>
 		<div id="home-premain-top">

@@ -1,1 +1,7 @@
-<?php hovercraft_pagination_nav(); ?>
+<?php
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+ hovercraft_pagination_nav(); ?>

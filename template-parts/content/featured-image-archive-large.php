@@ -1,5 +1,10 @@
 <?php
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+
 $image_id = get_post_thumbnail_id( get_the_ID() );
 
 if ( empty( $image_id ) || is_singular( 'product' ) ) {

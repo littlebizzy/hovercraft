@@ -1,4 +1,9 @@
 <?php
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 // get current post id safely outside the loop
 $post_id = get_queried_object_id();
 

@@ -1,3 +1,10 @@
+<?php
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+?>
 <div class="columns">
 	
 	<?php if ( is_active_sidebar( 'hovercraft_column_one' ) ) : ?>

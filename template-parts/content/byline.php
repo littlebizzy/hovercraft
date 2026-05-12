@@ -1,4 +1,9 @@
 <?php
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 // skip post byline on product post type
 if ( is_singular( 'product' ) ) {
     return;

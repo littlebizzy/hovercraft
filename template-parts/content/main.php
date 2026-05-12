@@ -1,3 +1,10 @@
+<?php
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+?>
 <div id="main">
 <div class="inner">
     <?php get_template_part( 'template-parts/content/primary' ); ?>

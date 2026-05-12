@@ -1,4 +1,11 @@
-<?php /* Template Name: Mini Hero Gallery (No Sidebar) */ ?>
+<?php
+/* Template Name: Mini Hero Gallery (No Sidebar) */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+?>
 <?php get_template_part( 'header' ); ?>
 <?php get_template_part( 'template-parts/header/header-mini-hero' ); ?>
 
