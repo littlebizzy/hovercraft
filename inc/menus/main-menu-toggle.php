@@ -17,5 +17,3 @@ function hovercraft_main_menu_toggle( $item_output, $item, $depth, $args ) {
 	return $item_output;
 }
 add_filter( 'walker_nav_menu_start_el', 'hovercraft_main_menu_toggle', 10, 4 );
-
-// Ref: ChatGPT
