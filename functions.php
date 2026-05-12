@@ -64,6 +64,7 @@ require get_template_directory() . '/inc/custom-header.php';
 require get_template_directory() . '/inc/header-assets.php';
 require get_template_directory() . '/inc/header-cleanup.php';
 require get_template_directory() . '/inc/header-video.php';
+require get_template_directory() . '/inc/header/posthero.php';
 
 // images
 require get_template_directory() . '/inc/media/disable-responsive-images.php';
@@ -80,9 +81,6 @@ require get_template_directory() . '/inc/header/logo-default.php';
 
 // main content
 require get_template_directory() . '/inc/main-content.php';
-
-// posthero
-require get_template_directory() . '/inc/posthero.php';
 
 // meta
 require get_template_directory() . '/inc/meta-box.php';
