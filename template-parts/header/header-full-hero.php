@@ -59,15 +59,7 @@ $url_hovercraft_video = wp_get_attachment_url( $hovercraft_video_id );
 							}
 						?>"><?php echo esc_html( single_post_title( '', false ) ); ?></h1>
 					<?php endif; ?>
-					<?php if ( is_active_sidebar( 'hovercraft_hero_snippet' ) ) : ?>
-						<?php
-						add_filter( 'widget_title', '__return_false' );
-						dynamic_sidebar( 'hovercraft_hero_snippet' );
-						remove_filter( 'widget_title', '__return_false' );
-						?>
-					<?php else : ?>
-						<?php the_excerpt(); ?>
-					<?php endif; ?>
+					<?php get_template_part( 'template-parts/header/hero-snippet' ); ?>
 				</div><!-- hero-snippet -->
 			<?php endif; ?>
 
