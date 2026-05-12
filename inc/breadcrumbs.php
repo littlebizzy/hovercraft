@@ -4,7 +4,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// disable bbpress default breadcrumb
 add_filter( 'bbp_no_breadcrumb', '__return_true' );
 
 function hovercraft_breadcrumb() {
@@ -196,7 +195,6 @@ function hovercraft_breadcrumb_woocommerce() {
 function hovercraft_breadcrumb_cpt_fallback( $post_type ) {
 	$fallback = array(
 		'book' => array( 'url' => '/library/', 'label' => 'Library' ),
-		// add more custom types here
 	);
 
 	if ( isset( $fallback[ $post_type ] ) ) {
