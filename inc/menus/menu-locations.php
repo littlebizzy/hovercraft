@@ -4,24 +4,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// register menu locations
 function hovercraft_menu_locations() {
 	register_nav_menus(
 		array(
-			'main-menu' => 'Main Menu',
-			'mobile-menu' => 'Mobile Menu',
-			'cta-header-primary' => 'Header Primary CTA',
-			'cta-header-secondary' => 'Header Secondary CTA',
-			'cta-hero-primary' => 'Hero Primary CTA',
-			'cta-hero-secondary' => 'Hero Secondary CTA',
-			'cta-sidebar-callout' => 'Sidebar Callout CTA',
-			'cta-footer-callout' => 'Footer Callout CTA',
+			'main-menu' => esc_html__( 'Main Menu', 'hovercraft' ),
+			'mobile-menu' => esc_html__( 'Mobile Menu', 'hovercraft' ),
+			'cta-header-primary' => esc_html__( 'Header Primary CTA', 'hovercraft' ),
+			'cta-header-secondary' => esc_html__( 'Header Secondary CTA', 'hovercraft' ),
+			'cta-hero-primary' => esc_html__( 'Hero Primary CTA', 'hovercraft' ),
+			'cta-hero-secondary' => esc_html__( 'Hero Secondary CTA', 'hovercraft' ),
+			'cta-sidebar-callout' => esc_html__( 'Sidebar Callout CTA', 'hovercraft' ),
+			'cta-footer-callout' => esc_html__( 'Footer Callout CTA', 'hovercraft' ),
 		)
 	);
 }
 add_action( 'init', 'hovercraft_menu_locations' );
 
-// render mobile menu with fallback
 function hovercraft_mobile_menu_output() {
 	if ( has_nav_menu( 'mobile-menu' ) ) {
 		wp_nav_menu(
@@ -54,7 +52,6 @@ function hovercraft_mobile_menu_output() {
 	echo '</ul></div>';
 }
 
-// limit cta menus to one top-level link
 function hovercraft_limit_cta_menu_items( $items, $args ) {
 	$limited_locations = array(
 		'cta-header-primary',
@@ -84,6 +81,3 @@ function hovercraft_limit_cta_menu_items( $items, $args ) {
 	return $items;
 }
 add_filter( 'wp_nav_menu_objects', 'hovercraft_limit_cta_menu_items', 10, 2 );
-
-// https://hollypryce.com/custom-menu-wordpress/
-// https://www.isitwp.com/limit-amount-of-menu-items/
