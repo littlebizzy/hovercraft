@@ -4,10 +4,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// featured image support
 add_theme_support( 'post-thumbnails' );
 
-// featured image
 function hovercraft_post_image_large() {
 	global $post;
 
