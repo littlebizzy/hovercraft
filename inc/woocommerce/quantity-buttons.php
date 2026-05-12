@@ -4,12 +4,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// only run if woocommerce is active
 if ( ! class_exists( 'WooCommerce' ) ) {
 	return;
 }
 
-// enqueue quantity buttons script in footer with cache busting
 add_action( 'wp_enqueue_scripts', 'hovercraft_quantity_buttons' );
 
 function hovercraft_quantity_buttons() {
