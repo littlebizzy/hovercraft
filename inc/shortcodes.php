@@ -4,8 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// register simplified button shortcode
-function hovercraft_button_shortcode( $atts, $content = null ) {
+function hovercraft_button_shortcode( $atts, $content = '' ) {
 	$atts = shortcode_atts(
 		array(
 			'url' => '#',
@@ -30,6 +29,7 @@ function hovercraft_button_shortcode( $atts, $content = null ) {
 	if ( 'secondary' === $atts['style'] ) {
 		$style_class = 'button-secondary';
 	}
+
 	$custom_class = sanitize_html_class( $atts['class'] );
 	$class_attr = trim( $style_class . ' ' . $custom_class );
 	$rel = sanitize_text_field( $atts['rel'] );
@@ -43,10 +43,10 @@ function hovercraft_button_shortcode( $atts, $content = null ) {
 	if ( $rel ) {
 		$rel_attr = ' rel="' . esc_attr( $rel ) . '"';
 	}
+
 	$button_content = wp_kses_post( do_shortcode( $content ) );
 
 	return '<a href="' . esc_url( $atts['url'] ) . '" target="' . esc_attr( $target ) . '" class="' . esc_attr( $class_attr ) . '"' . $rel_attr . '>' . $button_content . '</a>';
 }
 add_shortcode( 'button', 'hovercraft_button_shortcode' );
 add_shortcode( 'hovercraft_button', 'hovercraft_button_shortcode' );
-
