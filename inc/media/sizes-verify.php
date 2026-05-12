@@ -4,8 +4,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// large should be 1200 x whatever and medium 480 x whatever
-// medium-large 768 x auto (0) is also used by HoverCraft
 function hovercraft_verify_media_sizes() {
 	$large_width = absint( get_option( 'large_size_w' ) );
 	$medium_width = absint( get_option( 'medium_size_w' ) );
@@ -23,13 +21,4 @@ function hovercraft_verify_media_sizes() {
 	<?php endif; ?>
 	<?php
 }
-
 add_action( 'admin_notices', 'hovercraft_verify_media_sizes' );
-
-// https://www.ilovewp.com/wordpress-image-sizes-a-ticking-time-bomb/
-// https://www.fixrunner.com/how-to-fix-media-query-not-working-in-wordpress/
-// https://stackoverflow.com/questions/46236906/wordpress-redux-framework-media-queries
-// https://www.freecodecamp.org/news/css-media-queries-breakpoints-media-types-standard-resolutions-and-more/
-// https://developer.wordpress.org/reference/functions/get_option/
-// https://wordpress.stackexchange.com/questions/216595/change-size-and-crop-medium-large-images
-// https://wordpress.org/support/topic/medium_large-image-size-is-still-generated-even-if-set-to-0/
