@@ -50,6 +50,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 @media screen and (max-width: 1200px) {
+#tiles-narrow {
+	width: 100%;
+	padding: 0px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+#tiles-narrow {
+	width: 100%;
+	display: grid;
+	grid-template-columns: repeat(2, minmax(200px, 1fr));
+	gap: 30px;
+	}
+}
+
+@media screen and (max-width: 1200px) {
 .tile {
 	width: 100%;
 	margin-bottom: 30px;
