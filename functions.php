@@ -107,6 +107,7 @@ require get_template_directory() . '/inc/misc/git-updater.php';
 require get_template_directory() . '/inc/widgets/widget-areas.php';
 
 // woocommerce
+require get_template_directory() . '/inc/woocommerce/woocommerce-theme-support.php';
 require get_template_directory() . '/inc/woocommerce/quantity-buttons.php';
 require get_template_directory() . '/inc/woocommerce/woocommerce-wrappers.php';
 
