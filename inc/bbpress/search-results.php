@@ -4,6 +4,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+if ( ! function_exists( 'bbpress' ) ) {
+	return;
+}
+
 function hovercraft_bbp_topic_search( $topic_search ) {
 	$topic_search['exclude_from_search'] = false;
 
