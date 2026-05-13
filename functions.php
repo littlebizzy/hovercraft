@@ -46,7 +46,7 @@ require get_template_directory() . '/inc/customizer/customizer.php';
 require get_template_directory() . '/inc/customizer/register-blog-category.php';
 require get_template_directory() . '/inc/customizer/register-portal-category.php';
 require get_template_directory() . '/inc/customizer/register-faq-category.php';
-require get_template_directory() . '/inc/customizer/fonts/helpers.php';
+require get_template_directory() . '/inc/customizer/fonts/font-helpers.php';
 require get_template_directory() . '/inc/customizer/fonts/google-fonts.php';
 require get_template_directory() . '/inc/customizer/fonts/google-fonts-multilingual.php';
 
