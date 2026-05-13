@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // color controls
-require get_template_directory() . '/inc/customizer/colors/base.php';
-require get_template_directory() . '/inc/customizer/colors/header-hero.php';
-require get_template_directory() . '/inc/customizer/colors/content-widgets.php';
-require get_template_directory() . '/inc/customizer/colors/footer.php';
+require get_template_directory() . '/inc/customizer/colors/color-base.php';
+require get_template_directory() . '/inc/customizer/colors/color-header-hero.php';
+require get_template_directory() . '/inc/customizer/colors/color-content-widgets.php';
+require get_template_directory() . '/inc/customizer/colors/color-footer.php';

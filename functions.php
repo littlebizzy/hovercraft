@@ -31,12 +31,12 @@ require get_template_directory() . '/inc/bbpress/quick-tags.php';
 require get_template_directory() . '/inc/bbpress/search-results.php';
 
 // breadcrumbs
-require get_template_directory() . '/inc/breadcrumbs.php';
+require get_template_directory() . '/inc/navigation/breadcrumbs.php';
 
 // categories
-require get_template_directory() . '/inc/bullets-category.php';
-require get_template_directory() . '/inc/portal-category.php';
-require get_template_directory() . '/inc/hide-certain-categories.php';
+require get_template_directory() . '/inc/taxonomy/category-bullets.php';
+require get_template_directory() . '/inc/taxonomy/category-portal.php';
+require get_template_directory() . '/inc/taxonomy/category-hide-certain.php';
 
 // comments
 require get_template_directory() . '/inc/comments/comment-fields.php';
@@ -51,13 +51,13 @@ require get_template_directory() . '/inc/customizer/fonts/google-fonts.php';
 require get_template_directory() . '/inc/customizer/fonts/google-fonts-multilingual.php';
 
 // css
-require get_template_directory() . '/inc/css-generator.php';
+require get_template_directory() . '/inc/css/css-generator.php';
 
 // fonts
-require get_template_directory() . '/inc/google-fonts.php';
+require get_template_directory() . '/inc/fonts/google-fonts.php';
 
 // footer
-require get_template_directory() . '/inc/footer-callout.php';
+require get_template_directory() . '/inc/footer/footer-callout.php';
 
 // header
 require get_template_directory() . '/inc/header/custom-header.php';
@@ -75,33 +75,33 @@ require get_template_directory() . '/inc/media/sizes-verify.php';
 require get_template_directory() . '/inc/media/sizes-insert.php';
 
 // license
-require_once get_template_directory() . '/inc/license.php';
+require_once get_template_directory() . '/inc/license/license.php';
 
 // main content
-require get_template_directory() . '/inc/main-content.php';
+require get_template_directory() . '/inc/content/main-content.php';
 
 // meta
-require get_template_directory() . '/inc/meta-box.php';
-require get_template_directory() . '/inc/open-graph.php';
+require get_template_directory() . '/inc/meta/meta-box.php';
+require get_template_directory() . '/inc/meta/open-graph.php';
 
 // pagination
-require get_template_directory() . '/inc/pagination.php';
+require get_template_directory() . '/inc/navigation/pagination.php';
 
 // search
 require get_template_directory() . '/inc/ui/full-screen-search.php';
 
 // sidebar
-require get_template_directory() . '/inc/sidebar-callout.php';
+require get_template_directory() . '/inc/sidebar/sidebar-callout.php';
 
 // tags
-require get_template_directory() . '/inc/tags-list.php';
+require get_template_directory() . '/inc/taxonomy/tags-list.php';
 
 // title
-require get_template_directory() . '/inc/title-homepage.php';
-require get_template_directory() . '/inc/title-tag.php';
+require get_template_directory() . '/inc/title/title-homepage.php';
+require get_template_directory() . '/inc/title/title-tag.php';
 
 // updates
-require get_template_directory() . '/inc/git-updater.php';
+require get_template_directory() . '/inc/updates/git-updater.php';
 
 // widget areas
 require get_template_directory() . '/inc/widgets/widget-areas.php';
@@ -111,11 +111,11 @@ require get_template_directory() . '/inc/woocommerce/quantity-buttons.php';
 require get_template_directory() . '/inc/woocommerce/woocommerce-support.php';
 
 // shortcodes
-require get_template_directory() . '/inc/shortcodes.php';
+require get_template_directory() . '/inc/shortcodes/theme-shortcodes.php';
 
 // utility
-require get_template_directory() . '/inc/custom-post-test.php';
-require get_template_directory() . '/inc/remove-generator.php';
+require get_template_directory() . '/inc/utility/custom-post-test.php';
+require get_template_directory() . '/inc/utility/remove-generator.php';
 
 // page excerpts
 add_post_type_support( 'page', 'excerpt' );

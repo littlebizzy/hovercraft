@@ -38,7 +38,7 @@ msgstr ""
 msgid "My Cart"
 msgstr ""
 
-#: inc/breadcrumbs.php:26
+#: inc/navigation/breadcrumbs.php:26
 msgid "Home"
 msgstr ""
 
