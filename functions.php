@@ -75,7 +75,7 @@ require get_template_directory() . '/inc/media/sizes-verify.php';
 require get_template_directory() . '/inc/media/sizes-insert.php';
 
 // license
-require_once get_template_directory() . '/inc/license/license.php';
+require_once get_template_directory() . '/inc/misc/license.php';
 
 // main content
 require get_template_directory() . '/inc/content/main-content.php';
@@ -97,11 +97,11 @@ require get_template_directory() . '/inc/sidebar/sidebar-callout.php';
 require get_template_directory() . '/inc/taxonomy/tags-list.php';
 
 // title
-require get_template_directory() . '/inc/title/title-homepage.php';
-require get_template_directory() . '/inc/title/title-tag.php';
+require get_template_directory() . '/inc/content/title-homepage.php';
+require get_template_directory() . '/inc/content/title-tag.php';
 
 // updates
-require get_template_directory() . '/inc/updates/git-updater.php';
+require get_template_directory() . '/inc/misc/git-updater.php';
 
 // widget areas
 require get_template_directory() . '/inc/widgets/widget-areas.php';
@@ -114,8 +114,8 @@ require get_template_directory() . '/inc/woocommerce/woocommerce-support.php';
 require get_template_directory() . '/inc/shortcodes/theme-shortcodes.php';
 
 // utility
-require get_template_directory() . '/inc/utility/custom-post-test.php';
-require get_template_directory() . '/inc/utility/remove-generator.php';
+require get_template_directory() . '/inc/misc/custom-post-test.php';
+require get_template_directory() . '/inc/header/remove-generator.php';
 
 // page excerpts
 add_post_type_support( 'page', 'excerpt' );
