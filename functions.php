@@ -39,7 +39,7 @@ require get_template_directory() . '/inc/portal-category.php';
 require get_template_directory() . '/inc/hide-certain-categories.php';
 
 // comments
-require get_template_directory() . '/inc/comments/fields.php';
+require get_template_directory() . '/inc/comments/comment-fields.php';
 
 // customizer
 require get_template_directory() . '/inc/customizer/customizer.php';
@@ -104,11 +104,11 @@ require get_template_directory() . '/inc/title-tag.php';
 require get_template_directory() . '/inc/git-updater.php';
 
 // widget areas
-require get_template_directory() . '/inc/widgets/areas.php';
+require get_template_directory() . '/inc/widgets/widget-areas.php';
 
 // woocommerce
 require get_template_directory() . '/inc/woocommerce/quantity-buttons.php';
-require get_template_directory() . '/inc/woocommerce/support.php';
+require get_template_directory() . '/inc/woocommerce/woocommerce-support.php';
 
 // shortcodes
 require get_template_directory() . '/inc/shortcodes.php';
