@@ -4,6 +4,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+if ( ! function_exists( 'bbpress' ) ) {
+	return;
+}
+
 // remove all reply links from both topics and individual replies
 function hovercraft_remove_all_reply_links( $links ) {
 	if ( isset( $links['reply'] ) ) {
