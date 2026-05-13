@@ -108,7 +108,7 @@ require get_template_directory() . '/inc/widgets/widget-areas.php';
 
 // woocommerce
 require get_template_directory() . '/inc/woocommerce/quantity-buttons.php';
-require get_template_directory() . '/inc/woocommerce/woocommerce-support.php';
+require get_template_directory() . '/inc/woocommerce/woocommerce-wrappers.php';
 
 // shortcodes
 require get_template_directory() . '/inc/shortcodes/theme-shortcodes.php';
