@@ -62,6 +62,20 @@ Business data, SEO systems, schema systems, review data, FAQ data, location data
 
 The theme may output clean markup and support narrow presentation-related metadata, but it should not become the long-term storage layer for business or SEO data.
 
+### Comment Policy
+
+Comments should make HoverCraft easier to scan during audits without adding noise. Use comments to explain real code sections, template structure, or intentional exceptions.
+
+- Use concise, helpful comments only where they improve readability.
+- Keep normal PHP comments lowercase and single-line using `//`.
+- Do not use PHP docblocks or multi-line PHP comments for ordinary code.
+- Keep required WordPress file headers when WordPress needs them, including `Template Name` headers.
+- Add `ABSPATH` guards to PHP files when appropriate.
+- Add trailing comments to major template closers, including major HTML closing tags and PHP `endif`, `endwhile`, `endforeach`, `endfor`, and `endswitch` closers.
+- Avoid trailing comments on ordinary PHP logic unless the comment marks a template closer.
+- Use normal CSS comments inside raw CSS or PHP-generated CSS, because CSS does not support `//` comments.
+- Remove dead commented-out code instead of preserving it as a comment.
+
 ### Page Builder Policy
 
 HoverCraft is intentionally anti-page-builder. It should not chase page-builder parity or add generic drag-and-drop section systems.
