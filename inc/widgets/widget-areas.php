@@ -4,6 +4,28 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// register widget area
+function hovercraft_register_widget_area( $sidebar ) {
+	$before_title = '<h3 class="widget-title">';
+	$after_title = '</h3>';
+
+	if ( isset( $sidebar['title_tag'] ) ) {
+		$before_title = '<' . $sidebar['title_tag'] . ' class="widget-title">';
+		$after_title = '</' . $sidebar['title_tag'] . '>';
+	}
+
+	register_sidebar(
+		array(
+			'name' => $sidebar['name'],
+			'id' => $sidebar['id'],
+			'before_widget' => '<div class="' . $sidebar['class'] . ' widget-wrapper">',
+			'after_widget' => '</div>',
+			'before_title' => $before_title,
+			'after_title' => $after_title,
+		)
+	);
+}
+
 // register theme widget areas
 function hovercraft_register_sidebars() {
 	$sidebars = array(
@@ -151,24 +173,7 @@ function hovercraft_register_sidebars() {
 
 	// register each sidebar
 	foreach ( $sidebars as $sidebar ) {
-		$before_title = '<h3 class="widget-title">';
-		$after_title = '</h3>';
-
-		if ( isset( $sidebar['title_tag'] ) ) {
-			$before_title = '<' . $sidebar['title_tag'] . ' class="widget-title">';
-			$after_title = '</' . $sidebar['title_tag'] . '>';
-		}
-
-		register_sidebar(
-			array(
-				'name' => $sidebar['name'],
-				'id' => $sidebar['id'],
-				'before_widget' => '<div class="' . $sidebar['class'] . ' widget-wrapper">',
-				'after_widget' => '</div>',
-				'before_title' => $before_title,
-				'after_title' => $after_title,
-			)
-		);
+		hovercraft_register_widget_area( $sidebar );
 	}
 }
 add_action( 'widgets_init', 'hovercraft_register_sidebars' );
