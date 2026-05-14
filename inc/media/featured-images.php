@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// loads media featured images logic
+// featured image support
 
 add_theme_support( 'post-thumbnails' );
 

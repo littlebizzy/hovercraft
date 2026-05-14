@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// loads taxonomy category hide certain logic
+// hidden category rules
 
 add_action( 'pre_get_posts', 'hovercraft_hide_certain_categories' );
 

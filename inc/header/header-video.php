@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// loads header header video logic
+// hero video helpers
 
 function hovercraft_video( $wp_customize ) {
 	$wp_customize->add_setting(

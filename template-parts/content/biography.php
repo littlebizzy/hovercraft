@@ -22,13 +22,13 @@ $hovercraft_biography = get_theme_mod( 'hovercraft_biography', 'native_posts_onl
 						}
 						?>
 					</div>
-				<?php endif; ?>
+				<?php endif; // end hovercraft-byline-photo ?>
 				<h3 class="biography-name"><?php echo esc_html( get_the_author_meta( 'display_name' ) ); ?></h3>
 				<p class="biography-description"><?php echo nl2br( esc_html( get_the_author_meta( 'description' ) ) ); ?></p>
 				<div class="clear"></div>
 			</div><!-- author -->
 
-		<?php endif; ?>
+		<?php endif; // end post type ?>
 	<?php elseif ( $hovercraft_biography === 'all_post_types' ) : ?>
 		<?php if ( ( hovercraft_is_custom_post_type() ) || ( get_post_type() === 'post' ) ) : ?>
 
@@ -43,14 +43,14 @@ $hovercraft_biography = get_theme_mod( 'hovercraft_biography', 'native_posts_onl
 						}
 						?>
 					</div>
-				<?php endif; ?>
+				<?php endif; // end hovercraft-byline-photo ?>
 				<h3 class="biography-name"><?php echo esc_html( get_the_author_meta( 'display_name' ) ); ?></h3>
 				<p class="biography-description"><?php echo nl2br( esc_html( get_the_author_meta( 'description' ) ) ); ?></p>
 				<div class="clear"></div>
 			</div><!-- author -->
 
-		<?php endif; ?>
-	<?php endif; ?>
-<?php endif; ?>
+		<?php endif; // end post type ?>
+	<?php endif; // end biography setting ?>
+<?php endif; // end biography setting ?>
 
 <?php

@@ -18,15 +18,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 				<?php if ( ! empty( $url_featured_image ) && ( ! is_singular( 'product' ) ) ) : ?>
 					<img class="featured-image" src="<?php echo esc_url( $url_featured_image ); ?>" />
-				<?php endif; ?>
+				<?php endif; // end url-featured-image ?>
 
 				<?php
 				if ( get_post_type() === 'post' ) {
 					echo esc_html( get_the_time( get_option( 'date_format' ) ) );
 				}
 				?>
-			<?php endif; ?>
-		<?php endif; ?><!-- singular -->
+			<?php endif; // end basic page title ?>
+		<?php endif; ?><!-- end singular -->
 		
 		<?php if ( have_posts() ) : ?>
 			<?php while ( have_posts() ) : ?>
@@ -37,10 +37,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<?php the_excerpt(); ?>
 				<?php else : ?>
 					<?php the_content(); ?>
-				<?php endif; ?>
+				<?php endif; // end is_home ?>
 			
 			<?php endwhile; ?>
-		<?php endif; ?><!-- the loop -->
+		<?php endif; ?><!-- end the loop -->
 	
 	<div class="clear"></div>
 	<?php hovercraft_pagination_nav(); ?>	

@@ -54,15 +54,15 @@ if ( ! comments_open() && ! get_comments_number() ) {
                     <?php next_comments_link( esc_html__( 'Newer Comments &rarr;', 'hovercraft' ) ); ?>
                 </div>
             </nav>
-        <?php endif; ?>
+        <?php endif; // end comment pagination ?>
 
-    <?php endif; ?>
+    <?php endif; // end have_comments ?>
 
     <?php if ( ! comments_open() && get_comments_number() ) : ?>
         <p class="no-comments">
             <?php esc_html_e( 'Comments are closed.', 'hovercraft' ); ?>
         </p>
-    <?php endif; ?>
+    <?php endif; // end comments_open ?>
 
     <?php
     // display the comment form

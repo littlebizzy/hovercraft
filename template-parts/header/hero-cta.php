@@ -25,5 +25,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 	?>
 </div><!-- cta-hero-wrapper -->
-<?php endif; ?>
-<?php endif; ?>
+<?php endif; // end cta hero menus ?>
+<?php endif; // end is_front_page ?>

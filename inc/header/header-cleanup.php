@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// loads header header cleanup logic
+// header cleanup hooks
 
 function hovercraft_remove_feed_links() {
 	remove_theme_support( 'automatic-feed-links' );

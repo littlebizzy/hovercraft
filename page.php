@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<div id="primary">
 			<?php else : ?>
 				<div id="primary-wide">
-			<?php endif; ?>
+			<?php endif; // end show-sidebar ?>
 
 						<div id="content-wrapper">
 
@@ -39,11 +39,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<?php if ( $show_sidebar ) : ?>
 				<?php get_template_part( 'sidebar' ); ?>
-			<?php endif; ?>
+			<?php endif; // end show-sidebar ?>
 
 			<div class="clear"></div>
 		</div><!-- inner -->
 	</div><!-- main -->
-<?php endif; ?>
+<?php endif; // end main content ?>
 
 <?php get_template_part( 'footer' ); ?>

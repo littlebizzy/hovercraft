@@ -24,8 +24,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<div id="primary-center">
 			<?php elseif ( $hovercraft_primary_width === 'wide' ) : ?>
 				<div id="primary-wide">
-			<?php endif; ?>
-		<?php endif; ?>
+			<?php endif; // end primary width ?>
+		<?php endif; // end sidebar display ?>
 		
 		<div id="content-wrapper">
 			
@@ -51,7 +51,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						?>
 						<?php if ( $hovercraft_social_sharing === 'top_of_post' || $hovercraft_social_sharing === 'top_and_bottom_of_post' ) : ?>
 							<?php get_template_part( 'template-parts/content/social-sharing' ); ?>
-						<?php endif; ?>
+						<?php endif; // end social sharing ?>
 
 						<?php get_template_part( 'template-parts/content/byline-after' ); ?>
 			
@@ -70,18 +70,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 						?>
 						<?php if ( $hovercraft_social_sharing === 'top_of_post' || $hovercraft_social_sharing === 'top_and_bottom_of_post' ) : ?>
 							<?php get_template_part( 'template-parts/content/social-sharing' ); ?>
-						<?php endif; ?>
+						<?php endif; // end social sharing ?>
 
 						<?php get_template_part( 'template-parts/content/byline-after' ); ?>
 
 						<?php get_template_part( 'template-parts/content/featured-image' ); ?>
 							
-					<?php endif; ?>
+					<?php endif; // end featured image position ?>
 
 						<?php the_content(); ?>
 		
 				<?php endwhile; ?>
-			<?php endif; ?><!-- the loop -->
+			<?php endif; ?><!-- end the loop -->
 
 					<?php get_template_part( 'template-parts/content/loop-after' ); ?>
 
@@ -90,7 +90,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					?>
 					<?php if ( $hovercraft_social_sharing === 'bottom_of_post' || $hovercraft_social_sharing === 'top_and_bottom_of_post' ) : ?>
 						<?php get_template_part( 'template-parts/content/social-sharing' ); ?>
-					<?php endif; ?>
+					<?php endif; // end social sharing ?>
 
 					<?php get_template_part( 'template-parts/content/related-posts' ); ?>
 					
@@ -116,7 +116,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php $hovercraft_sidebar_appears = get_theme_mod( 'hovercraft_sidebar_appears', 'everywhere' ); ?>
 		<?php if ( $hovercraft_sidebar_appears === 'everywhere' || $hovercraft_sidebar_appears === 'posts_only' ) : ?>
 			<?php get_template_part( 'sidebar' ); ?>
-		<?php endif; ?>
+		<?php endif; // end sidebar display ?>
 		
     	<div class="clear"></div>
 	</div><!-- inner -->

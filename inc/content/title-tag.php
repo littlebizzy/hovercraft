@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// loads content title tag logic
+// tag archive title
 
 function hovercraft_title_tag() {
 	add_theme_support( 'title-tag' );

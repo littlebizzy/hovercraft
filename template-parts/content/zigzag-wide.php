@@ -70,15 +70,15 @@ if ( ! $has_meta_rows && ! $has_sidebar_rows ) {
 
 				<?php if ( $image_id ) : ?>
 					<?php echo wp_get_attachment_image( $image_id, 'large' ); ?>
-				<?php endif; ?>
+				<?php endif; // end image-id ?>
 
 				<?php if ( $title ) : ?>
 					<h3><?php echo esc_html( $title ); ?></h3>
-				<?php endif; ?>
+				<?php endif; // end title ?>
 
 				<?php if ( $text ) : ?>
 					<?php echo wpautop( esc_html( $text ) ); ?>
-				<?php endif; ?>
+				<?php endif; // end text ?>
 
 				<?php if ( $link_url ) : ?>
 					<p>
@@ -86,7 +86,7 @@ if ( ! $has_meta_rows && ! $has_sidebar_rows ) {
 							<?php echo esc_html( $link_text ? $link_text : 'Read more' ); ?>
 						</a>
 					</p>
-				<?php endif; ?>
+				<?php endif; // end link-url ?>
 
 				<div class="clear"></div>
 
@@ -107,6 +107,6 @@ if ( ! $has_meta_rows && ! $has_sidebar_rows ) {
 				<div class="clear"></div>
 			</div>
 		<?php endforeach; ?>
-	<?php endif; ?>
+	<?php endif; // end has-meta-rows ?>
 
 </div>

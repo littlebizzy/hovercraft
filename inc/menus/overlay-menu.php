@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// loads menus overlay menu logic
+// overlay menu assets
 
 function hovercraft_overlay_menu() {
 	wp_enqueue_script(

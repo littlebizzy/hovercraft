@@ -22,8 +22,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<div id="primary-center">
 		<?php elseif ( $hovercraft_primary_width === 'wide' ) : ?>
 			<div id="primary-wide">
-		<?php endif; ?>
-	<?php endif; ?>
+		<?php endif; // end primary width ?>
+	<?php endif; // end sidebar display ?>
 
 		<div id="content-wrapper">
 									
@@ -87,7 +87,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<?php endwhile; ?>
 					<?php else : ?>
 						<p><?php esc_html_e( 'No posts found.', 'hovercraft' ); ?></p>
-					<?php endif; ?>
+					<?php endif; // end the loop ?>
 				<?php else : ?>
 					
 				<h1><?php echo esc_html( get_the_archive_title() ); ?></h1>
@@ -121,8 +121,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<?php endwhile; ?>
 				<?php else : ?>
 					<p><?php esc_html_e( 'No posts found.', 'hovercraft' ); ?></p>
-				<?php endif; ?><!-- the loop -->
-				<?php endif; ?>
+				<?php endif; ?><!-- end the loop -->
+				<?php endif; // end the loop ?>
 					
 				<?php get_template_part( 'template-parts/content/pagination' ); ?>
 						
@@ -136,7 +136,7 @@ if ( ! defined( 'ABSPATH' ) ) {
     <?php $hovercraft_sidebar_appears = get_theme_mod( 'hovercraft_sidebar_appears', 'everywhere' ); ?>
 	<?php if ( $hovercraft_sidebar_appears === 'everywhere' ) : ?>
 		<?php get_template_part( 'sidebar' ); ?>
-	<?php endif; ?>
+	<?php endif; // end sidebar display ?>
     
 <div class="clear"></div>
 </div><!-- inner -->

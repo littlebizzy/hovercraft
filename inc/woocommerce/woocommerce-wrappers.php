@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// loads woocommerce woocommerce wrappers logic
+// woocommerce wrappers
 
 if ( ! class_exists( 'WooCommerce' ) ) {
 	return;

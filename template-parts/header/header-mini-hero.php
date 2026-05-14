@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				echo esc_html( single_cat_title( '', false ) );
 			}
 		?></h1>
-		<?php endif; ?>
+		<?php endif; // end title display ?>
 
 		<?php
 		$portal_category = get_theme_mod( 'hovercraft_portal_category', 'none' );
@@ -54,15 +54,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 				?></button>
 			</div>
 		</form>
-		<?php endif; ?>
+		<?php endif; // end category ?>
 
 		<?php if ( is_front_page() ) : ?>
 			<?php if ( is_active_sidebar( 'hovercraft_hero_snippet' ) || has_excerpt() ) : ?>
 				<div class="hero-snippet">
 					<?php get_template_part( 'template-parts/header/hero-snippet' ); ?>
 				</div>
-			<?php endif; ?>
-		<?php endif; ?>
+			<?php endif; // end hovercraft-hero-snippet sidebar ?>
+		<?php endif; // end is_front_page ?>
 
 		<?php get_template_part( 'template-parts/header/hero-cta' ); ?>
 
@@ -70,7 +70,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php if ( has_post_thumbnail() && get_the_post_thumbnail_caption() ) : ?>
 		<div class="mini-hero-caption"><?php echo esc_html( get_the_post_thumbnail_caption() ); ?></div>
-	<?php endif; ?>
+	<?php endif; // end featured image caption ?>
 
 	<div class="clear"></div>
 </div><!-- inner -->

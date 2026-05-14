@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<h4><a href="<?php echo esc_url( get_permalink() ); ?>"><?php echo esc_html( get_the_title() ); ?></a></h4>
 				<?php the_excerpt(); ?>
 		
-				<?php endwhile; endif; ?><!-- the loop -->
+				<?php endwhile; endif; ?><!-- end the loop -->
 					
 				<?php get_template_part( 'template-parts/content/pagination' ); ?>
 						

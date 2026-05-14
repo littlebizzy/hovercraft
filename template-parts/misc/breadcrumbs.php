@@ -16,5 +16,5 @@ $hovercraft_breadcrumbs = get_theme_mod( 'hovercraft_breadcrumbs', 'sitewide' );
 		<div class="breadcrumbs">
 			<?php hovercraft_breadcrumb(); ?>
 		</div><!-- breadcrumbs -->
-	<?php endif; ?>
-<?php endif; ?>
+	<?php endif; // end is_front_page ?>
+<?php endif; // end breadcrumbs ?>

@@ -15,4 +15,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 	?>
 <?php else : ?>
 	<?php the_excerpt(); ?>
-<?php endif; ?>
+<?php endif; // end hovercraft-hero-snippet sidebar ?>

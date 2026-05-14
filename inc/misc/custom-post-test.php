@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// loads misc custom post test logic
+// custom post type helper
 
 function hovercraft_is_custom_post_type( $post = null ) {
 	$all_custom_post_types = get_post_types( array( '_builtin' => false ) );

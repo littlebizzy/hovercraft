@@ -51,16 +51,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 							dynamic_sidebar( 'hovercraft_preheader_right' );
 							remove_filter( 'widget_title', '__return_false' );
 							?>
-						<?php endif; ?>
+						<?php endif; // end hovercraft-preheader-left sidebar ?>
 					</div>
 
-				<?php endif; ?>
+				<?php endif; // end hovercraft-preheader-left sidebar ?>
 
 				<div class="clear"></div>
 
 			</div><!-- inner -->
 		</div><!-- preheader -->
-	<?php endif; ?><!-- if preheader widgets active -->
+	<?php endif; ?><!-- end preheader widgets -->
 
 	<?php get_template_part( 'template-parts/header/navigation' ); ?>
 

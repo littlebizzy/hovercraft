@@ -32,7 +32,7 @@ $author_id = isset( $post ) && is_object( $post ) ? $post->post_author : 0;
 		<span class="byline-separator">|</span>
 		<span class="post-published"><?php echo esc_html__( 'Published on', 'hovercraft' ) . ' ' . esc_html( get_the_date( 'M j, Y' ) ); ?></span>
 		<span class="post-updated"><?php echo esc_html__( 'Updated on', 'hovercraft' ) . ' ' . esc_html( get_the_modified_time( 'M j, Y' ) ); ?></span>
-	<?php endif; ?>
+	<?php endif; // end byline date ?>
 </div><!-- post-byline-archive -->
 
 <?php

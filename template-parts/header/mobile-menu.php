@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<i class="material-icons close">close</i>
 		<?php elseif ( 'font_awesome_version_6' === $hovercraft_layout_icons ) : ?>
 			<i class="fa-solid fa-x"></i>
-		<?php endif; ?>
+		<?php endif; // end layout icons ?>
 	</button>
 
 	<div class="overlay-content">

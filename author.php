@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// loads the author template
+// author template fallback
 
  get_template_part( 'header' ); ?>
 <?php get_template_part( 'template-parts/header/header-basic' ); ?>

@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// loads menus main menu logic
+// main menu setup
 
 function hovercraft_main_menu() {
 	wp_enqueue_script(

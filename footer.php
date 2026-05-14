@@ -12,36 +12,36 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="inner">
 			<?php dynamic_sidebar( 'hovercraft_home_postmain_top' ); ?>
 			<div class="clear"></div>
-		</div><!--inner -->
+		</div><!-- inner -->
 	</div><!-- home-postmain-top -->
-<?php endif; ?>
+<?php endif; // end is_front_page ?>
 
 <?php if ( is_active_sidebar( 'hovercraft_home_postmain_bottom' ) && is_front_page() ) : ?>
 	<div id="home-postmain-bottom">
 		<div class="inner">
 			<?php dynamic_sidebar( 'hovercraft_home_postmain_bottom' ); ?>
 			<div class="clear"></div>
-		</div><!--inner -->
+		</div><!-- inner -->
 	</div><!-- home-postmain-bottom -->
-<?php endif; ?>
+<?php endif; // end is_front_page ?>
 
 <?php if ( is_active_sidebar( 'hovercraft_prefooter_top' ) ) : ?>
 	<div id="prefooter-top">
 		<div class="inner">
 			<?php dynamic_sidebar( 'hovercraft_prefooter_top' ); ?>
 			<div class="clear"></div>
-		</div><!--inner -->
+		</div><!-- inner -->
 	</div><!-- prefooter-top -->
-<?php endif; ?>
+<?php endif; // end hovercraft-prefooter-top sidebar ?>
 
 <?php if ( is_active_sidebar( 'hovercraft_prefooter_bottom' ) ) : ?>
 	<div id="prefooter-bottom">
 		<div class="inner">
 			<?php dynamic_sidebar( 'hovercraft_prefooter_bottom' ); ?>
 			<div class="clear"></div>
-		</div><!--inner -->
+		</div><!-- inner -->
 	</div><!-- prefooter-bottom -->
-<?php endif; ?>
+<?php endif; // end hovercraft-prefooter-bottom sidebar ?>
 
 <?php if ( is_active_sidebar( 'hovercraft_footer_one' ) || is_active_sidebar( 'hovercraft_footer_two' ) || is_active_sidebar( 'hovercraft_footer_three' ) ) : ?>
 	<div id="footer">
@@ -64,9 +64,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 			?>
 
 			<div class="clear"></div>
-		</div><!--inner -->
+		</div><!-- inner -->
 	</div><!-- footer -->
-<?php endif; ?>
+<?php endif; // end hovercraft-footer-one sidebar ?>
 
 <?php
 // get desktop copyright width setting
@@ -88,7 +88,7 @@ if ( $hovercraft_copyright_width === 'full' ) {
 			<?php $license_key = get_theme_mod( 'hovercraft_license_key' ); ?>
 			<?php if ( empty( $license_key ) || ( function_exists( 'hovercraft_validate_license_key' ) && ! hovercraft_validate_license_key( $license_key ) ) ) : ?>
 				Powered by <a rel="nofollow" href="https://hovercraft.vip">HoverCraft</a>.
-			<?php endif; ?>
+			<?php endif; // end missing license key ?>
 			<div class="clear"></div>
 		</div><!-- copyright-left -->
 
@@ -102,7 +102,7 @@ if ( $hovercraft_copyright_width === 'full' ) {
 				?>
 				<div class="clear"></div>
 			</div><!-- copyright-right -->
-		<?php endif; ?>
+		<?php endif; // end hovercraft-copyright sidebar ?>
 
 		<?php
 		// scroll to top link logic
@@ -112,7 +112,7 @@ if ( $hovercraft_copyright_width === 'full' ) {
 			<div class="scrollup-wrapper">
 				<span class="scrollup-link"><?php esc_html_e( 'Back to top', 'hovercraft' ); ?></span>
 			</div><!-- scrollup-wrapper -->
-		<?php endif; ?>
+		<?php endif; // end hovercraft-scroll-to-top ?>
 
 		<div class="clear"></div>
 	</div><!-- inner -->
@@ -126,7 +126,7 @@ if ( $hovercraft_copyright_width === 'full' ) {
 		<button type="button" class="close"><i class="material-icons close">close</i></button>
 	<?php elseif ( $hovercraft_layout_icons === 'font_awesome_version_6' ) : ?>
 		<button type="button" class="close"><i class="fa-solid fa-x"></i></button>
-	<?php endif; ?>
+	<?php endif; // end layout icons ?>
 
 	<form role="search" method="get" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 		<div class="input-container">
@@ -136,7 +136,7 @@ if ( $hovercraft_copyright_width === 'full' ) {
 					<i class="material-icons search">search</i>
 				<?php elseif ( $hovercraft_layout_icons === 'font_awesome_version_6' ) : ?>
 					<i class="fa-solid fa-search"></i>
-				<?php endif; ?>
+				<?php endif; // end layout icons ?>
 			</button>
 		</div><!-- input-container -->
 	</form><!-- searchform -->

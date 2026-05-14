@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// renders the content title template part
+// content title display
 
  if ( ! hovercraft_is_title_hidden() ) : ?>
 	<?php
@@ -16,4 +16,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 	?>
 	<h1 class="<?php echo esc_attr( $hovercraft_title_class ); ?>"><?php echo esc_html( get_the_title() ); ?></h1>
-<?php endif; ?>
+<?php endif; // end title display ?>

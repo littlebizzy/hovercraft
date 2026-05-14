@@ -66,7 +66,7 @@ if ( $logo_url ) {
 			<img class="site-logo custom-logo" src="<?php echo esc_url( $logo_url ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?> logo" />
 		</a>
 	</div><!-- branding-media -->
-<?php endif; ?>
+<?php endif; // end has-logo ?>
 
 <?php if ( display_header_text() ) : ?>
 	<div class="branding-text">
@@ -75,6 +75,6 @@ if ( $logo_url ) {
 		</a>
 		<div class="tagline"><?php echo esc_html( get_bloginfo( 'description' ) ); ?></div>
 	</div><!-- branding-text -->
-<?php endif; ?>
+<?php endif; // end header text ?>
 
 </div><!-- branding -->

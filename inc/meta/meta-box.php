@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// loads meta meta box logic
+// meta box controls
 
 function hovercraft_is_title_hidden( $post_id = 0 ) {
 	if ( $post_id ) {

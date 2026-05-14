@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// loads content title homepage logic
+// homepage title display
 
 function hovercraft_homepage_title( $title ) {
 	if ( ! is_front_page() ) {

@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// loads bbpress search results logic
+// bbpress search results
 
 if ( ! function_exists( 'bbpress' ) ) {
 	return;

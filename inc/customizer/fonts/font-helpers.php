@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// loads customizer font helpers logic
+// customizer font helpers
 
 function hovercraft_normalize_font_family( $font_family ) {
 	$font_family = sanitize_key( $font_family );

@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// loads header custom header logic
+// custom header support
 
 function hovercraft_custom_header() {
 	$args = array(

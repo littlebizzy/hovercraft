@@ -19,7 +19,7 @@ $url_hovercraft_video = wp_get_attachment_url( $hovercraft_video_id );
 		<?php esc_html_e( 'Your browser does not support the video tag.', 'hovercraft' ); ?>
 	</video>
 	<div class="hero-background-video-overlay"></div>
-<?php endif; ?>
+<?php endif; // end url-hovercraft-video ?>
 
 <div id="header-full-hero">
 	
@@ -36,7 +36,7 @@ $url_hovercraft_video = wp_get_attachment_url( $hovercraft_video_id );
 	<div class="welcome-wrapper">
 	<?php else : ?>
 		<div class="title-wrapper">
-	<?php endif; ?>
+	<?php endif; // end is_front_page ?>
 
 		<?php if ( ! is_active_sidebar( 'hovercraft_hero_window' ) && ! hovercraft_is_title_hidden() ) : ?>
 			<h1 class="full-hero-title <?php
@@ -45,7 +45,7 @@ $url_hovercraft_video = wp_get_attachment_url( $hovercraft_video_id );
 					echo esc_attr( 'divide' );
 				}
 			?>"><?php echo esc_html( single_post_title( '', false ) ); ?></h1>
-		<?php endif; ?>
+		<?php endif; // end title display ?>
 			
 		<?php if ( is_front_page() ) : ?>
 		
@@ -58,10 +58,10 @@ $url_hovercraft_video = wp_get_attachment_url( $hovercraft_video_id );
 								echo esc_attr( 'divide' );
 							}
 						?>"><?php echo esc_html( single_post_title( '', false ) ); ?></h1>
-					<?php endif; ?>
+					<?php endif; // end title display ?>
 					<?php get_template_part( 'template-parts/header/hero-snippet' ); ?>
 				</div><!-- hero-snippet -->
-			<?php endif; ?>
+			<?php endif; // end hovercraft-hero-snippet sidebar ?>
 
 			<?php if ( is_active_sidebar( 'hovercraft_hero_window' ) || has_excerpt() ) : ?>
 				<div class="hero-window">
@@ -73,11 +73,11 @@ $url_hovercraft_video = wp_get_attachment_url( $hovercraft_video_id );
 						?>
 					<?php else : ?>
 						<?php the_excerpt(); ?>
-					<?php endif; ?>
+					<?php endif; // end hovercraft-hero-window sidebar ?>
 				</div><!-- hero-window -->
-			<?php endif; ?>
+			<?php endif; // end hovercraft-hero-window sidebar ?>
 			
-		<?php endif; ?><!-- is_front_page -->
+		<?php endif; ?><!-- end is_front_page -->
 	
 		<?php get_template_part( 'template-parts/header/hero-cta' ); ?>
 			

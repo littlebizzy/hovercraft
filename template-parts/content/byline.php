@@ -22,14 +22,14 @@ if ( is_singular( 'product' ) ) {
             <span class="byline-photo">
                 <img class="avatar byline-avatar" src="<?php echo esc_url( $author_avatar_url ); ?>" alt="<?php echo esc_attr( $author_name ); ?>" itemprop="image">
             </span>
-        <?php endif;
+        <?php endif; // end hovercraft-byline-photo
 
         $hovercraft_biography = get_theme_mod( 'hovercraft_biography', 'native_posts_only' );
         if ( $hovercraft_biography === 'native_posts_only' || $hovercraft_biography === 'all_post_types' ) : ?>
             <a href="#author" rel="author"><span class="author-name" itemprop="name"><?php echo esc_html( $author_name ); ?></span></a>
         <?php else : ?>
             <span class="author-name" itemprop="name"><?php echo esc_html( $author_name ); ?></span>
-        <?php endif; ?>
+        <?php endif; // end biography setting ?>
     </span><!-- post-author -->
 			
     <?php
@@ -55,7 +55,7 @@ if ( is_singular( 'product' ) ) {
         <span class="date-updated" itemprop="dateModified">
             <?php echo esc_html__( 'Updated on', 'hovercraft' ) . ' ' . esc_html( get_the_modified_date( 'M j, Y' ) ); ?>
         </span>
-    <?php endif; ?>
+    <?php endif; // end byline date ?>
 </div><!-- post-byline -->
 
 <?php

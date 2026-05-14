@@ -47,7 +47,7 @@ if ( ! is_array( $image_src ) ) {
     <img class="featured-image" src="<?php echo esc_url( $image_src[0] ); ?>" width="<?php echo (int) $image_src[1]; ?>" height="<?php echo (int) $image_src[2]; ?>" alt="<?php echo esc_attr( $image_alt ); ?>">
     <?php if ( get_the_post_thumbnail_caption( $post_id ) ) : ?>
         <div class="featured-image-caption"><?php echo esc_html( get_the_post_thumbnail_caption( $post_id ) ); ?></div>
-    <?php endif; ?>
+    <?php endif; // end post-id ?>
     <div class="clear"></div>
 </div><!-- featured-image-wrapper -->
 <div class="clear"></div>

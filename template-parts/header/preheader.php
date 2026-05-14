@@ -33,10 +33,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 				dynamic_sidebar( 'hovercraft_preheader_right' );
 				remove_filter( 'widget_title', '__return_false' );
 				?>
-			<?php endif; ?>
+			<?php endif; // end hovercraft-preheader-left sidebar ?>
 		</div><!-- preheader-center -->
-		<?php endif; ?>
+		<?php endif; // end hovercraft-preheader-left sidebar ?>
 		<div class="clear"></div>
 	</div><!-- inner -->
 </div><!-- preheader -->
-<?php endif; ?>
+<?php endif; // end hovercraft-preheader-left sidebar ?>

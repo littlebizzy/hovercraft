@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					$forum_page_content = apply_filters( 'the_content', $forum_page->post_content );
 					echo $forum_page_content;
 					?>
-				<?php endif; ?>
+				<?php endif; // end forum-page ?>
 				
 				<?php get_template_part( 'template-parts/content/pagination' ); ?>
 			

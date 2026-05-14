@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// loads menus offcanvas menu logic
+// offcanvas menu assets
 
 function hovercraft_offcanvas_menu() {
 	wp_enqueue_script(

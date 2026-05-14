@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		?>
 		<?php if ( is_readable( $parent_style_path ) ) : ?>
 			<style><?php readfile( $parent_style_path ); ?></style>
-		<?php endif; ?>
+		<?php endif; // end parent-style-path ?>
 
 		<?php
 		// inline child theme's stylesheet
@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		?>
 		<?php if ( is_readable( $child_style_path ) ) : ?>
 			<style><?php readfile( $child_style_path ); ?></style>
-		<?php endif; ?>
+		<?php endif; // end child-style-path ?>
 
 		<?php wp_head(); ?>
 	</head>
@@ -57,9 +57,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 									<?php dynamic_sidebar( 'hovercraft_topbar_left' ); ?>
 								<?php else : ?>
 									<?php dynamic_sidebar( 'hovercraft_topbar_right' ); ?>
-								<?php endif; ?>
+								<?php endif; // end hovercraft-topbar-left sidebar ?>
 							</div><!-- topbar-center -->
-						<?php endif;
+						<?php endif; // end topbar columns
 
 						// restore widget titles after topbar
 						remove_filter( 'widget_title', '__return_false' ); ?>
@@ -68,5 +68,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 					</div><!-- inner -->
 				</div><!-- topbar -->
-			<?php endif; ?>
+			<?php endif; // end topbar ?>
 

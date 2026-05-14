@@ -39,7 +39,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 </div><!-- inner -->
 </div><!-- main -->
 
-<?php endif; // endif is_front_page ?>
+<?php endif; // end is_front_page ?>
 
 <?php get_template_part( 'footer' ); 
 ?>

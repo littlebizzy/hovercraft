@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// loads ui back to top logic
+// back to top link
 
 function hovercraft_back_to_top() {
 	wp_enqueue_script(

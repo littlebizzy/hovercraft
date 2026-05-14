@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             <div id="primary">
         <?php else : ?>
             <div id="primary-wide">
-        <?php endif; ?>
+        <?php endif; // end hovercraft-sidebar-status-checked ?>
         
         <div id="content-wrapper">
             
@@ -42,7 +42,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
                     <p><?php esc_html_e( 'No results found.', 'hovercraft' ); ?></p>
 
-                <?php endif; ?><!-- the loop -->
+                <?php endif; ?><!-- end the loop -->
                 
                 <?php get_template_part( 'template-parts/content/pagination' ); ?>
             
@@ -56,7 +56,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
     <?php if ( get_theme_mod( 'hovercraft_sidebar_status' ) === 1 ) : ?>
         <?php get_template_part( 'sidebar' ); ?>
-    <?php endif; ?>
+    <?php endif; // end sidebar status ?>
     
     <div class="clear"></div>
     </div><!-- inner -->

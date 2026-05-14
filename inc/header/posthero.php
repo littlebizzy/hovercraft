@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// loads header posthero logic
+// posthero visibility helpers
 
 function hovercraft_should_show_posthero( $hero_type ) {
 	if ( ! is_active_sidebar( 'hovercraft_posthero' ) ) {

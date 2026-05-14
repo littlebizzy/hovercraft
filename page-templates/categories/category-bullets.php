@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// loads the category bullets page template
+// category bullets page template
 
  get_template_part( 'header' ); ?>
 <?php get_template_part( 'template-parts/header/header-mini-hero' ); ?>

@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// loads header remove generator logic
+// remove wordpress generator output
 
 function hovercraft_remove_wp_generator() {
 	return '';

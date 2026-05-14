@@ -13,15 +13,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<div class="clear"></div>
 			</div><!-- inner -->
 		</div><!-- home-premain-top -->
-		<?php endif; ?>
+		<?php endif; // end hovercraft-home-premain-top sidebar ?>
 
 		<?php if ( is_active_sidebar( 'hovercraft_home_premain_bottom' ) ) : ?>
 		<div id="home-premain-bottom">
 			<div class="inner">
 				<?php dynamic_sidebar( 'hovercraft_home_premain_bottom' ); ?>
 				<div class="clear"></div>
-			</div><!--inner -->
+			</div><!-- inner -->
 		</div><!-- home-premain-bottom -->
-		<?php endif; ?>
+		<?php endif; // end hovercraft-home-premain-bottom sidebar ?>
 
-<?php endif; ?><!-- endif is_homepage -->
+<?php endif; ?><!-- end homepage -->

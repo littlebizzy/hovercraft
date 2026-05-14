@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="welcome-wrapper">
 	<?php else : ?>
 		<div class="title-wrapper">
-	<?php endif; ?>
+	<?php endif; // end is_front_page ?>
 			
 		<?php if ( ! hovercraft_is_title_hidden() ) : ?>
 		<h1 class="half-hero-title <?php
@@ -31,7 +31,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				echo esc_attr( 'divide' );
 			}
 		?>"><?php echo esc_html( single_post_title( '', false ) ); ?></h1>
-		<?php endif; ?>
+		<?php endif; // end title display ?>
 			
 		<?php if ( is_front_page() ) : ?>
 		
@@ -39,7 +39,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<div class="hero-snippet">
 					<?php get_template_part( 'template-parts/header/hero-snippet' ); ?>
 				</div><!-- hero-snippet -->
-			<?php endif; ?>
+			<?php endif; // end hovercraft-hero-snippet sidebar ?>
 
 			<?php if ( is_active_sidebar( 'hovercraft_hero_window' ) || has_excerpt() ) : ?>
 				<div class="hero-window">
@@ -51,11 +51,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 						?>
 					<?php else : ?>
 						<?php the_excerpt(); ?>
-					<?php endif; ?>
+					<?php endif; // end hovercraft-hero-window sidebar ?>
 				</div><!-- hero-window -->
-			<?php endif; ?>
+			<?php endif; // end hovercraft-hero-window sidebar ?>
 			
-		<?php endif; ?><!-- is_front_page -->
+		<?php endif; ?><!-- end is_front_page -->
 	
 		<?php get_template_part( 'template-parts/header/hero-cta' ); ?>
 			

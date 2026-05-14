@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// loads media sizes verify logic
+// verify custom image sizes
 
 function hovercraft_verify_media_sizes() {
 	$large_width = absint( get_option( 'large_size_w' ) );
@@ -20,7 +20,7 @@ function hovercraft_verify_media_sizes() {
 			<p><a href="<?php echo esc_url( admin_url( 'options-media.php' ) ); ?>"><?php esc_html_e( 'Review Settings', 'hovercraft' ); ?></a></p>
 		</div>
 
-	<?php endif; ?>
+	<?php endif; // end large-width ?>
 	<?php
 }
 add_action( 'admin_notices', 'hovercraft_verify_media_sizes' );

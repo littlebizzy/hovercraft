@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php if ( hovercraft_should_show_posthero( 'half' ) ) : ?>
 		<?php get_template_part( 'template-parts/header/posthero' ); ?>
-	<?php endif; ?>
+	<?php endif; // end posthero ?>
 
 <?php if ( hovercraft_should_show_main_content() ) : ?>
 
@@ -41,6 +41,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 </div><!-- inner -->
 </div><!-- main -->
 
-<?php endif; // if is_front_page ?>
+<?php endif; // end is_front_page ?>
 
 <?php get_template_part( 'footer' ); ?>

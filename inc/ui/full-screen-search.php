@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// loads ui full screen search logic
+// full screen search overlay
 
 function hovercraft_full_screen_search() {
 	wp_enqueue_script(

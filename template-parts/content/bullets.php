@@ -44,7 +44,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                                                     <h5><a href="<?php echo esc_url( get_permalink() ); ?>"><?php echo esc_html( get_the_title() ); ?></a></h5>
                                                 <?php else : ?>
                                                     <h5><?php echo esc_html( get_the_title() ); ?></h5>
-                                                <?php endif; ?>
+                                                <?php endif; // end faq permalinks ?>
 
                                                 <?php 
                                                 $hovercraft_bullets_html_content = get_theme_mod('hovercraft_bullets_html_content', 'none');
@@ -70,9 +70,9 @@ if ( ! defined( 'ABSPATH' ) ) {
                                     <?php $faqs_displayed = true; ?>
                                 <?php else : ?>
                                     <p><?php esc_html_e('No posts', 'hovercraft'); ?></p>
-                                <?php endif; ?>
+                                <?php endif; // end the loop ?>
                             <?php endforeach; ?>
-                        <?php endif; ?>
+                        <?php endif; // end faq-subcategories ?>
 
                         <!-- query for faqs without subcategories -->
                         <?php
@@ -110,7 +110,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                                             <h5><a href="<?php echo esc_url( get_permalink() ); ?>"><?php echo esc_html( get_the_title() ); ?></a></h5>
                                         <?php else : ?>
                                             <h5><?php echo esc_html( get_the_title() ); ?></h5>
-                                        <?php endif; ?>
+                                        <?php endif; // end faq permalinks ?>
 
                                         <?php 
                                         $hovercraft_bullets_html_content = get_theme_mod('hovercraft_bullets_html_content', 'none');
@@ -136,7 +136,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                             <?php $faqs_displayed = true; ?>
                         <?php elseif ( ! $faqs_displayed ) : ?>
                             <p><?php esc_html_e('No FAQs available', 'hovercraft'); ?></p>
-                        <?php endif; ?>
+                        <?php endif; // end the loop ?>
 
                         <div class="clear"></div>
                     </div><!-- bullets -->

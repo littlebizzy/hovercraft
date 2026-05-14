@@ -4,7 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// loads woocommerce woocommerce theme support logic
+// woocommerce theme support
 
 function hovercraft_add_woocommerce_theme_support() {
 	add_theme_support( 'woocommerce' );

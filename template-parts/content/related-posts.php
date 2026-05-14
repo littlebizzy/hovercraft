@@ -31,6 +31,6 @@ $my_query = new WP_Query( $args );
 			<?php wp_reset_postdata(); ?>
 		</ul>
 	</div><!-- related -->
-<?php endif; ?>
+<?php endif; // end the loop ?>
 
 <?php
