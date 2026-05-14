@@ -22,6 +22,26 @@ function hovercraft_get_legacy_tile_sidebars() {
 	);
 }
 
+// mark legacy tile widget areas in admin
+function hovercraft_label_legacy_tile_sidebars() {
+	global $wp_registered_sidebars;
+
+	$legacy_tile_sidebars = hovercraft_get_legacy_tile_sidebars();
+
+	foreach ( $legacy_tile_sidebars as $legacy_tile_sidebar ) {
+		if ( ! isset( $wp_registered_sidebars[ $legacy_tile_sidebar ]['name'] ) ) {
+			continue;
+		}
+
+		if ( strpos( $wp_registered_sidebars[ $legacy_tile_sidebar ]['name'], 'Legacy ' ) === 0 ) {
+			continue;
+		}
+
+		$wp_registered_sidebars[ $legacy_tile_sidebar ]['name'] = 'Legacy ' . $wp_registered_sidebars[ $legacy_tile_sidebar ]['name'];
+	}
+}
+add_action( 'widgets_init', 'hovercraft_label_legacy_tile_sidebars', 20 );
+
 // check if legacy tile widget areas have content
 function hovercraft_has_legacy_tile_sidebars() {
 	$legacy_tile_sidebars = hovercraft_get_legacy_tile_sidebars();
@@ -35,7 +55,7 @@ function hovercraft_has_legacy_tile_sidebars() {
 	return false;
 }
 
-// render tiles widget area with legacy fallback
+// render preferred tiles widget area with legacy fallback
 function hovercraft_render_tiles( $wrapper_id = 'tiles' ) {
 	$legacy_tile_sidebars = hovercraft_get_legacy_tile_sidebars();
 	$has_tiles = is_active_sidebar( 'hovercraft_tiles' );
