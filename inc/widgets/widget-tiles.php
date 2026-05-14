@@ -4,6 +4,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// register preferred tiles widget area
+function hovercraft_register_tiles_sidebar() {
+	register_sidebar(
+		array(
+			'name' => 'Tiles',
+			'id' => 'hovercraft_tiles',
+			'before_widget' => '<div class="tile widget-wrapper">',
+			'after_widget' => '</div>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>',
+		)
+	);
+}
+add_action( 'widgets_init', 'hovercraft_register_tiles_sidebar' );
+
 // register legacy tile widget areas
 function hovercraft_register_legacy_tile_sidebars() {
 	$legacy_tile_sidebars = array(
