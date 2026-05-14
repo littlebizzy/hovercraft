@@ -50,6 +50,20 @@ function hovercraft_label_legacy_column_sidebars() {
 }
 add_action( 'widgets_init', 'hovercraft_label_legacy_column_sidebars', 20 );
 
+// hide empty legacy column widget areas
+function hovercraft_hide_empty_legacy_column_sidebars() {
+	$legacy_column_sidebars = hovercraft_get_legacy_column_sidebars();
+
+	foreach ( $legacy_column_sidebars as $legacy_column_sidebar ) {
+		if ( is_active_sidebar( $legacy_column_sidebar ) ) {
+			continue;
+		}
+
+		unregister_sidebar( $legacy_column_sidebar );
+	}
+}
+add_action( 'widgets_init', 'hovercraft_hide_empty_legacy_column_sidebars', 30 );
+
 // check if legacy column widget areas have content
 function hovercraft_has_legacy_column_sidebars() {
 	$legacy_column_sidebars = hovercraft_get_legacy_column_sidebars();
