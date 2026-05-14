@@ -80,6 +80,7 @@ require get_template_directory() . '/inc/comments/comment-fields.php';
 // widgets
 require get_template_directory() . '/inc/widgets/widget-areas.php';
 require get_template_directory() . '/inc/widgets/widget-tiles.php';
+require get_template_directory() . '/inc/widgets/widget-columns.php';
 require get_template_directory() . '/inc/footer/footer-callout.php';
 require get_template_directory() . '/inc/sidebar/sidebar-callout.php';
 
