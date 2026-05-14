@@ -54,6 +54,8 @@ Meta boxes should not become a generic section builder. Do not add meta boxes un
 
 Widget areas are for reusable content zones and simple layout regions. They should remain predictable and tied to real theme locations.
 
+Repeated visual sections should prefer one reusable widget area that renders each widget as an item, instead of many numbered widget areas.
+
 Avoid adding widget areas speculatively. Add them only when they support a known template, layout, or reusable client pattern.
 
 ### Structured Data Policy
