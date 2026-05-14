@@ -55,6 +55,23 @@ function hovercraft_has_legacy_tile_sidebars() {
 	return false;
 }
 
+// show legacy tile widget notice
+function hovercraft_legacy_tile_widget_notice() {
+	if ( ! current_user_can( 'edit_theme_options' ) ) {
+		return;
+	}
+
+	if ( ! hovercraft_has_legacy_tile_sidebars() ) {
+		return;
+	}
+	?>
+	<div class="notice notice-warning">
+		<p><?php esc_html_e( 'HoverCraft legacy tile widget areas are active. Please transfer those tile elements into the new Tiles widget area.', 'hovercraft' ); ?></p>
+	</div>
+	<?php
+}
+add_action( 'admin_notices', 'hovercraft_legacy_tile_widget_notice' );
+
 // render preferred tiles widget area with legacy fallback
 function hovercraft_render_tiles( $wrapper_id = 'tiles' ) {
 	$legacy_tile_sidebars = hovercraft_get_legacy_tile_sidebars();
