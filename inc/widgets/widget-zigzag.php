@@ -19,6 +19,86 @@ function hovercraft_register_zigzag_sidebar() {
 }
 add_action( 'widgets_init', 'hovercraft_register_zigzag_sidebar' );
 
+// register legacy zigzag widget areas
+function hovercraft_register_legacy_zigzag_sidebars() {
+	$legacy_zigzag_sidebars = array(
+		array(
+			'name' => 'ZigZag (HoverCraft)',
+			'id' => 'hovercraft_widget_area_zigzag',
+			'class' => 'widget-zigzag',
+		),
+		array(
+			'name' => 'ZigZag #1',
+			'id' => 'hovercraft_zigzag_one',
+			'class' => 'widget-zigzag-one',
+		),
+		array(
+			'name' => 'ZigZag #2',
+			'id' => 'hovercraft_zigzag_two',
+			'class' => 'widget-zigzag-two',
+		),
+		array(
+			'name' => 'ZigZag #3',
+			'id' => 'hovercraft_zigzag_three',
+			'class' => 'widget-zigzag-three',
+		),
+		array(
+			'name' => 'ZigZag #4',
+			'id' => 'hovercraft_zigzag_four',
+			'class' => 'widget-zigzag-four',
+		),
+		array(
+			'name' => 'ZigZag #5',
+			'id' => 'hovercraft_zigzag_five',
+			'class' => 'widget-zigzag-five',
+		),
+		array(
+			'name' => 'ZigZag #6',
+			'id' => 'hovercraft_zigzag_six',
+			'class' => 'widget-zigzag-six',
+		),
+		array(
+			'name' => 'ZigZag #7',
+			'id' => 'hovercraft_zigzag_seven',
+			'class' => 'widget-zigzag-seven',
+		),
+		array(
+			'name' => 'ZigZag #8',
+			'id' => 'hovercraft_zigzag_eight',
+			'class' => 'widget-zigzag-eight',
+		),
+		array(
+			'name' => 'ZigZag #9',
+			'id' => 'hovercraft_zigzag_nine',
+			'class' => 'widget-zigzag-nine',
+		),
+		array(
+			'name' => 'ZigZag #10',
+			'id' => 'hovercraft_zigzag_ten',
+			'class' => 'widget-zigzag-ten',
+		),
+		array(
+			'name' => 'ZigZag #11',
+			'id' => 'hovercraft_zigzag_eleven',
+			'class' => 'widget-zigzag-eleven',
+		),
+	);
+
+	foreach ( $legacy_zigzag_sidebars as $legacy_zigzag_sidebar ) {
+		register_sidebar(
+			array(
+				'name' => $legacy_zigzag_sidebar['name'],
+				'id' => $legacy_zigzag_sidebar['id'],
+				'before_widget' => '<div class="' . $legacy_zigzag_sidebar['class'] . ' widget-wrapper">',
+				'after_widget' => '</div>',
+				'before_title' => '<h3 class="widget-title">',
+				'after_title' => '</h3>',
+			)
+		);
+	}
+}
+add_action( 'widgets_init', 'hovercraft_register_legacy_zigzag_sidebars' );
+
 // get preferred zigzag widget area
 function hovercraft_get_zigzag_sidebar() {
 	return 'hovercraft_zigzag';
