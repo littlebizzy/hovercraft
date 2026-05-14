@@ -42,7 +42,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<?php the_content(); ?>
 				<?php endif; // end is_home ?>
 			
-			<?php endwhile; ?>
+				<?php endwhile; // end posts ?>
 		<?php endif; ?><!-- end the loop -->
 	
 	<div class="clear"></div>

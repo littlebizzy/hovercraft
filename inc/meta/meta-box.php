@@ -6,6 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 // meta box controls
 
+// check whether the title is hidden
 function hovercraft_is_title_hidden( $post_id = 0 ) {
 	if ( $post_id ) {
 		$post_id = absint( $post_id );
@@ -26,6 +27,7 @@ function hovercraft_is_title_hidden( $post_id = 0 ) {
 	return 'on' === $hide_title_status;
 }
 
+// register page title meta box
 function hovercraft_page_metabox() {
 	add_meta_box(
 		'hovercraft-hide-title',
@@ -36,8 +38,10 @@ function hovercraft_page_metabox() {
 		'high'
 	);
 }
+// load page title meta box
 add_action( 'add_meta_boxes', 'hovercraft_page_metabox' );
 
+// render page title meta box field
 function hovercraft_hide_title_callback( $post ) {
 	wp_nonce_field( 'hovercraft_hide_title_action', 'hovercraft_hide_title_nonce' );
 
@@ -56,6 +60,7 @@ function hovercraft_hide_title_callback( $post ) {
 	<?php
 }
 
+// save page title meta box field
 function hovercraft_save_postdata( $post_id ) {
 	if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
 		return;
@@ -83,4 +88,5 @@ function hovercraft_save_postdata( $post_id ) {
 		update_post_meta( $post_id, '_mysite_meta_hide_title', 'off' );
 	}
 }
+// save title visibility setting
 add_action( 'save_post', 'hovercraft_save_postdata' );

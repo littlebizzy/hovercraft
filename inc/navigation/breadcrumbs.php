@@ -4,8 +4,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// disable bbpress native breadcrumbs
 add_filter( 'bbp_no_breadcrumb', '__return_true' );
 
+// render schema breadcrumb wrapper
 function hovercraft_breadcrumb() {
 	echo '<ul id="hovercraft-breadcrumb" class="hovercraft-breadcrumb breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">';
 
@@ -32,6 +34,7 @@ function hovercraft_breadcrumb() {
 	echo '</ul>';
 }
 
+// render one breadcrumb item
 function hovercraft_breadcrumb_item( $url, $name, $position, $is_current = false ) {
 	if ( $position > 1 ) {
 		hovercraft_breadcrumb_separator();
@@ -61,15 +64,18 @@ function hovercraft_breadcrumb_item( $url, $name, $position, $is_current = false
 	echo '</li>';
 }
 
+// render breadcrumb separator
 function hovercraft_breadcrumb_separator() {
 	echo '<li class="separator">»</li>';
 }
 
+// render home breadcrumb item
 function hovercraft_breadcrumb_home() {
 	$GLOBALS['hovercraft_breadcrumb_position'] = 1;
 	hovercraft_breadcrumb_item( home_url(), __( 'Home', 'hovercraft' ), $GLOBALS['hovercraft_breadcrumb_position']++ );
 }
 
+// render bbpress breadcrumb trail
 function hovercraft_breadcrumb_bbpress() {
 	$pos =& $GLOBALS['hovercraft_breadcrumb_position'];
 
@@ -128,6 +134,7 @@ function hovercraft_breadcrumb_bbpress() {
 	}
 }
 
+// render bbpress parent forum hierarchy
 function hovercraft_breadcrumb_bbpress_hierarchy( $post_id, &$position ) {
 	$ancestors = array_reverse( get_post_ancestors( $post_id ) );
 
@@ -138,6 +145,7 @@ function hovercraft_breadcrumb_bbpress_hierarchy( $post_id, &$position ) {
 	hovercraft_breadcrumb_item( get_permalink( $post_id ), get_the_title( $post_id ), $position++ );
 }
 
+// render woocommerce breadcrumb trail
 function hovercraft_breadcrumb_woocommerce() {
 	$pos =& $GLOBALS['hovercraft_breadcrumb_position'];
 
@@ -192,6 +200,7 @@ function hovercraft_breadcrumb_woocommerce() {
 	}
 }
 
+// render custom post type fallback breadcrumb
 function hovercraft_breadcrumb_cpt_fallback( $post_type ) {
 	$fallback = array(
 		'book' => array( 'url' => '/library/', 'label' => 'Library' ),
@@ -204,6 +213,7 @@ function hovercraft_breadcrumb_cpt_fallback( $post_type ) {
 	return false;
 }
 
+// render blog index breadcrumb trail
 function hovercraft_breadcrumb_home_blog() {
 	$pos =& $GLOBALS['hovercraft_breadcrumb_position'];
 	$page_for_posts = get_option( 'page_for_posts' );
@@ -215,6 +225,7 @@ function hovercraft_breadcrumb_home_blog() {
 	}
 }
 
+// render singular content breadcrumb trail
 function hovercraft_breadcrumb_single() {
 	global $post;
 
@@ -261,6 +272,7 @@ function hovercraft_breadcrumb_single() {
 	hovercraft_breadcrumb_item( '', get_the_title(), $pos++, true );
 }
 
+// render archive breadcrumb trail
 function hovercraft_breadcrumb_archive() {
 	$pos =& $GLOBALS['hovercraft_breadcrumb_position'];
 
@@ -327,6 +339,7 @@ function hovercraft_breadcrumb_archive() {
 	}
 }
 
+// render page breadcrumb trail
 function hovercraft_breadcrumb_page() {
 	global $post;
 
@@ -343,11 +356,13 @@ function hovercraft_breadcrumb_page() {
 	hovercraft_breadcrumb_item( '', get_the_title(), $pos++, true );
 }
 
+// render search breadcrumb item
 function hovercraft_breadcrumb_search() {
 	$pos =& $GLOBALS['hovercraft_breadcrumb_position'];
 	hovercraft_breadcrumb_item( '', __( 'Search results for: ', 'hovercraft' ) . get_search_query(), $pos++, true );
 }
 
+// render 404 breadcrumb item
 function hovercraft_breadcrumb_404() {
 	$pos =& $GLOBALS['hovercraft_breadcrumb_position'];
 	hovercraft_breadcrumb_item( '', __( 'Error 404', 'hovercraft' ), $pos++, true );

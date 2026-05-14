@@ -6,6 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 // menu locations
 
+// register theme menu locations
 function hovercraft_menu_locations() {
 	register_nav_menus(
 		array(
@@ -20,8 +21,10 @@ function hovercraft_menu_locations() {
 		)
 	);
 }
+// load theme menu locations
 add_action( 'init', 'hovercraft_menu_locations' );
 
+// render mobile menu fallback output
 function hovercraft_mobile_menu_output() {
 	if ( has_nav_menu( 'mobile-menu' ) ) {
 		wp_nav_menu(
@@ -54,6 +57,7 @@ function hovercraft_mobile_menu_output() {
 	echo '</ul></div>';
 }
 
+// limit cta menus to one top-level item
 function hovercraft_limit_cta_menu_items( $items, $args ) {
 	$limited_locations = array(
 		'cta-header-primary',
@@ -82,4 +86,5 @@ function hovercraft_limit_cta_menu_items( $items, $args ) {
 
 	return $items;
 }
+// enforce cta menu item limits
 add_filter( 'wp_nav_menu_objects', 'hovercraft_limit_cta_menu_items', 10, 2 );

@@ -21,13 +21,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<div class="overlay-content">
 		<?php hovercraft_mobile_menu_output(); ?>
-	</div>
+		</div><!-- overlay-content -->
 </div><!-- hovercraft-overlay-menu -->
 
 <div id="hovercraft-offcanvas-menu">
 	<h4 class="sitename-offcanvas"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></h4>
 	<?php hovercraft_mobile_menu_output(); ?>
-</div>
+	</div><!-- hovercraft-offcanvas-menu -->
 
 <div class="hovercraft-offcanvas-overlay"></div>
 

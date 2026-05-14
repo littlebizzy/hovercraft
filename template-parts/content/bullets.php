@@ -63,7 +63,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                                                     echo '<p>' . esc_html( wp_trim_words($content, $hovercraft_faq_word_count, '...') ) . '</p>';
                                                 } ?>
                                             </div><!-- faq-item -->
-                                        <?php endwhile; ?>
+	                                <?php endwhile; // end news posts ?>
                                     </div><!-- faq-item-list -->
                                     <?php wp_reset_postdata(); ?>
                                     <?php // mark faq results as displayed ?>
@@ -71,7 +71,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                                 <?php else : ?>
                                     <p><?php esc_html_e('No posts', 'hovercraft'); ?></p>
                                 <?php endif; // end the loop ?>
-                            <?php endforeach; ?>
+	                            <?php endforeach; // end feed items ?>
                         <?php endif; // end faq-subcategories ?>
 
                         <!-- query for faqs without subcategories -->
@@ -129,7 +129,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                                             echo '<p>' . esc_html( wp_trim_words($content, $hovercraft_faq_word_count, '...') ) . '</p>';
                                         } ?>
                                     </div><!-- faq-item -->
-                                <?php endwhile; ?>
+	                                <?php endwhile; // end faq posts ?>
                             </div><!-- faq-item-list -->
                             <?php wp_reset_postdata(); ?>
                             <?php // mark faq results as displayed ?>

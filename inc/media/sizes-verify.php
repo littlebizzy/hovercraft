@@ -18,7 +18,7 @@ function hovercraft_verify_media_sizes() {
 			<p><strong><?php esc_html_e( 'Adjust Media Sizes', 'hovercraft' ); ?></strong></p>
 			<p><?php esc_html_e( 'The HoverCraft theme requires Large size images to have a Max Width of 1200, Medium size images to have a Max Width of 480, and Medium Large size images to have a Max Width of 768.', 'hovercraft' ); ?></p>
 			<p><a href="<?php echo esc_url( admin_url( 'options-media.php' ) ); ?>"><?php esc_html_e( 'Review Settings', 'hovercraft' ); ?></a></p>
-		</div>
+		</div><!-- notice -->
 
 	<?php endif; // end large-width ?>
 	<?php

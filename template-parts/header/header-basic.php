@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						dynamic_sidebar( 'hovercraft_preheader_left' );
 						remove_filter( 'widget_title', '__return_false' );
 						?>
-					</div>
+						</div><!-- preheader-left -->
 
 					<!-- preheader-right -->
 					<div class="preheader-right">
@@ -31,7 +31,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						dynamic_sidebar( 'hovercraft_preheader_right' );
 						remove_filter( 'widget_title', '__return_false' );
 						?>
-					</div>
+						</div><!-- preheader-right -->
 
 				<?php elseif ( is_active_sidebar( 'hovercraft_preheader_left' ) xor is_active_sidebar( 'hovercraft_preheader_right' ) ) : ?>
 
@@ -52,7 +52,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 							remove_filter( 'widget_title', '__return_false' );
 							?>
 						<?php endif; // end hovercraft-preheader-left sidebar ?>
-					</div>
+						</div><!-- preheader-center -->
 
 				<?php endif; // end hovercraft-preheader-left sidebar ?>
 

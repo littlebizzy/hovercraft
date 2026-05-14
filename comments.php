@@ -40,7 +40,7 @@ if ( ! comments_open() && ! get_comments_number() ) {
                 'avatar_size' => 74,
             ) ) );
             ?>
-        </ol>
+        </ol><!-- comment-list -->
 
         <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
             <nav class="comment-navigation" aria-label="<?php esc_attr_e( 'Comment Navigation', 'hovercraft' ); ?>">
@@ -49,11 +49,11 @@ if ( ! comments_open() && ! get_comments_number() ) {
                 </p>
                 <div class="comment-nav-prev">
                     <?php previous_comments_link( esc_html__( '&larr; Older Comments', 'hovercraft' ) ); ?>
-                </div>
+                </div><!-- comment-nav-prev -->
                 <div class="comment-nav-next">
                     <?php next_comments_link( esc_html__( 'Newer Comments &rarr;', 'hovercraft' ) ); ?>
-                </div>
-            </nav>
+                </div><!-- comment-nav-next -->
+            </nav><!-- comment-navigation -->
         <?php endif; // end comment pagination ?>
 
     <?php endif; // end have_comments ?>
@@ -69,7 +69,7 @@ if ( ! comments_open() && ! get_comments_number() ) {
     comment_form();
     ?>
 
-</div>
+</div><!-- comments -->
 
 <?php
 ?>

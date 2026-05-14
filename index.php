@@ -84,7 +84,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<div class="post-excerpt-archive"><?php the_excerpt(); ?></div>
 						</div><!-- post-tease-archive -->
 							
-						<?php endwhile; ?>
+							<?php endwhile; // end home posts ?>
 					<?php else : ?>
 						<p><?php esc_html_e( 'No posts found.', 'hovercraft' ); ?></p>
 					<?php endif; // end the loop ?>
@@ -118,7 +118,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<div class="post-excerpt-archive"><?php the_excerpt(); ?></div>
 				</div><!-- post-tease-archive -->
 		
-					<?php endwhile; ?>
+						<?php endwhile; // end archive posts ?>
 				<?php else : ?>
 					<p><?php esc_html_e( 'No posts found.', 'hovercraft' ); ?></p>
 				<?php endif; ?><!-- end the loop -->

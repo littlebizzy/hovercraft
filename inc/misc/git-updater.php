@@ -4,9 +4,12 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
+// display git updater admin notice
 add_action( 'admin_notices', 'hovercraft_check_git_updater' );
+// handle git updater admin actions
 add_action( 'admin_init', 'hovercraft_handle_git_updater_actions' );
 
+// check git updater install status
 function hovercraft_check_git_updater() {
     if ( ! hovercraft_is_git_updater_installed() ) {
         if ( ! current_user_can( 'install_plugins' ) ) {
@@ -20,7 +23,7 @@ function hovercraft_check_git_updater() {
                 <input type="hidden" name="hovercraft_git_updater_action" value="install_git_updater">
                 <?php submit_button( __( 'Install Git Updater', 'hovercraft' ), 'primary', 'submit', false ); ?>
             </form>
-        </div>
+        </div><!-- notice -->
         <?php
         return;
     }
@@ -37,11 +40,12 @@ function hovercraft_check_git_updater() {
                 <input type="hidden" name="hovercraft_git_updater_action" value="activate_git_updater">
                 <?php submit_button( __( 'Activate Git Updater', 'hovercraft' ), 'primary', 'submit', false ); ?>
             </form>
-        </div>
+        </div><!-- notice -->
         <?php
     }
 }
 
+// route git updater form actions
 function hovercraft_handle_git_updater_actions() {
     if ( empty( $_POST['hovercraft_git_updater_action'] ) ) {
         return;
@@ -58,6 +62,7 @@ function hovercraft_handle_git_updater_actions() {
     }
 }
 
+// install git updater plugin
 function hovercraft_install_git_updater() {
     if ( ! current_user_can( 'install_plugins' ) ) {
         wp_die( esc_html__( 'You do not have permission to install plugins.', 'hovercraft' ) );
@@ -86,6 +91,7 @@ function hovercraft_install_git_updater() {
     exit;
 }
 
+// activate git updater plugin
 function hovercraft_activate_git_updater() {
     if ( ! current_user_can( 'activate_plugins' ) ) {
         wp_die( esc_html__( 'You do not have permission to activate plugins.', 'hovercraft' ) );
@@ -105,10 +111,12 @@ function hovercraft_activate_git_updater() {
     exit;
 }
 
+// check if git updater is installed
 function hovercraft_is_git_updater_installed() {
     return file_exists( WP_PLUGIN_DIR . '/git-updater/git-updater.php' );
 }
 
+// check if git updater is active
 function hovercraft_is_git_updater_active() {
     require_once ABSPATH . 'wp-admin/includes/plugin.php';
 

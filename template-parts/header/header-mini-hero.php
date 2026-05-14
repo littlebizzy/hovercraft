@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	<?php get_template_part( 'template-parts/header/preheader' ); ?>
 	<?php get_template_part( 'template-parts/header/navigation' ); ?>
-</div>
+	</div><!-- header-mini-hero -->
 
 <div class="hero-main-mini">
 <div class="inner">
@@ -52,7 +52,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						echo '<i class="fas fa-search"></i>';
 					}
 				?></button>
-			</div>
+				</div><!-- input-container -->
 		</form>
 		<?php endif; // end category ?>
 
@@ -60,7 +60,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php if ( is_active_sidebar( 'hovercraft_hero_snippet' ) || has_excerpt() ) : ?>
 				<div class="hero-snippet">
 					<?php get_template_part( 'template-parts/header/hero-snippet' ); ?>
-				</div>
+					</div><!-- hero-snippet -->
 			<?php endif; // end hovercraft-hero-snippet sidebar ?>
 		<?php endif; // end is_front_page ?>
 

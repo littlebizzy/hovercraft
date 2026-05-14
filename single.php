@@ -80,7 +80,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 						<?php the_content(); ?>
 		
-				<?php endwhile; ?>
+					<?php endwhile; // end single post ?>
 			<?php endif; ?><!-- end the loop -->
 
 					<?php get_template_part( 'template-parts/content/loop-after' ); ?>

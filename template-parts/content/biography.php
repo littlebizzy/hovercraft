@@ -21,7 +21,7 @@ $hovercraft_biography = get_theme_mod( 'hovercraft_biography', 'native_posts_onl
 							echo get_avatar( get_the_author_meta( 'user_email' ), '150' );
 						}
 						?>
-					</div>
+					</div><!-- biography-photo -->
 				<?php endif; // end hovercraft-byline-photo ?>
 				<h3 class="biography-name"><?php echo esc_html( get_the_author_meta( 'display_name' ) ); ?></h3>
 				<p class="biography-description"><?php echo nl2br( esc_html( get_the_author_meta( 'description' ) ) ); ?></p>
@@ -42,7 +42,7 @@ $hovercraft_biography = get_theme_mod( 'hovercraft_biography', 'native_posts_onl
 							echo get_avatar( get_the_author_meta( 'user_email' ), '150' );
 						}
 						?>
-					</div>
+					</div><!-- biography-photo -->
 				<?php endif; // end hovercraft-byline-photo ?>
 				<h3 class="biography-name"><?php echo esc_html( get_the_author_meta( 'display_name' ) ); ?></h3>
 				<p class="biography-description"><?php echo nl2br( esc_html( get_the_author_meta( 'description' ) ) ); ?></p>

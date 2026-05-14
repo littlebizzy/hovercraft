@@ -4,6 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// add one valid google font family
 function hovercraft_add_google_font_family( &$font_families, $font_family, $limit = 0 ) {
 	$font_family = hovercraft_normalize_font_family( $font_family );
 
@@ -18,6 +19,7 @@ function hovercraft_add_google_font_family( &$font_families, $font_family, $limi
 	$font_families[] = $font_family;
 }
 
+// collect selected google font families
 function hovercraft_get_google_font_families() {
 	$font_families = array();
 	$first_font_family = hovercraft_normalize_font_family( get_theme_mod( 'hovercraft_first_font_family', 'noto_sans' ) );
@@ -39,6 +41,7 @@ function hovercraft_get_google_font_families() {
 	return $font_families;
 }
 
+// enqueue selected google fonts
 function hovercraft_enqueue_google_fonts() {
 	$font_variations = 'ital,wght@0,400;0,600;0,700;1,400;1,600;1,700';
 	$google_fonts = array();
@@ -56,4 +59,5 @@ function hovercraft_enqueue_google_fonts() {
 	}
 }
 
+// load google fonts on the frontend
 add_action( 'wp_enqueue_scripts', 'hovercraft_enqueue_google_fonts' );

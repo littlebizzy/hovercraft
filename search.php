@@ -36,7 +36,7 @@ if ( ! defined( 'ABSPATH' ) ) {
                             <div class="post-excerpt-archive"><?php the_excerpt(); ?></div>
                         </div><!-- post-tease-archive -->
 
-                    <?php endwhile; ?>
+	                    <?php endwhile; // end search results ?>
 
                 <?php else : ?>
 

@@ -27,9 +27,9 @@ $my_query = new WP_Query( $args );
 			<?php while ( $my_query->have_posts() ) : ?>
 				<?php $my_query->the_post(); ?>
 				<li><a href="<?php echo esc_url( get_permalink() ); ?>"><?php echo esc_html( get_the_title() ); ?></a></li>
-			<?php endwhile; ?>
+				<?php endwhile; // end related posts ?>
 			<?php wp_reset_postdata(); ?>
-		</ul>
+			</ul><!-- related posts list -->
 	</div><!-- related -->
 <?php endif; // end the loop ?>
 

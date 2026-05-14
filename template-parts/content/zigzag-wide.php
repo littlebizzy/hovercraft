@@ -90,8 +90,8 @@ if ( ! $has_meta_rows && ! $has_sidebar_rows ) {
 
 				<div class="clear"></div>
 
-			</div>
-		<?php endfor; ?>
+				</div><!-- zigzag-section -->
+			<?php endfor; // end meta zigzag rows ?>
 	<?php else : ?>
 		<?php foreach ( $zigzag_sidebars as $index => $sidebar_id ) : ?>
 			<?php
@@ -105,8 +105,8 @@ if ( ! $has_meta_rows && ! $has_sidebar_rows ) {
 			<div class="<?php echo esc_attr( $class ); ?>">
 				<?php dynamic_sidebar( $sidebar_id ); ?>
 				<div class="clear"></div>
-			</div>
-		<?php endforeach; ?>
+				</div><!-- zigzag-section -->
+			<?php endforeach; // end sidebar zigzag rows ?>
 	<?php endif; // end has-meta-rows ?>
 
-</div>
+	</div><!-- zigzag-wide-wrapper -->
