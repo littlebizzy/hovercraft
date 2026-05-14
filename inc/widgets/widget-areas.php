@@ -124,7 +124,14 @@ function hovercraft_register_sidebars() {
 			'class' => 'widget-copyright',
 		),
 
-		// tile widgets
+		// tiles widgets
+		array(
+			'name' => 'Tiles',
+			'id' => 'hovercraft_tiles',
+			'class' => 'tile',
+		),
+
+		// legacy tile widgets
 		array(
 			'name' => 'Tile #1',
 			'id' => 'hovercraft_tile_one',
