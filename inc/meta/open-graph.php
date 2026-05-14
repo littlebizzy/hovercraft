@@ -4,6 +4,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// loads meta open graph logic
+
 add_action( 'wp_head', 'hovercraft_open_graph_meta' );
 
 function hovercraft_open_graph_meta() {

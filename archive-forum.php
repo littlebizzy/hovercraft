@@ -42,7 +42,3 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php get_template_part( 'footer' ); ?>
 
-<!-- https://bbpress.org/forums/topic/page-php-as-template/ -->
-<!-- https://bbpress.org/forums/topic/how-do-i-get-bbpress-pages-to-use-a-specific-page-template-in-wordpress/ -->
-<!-- https://bbpress.org/forums/topic/force-bbpress-to-use-different-template-then-page-php/ -->
-<!-- https://wordpress.stackexchange.com/questions/102841/how-to-get-page-id-of-a-page-using-page-slug -->

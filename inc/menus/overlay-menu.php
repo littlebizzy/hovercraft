@@ -4,6 +4,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// loads menus overlay menu logic
+
 function hovercraft_overlay_menu() {
 	wp_enqueue_script(
 		'hovercraft_overlay_menu',
@@ -15,4 +17,3 @@ function hovercraft_overlay_menu() {
 }
 add_action( 'wp_enqueue_scripts', 'hovercraft_overlay_menu' );
 
-// https://wpmudev.com/blog/adding-jquery-scripts-wordpress/

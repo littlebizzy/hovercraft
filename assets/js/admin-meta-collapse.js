@@ -1,3 +1,4 @@
+// admin meta collapse
 jQuery(function($) {
 
 	$('.hovercraft-meta-group-header').on('click', function() {

@@ -4,6 +4,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// renders the content featured image archive template part
+
 
 $image_id = get_post_thumbnail_id( get_the_ID() );
 

@@ -4,6 +4,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// loads misc license logic
+
 function hovercraft_validate_license_key( $license_key ) {
 	$license_server = '';
 

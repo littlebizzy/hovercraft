@@ -11,6 +11,3 @@ jQuery( function( $ ) {
 	} );
 } );
 
-// Ref: ChatGPT
-// Ref: https://codepen.io/nabeelfaheem/pen/zYOZOZK
-// Ref: https://www.geeksforgeeks.org/how-to-animate-scrolltop-using-jquery/

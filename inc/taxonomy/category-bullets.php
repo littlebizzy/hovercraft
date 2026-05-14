@@ -4,6 +4,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// loads taxonomy category bullets logic
+
 add_filter( 'template_include', 'hovercraft_bullets_category_template', 99 );
 
 function hovercraft_bullets_category_template( $template ) {

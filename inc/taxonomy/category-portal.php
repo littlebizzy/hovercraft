@@ -4,6 +4,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// loads taxonomy category portal logic
+
 add_filter( 'template_include', 'hovercraft_portal_category_template', 99 );
 
 function hovercraft_portal_category_template( $template ) {

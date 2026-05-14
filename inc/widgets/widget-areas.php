@@ -252,7 +252,7 @@ function hovercraft_register_sidebars() {
 			'class' => 'widget-column-five',
 		),
 
-		// Postcolumns widgets
+		// postcolumns widgets
 		array(
 			'name' => 'Postcolumns Top',
 			'id' => 'hovercraft_postcolumns_top',
@@ -264,7 +264,7 @@ function hovercraft_register_sidebars() {
 			'class' => 'widget-postcolumns-bottom',
 		),
 
-		// Single post widgets
+		// single post widgets
 		array(
 			'name' => 'After Byline',
 			'id' => 'hovercraft_after_byline',
@@ -276,7 +276,7 @@ function hovercraft_register_sidebars() {
 			'class' => 'widget-after-loop',
 		),
 
-		// Zigzag widgets
+		// zigzag widgets
 		array(
 			'name' => 'ZigZag (HoverCraft)',
 			'id' => 'hovercraft_widget_area_zigzag',

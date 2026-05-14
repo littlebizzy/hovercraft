@@ -4,6 +4,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// loads shortcodes theme shortcodes logic
+
 function hovercraft_button_shortcode( $atts, $content = '' ) {
 	$atts = shortcode_atts(
 		array(

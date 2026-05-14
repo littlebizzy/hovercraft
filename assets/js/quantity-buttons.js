@@ -83,5 +83,3 @@
 
 })();
 
-// Ref: ChatGPT
-// Ref: https://wordpress.org/plugins/qty-increment-buttons-for-woocommerce/

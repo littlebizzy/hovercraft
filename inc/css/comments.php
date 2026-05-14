@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 // styles for comments
 ?>
 
-/*comments */
+/* comments */
 
 /* remove bullets from all comment lists */
 ul.comments-list,

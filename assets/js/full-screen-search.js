@@ -23,6 +23,3 @@ jQuery( function( $ ) {
 
 } );
 
-// Ref: ChatGPT
-// Ref: https://wordpress.org/plugins/full-screen-search-overlay/
-// Ref: https://www.geeksforgeeks.org/how-to-detect-escape-key-press-using-jquery/

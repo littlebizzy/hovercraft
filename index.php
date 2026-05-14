@@ -41,10 +41,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<?php
 					
         			// the query
-					// https://wordpress.stackexchange.com/questions/145125/display-content-from-a-specific-category
-					// https://wordpress.stackexchange.com/questions/14768/determine-if-page-is-the-posts-page
 					if ( $blog_category !== 'none' ) {
-						// https://wordpress.stackexchange.com/questions/133754/pagination-shows-same-contents-all-pages
         				$the_query = new WP_Query(array(
             				'category_name' => $blog_category,
 							'post_type' => 'post',

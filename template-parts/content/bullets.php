@@ -13,23 +13,24 @@ if ( ! defined( 'ABSPATH' ) ) {
                     <div id="bullets">
 
                         <?php
-                        // Get subcategories of the 'faq' category
+                        // get subcategories of the 'faq' category
                         $faq_subcategories = get_categories(array(
-                            'parent' => get_cat_ID('faq'), // Use the ID of the FAQ parent category
-                            'hide_empty' => true, // Only show subcategories with posts
+                            'parent' => get_cat_ID('faq'),
+                            'hide_empty' => true,
                         ));
 
-                        // Flag to check if any FAQs were displayed
+                        // flag to check if any faqs were displayed
                         $faqs_displayed = false;
 
-                        if ($faq_subcategories) : // Check if there are any subcategories
+                        // display faq subcategories when available
+                        if ($faq_subcategories) :
                             foreach ($faq_subcategories as $subcategory) :
-                                // Output the subcategory title as H3
+                                // output the subcategory title as h3
                                 echo '<h3>' . esc_html($subcategory->name) . '</h3>';
 
-                                // The query for posts in this subcategory
+                                // the query for posts in this subcategory
                                 $the_query = new WP_Query(array(
-                                    'category__in' => array($subcategory->term_id), // Posts in this subcategory
+                                    'category__in' => array($subcategory->term_id),
                                     'post_status' => 'publish',
                                     'posts_per_page' => 999,
                                 ));
@@ -48,7 +49,8 @@ if ( ! defined( 'ABSPATH' ) ) {
                                                 <?php 
                                                 $hovercraft_bullets_html_content = get_theme_mod('hovercraft_bullets_html_content', 'none');
                                                 if ($hovercraft_bullets_html_content === 'include_html') {
-                                                    the_content(); // Output full content if enabled
+                                                    // output full content when enabled
+                                                    the_content();
                                                 } else {
                                                     $hovercraft_faq_word_count = absint( get_theme_mod('hovercraft_faq_character_count', '300') );
 
@@ -57,23 +59,26 @@ if ( ! defined( 'ABSPATH' ) ) {
                                                     }
 
                                                     $content = get_the_content();
-                                                    echo '<p>' . esc_html( wp_trim_words($content, $hovercraft_faq_word_count, '...') ) . '</p>'; // Trim content for display
+                                                    // trim content for compact display
+                                                    echo '<p>' . esc_html( wp_trim_words($content, $hovercraft_faq_word_count, '...') ) . '</p>';
                                                 } ?>
                                             </div><!-- faq-item -->
                                         <?php endwhile; ?>
                                     </div><!-- faq-item-list -->
                                     <?php wp_reset_postdata(); ?>
-                                    <?php $faqs_displayed = true; // Set flag to true if any FAQs were displayed ?>
+                                    <?php // mark faq results as displayed ?>
+                                    <?php $faqs_displayed = true; ?>
                                 <?php else : ?>
                                     <p><?php esc_html_e('No posts', 'hovercraft'); ?></p>
                                 <?php endif; ?>
-                            <?php endforeach; // End of subcategory loop ?>
+                            <?php endforeach; ?>
                         <?php endif; ?>
 
-                        <!-- Query for FAQs without subcategories -->
+                        <!-- query for faqs without subcategories -->
                         <?php
+                        // query all faq posts first
                         $faq_query_args = array(
-                            'category_name' => 'faq', // Fetch all posts in the 'faq' category
+                            'category_name' => 'faq',
                             'post_status' => 'publish',
                             'posts_per_page' => 999,
                         );
@@ -81,19 +86,20 @@ if ( ! defined( 'ABSPATH' ) ) {
                         $faq_subcategory_ids = wp_list_pluck($faq_subcategories, 'term_id');
 
                         if ( ! empty( $faq_subcategory_ids ) ) {
+                            // exclude posts already shown under subcategories
                             $faq_query_args['tax_query'] = array(
                                 array(
                                     'taxonomy' => 'category',
                                     'field'    => 'term_id',
-                                    'terms'    => $faq_subcategory_ids, // Get subcategory IDs
-                                    'operator' => 'NOT IN', // Exclude subcategory posts
+                                    'terms'    => $faq_subcategory_ids,
+                                    'operator' => 'NOT IN',
                                 ),
                             );
                         }
 
                         $the_query = new WP_Query($faq_query_args);
 
-                        // If there are FAQs without subcategories, display them
+                        // if there are faqs without subcategories, display them
                         if ($the_query->have_posts()) : ?>
                             <h3><?php esc_html_e('General', 'hovercraft'); ?></h3>
                             <div class="faq-item-list">
@@ -109,7 +115,8 @@ if ( ! defined( 'ABSPATH' ) ) {
                                         <?php 
                                         $hovercraft_bullets_html_content = get_theme_mod('hovercraft_bullets_html_content', 'none');
                                         if ($hovercraft_bullets_html_content === 'include_html') {
-                                            the_content(); // Output full content if enabled
+                                            // output full content when enabled
+                                            the_content();
                                         } else {
                                             $hovercraft_faq_word_count = absint( get_theme_mod('hovercraft_faq_character_count', '300') );
 
@@ -118,13 +125,15 @@ if ( ! defined( 'ABSPATH' ) ) {
                                             }
 
                                             $content = get_the_content();
-                                            echo '<p>' . esc_html( wp_trim_words($content, $hovercraft_faq_word_count, '...') ) . '</p>'; // Trim content for display
+                                            // trim content for compact display
+                                            echo '<p>' . esc_html( wp_trim_words($content, $hovercraft_faq_word_count, '...') ) . '</p>';
                                         } ?>
                                     </div><!-- faq-item -->
                                 <?php endwhile; ?>
                             </div><!-- faq-item-list -->
                             <?php wp_reset_postdata(); ?>
-                            <?php $faqs_displayed = true; // Set flag to true if any FAQs were displayed ?>
+                            <?php // mark faq results as displayed ?>
+                            <?php $faqs_displayed = true; ?>
                         <?php elseif ( ! $faqs_displayed ) : ?>
                             <p><?php esc_html_e('No FAQs available', 'hovercraft'); ?></p>
                         <?php endif; ?>
@@ -139,5 +148,3 @@ if ( ! defined( 'ABSPATH' ) ) {
     </div><!-- inner -->
 </div><!-- main -->
 
-<!-- Ref: ChatGPT -->
-<!-- Ref: https://wordpress.stackexchange.com/questions/417119/display-posts-on-category-archive-organized-into-subcategories -->

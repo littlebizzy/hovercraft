@@ -932,6 +932,3 @@ if ( file_exists( $hovercraft_cart_icon_css ) ) {
  
 add_action( 'wp_head', 'hovercraft_generate_css' );
 
-// Ref: ChatGPT
-// Ref: https://codex.wordpress.org/Wrapping_Text_Around_Images
-// Ref: https://blog.logrocket.com/guide-css-word-wrap-overflow-wrap-word-break/

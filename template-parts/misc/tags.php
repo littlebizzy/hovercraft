@@ -31,8 +31,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php endif; ?>
 
 <?php
-// Ref: https://developer.wordpress.org/reference/functions/is_single/
-// Ref: https://wordpress.stackexchange.com/questions/6731/how-do-test-if-a-post-is-a-custom-post-type
-// Ref: https://wordpress.stackexchange.com/questions/62260/how-to-add-tags-to-custom-post-type
-// Ref: littlebizzy/hovercraft/blob/master/inc/misc/custom-post-test.php
 ?>

@@ -4,6 +4,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// loads menus offcanvas menu logic
+
 function hovercraft_offcanvas_menu() {
 	wp_enqueue_script(
 		'hovercraft_offcanvas_menu',
@@ -15,5 +17,3 @@ function hovercraft_offcanvas_menu() {
 }
 add_action( 'wp_enqueue_scripts', 'hovercraft_offcanvas_menu' );
 
-// https://wpmudev.com/blog/adding-jquery-scripts-wordpress/
-// https://codepen.io/keithchis/pen/GpdbLm

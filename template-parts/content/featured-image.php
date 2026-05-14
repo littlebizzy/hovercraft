@@ -53,13 +53,4 @@ if ( ! is_array( $image_src ) ) {
 <div class="clear"></div>
 
 <?php
-// Ref: ChatGPT
-// Ref: https://rudrastyh.com/wordpress/image-sizes.html
-// Ref: https://wordpress.stackexchange.com/questions/18337/how-to-get-featured-images-width-and-use-elsewhere-in-template
-// Ref: https://wordpress.stackexchange.com/questions/27385/whats-the-best-way-to-use-the-featured-image-for-responsive-web-design
-// Ref: https://www.smashingmagazine.com/2012/06/responsive-images-with-wordress-featured-images/
-// Ref: https://wordpress.stackexchange.com/questions/111937/how-to-show-featured-image-caption-only-if-it-exist
-// Ref: https://developer.wordpress.org/reference/functions/wp_get_attachment_image_src/
-// Ref: https://wordpress.stackexchange.com/questions/312283/getting-alt-text-of-featured-image
-// Ref: https://wordpress.stackexchange.com/questions/193196/how-to-get-image-title-alt-attribute
 ?>

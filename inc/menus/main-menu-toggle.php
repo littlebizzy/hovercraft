@@ -4,6 +4,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// loads menus main menu toggle logic
+
 function hovercraft_main_menu_toggle( $item_output, $item, $depth, $args ) {
 	if (
 		isset( $args->theme_location ) &&

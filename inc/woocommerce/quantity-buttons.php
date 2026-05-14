@@ -4,6 +4,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// loads woocommerce quantity buttons logic
+
 if ( ! class_exists( 'WooCommerce' ) ) {
 	return;
 }

@@ -34,6 +34,3 @@ $my_query = new WP_Query( $args );
 <?php endif; ?>
 
 <?php
-// https://wordpress.stackexchange.com/a/183498/152624
-// https://stackoverflow.com/a/58809628/1718491
-// https://wordpress.stackexchange.com/a/413722/152624

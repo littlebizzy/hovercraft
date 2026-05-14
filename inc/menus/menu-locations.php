@@ -4,6 +4,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// loads menus menu locations logic
+
 function hovercraft_menu_locations() {
 	register_nav_menus(
 		array(

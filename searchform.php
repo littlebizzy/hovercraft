@@ -20,5 +20,3 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</div><!-- input-container -->
 </form><!-- searchform -->
 
-<!-- Ref: ChatGPT -->
-<!-- Ref: https://codepen.io/jessuppi/pen/pomVZrr -->

@@ -4,6 +4,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// loads menus accordion menu logic
+
 function hovercraft_accordion_menu() {
 	wp_enqueue_script(
 		'hovercraft_accordion_menu',

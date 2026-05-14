@@ -4,6 +4,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// loads meta meta box logic
+
 function hovercraft_is_title_hidden( $post_id = 0 ) {
 	if ( $post_id ) {
 		$post_id = absint( $post_id );

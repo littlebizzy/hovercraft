@@ -54,8 +54,3 @@ $hovercraft_biography = get_theme_mod( 'hovercraft_biography', 'native_posts_onl
 <?php endif; ?>
 
 <?php
-// https://shihabiiuc.com/how-to-display-author-bio-in-wordpress-single-post/
-// https://stackoverflow.com/questions/4290420/wordpress-how-to-check-whether-it-is-post-or-page
-// https://wordpress.stackexchange.com/questions/6731/how-do-test-if-a-post-is-a-custom-post-type
-// https://stackoverflow.com/questions/4290420/wordpress-how-to-check-whether-it-is-post-or-page
-// https://wordpress.stackexchange.com/questions/193369/how-to-get-authors-avatar

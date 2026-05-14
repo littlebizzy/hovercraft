@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	display: table-cell;
     vertical-align: middle;
 	height: inherit;
-	min-width: auto; /* https://developer.mozilla.org/en-US/docs/Web/CSS/min-width */
+	min-width: auto;
 	white-space: nowrap;
 }
 

@@ -21,5 +21,3 @@ jQuery( function( $ ) {
 
 } );
 
-// Ref: ChatGPT
-// Ref: https://codepen.io/keithchis/pen/GpdbLm

@@ -4,6 +4,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// loads media sizes verify logic
+
 function hovercraft_verify_media_sizes() {
 	$large_width = absint( get_option( 'large_size_w' ) );
 	$medium_width = absint( get_option( 'medium_size_w' ) );

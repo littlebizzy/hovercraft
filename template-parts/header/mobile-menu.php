@@ -31,4 +31,3 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div class="hovercraft-offcanvas-overlay"></div>
 
-<!-- Ref: https://codepen.io/abhi_pawar/pen/qzpEJL -->

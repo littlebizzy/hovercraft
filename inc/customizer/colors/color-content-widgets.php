@@ -305,13 +305,13 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	)
 ) );
 
-// sidebar callout CTA background color setting
+// sidebar callout cta background color setting
 $wp_customize->add_setting( 'hovercraft_sidebar_callout_cta_background_color', array(
 	'default' => '#263238',
 	'sanitize_callback' => 'sanitize_hex_color',
 ) );
 
-// sidebar callout CTA background color control
+// sidebar callout cta background color control
 $wp_customize->add_control( new WP_Customize_Color_Control(
 	$wp_customize,
 	'hovercraft_sidebar_callout_cta_background_color',
@@ -323,13 +323,13 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	)
 ) );
 
-// sidebar callout CTA border color setting
+// sidebar callout cta border color setting
 $wp_customize->add_setting( 'hovercraft_sidebar_callout_cta_border_color', array(
 	'default' => '#263238',
 	'sanitize_callback' => 'sanitize_hex_color',
 ) );
 
-// sidebar callout CTA border color control
+// sidebar callout cta border color control
 $wp_customize->add_control( new WP_Customize_Color_Control(
 	$wp_customize,
 	'hovercraft_sidebar_callout_cta_border_color',
@@ -341,13 +341,13 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	)
 ) );
 
-// sidebar callout CTA link color setting
+// sidebar callout cta link color setting
 $wp_customize->add_setting( 'hovercraft_sidebar_callout_link_color', array(
 	'default' => '#ffffff',
 	'sanitize_callback' => 'sanitize_hex_color',
 ) );
 
-// sidebar callout CTA link color control
+// sidebar callout cta link color control
 $wp_customize->add_control( new WP_Customize_Color_Control(
 	$wp_customize,
 	'hovercraft_sidebar_callout_link_color',

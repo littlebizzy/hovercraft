@@ -42,5 +42,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php endif; // endif is_front_page ?>
 
 <?php get_template_part( 'footer' ); 
-// https://wordpress.org/support/topic/show-all-attached-images-of-a-specific-post/
 ?>

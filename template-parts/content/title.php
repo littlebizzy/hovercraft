@@ -4,6 +4,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// renders the content title template part
+
  if ( ! hovercraft_is_title_hidden() ) : ?>
 	<?php
 	$h1_divider_display = get_theme_mod( 'hovercraft_h1_divider_display', 'none' );

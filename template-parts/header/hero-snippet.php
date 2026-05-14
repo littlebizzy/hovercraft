@@ -4,6 +4,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// renders the header hero snippet template part
+
 ?>
 <?php if ( is_active_sidebar( 'hovercraft_hero_snippet' ) ) : ?>
 	<?php

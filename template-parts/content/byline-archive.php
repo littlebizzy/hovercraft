@@ -36,8 +36,3 @@ $author_id = isset( $post ) && is_object( $post ) ? $post->post_author : 0;
 </div><!-- post-byline-archive -->
 
 <?php
-// Ref: ChatGPT
-// Ref: https://wordpress.stackexchange.com/questions/264802/how-to-check-if-custom-post-type-exists-in-wordpress
-// Ref: https://stackoverflow.com/questions/3634381/php-if-something-is-the-case-do-nothing
-// Ref: https://stackoverflow.com/questions/45529150/how-to-get-the-url-of-the-get-avatar-url-function-in-wordpress
-// Ref: https://www.wpexplorer.com/remove-async-decoding-wordpress-images/

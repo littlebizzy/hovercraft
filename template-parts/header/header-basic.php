@@ -66,4 +66,3 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 </div><!-- header-basic -->
 
-<!-- Ref: https://stackoverflow.com/questions/13903918/apply-widget-title-filter-only-to-wordpress-widgets-from-a-certain-sidebar -->

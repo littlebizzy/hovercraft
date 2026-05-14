@@ -141,12 +141,6 @@ hr {
 	margin-bottom: 30px;
 	}
 }
-	
-/*
-#content-wrapper iframe {
-	aspect-ratio: 16 / 9;
-}
-*/
 
 #footer iframe {
 	aspect-ratio: 1 / 1.5;

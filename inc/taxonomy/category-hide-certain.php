@@ -4,6 +4,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// loads taxonomy category hide certain logic
+
 add_action( 'pre_get_posts', 'hovercraft_hide_certain_categories' );
 
 function hovercraft_hide_certain_categories( $wp_query ) {

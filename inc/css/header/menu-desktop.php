@@ -139,9 +139,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 
-/* =========================================================
-   BASIC HERO HEADER
-   ========================================================= */
+/* basic hero header */
 
 /* colors for basic header top level links */
 #header-basic .menu-desktop > .main-menu > ul > li > a {
@@ -168,9 +166,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 
-/* =========================================================
-   MINI HERO HEADER
-   ========================================================= */
+/* mini hero header */
 
 /* colors for mini hero header top level links */
 #header-mini-hero .menu-desktop > .main-menu > ul > li > a {
@@ -197,9 +193,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 
-/* =========================================================
-   HALF HERO HEADER
-   ========================================================= */
+/* half hero header */
 
 /* colors for half hero header top level links */
 #header-half-hero .menu-desktop > .main-menu > ul > li > a {
@@ -226,9 +220,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 
-/* =========================================================
-   FULL HERO HEADER
-   ========================================================= */
+/* full hero header */
 
 /* colors for full hero header top level links */
 #header-full-hero .menu-desktop > .main-menu > ul > li > a {

@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 
 // hide sharing on product pages
-// make this conditional later based on Customizer settings
+// make this conditional later based on customizer settings
 if ( function_exists( 'is_product' ) && is_product() ) {
 	return;
 }
@@ -48,6 +48,3 @@ $viber_url = 'viber://forward?text=' . $url_encoded;
 	<div class="clear"></div>
 </div><!-- social-sharing -->
 
-<!-- Ref: ChatGPT -->
-<!-- Ref: https://stackoverflow.com/questions/6768793/get-the-full-url-in-php -->
-<!-- Ref: https://stackoverflow.com/questions/33426752/linkedin-share-post-url -->

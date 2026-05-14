@@ -4,6 +4,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// loads content main content logic
+
 function hovercraft_maybe_load_premain() {
 	static $premain_loaded = false;
 

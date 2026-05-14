@@ -95,11 +95,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	color: #ffffff;
 }
 
-/***************************/
-/*start mobile menu overlay*/
-/***************************/
+/* start mobile menu overlay */
 .mobile-menu-trig {
-	/*display: none;*/
+	/* display: none; */
 	background: transparent;
 	border: 0;
 	padding: 0;
@@ -198,9 +196,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 
 }
-/*************************/
-/*end mobile menu overlay*/
-/*************************/
+/* end mobile menu overlay */
 	
 #hovercraft-offcanvas-menu {
 	top: 0;

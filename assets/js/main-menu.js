@@ -40,4 +40,3 @@ jQuery( function( $ ) {
 	} );
 } );
 
-// Ref: ChatGPT

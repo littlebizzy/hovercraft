@@ -70,8 +70,3 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</div><!-- topbar -->
 			<?php endif; ?>
 
-<!-- Ref: ChatGPT -->
-<!-- Ref: https://stackoverflow.com/questions/13903918/apply-widget-title-filter-only-to-wordpress-widgets-from-a-certain-sidebar -->
-<!-- Ref: https://wordpress.stackexchange.com/questions/419686/how-to-retrieve-blog-language-without-any-region-locale-attached -->
-<!-- Ref: https://stackoverflow.com/questions/48021086/how-to-avoid-font-awesome-loading-jumping-when-opening-a-page -->
-<!-- Ref: https://www.smashingmagazine.com/2021/05/reduce-font-loading-impact-css-descriptors/ -->

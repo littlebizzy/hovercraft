@@ -30,12 +30,7 @@ form.woocommerce-ordering select {
 }
 
 form.woocommerce-ordering select:active, form.woocommerce-ordering select:focus {
-	positive: relative; // dummy placeholder
+	positive: relative;
 	box-shadow: inset 0px 0px 0px 1px <?php echo $breadcrumbs_text_color; ?> !important;
 }
 
-/*
-Ref: https://github.com/littlebizzy/hovercraft/blob/master/inc/css/forms.php
-Ref: https://codepen.io/jpdanks/pen/KKBarq 
-Ref: https://codepen.io/rabakilgur/pen/zyggOe
-*/

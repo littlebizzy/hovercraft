@@ -17,5 +17,3 @@ jQuery( function( $ ) {
 
 } );
 
-// Ref: ChatGPT
-// Ref: https://codepen.io/abhi_pawar/pen/qzpEJL

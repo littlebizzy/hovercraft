@@ -4,6 +4,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// loads media featured images logic
+
 add_theme_support( 'post-thumbnails' );
 
 function hovercraft_post_image_large() {

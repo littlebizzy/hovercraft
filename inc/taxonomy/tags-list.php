@@ -4,6 +4,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// loads taxonomy tags list logic
+
 function hovercraft_show_tags() {
 	$post_tags = get_the_tags();
 	$tag_links = array();

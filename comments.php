@@ -72,11 +72,4 @@ if ( ! comments_open() && ! get_comments_number() ) {
 </div>
 
 <?php
-// Ref: ChatGPT
-// Ref: https://developer.wordpress.org/themes/template-files-section/partial-and-miscellaneous-template-files/comment-template/
-// Ref: https://stackoverflow.com/questions/20751219/undefined-variable-on-comments-wordpress
-// Ref: https://stackoverflow.com/questions/55567423/error-please-fill-the-required-fields-name-email-in-wordpress-comment
-// Ref: https://developer.wordpress.org/reference/functions/comment_form/
-// Ref: https://stackoverflow.com/questions/3335929/edit-wordpress-comment-form-just-add-a-class-to-the-text-inputs
-// Ref: https://stackoverflow.com/questions/11333810/how-to-customize-wordpress-comment-form
 ?>
