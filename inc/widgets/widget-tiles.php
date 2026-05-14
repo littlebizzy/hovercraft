@@ -4,6 +4,126 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// register legacy tile widget areas
+function hovercraft_register_legacy_tile_sidebars() {
+	$legacy_tile_sidebars = array(
+		array(
+			'name' => 'Tile #1',
+			'id' => 'hovercraft_tile_one',
+			'class' => 'widget-tile-one',
+		),
+		array(
+			'name' => 'Tile #2',
+			'id' => 'hovercraft_tile_two',
+			'class' => 'widget-tile-two',
+		),
+		array(
+			'name' => 'Tile #3',
+			'id' => 'hovercraft_tile_three',
+			'class' => 'widget-tile-three',
+		),
+		array(
+			'name' => 'Tile #4',
+			'id' => 'hovercraft_tile_four',
+			'class' => 'widget-tile-four',
+		),
+		array(
+			'name' => 'Tile #5',
+			'id' => 'hovercraft_tile_five',
+			'class' => 'widget-tile-five',
+		),
+		array(
+			'name' => 'Tile #6',
+			'id' => 'hovercraft_tile_six',
+			'class' => 'widget-tile-six',
+		),
+		array(
+			'name' => 'Tile #7',
+			'id' => 'hovercraft_tile_seven',
+			'class' => 'widget-tile-seven',
+		),
+		array(
+			'name' => 'Tile #8',
+			'id' => 'hovercraft_tile_eight',
+			'class' => 'widget-tile-eight',
+		),
+		array(
+			'name' => 'Tile #9',
+			'id' => 'hovercraft_tile_nine',
+			'class' => 'widget-tile-nine',
+		),
+		array(
+			'name' => 'Tile #10',
+			'id' => 'hovercraft_tile_ten',
+			'class' => 'widget-tile-ten',
+		),
+		array(
+			'name' => 'Tile #11',
+			'id' => 'hovercraft_tile_eleven',
+			'class' => 'widget-tile-eleven',
+		),
+		array(
+			'name' => 'Tile #12',
+			'id' => 'hovercraft_tile_twelve',
+			'class' => 'widget-tile-twelve',
+		),
+		array(
+			'name' => 'Tile #13',
+			'id' => 'hovercraft_tile_thirteen',
+			'class' => 'widget-tile-thirteen',
+		),
+		array(
+			'name' => 'Tile #14',
+			'id' => 'hovercraft_tile_fourteen',
+			'class' => 'widget-tile-fourteen',
+		),
+		array(
+			'name' => 'Tile #15',
+			'id' => 'hovercraft_tile_fifteen',
+			'class' => 'widget-tile-fifteen',
+		),
+		array(
+			'name' => 'Tile #16',
+			'id' => 'hovercraft_tile_sixteen',
+			'class' => 'widget-tile-sixteen',
+		),
+		array(
+			'name' => 'Tile #17',
+			'id' => 'hovercraft_tile_seventeen',
+			'class' => 'widget-tile-seventeen',
+		),
+		array(
+			'name' => 'Tile #18',
+			'id' => 'hovercraft_tile_eighteen',
+			'class' => 'widget-tile-eighteen',
+		),
+		array(
+			'name' => 'Tile #19',
+			'id' => 'hovercraft_tile_nineteen',
+			'class' => 'widget-tile-nineteen',
+		),
+		array(
+			'name' => 'Tile #20',
+			'id' => 'hovercraft_tile_twenty',
+			'class' => 'widget-tile-twenty',
+		),
+	);
+
+	foreach ( $legacy_tile_sidebars as $legacy_tile_sidebar ) {
+		register_sidebar(
+			array(
+				'name' => $legacy_tile_sidebar['name'],
+				'id' => $legacy_tile_sidebar['id'],
+				'before_widget' => '<div class="' . $legacy_tile_sidebar['class'] . ' widget-wrapper">',
+				'after_widget' => '</div>',
+				'before_title' => '<h3 class="widget-title">',
+				'after_title' => '</h3>',
+			)
+		);
+	}
+}
+add_action( 'widgets_init', 'hovercraft_register_legacy_tile_sidebars' );
+
 // get rendered legacy tile widget areas
 function hovercraft_get_legacy_tile_sidebars() {
 	return array(
