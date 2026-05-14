@@ -124,13 +124,6 @@ function hovercraft_register_sidebars() {
 			'class' => 'widget-copyright',
 		),
 
-		// tiles widgets
-		array(
-			'name' => 'Tiles',
-			'id' => 'hovercraft_tiles',
-			'class' => 'tile',
-		),
-
 		// postcolumns widgets
 		array(
 			'name' => 'Postcolumns Top',
