@@ -4,6 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// register theme widget areas
 function hovercraft_register_sidebars() {
 	$sidebars = array(
 		// topbar widgets

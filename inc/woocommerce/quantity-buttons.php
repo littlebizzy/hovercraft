@@ -12,6 +12,7 @@ if ( ! class_exists( 'WooCommerce' ) ) {
 
 add_action( 'wp_enqueue_scripts', 'hovercraft_quantity_buttons' );
 
+// enqueue quantity button assets
 function hovercraft_quantity_buttons() {
 	if ( ! is_woocommerce() && ! is_cart() && ! is_checkout() ) {
 		return;

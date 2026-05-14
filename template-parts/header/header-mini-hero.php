@@ -53,7 +53,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					}
 				?></button>
 				</div><!-- input-container -->
-		</form>
+		</form><!-- searchform -->
 		<?php endif; // end category ?>
 
 		<?php if ( is_front_page() ) : ?>

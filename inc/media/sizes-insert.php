@@ -8,6 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 add_filter( 'image_size_names_choose', 'hovercraft_medium_large_images_insert' );
 
+// add medium large image size to selector
 function hovercraft_medium_large_images_insert( $sizes ) {
 	return array_merge(
 		$sizes,

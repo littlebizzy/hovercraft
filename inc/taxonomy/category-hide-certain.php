@@ -8,6 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 add_action( 'pre_get_posts', 'hovercraft_hide_certain_categories' );
 
+// hide selected categories from queries
 function hovercraft_hide_certain_categories( $wp_query ) {
 	$excluded_categories = array();
 	$portal_category = get_category_by_slug( get_theme_mod( 'hovercraft_portal_category', 'none' ) );

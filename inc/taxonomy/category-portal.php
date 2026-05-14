@@ -8,6 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 add_filter( 'template_include', 'hovercraft_portal_category_template', 99 );
 
+// load portal category template
 function hovercraft_portal_category_template( $template ) {
 	$portal_category = get_theme_mod( 'hovercraft_portal_category', 'none' );
 

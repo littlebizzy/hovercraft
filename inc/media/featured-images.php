@@ -8,6 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 add_theme_support( 'post-thumbnails' );
 
+// output the first attached large image url
 function hovercraft_post_image_large() {
 	global $post;
 

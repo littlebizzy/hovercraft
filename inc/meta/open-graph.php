@@ -8,6 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 add_action( 'wp_head', 'hovercraft_open_graph_meta' );
 
+// output open graph metadata
 function hovercraft_open_graph_meta() {
 	if ( ! is_singular() ) {
 		return;

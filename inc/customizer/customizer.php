@@ -4,6 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// register customizer panels and sections
 function hovercraft_customizer( $wp_customize ) {
 	// load google fonts array (via functions.php)
 	$hovercraft_google_fonts_array = hovercraft_google_fonts_array();

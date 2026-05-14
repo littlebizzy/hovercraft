@@ -17,6 +17,7 @@ function hovercraft_accordion_menu() {
 }
 add_action( 'wp_enqueue_scripts', 'hovercraft_accordion_menu' );
 
+// add accordion toggles to menu items
 function hovercraft_accordion_menu_toggle( $item_output, $item, $depth, $args ) {
 	if (
 		isset( $args->theme_location ) &&

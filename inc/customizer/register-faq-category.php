@@ -4,6 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// register bullets category setting
 function hovercraft_register_bullets_category( $wp_customize ) {
 
 	// get an array of categories

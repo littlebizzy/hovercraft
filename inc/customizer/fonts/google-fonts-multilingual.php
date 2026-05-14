@@ -4,6 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// return multilingual google font choices
 function hovercraft_google_fonts_multilingual_array() {
 	$google_fonts_multilingual_array = array(
 		''                          => 'None (Disabled)', // blank value for no font

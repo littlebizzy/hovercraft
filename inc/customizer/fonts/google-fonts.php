@@ -4,6 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// return standard google font choices
 function hovercraft_google_fonts_array() {
 	$google_fonts_array = array(
 		''                          => 'None (Disabled)', // blank value for no font

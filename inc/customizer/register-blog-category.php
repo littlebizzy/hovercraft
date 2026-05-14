@@ -4,6 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// register blog category setting
 function hovercraft_register_blog_category( $wp_customize ) {
 
 	// get an array of categories

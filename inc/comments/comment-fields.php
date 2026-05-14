@@ -7,6 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 // modify default comment form fields
 add_filter( 'comment_form_default_fields', 'hovercraft_comment_fields' );
 
+// adjust comment form fields
 function hovercraft_comment_fields( $fields ) {
 	$commenter = wp_get_current_commenter();
 	$req = get_option( 'require_name_email' );

@@ -8,6 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 <?php
+// build full hero background image css
 function hovercraft_get_hero_background(
     $gradient_tones,
     $gradient_angle,

@@ -20,6 +20,7 @@ function hovercraft_maybe_load_premain() {
 	}
 }
 
+// determine if main content should render
 function hovercraft_should_show_main_content() {
 	hovercraft_maybe_load_premain();
 

@@ -4,6 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// output numbered pagination links
 function hovercraft_pagination_nav() {
 
 	if ( is_singular() ) {

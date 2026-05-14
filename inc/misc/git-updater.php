@@ -22,7 +22,7 @@ function hovercraft_check_git_updater() {
                 <?php wp_nonce_field( 'hovercraft_install_git_updater', 'hovercraft_git_updater_nonce' ); ?>
                 <input type="hidden" name="hovercraft_git_updater_action" value="install_git_updater">
                 <?php submit_button( __( 'Install Git Updater', 'hovercraft' ), 'primary', 'submit', false ); ?>
-            </form>
+            </form><!-- git updater form -->
         </div><!-- notice -->
         <?php
         return;
@@ -39,7 +39,7 @@ function hovercraft_check_git_updater() {
                 <?php wp_nonce_field( 'hovercraft_activate_git_updater', 'hovercraft_git_updater_nonce' ); ?>
                 <input type="hidden" name="hovercraft_git_updater_action" value="activate_git_updater">
                 <?php submit_button( __( 'Activate Git Updater', 'hovercraft' ), 'primary', 'submit', false ); ?>
-            </form>
+            </form><!-- git updater form -->
         </div><!-- notice -->
         <?php
     }

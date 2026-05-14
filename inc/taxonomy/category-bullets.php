@@ -8,6 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 add_filter( 'template_include', 'hovercraft_bullets_category_template', 99 );
 
+// load bullets category template
 function hovercraft_bullets_category_template( $template ) {
 	$bullets_category = get_theme_mod( 'hovercraft_bullets_category', 'none' );
 
