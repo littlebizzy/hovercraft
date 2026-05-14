@@ -6,14 +6,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 // register preferred columns widget area
 function hovercraft_register_columns_sidebar() {
-	register_sidebar(
+	hovercraft_register_widget_area(
 		array(
 			'name' => 'Columns',
 			'id' => 'hovercraft_columns',
-			'before_widget' => '<div class="column widget-wrapper">',
-			'after_widget' => '</div>',
-			'before_title' => '<h3 class="widget-title">',
-			'after_title' => '</h3>',
+			'class' => 'column',
 		)
 	);
 }
@@ -50,16 +47,7 @@ function hovercraft_register_legacy_column_sidebars() {
 	);
 
 	foreach ( $legacy_column_sidebars as $legacy_column_sidebar ) {
-		register_sidebar(
-			array(
-				'name' => $legacy_column_sidebar['name'],
-				'id' => $legacy_column_sidebar['id'],
-				'before_widget' => '<div class="' . $legacy_column_sidebar['class'] . ' widget-wrapper">',
-				'after_widget' => '</div>',
-				'before_title' => '<h3 class="widget-title">',
-				'after_title' => '</h3>',
-			)
-		);
+		hovercraft_register_widget_area( $legacy_column_sidebar );
 	}
 }
 add_action( 'widgets_init', 'hovercraft_register_legacy_column_sidebars' );
