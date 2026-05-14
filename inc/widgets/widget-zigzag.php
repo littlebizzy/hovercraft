@@ -4,14 +4,30 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// register preferred zigzag widget area
+function hovercraft_register_zigzag_sidebar() {
+	register_sidebar(
+		array(
+			'name' => 'ZigZag',
+			'id' => 'hovercraft_zigzag',
+			'before_widget' => '<div class="zigzag-section widget-wrapper">',
+			'after_widget' => '<div class="clear"></div></div>',
+			'before_title' => '<h3 class="widget-title">',
+			'after_title' => '</h3>',
+		)
+	);
+}
+add_action( 'widgets_init', 'hovercraft_register_zigzag_sidebar' );
+
 // get preferred zigzag widget area
 function hovercraft_get_zigzag_sidebar() {
-	return 'hovercraft_widget_area_zigzag';
+	return 'hovercraft_zigzag';
 }
 
 // get legacy zigzag widget areas
 function hovercraft_get_legacy_zigzag_sidebars() {
 	return array(
+		'hovercraft_widget_area_zigzag',
 		'hovercraft_zigzag_one',
 		'hovercraft_zigzag_two',
 		'hovercraft_zigzag_three',
@@ -26,15 +42,9 @@ function hovercraft_get_legacy_zigzag_sidebars() {
 	);
 }
 
-// mark zigzag widget areas in admin
-function hovercraft_label_zigzag_sidebars() {
+// mark legacy zigzag widget areas in admin
+function hovercraft_label_legacy_zigzag_sidebars() {
 	global $wp_registered_sidebars;
-
-	$zigzag_sidebar = hovercraft_get_zigzag_sidebar();
-
-	if ( isset( $wp_registered_sidebars[ $zigzag_sidebar ]['name'] ) ) {
-		$wp_registered_sidebars[ $zigzag_sidebar ]['name'] = 'ZigZag';
-	}
 
 	$legacy_zigzag_sidebars = hovercraft_get_legacy_zigzag_sidebars();
 
@@ -50,7 +60,7 @@ function hovercraft_label_zigzag_sidebars() {
 		$wp_registered_sidebars[ $legacy_zigzag_sidebar ]['name'] = 'Legacy ' . $wp_registered_sidebars[ $legacy_zigzag_sidebar ]['name'];
 	}
 }
-add_action( 'widgets_init', 'hovercraft_label_zigzag_sidebars', 20 );
+add_action( 'widgets_init', 'hovercraft_label_legacy_zigzag_sidebars', 20 );
 
 // hide empty legacy zigzag widget areas
 function hovercraft_hide_empty_legacy_zigzag_sidebars() {
@@ -110,7 +120,7 @@ function hovercraft_legacy_zigzag_widget_notice() {
 }
 add_action( 'admin_notices', 'hovercraft_legacy_zigzag_widget_notice' );
 
-// alternate preferred zigzag widget wrappers
+// alternate zigzag widget wrappers
 function hovercraft_filter_zigzag_widget_params( $params ) {
 	global $hovercraft_zigzag_widget_index;
 
@@ -184,6 +194,17 @@ function hovercraft_render_zigzag_meta_rows() {
 	}
 }
 
+// render zigzag widget area
+function hovercraft_render_zigzag_sidebar( $zigzag_sidebar ) {
+	global $hovercraft_zigzag_widget_index;
+
+	$hovercraft_zigzag_widget_index = 0;
+
+	add_filter( 'dynamic_sidebar_params', 'hovercraft_filter_zigzag_widget_params' );
+	dynamic_sidebar( $zigzag_sidebar );
+	remove_filter( 'dynamic_sidebar_params', 'hovercraft_filter_zigzag_widget_params' );
+}
+
 // render preferred zigzag widget area with legacy fallback
 function hovercraft_render_zigzag() {
 	$zigzag_sidebar = hovercraft_get_zigzag_sidebar();
@@ -201,13 +222,7 @@ function hovercraft_render_zigzag() {
 		<?php if ( $has_meta_rows ) : ?>
 			<?php hovercraft_render_zigzag_meta_rows(); ?>
 		<?php elseif ( $has_zigzag ) : ?>
-			<?php
-			global $hovercraft_zigzag_widget_index;
-			$hovercraft_zigzag_widget_index = 0;
-			add_filter( 'dynamic_sidebar_params', 'hovercraft_filter_zigzag_widget_params' );
-			dynamic_sidebar( $zigzag_sidebar );
-			remove_filter( 'dynamic_sidebar_params', 'hovercraft_filter_zigzag_widget_params' );
-			?>
+			<?php hovercraft_render_zigzag_sidebar( $zigzag_sidebar ); ?>
 		<?php else : ?>
 			<?php foreach ( $legacy_zigzag_sidebars as $index => $legacy_zigzag_sidebar ) : ?>
 				<?php
