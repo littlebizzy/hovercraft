@@ -118,7 +118,11 @@ function hovercraft_filter_zigzag_widget_params( $params ) {
 		return $params;
 	}
 
-	$class = ( $hovercraft_zigzag_widget_index % 2 === 0 ) ? 'zigzag-section' : 'zigzag-section-reverse';
+	$class = 'zigzag-section';
+
+	if ( $hovercraft_zigzag_widget_index % 2 !== 0 ) {
+		$class = 'zigzag-section-reverse';
+	}
 
 	$params[0]['before_widget'] = '<div class="' . esc_attr( $class ) . ' widget-wrapper">';
 	$params[0]['after_widget'] = '<div class="clear"></div></div>';
@@ -141,7 +145,11 @@ function hovercraft_render_zigzag_meta_rows() {
 			continue;
 		}
 
-		$class = ( $i % 2 === 1 ) ? 'zigzag-section' : 'zigzag-section-reverse';
+		$class = 'zigzag-section';
+
+		if ( $i % 2 === 0 ) {
+			$class = 'zigzag-section-reverse';
+		}
 		?>
 		<div class="<?php echo esc_attr( $class ); ?>">
 
@@ -158,9 +166,14 @@ function hovercraft_render_zigzag_meta_rows() {
 			<?php endif; // end text ?>
 
 			<?php if ( $link_url ) : ?>
+				<?php
+				if ( ! $link_text ) {
+					$link_text = 'Read more';
+				}
+				?>
 				<p>
 					<a href="<?php echo esc_url( $link_url ); ?>">
-						<?php echo esc_html( $link_text ? $link_text : 'Read more' ); ?>
+						<?php echo esc_html( $link_text ); ?>
 					</a>
 				</p>
 			<?php endif; // end link-url ?>
@@ -202,7 +215,11 @@ function hovercraft_render_zigzag() {
 					continue;
 				}
 
-				$class = ( $index % 2 === 0 ) ? 'zigzag-section' : 'zigzag-section-reverse';
+				$class = 'zigzag-section';
+
+				if ( $index % 2 !== 0 ) {
+					$class = 'zigzag-section-reverse';
+				}
 				?>
 				<div class="<?php echo esc_attr( $class ); ?>">
 					<?php dynamic_sidebar( $legacy_zigzag_sidebar ); ?>
