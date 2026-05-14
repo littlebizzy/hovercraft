@@ -26,7 +26,7 @@ No maintenance WordPress theme
 
 ## Theme Policy
 
-HoverCraft is a lightweight standardized WordPress theme for simple client sites, WooCommerce sites, and long-term maintainability. It intentionally avoids page-builder-style complexity while still supporting practical customization through templates, widgets, and the WordPress Customizer.
+HoverCraft is a lightweight standardized WordPress theme for simple client sites, WooCommerce sites, and long-term maintainability. It intentionally avoids page-builder-style complexity while still supporting practical customization through templates, widget areas, meta boxes, and the WordPress Customizer.
 
 The theme should remain boring, explicit, and easy to maintain. New features should improve repeatable client work without turning HoverCraft into a generic layout builder, content modeling system, or SEO/schema plugin.
 
@@ -35,12 +35,12 @@ The theme should remain boring, explicit, and easy to maintain. New features sho
 - Keep the theme lightweight, reusable, and predictable.
 - Prefer simple WordPress conventions over clever abstractions.
 - Support fast client builds without depending on page builders.
-- Keep templates, widget areas, and Customizer settings understandable.
-- Avoid adding features that make the theme harder to audit, refactor, or maintain.
+- Keep templates, widget areas, meta boxes, and Customizer settings understandable.
+- Avoid features that make the theme harder to audit, refactor, or maintain.
 
 ### Customizer Policy
 
-Customizer settings should control global design, layout, branding, typography, colors, widgets, WooCommerce presentation, and other site-wide defaults.
+Customizer settings should control global design, layout, branding, typography, colors, WooCommerce presentation, and other site-wide defaults.
 
 Customizer settings should not become page-specific content modeling, structured data management, or a replacement for proper plugins.
 
@@ -64,13 +64,13 @@ The theme may output clean markup and support narrow presentation-related metada
 
 ### Comment Policy
 
-Comments should make HoverCraft easier to scan during audits without adding noise. Use comments to explain real code sections, template structure, or intentional exceptions.
+Comments should make HoverCraft easier to scan during audits without adding noise. Use comments to explain real code sections, functions, template structure, or intentional exceptions.
 
 - Use concise, helpful comments only where they improve readability.
+- Add comments above code blocks or functions when they clarify the purpose of the code.
 - Keep normal PHP comments lowercase and single-line using `//`.
 - Do not use PHP docblocks or multi-line PHP comments for ordinary code.
 - Keep required WordPress file headers when WordPress needs them, including `Template Name` headers.
-- Add `ABSPATH` guards to PHP files when appropriate.
 - Add trailing comments to major template closers, including major HTML closing tags and PHP `endif`, `endwhile`, `endforeach`, `endfor`, and `endswitch` closers.
 - Avoid trailing comments on ordinary PHP logic unless the comment marks a template closer.
 - Use normal CSS comments inside raw CSS or PHP-generated CSS, because CSS does not support `//` comments.
@@ -84,17 +84,16 @@ The goal is simple, fast, maintainable WordPress sites using a small set of reli
 
 ### Editing And Refactoring Rules
 
-- Do not turn HoverCraft into a page builder.
-- Do not add generic section-builder systems.
-- Do not add meta boxes unless they map to a specific template or narrow visual behavior.
-- Keep business data, schema systems, SEO systems, and reusable content models out of the theme unless there is a narrow presentation reason.
 - Preserve existing template behavior unless the change explicitly targets it.
 - Prefer boring, explicit, maintainable PHP over clever abstraction.
 - Maintain PHP backwards compatibility to PHP 7.0 unless the minimum requirement is intentionally changed.
 - Avoid fancy modern PHP syntax when simpler code is clearer, including ternary operators and null coalescing operators.
 - Add `ABSPATH` guards to PHP files when appropriate.
-- Add simple, concise, lowercase comments above code blocks when they improve readability.
-- Keep Customizer settings for global design and layout defaults, not page-specific content modeling.
+- Keep comments concise, lowercase, and useful during audits.
 - Keep WooCommerce support lightweight and presentation-focused.
+- Keep Customizer settings focused on global design and layout defaults.
+- Keep meta boxes focused on specific templates or narrow visual behavior.
+- Keep widget areas tied to real theme locations.
+- Keep business data, schema systems, SEO systems, and reusable content models out of the theme unless there is a narrow presentation reason.
 - Avoid speculative features, unused abstractions, and client-specific bloat.
 - Keep files, functions, comments, and naming easy to scan during future audits.
