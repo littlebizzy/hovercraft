@@ -4,92 +4,49 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+$legacy_tile_sidebars = array(
+	'hovercraft_tile_one',
+	'hovercraft_tile_two',
+	'hovercraft_tile_three',
+	'hovercraft_tile_four',
+	'hovercraft_tile_five',
+	'hovercraft_tile_six',
+	'hovercraft_tile_seven',
+	'hovercraft_tile_eight',
+	'hovercraft_tile_nine',
+	'hovercraft_tile_ten',
+	'hovercraft_tile_eleven',
+	'hovercraft_tile_twelve',
+);
+
+$has_legacy_tiles = false;
+
+foreach ( $legacy_tile_sidebars as $legacy_tile_sidebar ) {
+	if ( is_active_sidebar( $legacy_tile_sidebar ) ) {
+		$has_legacy_tiles = true;
+		break;
+	}
+}
+
+if ( ! is_active_sidebar( 'hovercraft_tiles' ) && ! $has_legacy_tiles ) {
+	return;
+}
+
 ?>
 <div id="tiles-narrow">
-	
-	<?php if ( is_active_sidebar( 'hovercraft_tile_one' ) ) : ?>
-	<div class="tile">
-		<?php dynamic_sidebar( 'hovercraft_tile_one' ); ?>
-		<div class="clear"></div>
-	</div><!-- tile -->
-	<?php endif; // end hovercraft-tile-one sidebar ?>
-		
-	<?php if ( is_active_sidebar( 'hovercraft_tile_two' ) ) : ?>
-	<div class="tile">
-		<?php dynamic_sidebar( 'hovercraft_tile_two' ); ?>
-		<div class="clear"></div>
-	</div><!-- tile -->
-	<?php endif; // end hovercraft-tile-two sidebar ?>
-		
-	<?php if ( is_active_sidebar( 'hovercraft_tile_three' ) ) : ?>
-	<div class="tile">
-		<?php dynamic_sidebar( 'hovercraft_tile_three' ); ?>
-		<div class="clear"></div>
-	</div><!-- tile -->
-	<?php endif; // end hovercraft-tile-three sidebar ?>
-		
-	<?php if ( is_active_sidebar( 'hovercraft_tile_four' ) ) : ?>
-	<div class="tile">
-		<?php dynamic_sidebar( 'hovercraft_tile_four' ); ?>
-		<div class="clear"></div>
-	</div><!-- tile -->
-	<?php endif; // end hovercraft-tile-four sidebar ?>
-		
-	<?php if ( is_active_sidebar( 'hovercraft_tile_five' ) ) : ?>
-	<div class="tile">
-		<?php dynamic_sidebar( 'hovercraft_tile_five' ); ?>
-		<div class="clear"></div>
-	</div><!-- tile -->
-	<?php endif; // end hovercraft-tile-five sidebar ?>
-		
-	<?php if ( is_active_sidebar( 'hovercraft_tile_six' ) ) : ?>
-	<div class="tile">
-		<?php dynamic_sidebar( 'hovercraft_tile_six' ); ?>
-		<div class="clear"></div>
-	</div><!-- tile -->
-	<?php endif; // end hovercraft-tile-six sidebar ?>
-		
-	<?php if ( is_active_sidebar( 'hovercraft_tile_seven' ) ) : ?>
-	<div class="tile">
-		<?php dynamic_sidebar( 'hovercraft_tile_seven' ); ?>
-		<div class="clear"></div>
-	</div><!-- tile -->
-	<?php endif; // end hovercraft-tile-seven sidebar ?>
-		
-	<?php if ( is_active_sidebar( 'hovercraft_tile_eight' ) ) : ?>
-	<div class="tile">
-		<?php dynamic_sidebar( 'hovercraft_tile_eight' ); ?>
-		<div class="clear"></div>
-	</div><!-- tile -->
-	<?php endif; // end hovercraft-tile-eight sidebar ?>
-		
-	<?php if ( is_active_sidebar( 'hovercraft_tile_nine' ) ) : ?>
-	<div class="tile">
-		<?php dynamic_sidebar( 'hovercraft_tile_nine' ); ?>
-		<div class="clear"></div>
-	</div><!-- tile -->
-	<?php endif; // end hovercraft-tile-nine sidebar ?>
-		
-	<?php if ( is_active_sidebar( 'hovercraft_tile_ten' ) ) : ?>
-	<div class="tile">
-		<?php dynamic_sidebar( 'hovercraft_tile_ten' ); ?>
-		<div class="clear"></div>
-	</div><!-- tile -->
-	<?php endif; // end hovercraft-tile-ten sidebar ?>
-		
-	<?php if ( is_active_sidebar( 'hovercraft_tile_eleven' ) ) : ?>
-	<div class="tile">
-		<?php dynamic_sidebar( 'hovercraft_tile_eleven' ); ?>
-		<div class="clear"></div>
-	</div><!-- tile -->
-	<?php endif; // end hovercraft-tile-eleven sidebar ?>
-		
-	<?php if ( is_active_sidebar( 'hovercraft_tile_twelve' ) ) : ?>
-	<div class="tile">
-		<?php dynamic_sidebar( 'hovercraft_tile_twelve' ); ?>
-		<div class="clear"></div>
-	</div><!-- tile -->
-	<?php endif; // end hovercraft-tile-twelve sidebar ?>
-        
-<div class="clear"></div>
+
+	<?php if ( is_active_sidebar( 'hovercraft_tiles' ) ) : ?>
+		<?php dynamic_sidebar( 'hovercraft_tiles' ); ?>
+	<?php else : ?>
+		<?php foreach ( $legacy_tile_sidebars as $legacy_tile_sidebar ) : ?>
+			<?php if ( is_active_sidebar( $legacy_tile_sidebar ) ) : ?>
+			<div class="tile">
+				<?php dynamic_sidebar( $legacy_tile_sidebar ); ?>
+				<div class="clear"></div>
+			</div><!-- tile -->
+			<?php endif; // end legacy tile sidebar ?>
+		<?php endforeach; // end legacy tile sidebars ?>
+	<?php endif; // end tiles sidebar ?>
+
+	<div class="clear"></div>
 </div><!-- tiles-narrow -->
