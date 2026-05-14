@@ -85,16 +85,7 @@ function hovercraft_register_legacy_zigzag_sidebars() {
 	);
 
 	foreach ( $legacy_zigzag_sidebars as $legacy_zigzag_sidebar ) {
-		register_sidebar(
-			array(
-				'name' => $legacy_zigzag_sidebar['name'],
-				'id' => $legacy_zigzag_sidebar['id'],
-				'before_widget' => '<div class="' . $legacy_zigzag_sidebar['class'] . ' widget-wrapper">',
-				'after_widget' => '</div>',
-				'before_title' => '<h3 class="widget-title">',
-				'after_title' => '</h3>',
-			)
-		);
+		hovercraft_register_widget_area( $legacy_zigzag_sidebar );
 	}
 }
 add_action( 'widgets_init', 'hovercraft_register_legacy_zigzag_sidebars' );
