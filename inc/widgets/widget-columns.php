@@ -65,49 +65,19 @@ function hovercraft_get_legacy_column_sidebars() {
 
 // mark legacy column widget areas in admin
 function hovercraft_label_legacy_column_sidebars() {
-	global $wp_registered_sidebars;
-
-	$legacy_column_sidebars = hovercraft_get_legacy_column_sidebars();
-
-	foreach ( $legacy_column_sidebars as $legacy_column_sidebar ) {
-		if ( ! isset( $wp_registered_sidebars[ $legacy_column_sidebar ]['name'] ) ) {
-			continue;
-		}
-
-		if ( strpos( $wp_registered_sidebars[ $legacy_column_sidebar ]['name'], 'Legacy ' ) === 0 ) {
-			continue;
-		}
-
-		$wp_registered_sidebars[ $legacy_column_sidebar ]['name'] = 'Legacy ' . $wp_registered_sidebars[ $legacy_column_sidebar ]['name'];
-	}
+	hovercraft_label_legacy_widget_areas( hovercraft_get_legacy_column_sidebars() );
 }
 add_action( 'widgets_init', 'hovercraft_label_legacy_column_sidebars', 20 );
 
 // hide empty legacy column widget areas
 function hovercraft_hide_empty_legacy_column_sidebars() {
-	$legacy_column_sidebars = hovercraft_get_legacy_column_sidebars();
-
-	foreach ( $legacy_column_sidebars as $legacy_column_sidebar ) {
-		if ( is_active_sidebar( $legacy_column_sidebar ) ) {
-			continue;
-		}
-
-		unregister_sidebar( $legacy_column_sidebar );
-	}
+	hovercraft_hide_empty_legacy_widget_areas( hovercraft_get_legacy_column_sidebars() );
 }
 add_action( 'widgets_init', 'hovercraft_hide_empty_legacy_column_sidebars', 30 );
 
 // check if legacy column widget areas have content
 function hovercraft_has_legacy_column_sidebars() {
-	$legacy_column_sidebars = hovercraft_get_legacy_column_sidebars();
-
-	foreach ( $legacy_column_sidebars as $legacy_column_sidebar ) {
-		if ( is_active_sidebar( $legacy_column_sidebar ) ) {
-			return true;
-		}
-	}
-
-	return false;
+	return hovercraft_has_active_legacy_widget_areas( hovercraft_get_legacy_column_sidebars() );
 }
 
 // show legacy column widget notice
