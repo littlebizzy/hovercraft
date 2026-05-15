@@ -176,7 +176,6 @@ form.cart button.single_add_to_cart_button {
 	height: 40px !important;
 	border: none !important;
 	box-shadow: none !important;
-	outline: none !important;
 	cursor: pointer !important;
 }
 
@@ -212,7 +211,6 @@ input.qty {
 	padding: 0 !important;
 	border: none !important;
 	box-shadow: none !important;
-	outline: none !important;
 	cursor: default !important;
 	background: #f2f2f2 !important;
 	color: <?php echo $default_text_color; ?> !important;
@@ -311,7 +309,6 @@ input.qty {
 	border-color: #cfcfcf !important;
 	background: #ffffff !important;
 	color: <?php echo $default_text_color; ?> !important;
-	outline: none !important;
 }
 .single-product .summary .variations_form table.variations td.value select:focus,
 .single-product .summary .variations_form table.variations td.value select:active {
@@ -319,7 +316,6 @@ input.qty {
 	border-color: <?php echo $default_link_color; ?> !important;
 	background: #ffffff !important;
 	color: <?php echo $default_text_color; ?> !important;
-	outline: none !important;
 	box-shadow: 0 0 0 2px rgba(0,0,0,0.05) inset !important;
 }
 
