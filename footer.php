@@ -66,7 +66,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<div class="clear"></div>
 		</div><!-- inner -->
 	</div><!-- footer -->
-<?php endif; // end hovercraft-footer-one sidebar ?>
+<?php endif; // end footer widget areas ?>
 
 <?php
 // get desktop copyright width setting
