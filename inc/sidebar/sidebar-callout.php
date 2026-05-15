@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // register sidebar callout widget area
-function hovercraft_callout() {
+function hovercraft_sidebar_callout() {
 	$menu_cta_sidebar_callout = wp_nav_menu(
 		array(
 			'theme_location' => 'cta-sidebar-callout',
@@ -31,4 +31,4 @@ function hovercraft_callout() {
 
 	register_sidebar( $sidebar_callout_array );
 }
-add_action( 'widgets_init', 'hovercraft_callout' );
+add_action( 'widgets_init', 'hovercraft_sidebar_callout' );
