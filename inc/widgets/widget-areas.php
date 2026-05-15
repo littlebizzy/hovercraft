@@ -26,6 +26,45 @@ function hovercraft_register_widget_area( $sidebar ) {
 	);
 }
 
+// label legacy widget areas in admin
+function hovercraft_label_legacy_widget_areas( $sidebar_ids ) {
+	global $wp_registered_sidebars;
+
+	foreach ( $sidebar_ids as $sidebar_id ) {
+		if ( ! isset( $wp_registered_sidebars[ $sidebar_id ]['name'] ) ) {
+			continue;
+		}
+
+		if ( strpos( $wp_registered_sidebars[ $sidebar_id ]['name'], 'Legacy ' ) === 0 ) {
+			continue;
+		}
+
+		$wp_registered_sidebars[ $sidebar_id ]['name'] = 'Legacy ' . $wp_registered_sidebars[ $sidebar_id ]['name'];
+	}
+}
+
+// hide empty legacy widget areas in admin
+function hovercraft_hide_empty_legacy_widget_areas( $sidebar_ids ) {
+	foreach ( $sidebar_ids as $sidebar_id ) {
+		if ( is_active_sidebar( $sidebar_id ) ) {
+			continue;
+		}
+
+		unregister_sidebar( $sidebar_id );
+	}
+}
+
+// check if legacy widget areas have content
+function hovercraft_has_active_legacy_widget_areas( $sidebar_ids ) {
+	foreach ( $sidebar_ids as $sidebar_id ) {
+		if ( is_active_sidebar( $sidebar_id ) ) {
+			return true;
+		}
+	}
+
+	return false;
+}
+
 // register theme widget areas
 function hovercraft_register_sidebars() {
 	$sidebars = array(
