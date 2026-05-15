@@ -13,8 +13,14 @@ if ( ! class_exists( 'WooCommerce' ) ) {
 remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
 remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
 remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
+add_action( 'woocommerce_before_main_content', 'hovercraft_woocommerce_header', 5 );
 add_action( 'woocommerce_before_main_content', 'hovercraft_main_start', 10 );
 add_action( 'woocommerce_after_main_content', 'hovercraft_main_end', 10 );
+
+// render woocommerce header
+function hovercraft_woocommerce_header() {
+	get_template_part( 'template-parts/header/header-basic' );
+}
 
 // open woocommerce main wrapper
 function hovercraft_main_start() {
