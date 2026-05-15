@@ -36,7 +36,7 @@ p.woocommerce-result-count {
 p.woocommerce-result-count {
 	float: left !important;
 	margin: 0 !important;
-	padding: 5px 0px !important;
+	padding: 5px 0 !important;
 	font-size: 16px;
 	font-weight: 600;
 	color: <?php echo $breadcrumbs_text_color; ?>;

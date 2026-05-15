@@ -32,7 +32,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	padding: 40px 40px;
 	background: <?php echo $sidebar_widget_background_color; ?>;
 	color: <?php echo $sidebar_widget_text_color; ?>;
-	box-shadow: inset 0px 0px 0px 1px <?php echo $sidebar_widget_border_color; ?> !important;
+	box-shadow: inset 0 0 0 1px <?php echo $sidebar_widget_border_color; ?> !important;
 }
 
 #sidebar .widget-wrapper a {
@@ -104,7 +104,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 #sidebar .widget-callout {
    	background: <?php echo $sidebar_callout_background_color; ?> !important;
 	color: <?php echo $sidebar_callout_text_color; ?> !important;
-	box-shadow: inset 0px 0px 0px 1px <?php echo $sidebar_callout_border_color; ?> !important;
+	box-shadow: inset 0 0 0 1px <?php echo $sidebar_callout_border_color; ?> !important;
 }
 
 #sidebar .widget-callout .widget-title {
@@ -164,12 +164,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	font-size: 20px;
 	font-weight: 600;
 	color: <?php echo $sidebar_callout_link_color; ?> !important;
-	padding: 10px 0px;
+	padding: 10px 0;
 	text-decoration: none;
 	display: block;
 	background: transparent;
 	margin-bottom: 0;
-	box-shadow: inset 0px 0px 0px 1px <?php echo $sidebar_callout_cta_border_color; ?> !important;
+	box-shadow: inset 0 0 0 1px <?php echo $sidebar_callout_cta_border_color; ?> !important;
 	background: <?php echo $sidebar_callout_cta_background_color; ?> !important;
 	}
 }
@@ -180,11 +180,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	font-size: 20px;
 	font-weight: 600;
 	color: <?php echo $sidebar_callout_link_color; ?> !important;
-	padding: 10px 0px;
+	padding: 10px 0;
 	text-decoration: none;
 	display: block;
 	background: transparent;
-	box-shadow: inset 0px 0px 0px 1px <?php echo $sidebar_callout_cta_border_color; ?> !important;
+	box-shadow: inset 0 0 0 1px <?php echo $sidebar_callout_cta_border_color; ?> !important;
 	background: <?php echo $sidebar_callout_cta_background_color; ?> !important;
 	}
 }

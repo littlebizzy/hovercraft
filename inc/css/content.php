@@ -56,7 +56,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php if ( $sitewide_layout == 'floating_islands' ) { 
 			echo "padding: 40px 40px 40px 40px;\n"; 
 		} else { 
-			echo "padding: 0px 0px 0px 0px;\n"; 
+			echo "padding: 0 0 0 0;\n"; 
 		}  ?>
 	display: block;
 	overflow: hidden;
@@ -70,9 +70,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 @media screen and (max-width: 1199px) {
 #content-padded {
 	<?php if ( $sitewide_layout == 'floating_islands' ) { 
-			echo "padding: 0px 20px 20px 20px;\n"; 
+			echo "padding: 0 20px 20px 20px;\n"; 
 		} else { 
-			echo "padding: 0px 20px 20px 20px;\n"; 
+			echo "padding: 0 20px 20px 20px;\n"; 
 		}  ?>
 	width: 100%;
 	max-width: 100%;
@@ -87,7 +87,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<?php if ( $sitewide_layout == 'floating_islands' ) { 
 			echo "padding: 40px 40px 40px 40px;\n"; 
 		} else { 
-			echo "padding: 0px 0px 40px 0px;\n"; 
+			echo "padding: 0 0 40px 0;\n"; 
 		}  ?>
 	display: block;
 	overflow: hidden;

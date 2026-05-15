@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	width: 100%;
 	background: <?php echo $prefooter_bottom_background_color; ?>;
 	color: <?php echo $prefooter_bottom_text_color; ?>;
-	padding: 60px 0px;
+	padding: 60px 0;
 	text-align: center;
 	}
 }

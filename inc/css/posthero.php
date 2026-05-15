@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 @media screen and (min-width: 1200px) {
 #posthero {
 	width: 100%;
-	padding: 30px 0px;
+	padding: 30px 0;
 	text-align: center;
 	background: <?php echo $posthero_background_color; ?>;
 	color: <?php echo $posthero_text_color; ?>;

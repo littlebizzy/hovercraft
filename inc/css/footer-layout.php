@@ -22,8 +22,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 @media screen and (min-width: 1200px) {
 #footer {
 	width: 100%;
-	margin: 0px auto;
-	padding: 40px 0px;
+	margin: 0 auto;
+	padding: 40px 0;
 	font-size: <?php echo $footer_desktop_font_size; ?>px;
 	background: <?php echo $footer_background_color; ?>;
 	color: <?php echo $footer_text_color; ?>;

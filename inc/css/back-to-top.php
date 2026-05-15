@@ -32,7 +32,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	font-size: <?php echo $back_to_top_mobile_font_size; ?>px;
 	font-weight: <?php echo $back_to_top_font_weight; ?>;
 	line-height: 1;
-	padding: 10px 0px;
+	padding: 10px 0;
 	color: rgba(255, 255, 255, 0.5);
 	color: <?php echo $back_to_top_link_color; ?>;
 	text-decoration: none !important;
@@ -52,7 +52,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	font-size: <?php echo $back_to_top_desktop_font_size; ?>px;
 	font-weight: <?php echo $back_to_top_font_weight; ?>;
 	line-height: 1;
-	padding: 10px 0px;
+	padding: 10px 0;
 	color: rgba(255, 255, 255, 0.5);
 	color: <?php echo $back_to_top_link_color; ?>;
 	text-decoration: none !important;

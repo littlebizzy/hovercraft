@@ -87,21 +87,21 @@ p {
 }
 
 .inner {
-	margin:0px auto;
+	margin:0 auto;
 	max-width:1200px;
 }
 
 @media screen and (max-width: 1199px) {
 .full {
 	max-width: 100%;
-	padding: 0px 0px;
+	padding: 0 0;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 .full {
 	max-width: 100%;
-	padding: 0px 40px;
+	padding: 0 40px;
 	}
 }
 

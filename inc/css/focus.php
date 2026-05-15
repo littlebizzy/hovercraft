@@ -15,5 +15,5 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 }
 
 input:focus-visible, select:focus-visible, textarea:focus-visible {
-	box-shadow: inset 0px 0px 0px 1px <?php echo $default_link_color; ?> !important;
+	box-shadow: inset 0 0 0 1px <?php echo $default_link_color; ?> !important;
 }

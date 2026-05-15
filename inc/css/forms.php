@@ -29,7 +29,7 @@ input, select, textarea {
 	font-size: 16px;
 	background: #ffffff;
 	display: inline-block;
-	box-shadow: inset 0px 0px 0px 1px <?php echo $breadcrumbs_text_color; ?>;
+	box-shadow: inset 0 0 0 1px <?php echo $breadcrumbs_text_color; ?>;
 	font-family: inherit;
 	transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
@@ -44,7 +44,7 @@ button {
 	font-size: 16px;
 	background: #ffffff;
 	display: inline-block;
-	box-shadow: inset 0px 0px 0px 1px <?php echo $breadcrumbs_text_color; ?>;
+	box-shadow: inset 0 0 0 1px <?php echo $breadcrumbs_text_color; ?>;
 	font-family: inherit;
 	transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
@@ -70,7 +70,7 @@ textarea {
 	font-weight: 400;
 	padding: 10px 20px !important;
 	border-radius: 0;
-	box-shadow: inset 0px 0px 0px 1px <?php echo $breadcrumbs_text_color; ?>;
+	box-shadow: inset 0 0 0 1px <?php echo $breadcrumbs_text_color; ?>;
 	resize: vertical;
 	font-family: inherit;
 }
@@ -194,13 +194,13 @@ input:disabled, select:disabled, textarea:disabled, button:disabled {
 	background: #f5f5f5;
 	color: #999999;
 	cursor: not-allowed;
-	box-shadow: inset 0px 0px 0px 1px #dddddd;
+	box-shadow: inset 0 0 0 1px #dddddd;
 }
 
 input[readonly], textarea[readonly] {
 	background: #f5f5f5;
 	color: #333333;
-	box-shadow: inset 0px 0px 0px 1px #cccccc;
+	box-shadow: inset 0 0 0 1px #cccccc;
 }
 
 [dir="rtl"] input, [dir="rtl"] select, [dir="rtl"] textarea {
@@ -215,7 +215,7 @@ input[readonly], textarea[readonly] {
 
 input:invalid, select:invalid, textarea:invalid {
 	background-color: #fff8f8;
-	box-shadow: inset 0px 0px 0px 1px #e57373;
+	box-shadow: inset 0 0 0 1px #e57373;
 }
 
 /* responsive button widths */

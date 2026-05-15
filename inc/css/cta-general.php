@@ -62,7 +62,7 @@ button {
 	text-decoration: none;
 	display: block;
 	background: transparent;
-	box-shadow: inset 0px 0px 0px 1px <?php echo $default_text_color; ?>;
+	box-shadow: inset 0 0 0 1px <?php echo $default_text_color; ?>;
 	}
 }
 
@@ -77,7 +77,7 @@ button {
 	text-decoration: none;
 	display: block;
 	background: transparent;
-	box-shadow: inset 0px 0px 0px 1px <?php echo $default_text_color; ?>;
+	box-shadow: inset 0 0 0 1px <?php echo $default_text_color; ?>;
 	}
 }
 
@@ -92,7 +92,7 @@ button {
 	text-decoration: none;
 	display: block;
 	background: transparent;
-	box-shadow: inset 0px 0px 0px 1px #ffffff;
+	box-shadow: inset 0 0 0 1px #ffffff;
 	}
 }
 
@@ -107,7 +107,7 @@ button {
 	text-decoration: none;
 	display: block;
 	background: transparent;
-	box-shadow: inset 0px 0px 0px 1px #ffffff;
+	box-shadow: inset 0 0 0 1px #ffffff;
 	}
 }
 
@@ -150,7 +150,7 @@ button {
 	text-decoration: none;
 	display: block;
 	background: #ffffff;
-	box-shadow: inset 0px 0px 0px 1px <?php echo $default_text_color; ?>;
+	box-shadow: inset 0 0 0 1px <?php echo $default_text_color; ?>;
 	}
 }
 
@@ -165,6 +165,6 @@ button {
 	text-decoration: none;
 	display: block;
 	background: #ffffff;
-	box-shadow: inset 0px 0px 0px 1px <?php echo $default_text_color; ?>;
+	box-shadow: inset 0 0 0 1px <?php echo $default_text_color; ?>;
 	}
 }

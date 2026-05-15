@@ -75,8 +75,8 @@ img.featured-image {
 .featured-image-caption {
 	position: absolute;
 	font-size: 12px;
-	bottom: 0px;
+	bottom: 0;
 	color: #ffffff;
 	padding: 5px 10px;
-	right: 0px;
+	right: 0;
 }

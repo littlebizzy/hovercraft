@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 @media screen and (max-width: 1199px) {
 #tiles-wide {
 	width: 100%;
-	padding: 0px;
+	padding: 0;
 	}
 }
 
@@ -50,7 +50,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 @media screen and (max-width: 1199px) {
 #tiles-narrow {
 	width: 100%;
-	padding: 0px;
+	padding: 0;
 	}
 }
 
@@ -69,7 +69,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	margin-bottom: 30px;
 	padding: 30px;
 	text-align: center;
-	box-shadow: inset 0px 0px 0px 1px <?php echo $tile_border_color; ?>;
+	box-shadow: inset 0 0 0 1px <?php echo $tile_border_color; ?>;
 	background: <?php echo $tile_background_color; ?>;
 	}
 }
@@ -81,7 +81,7 @@ if ( ! defined( 'ABSPATH' ) ) {
   	justify-content: center;
   	align-items: center;
 	text-align: center;
-	box-shadow: inset 0px 0px 0px 1px <?php echo $tile_border_color; ?>;
+	box-shadow: inset 0 0 0 1px <?php echo $tile_border_color; ?>;
 	display: inline-block;
 	background: <?php echo $tile_background_color; ?>;
 	}

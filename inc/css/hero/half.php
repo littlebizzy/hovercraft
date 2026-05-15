@@ -90,8 +90,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	#header-half-hero {
 		width: 100%;
 		display: table;
-		margin: 0px auto;
-		padding: 20px 0px;
+		margin: 0 auto;
+		padding: 20px 0;
 		color: <?php echo $half_hero_text_color; ?>;
 	}
 }

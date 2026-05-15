@@ -20,10 +20,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 @media screen and (min-width: 1200px) {
 #prefooter-top {
 	width: 100%;
-	margin: 0px auto;
+	margin: 0 auto;
 	background: <?php echo $prefooter_top_background_color; ?>;
 	color: <?php echo $prefooter_top_text_color; ?>;
-	padding: 40px 0px;
+	padding: 40px 0;
 	text-align: center;
 	}
 }

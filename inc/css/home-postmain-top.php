@@ -19,17 +19,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 @media screen and (min-width: 1200px) {
 #home-postmain-top {
 	width: 100%;
-	margin: 0px auto;
+	margin: 0 auto;
 	background: <?php echo $postmain_top_background_color; ?>;
 	color: <?php echo $postmain_top_text_color; ?>;
-	padding: 30px 0px;
+	padding: 30px 0;
 	}
 }
 
 @media screen and (max-width: 1199px) {
 #home-postmain-top .inner {
 	width: 100%;
-	padding: 0px 0px;
+	padding: 0 0;
 	}
 }
 

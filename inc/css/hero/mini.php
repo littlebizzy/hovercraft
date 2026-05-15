@@ -68,7 +68,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 @media screen and (max-width: 1199px) {
 	#hero-mini {
 		width: 100%;
-		padding: 0px;
+		padding: 0;
 		display: table;
 	}
 }
@@ -77,7 +77,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 @media screen and (min-width: 1200px) {
 	#hero-mini {
 		width: 100%;
-		padding: 0px;
+		padding: 0;
 		display: table;
 	}
 }
@@ -92,7 +92,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /* desktop: mini hero main */
 @media screen and (min-width: 1200px) {
 	.hero-main-mini {
-		padding: <?php echo $mini_hero_vertical_padding; ?>px 0px;
+		padding: <?php echo $mini_hero_vertical_padding; ?>px 0;
 	}
 }
 
@@ -112,8 +112,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	#header-mini-hero {
 		width: 100%;
 		display: table;
-		margin: 0px auto;
-		padding: 20px 0px;
+		margin: 0 auto;
+		padding: 20px 0;
 		background: <?php echo $mini_hero_background_color; ?>;
 		color: <?php echo $mini_hero_header_text_color; ?>;
 	}
@@ -141,7 +141,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 @media screen and (max-width: 1199px) {
 	.hero-main-mini .search-input {
 		background: #ffffff !important;
-		box-shadow: inset 0px 0px 0px 1px #ffffff !important;
+		box-shadow: inset 0 0 0 1px #ffffff !important;
 	}
 }
 
@@ -149,7 +149,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 @media screen and (min-width: 1200px) {
 	.hero-main-mini .search-input {
 		background: #ffffff !important;
-		box-shadow: inset 0px 0px 0px 1px #ffffff !important;
+		box-shadow: inset 0 0 0 1px #ffffff !important;
 	}
 }
 

@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /* bbpress */
 
 .forums {
-	border-radius: 0px;
+	border-radius: 0;
 }
 
 #bbpress-forums {

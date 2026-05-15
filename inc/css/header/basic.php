@@ -25,8 +25,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	#header-basic {
 		width: 100%;
 		display: table;
-		margin: 0px auto;
-		padding: 20px 0px;
+		margin: 0 auto;
+		padding: 20px 0;
 		background: <?php echo $header_basic_hero_background_color; ?>;
 		color: <?php echo $header_basic_hero_text_color; ?>;
 	}

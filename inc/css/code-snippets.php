@@ -11,7 +11,7 @@ code {
 	font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
 	font-weight: 400;
 	background: #ECEFF1;
-	padding: 0px 5px;
+	padding: 0 5px;
 }
 
 @media screen and (max-width: 1199px) {

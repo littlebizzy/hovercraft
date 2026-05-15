@@ -56,7 +56,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	font-size: 20px;
 	font-weight: 700;
 	color: #ffffff;
-	padding: 10px 0px;
+	padding: 10px 0;
 	text-decoration: none;
 	display: block;
 	background: <?php echo $default_link_color; ?>;
@@ -71,7 +71,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	font-size: 20px;
 	font-weight: 700;
 	color: #ffffff;
-	<?php if ( has_nav_menu( 'cta-hero-secondary' ) ) { echo "padding: 10px 0px;"; } else { echo "padding: 10px 20px;"; } ?>
+	<?php if ( has_nav_menu( 'cta-hero-secondary' ) ) { echo "padding: 10px 0;"; } else { echo "padding: 10px 20px;"; } ?>
 	text-decoration: none;
 	display: inline-block;
 	background: <?php echo $default_link_color; ?>;
@@ -127,12 +127,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	font-size: 20px;
 	font-weight: 400;
 	color: #ffffff;
-	padding: 10px 0px;
+	padding: 10px 0;
 	text-decoration: none;
 	display: block;
 	background: transparent;
 	margin-bottom: 0;
-	box-shadow: inset 0px 0px 0px 1px #ffffff;
+	box-shadow: inset 0 0 0 1px #ffffff;
 	}
 }
 
@@ -143,11 +143,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	font-size: 20px;
 	font-weight: 400;
 	color: #ffffff;
-	padding: 10px 0px;
+	padding: 10px 0;
 	text-decoration: none;
 	display: inline-block;
 	background: transparent;
-	box-shadow: inset 0px 0px 0px 1px #ffffff;
+	box-shadow: inset 0 0 0 1px #ffffff;
 	}
 }
 

@@ -18,7 +18,7 @@ a.button-secondary {
 	background: transparent;
 	text-decoration: none;
 	color: <?php echo $default_text_color; ?>;
-	box-shadow: inset 0px 0px 0px 1px <?php echo $default_text_color; ?>;
+	box-shadow: inset 0 0 0 1px <?php echo $default_text_color; ?>;
 	width: 100%;
 	box-sizing: border-box;
 }

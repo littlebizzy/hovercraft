@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 @media screen and (max-width: 1199px) {
 #preheader {
 	width: 100%;
-	padding: 0px 20px 20px 20px;
+	padding: 0 20px 20px 20px;
 	font-size: 14px;
 	line-height: 1.5;
 	}
@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 @media screen and (min-width: 1200px) {
 #preheader {
 	width: 100%;
-	padding: 0px 0px 40px 0px;
+	padding: 0 0 40px 0;
 	font-size: 14px;
 	line-height: 1.5;
 	display: table;

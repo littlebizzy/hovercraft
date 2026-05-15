@@ -12,14 +12,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 @media screen and (max-width: 1199px) {
 #primary {
 	width: 100%;
-	padding: 0px 0px;
+	padding: 0 0;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 #primary {
 	float: left;
-	padding: 0px 0px;
+	padding: 0 0;
 	<?php if ( $sitewide_layout == 'floating_islands' ) { 
 			echo "width: 768px;\n"; 
 		} else { 
@@ -33,7 +33,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 @media screen and (max-width: 1199px) {
 #primary-wide {
 	width: 100%;
-	padding: 0px 0px;
+	padding: 0 0;
 	}
 }
 
@@ -54,6 +54,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 @media screen and (min-width: 1200px) {
 #primary-center {
 	width: 768px;
-	margin: 0px auto;
+	margin: 0 auto;
 	}
 }

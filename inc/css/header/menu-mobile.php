@@ -24,8 +24,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	list-style-type: none;
  	vertical-align: middle;
 	display: block;
-	margin: 0px;
-	padding: 0px;
+	margin: 0;
+	padding: 0;
 	border-bottom: 1px solid rgba(255,255,255, 0.2);
 }
 
@@ -123,7 +123,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 .overlay ul.menu {
 	list-style: none;
 	margin: 0;
-	padding: 40px 0px;
+	padding: 40px 0;
 }
 
 .overlay ul a {
@@ -134,8 +134,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 .overlay ul.sub-menu {
 	list-style: none;
-	margin-left: 0px;
-	padding-left: 0px;
+	margin-left: 0;
+	padding-left: 0;
 	font-style: italic;
 }
 	
@@ -283,7 +283,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 	
 	ul.sub-menu li {
-		padding-left: 0px;
+		padding-left: 0;
 	}
 }
 

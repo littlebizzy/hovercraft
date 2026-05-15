@@ -96,7 +96,7 @@ a.button-primary:hover {
 	background: transparent;
 	text-decoration: none;
 	color: #ffffff;
-	box-shadow: inset 0px 0px 0px 1px #ffffff;
+	box-shadow: inset 0 0 0 1px #ffffff;
 }
 
 #header-half-hero .cta-header-secondary ul li a, #header-mini-hero .cta-header-secondary ul li a, #header-basic .cta-header-secondary ul li a {
@@ -109,7 +109,7 @@ a.button-primary:hover {
 	background: transparent;
 	text-decoration: none;
 	color: <?php echo $default_text_color; ?>;
-	box-shadow: inset 0px 0px 0px 1px #263238;
+	box-shadow: inset 0 0 0 1px #263238;
 }
 
 #header-full-hero .cta-header-secondary ul li a:hover {

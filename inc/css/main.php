@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 @media screen and (min-width: 1200px) {
 #main {
-	padding: 40px 0px;
+	padding: 40px 0;
 	background: <?php echo $main_background_color; ?>;
 	}
 }

@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 @media screen and (max-width: 1199px) {
 .title-wrapper {
 	width: 100%;
-	padding: 0px 20px;
+	padding: 0 20px;
 	text-align: center;
 	}
 }

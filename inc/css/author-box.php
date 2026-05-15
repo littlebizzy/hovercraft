@@ -12,8 +12,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 #author {
 	margin-top: 30px;
 	padding: 40px;
-	box-shadow: inset 0px 0px 0px 1px #cccccc;
-	border-radius: 0px;
+	box-shadow: inset 0 0 0 1px #cccccc;
+	border-radius: 0;
 }
 
 #author p {

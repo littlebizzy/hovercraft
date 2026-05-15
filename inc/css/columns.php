@@ -38,7 +38,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	width: 100%;
 	margin-bottom: 30px;
 	padding: 30px;
-	box-shadow: inset 0px 0px 0px 1px <?php echo $column_border_color; ?>;
+	box-shadow: inset 0 0 0 1px <?php echo $column_border_color; ?>;
 	background: <?php echo $column_background_color; ?>;
 	}
 }
@@ -51,7 +51,7 @@ if ( ! defined( 'ABSPATH' ) ) {
   	justify-content: center;
   	align-items: center;
 	text-align: center;
-	box-shadow: inset 0px 0px 0px 1px <?php echo $column_border_color; ?>;
+	box-shadow: inset 0 0 0 1px <?php echo $column_border_color; ?>;
 	background: <?php echo $column_background_color; ?>;
 	}
 }
@@ -91,7 +91,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 @media screen and (min-width: 1200px) {
 .postcolumns-top {
 	width: 100%;
-	padding: 30px 0px;
+	padding: 30px 0;
 	text-align: <?php echo $postcolumns_top_align; ?>;
 	background: <?php echo $postcolumns_top_background_color; ?>;
 	color: <?php echo $postcolumns_top_text_color; ?>;
@@ -111,7 +111,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 @media screen and (min-width: 1200px) {
 .postcolumns-bottom {
 	width: 100%;
-	padding: 30px 0px;
+	padding: 30px 0;
 	text-align: <?php echo $postcolumns_bottom_align; ?>;
 	background: <?php echo $postcolumns_bottom_background_color; ?>;
 	color: <?php echo $postcolumns_bottom_text_color; ?>;

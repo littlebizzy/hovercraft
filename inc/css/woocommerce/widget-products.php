@@ -39,7 +39,7 @@ ul.product_list_widget {
 
 ul.product_list_widget li {
 	background: #fff;
-	border-radius: 0px;
+	border-radius: 0;
 	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 	overflow: hidden;
 	padding: 0 !important;

@@ -155,8 +155,8 @@ video.hero-background-video {
     #header-full-hero {
         width: 100%;
         display: table;
-        margin: 0px auto;
-        padding: 20px 0px;
+        margin: 0 auto;
+        padding: 20px 0;
         background: <?php list($r1, $g1, $b1) = sscanf($full_hero_header_background_color, "#%02x%02x%02x"); echo "rgba({$r1}, {$g1}, {$b1}, {$full_hero_header_background_transparency})"; ?>;
         position: relative; /* required when using video background on splash-wide */
         color: #ffffff;

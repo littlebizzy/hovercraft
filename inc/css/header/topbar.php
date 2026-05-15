@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 @media screen and (min-width: 1200px) {
 #topbar {
 	width: 100%;
-	padding: 10px 0px;
+	padding: 10px 0;
 	font-size: <?php echo $topbar_desktop_font_size; ?>px;
 	font-weight: <?php echo $topbar_font_weight; ?>;
 	text-transform: <?php echo $topbar_text_transform; ?>;
