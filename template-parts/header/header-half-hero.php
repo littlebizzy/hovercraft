@@ -64,6 +64,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="clear"></div>
 	</div><!-- inner -->
 
+	<?php get_template_part( 'template-parts/header/hero-caption' ); ?>
+
 </div><!-- hero-half -->
 </div><!-- hero-half-wrapper -->
 
