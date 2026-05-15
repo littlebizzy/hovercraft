@@ -7,15 +7,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 // styles for mobile menu
 ?>
 
-/* remove default focus outline from nav icon */
-.nav-icon {
-	outline: none !important;
-}
-
-.nav-icon:focus {
-	outline: none !important;
-}
-
 /* mobile nav container */
 @media screen and (max-width: 1199px) {
 .mobile-nav {
@@ -182,7 +173,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 .overlay .closebtn i:hover,
 .overlay .closebtn i:focus {
 	text-decoration: none;
-	outline: none;
 }
 
 
