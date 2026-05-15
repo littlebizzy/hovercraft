@@ -24,3 +24,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	text-align: right;
 	display: inline-block;
 }
+
+/* archives */
+<?php
+$hovercraft_archives_css = get_template_directory() . '/inc/css/archives.php';
+if ( file_exists( $hovercraft_archives_css ) ) {
+	include $hovercraft_archives_css;
+}
+?>
