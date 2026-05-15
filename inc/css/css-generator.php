@@ -466,6 +466,14 @@ if ( file_exists( $hovercraft_images_general_css ) ) {
 	include $hovercraft_images_general_css;
 }
 ?>
+
+/* images (featured) */
+<?php
+$hovercraft_featured_image_css = get_template_directory() . '/inc/css/images-featured.php';
+if ( file_exists( $hovercraft_featured_image_css ) ) {
+	include $hovercraft_featured_image_css;
+}
+?>
 	
 /* code snippets */
 <?php
