@@ -62,10 +62,6 @@ $hovercraft_b = hexdec( substr( $hovercraft_hex, 4, 2 ) );
 	opacity: 1;
 }
 
-.search-input:focus {
-	outline: none;
-}
-
 .search-submit {
 	flex: 0 0 64px;
 	height: 46px;
@@ -84,10 +80,6 @@ $hovercraft_b = hexdec( substr( $hovercraft_hex, 4, 2 ) );
 
 .search-submit:hover {
 	background: <?php echo $default_hover_color; ?>;
-}
-
-.search-submit:focus {
-	outline: none;
 }
 
 .search-submit svg {
