@@ -42,11 +42,3 @@ if ( ! defined( 'ABSPATH' ) ) {
 		margin-top: 40px;
 	}
 }
-
-/* widgets */
-<?php
-$hovercraft_widgets_css = get_template_directory() . '/inc/css/widgets.php';
-if ( file_exists( $hovercraft_widgets_css ) ) {
-	include $hovercraft_widgets_css;
-}
-?>
