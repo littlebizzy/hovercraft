@@ -264,6 +264,21 @@ input.qty {
 	box-shadow: inset 0 1px 2px rgba(0,0,0,0.12) !important;
 }
 
+/* stack single product purchase controls */
+.single-product form.cart {
+	flex-direction: column !important;
+	align-items: stretch !important;
+}
+
+.single-product form.cart div.quantity {
+	width: 100% !important;
+	margin: 0 0 15px 0 !important;
+}
+
+.single-product form.cart button.single_add_to_cart_button {
+	width: 100% !important;
+}
+
 /* enforce stacked layout when woo uses both classes on one form */
 .single-product .summary form.variations_form.cart {
 	display: block !important;
