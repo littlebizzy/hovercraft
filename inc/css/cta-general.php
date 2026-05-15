@@ -11,9 +11,11 @@ button {
 	font-size: 16px;
 	font-weight: 400;
 	padding: 10px 20px;
+	text-decoration: none;
 	background: #ECEFF1;
 	border: 0 !important;
 	border-radius: 0 !important;
+	cursor: pointer;
 }
 
 .button {
@@ -21,27 +23,15 @@ button {
 	border-radius: 0 !important;
 }
 
-button,
-.button,
-.button-link,
-.button-outline,
-.button-outline-white,
-.button-wide-dark,
-.button-wide-white {
-	box-sizing: border-box;
-	cursor: pointer;
+@media screen and (max-width: 1199px) {
+.button-link {
+	width: 100%;
+	text-align: center;
+	font-size: 20px;
+	font-weight: 700;
+	color: #ffffff;
+	padding: 10px 0;
 	text-decoration: none;
-	transition: background-color 0.2s ease, color 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
-}
-
-@media screen and (max-width: 1199px) {
-.button-link {
-	width: 100%;
-	text-align: center;
-	font-size: 20px;
-	font-weight: 700;
-	color: #ffffff;
-	padding: 10px 0;
 	display: block;
 	background: <?php echo $default_link_color; ?>;
 	}
@@ -55,6 +45,7 @@ button,
 	font-weight: 700;
 	color: #ffffff;
 	padding: 10px 0;
+	text-decoration: none;
 	display: block;
 	background: <?php echo $default_link_color; ?>;
 	}
@@ -68,6 +59,7 @@ button,
 	font-weight: 700;
 	color: <?php echo $default_text_color; ?>;
 	padding: 10px 0;
+	text-decoration: none;
 	display: block;
 	background: transparent;
 	box-shadow: inset 0 0 0 1px <?php echo $default_text_color; ?>;
@@ -82,6 +74,7 @@ button,
 	font-weight: 700;
 	color: <?php echo $default_text_color; ?>;
 	padding: 10px 0;
+	text-decoration: none;
 	display: block;
 	background: transparent;
 	box-shadow: inset 0 0 0 1px <?php echo $default_text_color; ?>;
@@ -96,6 +89,7 @@ button,
 	font-weight: 700;
 	color: #ffffff;
 	padding: 10px 0;
+	text-decoration: none;
 	display: block;
 	background: transparent;
 	box-shadow: inset 0 0 0 1px #ffffff;
@@ -110,6 +104,7 @@ button,
 	font-weight: 700;
 	color: #ffffff;
 	padding: 10px 0;
+	text-decoration: none;
 	display: block;
 	background: transparent;
 	box-shadow: inset 0 0 0 1px #ffffff;
@@ -124,6 +119,7 @@ button,
 	font-weight: 700;
 	color: #ffffff;
 	padding: 10px 0;
+	text-decoration: none;
 	display: block;
 	background: <?php echo $default_text_color; ?>;
 	}
@@ -137,6 +133,7 @@ button,
 	font-weight: 700;
 	color: #ffffff;
 	padding: 10px 0;
+	text-decoration: none;
 	display: block;
 	background: <?php echo $default_text_color; ?>;
 	}
@@ -150,6 +147,7 @@ button,
 	font-weight: 700;
 	color: <?php echo $default_text_color; ?>;
 	padding: 10px 0;
+	text-decoration: none;
 	display: block;
 	background: #ffffff;
 	box-shadow: inset 0 0 0 1px <?php echo $default_text_color; ?>;
@@ -164,6 +162,7 @@ button,
 	font-weight: 700;
 	color: <?php echo $default_text_color; ?>;
 	padding: 10px 0;
+	text-decoration: none;
 	display: block;
 	background: #ffffff;
 	box-shadow: inset 0 0 0 1px <?php echo $default_text_color; ?>;
