@@ -36,3 +36,33 @@ if ( ! defined( 'ABSPATH' ) ) {
 	text-align: center;
 	}
 }
+
+@media screen and (max-width: 1199px) {
+.hero-image-caption {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.5);
+	color: #ffffff;
+	padding: 5px 10px;
+	font-size: 12px;
+	z-index: 10;
+	text-align: right;
+	max-width: 90%;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+.hero-image-caption {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.5);
+	color: #ffffff;
+	padding: 5px 10px;
+	font-size: 14px;
+	z-index: 10;
+	text-align: right;
+	max-width: 90%;
+	}
+}
