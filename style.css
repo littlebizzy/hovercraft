@@ -29,71 +29,33 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, hr, bl
 
 /* universal */
 
-html {
+* {
     box-sizing: border-box;
 }
 
-*, *:before, *:after {
-    box-sizing: inherit;
+
+/* devices */
+
+@media screen and (max-width: 1199px) {
+    .desktop {
+        display: none;
+    }
 }
 
-body {
-    overflow-x: hidden;
+@media screen and (min-width: 1200px) {
+    .desktop {
+        display: initial;
+    }
 }
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-    display: block;
+@media screen and (max-width: 1199px) {
+    .mobile {
+        display: initial;
+    }
 }
 
-ol, ul {
-    list-style: none;
-}
-
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
-
-.clear {
-    clear: both;
-}
-
-.aligncenter {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.alignleft {
-    float: left;
-    margin-right: 1.5em;
-}
-
-.alignright {
-    float: right;
-    margin-left: 1.5em;
-}
-
-.screen-reader-text {
-    clip: rect(1px, 1px, 1px, 1px);
-    position: absolute !important;
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-}
-
-.wp-caption {
-    max-width: 100%;
-}
-
-.wp-caption-text {
-    font-size: 0.9em;
-    opacity: 0.8;
-}
-
-/* prevent layout shift */
-
-img {
-    height: auto;
-    max-width: 100%;
+@media screen and (min-width: 1200px) {
+    .mobile {
+        display: none;
+    }
 }
