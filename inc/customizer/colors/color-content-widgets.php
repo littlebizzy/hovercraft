@@ -33,7 +33,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_posthero_background_color',
 	array(
 		'label' => 'Posthero Background Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_posthero_background_color',
 	)
@@ -51,7 +50,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_posthero_text_color',
 	array(
 		'label' => 'Posthero Text Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_posthero_text_color',
 	)
@@ -69,7 +67,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_posthero_link_color',
 	array(
 		'label' => 'Posthero Link Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_posthero_link_color',
 	)
@@ -175,7 +172,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_main_background_color',
 	array(
 		'label' => 'Main Background Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_main_background_color',
 	)
@@ -193,7 +189,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_main_background_color_homepage',
 	array(
 		'label' => 'Main Background Color (Homepage)',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_main_background_color_homepage',
 	)
@@ -228,7 +223,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_content_background_color',
 	array(
 		'label' => 'Content Background Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_content_background_color',
 	)
@@ -514,7 +508,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_sidebar_widget_title_text_color',
 	array(
 		'label' => 'Sidebar Widget Title Text Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_sidebar_widget_title_text_color',
 	)
@@ -549,7 +542,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_tile_background_color',
 	array(
 		'label' => 'Tile Background Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_tile_background_color',
 	)
@@ -567,7 +559,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_tile_border_color',
 	array(
 		'label' => 'Tile Border Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_tile_border_color',
 	)
@@ -602,7 +593,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_column_background_color',
 	array(
 		'label' => 'Column Background Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_column_background_color',
 	)
@@ -620,7 +610,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_column_border_color',
 	array(
 		'label' => 'Column Border Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_column_border_color',
 	)
@@ -655,7 +644,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_postmain_top_background_color',
 	array(
 		'label' => 'Home Postmain (Top) Background Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_postmain_top_background_color',
 	)
@@ -673,7 +661,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_postmain_top_text_color',
 	array(
 		'label' => 'Home Postmain (Top) Text Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_postmain_top_text_color',
 	)
@@ -691,7 +678,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_postmain_top_link_color',
 	array(
 		'label' => 'Home Postmain (Top) Link Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_postmain_top_link_color',
 	)
@@ -726,7 +712,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_postmain_bottom_background_color',
 	array(
 		'label' => 'Home Postmain (Bottom) Background Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_postmain_bottom_background_color',
 	)
@@ -744,7 +729,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_postmain_bottom_text_color',
 	array(
 		'label' => 'Home Postmain (Bottom) Text Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_postmain_bottom_text_color',
 	)
@@ -762,7 +746,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_postmain_bottom_link_color',
 	array(
 		'label' => 'Home Postmain (Bottom) Link Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_postmain_bottom_link_color',
 	)
