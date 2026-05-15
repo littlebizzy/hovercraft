@@ -173,62 +173,24 @@ function hovercraft_get_registered_legacy_tile_sidebars() {
 
 // mark legacy tile widget areas in admin
 function hovercraft_label_legacy_tile_sidebars() {
-	global $wp_registered_sidebars;
-
-	$legacy_tile_sidebars = hovercraft_get_registered_legacy_tile_sidebars();
-
-	foreach ( $legacy_tile_sidebars as $legacy_tile_sidebar ) {
-		if ( ! isset( $wp_registered_sidebars[ $legacy_tile_sidebar ]['name'] ) ) {
-			continue;
-		}
-
-		if ( strpos( $wp_registered_sidebars[ $legacy_tile_sidebar ]['name'], 'Legacy ' ) === 0 ) {
-			continue;
-		}
-
-		$wp_registered_sidebars[ $legacy_tile_sidebar ]['name'] = 'Legacy ' . $wp_registered_sidebars[ $legacy_tile_sidebar ]['name'];
-	}
+	hovercraft_label_legacy_widget_areas( hovercraft_get_registered_legacy_tile_sidebars() );
 }
 add_action( 'widgets_init', 'hovercraft_label_legacy_tile_sidebars', 20 );
 
 // hide empty legacy tile widget areas
 function hovercraft_hide_empty_legacy_tile_sidebars() {
-	$legacy_tile_sidebars = hovercraft_get_registered_legacy_tile_sidebars();
-
-	foreach ( $legacy_tile_sidebars as $legacy_tile_sidebar ) {
-		if ( is_active_sidebar( $legacy_tile_sidebar ) ) {
-			continue;
-		}
-
-		unregister_sidebar( $legacy_tile_sidebar );
-	}
+	hovercraft_hide_empty_legacy_widget_areas( hovercraft_get_registered_legacy_tile_sidebars() );
 }
 add_action( 'widgets_init', 'hovercraft_hide_empty_legacy_tile_sidebars', 30 );
 
 // check if rendered legacy tile widget areas have content
 function hovercraft_has_legacy_tile_sidebars() {
-	$legacy_tile_sidebars = hovercraft_get_legacy_tile_sidebars();
-
-	foreach ( $legacy_tile_sidebars as $legacy_tile_sidebar ) {
-		if ( is_active_sidebar( $legacy_tile_sidebar ) ) {
-			return true;
-		}
-	}
-
-	return false;
+	return hovercraft_has_active_legacy_widget_areas( hovercraft_get_legacy_tile_sidebars() );
 }
 
 // check if registered legacy tile widget areas have content
 function hovercraft_has_registered_legacy_tile_sidebars() {
-	$legacy_tile_sidebars = hovercraft_get_registered_legacy_tile_sidebars();
-
-	foreach ( $legacy_tile_sidebars as $legacy_tile_sidebar ) {
-		if ( is_active_sidebar( $legacy_tile_sidebar ) ) {
-			return true;
-		}
-	}
-
-	return false;
+	return hovercraft_has_active_legacy_widget_areas( hovercraft_get_registered_legacy_tile_sidebars() );
 }
 
 // show legacy tile widget notice
