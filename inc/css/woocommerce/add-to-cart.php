@@ -139,7 +139,7 @@ form.cart {
 		width: 100%;
 	}
 
-	form.cart button {
+	form.cart button.single_add_to_cart_button {
 		width: 100%;
 	}
 }
@@ -156,7 +156,7 @@ form.cart {
 		width: auto;
 	}
 
-	form.cart button {
+	form.cart button.single_add_to_cart_button {
 		width: auto;
 	}
 }
@@ -167,7 +167,7 @@ div.single_variation_wrap {
 }
 
 /* style for add to cart button element */
-form.cart button {
+form.cart button.single_add_to_cart_button {
 	font-size: 16px !important;
 	font-weight: 700 !important;
 	line-height: 40px !important;
