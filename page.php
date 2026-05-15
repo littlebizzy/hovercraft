@@ -11,13 +11,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div id="main">
 		<div class="inner">
 
-			<?php $show_sidebar = (bool) get_theme_mod( 'hovercraft_sidebar_status' ); ?>
+			<?php $show_sidebar = hovercraft_should_show_sidebar(); ?>
 
 			<?php if ( $show_sidebar ) : ?>
 				<div id="primary">
 			<?php else : ?>
 				<div id="primary-wide">
-			<?php endif; // end show-sidebar ?>
+			<?php endif; // end sidebar ?>
 
 						<div id="content-wrapper">
 
@@ -39,7 +39,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<?php if ( $show_sidebar ) : ?>
 				<?php get_template_part( 'sidebar' ); ?>
-			<?php endif; // end show-sidebar ?>
+			<?php endif; // end sidebar ?>
 
 			<div class="clear"></div>
 		</div><!-- inner -->
