@@ -10,21 +10,21 @@ $wp_customize->add_section( 'hovercraft_sidebar', array(
 	'priority' => 120,
 ) );
 
-// sidebar appears setting
-$wp_customize->add_setting( 'hovercraft_sidebar_appears', array(
+// sidebar status setting
+$wp_customize->add_setting( 'hovercraft_sidebar_status', array(
 	'default' => 'everywhere',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
 ) );
 
-// sidebar appears control
+// sidebar status control
 $wp_customize->add_control( new WP_Customize_Control(
 	$wp_customize,
-	'hovercraft_sidebar_appears',
+	'hovercraft_sidebar_status',
 	array(
 		'label' => __( 'Sidebar Appears', 'hovercraft' ),
 		'description' => __( 'On which pages should the Sidebar element be displayed (Note: when enabled, this forces the Main Content width to be narrow)?', 'hovercraft' ),
 		'section' => 'hovercraft_sidebar',
-		'settings' => 'hovercraft_sidebar_appears',
+		'settings' => 'hovercraft_sidebar_status',
 		'type' => 'select',
 		'choices' => array(
 		'none' => 'None (Disabled)',
