@@ -7,30 +7,44 @@ if ( ! defined( 'ABSPATH' ) ) {
 // styles for woocommerce ordering
 ?>
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 	form.woocommerce-ordering {
 		float: none !important;
 		width: 100%;
-	} 
+		margin-bottom: 30px;
+	}
 }
 
 @media screen and (min-width: 1200px) {
 	form.woocommerce-ordering {
 		float: right !important;
 		width: auto;
-	} 
+		margin-bottom: 30px;
+	}
 }
 
 form.woocommerce-ordering select {
-	vertical-align: middle !important;
-	line-height: 1.5 !important;
+	min-width: 220px !important;
+	height: 44px !important;
+	padding: 0 44px 0 16px !important;
 	font-size: 16px !important;
-	background: transparent !important;
+	font-weight: 400 !important;
+	line-height: 44px !important;
+	vertical-align: middle !important;
+	background-color: #ffffff !important;
 	box-shadow: inset 0px 0px 0px 1px <?php echo $breadcrumbs_text_color; ?> !important;
+	color: <?php echo $default_text_color; ?> !important;
+	cursor: pointer !important;
 }
 
-form.woocommerce-ordering select:active, form.woocommerce-ordering select:focus {
-	positive: relative;
-	box-shadow: inset 0px 0px 0px 1px <?php echo $breadcrumbs_text_color; ?> !important;
+form.woocommerce-ordering select:active,
+form.woocommerce-ordering select:focus {
+	box-shadow: inset 0px 0px 0px 1px <?php echo $default_link_color; ?> !important;
+	outline: none !important;
 }
 
+@media screen and (max-width: 1199px) {
+	form.woocommerce-ordering select {
+		width: 100% !important;
+	}
+}
