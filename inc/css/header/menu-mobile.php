@@ -117,7 +117,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	height: 0;
   	z-index: 999999; 
   	background-color: rgba(0,0,0, 0.9); 
-  	transition: 0.5s; 
+  	transition: height 0.5s ease; 
 }
 
 .overlay-content {
@@ -151,7 +151,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 .overlay a {
   	text-decoration: none;
   	color: #818181;
-  	transition: 0.3s;
+  	transition: color 0.3s ease;
 }
 
 .overlay li.current-menu-item a {
@@ -210,7 +210,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	z-index: 9997;
 	overflow-y: auto;
 	transform: translate3d(0, 0, 205px);
-	transition: all 500ms ease-in-out;
+	transition: left 500ms ease-in-out, transform 500ms ease-in-out;
 	padding: 20px 0 0 0;
 
 	ul {
@@ -300,7 +300,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 #hovercraft-offcanvas-menu.active {
 	left: 0;
 	transform: translate3d(0, 0, 0);
-	transition: all 500ms ease-in-out;
 }
 
 .hovercraft-offcanvas-overlay {
@@ -312,7 +311,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	transition: all 0.3s;
+	transition: opacity 0.3s ease, visibility 0.3s ease;
 	z-index: 99;
 }
 	
