@@ -275,6 +275,22 @@ input.qty {
 	margin: 0 0 15px 0 !important;
 }
 
+.single-product form.cart div.quantity.buttons-added {
+	display: flex !important;
+	flex-direction: row !important;
+	align-items: stretch !important;
+}
+
+.single-product form.cart div.quantity.buttons-added button.quantity-button {
+	flex: 0 0 40px !important;
+}
+
+.single-product form.cart div.quantity.buttons-added input.qty {
+	width: auto !important;
+	max-width: none !important;
+	flex: 1 1 auto !important;
+}
+
 .single-product form.cart button.single_add_to_cart_button {
 	width: 100% !important;
 }
