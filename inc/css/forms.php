@@ -14,11 +14,12 @@ form {
 	padding: 0 !important;
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
 	appearance: none;
 	-webkit-appearance: none;
 	-moz-appearance: none;
-
 	width: 100%;
 	height: auto;
 	vertical-align: middle;
@@ -75,7 +76,8 @@ textarea {
 	font-family: inherit;
 }
 
-input[type="checkbox"], input[type="radio"] {
+input[type="checkbox"],
+input[type="radio"] {
 	width: auto;
 	height: auto;
 	display: inline-block;
@@ -134,7 +136,8 @@ input[type="range"]::-moz-range-track {
 	border-radius: 2px;
 }
 
-input[type="submit"], button[type="submit"] {
+input[type="submit"],
+button[type="submit"] {
 	font-size: 18px;
 	font-weight: 600;
 	line-height: 1;
@@ -149,11 +152,13 @@ input[type="submit"], button[type="submit"] {
 	transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-input[type="submit"]:hover, button[type="submit"]:hover {
+input[type="submit"]:hover,
+button[type="submit"]:hover {
 	background: <?php echo $default_hover_color; ?> !important;
 }
 
-#topbar input, .hero-half input {
+#topbar input,
+.hero-half input {
 	box-shadow: none;
 }
 
@@ -176,34 +181,47 @@ legend {
 	padding: 0 5px;
 }
 
-input:focus, select:focus, textarea:focus, button:focus {
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
 	box-shadow: 0 0 0 2px rgba(100, 100, 100, 0.15);
 }
 
-input:focus:not(:focus-visible), select:focus:not(:focus-visible), textarea:focus:not(:focus-visible), button:focus:not(:focus-visible) {
+input:focus:not(:focus-visible),
+select:focus:not(:focus-visible),
+textarea:focus:not(:focus-visible),
+button:focus:not(:focus-visible) {
 	outline: none;
 }
 
-input::placeholder, textarea::placeholder {
+input::placeholder,
+textarea::placeholder {
 	color: #999999;
 	font-style: italic;
 	opacity: 1;
 }
 
-input:disabled, select:disabled, textarea:disabled, button:disabled {
+input:disabled,
+select:disabled,
+textarea:disabled,
+button:disabled {
 	background: #f5f5f5;
 	color: #999999;
 	cursor: not-allowed;
 	box-shadow: inset 0 0 0 1px #dddddd;
 }
 
-input[readonly], textarea[readonly] {
+input[readonly],
+textarea[readonly] {
 	background: #f5f5f5;
 	color: #333333;
 	box-shadow: inset 0 0 0 1px #cccccc;
 }
 
-[dir="rtl"] input, [dir="rtl"] select, [dir="rtl"] textarea {
+[dir="rtl"] input,
+[dir="rtl"] select,
+[dir="rtl"] textarea {
 	text-align: right;
 }
 
@@ -213,7 +231,9 @@ input[readonly], textarea[readonly] {
 	padding-right: 20px !important;
 }
 
-input:invalid, select:invalid, textarea:invalid {
+input:invalid,
+select:invalid,
+textarea:invalid {
 	background-color: #fff8f8;
 	box-shadow: inset 0 0 0 1px #e57373;
 }
@@ -221,25 +241,33 @@ input:invalid, select:invalid, textarea:invalid {
 /* responsive button widths */
 
 @media (max-width: 1199px) {
-	input[type="submit"], button[type="submit"] {
+	input[type="submit"],
+	button[type="submit"] {
 		width: 100%;
 	}
+
 	button {
 		width: 100%;
 	}
-	button.button, input.button {
+
+	button.button,
+	input.button {
 		width: 100%;
 	}
 }
 
 @media (min-width: 1200px) {
-	input[type="submit"], button[type="submit"] {
+	input[type="submit"],
+	button[type="submit"] {
 		width: 100%;
 	}
+
 	button {
 		width: auto;
 	}
-	button.button, input.button {
+
+	button.button,
+	input.button {
 		width: auto;
 	}
 }
