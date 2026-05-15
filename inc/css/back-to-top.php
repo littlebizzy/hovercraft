@@ -68,5 +68,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 	background: <?php echo $back_to_top_background_hover_color; ?>;
 	color: #ffffff;
 	color: <?php echo $back_to_top_link_color; ?>;
-	outline: none !important;
 }
