@@ -89,5 +89,7 @@ $url_hovercraft_video = wp_get_attachment_url( $hovercraft_video_id );
 	
 </div><!-- hero-full -->
 </div><!-- hero-full-wrapper -->
+
+<?php get_template_part( 'template-parts/header/hero-caption' ); ?>
 	
 </div><!-- hero-full-container -->
