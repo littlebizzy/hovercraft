@@ -11,19 +11,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 <div class="inner">
 
 	<?php 
-	$hovercraft_sidebar_appears = get_theme_mod( 'hovercraft_sidebar_appears', 'everywhere' );
+	$show_sidebar = hovercraft_should_show_sidebar();
 	$hovercraft_primary_width = get_theme_mod( 'hovercraft_primary_width', 'wide' );
 	?>
 
-	<?php if ( $hovercraft_sidebar_appears === 'everywhere' ) : ?>
+	<?php if ( $show_sidebar ) : ?>
 		<div id="primary">
-	<?php elseif ( $hovercraft_sidebar_appears === 'posts_only' || $hovercraft_sidebar_appears === 'none' ) : ?>
+	<?php else : ?>
 		<?php if ( $hovercraft_primary_width === 'narrow_centered' ) : ?>
 			<div id="primary-center">
 		<?php elseif ( $hovercraft_primary_width === 'wide' ) : ?>
 			<div id="primary-wide">
 		<?php endif; // end primary width ?>
-	<?php endif; // end sidebar display ?>
+	<?php endif; // end sidebar ?>
 
 		<div id="content-wrapper">
 									
@@ -133,10 +133,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="clear"></div>
   	</div><!-- primary -->
   
-    <?php $hovercraft_sidebar_appears = get_theme_mod( 'hovercraft_sidebar_appears', 'everywhere' ); ?>
-	<?php if ( $hovercraft_sidebar_appears === 'everywhere' ) : ?>
+	<?php if ( $show_sidebar ) : ?>
 		<?php get_template_part( 'sidebar' ); ?>
-	<?php endif; // end sidebar display ?>
+	<?php endif; // end sidebar ?>
     
 <div class="clear"></div>
 </div><!-- inner -->
