@@ -68,9 +68,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	</div><!-- title-wrapper -->
 
-	<?php if ( has_post_thumbnail() && get_the_post_thumbnail_caption() ) : ?>
-		<div class="mini-hero-caption"><?php echo esc_html( get_the_post_thumbnail_caption() ); ?></div>
-	<?php endif; // end featured image caption ?>
+	<?php get_template_part( 'template-parts/header/hero-caption' ); ?>
 
 	<div class="clear"></div>
 </div><!-- inner -->
