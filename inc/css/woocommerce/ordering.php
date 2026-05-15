@@ -40,7 +40,6 @@ form.woocommerce-ordering select {
 form.woocommerce-ordering select:active,
 form.woocommerce-ordering select:focus {
 	box-shadow: inset 0px 0px 0px 1px <?php echo $default_link_color; ?> !important;
-	outline: none !important;
 }
 
 @media screen and (max-width: 1199px) {
