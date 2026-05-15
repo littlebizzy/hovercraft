@@ -115,49 +115,19 @@ function hovercraft_get_legacy_zigzag_sidebars() {
 
 // mark legacy zigzag widget areas in admin
 function hovercraft_label_legacy_zigzag_sidebars() {
-	global $wp_registered_sidebars;
-
-	$legacy_zigzag_sidebars = hovercraft_get_legacy_zigzag_sidebars();
-
-	foreach ( $legacy_zigzag_sidebars as $legacy_zigzag_sidebar ) {
-		if ( ! isset( $wp_registered_sidebars[ $legacy_zigzag_sidebar ]['name'] ) ) {
-			continue;
-		}
-
-		if ( strpos( $wp_registered_sidebars[ $legacy_zigzag_sidebar ]['name'], 'Legacy ' ) === 0 ) {
-			continue;
-		}
-
-		$wp_registered_sidebars[ $legacy_zigzag_sidebar ]['name'] = 'Legacy ' . $wp_registered_sidebars[ $legacy_zigzag_sidebar ]['name'];
-	}
+	hovercraft_label_legacy_widget_areas( hovercraft_get_legacy_zigzag_sidebars() );
 }
 add_action( 'widgets_init', 'hovercraft_label_legacy_zigzag_sidebars', 20 );
 
 // hide empty legacy zigzag widget areas
 function hovercraft_hide_empty_legacy_zigzag_sidebars() {
-	$legacy_zigzag_sidebars = hovercraft_get_legacy_zigzag_sidebars();
-
-	foreach ( $legacy_zigzag_sidebars as $legacy_zigzag_sidebar ) {
-		if ( is_active_sidebar( $legacy_zigzag_sidebar ) ) {
-			continue;
-		}
-
-		unregister_sidebar( $legacy_zigzag_sidebar );
-	}
+	hovercraft_hide_empty_legacy_widget_areas( hovercraft_get_legacy_zigzag_sidebars() );
 }
 add_action( 'widgets_init', 'hovercraft_hide_empty_legacy_zigzag_sidebars', 30 );
 
 // check if legacy zigzag widget areas have content
 function hovercraft_has_legacy_zigzag_sidebars() {
-	$legacy_zigzag_sidebars = hovercraft_get_legacy_zigzag_sidebars();
-
-	foreach ( $legacy_zigzag_sidebars as $legacy_zigzag_sidebar ) {
-		if ( is_active_sidebar( $legacy_zigzag_sidebar ) ) {
-			return true;
-		}
-	}
-
-	return false;
+	return hovercraft_has_active_legacy_widget_areas( hovercraft_get_legacy_zigzag_sidebars() );
 }
 
 // check if zigzag meta rows have content
