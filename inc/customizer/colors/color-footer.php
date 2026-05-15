@@ -33,7 +33,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_prefooter_top_background_color',
 	array(
 		'label' => 'Prefooter (Top) Background Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_prefooter_top_background_color',
 	)
@@ -51,7 +50,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_prefooter_top_text_color',
 	array(
 		'label' => 'Prefooter (Top) Text Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_prefooter_top_text_color',
 	)
@@ -69,7 +67,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_prefooter_top_link_color',
 	array(
 		'label' => 'Prefooter (Top) Link Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_prefooter_top_link_color',
 	)
@@ -104,7 +101,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_prefooter_bottom_background_color',
 	array(
 		'label' => 'Prefooter (Bottom) Background Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_prefooter_bottom_background_color',
 	)
@@ -122,7 +118,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_prefooter_bottom_text_color',
 	array(
 		'label' => 'Prefooter (Bottom) Text Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_prefooter_bottom_text_color',
 	)
@@ -140,7 +135,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_prefooter_bottom_link_color',
 	array(
 		'label' => 'Prefooter (Bottom) Link Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_prefooter_bottom_link_color',
 	)
@@ -175,7 +169,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_footer_background_color',
 	array(
 		'label' => 'Footer Background Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_footer_background_color',
 	)
@@ -193,7 +186,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_footer_text_color',
 	array(
 		'label' => 'Footer Text Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_footer_text_color',
 	)
@@ -211,7 +203,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_footer_link_color',
 	array(
 		'label' => 'Footer Link Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_footer_link_color',
 	)
@@ -318,7 +309,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_copyright_background_color',
 	array(
 		'label' => 'Copyright Background Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_copyright_background_color',
 	)
@@ -336,7 +326,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_copyright_text_color',
 	array(
 		'label' => 'Copyright Text Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_copyright_text_color',
 	)
@@ -354,7 +343,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_copyright_link_color',
 	array(
 		'label' => 'Copyright Link Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_copyright_link_color',
 	)
@@ -389,7 +377,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_back_to_top_background_color',
 	array(
 		'label' => 'Back To Top Background Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_back_to_top_background_color',
 	)
@@ -407,7 +394,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_back_to_top_background_hover_color',
 	array(
 		'label' => 'Back To Top Background Hover Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_back_to_top_background_hover_color',
 	)
@@ -425,7 +411,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_back_to_top_link_color',
 	array(
 		'label' => 'Back To Top Link Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_back_to_top_link_color',
 	)
