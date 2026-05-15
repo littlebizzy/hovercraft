@@ -7,19 +7,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 // styles for unordered and ordered lists
 ?>
 
-ul {
-	list-style-position: inside;
-}
-
+ul,
 ol {
-	list-style-position: inside;
+	list-style-position: outside;
+	padding-left: 1.25em;
 }
 
 li {
-	margin-bottom: 5px;
-	line-height: 2;
+	line-height: 1.7;
+	margin-bottom: 0.5em;
 }
 
 ol > li::marker {
-  font-weight: 700;
+	font-weight: 700;
 }
