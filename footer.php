@@ -43,7 +43,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</div><!-- prefooter-bottom -->
 <?php endif; // end hovercraft-prefooter-bottom sidebar ?>
 
-<?php if ( is_active_sidebar( 'hovercraft_footer_one' ) || is_active_sidebar( 'hovercraft_footer_two' ) || is_active_sidebar( 'hovercraft_footer_three' ) ) : ?>
+<?php if ( is_active_sidebar( 'hovercraft_footer_one' ) || is_active_sidebar( 'hovercraft_footer_two' ) || is_active_sidebar( 'hovercraft_footer_three' ) || is_active_sidebar( 'hovercraft_footer_four' ) || is_active_sidebar( 'hovercraft_footer_callout' ) ) : ?>
 	<div id="footer">
 		<div class="inner">
 
@@ -146,4 +146,3 @@ if ( $hovercraft_copyright_width === 'full' ) {
 
 </body><!-- body -->
 </html><!-- html -->
-
