@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* featured image wrapper */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .featured-image-wrapper {
 	position: relative;
 	margin-bottom: 20px;
@@ -50,7 +50,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	margin-bottom: 0 !important;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 img.featured-image {
 	width: 100%;
 	height: auto;

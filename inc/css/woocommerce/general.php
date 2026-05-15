@@ -19,7 +19,7 @@ div.coupon {
 	color: #607D8B;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 p.woocommerce-result-count {
 	float: none !important;
 	display: block;

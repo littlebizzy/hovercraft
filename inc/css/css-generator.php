@@ -367,6 +367,7 @@ $hovercraft_css_files = array(
 	'/inc/css/woocommerce/login.php',
 	'/inc/css/woocommerce/widget-products.php',
 	'/inc/css/header/cart-icon.php',
+	'/inc/css/focus.php',
 );
 
 foreach ( $hovercraft_css_files as $hovercraft_css_file ) {

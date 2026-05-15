@@ -14,7 +14,7 @@ code {
 	padding: 0px 5px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 pre {
 	width: calc(100% - 40px) !important;
 	font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;

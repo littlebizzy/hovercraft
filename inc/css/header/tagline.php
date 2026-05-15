@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 // styles for tagline
 ?>
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .tagline {
 	font-size: 14px;
 	line-height: 1;

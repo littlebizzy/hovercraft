@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* site title (site name) */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .site-title {
 	font-family: <?php echo hovercraft_format_css_font_family( $site_name_font_family, $default_font_family ); ?>;
 	text-transform: <?php echo $site_name_text_transform; ?>;

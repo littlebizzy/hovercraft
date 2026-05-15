@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /* main */
 /* main refers to everything between header/splash and footer */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 #main {
 	width: 100%;
 	padding: 0;

@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 // styles for tiles
 ?>
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 #tiles {
 	width: 100%;
 	padding: 30px 20px;
@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 #tiles-wide {
 	width: 100%;
 	padding: 0px;
@@ -47,7 +47,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 #tiles-narrow {
 	width: 100%;
 	padding: 0px;
@@ -63,7 +63,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .tile {
 	width: 100%;
 	margin-bottom: 30px;

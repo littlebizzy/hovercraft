@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 // styles for prefooter top
 ?>
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 #prefooter-top {
 	width: 100%;
 	background: <?php echo $prefooter_top_background_color; ?>;
@@ -28,7 +28,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 #prefooter-top .inner {
 	width: 100%;
 	padding: 30px 20px;
@@ -57,7 +57,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 #prefooter-top .widget-wrapper {
 	width: 100%;
 	margin-bottom: 30px;

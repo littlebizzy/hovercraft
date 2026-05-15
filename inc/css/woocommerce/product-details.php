@@ -23,7 +23,7 @@ p.stock {
 	margin-left: 0 !important;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .product_meta {
 	display: block;
 	font-size: 14px;

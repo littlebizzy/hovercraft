@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 // styles for gallery
 ?>
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .gallery {
 	columns: 1;
 	column-fill: balance;
@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .gallery img {
 	width: 100%;
 	display: block;

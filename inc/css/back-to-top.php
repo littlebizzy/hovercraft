@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* back to top (scrollup) */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .scrollup-wrapper {
 	<?php if ( $scroll_to_top == 'none') { echo "display: none;"; } ?>
 	margin-top: 20px;
@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .scrollup-link {
 	display: block;
 	width: 100%;

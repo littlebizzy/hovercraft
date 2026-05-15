@@ -23,7 +23,7 @@ button {
 	border-radius: 0 !important;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .button-link {
 	width: 100%;
 	text-align: center;
@@ -51,7 +51,7 @@ button {
 	}
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .button-outline {
 	width: 100%;
 	text-align: center;
@@ -81,7 +81,7 @@ button {
 	}
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .button-outline-white {
 	width: 100%;
 	text-align: center;
@@ -111,7 +111,7 @@ button {
 	}
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .button-wide-dark {
 	width: 100%;
 	text-align: center;
@@ -139,7 +139,7 @@ button {
 	}
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .button-wide-white {
 	width: 100%;
 	text-align: center;

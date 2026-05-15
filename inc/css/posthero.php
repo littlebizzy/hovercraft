@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	margin-bottom: 0;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 #posthero {
 	width: 100%;
 	padding: 30px 20px;

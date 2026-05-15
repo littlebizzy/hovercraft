@@ -26,13 +26,12 @@ input, select, textarea {
 	line-height: 2;
 	padding: 10px 20px !important;
 	border: none !important;
-	outline: none !important;
 	font-size: 16px;
 	background: #ffffff;
 	display: inline-block;
 	box-shadow: inset 0px 0px 0px 1px <?php echo $breadcrumbs_text_color; ?>;
 	font-family: inherit;
-	transition: all 0.15s ease-in-out;
+	transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
 
 button {
@@ -42,13 +41,12 @@ button {
 	line-height: 2;
 	padding: 10px 20px !important;
 	border: 0;
-	outline: none;
 	font-size: 16px;
 	background: #ffffff;
 	display: inline-block;
 	box-shadow: inset 0px 0px 0px 1px <?php echo $breadcrumbs_text_color; ?>;
 	font-family: inherit;
-	transition: all 0.15s ease-in-out;
+	transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, border-color 0.15s ease-in-out;
 }
 
 select {
@@ -148,7 +146,7 @@ input[type="submit"], button[type="submit"] {
 	border: 0;
 	cursor: pointer;
 	box-shadow: none;
-	transition: background 0.15s ease-in-out;
+	transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
 input[type="submit"]:hover, button[type="submit"]:hover {
@@ -180,6 +178,10 @@ legend {
 
 input:focus, select:focus, textarea:focus, button:focus {
 	box-shadow: 0 0 0 2px rgba(100, 100, 100, 0.15);
+}
+
+input:focus:not(:focus-visible), select:focus:not(:focus-visible), textarea:focus:not(:focus-visible), button:focus:not(:focus-visible) {
+	outline: none;
 }
 
 input::placeholder, textarea::placeholder {

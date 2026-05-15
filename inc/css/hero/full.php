@@ -140,7 +140,7 @@ video.hero-background-video {
     color: #ffffff; /* correct */
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
     #header-full-hero {
         width: 100%;
         display: table;
@@ -163,7 +163,7 @@ video.hero-background-video {
     }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
     h1.full-hero-title {
         font-weight: 700;
         margin-bottom: 30px;

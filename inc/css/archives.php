@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	margin: 0;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 img.featured-image-archive {
 	width: 100%;
 	height: auto;

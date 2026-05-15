@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	margin-bottom: 0;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 	.cta-footer-callout {
 		display: block;
 		width: 100%;

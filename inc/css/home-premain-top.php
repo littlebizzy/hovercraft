@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 // styles for home-premain-top
 ?>
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 #home-premain-top {
 	width: 100%;
 	background: <?php echo $premain_top_background_color; ?>;
@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 #home-premain-top .inner {
 	width: 100%;
 	padding: 0px 0px;

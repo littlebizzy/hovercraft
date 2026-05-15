@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* columns */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .columns {
 	width: 100%;
 	padding: 30px 20px;
@@ -33,7 +33,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .column {
 	width: 100%;
 	margin-bottom: 30px;
@@ -78,7 +78,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* postcolumns */
 	
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .postcolumns-top {
 	width: 100%;
 	padding: 30px 20px;
@@ -98,7 +98,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .postcolumns-bottom {
 	width: 100%;
 	padding: 30px 20px;

@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* content (primary area) */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 #content-wrapper {
 	background: <?php echo $content_background_color; ?>;
 	}
@@ -40,7 +40,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* content-wide */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 #content-wide {
 	padding: 20px;
 	width: 100%;
@@ -67,7 +67,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	
 /* content-padded */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 #content-padded {
 	<?php if ( $sitewide_layout == 'floating_islands' ) { 
 			echo "padding: 0px 20px 20px 20px;\n"; 

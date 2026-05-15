@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /* mobile nav container */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .mobile-nav {
 	display: none;
 	clear: both;
@@ -66,7 +66,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /* hamburger icon wrapper with touch-safe area */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .menu-mobile-wrapper {
 	display: inline-flex;
 	justify-content: center;

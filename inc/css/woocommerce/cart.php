@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 /* cart notices */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 	.woocommerce-cart .woocommerce-notices-wrapper {
 		margin-bottom: 20px;
 	}

@@ -7,28 +7,32 @@ if ( ! defined( 'ABSPATH' ) ) {
 // styles for tables
 ?>
 
-@media screen and (max-width: 1200px) {
+/* tables */
+
+@media screen and (max-width: 1199px) {
 table {
+	width: 100%;
 	margin-bottom: 20px;
-	border: 1px solid grey;
+	border: 1px solid #dddddd;
 	border-collapse: collapse;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 table {
+	width: 100%;
 	margin-bottom: 30px;
-	border: 1px solid grey;
+	border: 1px solid #dddddd;
 	border-collapse: collapse;
 	}
 }
-	
+
 table tr:first-child {
-  background: #eee;
+	background: #f5f5f5;
 }
 
-table th,
-table td {
-	padding: 5px;
-  border: 1px solid lightgrey;
+table th, table td {
+	padding: 10px;
+	border: 1px solid #dddddd;
+	vertical-align: top;
 }

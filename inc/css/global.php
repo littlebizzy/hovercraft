@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 // styles for global styles
 ?>
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 html, body {
     height: 100%;
     font-family: <?php echo hovercraft_format_css_font_family( $default_font_family, $first_font_family ); ?>;
@@ -50,7 +50,7 @@ em {
 
 /* paragraphs */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 p {
 	margin-bottom: 20px;
 	}
@@ -69,7 +69,7 @@ p {
 
 /* general */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 #container {
 	width: 100%;
 	height: 100%;
@@ -91,7 +91,7 @@ p {
 	max-width:1200px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .full {
 	max-width: 100%;
 	padding: 0px 0px;
@@ -107,7 +107,7 @@ p {
 
 
 /* wordpress video/media container */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .mejs-container {
 	margin-bottom: 20px;
 	}
@@ -126,7 +126,7 @@ iframe {
     display: block;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 hr {
 	background: <?php echo $default_text_color; ?>;
 	height: 1px;

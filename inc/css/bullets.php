@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 // styles for bullets
 ?>
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 	#bullets {
 	columns: 1;
   column-fill: balance;
@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 #bullets p {
 	font-size: 14px;
 	margin-bottom: 20px;

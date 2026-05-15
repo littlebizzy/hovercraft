@@ -77,7 +77,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	color: <?php echo $half_hero_link_color; ?>;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 	#header-half-hero {
 		width: 100%;
 		display: table;
@@ -96,7 +96,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 	h1.half-hero-title {
 		font-weight: 700;
 		margin-bottom: 30px;

@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	margin-top: 30px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .cta-hero-primary {
 	display: block;
 	width: 100%;
@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .cta-hero-primary ul li {
 	list-style-type: none;
 	display: block;
@@ -49,7 +49,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .cta-hero-primary ul li a {
 	font-family: <?php echo hovercraft_format_css_font_family( $main_menu_font_family, $default_font_family ); ?>;
 	width: 100%;
@@ -85,7 +85,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* hero cta secondary */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .cta-hero-secondary {
 	display: block;
 	width: 100%;
@@ -98,7 +98,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .cta-hero-secondary ul li {
 	list-style-type: none;
 	display: block;
@@ -120,7 +120,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .cta-hero-secondary ul li a {
 	font-family: <?php echo hovercraft_format_css_font_family( $main_menu_font_family, $default_font_family ); ?>;
 	width: 100%;

@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* footer */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 #footer {
 	width: 100%;
 	padding: 20px 20px;
@@ -45,7 +45,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* footer column one (four unequal columns) */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .footer-column-one-four-unequal {
 	width: 100%;
 	display: block;
@@ -68,7 +68,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* footer column two, three, and four (four unequal columns) */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .footer-column-two-four-unequal, .footer-column-three-four-unequal, .footer-column-four-four-unequal {
 	width: 100%;
 	display: block;
@@ -90,7 +90,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* footer column one (four equal columns) */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .footer-column-one-four-equal {
 	width: 100%;
 	display: block;
@@ -113,7 +113,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* footer column two (four equal columns) */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .footer-column-two-four-equal {
 	width: 100%;
 	display: block;
@@ -136,7 +136,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* footer column three (four equal columns) */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .footer-column-three-four-equal {
 	width: 100%;
 	display: block;
@@ -159,7 +159,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* footer column four (four equal columns) */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .footer-column-four-four-equal {
 	width: 100%;
 	display: block;
@@ -182,7 +182,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* footer column one (three unequal columns) */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .footer-column-one-three-unequal {
 	width: 100%;
 	display: block;
@@ -205,7 +205,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* footer column two (three unequal columns) */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .footer-column-two-three-unequal {
 	width: 100%;
 	display: block;
@@ -227,7 +227,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* footer column three (three unequal columns) */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .footer-column-three-three-unequal {
 	width: 100%;
 	display: block;
@@ -249,7 +249,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* footer column one (three equal columns) */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .footer-column-one-three-equal {
 	width: 100%;
 	display: block;
@@ -272,7 +272,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* footer column two (three equal columns) */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .footer-column-two-three-equal {
 	width: 100%;
 	display: block;
@@ -295,7 +295,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* footer column three (three equal columns) */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .footer-column-three-three-equal {
 	width: 100%;
 	display: block;

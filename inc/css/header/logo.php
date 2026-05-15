@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 // styles for logo
 ?>
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .site-logo {
 	width: <?php echo $mobile_logo_width; ?>px !important;
 	max-width: <?php echo $mobile_logo_width; ?>px !important;

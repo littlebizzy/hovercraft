@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* hero title */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .welcome-wrapper {
 	width: 100%;
 	padding: 30px 20px;
@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .title-wrapper {
 	width: 100%;
 	padding: 0px 20px;

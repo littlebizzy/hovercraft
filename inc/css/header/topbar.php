@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 // styles for topbar
 ?>
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 #topbar {
 	width: 100%;
 	padding: 10px 20px;
@@ -43,7 +43,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	margin-bottom: 0;
 }
 	
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .topbar-left {
     vertical-align: middle;
 	text-align: center;
@@ -62,7 +62,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .topbar-right {
 	vertical-align: middle;
 	text-align: center;
@@ -80,7 +80,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 }
 	
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .topbar-center {
 	text-align: center;
 	}

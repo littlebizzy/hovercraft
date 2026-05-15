@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 // styles for headings
 ?>
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 h1 {
 	font-family: <?php echo hovercraft_format_css_font_family( $h1_font_family, $default_font_family ); ?>;
 	font-weight: <?php echo $h1_font_weight; ?>;
@@ -25,7 +25,7 @@ h1 {
 	}
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 h1.divide:after {
 	margin-top: 10px;
 	margin-bottom: 20px;
@@ -45,7 +45,7 @@ h1.divide:after {
 	}
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 h2 {
 	font-family: <?php echo hovercraft_format_css_font_family( $h2_font_family, $default_font_family ); ?>;
 	font-weight: <?php echo $h2_font_weight; ?>;
@@ -63,7 +63,7 @@ h2 {
 	}
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 h2:after {
 	<?php if ( $h2_divider_display == 'everywhere_possible') { echo "margin-top: 10px;"; } ?>
 	<?php if ( $h2_divider_display == 'everywhere_possible') { echo "margin-bottom: 20px;"; } ?>
@@ -83,7 +83,7 @@ h2:after {
 	}
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 h3 {
 	font-family: <?php echo hovercraft_format_css_font_family( $h3_font_family, $default_font_family ); ?>;
 	font-weight: <?php echo $h3_font_weight; ?>;
@@ -101,7 +101,7 @@ h3 {
 	}
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 h4 {
 	font-family: <?php echo hovercraft_format_css_font_family( $h4_font_family, $default_font_family ); ?>;
 	font-weight: <?php echo $h4_font_weight; ?>;
@@ -127,7 +127,7 @@ h4.sitename-offcanvas {
 	padding-left: 20px;
 	}
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 h5 {
 	font-family: <?php echo hovercraft_format_css_font_family( $h5_font_family, $default_font_family ); ?>;
 	font-weight: <?php echo $h5_font_weight; ?>;

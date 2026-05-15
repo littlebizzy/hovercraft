@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* primary */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 #primary {
 	width: 100%;
 	padding: 0px 0px;
@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	
 /* primary-wide */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 #primary-wide {
 	width: 100%;
 	padding: 0px 0px;
@@ -45,7 +45,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	
 /* primary-center */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 #primary-center {
 	width: 100%;
 	}

@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 // styles for after-byline
 ?>
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .after-byline {
 	background: <?php echo $after_byline_background_color; ?>;
 	font-size: <?php echo $after_byline_mobile_font_size; ?>px;

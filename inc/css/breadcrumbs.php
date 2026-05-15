@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* breadcrumbs */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .breadcrumbs {
 	width: 100%;
 	margin-bottom: 20px;

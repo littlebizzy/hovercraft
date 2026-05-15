@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* sidebar */
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 #sidebar {
 	width: 100%;
 	padding: 20px;
@@ -39,7 +39,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	color: <?php echo $sidebar_widget_link_color; ?>;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 	#sidebar .widget-wrapper .widget-title {
 		font-size: <?php echo $sidebar_widget_title_mobile_font_size; ?>px;
 		font-weight: <?php echo $sidebar_widget_title_font_weight; ?>;
@@ -57,7 +57,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 	#sidebar .widget-wrapper:not(:last-child) {
     margin-bottom: 20px;
 	}
@@ -115,7 +115,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	color: <?php echo $sidebar_callout_link_color; ?>;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .cta-sidebar-callout {
 	display: block;
 	width: 100%;
@@ -136,7 +136,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	padding: 0 !important;
 }
 	
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .cta-sidebar-callout ul li {
 	list-style-type: none;
 	display: block;
@@ -158,7 +158,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1199px) {
 .cta-sidebar-callout ul li a {
 	width: 100%;
 	font-size: 20px;
