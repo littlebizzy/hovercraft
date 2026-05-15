@@ -157,7 +157,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_full_hero_header_background_color',
 	array(
 		'label' => 'Full Hero Header Background Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_full_hero_header_background_color',
 	)
@@ -192,7 +191,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_hero_gradient_start_color',
 	array(
 		'label' => 'Hero Gradient Start Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_hero_gradient_start_color',
 	)
@@ -210,7 +208,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_hero_gradient_mid_color',
 	array(
 		'label' => 'Hero Gradient Mid Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_hero_gradient_mid_color',
 	)
@@ -228,7 +225,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_hero_gradient_stop_color',
 	array(
 		'label' => 'Hero Gradient Stop Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_hero_gradient_stop_color',
 	)
@@ -263,7 +259,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_header_half_hero_background_color',
 	array(
 		'label' => 'Header (Half Hero) Background Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_header_half_hero_background_color',
 	)
@@ -281,7 +276,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_header_half_hero_text_color',
 	array(
 		'label' => 'Header (Half Hero) Text Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_header_half_hero_text_color',
 	)
@@ -299,7 +293,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_header_half_hero_link_color',
 	array(
 		'label' => 'Header (Half Hero) Link Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_header_half_hero_link_color',
 	)
@@ -334,7 +327,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_header_mini_hero_background_color',
 	array(
 		'label' => 'Header (Mini Hero) Background Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_header_mini_hero_background_color',
 	)
@@ -352,7 +344,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_mini_hero_header_text_color',
 	array(
 		'label' => 'Header (Mini Hero) Text Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_mini_hero_header_text_color',
 	)
@@ -370,7 +361,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_mini_hero_header_link_color',
 	array(
 		'label' => 'Header (Mini Hero) Link Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_mini_hero_header_link_color',
 	)
@@ -405,7 +395,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_header_basic_background_color',
 	array(
 		'label' => 'Header (Basic) Background Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_header_basic_background_color',
 	)
@@ -423,7 +412,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_basic_hero_header_text_color',
 	array(
 		'label' => 'Header (Basic) Text Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_basic_hero_header_text_color',
 	)
@@ -441,7 +429,6 @@ $wp_customize->add_control( new WP_Customize_Color_Control(
 	'hovercraft_basic_hero_header_link_color',
 	array(
 		'label' => 'Header (Basic) Link Color',
-		'description' => 'This is a description',
 		'section' => 'colors',
 		'settings' => 'hovercraft_basic_hero_header_link_color',
 	)
