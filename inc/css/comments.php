@@ -16,67 +16,76 @@ ul.comment-list ul,
 ul.children,
 ul.comment-list .children,
 ul.comment-list li {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
 /* comment body styling */
 .comment-body {
-    margin-bottom: 30px;
-    border-bottom: 1px solid #ddd;
-    padding-bottom: 20px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+	margin-bottom: 30px;
+	padding-bottom: 20px;
 }
 
 /* author name */
 .comment-author {
-    font-weight: bold;
-    margin-bottom: 4px;
+	font-weight: 600;
+	margin-bottom: 4px;
 }
 
 /* comment meta */
 .comment-meta {
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 10px;
+	color: rgba(0, 0, 0, 0.62);
+	font-size: 14px;
+	margin-bottom: 10px;
 }
 
 /* comment content */
 .comment-content {
-    font-size: 16px;
-    line-height: 1.6;
+	font-size: 16px;
+	line-height: 1.6;
 }
 
 /* reply link */
 .comment-reply-link {
-    font-size: 14px;
-    display: inline-block;
-    margin-top: 10px;
-    color: #0073aa;
-    text-decoration: none;
+	color: <?php echo $default_link_color; ?>;
+	display: inline-block;
+	font-size: 14px;
+	margin-top: 10px;
+	text-decoration: none;
+	transition: color 0.2s ease;
 }
 
 .comment-reply-link:hover {
-    text-decoration: underline;
+	color: <?php echo $default_hover_color; ?>;
+	text-decoration: underline;
 }
 
 /* nested comments */
 .comment-list .children {
-    margin-left: 2rem;
-    margin-top: 1rem;
+	border-left: 1px solid rgba(0, 0, 0, 0.08);
+	margin-left: 2rem;
+	margin-top: 1rem;
+	padding-left: 1rem;
 }
 
 /* pagination */
 .comment-navigation {
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
-    font-size: 14px;
+	display: flex;
+	font-size: 14px;
+	gap: 20px;
+	justify-content: space-between;
+	margin-top: 20px;
 }
 
 .comment-nav-prev,
 .comment-nav-next {
-    flex: 1;
+	flex: 1;
+}
+
+.comment-nav-next {
+	text-align: right;
 }
 
 /* comment form */
@@ -84,22 +93,10 @@ ul.comment-list li {
 #respond input[type="text"],
 #respond input[type="email"],
 #respond input[type="url"] {
-    width: 100%;
-    max-width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    font-size: 16px;
+	max-width: 100%;
+	width: 100%;
 }
 
 #respond input[type="submit"] {
-    padding: 10px 20px;
-    background-color: #0073aa;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-}
-
-#respond input[type="submit"]:hover {
-    background-color: #005f8d;
+	cursor: pointer;
 }
