@@ -11,17 +11,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 /* main refers to everything between header/splash and footer */
 
 @media screen and (max-width: 1199px) {
-#main {
-	width: 100%;
-	padding: 0;
-	background: <?php echo $main_background_color; ?>;
+	#main {
+		width: 100%;
+		padding: 0;
+		background: <?php echo $main_background_color; ?>;
 	}
 }
 
 @media screen and (min-width: 1200px) {
-#main {
-	padding: 40px 0;
-	background: <?php echo $main_background_color; ?>;
+	#main {
+		padding: 40px 0;
+		background: <?php echo $main_background_color; ?>;
 	}
 }
 
