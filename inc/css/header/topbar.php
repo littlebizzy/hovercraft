@@ -40,9 +40,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 	margin-bottom: 0;
 }
 
+.topbar-left,
+.topbar-right,
+.topbar-center {
+	vertical-align: middle;
+}
+
+.topbar-center {
+	text-align: center;
+}
+
 @media screen and (max-width: 1199px) {
 	.topbar-left {
-		vertical-align: middle;
 		text-align: center;
 		<?php if ( $mobile_topbar_widget == 'topbar_right') { echo "display: none;"; } ?>
 	}
@@ -51,7 +60,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 @media screen and (min-width: 1200px) {
 	.topbar-left {
 		display: table-cell;
-		vertical-align: middle;
 		height: inherit;
 		white-space: nowrap;
 		width: auto;
@@ -61,7 +69,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 @media screen and (max-width: 1199px) {
 	.topbar-right {
-		vertical-align: middle;
 		text-align: center;
 		<?php if ( $mobile_topbar_widget == 'topbar_left') { echo "display: none;"; } ?>
 	}
@@ -70,24 +77,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 @media screen and (min-width: 1200px) {
 	.topbar-right {
 		display: table-cell;
-		vertical-align: middle;
 		height: inherit;
 		text-align: right;
 		width: 100%;
 	}
 }
 
-@media screen and (max-width: 1199px) {
-	.topbar-center {
-		text-align: center;
-	}
-}
-
 @media screen and (min-width: 1200px) {
 	.topbar-center {
-		vertical-align: middle;
 		height: inherit;
-		text-align: center;
 	}
 }
 
