@@ -54,7 +54,9 @@ function hovercraft_get_hero_background(
 }
 ?>
 
-#header-full-hero .menu-desktop > .main-menu ul li ul li { background: <?php echo $default_text_color; ?>; }
+#header-full-hero .menu-desktop > .main-menu ul li ul li {
+    background: <?php echo $default_text_color; ?>;
+}
 
 #hero-full-container {
     background: <?php echo hovercraft_get_hero_background(
@@ -140,41 +142,29 @@ video.hero-background-video {
     color: #ffffff; /* correct */
 }
 
+#header-full-hero {
+    width: 100%;
+    display: table;
+    background: <?php list($r1, $g1, $b1) = sscanf($full_hero_header_background_color, "#%02x%02x%02x"); echo "rgba({$r1}, {$g1}, {$b1}, {$full_hero_header_background_transparency})"; ?>;
+    position: relative; /* required when using video background on splash-wide */
+    color: #ffffff;
+}
+
 @media screen and (max-width: 1199px) {
     #header-full-hero {
-        width: 100%;
-        display: table;
         padding: 10px 20px;
-        background: <?php list($r1, $g1, $b1) = sscanf($full_hero_header_background_color, "#%02x%02x%02x"); echo "rgba({$r1}, {$g1}, {$b1}, {$full_hero_header_background_transparency})"; ?>;
-        position: relative; /* required when using video background on splash-wide */
-        color: #ffffff;
     }
 }
 
 @media screen and (min-width: 1200px) {
     #header-full-hero {
-        width: 100%;
-        display: table;
         margin: 0 auto;
         padding: 20px 0;
-        background: <?php list($r1, $g1, $b1) = sscanf($full_hero_header_background_color, "#%02x%02x%02x"); echo "rgba({$r1}, {$g1}, {$b1}, {$full_hero_header_background_transparency})"; ?>;
-        position: relative; /* required when using video background on splash-wide */
-        color: #ffffff;
     }
 }
 
-@media screen and (max-width: 1199px) {
-    h1.full-hero-title {
-        font-weight: 700;
-        margin-bottom: 30px;
-        color: #ffffff;
-    }
-}
-
-@media screen and (min-width: 1200px) {
-    h1.full-hero-title {
-        font-weight: 700;
-        margin-bottom: 30px;
-        color: #ffffff;
-    }
+h1.full-hero-title {
+    font-weight: 700;
+    margin-bottom: 30px;
+    color: #ffffff;
 }
