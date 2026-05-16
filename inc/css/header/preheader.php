@@ -8,75 +8,75 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 @media screen and (max-width: 1199px) {
-#preheader {
-	width: 100%;
-	padding: 0 20px 20px 20px;
-	font-size: 14px;
-	line-height: 1.5;
+	#preheader {
+		width: 100%;
+		padding: 0 20px 20px 20px;
+		font-size: 14px;
+		line-height: 1.5;
 	}
 }
 
 @media screen and (min-width: 1200px) {
-#preheader {
-	width: 100%;
-	padding: 0 0 40px 0;
-	font-size: 14px;
-	line-height: 1.5;
-	display: table;
+	#preheader {
+		width: 100%;
+		padding: 0 0 40px 0;
+		font-size: 14px;
+		line-height: 1.5;
+		display: table;
 	}
 }
 
 #preheader p {
 	margin-bottom: 0;
 }
-	
+
 @media screen and (max-width: 1199px) {
-.preheader-left {
-    vertical-align: middle;
-	text-align: center;
-	<?php if ( $mobile_preheader_widget == 'preheader_right') { echo "display: none;"; } ?>
+	.preheader-left {
+		vertical-align: middle;
+		text-align: center;
+		<?php if ( $mobile_preheader_widget == 'preheader_right') { echo "display: none;"; } ?>
 	}
 }
 
 @media screen and (min-width: 1200px) {
-.preheader-left {
-	display: table-cell;
-    vertical-align: middle;
-	height: inherit;
-	white-space: nowrap;
-	width: auto;
-	text-align: left;
+	.preheader-left {
+		display: table-cell;
+		vertical-align: middle;
+		height: inherit;
+		white-space: nowrap;
+		width: auto;
+		text-align: left;
 	}
 }
 
 @media screen and (max-width: 1199px) {
-.preheader-right {
-	vertical-align: middle;
-	text-align: center;
-	<?php if ( $mobile_preheader_widget == 'preheader_left') { echo "display: none;"; } ?>
+	.preheader-right {
+		vertical-align: middle;
+		text-align: center;
+		<?php if ( $mobile_preheader_widget == 'preheader_left') { echo "display: none;"; } ?>
 	}
 }
 
 @media screen and (min-width: 1200px) {
-.preheader-right {
-	display: table-cell;
-    vertical-align: middle;
-	height: inherit;
-	text-align: right;
-	width: 100%;
+	.preheader-right {
+		display: table-cell;
+		vertical-align: middle;
+		height: inherit;
+		text-align: right;
+		width: 100%;
 	}
 }
-	
+
 @media screen and (max-width: 1199px) {
-.preheader-center {
-	text-align: center;
+	.preheader-center {
+		text-align: center;
 	}
 }
 
 @media screen and (min-width: 1200px) {
-.preheader-center {
-    vertical-align: middle;
-	height: inherit;
-	text-align: center;
+	.preheader-center {
+		vertical-align: middle;
+		height: inherit;
+		text-align: center;
 	}
 }
