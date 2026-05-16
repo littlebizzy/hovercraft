@@ -21,8 +21,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 		float: right;
 		width: 392px;
 		margin-left: 40px;
-		<?php // $sidebar_padding_checked = get_theme_mod( 'hovercraft_sidebar_padding' ) ? true : false;
-		// if ( $sidebar_padding_checked == true ) { echo "padding: 40px;"; } ?>
 		border-left: 1px solid <?php echo $sidebar_left_border_color; ?>;
 	}
 }
