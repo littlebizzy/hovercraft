@@ -23,43 +23,32 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 }
 
+.scrollup-link {
+	display: block;
+	width: 100%;
+	cursor: pointer;
+	text-transform: <?php echo $back_to_top_text_transform; ?>;
+	font-weight: <?php echo $back_to_top_font_weight; ?>;
+	line-height: 1;
+	padding: 10px 0;
+	color: rgba(255, 255, 255, 0.5);
+	color: <?php echo $back_to_top_link_color; ?>;
+	text-decoration: none !important;
+	text-align: center;
+	vertical-align: middle;
+	background: rgba(0, 0, 0, 0.1);
+	background: <?php echo $back_to_top_background_color; ?>;
+}
+
 @media screen and (max-width: 1199px) {
 	.scrollup-link {
-		display: block;
-		width: 100%;
-		cursor: pointer;
-		text-transform: <?php echo $back_to_top_text_transform; ?>;
 		font-size: <?php echo $back_to_top_mobile_font_size; ?>px;
-		font-weight: <?php echo $back_to_top_font_weight; ?>;
-		line-height: 1;
-		padding: 10px 0;
-		color: rgba(255, 255, 255, 0.5);
-		color: <?php echo $back_to_top_link_color; ?>;
-		text-decoration: none !important;
-		text-align: center;
-		vertical-align: middle;
-		background: rgba(0, 0, 0, 0.1);
-		background: <?php echo $back_to_top_background_color; ?>;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 	.scrollup-link {
-		display: block;
-		width: 100%;
-		cursor: pointer;
-		text-transform: <?php echo $back_to_top_text_transform; ?>;
 		font-size: <?php echo $back_to_top_desktop_font_size; ?>px;
-		font-weight: <?php echo $back_to_top_font_weight; ?>;
-		line-height: 1;
-		padding: 10px 0;
-		color: rgba(255, 255, 255, 0.5);
-		color: <?php echo $back_to_top_link_color; ?>;
-		text-decoration: none !important;
-		text-align: center;
-		vertical-align: middle;
-		background: rgba(0, 0, 0, 0.1);
-		background: <?php echo $back_to_top_background_color; ?>;
 	}
 }
 
