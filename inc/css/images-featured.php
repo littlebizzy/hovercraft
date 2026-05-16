@@ -9,21 +9,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* featured image wrapper */
 
+.featured-image-wrapper {
+	position: relative;
+	height: auto;
+}
+
 @media screen and (max-width: 1199px) {
 	.featured-image-wrapper {
-		position: relative;
 		margin-bottom: 20px;
 		width: 100%;
-		height: auto;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 	.featured-image-wrapper {
-		position: relative;
 		margin-bottom: 30px;
 		width: 768px;
-		height: auto;
 		<?php if ( $sitewide_layout == 'floating_islands' ) {
 
 			if ( $featured_image_position == 'below_title' ) {
@@ -50,12 +51,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	margin-bottom: 0 !important;
 }
 
+img.featured-image {
+	height: auto;
+	display: block;
+	margin-bottom: 0;
+}
+
 @media screen and (max-width: 1199px) {
 	img.featured-image {
 		width: 100%;
-		height: auto;
-		display: block;
-		margin-bottom: 0;
 	}
 }
 
@@ -66,9 +70,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 		} else {
 			echo "width: 768px;\n";
 		} ?>
-		height: auto;
-		display: block;
-		margin-bottom: 0;
 	}
 }
 
