@@ -7,17 +7,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 // styles for hero snippet
 ?>
 
-@media screen and (max-width: 1199px) {
 .hero-snippet {
-	font-size: 16px;
 	color: <?php echo $hero_snippet_text_color; ?>;
+}
+
+@media screen and (max-width: 1199px) {
+	.hero-snippet {
+		font-size: 16px;
 	}
 }
 
 @media screen and (min-width: 1200px) {
-.hero-snippet {
-	font-size: 18px;
-	color: <?php echo $hero_snippet_text_color; ?>;
+	.hero-snippet {
+		font-size: 18px;
 	}
 }
 
@@ -26,13 +28,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 @media screen and (max-width: 1199px) {
-.hero-snippet .tagcloud {
-	margin-top: 20px;
+	.hero-snippet .tagcloud {
+		margin-top: 20px;
 	}
-}	
+}
 
 @media screen and (min-width: 1200px) {
-.hero-snippet .tagcloud {
-	margin-top: 30px;
+	.hero-snippet .tagcloud {
+		margin-top: 30px;
 	}
 }
