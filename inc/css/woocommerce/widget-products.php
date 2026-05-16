@@ -7,34 +7,26 @@ if ( ! defined( 'ABSPATH' ) ) {
 // styles for woocommerce widget (products)
 ?>
 
+ul.product_list_widget {
+	width: 100%;
+	list-style: none;
+	display: grid;
+	padding: 0;
+	margin: 0;
+}
+
 @media screen and (max-width: 1199px) {
 	ul.product_list_widget {
-		width: 100%;
-		list-style: none;
-		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		gap: 20px;
-		padding: 0;
-		margin: 0;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 	ul.product_list_widget {
-		width: 100%;
-		list-style: none;
-		display: grid;
 		grid-template-columns: repeat(4, 1fr);
 		gap: 60px;
-		padding: 0;
-		margin: 0;
 	}
-}
-
-ul.product_list_widget {
-	list-style: none;
-	padding: 0;
-	margin: 0;
 }
 
 ul.product_list_widget li {
@@ -94,7 +86,7 @@ ul.product_list_widget .wcpbc-price {
 }
 
 ul.product_list_widget .wcpbc-price del {
-    display: none;
+	display: none;
 }
 
 ul.product_list_widget li a::before {
