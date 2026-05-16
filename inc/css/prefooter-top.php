@@ -27,16 +27,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 }
 
+#prefooter-top .inner {
+	width: 100%;
+}
+
 @media screen and (max-width: 1199px) {
 	#prefooter-top .inner {
-		width: 100%;
 		padding: 30px 20px;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 	#prefooter-top .inner {
-		width: 100%;
 		display: grid;
 		<?php
 		if ( $prefooter_top_columns == '1' ) { echo "grid-template-columns: repeat(1, 1fr);\n"; }
