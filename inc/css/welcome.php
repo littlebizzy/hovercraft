@@ -8,7 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 @media screen and (min-width: 1200px) {
-.welcome-wrapper {
-	max-width: <?php echo $hero_content_width_desktop; ?>;
+	.welcome-wrapper {
+		max-width: <?php echo $hero_content_width_desktop; ?>;
 	}
 }
