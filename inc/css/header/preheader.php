@@ -7,21 +7,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 // styles for preheader
 ?>
 
+#preheader {
+	width: 100%;
+	font-size: 14px;
+	line-height: 1.5;
+}
+
 @media screen and (max-width: 1199px) {
 	#preheader {
-		width: 100%;
 		padding: 0 20px 20px 20px;
-		font-size: 14px;
-		line-height: 1.5;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 	#preheader {
-		width: 100%;
 		padding: 0 0 40px 0;
-		font-size: 14px;
-		line-height: 1.5;
 		display: table;
 	}
 }
