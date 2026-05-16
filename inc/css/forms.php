@@ -26,7 +26,7 @@ label {
 fieldset {
 	margin: 0 0 20px;
 	padding: 20px;
-	border: 1px solid <?php echo $sidebar_left_border_color; ?>;
+	border: 1px solid <?php echo $default_text_color; ?>;
 }
 
 legend {
@@ -47,7 +47,7 @@ input:not([type="button"]):not([type="checkbox"]):not([type="file"]):not([type="
 	background: #ffffff;
 	border: 0 !important;
 	border-radius: 0;
-	box-shadow: inset 0 0 0 1px <?php echo $breadcrumbs_text_color; ?>;
+	box-shadow: inset 0 0 0 1px <?php echo $default_text_color; ?>;
 	color: <?php echo $default_text_color; ?>;
 	font-family: inherit;
 	font-size: 16px;
@@ -113,13 +113,13 @@ input[type="range"] {
 
 input[type="range"]::-webkit-slider-runnable-track {
 	height: 4px;
-	background: <?php echo $sidebar_left_border_color; ?>;
+	background: <?php echo $default_text_color; ?>;
 	border-radius: 2px;
 }
 
 input[type="range"]::-moz-range-track {
 	height: 4px;
-	background: <?php echo $sidebar_left_border_color; ?>;
+	background: <?php echo $default_text_color; ?>;
 	border-radius: 2px;
 }
 
@@ -169,20 +169,21 @@ form button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[
 }
 
 input::placeholder, textarea::placeholder {
-	color: <?php echo $search_input_placeholder_color; ?>;
-	opacity: 1;
+	color: <?php echo $default_text_color; ?>;
+	opacity: 0.65;
 }
 
 input:disabled, select:disabled, textarea:disabled, button:disabled {
 	background: <?php echo $search_bar_background_color; ?>;
-	box-shadow: inset 0 0 0 1px <?php echo $sidebar_left_border_color; ?>;
-	color: <?php echo $search_input_placeholder_color; ?>;
+	box-shadow: inset 0 0 0 1px <?php echo $default_text_color; ?>;
+	color: <?php echo $default_text_color; ?>;
 	cursor: not-allowed;
+	opacity: 0.65;
 }
 
 input[readonly], textarea[readonly] {
 	background: <?php echo $search_bar_background_color; ?>;
-	box-shadow: inset 0 0 0 1px <?php echo $sidebar_left_border_color; ?>;
+	box-shadow: inset 0 0 0 1px <?php echo $default_text_color; ?>;
 	color: <?php echo $default_text_color; ?>;
 }
 
