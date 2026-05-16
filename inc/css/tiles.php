@@ -7,16 +7,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 // styles for tiles
 ?>
 
+#tiles, #tiles-wide, #tiles-narrow {
+	width: 100%;
+}
+
 @media screen and (max-width: 1199px) {
 #tiles {
-	width: 100%;
 	padding: 30px 20px;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 #tiles {
-	width: 100%;
 	display: grid;
   	<?php if ( $tiles_across == '3' ) { 
 			echo "grid-template-columns: repeat(3, 1fr);\n"; 
@@ -29,14 +31,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 @media screen and (max-width: 1199px) {
 #tiles-wide {
-	width: 100%;
 	padding: 0;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 #tiles-wide {
-	width: 100%;
 	display: grid;
   	<?php if ( $tiles_across == '3' ) { 
 			echo "grid-template-columns: repeat(3, minmax(200px, 1fr));\n";
@@ -49,41 +49,38 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 @media screen and (max-width: 1199px) {
 #tiles-narrow {
-	width: 100%;
 	padding: 0;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 #tiles-narrow {
-	width: 100%;
 	display: grid;
 	grid-template-columns: repeat(2, minmax(200px, 1fr));
 	gap: 30px;
 	}
 }
 
-@media screen and (max-width: 1199px) {
 .tile {
-	width: 100%;
-	margin-bottom: 30px;
 	padding: 30px;
 	text-align: center;
 	box-shadow: inset 0 0 0 1px <?php echo $tile_border_color; ?>;
 	background: <?php echo $tile_background_color; ?>;
+}
+
+@media screen and (max-width: 1199px) {
+.tile {
+	width: 100%;
+	margin-bottom: 30px;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 .tile {
 	max-width: 100%;
-	padding: 30px;
   	justify-content: center;
   	align-items: center;
-	text-align: center;
-	box-shadow: inset 0 0 0 1px <?php echo $tile_border_color; ?>;
 	display: inline-block;
-	background: <?php echo $tile_background_color; ?>;
 	}
 }
 
