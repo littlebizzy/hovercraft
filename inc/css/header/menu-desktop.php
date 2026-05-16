@@ -111,9 +111,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	line-height: 1.5;
 }
 
-/* hover styles applied by header specific rules */
-.menu-desktop > .main-menu ul ul a:hover {}
-
 /* anchor for positioning child indicators */
 .menu-desktop > .main-menu .menu-item-has-children > a {
 	position: relative;
