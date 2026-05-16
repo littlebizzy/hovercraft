@@ -67,19 +67,3 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, hr, bl
     display: inline;
     float: right;
 }
-
-.wp-caption {
-    max-width: 100%;
-}
-
-.wp-caption-text {
-    text-align: center;
-}
-
-.screen-reader-text {
-    clip: rect(1px, 1px, 1px, 1px);
-    position: absolute !important;
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-}
