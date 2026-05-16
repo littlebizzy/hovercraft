@@ -65,11 +65,7 @@ img.featured-image {
 
 @media screen and (min-width: 1200px) {
 	img.featured-image {
-		<?php if ( $sitewide_layout == 'floating_islands' ) {
-			echo "width: 768px;\n";
-		} else {
-			echo "width: 768px;\n";
-		} ?>
+		width: 768px;
 	}
 }
 
