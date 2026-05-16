@@ -98,14 +98,30 @@ em {
 	}
 }
 
-/* wordpress video/media container */
+/* wordpress media */
+
+.wp-caption {
+	max-width: 100%;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
 @media screen and (max-width: 1199px) {
 	.mejs-container {
 		margin-bottom: 20px;
 	}
 }
 
-/* wordpress video/media container */
 @media screen and (min-width: 1200px) {
 	.mejs-container {
 		margin-bottom: 30px;
