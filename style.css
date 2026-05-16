@@ -30,20 +30,20 @@ html, body, div, span, applet, object, iframe, main, h1, h2, h3, h4, h5, h6, p, 
 /* universal */
 
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 
 /* devices */
 
 @media screen and (max-width: 1199px) {
-    .desktop {
-        display: none !important;
-    }
+	.desktop {
+		display: none !important;
+	}
 }
 
 @media screen and (min-width: 1200px) {
-    .mobile {
-        display: none !important;
-    }
+	.mobile {
+		display: none !important;
+	}
 }
