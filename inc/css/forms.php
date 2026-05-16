@@ -138,6 +138,7 @@ input[type="range"]::-moz-range-track {
 
 input[type="submit"],
 button[type="submit"] {
+	width: 100%;
 	font-size: 18px;
 	font-weight: 600;
 	line-height: 1;
@@ -241,11 +242,6 @@ textarea:invalid {
 /* responsive button widths */
 
 @media screen and (max-width: 1199px) {
-	input[type="submit"],
-	button[type="submit"] {
-		width: 100%;
-	}
-
 	button {
 		width: 100%;
 	}
@@ -257,11 +253,6 @@ textarea:invalid {
 }
 
 @media screen and (min-width: 1200px) {
-	input[type="submit"],
-	button[type="submit"] {
-		width: 100%;
-	}
-
 	button {
 		width: auto;
 	}
