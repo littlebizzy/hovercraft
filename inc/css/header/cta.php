@@ -68,18 +68,7 @@ a.button-primary:hover {
 	margin-left: 30px;
 }
 
-#header-full-hero .cta-header-secondary ul li {
-	list-style-type: none;
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-	vertical-align: middle;
-	text-align: center;
-}
-
-#header-half-hero .cta-header-secondary ul li,
-#header-mini-hero .cta-header-secondary ul li,
-#header-basic .cta-header-secondary ul li {
+.cta-header-secondary ul li {
 	list-style-type: none;
 	display: inline-block;
 	margin: 0;
