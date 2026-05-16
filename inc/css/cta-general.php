@@ -23,7 +23,6 @@ button {
 	border-radius: 0 !important;
 }
 
-@media screen and (max-width: 1199px) {
 .button-link {
 	width: 100%;
 	text-align: center;
@@ -34,24 +33,8 @@ button {
 	text-decoration: none;
 	display: block;
 	background: <?php echo $default_link_color; ?>;
-	}
 }
 
-@media screen and (min-width: 1200px) {
-.button-link {
-	width: 100%;
-	text-align: center;
-	font-size: 20px;
-	font-weight: 700;
-	color: #ffffff;
-	padding: 10px 0;
-	text-decoration: none;
-	display: block;
-	background: <?php echo $default_link_color; ?>;
-	}
-}
-
-@media screen and (max-width: 1199px) {
 .button-outline {
 	width: 100%;
 	text-align: center;
@@ -63,25 +46,8 @@ button {
 	display: block;
 	background: transparent;
 	box-shadow: inset 0 0 0 1px <?php echo $default_text_color; ?>;
-	}
 }
 
-@media screen and (min-width: 1200px) {
-.button-outline {
-	width: 100%;
-	text-align: center;
-	font-size: 20px;
-	font-weight: 700;
-	color: <?php echo $default_text_color; ?>;
-	padding: 10px 0;
-	text-decoration: none;
-	display: block;
-	background: transparent;
-	box-shadow: inset 0 0 0 1px <?php echo $default_text_color; ?>;
-	}
-}
-
-@media screen and (max-width: 1199px) {
 .button-outline-white {
 	width: 100%;
 	text-align: center;
@@ -93,25 +59,8 @@ button {
 	display: block;
 	background: transparent;
 	box-shadow: inset 0 0 0 1px #ffffff;
-	}
 }
 
-@media screen and (min-width: 1200px) {
-.button-outline-white {
-	width: 100%;
-	text-align: center;
-	font-size: 20px;
-	font-weight: 700;
-	color: #ffffff;
-	padding: 10px 0;
-	text-decoration: none;
-	display: block;
-	background: transparent;
-	box-shadow: inset 0 0 0 1px #ffffff;
-	}
-}
-
-@media screen and (max-width: 1199px) {
 .button-wide-dark {
 	width: 100%;
 	text-align: center;
@@ -122,24 +71,8 @@ button {
 	text-decoration: none;
 	display: block;
 	background: <?php echo $default_text_color; ?>;
-	}
 }
 
-@media screen and (min-width: 1200px) {
-.button-wide-dark {
-	width: 100%;
-	text-align: center;
-	font-size: 20px;
-	font-weight: 700;
-	color: #ffffff;
-	padding: 10px 0;
-	text-decoration: none;
-	display: block;
-	background: <?php echo $default_text_color; ?>;
-	}
-}
-
-@media screen and (max-width: 1199px) {
 .button-wide-white {
 	width: 100%;
 	text-align: center;
@@ -151,20 +84,4 @@ button {
 	display: block;
 	background: #ffffff;
 	box-shadow: inset 0 0 0 1px <?php echo $default_text_color; ?>;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-.button-wide-white {
-	width: 100%;
-	text-align: center;
-	font-size: 20px;
-	font-weight: 700;
-	color: <?php echo $default_text_color; ?>;
-	padding: 10px 0;
-	text-decoration: none;
-	display: block;
-	background: #ffffff;
-	box-shadow: inset 0 0 0 1px <?php echo $default_text_color; ?>;
-	}
 }
