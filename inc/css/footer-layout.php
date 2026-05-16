@@ -9,24 +9,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* footer */
 
-@media screen and (max-width: 1199px) {
 #footer {
 	width: 100%;
-	padding: 20px 20px;
-	font-size: <?php echo $footer_mobile_font_size; ?>px;
 	background: <?php echo $footer_background_color; ?>;
 	color: <?php echo $footer_text_color; ?>;
+}
+
+@media screen and (max-width: 1199px) {
+#footer {
+	padding: 20px 20px;
+	font-size: <?php echo $footer_mobile_font_size; ?>px;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 #footer {
-	width: 100%;
 	margin: 0 auto;
 	padding: 40px 0;
 	font-size: <?php echo $footer_desktop_font_size; ?>px;
-	background: <?php echo $footer_background_color; ?>;
-	color: <?php echo $footer_text_color; ?>;
 	}
 }
 
