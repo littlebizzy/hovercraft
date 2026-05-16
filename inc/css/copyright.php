@@ -15,6 +15,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	color: <?php echo $copyright_text_color; ?>;
 }
 
+.copyright-right {
+	width: 100%;
+}
+
 /* mobile */
 @media screen and (max-width: 1199px) {
 
@@ -35,7 +39,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 
 	.copyright-right {
-		width: 100%;
 		margin-top: 30px;
 		display: block;
 		vertical-align: top;
@@ -70,7 +73,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 
 	.copyright-right {
-		width: 100%;
 		display: table-cell;
 		vertical-align: middle;
 		height: inherit;
