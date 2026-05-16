@@ -7,30 +7,27 @@ if ( ! defined( 'ABSPATH' ) ) {
 // styles for topbar
 ?>
 
+#topbar {
+	width: 100%;
+	font-weight: <?php echo $topbar_font_weight; ?>;
+	text-transform: <?php echo $topbar_text_transform; ?>;
+	line-height: 1.5;
+	background: <?php echo $topbar_background_color; ?>;
+	color: <?php echo $topbar_text_color; ?>;
+}
+
 @media screen and (max-width: 1199px) {
 	#topbar {
-		width: 100%;
 		padding: 10px 20px;
 		font-size: <?php echo $topbar_mobile_font_size; ?>px;
-		font-weight: <?php echo $topbar_font_weight; ?>;
-		text-transform: <?php echo $topbar_text_transform; ?>;
-		line-height: 1.5;
-		background: <?php echo $topbar_background_color; ?>;
-		color: <?php echo $topbar_text_color; ?>;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 	#topbar {
-		width: 100%;
 		padding: 10px 0;
 		font-size: <?php echo $topbar_desktop_font_size; ?>px;
-		font-weight: <?php echo $topbar_font_weight; ?>;
-		text-transform: <?php echo $topbar_text_transform; ?>;
-		line-height: 1.5;
 		display: table;
-		background: <?php echo $topbar_background_color; ?>;
-		color: <?php echo $topbar_text_color; ?>;
 	}
 }
 
