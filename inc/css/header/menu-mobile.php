@@ -91,7 +91,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* start mobile menu overlay */
 .mobile-menu-trig {
-	/* display: none; */
 	background: transparent;
 	border: 0;
 	padding: 0;
@@ -275,7 +274,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 #hovercraft-offcanvas-menu a.menu-toggle.rotate {
 	transform: rotate(180deg);
-	/* right: 1px; */
 }
 
 #hovercraft-offcanvas-menu ul.sub-menu {
