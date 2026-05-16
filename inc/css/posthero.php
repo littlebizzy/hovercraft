@@ -16,23 +16,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 	margin-bottom: 0;
 }
 
+#posthero {
+	width: 100%;
+	text-align: center;
+	background: <?php echo $posthero_background_color; ?>;
+	color: <?php echo $posthero_text_color; ?>;
+}
+
 @media screen and (max-width: 1199px) {
 	#posthero {
-		width: 100%;
 		padding: 30px 20px;
-		text-align: center;
-		background: <?php echo $posthero_background_color; ?>;
-		color: <?php echo $posthero_text_color; ?>;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 	#posthero {
-		width: 100%;
 		padding: 30px 0;
-		text-align: center;
-		background: <?php echo $posthero_background_color; ?>;
-		color: <?php echo $posthero_text_color; ?>;
 	}
 }
 
