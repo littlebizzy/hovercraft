@@ -26,7 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		width: 768px;
 	}
 }
-	
+
 /* primary-wide */
 
 #primary-wide {
@@ -38,7 +38,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		padding: 0 0;
 	}
 }
-	
+
 /* primary-center */
 
 @media screen and (max-width: 1199px) {
