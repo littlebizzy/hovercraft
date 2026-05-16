@@ -12,40 +12,40 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 @media screen and (max-width: 1199px) {
-.gallery {
-	columns: 1;
+	.gallery {
+		columns: 1;
 	}
 }
 
 @media screen and (min-width: 1200px) {
-.gallery-narrow-wrapper > .gallery {
-	columns: 2;
-	column-gap: 20px;
+	.gallery-narrow-wrapper > .gallery {
+		columns: 2;
+		column-gap: 20px;
 	}
 }
 
 @media screen and (min-width: 1200px) {
-.gallery-wide-wrapper > .gallery {
-	columns: 3;
-	column-gap: 2px;
+	.gallery-wide-wrapper > .gallery {
+		columns: 3;
+		column-gap: 2px;
 	}
 }
 
 .gallery img {
 	margin-bottom: 20px;
 	border: 0;
+	display: block;
 }
 
 @media screen and (max-width: 1199px) {
-.gallery img {
-	width: 100%;
-	display: block;
+	.gallery img {
+		width: 100%;
 	}
 }
 
 @media screen and (min-width: 1200px) {
-.gallery img {
-	width: 354px;
+	.gallery img {
+		width: 354px;
 	}
 }
 
