@@ -28,8 +28,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	text-decoration: none !important;
 }
 
-/* desktop: red notification dot */
-.notification-dot {
+/* cart notification dots */
+.notification-dot,
+.notification-dot-offcanvas {
 	position: absolute;
 	top: -2px;
 	right: -15px;
@@ -71,19 +72,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 .cart-button-offcanvas i {
 	padding-right: 10px !important;
 	text-decoration: none !important;
-}
-
-/* mobile: red notification dot */
-.notification-dot-offcanvas {
-	position: absolute;
-	top: -2px;
-	right: -15px;
-	display: inline-block;
-	background-color: #f44336;
-	border-radius: 50%;
-	line-height: 1;
-	font-size: 11px;
-	font-weight: 700;
-	color: #ffffff;
-	padding: 2px 4px;
 }
