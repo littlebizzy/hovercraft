@@ -38,6 +38,16 @@ The theme should remain boring, explicit, and easy to maintain. New features sho
 - Keep templates, widget areas, meta boxes, and Customizer settings understandable.
 - Avoid features that make the theme harder to audit, refactor, or maintain.
 
+### Layout Policy
+
+HoverCraft is intentionally designed around the default WordPress `medium_large` image size, which exists on normal WordPress sites and uses a 768px width by default. The main readable content column should preserve this 768px design anchor so featured images, inline images, and editor-added media align predictably without forcing unnecessary browser scaling.
+
+The desktop layout breakpoint is 1200px. This breakpoint is intentional because it supports a 768px primary content column, a 40px layout gap, and a 392px sidebar inside the standard 1200px desktop container.
+
+Sidebar layouts should use the normal primary content column beside the sidebar. Wide no-sidebar layouts may use the full desktop container. Narrow no-sidebar layouts may intentionally reuse the 768px readable content width when the page should feel aligned with normal post content.
+
+Avoid changing the 1200px breakpoint, 768px primary column, or sidebar math unless the theme is intentionally moving away from its WordPress `medium_large` image-size foundation.
+
 ### Customizer Policy
 
 Customizer settings should control global design, layout, branding, typography, colors, WooCommerce presentation, and other site-wide defaults.
