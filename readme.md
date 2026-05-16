@@ -78,6 +78,14 @@ Business data, SEO systems, schema systems, review data, FAQ data, location data
 
 The theme may output clean markup and support narrow presentation-related metadata, but it should not become the long-term storage layer for business or SEO data.
 
+### Agent Editing Policy
+
+Small intended changes must produce small diffs. Do not rebuild full files from partial context.
+
+For version bumps, fetch the full current file, replace only the exact version string, save the full file, and verify the diff. If the diff changes more than the version line, redo the patch.
+
+For cleanup patches, compare the final diff against the stated goal. Unrelated removals, missing includes, renamed paths, or broad rewrites are not acceptable for narrow cleanup tasks.
+
 ### Comment Policy
 
 Comments should make HoverCraft easier to scan during audits without adding noise. Use comments to explain real code sections, functions, template structure, or intentional exceptions.
