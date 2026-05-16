@@ -7,17 +7,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 // styles for social sharing
 ?>
 
+.social-sharing {
+	line-height: 1;
+}
+
 @media screen and (max-width: 1199px) {
 	.social-sharing {
 		margin: 40px 0;
-		line-height: 1;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 	.social-sharing {
 		margin: 60px 0;
-		line-height: 1;
 	}
 }
 
