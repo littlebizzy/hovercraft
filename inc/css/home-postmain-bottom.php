@@ -7,21 +7,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 // styles for home-postmain-bottom
 ?>
 
-@media screen and (max-width: 1199px) {
 #home-postmain-bottom {
 	width: 100%;
 	background: <?php echo $postmain_bottom_background_color; ?>;
 	color: <?php echo $postmain_bottom_text_color; ?>;
+}
+
+@media screen and (max-width: 1199px) {
+#home-postmain-bottom {
 	padding: 20px 20px;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 #home-postmain-bottom {
-	width: 100%;
 	margin: 0 auto;
-	background: <?php echo $postmain_bottom_background_color; ?>;
-	color: <?php echo $postmain_bottom_text_color; ?>;
 	padding: 30px 0;
 	}
 }
