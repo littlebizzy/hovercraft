@@ -115,15 +115,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 @media screen and (min-width: 1200px) {
 	.footer-column-one-three-unequal {
 		width: 440px;
-		margin-right: 30px;
 	}
 }
 
-/* footer column two (three unequal columns) */
+/* footer column two and three (three unequal columns) */
 
 @media screen and (min-width: 1200px) {
-	.footer-column-two-three-unequal {
+	.footer-column-two-three-unequal, .footer-column-three-three-unequal {
 		width: 350px;
+	}
+}
+
+/* footer column one and two (three unequal columns) */
+
+@media screen and (min-width: 1200px) {
+	.footer-column-one-three-unequal, .footer-column-two-three-unequal {
 		margin-right: 30px;
 	}
 }
@@ -132,7 +138,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 @media screen and (min-width: 1200px) {
 	.footer-column-three-three-unequal {
-		width: 350px;
 		margin-right: 0;
 	}
 }
