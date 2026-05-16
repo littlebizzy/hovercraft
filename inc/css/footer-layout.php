@@ -43,17 +43,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 	text-decoration: <?php echo $footer_link_decoration; ?>;
 }
 
-/* footer column one (four unequal columns) */
+/* footer columns mobile */
 
 @media screen and (max-width: 1199px) {
-	.footer-column-one-four-unequal {
+	.footer-column-one-four-unequal, .footer-column-two-four-unequal, .footer-column-three-four-unequal, .footer-column-four-four-unequal, .footer-column-one-four-equal, .footer-column-two-four-equal, .footer-column-three-four-equal, .footer-column-four-four-equal, .footer-column-one-three-unequal, .footer-column-two-three-unequal, .footer-column-three-three-unequal, .footer-column-one-three-equal, .footer-column-two-three-equal, .footer-column-three-three-equal {
 		width: 100%;
 		display: block;
 		vertical-align: top;
 		margin-bottom: 30px;
+	}
+
+	.footer-column-one-four-unequal, .footer-column-one-four-equal, .footer-column-two-four-equal, .footer-column-three-four-equal, .footer-column-four-four-equal, .footer-column-one-three-unequal, .footer-column-one-three-equal, .footer-column-two-three-equal, .footer-column-three-three-equal {
 		padding: 0;
 	}
 }
+
+/* footer column one (four unequal columns) */
 
 @media screen and (min-width: 1200px) {
 	.footer-column-one-four-unequal {
@@ -67,15 +72,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* footer column two, three, and four (four unequal columns) */
 
-@media screen and (max-width: 1199px) {
-	.footer-column-two-four-unequal, .footer-column-three-four-unequal, .footer-column-four-four-unequal {
-		width: 100%;
-		display: block;
-		vertical-align: top;
-		margin-bottom: 30px;
-	}
-}
-
 @media screen and (min-width: 1200px) {
 	.footer-column-two-four-unequal, .footer-column-three-four-unequal, .footer-column-four-four-unequal {
 		float: left;
@@ -87,16 +83,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /* footer column one (four equal columns) */
-
-@media screen and (max-width: 1199px) {
-	.footer-column-one-four-equal {
-		width: 100%;
-		display: block;
-		vertical-align: top;
-		margin-bottom: 30px;
-		padding: 0;
-	}
-}
 
 @media screen and (min-width: 1200px) {
 	.footer-column-one-four-equal {
@@ -110,16 +96,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* footer column two (four equal columns) */
 
-@media screen and (max-width: 1199px) {
-	.footer-column-two-four-equal {
-		width: 100%;
-		display: block;
-		vertical-align: top;
-		margin-bottom: 30px;
-		padding: 0;
-	}
-}
-
 @media screen and (min-width: 1200px) {
 	.footer-column-two-four-equal {
 		float: left;
@@ -131,16 +107,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /* footer column three (four equal columns) */
-
-@media screen and (max-width: 1199px) {
-	.footer-column-three-four-equal {
-		width: 100%;
-		display: block;
-		vertical-align: top;
-		margin-bottom: 30px;
-		padding: 0;
-	}
-}
 
 @media screen and (min-width: 1200px) {
 	.footer-column-three-four-equal {
@@ -154,16 +120,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* footer column four (four equal columns) */
 
-@media screen and (max-width: 1199px) {
-	.footer-column-four-four-equal {
-		width: 100%;
-		display: block;
-		vertical-align: top;
-		margin-bottom: 30px;
-		padding: 0;
-	}
-}
-
 @media screen and (min-width: 1200px) {
 	.footer-column-four-four-equal {
 		float: left;
@@ -175,16 +131,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /* footer column one (three unequal columns) */
-
-@media screen and (max-width: 1199px) {
-	.footer-column-one-three-unequal {
-		width: 100%;
-		display: block;
-		vertical-align: top;
-		margin-bottom: 30px;
-		padding: 0;
-	}
-}
 
 @media screen and (min-width: 1200px) {
 	.footer-column-one-three-unequal {
@@ -198,15 +144,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* footer column two (three unequal columns) */
 
-@media screen and (max-width: 1199px) {
-	.footer-column-two-three-unequal {
-		width: 100%;
-		display: block;
-		vertical-align: top;
-		margin-bottom: 30px;
-	}
-}
-
 @media screen and (min-width: 1200px) {
 	.footer-column-two-three-unequal {
 		float: left;
@@ -218,15 +155,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /* footer column three (three unequal columns) */
-
-@media screen and (max-width: 1199px) {
-	.footer-column-three-three-unequal {
-		width: 100%;
-		display: block;
-		vertical-align: top;
-		margin-bottom: 30px;
-	}
-}
 
 @media screen and (min-width: 1200px) {
 	.footer-column-three-three-unequal {
@@ -240,16 +168,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* footer column one (three equal columns) */
 
-@media screen and (max-width: 1199px) {
-	.footer-column-one-three-equal {
-		width: 100%;
-		display: block;
-		vertical-align: top;
-		margin-bottom: 30px;
-		padding: 0;
-	}
-}
-
 @media screen and (min-width: 1200px) {
 	.footer-column-one-three-equal {
 		float: left;
@@ -262,16 +180,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* footer column two (three equal columns) */
 
-@media screen and (max-width: 1199px) {
-	.footer-column-two-three-equal {
-		width: 100%;
-		display: block;
-		vertical-align: top;
-		margin-bottom: 30px;
-		padding: 0;
-	}
-}
-
 @media screen and (min-width: 1200px) {
 	.footer-column-two-three-equal {
 		float: left;
@@ -283,16 +191,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /* footer column three (three equal columns) */
-
-@media screen and (max-width: 1199px) {
-	.footer-column-three-three-equal {
-		width: 100%;
-		display: block;
-		vertical-align: top;
-		margin-bottom: 30px;
-		padding: 0;
-	}
-}
 
 @media screen and (min-width: 1200px) {
 	.footer-column-three-three-equal {
