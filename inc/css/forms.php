@@ -242,10 +242,7 @@ textarea:invalid {
 /* responsive button widths */
 
 @media screen and (max-width: 1199px) {
-	button {
-		width: 100%;
-	}
-
+	button,
 	button.button,
 	input.button {
 		width: 100%;
@@ -253,10 +250,7 @@ textarea:invalid {
 }
 
 @media screen and (min-width: 1200px) {
-	button {
-		width: auto;
-	}
-
+	button,
 	button.button,
 	input.button {
 		width: auto;
