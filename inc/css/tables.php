@@ -9,21 +9,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* tables */
 
+table {
+	width: 100%;
+	border: 1px solid #dddddd;
+	border-collapse: collapse;
+}
+
 @media screen and (max-width: 1199px) {
 	table {
-		width: 100%;
 		margin-bottom: 20px;
-		border: 1px solid #dddddd;
-		border-collapse: collapse;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 	table {
-		width: 100%;
 		margin-bottom: 30px;
-		border: 1px solid #dddddd;
-		border-collapse: collapse;
 	}
 }
 
