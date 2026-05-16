@@ -7,24 +7,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 // styles for prefooter top
 ?>
 
+#prefooter-top {
+	width: 100%;
+	background: <?php echo $prefooter_top_background_color; ?>;
+	color: <?php echo $prefooter_top_text_color; ?>;
+	text-align: center;
+}
+
 @media screen and (max-width: 1199px) {
 	#prefooter-top {
-		width: 100%;
-		background: <?php echo $prefooter_top_background_color; ?>;
-		color: <?php echo $prefooter_top_text_color; ?>;
 		padding: 20px 20px;
-		text-align: center;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 	#prefooter-top {
-		width: 100%;
 		margin: 0 auto;
-		background: <?php echo $prefooter_top_background_color; ?>;
-		color: <?php echo $prefooter_top_text_color; ?>;
 		padding: 40px 0;
-		text-align: center;
 	}
 }
 
