@@ -63,11 +63,13 @@ form.variations_form {
 	border-collapse: collapse !important;
 	margin: 0 0 30px 0 !important;
 }
+
 .single-product .summary .variations_form table.variations tbody,
 .single-product .summary .variations_form table.variations tr {
 	display: block !important;
 	width: 100% !important;
 }
+
 .single-product .summary .variations_form table.variations th.label,
 .single-product .summary .variations_form table.variations td.value {
 	display: block !important;
@@ -77,11 +79,13 @@ form.variations_form {
 	border: 0 !important;
 	clear: both !important;
 }
+
 .single-product .summary .variations_form table.variations th.label label {
 	display: block;
 	margin: 0 0 6px 0;
 	font-weight: 500;
 }
+
 .single-product .summary .variations_form table.variations td.value select {
 	display: block !important;
 	width: 100% !important;
@@ -92,6 +96,7 @@ form.variations_form {
 	background: #fff;
 	line-height: 1.2;
 }
+
 .single-product .summary .variations_form .reset_variations {
 	display: inline-block;
 	margin-top: 6px;
@@ -115,6 +120,7 @@ form.variations_form {
 	display: inline-block !important;
 	margin-top: 4px !important;
 }
+
 .single-product .summary .variations_form .reset_variations[style*="visibility: hidden"],
 .single-product .summary .variations_form .reset_variations[aria-hidden="true"] {
 	display: none !important;
@@ -310,6 +316,7 @@ input.qty {
 	background: #ffffff !important;
 	color: <?php echo $default_text_color; ?> !important;
 }
+
 .single-product .summary .variations_form table.variations td.value select:focus,
 .single-product .summary .variations_form table.variations td.value select:active {
 	border-width: 1px !important;
