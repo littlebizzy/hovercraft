@@ -48,6 +48,10 @@ Sidebar layouts should use the normal primary content column beside the sidebar.
 
 Avoid changing the 1200px breakpoint, 768px primary column, or sidebar math unless the theme is intentionally moving away from its WordPress `medium_large` image-size foundation.
 
+Breakpoint-specific layout CSS should generally use both `max-width: 1199px` and `min-width: 1200px` blocks so mobile and desktop behavior stay easy to audit. Shared values may live outside breakpoint blocks when that makes the CSS cleaner, lighter, and does not hide meaningful mobile or desktop differences.
+
+Do not create empty breakpoint blocks or duplicate identical declarations just to satisfy the breakpoint convention. Prefer explicit mobile and desktop blocks when values differ, and shared base declarations when values are truly identical.
+
 ### Customizer Policy
 
 Customizer settings should control global design, layout, branding, typography, colors, WooCommerce presentation, and other site-wide defaults.
