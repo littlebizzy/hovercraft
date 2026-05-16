@@ -37,21 +37,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 	color: <?php echo $sidebar_widget_link_color; ?>;
 }
 
+#sidebar .widget-wrapper .widget-title {
+	font-weight: <?php echo $sidebar_widget_title_font_weight; ?>;
+	text-transform: <?php echo $sidebar_widget_title_text_transform; ?>;
+	color: <?php echo $sidebar_widget_title_text_color; ?>;
+}
+
 @media screen and (max-width: 1199px) {
 	#sidebar .widget-wrapper .widget-title {
 		font-size: <?php echo $sidebar_widget_title_mobile_font_size; ?>px;
-		font-weight: <?php echo $sidebar_widget_title_font_weight; ?>;
-		text-transform: <?php echo $sidebar_widget_title_text_transform; ?>;
-		color: <?php echo $sidebar_widget_title_text_color; ?>;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 	#sidebar .widget-wrapper .widget-title {
 		font-size: <?php echo $sidebar_widget_title_desktop_font_size; ?>px;
-		font-weight: <?php echo $sidebar_widget_title_font_weight; ?>;
-		text-transform: <?php echo $sidebar_widget_title_text_transform; ?>;
-		color: <?php echo $sidebar_widget_title_text_color; ?>;
 	}
 }
 
@@ -113,20 +113,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	color: <?php echo $sidebar_callout_link_color; ?>;
 }
 
-@media screen and (max-width: 1199px) {
-	.cta-sidebar-callout {
-		display: block;
-		width: 100%;
-		margin-top: 40px;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-	.cta-sidebar-callout {
-		display: block;
-		width: 100%;
-		margin-top: 40px;
-	}
+.cta-sidebar-callout {
+	display: block;
+	width: 100%;
+	margin-top: 40px;
 }
 
 .cta-sidebar-callout ul {
@@ -134,57 +124,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 	padding: 0 !important;
 }
 
-@media screen and (max-width: 1199px) {
-	.cta-sidebar-callout ul li {
-		list-style-type: none;
-		display: block;
-		margin: 0;
-		padding: 0;
-		vertical-align: middle;
-		text-align: center;
-	}
+.cta-sidebar-callout ul li {
+	list-style-type: none;
+	display: block;
+	margin: 0;
+	padding: 0;
+	vertical-align: middle;
+	text-align: center;
 }
 
-@media screen and (min-width: 1200px) {
-	.cta-sidebar-callout ul li {
-		list-style-type: none;
-		display: block;
-		margin: 0;
-		padding: 0;
-		vertical-align: middle;
-		text-align: center;
-	}
-}
-
-@media screen and (max-width: 1199px) {
-	.cta-sidebar-callout ul li a {
-		width: 100%;
-		font-size: 20px;
-		font-weight: 600;
-		color: <?php echo $sidebar_callout_link_color; ?> !important;
-		padding: 10px 0;
-		text-decoration: none;
-		display: block;
-		background: transparent;
-		margin-bottom: 0;
-		box-shadow: inset 0 0 0 1px <?php echo $sidebar_callout_cta_border_color; ?> !important;
-		background: <?php echo $sidebar_callout_cta_background_color; ?> !important;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-	.cta-sidebar-callout ul li a {
-		width: 100%;
-		font-size: 20px;
-		font-weight: 600;
-		color: <?php echo $sidebar_callout_link_color; ?> !important;
-		padding: 10px 0;
-		text-decoration: none;
-		display: block;
-		background: transparent;
-		box-shadow: inset 0 0 0 1px <?php echo $sidebar_callout_cta_border_color; ?> !important;
-		background: <?php echo $sidebar_callout_cta_background_color; ?> !important;
-	}
+.cta-sidebar-callout ul li a {
+	width: 100%;
+	font-size: 20px;
+	font-weight: 600;
+	color: <?php echo $sidebar_callout_link_color; ?> !important;
+	padding: 10px 0;
+	text-decoration: none;
+	display: block;
+	background: <?php echo $sidebar_callout_cta_background_color; ?> !important;
+	box-shadow: inset 0 0 0 1px <?php echo $sidebar_callout_cta_border_color; ?> !important;
 }
 
 .cta-sidebar-callout ul li:hover a {
