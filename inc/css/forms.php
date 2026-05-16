@@ -240,7 +240,7 @@ textarea:invalid {
 
 /* responsive button widths */
 
-@media (max-width: 1199px) {
+@media screen and (max-width: 1199px) {
 	input[type="submit"],
 	button[type="submit"] {
 		width: 100%;
@@ -256,7 +256,7 @@ textarea:invalid {
 	}
 }
 
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
 	input[type="submit"],
 	button[type="submit"] {
 		width: 100%;
