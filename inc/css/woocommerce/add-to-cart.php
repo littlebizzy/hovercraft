@@ -128,7 +128,7 @@ form.cart {
 }
 
 /* mobile layout (stack quantity and button vertically) */
-@media (max-width: 1199px) {
+@media screen and (max-width: 1199px) {
 	form.cart {
 		flex-direction: column !important;
 	}
@@ -145,7 +145,7 @@ form.cart {
 }
 
 /* desktop layout (display quantity and button inline) */
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
 	form.cart {
 		flex-direction: row !important;
 	}
