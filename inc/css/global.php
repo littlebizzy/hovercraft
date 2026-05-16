@@ -98,7 +98,24 @@ em {
 	}
 }
 
-/* wordpress media */
+/* wordpress */
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.alignleft {
+	display: inline;
+	float: left;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+}
 
 .wp-caption {
 	max-width: 100%;
