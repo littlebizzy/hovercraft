@@ -7,7 +7,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 // styles for basic header
 ?>
 
-#header-basic .menu-desktop > .main-menu ul li ul li { background: <?php echo $header_basic_hero_background_color; ?>; }
+#header-basic .menu-desktop > .main-menu ul li ul li {
+	background: <?php echo $header_basic_hero_background_color; ?>;
+}
 
 #header-basic {
 	width: 100%;
