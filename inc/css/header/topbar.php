@@ -51,8 +51,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 @media screen and (max-width: 1199px) {
-	.topbar-left {
+	.topbar-left,
+	.topbar-right {
 		text-align: center;
+	}
+}
+
+@media screen and (max-width: 1199px) {
+	.topbar-left {
 		<?php if ( $mobile_topbar_widget == 'topbar_right') { echo "display: none;"; } ?>
 	}
 }
@@ -69,7 +75,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 @media screen and (max-width: 1199px) {
 	.topbar-right {
-		text-align: center;
 		<?php if ( $mobile_topbar_widget == 'topbar_left') { echo "display: none;"; } ?>
 	}
 }
