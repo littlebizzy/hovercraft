@@ -29,6 +29,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	margin-bottom: 5px;
 }
 
+#content-wide,
+#content-padded {
+	display: block;
+	overflow: hidden;
+	overflow-wrap: break-word;
+}
+
 /* content-wide */
 
 @media screen and (max-width: 1199px) {
@@ -36,9 +43,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 		padding: 20px;
 		width: 100%;
 		max-width: 100%;
-		display: block;
-		overflow: hidden;
-		overflow-wrap: break-word;
 	}
 }
 
@@ -49,9 +53,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 		} else {
 			echo "padding: 0 0 0 0;\n";
 		} ?>
-		display: block;
-		overflow: hidden;
-		overflow-wrap: break-word;
 	}
 }
 
@@ -62,9 +63,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 		padding: 0 20px 20px 20px;
 		width: 100%;
 		max-width: 100%;
-		display: block;
-		overflow: hidden;
-		overflow-wrap: break-word;
 	}
 }
 
@@ -75,9 +73,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 		} else {
 			echo "padding: 0 0 40px 0;\n";
 		} ?>
-		display: block;
-		overflow: hidden;
-		overflow-wrap: break-word;
 	}
 }
 
