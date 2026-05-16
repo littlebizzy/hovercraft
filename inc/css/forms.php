@@ -5,6 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // styles for forms
+$select_arrow_color = rawurlencode( $default_text_color );
 ?>
 
 /* forms */
@@ -25,7 +26,7 @@ label {
 fieldset {
 	margin: 0 0 20px;
 	padding: 20px;
-	border: 1px solid #e0e0e0;
+	border: 1px solid <?php echo $sidebar_left_border_color; ?>;
 }
 
 legend {
@@ -58,7 +59,7 @@ input:not([type="button"]):not([type="checkbox"]):not([type="file"]):not([type="
 
 select {
 	padding-right: 44px !important;
-	background-image: url('data:image/svg+xml;utf8,<svg fill="%23666" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+	background-image: url('data:image/svg+xml;utf8,<svg fill="<?php echo $select_arrow_color; ?>" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
 	background-position: right 14px center;
 	background-repeat: no-repeat;
 	background-size: 16px;
@@ -112,13 +113,13 @@ input[type="range"] {
 
 input[type="range"]::-webkit-slider-runnable-track {
 	height: 4px;
-	background: #cccccc;
+	background: <?php echo $sidebar_left_border_color; ?>;
 	border-radius: 2px;
 }
 
 input[type="range"]::-moz-range-track {
 	height: 4px;
-	background: #cccccc;
+	background: <?php echo $sidebar_left_border_color; ?>;
 	border-radius: 2px;
 }
 
@@ -168,21 +169,21 @@ form button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[
 }
 
 input::placeholder, textarea::placeholder {
-	color: #999999;
+	color: <?php echo $search_input_placeholder_color; ?>;
 	opacity: 1;
 }
 
 input:disabled, select:disabled, textarea:disabled, button:disabled {
-	background: #f5f5f5;
-	box-shadow: inset 0 0 0 1px #dddddd;
-	color: #999999;
+	background: <?php echo $search_bar_background_color; ?>;
+	box-shadow: inset 0 0 0 1px <?php echo $sidebar_left_border_color; ?>;
+	color: <?php echo $search_input_placeholder_color; ?>;
 	cursor: not-allowed;
 }
 
 input[readonly], textarea[readonly] {
-	background: #f5f5f5;
-	box-shadow: inset 0 0 0 1px #cccccc;
-	color: #333333;
+	background: <?php echo $search_bar_background_color; ?>;
+	box-shadow: inset 0 0 0 1px <?php echo $sidebar_left_border_color; ?>;
+	color: <?php echo $default_text_color; ?>;
 }
 
 #topbar input,
