@@ -31,6 +31,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 #content-wide,
 #content-padded {
+	width: 100%;
+	max-width: 100%;
 	display: block;
 	overflow: hidden;
 	overflow-wrap: break-word;
@@ -41,8 +43,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 @media screen and (max-width: 1199px) {
 	#content-wide {
 		padding: 20px;
-		width: 100%;
-		max-width: 100%;
 	}
 }
 
@@ -61,8 +61,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 @media screen and (max-width: 1199px) {
 	#content-padded {
 		padding: 0 20px 20px 20px;
-		width: 100%;
-		max-width: 100%;
 	}
 }
 
