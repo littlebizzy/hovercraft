@@ -41,6 +41,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /* inline button: primary */
+
 a.button-primary {
 	font-family: <?php echo hovercraft_format_css_font_family( $main_menu_font_family, $default_font_family ); ?>;
 	font-size: 20px;
@@ -59,7 +60,6 @@ a.button-primary:hover {
 	background: <?php echo $default_hover_color; ?>;
 	color: #ffffff !important;
 }
-	
 
 /* header secondary cta */
 
@@ -77,7 +77,9 @@ a.button-primary:hover {
 	text-align: center;
 }
 
-#header-half-hero .cta-header-secondary ul li, #header-mini-hero .cta-header-secondary ul li, #header-basic .cta-header-secondary ul li {
+#header-half-hero .cta-header-secondary ul li,
+#header-mini-hero .cta-header-secondary ul li,
+#header-basic .cta-header-secondary ul li {
 	list-style-type: none;
 	display: inline-block;
 	margin: 0;
@@ -99,7 +101,9 @@ a.button-primary:hover {
 	box-shadow: inset 0 0 0 1px #ffffff;
 }
 
-#header-half-hero .cta-header-secondary ul li a, #header-mini-hero .cta-header-secondary ul li a, #header-basic .cta-header-secondary ul li a {
+#header-half-hero .cta-header-secondary ul li a,
+#header-mini-hero .cta-header-secondary ul li a,
+#header-basic .cta-header-secondary ul li a {
 	font-family: <?php echo hovercraft_format_css_font_family( $main_menu_font_family, $default_font_family ); ?>;
 	font-size: <?php echo $main_menu_desktop_font_size; ?>px;
 	font-weight: 400;
@@ -117,7 +121,9 @@ a.button-primary:hover {
 	color: <?php echo $default_text_color; ?> !important;
 }
 
-#header-half-hero .cta-header-secondary ul li a:hover, #header-mini-hero .cta-header-secondary ul li a:hover, #header-basic .cta-header-secondary ul li a:hover {
+#header-half-hero .cta-header-secondary ul li a:hover,
+#header-mini-hero .cta-header-secondary ul li a:hover,
+#header-basic .cta-header-secondary ul li a:hover {
 	background: <?php echo $default_text_color; ?>;
 	color: #ffffff !important;
 }
