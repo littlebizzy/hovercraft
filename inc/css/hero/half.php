@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 #hero-half-container {
 	width: 100%; /* correct */
-	height: 100%; /* correct */	
+	height: 100%; /* correct */
 	padding: 0; /* correct */
 	display: table; /* correct */
 	position: relative; /* required to keep video background from escaping esp on mobile */
