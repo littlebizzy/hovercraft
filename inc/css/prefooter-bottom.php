@@ -7,23 +7,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 // styles for prefooter bottom
 ?>
 
-@media screen and (max-width: 1199px) {
 #prefooter-bottom {
 	width: 100%;
 	background: <?php echo $prefooter_bottom_background_color; ?>;
 	color: <?php echo $prefooter_bottom_text_color; ?>;
-	padding: 30px 20px;
 	text-align: center;
+}
+
+@media screen and (max-width: 1199px) {
+#prefooter-bottom {
+	padding: 30px 20px;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 #prefooter-bottom {
-	width: 100%;
-	background: <?php echo $prefooter_bottom_background_color; ?>;
-	color: <?php echo $prefooter_bottom_text_color; ?>;
 	padding: 60px 0;
-	text-align: center;
 	}
 }
 
