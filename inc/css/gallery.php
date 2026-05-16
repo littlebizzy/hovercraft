@@ -7,17 +7,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 // styles for gallery
 ?>
 
+.gallery {
+	column-fill: balance;
+}
+
 @media screen and (max-width: 1199px) {
 .gallery {
 	columns: 1;
-	column-fill: balance;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 .gallery-narrow-wrapper > .gallery {
 	columns: 2;
-	column-fill: balance;
 	column-gap: 20px;
 	}
 }
@@ -25,25 +27,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 @media screen and (min-width: 1200px) {
 .gallery-wide-wrapper > .gallery {
 	columns: 3;
-	column-fill: balance;
 	column-gap: 2px;
 	}
+}
+
+.gallery img {
+	margin-bottom: 20px;
+	border: 0;
 }
 
 @media screen and (max-width: 1199px) {
 .gallery img {
 	width: 100%;
 	display: block;
-	margin-bottom: 20px;
-	border: 0;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 .gallery img {
 	width: 354px;
-	margin-bottom: 20px;
-	border: 0;
 	}
 }
 
