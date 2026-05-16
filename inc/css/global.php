@@ -87,8 +87,9 @@ p {
 }
 
 .inner {
-	margin:0 auto;
-	max-width:1200px;
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
 }
 
 @media screen and (max-width: 1199px) {
