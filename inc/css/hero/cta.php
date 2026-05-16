@@ -14,67 +14,65 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 @media screen and (max-width: 1199px) {
-.cta-hero-primary {
-	display: block;
-	width: 100%;
+	.cta-hero-primary {
+		display: block;
+		width: 100%;
 	}
 }
 
 @media screen and (min-width: 1200px) {
-.cta-hero-primary {
-	display: inline-block;
-	margin-right: 30px;
+	.cta-hero-primary {
+		display: inline-block;
+		margin-right: 30px;
 	}
 }
 
-@media screen and (max-width: 1199px) {
-.cta-hero-primary ul li {
+.cta-hero-primary ul li,
+.cta-hero-secondary ul li {
 	list-style-type: none;
-	display: block;
 	margin: 0;
 	padding: 0;
 	vertical-align: middle;
 	text-align: center;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-.cta-hero-primary ul li {
-	list-style-type: none;
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-	vertical-align: middle;
-	text-align: center;
-	}
 }
 
 @media screen and (max-width: 1199px) {
-.cta-hero-primary ul li a {
-	font-family: <?php echo hovercraft_format_css_font_family( $main_menu_font_family, $default_font_family ); ?>;
-	width: 100%;
-	font-size: 20px;
-	font-weight: 700;
-	color: #ffffff;
-	padding: 10px 0;
-	text-decoration: none;
-	display: block;
-	background: <?php echo $default_link_color; ?>;
-	margin-bottom: 20px;
+	.cta-hero-primary ul li,
+	.cta-hero-secondary ul li {
+		display: block;
 	}
 }
 
 @media screen and (min-width: 1200px) {
+	.cta-hero-primary ul li,
+	.cta-hero-secondary ul li {
+		display: inline-block;
+	}
+}
+
 .cta-hero-primary ul li a {
-	<?php if ( has_nav_menu( 'cta-hero-secondary' ) ) { echo "width: 200px;"; } else { echo "width: auto;"; } ?>
 	font-family: <?php echo hovercraft_format_css_font_family( $main_menu_font_family, $default_font_family ); ?>;
 	font-size: 20px;
 	font-weight: 700;
 	color: #ffffff;
-	<?php if ( has_nav_menu( 'cta-hero-secondary' ) ) { echo "padding: 10px 0;"; } else { echo "padding: 10px 20px;"; } ?>
 	text-decoration: none;
-	display: inline-block;
 	background: <?php echo $default_link_color; ?>;
+}
+
+@media screen and (max-width: 1199px) {
+	.cta-hero-primary ul li a {
+		width: 100%;
+		padding: 10px 0;
+		display: block;
+		margin-bottom: 20px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.cta-hero-primary ul li a {
+		<?php if ( has_nav_menu( 'cta-hero-secondary' ) ) { echo "width: 200px;"; } else { echo "width: auto;"; } ?>
+		<?php if ( has_nav_menu( 'cta-hero-secondary' ) ) { echo "padding: 10px 0;"; } else { echo "padding: 10px 20px;"; } ?>
+		display: inline-block;
 	}
 }
 
@@ -82,72 +80,44 @@ if ( ! defined( 'ABSPATH' ) ) {
 	background: <?php echo $default_hover_color; ?>;
 }
 
-
 /* hero cta secondary */
 
 @media screen and (max-width: 1199px) {
-.cta-hero-secondary {
-	display: block;
-	width: 100%;
-}
-}
-
-@media screen and (min-width: 1200px) {
-.cta-hero-secondary {
-	display: inline-block;
-}
-}
-
-@media screen and (max-width: 1199px) {
-.cta-hero-secondary ul li {
-	list-style-type: none;
-	display: block;
-	margin: 0;
-	padding: 0;
-	vertical-align: middle;
-	text-align: center;
+	.cta-hero-secondary {
+		display: block;
+		width: 100%;
 	}
 }
 
 @media screen and (min-width: 1200px) {
-.cta-hero-secondary ul li {
-	list-style-type: none;
-	display: inline-block;
-	margin: 0;
-	padding: 0;
-	vertical-align: middle;
-	text-align: center;
+	.cta-hero-secondary {
+		display: inline-block;
 	}
 }
 
-@media screen and (max-width: 1199px) {
 .cta-hero-secondary ul li a {
 	font-family: <?php echo hovercraft_format_css_font_family( $main_menu_font_family, $default_font_family ); ?>;
-	width: 100%;
 	font-size: 20px;
 	font-weight: 400;
 	color: #ffffff;
 	padding: 10px 0;
 	text-decoration: none;
-	display: block;
 	background: transparent;
-	margin-bottom: 0;
 	box-shadow: inset 0 0 0 1px #ffffff;
+}
+
+@media screen and (max-width: 1199px) {
+	.cta-hero-secondary ul li a {
+		width: 100%;
+		display: block;
+		margin-bottom: 0;
 	}
 }
 
 @media screen and (min-width: 1200px) {
-.cta-hero-secondary ul li a {
-	font-family: <?php echo hovercraft_format_css_font_family( $main_menu_font_family, $default_font_family ); ?>;
-	width: 200px;
-	font-size: 20px;
-	font-weight: 400;
-	color: #ffffff;
-	padding: 10px 0;
-	text-decoration: none;
-	display: inline-block;
-	background: transparent;
-	box-shadow: inset 0 0 0 1px #ffffff;
+	.cta-hero-secondary ul li a {
+		width: 200px;
+		display: inline-block;
 	}
 }
 
