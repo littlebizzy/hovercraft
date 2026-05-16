@@ -13,15 +13,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	height: auto;
 	display: block;
 }
-	
+
 .wp-caption img {
 	margin-bottom: 0 !important;
 }
 
 .wp-caption-text {
 	margin-bottom: 0 !important;
-    text-align: left;
-    font-size: 12px;
+	text-align: left;
+	font-size: 12px;
 	line-height: 2;
-    color: #444;
+	color: #444;
 }
