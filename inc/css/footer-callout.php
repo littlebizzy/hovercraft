@@ -27,18 +27,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	margin-bottom: 0;
 }
 
-@media screen and (max-width: 1199px) {
-	.cta-footer-callout {
-		display: block;
-		width: 100%;
-		margin-top: 40px;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-	.cta-footer-callout {
-		display: block;
-		width: 100%;
-		margin-top: 40px;
-	}
+.cta-footer-callout {
+	display: block;
+	width: 100%;
+	margin-top: 40px;
 }
