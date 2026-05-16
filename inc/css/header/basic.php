@@ -9,26 +9,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 #header-basic .menu-desktop > .main-menu ul li ul li { background: <?php echo $header_basic_hero_background_color; ?>; }
 
+#header-basic {
+	width: 100%;
+	display: table;
+	background: <?php echo $header_basic_hero_background_color; ?>;
+	color: <?php echo $header_basic_hero_text_color; ?>;
+}
+
 /* mobile: header container */
 @media screen and (max-width: 1199px) {
 	#header-basic {
-		width: 100%;
-		display: table;
 		padding: 10px 20px;
-		background: <?php echo $header_basic_hero_background_color; ?>;
-		color: <?php echo $header_basic_hero_text_color; ?>;
 	}
 }
 
 /* desktop: header container */
 @media screen and (min-width: 1200px) {
 	#header-basic {
-		width: 100%;
-		display: table;
 		margin: 0 auto;
 		padding: 20px 0;
-		background: <?php echo $header_basic_hero_background_color; ?>;
-		color: <?php echo $header_basic_hero_text_color; ?>;
 	}
 }
 
@@ -41,32 +40,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 }
 
-/* mobile: general anchor color */
-@media screen and (max-width: 1199px) {
-	#header-basic a {
-		color: <?php echo $header_basic_hero_link_color; ?>;
-	}
+/* general anchor color */
+#header-basic a {
+	color: <?php echo $header_basic_hero_link_color; ?>;
 }
 
-/* desktop: general anchor color */
-@media screen and (min-width: 1200px) {
-	#header-basic a {
-		color: <?php echo $header_basic_hero_link_color; ?>;
-	}
-}
-
-/* mobile: menu link style */
-@media screen and (max-width: 1199px) {
-	#header-basic .main-menu ul li a {
-		text-decoration: none;
-		color: <?php echo $header_basic_hero_link_color; ?>;
-	}
-}
-
-/* desktop: menu link style */
-@media screen and (min-width: 1200px) {
-	#header-basic .main-menu ul li a {
-		text-decoration: none;
-		color: <?php echo $header_basic_hero_link_color; ?>;
-	}
+/* menu link style */
+#header-basic .main-menu ul li a {
+	text-decoration: none;
+	color: <?php echo $header_basic_hero_link_color; ?>;
 }
