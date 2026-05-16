@@ -26,16 +26,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 }
 
+#home-premain-top .inner {
+	width: 100%;
+}
+
 @media screen and (max-width: 1199px) {
 	#home-premain-top .inner {
-		width: 100%;
 		padding: 0 0;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 	#home-premain-top .inner {
-		width: 100%;
 		display: grid;
 		<?php
 		if ( $home_premain_top_columns == '1' ) { echo "grid-template-columns: repeat(1, 1fr);\n"; }
