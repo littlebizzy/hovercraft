@@ -138,6 +138,26 @@ if ( ! defined( 'ABSPATH' ) ) {
 	transform: rotate(180deg);
 }
 
+/* light header submenu panels */
+#header-basic .menu-desktop ul ul,
+#header-basic .menu-desktop ul ul ul,
+#header-mini-hero .menu-desktop ul ul,
+#header-mini-hero .menu-desktop ul ul ul,
+#header-half-hero .menu-desktop ul ul,
+#header-half-hero .menu-desktop ul ul ul {
+	background-color: #ffffff;
+}
+
+/* light header submenu hover background */
+#header-basic .menu-desktop ul ul a:hover,
+#header-basic .menu-desktop ul ul ul a:hover,
+#header-mini-hero .menu-desktop ul ul a:hover,
+#header-mini-hero .menu-desktop ul ul ul a:hover,
+#header-half-hero .menu-desktop ul ul a:hover,
+#header-half-hero .menu-desktop ul ul ul a:hover {
+	background-color: #f5f5f5;
+}
+
 /* basic hero header */
 
 /* colors for basic header top level links */
@@ -145,22 +165,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	color: <?php echo $header_basic_hero_text_color; ?>;
 }
 
-/* background for basic header submenu panels */
-#header-basic .menu-desktop ul ul,
-#header-basic .menu-desktop ul ul ul {
-	background-color: #ffffff;
-}
-
 /* text color for basic header submenu links */
 #header-basic .menu-desktop ul ul a,
 #header-basic .menu-desktop ul ul ul a {
 	color: <?php echo $header_basic_hero_text_color; ?>;
-}
-
-/* hover background for basic header submenu links */
-#header-basic .menu-desktop ul ul a:hover,
-#header-basic .menu-desktop ul ul ul a:hover {
-	background-color: #f5f5f5;
 }
 
 /* mini hero header */
@@ -170,22 +178,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	color: <?php echo $mini_hero_header_text_color; ?>;
 }
 
-/* background for mini hero header submenu panels */
-#header-mini-hero .menu-desktop ul ul,
-#header-mini-hero .menu-desktop ul ul ul {
-	background-color: #ffffff;
-}
-
 /* text color for mini hero header submenu links */
 #header-mini-hero .menu-desktop ul ul a,
 #header-mini-hero .menu-desktop ul ul ul a {
 	color: <?php echo $mini_hero_header_text_color; ?>;
-}
-
-/* hover background for mini hero header submenu links */
-#header-mini-hero .menu-desktop ul ul a:hover,
-#header-mini-hero .menu-desktop ul ul ul a:hover {
-	background-color: #f5f5f5;
 }
 
 /* half hero header */
@@ -195,22 +191,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	color: <?php echo $half_hero_text_color; ?>;
 }
 
-/* background for half hero header submenu panels */
-#header-half-hero .menu-desktop ul ul,
-#header-half-hero .menu-desktop ul ul ul {
-	background-color: #ffffff;
-}
-
 /* text color for half hero header submenu links */
 #header-half-hero .menu-desktop ul ul a,
 #header-half-hero .menu-desktop ul ul ul a {
 	color: <?php echo $half_hero_text_color; ?>;
-}
-
-/* hover background for half hero header submenu links */
-#header-half-hero .menu-desktop ul ul a:hover,
-#header-half-hero .menu-desktop ul ul ul a:hover {
-	background-color: #f5f5f5;
 }
 
 /* full hero header */
