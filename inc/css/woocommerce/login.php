@@ -12,8 +12,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	top: .4em !important;
 }
 
-.woocommerce form .form-row input.input-text, .woocommerce form .form-row textarea {
-    border: 1px solid #d3ced2 !important;
+.woocommerce form .form-row input.input-text,
+.woocommerce form .form-row textarea {
+	border: 1px solid #d3ced2 !important;
 	padding: 5px 10px !important;
 	box-shadow: inset 0 0 0 0 #bdbdbd !important;
 	font-size: 18px !important;
