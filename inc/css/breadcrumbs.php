@@ -10,23 +10,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 /* breadcrumbs */
 
 @media screen and (max-width: 1199px) {
-.breadcrumbs {
-	width: 100%;
-	margin-bottom: 20px;
-	font-size: 14px;
-	line-height: 18px !important;
-	color: <?php echo $breadcrumbs_text_color; ?>;
-	white-space: normal;
+	.breadcrumbs {
+		width: 100%;
+		margin-bottom: 20px;
+		font-size: 14px;
+		line-height: 18px !important;
+		color: <?php echo $breadcrumbs_text_color; ?>;
+		white-space: normal;
 	}
 }
 
 @media screen and (min-width: 1200px) {
-.breadcrumbs {
-	margin-bottom: 30px;
-	font-size: 14px;
-	line-height: 20px !important;
-	color: <?php echo $breadcrumbs_text_color; ?>;
-	white-space: normal;
+	.breadcrumbs {
+		margin-bottom: 30px;
+		font-size: 14px;
+		line-height: 20px !important;
+		color: <?php echo $breadcrumbs_text_color; ?>;
+		white-space: normal;
 	}
 }
 
