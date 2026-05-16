@@ -7,7 +7,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 // styles for primary
 ?>
 
-/* primary */
+/* primary layout */
+/* primary is 768px, primary-wide is 1200px, and primary-center is centered 768px */
 
 @media screen and (max-width: 1199px) {
 #primary {
@@ -19,12 +20,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 @media screen and (min-width: 1200px) {
 #primary {
 	float: left;
+	width: 768px;
 	padding: 0 0;
-	<?php if ( $sitewide_layout == 'floating_islands' ) { 
-			echo "width: 768px;\n"; 
-		} else { 
-			echo "width: 768px;\n"; 
-		}  ?>
 	}
 }
 	
