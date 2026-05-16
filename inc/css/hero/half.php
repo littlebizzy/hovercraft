@@ -7,7 +7,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 // styles for half hero
 ?>
 
-#header-half-hero .menu-desktop > .main-menu ul li ul li { background: <?php echo $half_hero_background_color; ?>; }
+#header-half-hero .menu-desktop > .main-menu ul li ul li {
+	background: <?php echo $half_hero_background_color; ?>;
+}
 
 #header-half-hero a {
 	color: <?php echo $half_hero_header_link_color; ?>;
@@ -15,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 #hero-half-container {
 	width: 100%; /* correct */
-	height: 100%; /* correct */
+	height: 100%; /* correct */	
 	padding: 0; /* correct */
 	display: table; /* correct */
 	position: relative; /* required to keep video background from escaping esp on mobile */
@@ -59,7 +61,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 #header-half-hero {
+	width: 100%;
+	display: table;
 	background: <?php echo $half_hero_background_color; ?>;
+	color: <?php echo $half_hero_text_color; ?>;
 }
 
 #header-half-hero .menu-mobile-wrapper i {
@@ -79,35 +84,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 @media screen and (max-width: 1199px) {
 	#header-half-hero {
-		width: 100%;
-		display: table;
 		padding: 10px 20px;
-		color: <?php echo $half_hero_text_color; ?>;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 	#header-half-hero {
-		width: 100%;
-		display: table;
 		margin: 0 auto;
 		padding: 20px 0;
-		color: <?php echo $half_hero_text_color; ?>;
 	}
 }
 
-@media screen and (max-width: 1199px) {
-	h1.half-hero-title {
-		font-weight: 700;
-		margin-bottom: 30px;
-		color: #ffffff;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-	h1.half-hero-title {
-		font-weight: 700;
-		margin-bottom: 30px;
-		color: #ffffff;
-	}
+h1.half-hero-title {
+	font-weight: 700;
+	margin-bottom: 30px;
+	color: #ffffff;
 }
