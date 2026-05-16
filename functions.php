@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( ! defined( 'HOVERCRAFT_VERSION' ) ) {
-	define( 'HOVERCRAFT_VERSION', '0.3.64' );
+	define( 'HOVERCRAFT_VERSION', '0.3.65' );
 }
 
 // title tag
@@ -78,59 +78,27 @@ require get_template_directory() . '/inc/taxonomy/tags-list.php';
 require get_template_directory() . '/inc/comments/comment-fields.php';
 
 // widgets
-require get_template_directory() . '/inc/widgets/widget-areas.php';
-require get_template_directory() . '/inc/widgets/widget-tiles.php';
-require get_template_directory() . '/inc/widgets/widget-columns.php';
-require get_template_directory() . '/inc/widgets/widget-zigzag.php';
-require get_template_directory() . '/inc/footer/footer-callout.php';
-require get_template_directory() . '/inc/sidebar/sidebar-callout.php';
-require get_template_directory() . '/inc/sidebar/sidebar-layout.php';
+require get_template_directory() . '/inc/widgets/register-widget-areas.php';
+require get_template_directory() . '/inc/widgets/widget-shortcodes.php';
+require get_template_directory() . '/inc/widgets/widget-classes.php';
+require get_template_directory() . '/inc/widgets/widget-content.php';
+require get_template_directory() . '/inc/widgets/widget-visibility.php';
 
 // customizer
 require get_template_directory() . '/inc/customizer/customizer.php';
-require get_template_directory() . '/inc/customizer/register-blog-category.php';
-require get_template_directory() . '/inc/customizer/register-portal-category.php';
-require get_template_directory() . '/inc/customizer/register-faq-category.php';
-require get_template_directory() . '/inc/customizer/fonts/font-helpers.php';
-require get_template_directory() . '/inc/customizer/fonts/google-fonts.php';
-require get_template_directory() . '/inc/customizer/fonts/google-fonts-multilingual.php';
+require get_template_directory() . '/inc/customizer/google-fonts.php';
+require get_template_directory() . '/inc/customizer/customizer-assets.php';
 
 // css
 require get_template_directory() . '/inc/css/css-generator.php';
 
-// fonts
-require get_template_directory() . '/inc/fonts/google-fonts.php';
+// javascript
+require get_template_directory() . '/inc/js/load-js.php';
 
-// ui
-require get_template_directory() . '/inc/ui/back-to-top.php';
-require get_template_directory() . '/inc/ui/full-screen-search.php';
+// admin
+require get_template_directory() . '/inc/admin/admin-assets.php';
+require get_template_directory() . '/inc/admin/theme-info.php';
 
-// meta
-require get_template_directory() . '/inc/meta/meta-box.php';
-require get_template_directory() . '/inc/meta/open-graph.php';
-
-// meta boxes
-require get_template_directory() . '/inc/admin/admin-meta-ui.php';
-require get_template_directory() . '/inc/meta-boxes/meta-box-zigzag.php';
-
-// woocommerce
-require get_template_directory() . '/inc/woocommerce/woocommerce-theme-support.php';
-require get_template_directory() . '/inc/woocommerce/quantity-buttons.php';
-require get_template_directory() . '/inc/woocommerce/woocommerce-wrappers.php';
-
-// bbpress
-require get_template_directory() . '/inc/bbpress/disable-reply-links.php';
-require get_template_directory() . '/inc/bbpress/quick-tags.php';
-require get_template_directory() . '/inc/bbpress/search-results.php';
-
-// shortcodes
-require get_template_directory() . '/inc/shortcodes/theme-shortcodes.php';
-
-// license
-require_once get_template_directory() . '/inc/misc/license.php';
-
-// updates
-require get_template_directory() . '/inc/misc/git-updater.php';
-
-// utility
-require get_template_directory() . '/inc/misc/custom-post-test.php';
+// integrations
+require get_template_directory() . '/inc/integrations/bbpress.php';
+require get_template_directory() . '/inc/integrations/woocommerce.php';
