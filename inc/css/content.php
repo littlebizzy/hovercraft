@@ -7,18 +7,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 // styles for content.php
 ?>
 
-/* content (primary area) */
+/* content wrapper */
 
-@media screen and (max-width: 1199px) {
-	#content-wrapper {
-		background: <?php echo $content_background_color; ?>;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-	#content-wrapper {
-		background: <?php echo $content_background_color; ?>;
-	}
+#content-wrapper {
+	background: <?php echo $content_background_color; ?>;
 }
 
 /* content (primary area) unordered and ordered lists */
@@ -67,11 +59,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 @media screen and (max-width: 1199px) {
 	#content-padded {
-		<?php if ( $sitewide_layout == 'floating_islands' ) {
-			echo "padding: 0 20px 20px 20px;\n";
-		} else {
-			echo "padding: 0 20px 20px 20px;\n";
-		} ?>
+		padding: 0 20px 20px 20px;
 		width: 100%;
 		max-width: 100%;
 		display: block;
