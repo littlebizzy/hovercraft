@@ -62,24 +62,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	position: relative;
 }
 
-#header-mini-hero .menu-desktop > .main-menu ul li ul li { background: <?php echo $mini_hero_background_color; ?>; }
-
-/* mobile: mini hero layout */
-@media screen and (max-width: 1199px) {
-	#hero-mini {
-		width: 100%;
-		padding: 0;
-		display: table;
-	}
+#header-mini-hero .menu-desktop > .main-menu ul li ul li {
+	background: <?php echo $mini_hero_background_color; ?>;
 }
 
-/* desktop: mini hero layout */
-@media screen and (min-width: 1200px) {
-	#hero-mini {
-		width: 100%;
-		padding: 0;
-		display: table;
-	}
+#hero-mini {
+	width: 100%;
+	padding: 0;
+	display: table;
 }
 
 /* mobile: mini hero main */
@@ -96,90 +86,61 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 }
 
+#header-mini-hero {
+	width: 100%;
+	display: table;
+	background: <?php echo $mini_hero_background_color; ?>;
+	color: <?php echo $mini_hero_header_text_color; ?>;
+}
+
 /* mobile: mini hero header layout */
 @media screen and (max-width: 1199px) {
 	#header-mini-hero {
-		width: 100%;
-		display: table;
 		padding: 10px 20px;
-		background: <?php echo $mini_hero_background_color; ?>;
-		color: <?php echo $mini_hero_header_text_color; ?>;
 	}
 }
 
 /* desktop: mini hero header layout */
 @media screen and (min-width: 1200px) {
 	#header-mini-hero {
-		width: 100%;
-		display: table;
 		margin: 0 auto;
 		padding: 20px 0;
-		background: <?php echo $mini_hero_background_color; ?>;
-		color: <?php echo $mini_hero_header_text_color; ?>;
 	}
 }
 
-/* mobile: h1 title style */
-@media screen and (max-width: 1199px) {
-	h1.mini-hero-title {
-		font-weight: 700;
-		margin-bottom: 0;
-		color: #ffffff;
-	}
+h1.mini-hero-title {
+	font-weight: 700;
+	margin-bottom: 0;
+	color: #ffffff;
 }
 
-/* desktop: h1 title style */
-@media screen and (min-width: 1200px) {
-	h1.mini-hero-title {
-		font-weight: 700;
-		margin-bottom: 0;
-		color: #ffffff;
-	}
+.hero-main-mini .search-input {
+	background: #ffffff !important;
+	box-shadow: inset 0 0 0 1px #ffffff !important;
 }
 
-/* mobile: search input field */
-@media screen and (max-width: 1199px) {
-	.hero-main-mini .search-input {
-		background: #ffffff !important;
-		box-shadow: inset 0 0 0 1px #ffffff !important;
-	}
-}
-
-/* desktop: search input field */
-@media screen and (min-width: 1200px) {
-	.hero-main-mini .search-input {
-		background: #ffffff !important;
-		box-shadow: inset 0 0 0 1px #ffffff !important;
-	}
+.mini-hero-caption {
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.5);
+	color: #ffffff;
+	padding: 5px 10px;
+	z-index: 10;
+	text-align: right;
 }
 
 /* mobile: caption box */
 @media screen and (max-width: 1199px) {
 	.mini-hero-caption {
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		background: rgba(0, 0, 0, 0.5);
-		color: #ffffff;
-		padding: 5px 10px;
 		font-size: 12px;
-		z-index: 10;
-		text-align: right;
 	}
 }
 
 /* desktop: caption box */
 @media screen and (min-width: 1200px) {
 	.mini-hero-caption {
-		position: absolute;
-		bottom: 0;
-		right: 0;
-		background: rgba(0, 0, 0, 0.5);
-		color: #ffffff;
-		padding: 5px 10px;
 		font-size: 14px;
-		z-index: 10;
-		text-align: right;
 	}
 }
 
@@ -192,32 +153,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 }
 
-/* mobile: general anchor color */
-@media screen and (max-width: 1199px) {
-	#header-mini-hero a {
-		color: <?php echo $mini_hero_header_link_color; ?>;
-	}
+#header-mini-hero a {
+	color: <?php echo $mini_hero_header_link_color; ?>;
 }
 
-/* desktop: general anchor color */
-@media screen and (min-width: 1200px) {
-	#header-mini-hero a {
-		color: <?php echo $mini_hero_header_link_color; ?>;
-	}
-}
-
-/* mobile: main menu links */
-@media screen and (max-width: 1199px) {
-	#header-mini-hero .main-menu ul li a {
-		text-decoration: none;
-		color: <?php echo $mini_hero_header_link_color; ?>;
-	}
-}
-
-/* desktop: main menu links */
-@media screen and (min-width: 1200px) {
-	#header-mini-hero .main-menu ul li a {
-		text-decoration: none;
-		color: <?php echo $mini_hero_header_link_color; ?>;
-	}
+#header-mini-hero .main-menu ul li a {
+	text-decoration: none;
+	color: <?php echo $mini_hero_header_link_color; ?>;
 }
