@@ -78,7 +78,7 @@ Business data, SEO systems, schema systems, review data, FAQ data, location data
 
 The theme may output clean markup and support narrow presentation-related metadata, but it should not become the long-term storage layer for business or SEO data.
 
-### Agent Editing Policy
+### AI / LLM Agent Editing Policy
 
 Small intended changes must produce small diffs. Do not rebuild full files from partial context.
 
