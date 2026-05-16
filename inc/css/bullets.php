@@ -7,33 +7,37 @@ if ( ! defined( 'ABSPATH' ) ) {
 // styles for bullets
 ?>
 
+#bullets {
+	column-fill: balance;
+}
+
 @media screen and (max-width: 1199px) {
 	#bullets {
-	columns: 1;
-  column-fill: balance;
-	column-gap: 0;
+		columns: 1;
+		column-gap: 0;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 	#bullets {
-	columns: 2;
-  column-fill: balance;
-	column-gap: 40px;
+		columns: 2;
+		column-gap: 40px;
 	}
 }
 
-@media screen and (max-width: 1199px) {
 #bullets p {
 	font-size: 14px;
-	margin-bottom: 20px;
+}
+
+@media screen and (max-width: 1199px) {
+	#bullets p {
+		margin-bottom: 20px;
 	}
 }
 
 @media screen and (min-width: 1200px) {
-#bullets p {
-	font-size: 14px;
-	margin-bottom: 30px;
+	#bullets p {
+		margin-bottom: 30px;
 	}
 }
 	
