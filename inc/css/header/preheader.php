@@ -41,8 +41,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 @media screen and (max-width: 1199px) {
-	.preheader-left {
+	.preheader-left,
+	.preheader-right {
 		text-align: center;
+	}
+}
+
+@media screen and (max-width: 1199px) {
+	.preheader-left {
 		<?php if ( $mobile_preheader_widget == 'preheader_right') { echo "display: none;"; } ?>
 	}
 }
@@ -59,7 +65,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 @media screen and (max-width: 1199px) {
 	.preheader-right {
-		text-align: center;
 		<?php if ( $mobile_preheader_widget == 'preheader_left') { echo "display: none;"; } ?>
 	}
 }
