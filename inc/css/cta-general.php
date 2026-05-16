@@ -23,65 +23,44 @@ button {
 	border-radius: 0 !important;
 }
 
-.button-link {
-	width: 100%;
-	text-align: center;
-	font-size: 20px;
-	font-weight: 700;
-	color: #ffffff;
-	padding: 10px 0;
-	text-decoration: none;
-	display: block;
-	background: <?php echo $default_link_color; ?>;
-}
-
-.button-outline {
-	width: 100%;
-	text-align: center;
-	font-size: 20px;
-	font-weight: 700;
-	color: <?php echo $default_text_color; ?>;
-	padding: 10px 0;
-	text-decoration: none;
-	display: block;
-	background: transparent;
-	box-shadow: inset 0 0 0 1px <?php echo $default_text_color; ?>;
-}
-
-.button-outline-white {
-	width: 100%;
-	text-align: center;
-	font-size: 20px;
-	font-weight: 700;
-	color: #ffffff;
-	padding: 10px 0;
-	text-decoration: none;
-	display: block;
-	background: transparent;
-	box-shadow: inset 0 0 0 1px #ffffff;
-}
-
-.button-wide-dark {
-	width: 100%;
-	text-align: center;
-	font-size: 20px;
-	font-weight: 700;
-	color: #ffffff;
-	padding: 10px 0;
-	text-decoration: none;
-	display: block;
-	background: <?php echo $default_text_color; ?>;
-}
-
+.button-link,
+.button-outline,
+.button-outline-white,
+.button-wide-dark,
 .button-wide-white {
 	width: 100%;
 	text-align: center;
 	font-size: 20px;
 	font-weight: 700;
-	color: <?php echo $default_text_color; ?>;
 	padding: 10px 0;
 	text-decoration: none;
 	display: block;
+}
+
+.button-link {
+	color: #ffffff;
+	background: <?php echo $default_link_color; ?>;
+}
+
+.button-outline {
+	color: <?php echo $default_text_color; ?>;
+	background: transparent;
+	box-shadow: inset 0 0 0 1px <?php echo $default_text_color; ?>;
+}
+
+.button-outline-white {
+	color: #ffffff;
+	background: transparent;
+	box-shadow: inset 0 0 0 1px #ffffff;
+}
+
+.button-wide-dark {
+	color: #ffffff;
+	background: <?php echo $default_text_color; ?>;
+}
+
+.button-wide-white {
+	color: <?php echo $default_text_color; ?>;
 	background: #ffffff;
 	box-shadow: inset 0 0 0 1px <?php echo $default_text_color; ?>;
 }
