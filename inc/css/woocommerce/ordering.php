@@ -7,11 +7,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 // styles for woocommerce ordering
 ?>
 
+form.woocommerce-ordering {
+	margin-bottom: 30px;
+}
+
 @media screen and (max-width: 1199px) {
 	form.woocommerce-ordering {
 		float: none !important;
 		width: 100%;
-		margin-bottom: 30px;
 	}
 }
 
@@ -19,7 +22,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	form.woocommerce-ordering {
 		float: right !important;
 		width: auto;
-		margin-bottom: 30px;
 	}
 }
 
