@@ -138,7 +138,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	transform: rotate(180deg);
 }
 
-
 /* basic hero header */
 
 /* colors for basic header top level links */
@@ -163,8 +162,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 #header-basic .menu-desktop ul ul ul a:hover {
 	background-color: #f5f5f5;
 }
-
-
 
 /* mini hero header */
 
@@ -191,8 +188,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	background-color: #f5f5f5;
 }
 
-
-
 /* half hero header */
 
 /* colors for half hero header top level links */
@@ -217,8 +212,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 #header-half-hero .menu-desktop ul ul ul a:hover {
 	background-color: #f5f5f5;
 }
-
-
 
 /* full hero header */
 
