@@ -87,18 +87,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	color: <?php echo $postcolumns_top_text_color; ?>;
 }
 
-@media screen and (max-width: 1199px) {
-	.postcolumns-top {
-		padding: 30px 20px;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-	.postcolumns-top {
-		padding: 30px 0;
-	}
-}
-
 .postcolumns-bottom {
 	width: 100%;
 	text-align: <?php echo $postcolumns_bottom_align; ?>;
@@ -107,12 +95,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 @media screen and (max-width: 1199px) {
+	.postcolumns-top,
 	.postcolumns-bottom {
 		padding: 30px 20px;
 	}
 }
 
 @media screen and (min-width: 1200px) {
+	.postcolumns-top,
 	.postcolumns-bottom {
 		padding: 30px 0;
 	}
