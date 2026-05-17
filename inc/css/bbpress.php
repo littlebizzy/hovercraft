@@ -121,11 +121,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	display: none;
 }
 
-#bbpress-forums li.bbp-footer p {
-	margin: 0;
-	line-height: 1;
-}
-
 #bbpress-forums li.bbp-body ul.forum, #bbpress-forums li.bbp-body ul.topic, #bbpress-forums li.bbp-body div.reply, body.reply-edit #bbpress-forums li.bbp-body div.reply, body.reply-edit #bbpress-forums .reply, #bbpress-forums li.bbp-body div.hentry {
 	clear: both;
 	padding: 20px !important;
@@ -588,10 +583,6 @@ div.bbp-breadcrumb a, div.bbp-topic-tags a, #bbp-topic-hot-tags a {
 	color: #ffffff !important;
 }
 
-#bbpress-forums textarea.bbp-the-content, #bbpress-forums textarea.wp-editor-area {
-	min-height: 180px;
-}
-
 #bbpress-forums div.bbp-submit-wrapper {
 	clear: both;
 	margin-top: 16px;
@@ -786,10 +777,6 @@ div.bbp-breadcrumb a, div.bbp-topic-tags a, #bbp-topic-hot-tags a {
 }
 
 @media screen and (max-width: 1199px) {
-	#bbpress-forums li.bbp-body ul.forum, #bbpress-forums li.bbp-body ul.topic, #bbpress-forums li.bbp-body div.reply {
-		padding: 20px !important;
-	}
-
 	#bbpress-forums li.bbp-forum-info, #bbpress-forums li.bbp-topic-title, #bbpress-forums li.bbp-forum-topic-count, #bbpress-forums li.bbp-topic-voice-count, #bbpress-forums li.bbp-forum-reply-count, #bbpress-forums li.bbp-topic-reply-count, #bbpress-forums li.bbp-forum-freshness, #bbpress-forums li.bbp-topic-freshness {
 		float: none;
 		width: 100%;
@@ -864,10 +851,6 @@ div.bbp-breadcrumb a, div.bbp-topic-tags a, #bbp-topic-hot-tags a {
 		float: none;
 	}
 
-	#bbpress-forums textarea.bbp-the-content, #bbpress-forums textarea.wp-editor-area {
-		min-height: 180px;
-	}
-
 	#bbpress-forums #bbp-single-user-details {
 		float: none;
 		width: 100%;
@@ -881,10 +864,6 @@ div.bbp-breadcrumb a, div.bbp-topic-tags a, #bbp-topic-hot-tags a {
 }
 
 @media screen and (min-width: 1200px) {
-	#bbpress-forums li.bbp-body ul.forum, #bbpress-forums li.bbp-body ul.topic, #bbpress-forums li.bbp-body div.reply {
-		padding: 20px !important;
-	}
-
 	#bbpress-forums li.bbp-forum-info, #bbpress-forums li.bbp-topic-title {
 		float: left;
 		width: 55%;
