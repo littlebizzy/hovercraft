@@ -913,6 +913,7 @@ div.bbp-breadcrumb a, div.bbp-topic-tags a, #bbp-topic-hot-tags a {
 	#bbpress-forums div.bbp-submit-wrapper {
 		float: right;
 	}
+
 	#bbpress-forums #bbp-single-user-details {
 		float: left;
 		width: 150px;
