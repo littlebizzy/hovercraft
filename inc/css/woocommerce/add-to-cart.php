@@ -7,276 +7,273 @@ if ( ! defined( 'ABSPATH' ) ) {
 // styles for woocommerce add to cart
 ?>
 
-/* base layout for add to cart buttons */
-.add_to_cart_button,
-.single_add_to_cart_button {
-	display: block;
-	text-align: center;
-	font-size: 20px;
-	font-weight: 700;
-	padding: 10px 0;
-	text-decoration: none;
-	border: none;
+.woocommerce .button.add_to_cart_button, .woocommerce a.add_to_cart_button, .woocommerce button.single_add_to_cart_button, .woocommerce input.single_add_to_cart_button, .add_to_cart_button, .single_add_to_cart_button {
+	display: inline-block;
+	padding: 10px 20px;
+	border: 0;
+	border-radius: 0;
+	box-shadow: none;
 	cursor: pointer;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 1.5;
+	text-align: center;
+	text-decoration: none;
 }
 
-/* single add to cart button uses theme link color with white text */
-.single_add_to_cart_button {
+.woocommerce button.single_add_to_cart_button, .woocommerce input.single_add_to_cart_button, .single_add_to_cart_button {
 	background: <?php echo $default_link_color; ?> !important;
 	color: #ffffff !important;
 }
 
-/* hover and focus for single add to cart button */
-.single_add_to_cart_button:hover,
-.single_add_to_cart_button:focus,
-.single_add_to_cart_button:active {
+.woocommerce button.single_add_to_cart_button:hover, .woocommerce button.single_add_to_cart_button:focus, .woocommerce button.single_add_to_cart_button:active, .woocommerce input.single_add_to_cart_button:hover, .woocommerce input.single_add_to_cart_button:focus, .woocommerce input.single_add_to_cart_button:active, .single_add_to_cart_button:hover, .single_add_to_cart_button:focus, .single_add_to_cart_button:active {
 	background: <?php echo $default_hover_color; ?> !important;
 	color: #ffffff !important;
 }
 
-/* other add to cart buttons (archives, related products, etc) use gray and theme text color */
-.add_to_cart_button {
+.woocommerce .button.add_to_cart_button, .woocommerce a.add_to_cart_button, .add_to_cart_button {
 	background: #e0e0e0 !important;
 	color: <?php echo $default_text_color; ?> !important;
 }
 
-/* hover and focus for other add to cart buttons */
-.add_to_cart_button:hover,
-.add_to_cart_button:focus,
-.add_to_cart_button:active {
+.woocommerce .button.add_to_cart_button:hover, .woocommerce .button.add_to_cart_button:focus, .woocommerce .button.add_to_cart_button:active, .woocommerce a.add_to_cart_button:hover, .woocommerce a.add_to_cart_button:focus, .woocommerce a.add_to_cart_button:active, .add_to_cart_button:hover, .add_to_cart_button:focus, .add_to_cart_button:active {
 	background: #bdbdbd !important;
 	color: <?php echo $default_text_color; ?> !important;
 }
 
-/* block layout for variation form */
-form.variations_form {
-	display: block !important;
-	width: 100% !important;
-	background: #ffffff !important;
+.woocommerce .button.loading, .woocommerce .button.added, .woocommerce a.add_to_cart_button.loading, .woocommerce a.add_to_cart_button.added {
+	opacity: 0.75;
 }
 
-/* ensure variation table stacks above add-to-cart row */
-.single-product .summary .variations_form table.variations {
-	display: block !important;
+.woocommerce a.added_to_cart {
+	display: inline-block;
+	margin: 10px 0 0;
+	color: <?php echo $default_link_color; ?>;
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 1.5;
+	text-decoration: underline;
+}
+
+.woocommerce a.added_to_cart:hover {
+	color: <?php echo $default_hover_color; ?>;
+}
+
+.woocommerce div.product form.cart, form.cart {
+	clear: both;
+	margin: 0 0 30px;
+}
+
+.woocommerce div.product form.cart::after, form.cart::after, .woocommerce div.product form.cart .variations_button::after, .woocommerce div.product form.cart .single_variation_wrap::after {
+	clear: both;
+	content: "";
+	display: table;
+}
+
+.woocommerce div.product form.cart div.quantity, form.cart div.quantity, div.quantity {
+	margin: 0 10px 10px 0;
+}
+
+.woocommerce div.product form.cart .button {
+	vertical-align: middle;
+}
+
+.woocommerce div.product form.cart table.variations, .single-product .summary .variations_form table.variations {
 	width: 100% !important;
+	margin: 0 0 30px !important;
+	background: #ffffff !important;
 	border: 0;
 	border-collapse: collapse !important;
-	margin: 0 0 30px 0 !important;
 }
 
-.single-product .summary .variations_form table.variations tbody,
-.single-product .summary .variations_form table.variations tr {
+.woocommerce div.product form.cart table.variations tbody, .woocommerce div.product form.cart table.variations tr, .single-product .summary .variations_form table.variations tbody, .single-product .summary .variations_form table.variations tr {
 	display: block !important;
 	width: 100% !important;
 }
 
-.single-product .summary .variations_form table.variations th.label,
-.single-product .summary .variations_form table.variations td.value {
+.woocommerce div.product form.cart table.variations th.label, .woocommerce div.product form.cart table.variations td.value, .single-product .summary .variations_form table.variations th.label, .single-product .summary .variations_form table.variations td.value {
 	display: block !important;
+	clear: both !important;
 	float: none !important;
 	width: 100% !important;
+	margin: 0 !important;
 	padding: 0 !important;
+	background: #ffffff !important;
 	border: 0 !important;
-	clear: both !important;
+	line-height: 1.5 !important;
 }
 
-.single-product .summary .variations_form table.variations th.label label {
+.woocommerce div.product form.cart table.variations th.label label, .single-product .summary .variations_form table.variations th.label label {
 	display: block;
-	margin: 0 0 6px 0;
-	font-weight: 500;
+	margin: 0 0 6px;
+	color: <?php echo $default_text_color; ?>;
+	font-weight: 600;
 }
 
-.single-product .summary .variations_form table.variations td.value select {
+.woocommerce div.product form.cart table.variations td.value, .single-product .summary .variations_form table.variations td.value {
+	padding-bottom: 16px !important;
+}
+
+.woocommerce div.product form.cart table.variations td.value select, .single-product .summary .variations_form table.variations td.value select {
 	display: block !important;
+	box-sizing: border-box !important;
 	width: 100% !important;
+	max-width: 100% !important;
 	height: 44px;
 	padding: 8px 12px;
-	border: 1px solid #cfcfcf;
-	border-radius: 4px;
-	background: #fff;
+	background: #ffffff !important;
+	border: 1px solid #cfcfcf !important;
+	border-radius: 0;
+	color: <?php echo $default_text_color; ?> !important;
 	line-height: 1.2;
 }
 
-.single-product .summary .variations_form .reset_variations {
-	display: inline-block;
-	margin-top: 6px;
-	font-size: 13px;
-	color: <?php echo $default_text_color; ?>;
-}
-
-/* normalize variation table appearance (white + compact) */
-.single-product .summary .variations_form table.variations tr,
-.single-product .summary .variations_form table.variations th,
-.single-product .summary .variations_form table.variations td {
+.woocommerce div.product form.cart table.variations td.value select:focus, .woocommerce div.product form.cart table.variations td.value select:active, .single-product .summary .variations_form table.variations td.value select:focus, .single-product .summary .variations_form table.variations td.value select:active {
 	background: #ffffff !important;
-	margin: 0 !important;
-	padding: 0 !important;
-	line-height: 1.3 !important;
-	min-height: 0 !important;
+	border-color: <?php echo $default_link_color; ?> !important;
+	box-shadow: 0 0 0 2px rgba(0,0,0,0.05) inset !important;
+	color: <?php echo $default_text_color; ?> !important;
 }
 
-/* don't reserve space when the "clear" link is hidden */
-.single-product .summary .variations_form .reset_variations {
+.woocommerce div.product form.cart .reset_variations, .single-product .summary .variations_form .reset_variations {
 	display: inline-block !important;
-	margin-top: 4px !important;
+	margin-top: 6px !important;
+	color: <?php echo $default_link_color; ?>;
+	font-size: 13px;
+	line-height: 1.5;
 }
 
-.single-product .summary .variations_form .reset_variations[style*="visibility: hidden"],
-.single-product .summary .variations_form .reset_variations[aria-hidden="true"] {
+.woocommerce div.product form.cart .reset_variations:hover, .single-product .summary .variations_form .reset_variations:hover {
+	color: <?php echo $default_hover_color; ?>;
+}
+
+.woocommerce div.product form.cart .reset_variations[style*="visibility: hidden"], .woocommerce div.product form.cart .reset_variations[aria-hidden="true"], .single-product .summary .variations_form .reset_variations[style*="visibility: hidden"], .single-product .summary .variations_form .reset_variations[aria-hidden="true"] {
 	display: none !important;
 	visibility: hidden !important;
 }
 
-/* flex layout for add to cart form */
-form.cart {
-	display: flex !important;
-	align-items: stretch !important;
+.woocommerce div.product form.cart .single_variation, .woocommerce div.product form.cart .woocommerce-variation, div.single_variation_wrap {
+	clear: both;
+	margin: 0 0 20px;
 }
 
-/* mobile layout (stack quantity and button vertically) */
-@media screen and (max-width: 1199px) {
-	form.cart {
-		flex-direction: column !important;
-	}
-
-	div.quantity {
-		margin-bottom: 15px !important;
-		margin-right: 0 !important;
-		width: 100%;
-	}
-
-	form.cart button.single_add_to_cart_button {
-		width: 100%;
-	}
+.woocommerce div.product form.cart .woocommerce-variation-price, .woocommerce div.product form.cart .woocommerce-variation-availability, .woocommerce div.product form.cart .woocommerce-variation-description {
+	margin: 0 0 15px;
 }
 
-/* desktop layout (display quantity and button inline) */
-@media screen and (min-width: 1200px) {
-	form.cart {
-		flex-direction: row !important;
-	}
-
-	div.quantity {
-		margin-bottom: 0 !important;
-		margin-right: 10px !important;
-		width: auto;
-	}
-
-	form.cart button.single_add_to_cart_button {
-		width: auto;
-	}
+.woocommerce div.product form.cart .woocommerce-variation-description p:last-child {
+	margin-bottom: 0;
 }
 
-/* flex layout for variation details */
-div.single_variation_wrap {
-	display: flex;
+.woocommerce div.product form.cart .variations_button {
+	clear: both;
 }
 
-/* style for add to cart button element */
-form.cart button.single_add_to_cart_button {
-	font-size: 16px !important;
-	font-weight: 700 !important;
-	line-height: 40px !important;
-	padding: 0 20px !important;
-	vertical-align: middle !important;
-	height: 40px !important;
-	border: none !important;
-	box-shadow: none !important;
-	cursor: pointer !important;
+.woocommerce div.product form.cart.grouped_form {
+	display: block !important;
 }
 
-/* reset native number input styles */
-input.qty {
-	appearance: textfield;
-	-moz-appearance: textfield;
-	-webkit-appearance: none;
+.woocommerce div.product form.cart.grouped_form table.group_table {
+	width: 100%;
+	margin: 0 0 30px;
+	background: #ffffff;
+	border: 1px solid #e0e0e0;
+	border-collapse: collapse;
 }
 
-/* hide webkit spin buttons */
-input.qty::-webkit-outer-spin-button,
-input.qty::-webkit-inner-spin-button {
-	-webkit-appearance: none !important;
-	margin: 0 !important;
+.woocommerce div.product form.cart.grouped_form table.group_table td {
+	padding: 12px 10px;
+	border: 1px solid #e0e0e0;
+	vertical-align: middle;
 }
 
-/* hide firefox spin buttons */
-input.qty[type="number"] {
-	-moz-appearance: textfield !important;
+.woocommerce div.product form.cart.grouped_form table.group_table td.woocommerce-grouped-product-list-item__label label {
+	font-weight: 600;
 }
 
-/* style for quantity input (unclickable number) */
+.woocommerce div.product form.cart.grouped_form table.group_table td.woocommerce-grouped-product-list-item__price {
+	color: <?php echo $woocommerce_price_text_color; ?>;
+	font-weight: 600;
+}
+
 input.qty {
 	width: 60px !important;
+	height: 40px !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	background: #f2f2f2 !important;
+	border: 0 !important;
+	box-shadow: none !important;
+	color: <?php echo $default_text_color; ?> !important;
+	cursor: default !important;
 	font-size: 16px !important;
 	font-weight: 400 !important;
 	line-height: 40px !important;
 	text-align: center !important;
 	vertical-align: middle !important;
-	height: 40px !important;
-	margin: 0 !important;
-	padding: 0 !important;
-	border: none !important;
-	box-shadow: none !important;
-	cursor: default !important;
-	background: #f2f2f2 !important;
-	color: <?php echo $default_text_color; ?> !important;
+	appearance: textfield;
+	-moz-appearance: textfield;
+	-webkit-appearance: none;
 }
 
-/* subtle buttons group container (flatter) */
+input.qty::-webkit-outer-spin-button, input.qty::-webkit-inner-spin-button {
+	margin: 0 !important;
+	-webkit-appearance: none !important;
+}
+
+input.qty[type="number"] {
+	-moz-appearance: textfield !important;
+}
+
 .buttons-added {
 	display: inline-flex !important;
 	align-items: center !important;
-	overflow: hidden !important;
 	padding: 0 !important;
-	border-radius: 4px !important;
-	border: 1px solid #d9d9d9 !important;
-	box-shadow: none !important;
 	background: #f7f7f7 !important;
+	border: 1px solid #d9d9d9 !important;
+	border-radius: 0 !important;
+	box-shadow: none !important;
+	overflow: hidden !important;
 }
 
-/* subtle + / - buttons (no lift, low-contrast) */
 .quantity-button {
-	width: 40px !important;
-	height: 40px !important;
-	font-size: 22px !important;
-	color: <?php echo $default_text_color; ?> !important;
-	border: 0 !important;
-	margin: 0 !important;
-	padding: 0 !important;
-	cursor: pointer !important;
-	user-select: none !important;
-	line-height: 40px !important;
 	display: flex !important;
 	align-items: center !important;
 	justify-content: center !important;
+	width: 40px !important;
+	height: 40px !important;
+	margin: 0 !important;
+	padding: 0 !important;
 	background: #eaeaea !important;
-	box-shadow: inset 0 1px 0 rgba(255,255,255,0.45),
-	            inset 0 -1px 0 rgba(0,0,0,0.06) !important;
+	border: 0 !important;
+	box-shadow: inset 0 1px 0 rgba(255,255,255,0.45), inset 0 -1px 0 rgba(0,0,0,0.06) !important;
+	color: <?php echo $default_text_color; ?> !important;
+	cursor: pointer !important;
+	font-size: 22px !important;
+	line-height: 40px !important;
 	transition: background 0.15s ease, box-shadow 0.15s ease !important;
+	user-select: none !important;
 }
 
-/* hover: tiny darken, no translate */
 .quantity-button:hover {
 	background: #e3e3e3 !important;
-	box-shadow: inset 0 1px 0 rgba(255,255,255,0.4),
-	            inset 0 -1px 0 rgba(0,0,0,0.08) !important;
+	box-shadow: inset 0 1px 0 rgba(255,255,255,0.4), inset 0 -1px 0 rgba(0,0,0,0.08) !important;
 }
 
-/* active: slightly flatter/darker */
 .quantity-button:active {
 	background: #dddddd !important;
 	box-shadow: inset 0 1px 2px rgba(0,0,0,0.12) !important;
 }
 
-/* stack single product purchase controls */
 .single-product form.cart {
+	display: flex !important;
 	flex-direction: column !important;
 	align-items: stretch !important;
 }
 
 .single-product form.cart div.quantity {
 	width: 100% !important;
-	margin: 0 0 15px 0 !important;
+	margin: 0 0 15px !important;
 }
 
 .single-product form.cart div.quantity.buttons-added {
@@ -290,44 +287,30 @@ input.qty {
 }
 
 .single-product form.cart div.quantity.buttons-added input.qty {
+	flex: 1 1 auto !important;
 	width: auto !important;
 	max-width: none !important;
-	flex: 1 1 auto !important;
 }
 
 .single-product form.cart button.single_add_to_cart_button {
 	width: 100% !important;
+	height: 40px !important;
+	padding: 0 20px !important;
+	border: 0 !important;
+	box-shadow: none !important;
+	font-size: 16px !important;
+	font-weight: 700 !important;
+	line-height: 40px !important;
+	vertical-align: middle !important;
 }
 
-/* enforce stacked layout when woo uses both classes on one form */
 .single-product .summary form.variations_form.cart {
 	display: block !important;
 	flex-direction: column !important;
 	align-items: stretch !important;
 }
 
-/* keep variation select from growing on focus and lock colors */
-.single-product .summary .variations_form table.variations td.value select {
-	box-sizing: border-box !important;
-	width: 100% !important;
-	max-width: 100% !important;
-	border-width: 1px !important;
-	border-color: #cfcfcf !important;
-	background: #ffffff !important;
-	color: <?php echo $default_text_color; ?> !important;
-}
-
-.single-product .summary .variations_form table.variations td.value select:focus,
-.single-product .summary .variations_form table.variations td.value select:active {
-	border-width: 1px !important;
-	border-color: <?php echo $default_link_color; ?> !important;
-	background: #ffffff !important;
-	color: <?php echo $default_text_color; ?> !important;
-	box-shadow: 0 0 0 2px rgba(0,0,0,0.05) inset !important;
-}
-
-/* hide screen reader text */
-.screen-reader-text {
+.woocommerce .screen-reader-text {
 	position: absolute;
 	width: 1px;
 	height: 1px;
@@ -337,4 +320,39 @@ input.qty {
 	overflow: hidden;
 	clip: rect(0, 0, 0, 0);
 	white-space: nowrap;
+}
+
+@media screen and (max-width: 1199px) {
+	.woocommerce div.product form.cart div.quantity, form.cart div.quantity, div.quantity {
+		width: 100%;
+		margin: 0 0 15px !important;
+	}
+
+	.woocommerce div.product form.cart .button, form.cart button.single_add_to_cart_button {
+		display: block;
+		width: 100%;
+	}
+
+	.woocommerce div.product form.cart.grouped_form table.group_table, .woocommerce div.product form.cart.grouped_form table.group_table tbody, .woocommerce div.product form.cart.grouped_form table.group_table tr, .woocommerce div.product form.cart.grouped_form table.group_table td {
+		display: block;
+		width: 100%;
+		box-sizing: border-box;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.woocommerce div.product form.cart:not(.variations_form):not(.grouped_form) {
+		display: flex !important;
+		align-items: stretch !important;
+		flex-direction: row !important;
+	}
+
+	.woocommerce div.product form.cart:not(.variations_form):not(.grouped_form) div.quantity {
+		width: auto;
+		margin: 0 10px 0 0 !important;
+	}
+
+	.woocommerce div.product form.cart:not(.variations_form):not(.grouped_form) button.single_add_to_cart_button {
+		width: auto;
+	}
 }
