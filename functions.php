@@ -120,6 +120,7 @@ require get_template_directory() . '/inc/woocommerce/woocommerce-wrappers.php';
 
 // bbpress
 require get_template_directory() . '/inc/bbpress/disable-reply-links.php';
+require get_template_directory() . '/inc/bbpress/disable-styles.php';
 require get_template_directory() . '/inc/bbpress/quick-tags.php';
 require get_template_directory() . '/inc/bbpress/search-results.php';
 
