@@ -583,6 +583,10 @@ div.bbp-breadcrumb a, div.bbp-topic-tags a, #bbp-topic-hot-tags a {
 	color: #ffffff !important;
 }
 
+#bbpress-forums textarea.bbp-the-content, #bbpress-forums textarea.wp-editor-area {
+	min-height: 180px;
+}
+
 #bbpress-forums div.bbp-submit-wrapper {
 	clear: both;
 	margin-top: 16px;
@@ -909,11 +913,6 @@ div.bbp-breadcrumb a, div.bbp-topic-tags a, #bbp-topic-hot-tags a {
 	#bbpress-forums div.bbp-submit-wrapper {
 		float: right;
 	}
-
-	#bbpress-forums textarea.bbp-the-content, #bbpress-forums textarea.wp-editor-area {
-		min-height: 180px;
-	}
-
 	#bbpress-forums #bbp-single-user-details {
 		float: left;
 		width: 150px;
