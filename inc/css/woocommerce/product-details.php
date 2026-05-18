@@ -414,6 +414,15 @@ section.related, section.upsells, .woocommerce section.related, .woocommerce sec
 }
 
 @media screen and (min-width: 1200px) {
+	.single-product .woocommerce-breadcrumb {
+		margin-bottom: 30px;
+	}
+
+	.single-product .woocommerce div.product {
+		max-width: 960px;
+		margin: 0 auto;
+	}
+
 	.woocommerce div.product div.images {
 		float: left;
 		width: 48%;
@@ -422,6 +431,37 @@ section.related, section.upsells, .woocommerce section.related, .woocommerce sec
 	.woocommerce div.product div.summary {
 		float: right;
 		width: 48%;
+	}
+
+	.single-product .woocommerce div.product div.images {
+		width: 46%;
+		max-width: 440px;
+	}
+
+	.single-product .woocommerce div.product div.summary {
+		width: 46%;
+		max-width: 440px;
+	}
+
+	.single-product .woocommerce div.product div.images .woocommerce-product-gallery__image img {
+		max-height: 520px;
+		object-fit: contain;
+	}
+
+	.single-product .woocommerce div.product .woocommerce-tabs {
+		max-width: 768px;
+		margin: 40px auto;
+	}
+
+	.single-product .woocommerce section.related, .single-product .woocommerce section.upsells {
+		max-width: 960px;
+		margin-right: auto !important;
+		margin-left: auto !important;
+	}
+
+	.single-product .woocommerce ul.products li.product a img {
+		max-height: 280px;
+		object-fit: contain;
 	}
 
 	.product_meta, .woocommerce div.product .product_meta {
