@@ -15,8 +15,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	list-style: none;
 }
 
-.woocommerce ul.products::after {
-	display: none;
+.woocommerce ul.products::before, .woocommerce ul.products::after {
+	display: none !important;
+	content: none !important;
 }
 
 .woocommerce ul.products li.product {
