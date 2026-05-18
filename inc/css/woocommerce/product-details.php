@@ -207,13 +207,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 .product_meta, .woocommerce div.product .product_meta {
 	clear: both;
 	display: block;
-	font-size: 14px;
-	line-height: 2;
+	padding: 16px 0 0;
+	border-top: 1px solid #e0e0e0;
 	color: <?php echo $breadcrumbs_text_color; ?>;
+	font-size: 13px;
+	line-height: 1.8;
 }
 
 .woocommerce div.product .product_meta a {
 	color: <?php echo $breadcrumbs_link_color; ?>;
+	font-weight: 600;
+	text-decoration: none;
+}
+
+.woocommerce div.product .product_meta a:hover {
+	color: <?php echo $default_hover_color; ?>;
+	text-decoration: underline;
 }
 
 .sku_wrapper, .posted_in, .tagged_as {
@@ -222,14 +231,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 .woocommerce div.product .woocommerce-tabs {
 	clear: both;
-	margin: 30px 0;
+	margin: 40px 0;
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs {
 	clear: both;
-	margin: 0 0 20px;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0;
+	margin: 0 0 24px;
 	padding: 0;
 	border: 0;
+	border-bottom: 1px solid #e0e0e0;
 	list-style: none;
 }
 
@@ -240,8 +253,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li {
-	display: inline-block;
-	margin: 0 10px 10px 0;
+	display: block;
+	margin: 0 24px -1px 0;
 	padding: 0;
 	background: transparent;
 	border: 0;
@@ -249,17 +262,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li a {
-	display: inline-block;
-	padding: 10px 15px;
-	background: <?php echo $search_bar_background_color; ?>;
-	color: <?php echo $default_link_color; ?>;
-	font-weight: 600;
+	display: block;
+	padding: 0 0 12px;
+	background: transparent;
+	border-bottom: 2px solid transparent;
+	color: <?php echo $breadcrumbs_text_color; ?>;
+	font-size: 14px;
+	font-weight: 700;
 	line-height: 1.5;
 	text-decoration: none;
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li.active a, .woocommerce div.product .woocommerce-tabs ul.tabs li a:hover {
-	color: <?php echo $default_hover_color; ?>;
+	border-bottom-color: <?php echo $default_link_color; ?>;
+	color: <?php echo $default_link_color; ?>;
 }
 
 .woocommerce div.product .woocommerce-tabs .panel {
@@ -270,6 +286,35 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 .woocommerce div.product .woocommerce-tabs .panel h2:first-child {
 	margin-top: 0;
+}
+
+.woocommerce div.product .woocommerce-tabs .panel p:last-child {
+	margin-bottom: 0;
+}
+
+.woocommerce div.product .woocommerce-tabs table.shop_attributes, .woocommerce div.product .woocommerce-tabs table.woocommerce-product-attributes {
+	margin: 0 0 30px;
+	border: 1px solid #e0e0e0;
+	border-collapse: collapse;
+}
+
+.woocommerce div.product .woocommerce-tabs table.shop_attributes th, .woocommerce div.product .woocommerce-tabs table.shop_attributes td, .woocommerce div.product .woocommerce-tabs table.woocommerce-product-attributes th, .woocommerce div.product .woocommerce-tabs table.woocommerce-product-attributes td {
+	padding: 12px 15px;
+	background: #ffffff;
+	border: 1px solid #e0e0e0;
+	font-style: normal;
+	line-height: 1.5;
+	text-align: left;
+	vertical-align: top;
+}
+
+.woocommerce div.product .woocommerce-tabs table.shop_attributes th, .woocommerce div.product .woocommerce-tabs table.woocommerce-product-attributes th {
+	width: 35%;
+	font-weight: 700;
+}
+
+.woocommerce div.product .woocommerce-tabs table.shop_attributes p, .woocommerce div.product .woocommerce-tabs table.woocommerce-product-attributes p {
+	margin: 0;
 }
 
 .woocommerce .woocommerce-product-rating {
@@ -314,8 +359,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 .woocommerce .woocommerce-review-link {
 	display: inline-block;
-	margin-left: 10px;
-	font-size: 12px;
+	margin-left: 10px;	font-size: 12px;
 	line-height: 1.5;
 }
 
@@ -402,6 +446,27 @@ section.related, section.upsells, .woocommerce section.related, .woocommerce sec
 
 	.product_meta, .woocommerce div.product .product_meta {
 		margin: 20px 0;
+	}
+
+	.woocommerce div.product .woocommerce-tabs ul.tabs {
+		display: block;
+		margin-bottom: 20px;
+		border-bottom: 0;
+	}
+
+	.woocommerce div.product .woocommerce-tabs ul.tabs li {
+		margin: 0 0 8px;
+	}
+
+	.woocommerce div.product .woocommerce-tabs ul.tabs li a {
+		padding: 10px 12px;
+		background: <?php echo $search_bar_background_color; ?>;
+		border-bottom: 0;
+	}
+
+	.woocommerce div.product .woocommerce-tabs ul.tabs li.active a, .woocommerce div.product .woocommerce-tabs ul.tabs li a:hover {
+		background: #ffffff;
+		box-shadow: inset 0 0 0 1px <?php echo $default_link_color; ?>;
 	}
 
 	.woocommerce div.product form.cart div.quantity, .woocommerce div.product form.cart .button {
