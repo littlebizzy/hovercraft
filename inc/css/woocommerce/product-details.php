@@ -414,11 +414,11 @@ section.related, section.upsells, .woocommerce section.related, .woocommerce sec
 }
 
 @media screen and (min-width: 1200px) {
-	.single-product .woocommerce-breadcrumb {
+	.single-product .woocommerce-breadcrumb, body.single-product.woocommerce .woocommerce-breadcrumb {
 		margin-bottom: 30px;
 	}
 
-	.single-product .woocommerce div.product {
+	.single-product div.product, body.single-product.woocommerce div.product {
 		max-width: 960px;
 		margin: 0 auto;
 	}
@@ -433,33 +433,33 @@ section.related, section.upsells, .woocommerce section.related, .woocommerce sec
 		width: 48%;
 	}
 
-	.single-product .woocommerce div.product div.images {
+	.single-product div.product div.images, body.single-product.woocommerce div.product div.images {
 		width: 46%;
 		max-width: 440px;
 	}
 
-	.single-product .woocommerce div.product div.summary {
+	.single-product div.product div.summary, body.single-product.woocommerce div.product div.summary {
 		width: 46%;
 		max-width: 440px;
 	}
 
-	.single-product .woocommerce div.product div.images .woocommerce-product-gallery__image img {
+	.single-product div.product div.images .woocommerce-product-gallery__image img, body.single-product.woocommerce div.product div.images .woocommerce-product-gallery__image img {
 		max-height: 520px;
 		object-fit: contain;
 	}
 
-	.single-product .woocommerce div.product .woocommerce-tabs {
+	.single-product div.product .woocommerce-tabs, body.single-product.woocommerce div.product .woocommerce-tabs {
 		max-width: 768px;
 		margin: 40px auto;
 	}
 
-	.single-product .woocommerce section.related, .single-product .woocommerce section.upsells {
+	.single-product section.related, .single-product section.upsells, body.single-product.woocommerce section.related, body.single-product.woocommerce section.upsells {
 		max-width: 960px;
 		margin-right: auto !important;
 		margin-left: auto !important;
 	}
 
-	.single-product .woocommerce ul.products li.product a img {
+	.single-product ul.products li.product a img, body.single-product.woocommerce ul.products li.product a img {
 		max-height: 280px;
 		object-fit: contain;
 	}
