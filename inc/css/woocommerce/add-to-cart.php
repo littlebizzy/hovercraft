@@ -194,17 +194,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 input.qty {
 	width: 60px !important;
-	height: 40px !important;
+	height: 44px !important;
 	margin: 0 !important;
 	padding: 0 !important;
-	background: #f7f7f7 !important;
+	background: #ffffff !important;
 	border: 1px solid #d9d9d9 !important;
-	border-radius: 4px !important;
+	border-radius: 0 !important;
 	box-shadow: none !important;
 	color: <?php echo $default_text_color; ?> !important;
 	font-size: 16px !important;
 	font-weight: 400 !important;
-	line-height: 40px !important;
+	line-height: 44px !important;
 	text-align: center !important;
 	vertical-align: middle !important;
 	appearance: textfield;
@@ -222,36 +222,36 @@ input.qty[type="number"] {
 }
 
 .quantity select.qty, .hovercraft-quantity-select {
-	display: inline-block !important;
+	display: block !important;
 	box-sizing: border-box !important;
 	width: 100% !important;
 	max-width: 100% !important;
-	height: 40px !important;
+	height: 44px !important;
 	margin: 0 !important;
-	padding: 0 12px !important;
-	background: #f7f7f7 !important;
+	padding: 0 14px !important;
+	background: #ffffff !important;
 	border: 1px solid #d9d9d9 !important;
-	border-radius: 4px !important;
-	box-shadow: inset 0 1px 0 rgba(255,255,255,0.45) !important;
+	border-radius: 0 !important;
+	box-shadow: none !important;
 	color: <?php echo $default_text_color; ?> !important;
 	cursor: pointer !important;
 	font-size: 16px !important;
 	font-weight: 400 !important;
-	line-height: 40px !important;
+	line-height: 44px !important;
 	text-align: center !important;
 	vertical-align: middle !important;
 	appearance: auto !important;
 }
 
 .quantity select.qty:hover, .hovercraft-quantity-select:hover {
-	background: #f2f2f2 !important;
-	border-color: #cfcfcf !important;
+	background: #ffffff !important;
+	border-color: #bdbdbd !important;
 }
 
 .quantity select.qty:focus, .quantity select.qty:active, .hovercraft-quantity-select:focus, .hovercraft-quantity-select:active {
 	background: #ffffff !important;
 	border-color: <?php echo $default_link_color; ?> !important;
-	box-shadow: 0 0 0 2px rgba(0,0,0,0.05) !important;
+	box-shadow: inset 0 0 0 1px <?php echo $default_link_color; ?> !important;
 	color: <?php echo $default_text_color; ?> !important;
 	outline: 0 !important;
 }
@@ -264,18 +264,18 @@ input.qty[type="number"] {
 
 .single-product form.cart div.quantity {
 	width: 100% !important;
-	margin: 0 0 15px !important;
+	margin: 0 0 12px !important;
 }
 
 .single-product form.cart button.single_add_to_cart_button {
 	width: 100% !important;
-	height: 40px !important;
+	height: 44px !important;
 	padding: 0 20px !important;
 	border: 0 !important;
 	box-shadow: none !important;
 	font-size: 16px !important;
 	font-weight: 700 !important;
-	line-height: 40px !important;
+	line-height: 44px !important;
 	vertical-align: middle !important;
 }
 
