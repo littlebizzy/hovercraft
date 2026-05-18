@@ -7,7 +7,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 // styles for woocommerce add to cart
 ?>
 
-.woocommerce .button.add_to_cart_button, .woocommerce a.add_to_cart_button, .woocommerce button.single_add_to_cart_button, .woocommerce input.single_add_to_cart_button, .add_to_cart_button, .single_add_to_cart_button {
+.add_to_cart_button, .single_add_to_cart_button, .woocommerce .button.add_to_cart_button, .woocommerce a.add_to_cart_button, .woocommerce button.single_add_to_cart_button, .woocommerce input.single_add_to_cart_button {
 	display: inline-block;
 	padding: 10px 20px;
 	border: 0;
@@ -21,22 +21,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 	text-decoration: none;
 }
 
-.woocommerce button.single_add_to_cart_button, .woocommerce input.single_add_to_cart_button, .single_add_to_cart_button {
+.single_add_to_cart_button, .woocommerce button.single_add_to_cart_button, .woocommerce input.single_add_to_cart_button {
 	background: <?php echo $default_link_color; ?> !important;
 	color: #ffffff !important;
 }
 
-.woocommerce button.single_add_to_cart_button:hover, .woocommerce button.single_add_to_cart_button:focus, .woocommerce button.single_add_to_cart_button:active, .woocommerce input.single_add_to_cart_button:hover, .woocommerce input.single_add_to_cart_button:focus, .woocommerce input.single_add_to_cart_button:active, .single_add_to_cart_button:hover, .single_add_to_cart_button:focus, .single_add_to_cart_button:active {
+.single_add_to_cart_button:hover, .single_add_to_cart_button:focus, .single_add_to_cart_button:active, .woocommerce button.single_add_to_cart_button:hover, .woocommerce button.single_add_to_cart_button:focus, .woocommerce button.single_add_to_cart_button:active, .woocommerce input.single_add_to_cart_button:hover, .woocommerce input.single_add_to_cart_button:focus, .woocommerce input.single_add_to_cart_button:active {
 	background: <?php echo $default_hover_color; ?> !important;
 	color: #ffffff !important;
 }
 
-.woocommerce .button.add_to_cart_button, .woocommerce a.add_to_cart_button, .add_to_cart_button {
+.add_to_cart_button, .woocommerce .button.add_to_cart_button, .woocommerce a.add_to_cart_button {
 	background: #e0e0e0 !important;
 	color: <?php echo $default_text_color; ?> !important;
 }
 
-.woocommerce .button.add_to_cart_button:hover, .woocommerce .button.add_to_cart_button:focus, .woocommerce .button.add_to_cart_button:active, .woocommerce a.add_to_cart_button:hover, .woocommerce a.add_to_cart_button:focus, .woocommerce a.add_to_cart_button:active, .add_to_cart_button:hover, .add_to_cart_button:focus, .add_to_cart_button:active {
+.add_to_cart_button:hover, .add_to_cart_button:focus, .add_to_cart_button:active, .woocommerce .button.add_to_cart_button:hover, .woocommerce .button.add_to_cart_button:focus, .woocommerce .button.add_to_cart_button:active, .woocommerce a.add_to_cart_button:hover, .woocommerce a.add_to_cart_button:focus, .woocommerce a.add_to_cart_button:active {
 	background: #bdbdbd !important;
 	color: <?php echo $default_text_color; ?> !important;
 }
@@ -68,10 +68,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	clear: both;
 	content: "";
 	display: table;
-}
-
-.woocommerce div.product form.cart div.quantity, form.cart div.quantity, div.quantity {
-	margin: 0 10px 10px 0;
 }
 
 .woocommerce div.product form.cart .button {
@@ -323,36 +319,9 @@ input.qty[type="number"] {
 }
 
 @media screen and (max-width: 1199px) {
-	.woocommerce div.product form.cart div.quantity, form.cart div.quantity, div.quantity {
-		width: 100%;
-		margin: 0 0 15px !important;
-	}
-
-	.woocommerce div.product form.cart .button, form.cart button.single_add_to_cart_button {
-		display: block;
-		width: 100%;
-	}
-
 	.woocommerce div.product form.cart.grouped_form table.group_table, .woocommerce div.product form.cart.grouped_form table.group_table tbody, .woocommerce div.product form.cart.grouped_form table.group_table tr, .woocommerce div.product form.cart.grouped_form table.group_table td {
 		display: block;
 		width: 100%;
 		box-sizing: border-box;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-	.woocommerce div.product form.cart:not(.variations_form):not(.grouped_form) {
-		display: flex !important;
-		align-items: stretch !important;
-		flex-direction: row !important;
-	}
-
-	.woocommerce div.product form.cart:not(.variations_form):not(.grouped_form) div.quantity {
-		width: auto;
-		margin: 0 10px 0 0 !important;
-	}
-
-	.woocommerce div.product form.cart:not(.variations_form):not(.grouped_form) button.single_add_to_cart_button {
-		width: auto;
 	}
 }
