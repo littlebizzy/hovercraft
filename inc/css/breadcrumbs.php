@@ -10,36 +10,45 @@ if ( ! defined( 'ABSPATH' ) ) {
 /* breadcrumbs */
 
 .breadcrumbs {
+	clear: both;
 	width: 100%;
-	font-size: 14px;
+	padding: 0;
 	color: <?php echo $breadcrumbs_text_color; ?>;
+	font-size: 14px;
 	white-space: normal;
 }
 
 @media screen and (max-width: 1199px) {
 	.breadcrumbs {
-		margin-bottom: 20px;
+		margin: 0 0 20px;
 		line-height: 18px !important;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 	.breadcrumbs {
-		margin-bottom: 30px;
+		margin: 0 0 30px;
 		line-height: 20px !important;
 	}
 }
 
 .breadcrumbs ul {
 	display: inline;
+	margin: 0 !important;
+	padding: 0 !important;
+	list-style: none;
 	list-style-position: unset;
-	margin-left: 0 !important;
 }
 
 .breadcrumbs ul li {
 	display: inline;
-	word-break: break-all;
-	margin-right: 5px;
+	margin: 0 5px 0 0;
+	padding: 0;
+	word-break: break-word;
+}
+
+.breadcrumbs ul li:last-child {
+	margin-right: 0;
 }
 
 .breadcrumbs i {
@@ -49,4 +58,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 .breadcrumbs a {
 	color: <?php echo $breadcrumbs_link_color; ?>;
+}
+
+.breadcrumbs a:hover {
+	color: <?php echo $default_hover_color; ?>;
 }
