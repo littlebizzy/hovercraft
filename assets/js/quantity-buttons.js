@@ -1,1 +1,0 @@
-// woocommerce quantity buttons deprecated
