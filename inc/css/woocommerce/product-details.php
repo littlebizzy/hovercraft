@@ -526,25 +526,16 @@ section.related, section.upsells, .woocommerce section.related, .woocommerce sec
 		margin-left: auto !important;
 	}
 
-	.single-product section.related ul.products li.product, body.single-product.woocommerce section.related ul.products li.product {
-		width: 22%;
-		margin-right: 4% !important;
+	.single-product section.related ul.products, .single-product section.upsells ul.products, body.single-product.woocommerce section.related ul.products, body.single-product.woocommerce section.upsells ul.products {
+		grid-template-columns: repeat(4, minmax(0, 1fr));
+		gap: 30px 4%;
 	}
 
-	.single-product section.related ul.products li.product:nth-child(3n), body.single-product.woocommerce section.related ul.products li.product:nth-child(3n) {
-		margin-right: 4% !important;
-	}
-
-	.single-product section.related ul.products li.product:nth-child(3n+1), body.single-product.woocommerce section.related ul.products li.product:nth-child(3n+1) {
-		clear: none;
-	}
-
-	.single-product section.related ul.products li.product:nth-child(4n), body.single-product.woocommerce section.related ul.products li.product:nth-child(4n) {
-		margin-right: 0 !important;
-	}
-
-	.single-product section.related ul.products li.product:nth-child(4n+1), body.single-product.woocommerce section.related ul.products li.product:nth-child(4n+1) {
-		clear: both;
+	.single-product section.related ul.products li.product, .single-product section.upsells ul.products li.product, body.single-product.woocommerce section.related ul.products li.product, body.single-product.woocommerce section.upsells ul.products li.product {
+		clear: none !important;
+		float: none !important;
+		width: 100% !important;
+		margin: 0 !important;
 	}
 
 	.single-product ul.products li.product a img, body.single-product.woocommerce ul.products li.product a img {
