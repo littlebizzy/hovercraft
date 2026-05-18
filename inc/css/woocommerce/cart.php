@@ -326,8 +326,9 @@ form.woocommerce-cart-form button[name="update_cart"]:disabled, form.woocommerce
 	padding: 0 !important;
 }
 
-.woocommerce-cart .cross-sells ul.products::after {
-	display: none;
+.woocommerce-cart .cross-sells ul.products::before, .woocommerce-cart .cross-sells ul.products::after {
+	display: none !important;
+	content: none !important;
 }
 
 .woocommerce-cart .cross-sells ul.products li.product {
