@@ -338,8 +338,8 @@ form.woocommerce-cart-form button[name="update_cart"]:disabled, form.woocommerce
 }
 
 .woocommerce-cart .cross-sells ul.products li.product a img {
-	max-height: 240px;
-	object-fit: contain;
+	object-fit: contain !important;
+	object-position: center center !important;
 }
 
 .woocommerce-cart .cart-empty {
@@ -462,5 +462,10 @@ form.woocommerce-cart-form button[name="update_cart"]:disabled, form.woocommerce
 
 	.woocommerce-cart .cross-sells ul.products {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.woocommerce-cart .cross-sells ul.products li.product a img {
+		height: 220px !important;
+		max-height: 220px !important;
 	}
 }
