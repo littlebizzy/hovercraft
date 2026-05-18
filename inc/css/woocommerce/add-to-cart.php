@@ -197,11 +197,11 @@ input.qty {
 	height: 40px !important;
 	margin: 0 !important;
 	padding: 0 !important;
-	background: #f2f2f2 !important;
-	border: 0 !important;
+	background: #f7f7f7 !important;
+	border: 1px solid #d9d9d9 !important;
+	border-radius: 4px !important;
 	box-shadow: none !important;
 	color: <?php echo $default_text_color; ?> !important;
-	cursor: default !important;
 	font-size: 16px !important;
 	font-weight: 400 !important;
 	line-height: 40px !important;
@@ -221,44 +221,39 @@ input.qty[type="number"] {
 	-moz-appearance: textfield !important;
 }
 
-.buttons-added {
-	display: inline-flex !important;
-	align-items: center !important;
-	padding: 0 !important;
-	background: #f7f7f7 !important;
-	border: 1px solid #d9d9d9 !important;
-	border-radius: 0 !important;
-	box-shadow: none !important;
-	overflow: hidden !important;
-}
-
-.quantity-button {
-	display: flex !important;
-	align-items: center !important;
-	justify-content: center !important;
-	width: 40px !important;
+.quantity select.qty, .hovercraft-quantity-select {
+	display: inline-block !important;
+	box-sizing: border-box !important;
+	width: 100% !important;
+	max-width: 100% !important;
 	height: 40px !important;
 	margin: 0 !important;
-	padding: 0 !important;
-	background: #eaeaea !important;
-	border: 0 !important;
-	box-shadow: inset 0 1px 0 rgba(255,255,255,0.45), inset 0 -1px 0 rgba(0,0,0,0.06) !important;
+	padding: 0 12px !important;
+	background: #f7f7f7 !important;
+	border: 1px solid #d9d9d9 !important;
+	border-radius: 4px !important;
+	box-shadow: inset 0 1px 0 rgba(255,255,255,0.45) !important;
 	color: <?php echo $default_text_color; ?> !important;
 	cursor: pointer !important;
-	font-size: 22px !important;
+	font-size: 16px !important;
+	font-weight: 400 !important;
 	line-height: 40px !important;
-	transition: background 0.15s ease, box-shadow 0.15s ease !important;
-	user-select: none !important;
+	text-align: center !important;
+	vertical-align: middle !important;
+	appearance: auto !important;
 }
 
-.quantity-button:hover {
-	background: #e3e3e3 !important;
-	box-shadow: inset 0 1px 0 rgba(255,255,255,0.4), inset 0 -1px 0 rgba(0,0,0,0.08) !important;
+.quantity select.qty:hover, .hovercraft-quantity-select:hover {
+	background: #f2f2f2 !important;
+	border-color: #cfcfcf !important;
 }
 
-.quantity-button:active {
-	background: #dddddd !important;
-	box-shadow: inset 0 1px 2px rgba(0,0,0,0.12) !important;
+.quantity select.qty:focus, .quantity select.qty:active, .hovercraft-quantity-select:focus, .hovercraft-quantity-select:active {
+	background: #ffffff !important;
+	border-color: <?php echo $default_link_color; ?> !important;
+	box-shadow: 0 0 0 2px rgba(0,0,0,0.05) !important;
+	color: <?php echo $default_text_color; ?> !important;
+	outline: 0 !important;
 }
 
 .single-product form.cart {
@@ -270,22 +265,6 @@ input.qty[type="number"] {
 .single-product form.cart div.quantity {
 	width: 100% !important;
 	margin: 0 0 15px !important;
-}
-
-.single-product form.cart div.quantity.buttons-added {
-	display: flex !important;
-	flex-direction: row !important;
-	align-items: stretch !important;
-}
-
-.single-product form.cart div.quantity.buttons-added button.quantity-button {
-	flex: 0 0 40px !important;
-}
-
-.single-product form.cart div.quantity.buttons-added input.qty {
-	flex: 1 1 auto !important;
-	width: auto !important;
-	max-width: none !important;
 }
 
 .single-product form.cart button.single_add_to_cart_button {
