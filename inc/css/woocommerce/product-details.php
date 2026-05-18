@@ -359,7 +359,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 .woocommerce .woocommerce-review-link {
 	display: inline-block;
-	margin-left: 10px;	font-size: 12px;
+	margin-left: 10px;
+	font-size: 12px;
 	line-height: 1.5;
 }
 
@@ -484,7 +485,7 @@ section.related, section.upsells, .woocommerce section.related, .woocommerce sec
 	}
 
 	.single-product div.product, body.single-product.woocommerce div.product {
-		max-width: 960px;
+		max-width: 1200px;
 		margin: 0 auto;
 	}
 
@@ -499,13 +500,14 @@ section.related, section.upsells, .woocommerce section.related, .woocommerce sec
 	}
 
 	.single-product div.product div.images, body.single-product.woocommerce div.product div.images {
-		width: 46%;
-		max-width: 440px;
+		width: 392px;
+		max-width: 392px;
+		margin-right: 40px;
 	}
 
 	.single-product div.product div.summary, body.single-product.woocommerce div.product div.summary {
-		width: 46%;
-		max-width: 440px;
+		width: 768px;
+		max-width: 768px;
 	}
 
 	.single-product div.product div.images .woocommerce-product-gallery__image img, body.single-product.woocommerce div.product div.images .woocommerce-product-gallery__image img {
@@ -514,12 +516,12 @@ section.related, section.upsells, .woocommerce section.related, .woocommerce sec
 	}
 
 	.single-product div.product .woocommerce-tabs, body.single-product.woocommerce div.product .woocommerce-tabs {
-		max-width: 960px;
+		max-width: 1200px;
 		margin: 40px auto;
 	}
 
 	.single-product section.related, .single-product section.upsells, body.single-product.woocommerce section.related, body.single-product.woocommerce section.upsells {
-		max-width: 960px;
+		max-width: 1200px;
 		margin-right: auto !important;
 		margin-left: auto !important;
 	}
