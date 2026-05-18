@@ -9,21 +9,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 .woocommerce ul.products {
 	clear: both;
+	display: grid;
 	margin: 0 !important;
 	padding: 30px 0 0 !important;
 	list-style: none;
 }
 
 .woocommerce ul.products::after {
-	clear: both;
-	content: "";
-	display: table;
+	display: none;
 }
 
 .woocommerce ul.products li.product {
 	position: relative;
-	float: left;
-	margin: 0 0 30px !important;
+	float: none !important;
+	clear: none !important;
+	width: 100% !important;
+	margin: 0 !important;
 	padding: 0;
 	list-style: none outside !important;
 	line-height: 1.5 !important;
@@ -136,10 +137,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 @media screen and (max-width: 1199px) {
-	.woocommerce ul.products li.product {
-		clear: both;
-		width: 100%;
-		margin-right: 0 !important;
+	.woocommerce ul.products {
+		grid-template-columns: 1fr;
+		gap: 30px;
 	}
 
 	.woocommerce .woocommerce-result-count, .woocommerce .woocommerce-ordering {
@@ -149,17 +149,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 @media screen and (min-width: 1200px) {
-	.woocommerce ul.products li.product {
-		width: 30.6667%;
-		margin-right: 4% !important;
-	}
-
-	.woocommerce ul.products li.product:nth-child(3n) {
-		margin-right: 0 !important;
-	}
-
-	.woocommerce ul.products li.product:nth-child(3n+1) {
-		clear: both;
+	.woocommerce ul.products {
+		grid-template-columns: repeat(3, minmax(0, 1fr));
+		gap: 30px 4%;
 	}
 
 	.woocommerce .woocommerce-result-count {
