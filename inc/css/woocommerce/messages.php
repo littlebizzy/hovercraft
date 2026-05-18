@@ -24,6 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	padding: 16px 18px !important;
 	background: <?php echo $search_bar_background_color; ?>;
 	border: 0 !important;
+	border-left: 4px solid <?php echo $default_link_color; ?> !important;
 	border-radius: 0;
 	box-shadow: none !important;
 	color: <?php echo $default_text_color; ?> !important;
@@ -52,20 +53,28 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 .woocommerce-error {
 	background: #fff5f5;
+	border-left-color: #ff1744 !important;
 }
 
-.woocommerce-error li {
+.woocommerce-message ul, .woocommerce-info ul, .woocommerce-error ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+.woocommerce-message li, .woocommerce-info li, .woocommerce-error li {
 	margin: 0 0 8px;
 	padding: 0;
 	list-style: none;
 }
 
-.woocommerce-error li:last-child {
+.woocommerce-message li:last-child, .woocommerce-info li:last-child, .woocommerce-error li:last-child {
 	margin-bottom: 0;
 }
 
 .woocommerce-message a, .woocommerce-info a, .woocommerce-error a {
 	color: <?php echo $default_link_color; ?>;
+	font-weight: 600;
 }
 
 .woocommerce-message a:hover, .woocommerce-info a:hover, .woocommerce-error a:hover {
@@ -74,20 +83,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 .woocommerce-message .button, .woocommerce-info .button, .woocommerce-error .button {
 	display: inline-block;
+	float: none !important;
 	margin: 0 0 0 auto !important;
 	padding: 8px 20px !important;
 	background: <?php echo $default_link_color; ?> !important;
 	border: 0 !important;
 	border-radius: 0;
+	box-shadow: none !important;
 	color: #ffffff !important;
 	font-size: 14px !important;
 	font-weight: 600;
 	line-height: 1.5 !important;
+	opacity: 1 !important;
 	order: 2;
 	text-decoration: none;
 }
 
-.woocommerce-message .button:hover, .woocommerce-info .button:hover, .woocommerce-error .button:hover {
+.woocommerce-message .button:hover, .woocommerce-message .button:focus, .woocommerce-info .button:hover, .woocommerce-info .button:focus, .woocommerce-error .button:hover, .woocommerce-error .button:focus {
 	background: <?php echo $default_hover_color; ?> !important;
 	color: #ffffff !important;
 }
@@ -103,6 +115,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 @media screen and (max-width: 1199px) {
 	.woocommerce-message, .woocommerce-info, .woocommerce-error {
 		display: block !important;
+		margin-bottom: 20px !important;
 	}
 
 	.woocommerce-message .button, .woocommerce-info .button, .woocommerce-error .button {
