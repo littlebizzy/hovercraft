@@ -15,10 +15,9 @@ ul.product_list_widget, .woocommerce ul.product_list_widget {
 	list-style: none;
 }
 
-ul.product_list_widget::after, .woocommerce ul.product_list_widget::after {
-	clear: both;
-	content: "";
-	display: table;
+ul.product_list_widget::before, ul.product_list_widget::after, .woocommerce ul.product_list_widget::before, .woocommerce ul.product_list_widget::after {
+	display: none !important;
+	content: none !important;
 }
 
 ul.product_list_widget li, .woocommerce ul.product_list_widget li {
