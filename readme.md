@@ -52,6 +52,38 @@ Breakpoint-specific layout CSS should generally use both `max-width: 1199px` and
 
 Do not create empty breakpoint blocks or duplicate identical declarations just to satisfy the breakpoint convention. Prefer explicit mobile and desktop blocks when values differ, and shared base declarations when values are truly identical.
 
+### Breadcrumb Policy
+
+HoverCraft uses one custom breadcrumb system for core WordPress, WooCommerce, and bbPress contexts.
+
+Native WooCommerce and bbPress breadcrumbs should remain disabled so breadcrumb markup, spacing, schema, colors, and typography stay uniform across the theme.
+
+Breadcrumbs should support common contexts including:
+
+- WordPress posts, pages, hierarchical pages, categories, tags, taxonomies, custom post type archives, author archives, date archives, search results, and 404 pages.
+- WooCommerce shop, cart, checkout, order-pay, order-received, account pages, account endpoints, product searches, product categories, product tags, product attributes, product taxonomies, and single products.
+- bbPress forum archives, forums, topics, replies, edit topic, edit reply, topic tags, topic tag edit, views, search, user profiles, subscriptions, favorites, topics, replies, and engagements.
+
+Unknown plugin or extension endpoints should fall back to a safe current-page breadcrumb instead of failing silently.
+
+### WooCommerce Product Layout Policy
+
+Single product pages should use HoverCraft's desktop rhythm instead of a separate WooCommerce-specific layout system.
+
+Desktop single product layout should generally use:
+
+- 1200px product container.
+- 392px product gallery column.
+- 40px gap.
+- 768px product summary column.
+- 1200px description, metadata, reviews, and related products sections.
+
+The product gallery should remain visually controlled so product images do not dominate the page. The product summary should receive the wider 768px content area so titles, short descriptions, quantity controls, add-to-cart buttons, and metadata have enough room.
+
+Related products on single product pages should remain visually lighter than the main product area. Desktop related products should generally use four columns inside the 1200px product section unless a future layout policy intentionally changes the product grid globally.
+
+Mobile product layouts should remain stacked and full-width.
+
 ### Customizer Policy
 
 Customizer settings should control global design, layout, branding, typography, colors, WooCommerce presentation, and other site-wide defaults.
