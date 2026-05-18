@@ -31,14 +31,14 @@ function hovercraft_quantity_select( $html, $product, $args ) {
 	$input_value = absint( $input_value );
 
 	if ( '' === $max_value || false === $max_value || null === $max_value || -1 === intval( $max_value ) ) {
-		$max_value = max( 10, $min_value );
+		$max_value = max( 10, $min_value, $input_value );
 	} elseif ( ! hovercraft_quantity_select_is_whole_number( $max_value ) ) {
 		return $html;
 	} else {
 		$max_value = absint( $max_value );
 	}
 
-	if ( $max_value < $min_value ) {
+	if ( $max_value < $min_value || $input_value > $max_value ) {
 		return $html;
 	}
 
