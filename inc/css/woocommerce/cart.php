@@ -433,10 +433,10 @@ form.woocommerce-cart-form button[name="update_cart"]:disabled, form.woocommerce
 	}
 
 	.woocommerce-cart .cart-collaterals {
-		display: grid;
-		grid-template-columns: minmax(0, 1fr) 48%;
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
 		gap: 40px;
-		align-items: start;
 	}
 
 	.woocommerce-cart .cart-collaterals::after {
@@ -445,14 +445,19 @@ form.woocommerce-cart-form button[name="update_cart"]:disabled, form.woocommerce
 
 	.woocommerce-cart .cart-collaterals .cross-sells {
 		clear: none;
-		width: 100%;
+		flex: 1 1 auto;
+		float: none !important;
+		order: 1;
+		width: auto !important;
 		margin: 0;
 	}
 
 	.woocommerce-cart .cart-collaterals .cart_totals {
 		clear: none;
-		float: none;
-		width: 100%;
+		flex: 0 0 42%;
+		float: none !important;
+		order: 2;
+		width: 42% !important;
 	}
 
 	.woocommerce-cart .cross-sells ul.products {
