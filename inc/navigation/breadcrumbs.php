@@ -23,8 +23,6 @@ function hovercraft_breadcrumb() {
 		hovercraft_breadcrumb_single();
 	} elseif ( is_archive() ) {
 		hovercraft_breadcrumb_archive();
-	} elseif ( is_page() ) {
-		hovercraft_breadcrumb_page();
 	} elseif ( is_search() ) {
 		hovercraft_breadcrumb_search();
 	} elseif ( is_404() ) {
@@ -97,16 +95,36 @@ function hovercraft_is_woocommerce_context() {
 		return true;
 	}
 
+	if ( is_search() && hovercraft_is_product_search() ) {
+		return true;
+	}
+
+	return false;
+}
+
+// check product search context
+function hovercraft_is_product_search() {
+	$post_type = get_query_var( 'post_type' );
+
+	if ( 'product' === $post_type ) {
+		return true;
+	}
+
+	if ( is_array( $post_type ) && in_array( 'product', $post_type, true ) ) {
+		return true;
+	}
+
 	return false;
 }
 
 // render bbpress breadcrumb trail
 function hovercraft_breadcrumb_bbpress() {
 	$pos =& $GLOBALS['hovercraft_breadcrumb_position'];
+	$forums_url = function_exists( 'bbp_get_forums_url' ) ? bbp_get_forums_url() : '';
 
-	hovercraft_breadcrumb_item( bbp_get_forums_url(), __( 'Forum', 'hovercraft' ), $pos++ );
+	hovercraft_breadcrumb_item( $forums_url, __( 'Forum', 'hovercraft' ), $pos++ );
 
-	if ( bbp_is_forum_archive() ) {
+	if ( function_exists( 'bbp_is_forum_archive' ) && bbp_is_forum_archive() ) {
 		hovercraft_breadcrumb_item( '', __( 'All Forums', 'hovercraft' ), $pos++, true );
 
 	} elseif ( function_exists( 'bbp_is_topic_edit' ) && bbp_is_topic_edit() ) {
@@ -127,7 +145,10 @@ function hovercraft_breadcrumb_bbpress() {
 		hovercraft_breadcrumb_item( get_permalink( $reply_id ), get_the_title( $reply_id ), $pos++ );
 		hovercraft_breadcrumb_item( '', __( 'Edit Reply', 'hovercraft' ), $pos++, true );
 
-	} elseif ( bbp_is_single_reply() ) {
+	} elseif ( function_exists( 'bbp_is_topic_tag_edit' ) && bbp_is_topic_tag_edit() ) {
+		hovercraft_breadcrumb_item( '', __( 'Edit Topic Tag', 'hovercraft' ), $pos++, true );
+
+	} elseif ( function_exists( 'bbp_is_single_reply' ) && bbp_is_single_reply() ) {
 		$reply_id = bbp_get_reply_id();
 		$topic_id = bbp_get_reply_topic_id( $reply_id );
 		$forum_id = bbp_get_topic_forum_id( $topic_id );
@@ -136,49 +157,76 @@ function hovercraft_breadcrumb_bbpress() {
 		hovercraft_breadcrumb_item( get_permalink( $topic_id ), get_the_title( $topic_id ), $pos++ );
 		hovercraft_breadcrumb_item( '', get_the_title( $reply_id ), $pos++, true );
 
-	} elseif ( bbp_is_single_topic() ) {
+	} elseif ( function_exists( 'bbp_is_single_topic' ) && bbp_is_single_topic() ) {
 		$forum_id = bbp_get_topic_forum_id();
 
 		hovercraft_breadcrumb_bbpress_hierarchy( $forum_id, $pos );
 		hovercraft_breadcrumb_item( '', get_the_title(), $pos++, true );
 
-	} elseif ( bbp_is_single_forum() ) {
+	} elseif ( function_exists( 'bbp_is_single_forum' ) && bbp_is_single_forum() ) {
 		hovercraft_breadcrumb_bbpress_hierarchy( get_the_ID(), $pos );
 		hovercraft_breadcrumb_item( '', get_the_title(), $pos++, true );
 
-	} elseif ( bbp_is_topic_tag() ) {
+	} elseif ( function_exists( 'bbp_is_topic_tag' ) && bbp_is_topic_tag() ) {
 		hovercraft_breadcrumb_item( '', bbp_get_topic_tag_name(), $pos++, true );
 
-	} elseif ( bbp_is_view() ) {
+	} elseif ( function_exists( 'bbp_is_view' ) && bbp_is_view() ) {
 		hovercraft_breadcrumb_item( '', bbp_get_view_title(), $pos++, true );
 
-	} elseif ( bbp_is_search() ) {
+	} elseif ( function_exists( 'bbp_is_search' ) && bbp_is_search() ) {
 		hovercraft_breadcrumb_item( '', __( 'Search Results', 'hovercraft' ), $pos++, true );
 
-	} elseif ( bbp_is_user_edit() ) {
+	} elseif ( function_exists( 'bbp_is_user_edit' ) && bbp_is_user_edit() ) {
+		hovercraft_breadcrumb_bbpress_user_parent( $pos );
 		hovercraft_breadcrumb_item( '', __( 'Edit Profile', 'hovercraft' ), $pos++, true );
 
-	} elseif ( bbp_is_user_subscriptions() ) {
+	} elseif ( function_exists( 'bbp_is_user_subscriptions' ) && bbp_is_user_subscriptions() ) {
+		hovercraft_breadcrumb_bbpress_user_parent( $pos );
 		hovercraft_breadcrumb_item( '', __( 'Subscriptions', 'hovercraft' ), $pos++, true );
 
-	} elseif ( bbp_is_user_favorites() ) {
+	} elseif ( function_exists( 'bbp_is_user_favorites' ) && bbp_is_user_favorites() ) {
+		hovercraft_breadcrumb_bbpress_user_parent( $pos );
 		hovercraft_breadcrumb_item( '', __( 'Favorites', 'hovercraft' ), $pos++, true );
 
-	} elseif ( bbp_is_user_topics() ) {
+	} elseif ( function_exists( 'bbp_is_user_topics' ) && bbp_is_user_topics() ) {
+		hovercraft_breadcrumb_bbpress_user_parent( $pos );
 		hovercraft_breadcrumb_item( '', __( 'User Topics', 'hovercraft' ), $pos++, true );
 
-	} elseif ( bbp_is_user_replies() ) {
+	} elseif ( function_exists( 'bbp_is_user_replies' ) && bbp_is_user_replies() ) {
+		hovercraft_breadcrumb_bbpress_user_parent( $pos );
 		hovercraft_breadcrumb_item( '', __( 'User Replies', 'hovercraft' ), $pos++, true );
 
 	} elseif ( function_exists( 'bbp_is_user_engagements' ) && bbp_is_user_engagements() ) {
+		hovercraft_breadcrumb_bbpress_user_parent( $pos );
 		hovercraft_breadcrumb_item( '', __( 'Engagements', 'hovercraft' ), $pos++, true );
 
-	} elseif ( bbp_is_user_home() || bbp_is_single_user() ) {
-		hovercraft_breadcrumb_item( '', __( 'User: ', 'hovercraft' ) . bbp_get_user_display_name( bbp_get_displayed_user_id() ), $pos++, true );
+	} elseif ( function_exists( 'bbp_is_user_home' ) && ( bbp_is_user_home() || bbp_is_single_user() ) ) {
+		hovercraft_breadcrumb_item( '', hovercraft_breadcrumb_bbpress_user_label(), $pos++, true );
 
 	} else {
 		hovercraft_breadcrumb_item( '', hovercraft_breadcrumb_current_title(), $pos++, true );
 	}
+}
+
+// render bbpress user parent breadcrumb
+function hovercraft_breadcrumb_bbpress_user_parent( &$position ) {
+	$user_id = function_exists( 'bbp_get_displayed_user_id' ) ? bbp_get_displayed_user_id() : 0;
+
+	if ( $user_id && function_exists( 'bbp_get_user_profile_url' ) ) {
+		hovercraft_breadcrumb_item( bbp_get_user_profile_url( $user_id ), hovercraft_breadcrumb_bbpress_user_label(), $position++ );
+	}
+}
+
+// get bbpress user breadcrumb label
+function hovercraft_breadcrumb_bbpress_user_label() {
+	$user_id = function_exists( 'bbp_get_displayed_user_id' ) ? bbp_get_displayed_user_id() : 0;
+	$name = $user_id && function_exists( 'bbp_get_user_display_name' ) ? bbp_get_user_display_name( $user_id ) : '';
+
+	if ( $name ) {
+		return __( 'User: ', 'hovercraft' ) . $name;
+	}
+
+	return __( 'User', 'hovercraft' );
 }
 
 // render bbpress parent forum hierarchy
@@ -199,19 +247,19 @@ function hovercraft_breadcrumb_bbpress_hierarchy( $post_id, &$position ) {
 // render woocommerce breadcrumb trail
 function hovercraft_breadcrumb_woocommerce() {
 	$pos =& $GLOBALS['hovercraft_breadcrumb_position'];
-	$shop_page_id = hovercraft_breadcrumb_woocommerce_shop_page_id();
+	$shop_page_id = hovercraft_breadcrumb_woocommerce_page_id( 'shop' );
 
 	if ( function_exists( 'is_shop' ) && is_shop() ) {
-		hovercraft_breadcrumb_item( '', woocommerce_page_title( false ), $pos++, true );
+		hovercraft_breadcrumb_item( '', hovercraft_breadcrumb_woocommerce_page_title( 'shop', __( 'Shop', 'hovercraft' ) ), $pos++, true );
 		return;
 	}
 
-	if ( $shop_page_id && ! is_shop() ) {
-		hovercraft_breadcrumb_item( get_permalink( $shop_page_id ), get_the_title( $shop_page_id ), $pos++ );
+	if ( $shop_page_id ) {
+		hovercraft_breadcrumb_item( get_permalink( $shop_page_id ), hovercraft_breadcrumb_woocommerce_page_title( 'shop', __( 'Shop', 'hovercraft' ) ), $pos++ );
 	}
 
 	if ( function_exists( 'is_cart' ) && is_cart() ) {
-		hovercraft_breadcrumb_item( '', get_the_title( wc_get_page_id( 'cart' ) ), $pos++, true );
+		hovercraft_breadcrumb_item( '', hovercraft_breadcrumb_woocommerce_page_title( 'cart', __( 'Cart', 'hovercraft' ) ), $pos++, true );
 		return;
 	}
 
@@ -243,25 +291,55 @@ function hovercraft_breadcrumb_woocommerce() {
 	hovercraft_breadcrumb_item( '', hovercraft_breadcrumb_current_title(), $pos++, true );
 }
 
-// get woocommerce shop page id
-function hovercraft_breadcrumb_woocommerce_shop_page_id() {
+// get woocommerce page id
+function hovercraft_breadcrumb_woocommerce_page_id( $page ) {
 	if ( ! function_exists( 'wc_get_page_id' ) ) {
 		return 0;
 	}
 
-	$shop_page_id = wc_get_page_id( 'shop' );
+	$page_id = wc_get_page_id( $page );
 
-	if ( 0 > $shop_page_id ) {
+	if ( 0 >= $page_id ) {
 		return 0;
 	}
 
-	return $shop_page_id;
+	return $page_id;
+}
+
+// get woocommerce page title
+function hovercraft_breadcrumb_woocommerce_page_title( $page, $fallback ) {
+	$page_id = hovercraft_breadcrumb_woocommerce_page_id( $page );
+
+	if ( $page_id ) {
+		$title = get_the_title( $page_id );
+
+		if ( $title ) {
+			return $title;
+		}
+	}
+
+	return $fallback;
 }
 
 // render woocommerce checkout breadcrumb
 function hovercraft_breadcrumb_woocommerce_checkout( &$position ) {
+	$checkout_page_id = hovercraft_breadcrumb_woocommerce_page_id( 'checkout' );
+	$checkout_title = hovercraft_breadcrumb_woocommerce_page_title( 'checkout', __( 'Checkout', 'hovercraft' ) );
+
+	if ( function_exists( 'is_wc_endpoint_url' ) && is_wc_endpoint_url( 'order-pay' ) ) {
+		if ( $checkout_page_id ) {
+			hovercraft_breadcrumb_item( get_permalink( $checkout_page_id ), $checkout_title, $position++ );
+		}
+
+		hovercraft_breadcrumb_item( '', __( 'Pay For Order', 'hovercraft' ), $position++, true );
+		return;
+	}
+
 	if ( function_exists( 'is_order_received_page' ) && is_order_received_page() ) {
-		hovercraft_breadcrumb_item( get_permalink( wc_get_page_id( 'checkout' ) ), get_the_title( wc_get_page_id( 'checkout' ) ), $position++ );
+		if ( $checkout_page_id ) {
+			hovercraft_breadcrumb_item( get_permalink( $checkout_page_id ), $checkout_title, $position++ );
+		}
+
 		hovercraft_breadcrumb_item( '', __( 'Order Received', 'hovercraft' ), $position++, true );
 		return;
 	}
@@ -271,17 +349,24 @@ function hovercraft_breadcrumb_woocommerce_checkout( &$position ) {
 		return;
 	}
 
-	hovercraft_breadcrumb_item( '', get_the_title( wc_get_page_id( 'checkout' ) ), $position++, true );
+	hovercraft_breadcrumb_item( '', $checkout_title, $position++, true );
 }
 
 // render woocommerce account breadcrumb
 function hovercraft_breadcrumb_woocommerce_account( &$position ) {
-	$account_page_id = wc_get_page_id( 'myaccount' );
-	$account_title = get_the_title( $account_page_id );
-	$endpoint = WC()->query->get_current_endpoint();
+	$account_page_id = hovercraft_breadcrumb_woocommerce_page_id( 'myaccount' );
+	$account_title = hovercraft_breadcrumb_woocommerce_page_title( 'myaccount', __( 'My Account', 'hovercraft' ) );
+	$endpoint = '';
+
+	if ( function_exists( 'WC' ) && WC() && isset( WC()->query ) && is_object( WC()->query ) ) {
+		$endpoint = WC()->query->get_current_endpoint();
+	}
 
 	if ( $endpoint ) {
-		hovercraft_breadcrumb_item( get_permalink( $account_page_id ), $account_title, $position++ );
+		if ( $account_page_id ) {
+			hovercraft_breadcrumb_item( get_permalink( $account_page_id ), $account_title, $position++ );
+		}
+
 		hovercraft_breadcrumb_item( '', hovercraft_breadcrumb_woocommerce_endpoint_label( $endpoint ), $position++, true );
 		return;
 	}
@@ -510,23 +595,6 @@ function hovercraft_breadcrumb_archive() {
 	} elseif ( is_post_type_archive() ) {
 		hovercraft_breadcrumb_item( '', post_type_archive_title( '', false ), $pos++, true );
 	}
-}
-
-// render page breadcrumb trail
-function hovercraft_breadcrumb_page() {
-	global $post;
-
-	$pos =& $GLOBALS['hovercraft_breadcrumb_position'];
-
-	if ( isset( $post ) && is_object( $post ) && $post->post_parent ) {
-		$ancestors = array_reverse( get_post_ancestors( $post->ID ) );
-
-		foreach ( $ancestors as $ancestor ) {
-			hovercraft_breadcrumb_item( get_permalink( $ancestor ), get_the_title( $ancestor ), $pos++ );
-		}
-	}
-
-	hovercraft_breadcrumb_item( '', get_the_title(), $pos++, true );
 }
 
 // render search breadcrumb item
