@@ -24,7 +24,7 @@ function hovercraft_woocommerce_header() {
 
 // open woocommerce main wrapper
 function hovercraft_main_start() {
-	$show_sidebar = hovercraft_should_show_sidebar();
+	$show_sidebar = is_product() ? false : hovercraft_should_show_sidebar();
 
 	echo '<div id="main">';
 	echo '<div class="inner">';
@@ -41,7 +41,7 @@ function hovercraft_main_start() {
 
 // close woocommerce main wrapper
 function hovercraft_main_end() {
-	$show_sidebar = hovercraft_should_show_sidebar();
+	$show_sidebar = is_product() ? false : hovercraft_should_show_sidebar();
 
 	echo '<div class="clear"></div>';
 	echo '</div><!-- content-padded -->';
