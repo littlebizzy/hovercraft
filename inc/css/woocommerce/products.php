@@ -37,10 +37,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 .woocommerce ul.products li.product a img, .woocommerce .products .product-category img {
-	display: block;
-	width: 100%;
+	display: block !important;
+	width: 100% !important;
 	height: auto;
-	margin: 0 0 15px;
+	margin: 0 0 15px !important;
 	box-shadow: none;
 }
 
@@ -148,9 +148,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 
 	.woocommerce ul.products li.product a img, .woocommerce .products .product-category img {
-		height: 220px;
-		object-fit: contain;
-		object-position: center center;
+		height: 220px !important;
+		max-height: 220px !important;
+		object-fit: contain !important;
+		object-position: center center !important;
 	}
 
 	.woocommerce .woocommerce-result-count {
