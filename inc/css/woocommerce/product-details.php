@@ -538,9 +538,11 @@ section.related, section.upsells, .woocommerce section.related, .woocommerce sec
 		margin: 0 !important;
 	}
 
-	.single-product ul.products li.product a img, body.single-product.woocommerce ul.products li.product a img {
-		max-height: 220px;
-		object-fit: contain;
+	.single-product section.related ul.products li.product a img, .single-product section.upsells ul.products li.product a img, body.single-product.woocommerce section.related ul.products li.product a img, body.single-product.woocommerce section.upsells ul.products li.product a img {
+		height: 220px !important;
+		max-height: 220px !important;
+		object-fit: contain !important;
+		object-position: center center !important;
 	}
 
 	.product_meta, .woocommerce div.product .product_meta {
