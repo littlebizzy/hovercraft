@@ -56,16 +56,28 @@ if ( ! defined( 'ABSPATH' ) ) {
 	width: 100%;
 	max-width: 100%;
 	box-sizing: border-box;
-	border: 1px solid #d3ced2 !important;
-	box-shadow: inset 0 0 0 0 #bdbdbd !important;
+	padding: 10px 12px !important;
+	background: #ffffff !important;
+	border: 1px solid <?php echo $default_text_color; ?> !important;
+	border-radius: 0 !important;
+	box-shadow: none !important;
+	color: <?php echo $default_text_color; ?> !important;
 	font-size: 18px !important;
+	line-height: 1.5 !important;
+}
+
+.woocommerce form.login input.input-text:focus, .woocommerce form.register input.input-text:focus, .woocommerce form.lost_reset_password input.input-text:focus, .woocommerce .woocommerce-form-login input.input-text:focus, .woocommerce .woocommerce-form-register input.input-text:focus {
+	background: #ffffff !important;
+	border-color: <?php echo $default_link_color; ?> !important;
+	box-shadow: inset 0 0 0 1px <?php echo $default_link_color; ?> !important;
+	outline: none !important;
 }
 
 .woocommerce form.login input[type="checkbox"], .woocommerce form.register input[type="checkbox"], .woocommerce .woocommerce-form-login input[type="checkbox"], .woocommerce .woocommerce-form-register input[type="checkbox"], .woocommerce-form__input-checkbox {
 	width: auto;
 	height: auto;
 	margin-right: 6px;
-	box-shadow: inset 0 0 0 0 #bdbdbd !important;
+	box-shadow: none !important;
 	appearance: auto;
 	-webkit-appearance: auto;
 	-moz-appearance: auto;
