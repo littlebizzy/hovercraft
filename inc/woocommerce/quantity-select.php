@@ -13,8 +13,8 @@ if ( ! class_exists( 'WooCommerce' ) ) {
 add_filter( 'woocommerce_quantity_input', 'hovercraft_quantity_select', 10, 3 );
 
 // replace simple quantity inputs with selects
-function hovercraft_quantity_select( $html, $args, $product ) {
-	if ( ! $product || $product->is_sold_individually() ) {
+function hovercraft_quantity_select( $html, $product, $args ) {
+	if ( ! $product || ! is_a( $product, 'WC_Product' ) || $product->is_sold_individually() ) {
 		return $html;
 	}
 
