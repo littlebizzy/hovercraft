@@ -432,12 +432,30 @@ form.woocommerce-cart-form button[name="update_cart"]:disabled, form.woocommerce
 		margin-bottom: 30px;
 	}
 
+	.woocommerce-cart .cart-collaterals {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) 48%;
+		gap: 40px;
+		align-items: start;
+	}
+
+	.woocommerce-cart .cart-collaterals::after {
+		display: none;
+	}
+
+	.woocommerce-cart .cart-collaterals .cross-sells {
+		clear: none;
+		width: 100%;
+		margin: 0;
+	}
+
 	.woocommerce-cart .cart-collaterals .cart_totals {
-		float: right;
-		width: 48%;
+		clear: none;
+		float: none;
+		width: 100%;
 	}
 
 	.woocommerce-cart .cross-sells ul.products {
-		grid-template-columns: repeat(3, minmax(0, 1fr));
+		grid-template-columns: repeat(2, minmax(0, 1fr));
 	}
 }
