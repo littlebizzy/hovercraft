@@ -32,10 +32,10 @@ function hovercraft_quantity_select( $html, $args, $product ) {
 	}
 
 	if ( $max_value < $min_value ) {
-		$max_value = 20;
+		$max_value = 10;
 	}
 
-	$max_value = min( $max_value, max( 20, $input_value ) );
+	$max_value = min( $max_value, max( 10, $input_value ) );
 	$max_value = max( $max_value, $min_value, $input_value );
 
 	$classes = isset( $args['classes'] ) && is_array( $args['classes'] ) ? $args['classes'] : array();
