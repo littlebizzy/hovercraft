@@ -15,7 +15,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 /* desktop: cart icon wrapper */
 .cart-icon-wrapper {
 	position: relative;
-	display: inline-block;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 44px;
+	min-height: 44px;
 	padding-left: 30px;
 	text-align: center;
 	vertical-align: middle;
@@ -25,6 +29,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 .cart-icon-wrapper i {
 	font-size: 24px;
 	padding: 10px 0;
+	line-height: 1;
 	text-decoration: none !important;
 }
 
@@ -32,16 +37,31 @@ if ( ! defined( 'ABSPATH' ) ) {
 .notification-dot,
 .notification-dot-offcanvas {
 	position: absolute;
-	top: -2px;
-	right: -15px;
-	display: inline-block;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 18px;
+	height: 18px;
+	padding: 0 5px;
 	background-color: #f44336;
-	border-radius: 50%;
-	line-height: 1;
+	border-radius: 999px;
+	box-shadow: 0 0 0 2px #ffffff;
+	color: #ffffff;
 	font-size: 11px;
 	font-weight: 700;
-	color: #ffffff;
-	padding: 2px 4px;
+	line-height: 18px;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.notification-dot {
+	top: 4px;
+	right: -6px;
+}
+
+.notification-dot-offcanvas {
+	top: 5px;
+	right: 12px;
 }
 
 /* mobile: cart button wrapper */
@@ -55,11 +75,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 .cart-button-offcanvas {
 	position: relative;
 	width: 100%;
-	display: inline-block;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 44px;
+	box-sizing: border-box;
 	text-align: center;
 	font-size: 18px;
 	font-weight: 700;
-	padding: 10px 0;
+	padding: 10px 44px;
 	color: #ffffff;
 	background: transparent;
 	border-radius: 0;
@@ -71,5 +95,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 /* mobile: cart icon inside button */
 .cart-button-offcanvas i {
 	padding-right: 10px !important;
+	line-height: 1;
 	text-decoration: none !important;
+}
+
+@media screen and (max-width: 1199px) {
+	.cart-icon-wrapper {
+		padding-left: 0;
+	}
+
+	.notification-dot {
+		top: 3px;
+		right: 0;
+	}
 }
