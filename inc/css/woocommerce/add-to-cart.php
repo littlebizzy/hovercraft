@@ -304,3 +304,9 @@ input.qty[type="number"] {
 		box-sizing: border-box;
 	}
 }
+
+@media screen and (min-width: 1200px) {
+	.single-product .summary form.cart:not(.grouped_form) {
+		max-width: 520px;
+	}
+}
