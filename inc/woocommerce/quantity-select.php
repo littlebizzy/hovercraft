@@ -10,10 +10,10 @@ if ( ! class_exists( 'WooCommerce' ) ) {
 	return;
 }
 
-add_filter( 'woocommerce_quantity_input', 'hovercraft_quantity_select', 10, 3 );
+add_filter( 'woocommerce_quantity_input', 'hovercraft_quantity_select', 999, 3 );
 
 // replace quantity inputs with selects
-function hovercraft_quantity_select( $html, $product, $args ) {
+function hovercraft_quantity_select( $html, $args, $product ) {
 	$min_value = isset( $args['min_value'] ) && is_numeric( $args['min_value'] ) ? intval( $args['min_value'] ) : 1;
 	$max_value = isset( $args['max_value'] ) && is_numeric( $args['max_value'] ) ? intval( $args['max_value'] ) : 0;
 	$input_value = isset( $args['input_value'] ) && is_numeric( $args['input_value'] ) ? intval( $args['input_value'] ) : $min_value;
