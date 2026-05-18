@@ -19,3 +19,15 @@ function hovercraft_remove_woocommerce_upsells() {
 	remove_action( 'woocommerce_after_single_product_summary', 'woocommerce_upsell_display', 15 );
 }
 add_action( 'woocommerce_after_single_product_summary', 'hovercraft_remove_woocommerce_upsells', 1 );
+
+// limit cart cross-sells
+function hovercraft_limit_cart_cross_sells( $total ) {
+	return 2;
+}
+add_filter( 'woocommerce_cross_sells_total', 'hovercraft_limit_cart_cross_sells' );
+
+// set cart cross-sell columns
+function hovercraft_cart_cross_sells_columns( $columns ) {
+	return 2;
+}
+add_filter( 'woocommerce_cross_sells_columns', 'hovercraft_cart_cross_sells_columns' );
