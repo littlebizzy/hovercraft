@@ -29,6 +29,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	display: block;
 	width: 100%;
 	height: auto;
+	border-radius: 0;
 	box-shadow: none;
 }
 
@@ -64,6 +65,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	display: block;
 	width: 100%;
 	height: auto;
+	border-radius: 0;
 	opacity: 0.75;
 }
 
@@ -88,7 +90,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	min-height: 0;
 	padding: 5px 10px;
 	background: <?php echo $woocommerce_price_text_color; ?>;
-	border-radius: 0;
+	border-radius: 999px;
 	color: #ffffff;
 	font-size: 12px;
 	font-weight: 600;
@@ -246,6 +248,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	background: #f5f5f5;
 	border: 1px solid #e0e0e0;
 	border-bottom: 0;
+	border-radius: 4px 4px 0 0;
 	list-style: none;
 }
 
@@ -288,6 +291,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	margin: 0 0 30px;
 	border: 1px solid #e0e0e0;
 	border-collapse: collapse;
+	border-radius: 0;
 }
 
 .woocommerce div.product .woocommerce-tabs table.shop_attributes th, .woocommerce div.product .woocommerce-tabs table.shop_attributes td, .woocommerce div.product .woocommerce-tabs table.woocommerce-product-attributes th, .woocommerce div.product .woocommerce-tabs table.woocommerce-product-attributes td {
@@ -385,6 +389,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	margin: 0 15px 10px 0;
 	padding: 0;
 	border: 0;
+	border-radius: 0;
 }
 
 .woocommerce #reviews #comments ol.commentlist li .comment-text {
@@ -458,6 +463,7 @@ section.related, section.upsells, .woocommerce section.related, .woocommerce sec
 		background: #f5f5f5 !important;
 		border: 1px solid #e0e0e0 !important;
 		border-bottom: 0 !important;
+		border-radius: 4px 4px 0 0 !important;
 	}
 
 	.woocommerce div.product .woocommerce-tabs ul.tabs li.active {
