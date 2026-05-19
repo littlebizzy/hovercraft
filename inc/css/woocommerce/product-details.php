@@ -44,16 +44,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 .woocommerce div.product div.images .flex-control-thumbs {
 	clear: both;
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	gap: 5px;
 	margin: 10px 0 0;
 	padding: 0;
 	list-style: none;
 }
 
 .woocommerce div.product div.images .flex-control-thumbs li {
-	float: left;
-	width: 25%;
+	width: 100%;
 	margin: 0;
-	padding: 0 5px 5px 0;
+	padding: 0;
 	list-style: none;
 	cursor: pointer;
 }
@@ -234,12 +236,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	border: 0;
 	border-bottom: 1px solid #e0e0e0;
 	list-style: none;
-}
-
-.woocommerce div.product .woocommerce-tabs ul.tabs::after {
-	clear: both;
-	content: "";
-	display: table;
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li {
