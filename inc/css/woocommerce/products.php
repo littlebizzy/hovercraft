@@ -27,6 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	width: 100% !important;
 	margin: 0 !important;
 	padding: 0;
+	border-radius: 8px;
 	list-style: none outside !important;
 	line-height: 1.5 !important;
 	text-align: left;
@@ -42,6 +43,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	width: 100% !important;
 	height: auto;
 	margin: 0 0 15px !important;
+	border-radius: 0;
 	box-shadow: none;
 }
 
