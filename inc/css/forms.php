@@ -27,6 +27,7 @@ fieldset {
 	margin: 0 0 20px;
 	padding: 20px;
 	border: 1px solid <?php echo $default_text_color; ?>;
+	border-radius: 8px;
 }
 
 legend {
@@ -46,7 +47,7 @@ input:not([type="button"]):not([type="checkbox"]):not([type="file"]):not([type="
 	padding: 10px 16px !important;
 	background: #ffffff;
 	border: 0 !important;
-	border-radius: 0;
+	border-radius: 4px;
 	box-shadow: inset 0 0 0 1px <?php echo $default_text_color; ?>;
 	color: <?php echo $default_text_color; ?>;
 	font-family: inherit;
@@ -114,13 +115,13 @@ input[type="range"] {
 input[type="range"]::-webkit-slider-runnable-track {
 	height: 4px;
 	background: <?php echo $default_text_color; ?>;
-	border-radius: 2px;
+	border-radius: 4px;
 }
 
 input[type="range"]::-moz-range-track {
 	height: 4px;
 	background: <?php echo $default_text_color; ?>;
-	border-radius: 2px;
+	border-radius: 4px;
 }
 
 input[type="range"]::-webkit-slider-thumb {
@@ -131,7 +132,7 @@ input[type="range"]::-webkit-slider-thumb {
 	margin-top: -6px;
 	background: <?php echo $default_link_color; ?>;
 	border: 0;
-	border-radius: 50%;
+	border-radius: 999px;
 	cursor: pointer;
 }
 
@@ -140,7 +141,7 @@ input[type="range"]::-moz-range-thumb {
 	height: 16px;
 	background: <?php echo $default_link_color; ?>;
 	border: 0;
-	border-radius: 50%;
+	border-radius: 999px;
 	cursor: pointer;
 }
 
@@ -150,7 +151,7 @@ form button, input[type="button"], input[type="reset"], input[type="submit"] {
 	padding: 12px 20px !important;
 	background: <?php echo $default_link_color; ?>;
 	border: 0;
-	border-radius: 0;
+	border-radius: 4px;
 	box-shadow: none;
 	color: #ffffff;
 	cursor: pointer;
