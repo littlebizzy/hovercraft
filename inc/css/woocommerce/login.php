@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	margin: 0 0 30px;
 	background: #ffffff;
 	border: 1px solid #e0e0e0;
-	border-radius: 0;
+	border-radius: 8px;
 }
 
 .woocommerce form.login::after, .woocommerce form.register::after, .woocommerce form.lost_reset_password::after, .woocommerce .woocommerce-form-login::after, .woocommerce .woocommerce-form-register::after {
@@ -59,7 +59,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	padding: 10px 12px !important;
 	background: #ffffff !important;
 	border: 1px solid <?php echo $default_text_color; ?> !important;
-	border-radius: 0 !important;
+	border-radius: 4px !important;
 	box-shadow: none !important;
 	color: <?php echo $default_text_color; ?> !important;
 	font-size: 18px !important;
