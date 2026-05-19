@@ -17,6 +17,7 @@ form.woocommerce-ordering select, .woocommerce form.woocommerce-ordering select 
 	height: 44px !important;
 	padding: 0 44px 0 16px !important;
 	background-color: #ffffff !important;
+	border-radius: 4px !important;
 	box-shadow: inset 0 0 0 1px <?php echo $breadcrumbs_text_color; ?> !important;
 	color: <?php echo $default_text_color; ?> !important;
 	cursor: pointer !important;
