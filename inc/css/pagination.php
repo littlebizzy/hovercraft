@@ -26,6 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 .navigation li.active a,
 .navigation li.disabled {
 	background-color: #ECEFF1;
+	border-radius: 4px;
 	color: #263238;
 	cursor: pointer;
 	padding: 5px 10px;
