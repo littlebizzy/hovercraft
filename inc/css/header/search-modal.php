@@ -71,6 +71,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	width: 100%;
 	height: 100px;
 	background: #ffffff;
+	border-radius: 4px;
 	padding: 20px;
 	font-size: 36px;
 	line-height: 60px;
@@ -90,6 +91,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	z-index: 999999;
 	padding: 0 !important;
 	background: transparent;
+	border-radius: 4px;
 	color: #ffffff;
 	cursor: pointer;
 }
