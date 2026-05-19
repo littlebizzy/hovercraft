@@ -223,6 +223,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 .woocommerce div.product .woocommerce-tabs {
 	clear: both;
+	width: 100%;
 	margin: 40px 0;
 }
 
@@ -510,8 +511,9 @@ section.related, section.upsells, .woocommerce section.related, .woocommerce sec
 	}
 
 	.single-product div.product .woocommerce-tabs, body.single-product.woocommerce div.product .woocommerce-tabs {
-		max-width: 1200px;
-		margin: 40px auto;
+		width: 100%;
+		max-width: none;
+		margin: 40px 0;
 	}
 
 	.single-product section.related, .single-product section.upsells, body.single-product.woocommerce section.related, body.single-product.woocommerce section.upsells {
