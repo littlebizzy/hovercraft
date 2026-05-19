@@ -38,6 +38,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	vertical-align: middle;
 	background: rgba(0, 0, 0, 0.1);
 	background: <?php echo $back_to_top_background_color; ?>;
+	border-radius: 4px;
 }
 
 @media screen and (max-width: 1199px) {
