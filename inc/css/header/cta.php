@@ -31,6 +31,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	display: inline-block;
 	padding: 10px 20px;
 	background: <?php echo $default_link_color; ?>;
+	border-radius: 4px;
 	text-decoration: none !important;
 	color: #ffffff !important;
 }
@@ -50,6 +51,7 @@ a.button-primary {
 	display: inline-block;
 	padding: 10px 20px;
 	background: <?php echo $default_link_color; ?>;
+	border-radius: 4px;
 	text-decoration: none !important;
 	color: #ffffff !important;
 	width: 100%;
@@ -85,6 +87,7 @@ a.button-primary:hover {
 	display: inline-block;
 	padding: 10px 20px;
 	background: transparent;
+	border-radius: 4px;
 	text-decoration: none;
 	color: #ffffff;
 	box-shadow: inset 0 0 0 1px #ffffff;
@@ -100,6 +103,7 @@ a.button-primary:hover {
 	display: inline-block;
 	padding: 10px 20px;
 	background: transparent;
+	border-radius: 4px;
 	text-decoration: none;
 	color: <?php echo $default_text_color; ?>;
 	box-shadow: inset 0 0 0 1px #263238;
