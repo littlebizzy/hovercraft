@@ -25,7 +25,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	margin: 0;
 	padding: 0;
 	border: 1px solid #e0e0e0;
+	border-radius: 8px;
 	list-style: none;
+	overflow: hidden;
 }
 
 .woocommerce-account .woocommerce-MyAccount-navigation li {
@@ -130,6 +132,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	background: #ffffff;
 	border: 1px solid #e0e0e0;
 	border-collapse: collapse;
+	border-radius: 0;
 }
 
 .woocommerce-account table.shop_table th, .woocommerce-account table.shop_table td, .woocommerce-account .woocommerce-orders-table th, .woocommerce-account .woocommerce-orders-table td, .woocommerce-account .woocommerce-MyAccount-paymentMethods th, .woocommerce-account .woocommerce-MyAccount-paymentMethods td {
@@ -155,6 +158,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	margin: 0 0 30px;
 	background: #ffffff;
 	border: 1px solid #e0e0e0;
+	border-radius: 8px;
 	font-style: normal;
 	line-height: 1.5;
 }
@@ -212,6 +216,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	padding: 8px;
 	background: <?php echo $search_bar_background_color; ?>;
 	border: 0;
+	border-radius: 4px;
 	color: <?php echo $default_text_color; ?>;
 }
 
@@ -221,6 +226,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	margin: 0 0 30px;
 	background: #ffffff;
 	border: 1px solid #e0e0e0;
+	border-radius: 8px;
 }
 
 .woocommerce-account .woocommerce-form-login .form-row, .woocommerce-account .woocommerce-form-register .form-row {
