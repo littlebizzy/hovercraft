@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	margin: 0 0 30px;
 	background: #ffffff;
 	border: 1px solid #e0e0e0;
-	border-radius: 0;
+	border-radius: 8px;
 }
 
 .woocommerce-checkout .woocommerce-form-login p:last-child, .woocommerce-checkout .checkout_coupon p:last-child, .woocommerce-checkout .woocommerce-billing-fields p:last-child, .woocommerce-checkout .woocommerce-shipping-fields p:last-child, .woocommerce-checkout .woocommerce-additional-fields p:last-child {
@@ -96,7 +96,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 .woocommerce-checkout .select2-container .select2-selection--single {
 	height: auto;
 	min-height: 42px;
-	border-radius: 0;
+	border-radius: 4px;
 	line-height: 1.5;
 }
 
@@ -135,6 +135,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	background: #ffffff;
 	border: 1px solid #e0e0e0;
 	border-collapse: collapse;
+	border-radius: 0;
 }
 
 .woocommerce-checkout-review-order-table th, .woocommerce-checkout-review-order-table td {
@@ -196,6 +197,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	margin: 10px 0 0;
 	background: #ffffff;
 	border: 1px solid #e0e0e0;
+	border-radius: 8px;
 	color: <?php echo $default_text_color; ?>;
 	line-height: 1.5;
 }
