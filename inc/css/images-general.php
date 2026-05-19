@@ -8,6 +8,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 /* images */
+
+img {
+	border-radius: 0;
+}
 	
 .alignright { 
 	float: right; 
