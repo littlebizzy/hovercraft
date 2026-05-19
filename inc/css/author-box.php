@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 .biography-photo img {
 	float: left; 
 	margin: 0 20px 0 0;
-	border-radius: 0;
+	border-radius: 999px;
 }
 
 p.biography-description {
