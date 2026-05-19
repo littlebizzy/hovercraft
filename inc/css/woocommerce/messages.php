@@ -124,4 +124,37 @@ if ( ! defined( 'ABSPATH' ) ) {
 		margin: 12px 0 0 !important;
 		text-align: center;
 	}
+
+	.woocommerce div.product .woocommerce-tabs ul.tabs {
+		display: flex !important;
+		flex-wrap: nowrap !important;
+		overflow-x: auto;
+		margin: 0 0 20px !important;
+		padding: 0 !important;
+		border-bottom: 1px solid #e0e0e0 !important;
+		white-space: nowrap;
+		-webkit-overflow-scrolling: touch;
+	}
+
+	.woocommerce div.product .woocommerce-tabs ul.tabs li {
+		flex: 0 0 auto;
+		margin: 0 20px -1px 0 !important;
+		background: transparent !important;
+		border: 0 !important;
+	}
+
+	.woocommerce div.product .woocommerce-tabs ul.tabs li a {
+		padding: 0 0 10px !important;
+		background: transparent !important;
+		border-bottom: 2px solid transparent !important;
+		box-shadow: none !important;
+		font-size: 14px !important;
+		line-height: 1.5 !important;
+	}
+
+	.woocommerce div.product .woocommerce-tabs ul.tabs li.active a, .woocommerce div.product .woocommerce-tabs ul.tabs li a:hover {
+		background: transparent !important;
+		border-bottom-color: <?php echo $default_link_color; ?> !important;
+		box-shadow: none !important;
+	}
 }
