@@ -355,6 +355,7 @@ $hovercraft_css_files = array(
 	'/inc/css/header/search-modal.php',
 	'/inc/css/back-to-top.php',
 	'/inc/css/bbpress.php',
+	'/inc/css/bbpress-avatars.php',
 	'/inc/css/pagination.php',
 	'/inc/css/woocommerce/cart.php',
 	'/inc/css/woocommerce/checkout.php',
