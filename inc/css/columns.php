@@ -39,6 +39,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	padding: 30px;
 	box-shadow: inset 0 0 0 1px <?php echo $column_border_color; ?>;
 	background: <?php echo $column_background_color; ?>;
+	border-radius: 8px;
 }
 
 @media screen and (max-width: 1199px) {
@@ -72,6 +73,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 .column img {
 	display: block;
 	margin: 0 auto;
+	border-radius: 0;
 }
 
 .column p:last-child {
