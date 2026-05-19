@@ -49,12 +49,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 .featured-image-wrapper img {
 	margin-bottom: 0 !important;
+	border-radius: 0;
 }
 
 img.featured-image {
 	height: auto;
 	display: block;
 	margin-bottom: 0;
+	border-radius: 0;
 }
 
 @media screen and (max-width: 1199px) {
@@ -76,4 +78,5 @@ img.featured-image {
 	color: #ffffff;
 	padding: 5px 10px;
 	right: 0;
+	border-radius: 4px 0 0 0;
 }
