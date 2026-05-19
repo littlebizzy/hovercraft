@@ -13,6 +13,7 @@ table {
 	width: 100%;
 	border: 1px solid #dddddd;
 	border-collapse: collapse;
+	border-radius: 0;
 }
 
 @media screen and (max-width: 1199px) {
@@ -35,5 +36,6 @@ table th,
 table td {
 	padding: 10px;
 	border: 1px solid #dddddd;
+	border-radius: 0;
 	vertical-align: top;
 }
