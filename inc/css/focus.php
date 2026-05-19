@@ -17,3 +17,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
 input:focus-visible, select:focus-visible, textarea:focus-visible {
 	box-shadow: inset 0 0 0 1px <?php echo $default_link_color; ?> !important;
 }
+
+<?php
+$hovercraft_bbpress_avatar_css_path = get_template_directory() . '/inc/css/bbpress-avatars.php';
+
+if ( file_exists( $hovercraft_bbpress_avatar_css_path ) ) {
+	include $hovercraft_bbpress_avatar_css_path;
+}
+?>
