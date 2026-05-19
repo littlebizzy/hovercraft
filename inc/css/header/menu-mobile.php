@@ -93,6 +93,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 .mobile-menu-trig {
 	background: transparent;
 	border: 0;
+	border-radius: 4px;
 	padding: 0;
 }
 
@@ -161,6 +162,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 .overlay .closebtn {
 	background: transparent;
 	border: 0;
+	border-radius: 4px;
 	cursor: pointer;
 	padding: 0;
 }
@@ -251,6 +253,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	text-align: center;
 	vertical-align: middle;
 	background: <?php echo $offcanvas_toggle_background_color; ?>;
+	border-radius: 4px;
 	padding-left: 0;
 }
 
