@@ -49,6 +49,7 @@ ul.comment-list li {
 
 /* reply link */
 .comment-reply-link {
+	border-radius: 4px;
 	color: <?php echo $default_link_color; ?>;
 	display: inline-block;
 	font-size: 14px;
@@ -94,9 +95,11 @@ ul.comment-list li {
 #respond input[type="email"],
 #respond input[type="url"] {
 	max-width: 100%;
+	border-radius: 4px;
 	width: 100%;
 }
 
 #respond input[type="submit"] {
+	border-radius: 4px;
 	cursor: pointer;
 }
