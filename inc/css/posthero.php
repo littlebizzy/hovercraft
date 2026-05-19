@@ -45,6 +45,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 #posthero img {
 	margin-right: 30px;
+	border-radius: 0;
 }
 
 #posthero img:last-of-type {
