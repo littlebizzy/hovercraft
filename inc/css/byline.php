@@ -28,12 +28,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 .byline-avatar {
 	width: 100%;
 	height: 100%;
-	border-radius: 0;
+	border-radius: 999px;
 	object-fit: cover;
 }
 
 .avatar {
-	border-radius: 0;
+	border-radius: 999px;
 }
 
 .post-author {
