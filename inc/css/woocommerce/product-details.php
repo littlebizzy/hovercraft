@@ -152,16 +152,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	display: table;
 }
 
-.woocommerce div.product form.cart div.quantity {
-	float: left;
-	margin: 0 10px 10px 0;
-}
-
-.woocommerce div.product form.cart .button {
-	float: left;
-	margin: 0 0 10px;
-}
-
 .woocommerce div.product form.cart .variations {
 	width: 100%;
 	margin: 0 0 20px;
@@ -480,10 +470,6 @@ section.related, section.upsells, .woocommerce section.related, .woocommerce sec
 		background: transparent !important;
 		border-bottom-color: <?php echo $default_link_color; ?> !important;
 		box-shadow: none !important;
-	}
-
-	.woocommerce div.product form.cart div.quantity, .woocommerce div.product form.cart .button {
-		float: none;
 	}
 
 	.woocommerce #reviews #comments ol.commentlist li .comment-text {
