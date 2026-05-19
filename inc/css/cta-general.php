@@ -14,13 +14,13 @@ button {
 	text-decoration: none;
 	background: #ECEFF1;
 	border: 0 !important;
-	border-radius: 0 !important;
+	border-radius: 4px !important;
 	cursor: pointer;
 }
 
 .button {
 	border: 0 !important;
-	border-radius: 0 !important;
+	border-radius: 4px !important;
 }
 
 .button-link,
