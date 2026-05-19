@@ -230,14 +230,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs {
+	align-items: flex-end;
 	clear: both;
-	display: flex;
+	display: flex !important;
 	flex-wrap: wrap;
 	gap: 0;
-	margin: 0 0 24px;
-	padding: 0;
-	border: 0;
-	border-bottom: 1px solid #e0e0e0;
+	justify-content: flex-start;
+	margin: 0 0 24px !important;
+	padding: 0 !important;
+	border: 0 !important;
+	box-shadow: inset 0 -1px 0 #e0e0e0;
 	list-style: none;
 }
 
@@ -250,8 +252,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	display: block;
 	position: relative;
 	z-index: 1;
-	margin: 0 4px -1px 0;
-	padding: 0;
+	margin: 0 4px 0 0 !important;
+	padding: 0 !important;
 	background: #f5f5f5;
 	border: 1px solid #e0e0e0;
 	border-bottom: 0;
@@ -260,11 +262,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	list-style: none;
 }
 
+.woocommerce div.product .woocommerce-tabs ul.tabs li:first-child {
+	margin-left: 0 !important;
+}
+
 .woocommerce div.product .woocommerce-tabs ul.tabs li.active {
 	z-index: 2;
 	background: #ffffff;
-	border-bottom: 1px solid #ffffff;
-	box-shadow: none;
+	border-bottom: 0;
+	box-shadow: 0 1px 0 #ffffff;
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li a {
@@ -462,14 +468,15 @@ section.related, section.upsells, .woocommerce section.related, .woocommerce sec
 		overflow-x: auto;
 		margin: 0 0 20px !important;
 		padding: 0 !important;
-		border-bottom: 1px solid #e0e0e0 !important;
+		border: 0 !important;
+		box-shadow: inset 0 -1px 0 #e0e0e0 !important;
 		white-space: nowrap;
 		-webkit-overflow-scrolling: touch;
 	}
 
 	.woocommerce div.product .woocommerce-tabs ul.tabs li {
 		flex: 0 0 auto;
-		margin: 0 4px -1px 0 !important;
+		margin: 0 4px 0 0 !important;
 		background: #f5f5f5 !important;
 		border: 1px solid #e0e0e0 !important;
 		border-bottom: 0 !important;
@@ -477,10 +484,14 @@ section.related, section.upsells, .woocommerce section.related, .woocommerce sec
 		box-shadow: none !important;
 	}
 
+	.woocommerce div.product .woocommerce-tabs ul.tabs li:first-child {
+		margin-left: 0 !important;
+	}
+
 	.woocommerce div.product .woocommerce-tabs ul.tabs li.active {
 		background: #ffffff !important;
-		border-bottom: 1px solid #ffffff !important;
-		box-shadow: none !important;
+		border-bottom: 0 !important;
+		box-shadow: 0 1px 0 #ffffff !important;
 	}
 
 	.woocommerce div.product .woocommerce-tabs ul.tabs li a {
