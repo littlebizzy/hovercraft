@@ -54,22 +54,20 @@ Do not create empty breakpoint blocks or duplicate identical declarations just t
 
 ### Corner Radius Policy
 
-HoverCraft should use square or lightly softened corners by default. The theme should feel clean, practical, and WordPress-native, not overly bubbly, app-like, or page-builder-styled.
+HoverCraft uses subtly softened corners as a core design standard. The goal is timeless, refined, lightly modern WordPress design: clean and professional, without looking bubbly, pill-heavy, app-like, or page-builder styled.
 
-Corner radius should be intentional and consistent across related UI pieces. Buttons, calls to action, form fields, tabs, product cards, widgets, sidebar blocks, notices, thumbnails, and island-style layout sections should not each invent their own unrelated corner shape.
+Use fixed corner radius values across major UI groups so WordPress, WooCommerce, and bbPress feel like one design system.
 
-Use these general tiers unless a specific component has a strong reason to differ:
+- `0px` for images, thumbnails, galleries, HTML tables, table cells, horizontal rules, separators, full-width bars, embedded media, iframe embeds, and structural content edges.
+- `4px` for buttons, calls to action, form fields, selects, textareas, search fields, quantity controls, add-to-cart controls, checkout controls, comment forms, notices, alerts, messages, pagination links, tabs, account navigation items, bbPress forms, bbPress actions, and compact controls.
+- `8px` for widgets, sidebar boxes, product cards, forum cards, topic cards, reply cards, content cards, island-style layout sections, boxed template sections, cart boxes, cross-sell boxes, account dashboard boxes, and reusable theme panels.
+- `999px` only for small badges, counters, labels, sale chips, status chips, and tiny inline metadata pills.
 
-- `0px` for structural containers, tables, classic content boxes, tab seams, and places where hard alignment matters.
-- `2px` to `4px` for buttons, form fields, selects, tabs, small notices, and compact WooCommerce controls.
-- `4px` to `8px` for product cards, widgets, sidebar boxes, media frames, and island-style sections that need a subtle card feeling.
-- Avoid large pill radiuses except for deliberately small badges, labels, counters, or compact status chips.
+Do not use arbitrary one-off radius values. If a new component looks like a button or form control, use `4px`. If it looks like a card, widget, panel, or island, use `8px`. If it is an image or table, use `0px`.
 
-Tabs should look like tabs. When using tabbed interfaces, the active tab may visually connect to the content area, while inactive tabs may use a subtle background and border. Avoid making tabs look like unrelated buttons or plain navigation links unless the design intentionally calls for a minimal underline style.
+Tabs should use `4px` on the top corners when they visually connect to a tab panel or tab boundary. Bottom tab corners should stay square when needed to preserve the tab seam.
 
-Buttons and calls to action should normally share the same radius family as form controls so checkout, product, cart, search, and comment actions feel related. Primary CTAs may use stronger color and weight, but should not use a radically different corner style without a clear theme-wide reason.
-
-Island-style layouts should use radius sparingly. If a section, widget, or sidebar island has a border, background, shadow, or padding, its radius should be subtle enough to preserve the theme's classic WordPress layout rhythm.
+Primary calls to action may use stronger color, font weight, spacing, or border treatment, but should still use the same `4px` radius as normal buttons and form controls.
 
 ### Breadcrumb Policy
 
