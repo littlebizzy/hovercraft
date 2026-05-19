@@ -21,6 +21,7 @@ img.featured-image-archive {
 	height: auto;
 	display: block;
 	margin-bottom: 20px;
+	border-radius: 0;
 }
 
 @media screen and (max-width: 1199px) {
