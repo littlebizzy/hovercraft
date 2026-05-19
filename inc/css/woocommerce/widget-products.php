@@ -25,7 +25,7 @@ ul.product_list_widget li, .woocommerce ul.product_list_widget li {
 	margin: 0;
 	padding: 0 !important;
 	background: #ffffff;
-	border-radius: 0;
+	border-radius: 8px;
 	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 	line-height: 1.5;
 	list-style: none;
@@ -73,6 +73,7 @@ ul.product_list_widget li img, .woocommerce ul.product_list_widget li img {
 	width: 100% !important;
 	height: auto !important;
 	margin-left: 0 !important;
+	border-radius: 0;
 	box-shadow: none !important;
 	aspect-ratio: 1 / 1 !important;
 	object-fit: cover !important;
@@ -146,6 +147,7 @@ ul.product_list_widget .star-rating, .woocommerce ul.product_list_widget .star-r
 	margin: 0 0 20px;
 	padding: 0 0 0 80px !important;
 	background: #ffffff;
+	border-radius: 8px;
 	color: <?php echo $default_text_color; ?>;
 	line-height: 1.5;
 	list-style: none;
@@ -179,6 +181,7 @@ ul.product_list_widget .star-rating, .woocommerce ul.product_list_widget .star-r
 	max-width: 60px;
 	height: auto !important;
 	margin: 0 !important;
+	border-radius: 0;
 	box-shadow: none !important;
 	object-fit: cover !important;
 }
@@ -190,7 +193,7 @@ ul.product_list_widget .star-rating, .woocommerce ul.product_list_widget .star-r
 	right: 0;
 	width: 24px;
 	height: 24px;
-	border-radius: 50%;
+	border-radius: 999px;
 	color: #ff1744 !important;
 	font-size: 20px;
 	font-weight: 700;
