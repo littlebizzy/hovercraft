@@ -389,7 +389,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	margin: 0 15px 10px 0;
 	padding: 0;
 	border: 0;
-	border-radius: 0;
+	border-radius: 999px;
 }
 
 .woocommerce #reviews #comments ol.commentlist li .comment-text {
