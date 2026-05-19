@@ -52,6 +52,25 @@ Breakpoint-specific layout CSS should generally use both `max-width: 1199px` and
 
 Do not create empty breakpoint blocks or duplicate identical declarations just to satisfy the breakpoint convention. Prefer explicit mobile and desktop blocks when values differ, and shared base declarations when values are truly identical.
 
+### Corner Radius Policy
+
+HoverCraft should use square or lightly softened corners by default. The theme should feel clean, practical, and WordPress-native, not overly bubbly, app-like, or page-builder-styled.
+
+Corner radius should be intentional and consistent across related UI pieces. Buttons, calls to action, form fields, tabs, product cards, widgets, sidebar blocks, notices, thumbnails, and island-style layout sections should not each invent their own unrelated corner shape.
+
+Use these general tiers unless a specific component has a strong reason to differ:
+
+- `0px` for structural containers, tables, classic content boxes, tab seams, and places where hard alignment matters.
+- `2px` to `4px` for buttons, form fields, selects, tabs, small notices, and compact WooCommerce controls.
+- `4px` to `8px` for product cards, widgets, sidebar boxes, media frames, and island-style sections that need a subtle card feeling.
+- Avoid large pill radiuses except for deliberately small badges, labels, counters, or compact status chips.
+
+Tabs should look like tabs. When using tabbed interfaces, the active tab may visually connect to the content area, while inactive tabs may use a subtle background and border. Avoid making tabs look like unrelated buttons or plain navigation links unless the design intentionally calls for a minimal underline style.
+
+Buttons and calls to action should normally share the same radius family as form controls so checkout, product, cart, search, and comment actions feel related. Primary CTAs may use stronger color and weight, but should not use a radically different corner style without a clear theme-wide reason.
+
+Island-style layouts should use radius sparingly. If a section, widget, or sidebar island has a border, background, shadow, or padding, its radius should be subtle enough to preserve the theme's classic WordPress layout rhythm.
+
 ### Breadcrumb Policy
 
 HoverCraft uses one custom breadcrumb system for core WordPress, WooCommerce, and bbPress contexts.
