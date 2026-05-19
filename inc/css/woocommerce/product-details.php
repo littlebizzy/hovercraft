@@ -241,20 +241,30 @@ if ( ! defined( 'ABSPATH' ) ) {
 	list-style: none;
 }
 
+.woocommerce div.product .woocommerce-tabs ul.tabs::before, .woocommerce div.product .woocommerce-tabs ul.tabs::after, .woocommerce div.product .woocommerce-tabs ul.tabs li::before, .woocommerce div.product .woocommerce-tabs ul.tabs li::after {
+	display: none !important;
+	content: none !important;
+}
+
 .woocommerce div.product .woocommerce-tabs ul.tabs li {
 	display: block;
+	position: relative;
+	z-index: 1;
 	margin: 0 4px -1px 0;
 	padding: 0;
 	background: #f5f5f5;
 	border: 1px solid #e0e0e0;
 	border-bottom: 0;
 	border-radius: 4px 4px 0 0;
+	box-shadow: none;
 	list-style: none;
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li.active {
+	z-index: 2;
 	background: #ffffff;
 	border-bottom: 1px solid #ffffff;
+	box-shadow: none;
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li a {
@@ -464,11 +474,13 @@ section.related, section.upsells, .woocommerce section.related, .woocommerce sec
 		border: 1px solid #e0e0e0 !important;
 		border-bottom: 0 !important;
 		border-radius: 4px 4px 0 0 !important;
+		box-shadow: none !important;
 	}
 
 	.woocommerce div.product .woocommerce-tabs ul.tabs li.active {
 		background: #ffffff !important;
 		border-bottom: 1px solid #ffffff !important;
+		box-shadow: none !important;
 	}
 
 	.woocommerce div.product .woocommerce-tabs ul.tabs li a {
