@@ -101,11 +101,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 @media screen and (max-width: 1199px) {
 	.cart-icon-wrapper {
+		position: relative;
+		min-width: 44px;
+		min-height: 44px;
 		padding-left: 0;
+		overflow: visible;
 	}
 
-	.notification-dot {
-		top: 3px;
-		right: 0;
+	.menu-mobile-wrapper .cart-icon-wrapper i {
+		font-size: 32px;
+	}
+
+	.menu-mobile-wrapper .notification-dot {
+		top: 4px;
+		right: 4px;
+		min-width: 18px;
+		height: 18px;
+		line-height: 18px;
 	}
 }
