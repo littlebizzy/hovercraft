@@ -88,7 +88,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* icons */
 #copyright i {
-	font-size: 20px;
+	font-size: 18px;
 	margin-left: 20px !important;
 }
 
