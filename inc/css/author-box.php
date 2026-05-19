@@ -13,7 +13,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	margin-top: 30px;
 	padding: 40px;
 	box-shadow: inset 0 0 0 1px #cccccc;
-	border-radius: 0;
+	border-radius: 8px;
 }
 
 #author p {
@@ -22,7 +22,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 .biography-photo img {
 	float: left; 
-	margin: 0 20px 0 0; 
+	margin: 0 20px 0 0;
+	border-radius: 0;
 }
 
 p.biography-description {
