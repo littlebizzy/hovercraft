@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	display: inline-block;
 	padding: 10px 20px;
 	border: 0;
-	border-radius: 0;
+	border-radius: 4px;
 	box-shadow: none;
 	cursor: pointer;
 	font-size: 16px;
@@ -80,6 +80,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	background: #ffffff !important;
 	border: 0;
 	border-collapse: collapse !important;
+	border-radius: 0;
 }
 
 .woocommerce div.product form.cart table.variations tbody, .woocommerce div.product form.cart table.variations tr, .single-product .summary .variations_form table.variations tbody, .single-product .summary .variations_form table.variations tr {
@@ -119,7 +120,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	padding: 8px 12px;
 	background: #ffffff !important;
 	border: 1px solid #cfcfcf !important;
-	border-radius: 0;
+	border-radius: 4px;
 	color: <?php echo $default_text_color; ?> !important;
 	line-height: 1.2;
 }
@@ -175,6 +176,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	background: #ffffff;
 	border: 1px solid #e0e0e0;
 	border-collapse: collapse;
+	border-radius: 0;
 }
 
 .woocommerce div.product form.cart.grouped_form table.group_table td {
@@ -199,7 +201,7 @@ input.qty {
 	padding: 0 !important;
 	background: #ffffff !important;
 	border: 1px solid #d9d9d9 !important;
-	border-radius: 0 !important;
+	border-radius: 4px !important;
 	box-shadow: none !important;
 	color: <?php echo $default_text_color; ?> !important;
 	font-size: 16px !important;
@@ -231,7 +233,7 @@ input.qty[type="number"] {
 	padding: 0 14px !important;
 	background: #ffffff !important;
 	border: 1px solid #d9d9d9 !important;
-	border-radius: 0 !important;
+	border-radius: 4px !important;
 	box-shadow: none !important;
 	color: <?php echo $default_text_color; ?> !important;
 	cursor: pointer !important;
