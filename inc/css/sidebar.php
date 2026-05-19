@@ -29,6 +29,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	width: 100%;
 	padding: 40px 40px;
 	background: <?php echo $sidebar_widget_background_color; ?>;
+	border-radius: 8px;
 	color: <?php echo $sidebar_widget_text_color; ?>;
 	box-shadow: inset 0 0 0 1px <?php echo $sidebar_widget_border_color; ?> !important;
 }
@@ -95,6 +96,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	max-width: 100%;
 	height: auto;
 	display: block;
+	border-radius: 0;
 }
 
 /* sidebar callout widget area (must load after #sidebar rules) */
@@ -139,6 +141,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	font-weight: 600;
 	color: <?php echo $sidebar_callout_link_color; ?> !important;
 	padding: 10px 0;
+	border-radius: 4px;
 	text-decoration: none;
 	display: block;
 	background: <?php echo $sidebar_callout_cta_background_color; ?> !important;
