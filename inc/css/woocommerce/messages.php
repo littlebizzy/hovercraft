@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	background: <?php echo $search_bar_background_color; ?>;
 	border: 0 !important;
 	border-left: 4px solid <?php echo $default_link_color; ?> !important;
-	border-radius: 0;
+	border-radius: 4px;
 	box-shadow: none !important;
 	color: <?php echo $default_text_color; ?> !important;
 	font-size: 16px;
@@ -88,7 +88,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	padding: 8px 20px !important;
 	background: <?php echo $default_link_color; ?> !important;
 	border: 0 !important;
-	border-radius: 0;
+	border-radius: 4px;
 	box-shadow: none !important;
 	color: #ffffff !important;
 	font-size: 14px !important;
