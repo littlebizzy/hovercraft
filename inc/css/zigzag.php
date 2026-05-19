@@ -12,13 +12,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 .zigzag-section {
 	text-align: left;
 	padding: 40px 40px;
-	border-radius: 8px;
 }
 
 .zigzag-section-reverse {
 	text-align: right;
 	padding: 40px;
-	border-radius: 8px;
 }
 
 .zigzag-section h3 {
