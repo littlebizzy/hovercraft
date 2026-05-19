@@ -11,11 +11,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	margin-bottom: 30px;
 	max-width: 100%;
 	height: auto;
+	border-radius: 0;
 	display: block;
 }
 
 .wp-caption img {
 	margin-bottom: 0 !important;
+	border-radius: 0;
 }
 
 .wp-caption-text {
