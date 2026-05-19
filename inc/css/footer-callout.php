@@ -9,6 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 #footer .widget-footer-callout {
 	background: <?php echo $footer_callout_background_color; ?> !important;
+	border-radius: 8px;
 	color: <?php echo $footer_callout_text_color; ?> !important;
 	box-shadow: inset 0 0 0 1px <?php echo $footer_callout_border_color; ?> !important;
 	padding: <?php echo $footer_callout_padding; ?>px;
