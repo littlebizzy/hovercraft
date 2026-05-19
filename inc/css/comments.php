@@ -24,6 +24,7 @@ ul.comment-list li {
 /* comment body styling */
 .comment-body {
 	border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+	border-radius: 0;
 	margin-bottom: 30px;
 	padding-bottom: 20px;
 }
@@ -49,6 +50,7 @@ ul.comment-list li {
 
 /* reply link */
 .comment-reply-link {
+	border-radius: 0;
 	color: <?php echo $default_link_color; ?>;
 	display: inline-block;
 	font-size: 14px;
@@ -65,6 +67,7 @@ ul.comment-list li {
 /* nested comments */
 .comment-list .children {
 	border-left: 1px solid rgba(0, 0, 0, 0.08);
+	border-radius: 0;
 	margin-left: 2rem;
 	margin-top: 1rem;
 	padding-left: 1rem;

@@ -52,4 +52,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 	display: block;
 	width: 100%;
 	padding: 10px 0;
+	border-radius: 0;
 }

@@ -27,6 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	width: 100% !important;
 	margin: 0 !important;
 	padding: 0;
+	border-radius: 0;
 	list-style: none outside !important;
 	line-height: 1.5 !important;
 	text-align: left;
