@@ -66,6 +66,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	text-align: center;
 	box-shadow: inset 0 0 0 1px <?php echo $tile_border_color; ?>;
 	background: <?php echo $tile_background_color; ?>;
+	border-radius: 8px;
 }
 
 @media screen and (max-width: 1199px) {
@@ -94,6 +95,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 .tile img {
 	display: block;
 	margin: 0 auto;
+	border-radius: 0;
 }
 
 .tile p:last-child {
