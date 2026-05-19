@@ -75,7 +75,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	display: inline-block;
 	width: 24px;
 	height: 24px;
-	border-radius: 50% !important;
+	border-radius: 999px !important;
 	color: #ff1744 !important;
 	font-size: 24px;
 	font-weight: 700;
@@ -119,7 +119,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	max-width: 100%;
 	padding: 10px;
 	border: 1px solid #e0e0e0 !important;
-	border-radius: 0;
+	border-radius: 4px;
 	box-sizing: border-box;
 	font-size: 16px;
 	line-height: 1.5;
@@ -129,7 +129,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	padding: 10px 16px;
 	background: <?php echo $default_link_color; ?> !important;
 	border: 1px solid transparent !important;
-	border-radius: 0;
+	border-radius: 4px;
 	box-sizing: border-box;
 	color: #ffffff !important;
 	cursor: pointer;
@@ -168,7 +168,7 @@ form.woocommerce-cart-form button[name="update_cart"]:disabled, form.woocommerce
 	margin: 0;
 	background: <?php echo $search_bar_background_color; ?>;
 	border: 1px solid #e0e0e0;
-	border-radius: 0;
+	border-radius: 8px;
 }
 
 .woocommerce-cart .cart_totals h2 {
@@ -185,6 +185,7 @@ form.woocommerce-cart-form button[name="update_cart"]:disabled, form.woocommerce
 	margin: 0;
 	background: #ffffff;
 	border-collapse: collapse;
+	border-radius: 0;
 }
 
 .woocommerce-cart .cart_totals table th, .woocommerce-cart .cart_totals table td {
@@ -292,7 +293,7 @@ form.woocommerce-cart-form button[name="update_cart"]:disabled, form.woocommerce
 	padding: 14px 24px;
 	background: <?php echo $default_link_color; ?>;
 	border: 0;
-	border-radius: 0;
+	border-radius: 4px;
 	color: #ffffff;
 	font-size: 16px;
 	line-height: 1.5;
@@ -339,6 +340,7 @@ form.woocommerce-cart-form button[name="update_cart"]:disabled, form.woocommerce
 }
 
 .woocommerce-cart .cross-sells ul.products li.product a img {
+	border-radius: 0;
 	object-fit: contain !important;
 	object-position: center center !important;
 }
