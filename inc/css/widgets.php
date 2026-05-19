@@ -20,4 +20,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 .widget-wrapper iframe {
 	max-width: 100%;
+	border-radius: 0;
 }
