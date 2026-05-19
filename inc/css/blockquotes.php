@@ -11,7 +11,6 @@ blockquote {
 	margin: 30px 0 30px 30px;
 	padding: 30px 30px;
 	border-left: 5px solid <?php echo $blockquote_border_color; ?>;
-	border-radius: 8px;
 	color: <?php echo $blockquote_text_color; ?>;
 }
 
