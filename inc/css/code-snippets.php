@@ -20,6 +20,7 @@ pre,
 code {
 	padding: 2px 5px;
 	background: <?php echo $search_bar_background_color; ?>;
+	border-radius: 4px;
 }
 
 pre,
@@ -28,6 +29,7 @@ pre,
 	padding: 16px 20px;
 	margin-bottom: 30px;
 	background: <?php echo $search_bar_background_color; ?>;
+	border-radius: 8px;
 	box-shadow: inset 0 0 0 1px <?php echo $default_text_color; ?>;
 	overflow-x: auto;
 	white-space: pre;
@@ -37,6 +39,7 @@ pre code,
 .pre code {
 	padding: 0;
 	background: transparent;
+	border-radius: 0;
 	box-shadow: none;
 }
 
