@@ -16,6 +16,7 @@ a.button-secondary {
 	display: inline-block;
 	padding: 10px 20px;
 	background: transparent;
+	border-radius: 4px;
 	text-decoration: none;
 	color: <?php echo $default_text_color; ?>;
 	box-shadow: inset 0 0 0 1px <?php echo $default_text_color; ?>;
