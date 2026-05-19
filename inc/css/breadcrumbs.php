@@ -52,11 +52,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	margin-right: 0;
 }
 
-.breadcrumbs i {
-	font-size: 18px !important;
-	margin-right: 5px;
-}
-
 .breadcrumbs a, .breadcrumbs a:hover {
 	color: <?php echo $breadcrumbs_link_color; ?>;
 }
