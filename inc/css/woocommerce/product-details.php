@@ -237,7 +237,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	margin: 0 0 24px;
 	padding: 0;
 	border: 0;
-	border-bottom: 1px solid #e0e0e0;
+	border-bottom: 0;
 	list-style: none;
 }
 
@@ -250,11 +250,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	display: block;
 	position: relative;
 	z-index: 1;
-	margin: 0 4px -1px 0;
+	margin: 0 4px 0 0;
 	padding: 0;
 	background: #f5f5f5;
 	border: 1px solid #e0e0e0;
-	border-bottom: 0;
 	border-radius: 4px 4px 0 0;
 	box-shadow: none;
 	list-style: none;
@@ -462,17 +461,16 @@ section.related, section.upsells, .woocommerce section.related, .woocommerce sec
 		overflow-x: auto;
 		margin: 0 0 20px !important;
 		padding: 0 !important;
-		border-bottom: 1px solid #e0e0e0 !important;
+		border-bottom: 0 !important;
 		white-space: nowrap;
 		-webkit-overflow-scrolling: touch;
 	}
 
 	.woocommerce div.product .woocommerce-tabs ul.tabs li {
 		flex: 0 0 auto;
-		margin: 0 4px -1px 0 !important;
+		margin: 0 4px 0 0 !important;
 		background: #f5f5f5 !important;
 		border: 1px solid #e0e0e0 !important;
-		border-bottom: 0 !important;
 		border-radius: 4px 4px 0 0 !important;
 		box-shadow: none !important;
 	}
