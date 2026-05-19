@@ -14,13 +14,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 	width: 100%;
 	padding: 0;
 	color: <?php echo $breadcrumbs_text_color; ?>;
-	font-size: 14px;
+	font-size: 14px;	
 	white-space: normal;
 }
 
 @media screen and (max-width: 1199px) {
 	.breadcrumbs {
-		margin: 0 0 20px;
+		box-sizing: border-box;
+		margin: 0 0 16px;
+		padding: 0 20px;
+		font-size: 13px;
 		line-height: 18px !important;
 	}
 }
