@@ -21,7 +21,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	display: inline-block;
 	margin-right: 5px;
 	vertical-align: middle;
-	clip-path: circle();
 	width: 25px;
 	height: 25px;
 }
@@ -29,11 +28,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 .byline-avatar {
 	width: 100%;
 	height: 100%;
+	border-radius: 0;
 	object-fit: cover;
 }
 
 .avatar {
-	border-radius: 50%;
+	border-radius: 0;
 }
 
 .post-author {
