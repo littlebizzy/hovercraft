@@ -211,7 +211,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 .woocommerce div.product .product_meta a:hover {
-	color: <?php echo $default_hover_color; ?>;
+	color: <?php echo $breadcrumbs_link_color; ?>;
 	text-decoration: underline;
 }
 
