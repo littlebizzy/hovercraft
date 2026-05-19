@@ -256,7 +256,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	padding: 0 0 12px;
 	background: transparent;
 	border-bottom: 2px solid transparent;
-	color: <?php echo $breadcrumbs_text_color; ?>;
+	color: <?php echo $default_text_color; ?>;
 	font-size: 14px;
 	font-weight: 700;
 	line-height: 1.5;
