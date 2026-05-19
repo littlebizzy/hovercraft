@@ -33,3 +33,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 	width: 100%;
 	margin-top: 40px;
 }
+
+.cta-footer-callout ul {
+	margin: 0 !important;
+	padding: 0 !important;
+}
+
+.cta-footer-callout ul li {
+	display: block;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.cta-footer-callout ul li a {
+	display: block;
+	width: 100%;
+	padding: 10px 0;
+	border-radius: 4px;
+}
