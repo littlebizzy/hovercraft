@@ -86,7 +86,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	padding: 10px 44px;
 	color: #ffffff;
 	background: transparent;
-	border-radius: 0;
+	border-radius: 4px;
 	box-shadow: inset 0 0 0 1px #ffffff;
 	text-decoration: none;
 	vertical-align: middle;
