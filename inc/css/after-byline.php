@@ -9,7 +9,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 .after-byline {
 	background: <?php echo $after_byline_background_color; ?>;
-	border-radius: 8px;
 	padding: <?php echo $after_byline_padding; ?>px;
 	color: <?php echo $after_byline_text_color; ?>;
 }
