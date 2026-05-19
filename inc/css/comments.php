@@ -49,7 +49,6 @@ ul.comment-list li {
 
 /* reply link */
 .comment-reply-link {
-	border-radius: 4px;
 	color: <?php echo $default_link_color; ?>;
 	display: inline-block;
 	font-size: 14px;
