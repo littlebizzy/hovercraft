@@ -241,18 +241,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li {
 	display: block;
-	margin: 0 24px -1px 0;
+	margin: 0 4px -1px 0;
 	padding: 0;
-	background: transparent;
-	border: 0;
+	background: #f5f5f5;
+	border: 1px solid #e0e0e0;
+	border-bottom: 0;
 	list-style: none;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active {
+	background: #ffffff;
+	border-bottom: 1px solid #ffffff;
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li a {
 	display: block;
-	padding: 0 0 12px;
+	padding: 10px 16px 11px;
 	background: transparent;
-	border-bottom: 2px solid transparent;
+	border: 0;
 	color: <?php echo $default_text_color; ?>;
 	font-size: 14px;
 	font-weight: 700;
@@ -261,7 +267,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li.active a, .woocommerce div.product .woocommerce-tabs ul.tabs li a:hover {
-	border-bottom-color: <?php echo $default_link_color; ?>;
 	color: <?php echo $default_link_color; ?>;
 }
 
@@ -449,15 +454,21 @@ section.related, section.upsells, .woocommerce section.related, .woocommerce sec
 
 	.woocommerce div.product .woocommerce-tabs ul.tabs li {
 		flex: 0 0 auto;
-		margin: 0 20px -1px 0 !important;
-		background: transparent !important;
-		border: 0 !important;
+		margin: 0 4px -1px 0 !important;
+		background: #f5f5f5 !important;
+		border: 1px solid #e0e0e0 !important;
+		border-bottom: 0 !important;
+	}
+
+	.woocommerce div.product .woocommerce-tabs ul.tabs li.active {
+		background: #ffffff !important;
+		border-bottom: 1px solid #ffffff !important;
 	}
 
 	.woocommerce div.product .woocommerce-tabs ul.tabs li a {
-		padding: 0 0 10px !important;
+		padding: 9px 14px 10px !important;
 		background: transparent !important;
-		border-bottom: 2px solid transparent !important;
+		border: 0 !important;
 		box-shadow: none !important;
 		font-size: 14px !important;
 		line-height: 1.5 !important;
@@ -465,7 +476,6 @@ section.related, section.upsells, .woocommerce section.related, .woocommerce sec
 
 	.woocommerce div.product .woocommerce-tabs ul.tabs li.active a, .woocommerce div.product .woocommerce-tabs ul.tabs li a:hover {
 		background: transparent !important;
-		border-bottom-color: <?php echo $default_link_color; ?> !important;
 		box-shadow: none !important;
 	}
 
