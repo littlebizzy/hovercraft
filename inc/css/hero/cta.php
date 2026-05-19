@@ -57,6 +57,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	color: #ffffff;
 	text-decoration: none;
 	background: <?php echo $default_link_color; ?>;
+	border-radius: 4px;
 }
 
 @media screen and (max-width: 1199px) {
@@ -103,6 +104,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	padding: 10px 0;
 	text-decoration: none;
 	background: transparent;
+	border-radius: 4px;
 	box-shadow: inset 0 0 0 1px #ffffff;
 }
 
