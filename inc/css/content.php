@@ -11,6 +11,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 #content-wrapper {
 	background: <?php echo $content_background_color; ?>;
+	<?php if ( $sitewide_layout == 'floating_islands' ) {
+		echo "border-radius: 8px;\n";
+	} else {
+		echo "border-radius: 0;\n";
+	} ?>
 }
 
 /* content (primary area) unordered and ordered lists */
@@ -76,6 +81,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 #content-padded iframe {
 	margin-bottom: 30px;
+	border-radius: 0;
 }
 
 #content-padded img {
@@ -83,4 +89,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 	max-width: 100%;
 	height: auto;
 	display: block;
+	border-radius: 0;
 }
