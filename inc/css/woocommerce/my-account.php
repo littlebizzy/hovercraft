@@ -68,6 +68,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 .woocommerce-account .woocommerce-MyAccount-content mark {
 	background: <?php echo $search_bar_background_color; ?>;
+	border-radius: 4px;
 	color: <?php echo $default_text_color; ?>;
 	font-weight: 600;
 }
