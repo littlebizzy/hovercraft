@@ -34,6 +34,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 .gallery img {
 	margin-bottom: 20px;
 	border: 0;
+	border-radius: 0;
 	display: block;
 }
 
