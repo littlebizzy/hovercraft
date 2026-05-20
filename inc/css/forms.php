@@ -18,6 +18,7 @@ form {
 label {
 	display: block;
 	margin-bottom: 6px;
+	color: <?php echo $default_text_color; ?>;
 	font-size: 15px;
 	font-weight: 600;
 	line-height: 1.4;
@@ -32,6 +33,7 @@ fieldset {
 
 legend {
 	padding: 0 6px;
+	color: <?php echo $default_text_color; ?>;
 	font-size: 16px;
 	font-weight: 600;
 	line-height: 1.4;
@@ -56,6 +58,13 @@ input:not([type="button"]):not([type="checkbox"]):not([type="file"]):not([type="
 	line-height: 1.5;
 	vertical-align: middle;
 	transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+input:not([type="button"]):not([type="checkbox"]):not([type="file"]):not([type="hidden"]):not([type="radio"]):not([type="range"]):not([type="reset"]):not([type="submit"]):focus, select:focus, textarea:focus {
+	background: #ffffff;
+	box-shadow: inset 0 0 0 2px <?php echo $default_link_color; ?>;
+	color: <?php echo $default_text_color; ?>;
+	outline: 0;
 }
 
 select {
@@ -89,6 +98,11 @@ input[type="checkbox"], input[type="radio"] {
 	box-shadow: none;
 	cursor: pointer;
 	vertical-align: middle;
+}
+
+input[type="checkbox"]:focus, input[type="radio"]:focus {
+	outline: 1px solid <?php echo $default_link_color; ?>;
+	outline-offset: 2px;
 }
 
 input[type="file"] {
@@ -165,8 +179,10 @@ form button, input[type="button"], input[type="reset"], input[type="submit"] {
 	transition: background-color 0.15s ease-in-out, color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-form button:hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover {
+form button:hover, form button:focus, form button:active, input[type="button"]:hover, input[type="button"]:focus, input[type="button"]:active, input[type="reset"]:hover, input[type="reset"]:focus, input[type="reset"]:active, input[type="submit"]:hover, input[type="submit"]:focus, input[type="submit"]:active {
 	background: <?php echo $default_hover_color; ?> !important;
+	color: #ffffff;
+	outline: 0;
 }
 
 input::placeholder, textarea::placeholder {
@@ -174,7 +190,7 @@ input::placeholder, textarea::placeholder {
 	opacity: 0.65;
 }
 
-input:disabled, select:disabled, textarea:disabled, button:disabled {
+input:disabled, select:disabled, textarea:disabled, button:disabled, input[type="button"]:disabled, input[type="reset"]:disabled, input[type="submit"]:disabled {
 	background: <?php echo $search_bar_background_color; ?>;
 	box-shadow: inset 0 0 0 1px <?php echo $default_text_color; ?>;
 	color: <?php echo $default_text_color; ?>;
