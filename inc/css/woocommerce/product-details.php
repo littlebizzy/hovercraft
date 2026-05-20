@@ -236,7 +236,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	gap: 0;
 	justify-content: flex-start;
 	margin: 0 0 24px !important;
-	padding: 0 !important;
+	padding: 1px 0 0 !important;
 	border: 0 !important;
 	box-shadow: inset 0 -1px 0 #e0e0e0;
 	list-style: none;
@@ -475,7 +475,7 @@ section.related, section.upsells, .woocommerce section.related, .woocommerce sec
 		flex-wrap: nowrap !important;
 		overflow-x: auto;
 		margin: 0 0 20px !important;
-		padding: 0 !important;
+		padding: 1px 0 0 !important;
 		border: 0 !important;
 		box-shadow: inset 0 -1px 0 #e0e0e0 !important;
 		white-space: nowrap;
