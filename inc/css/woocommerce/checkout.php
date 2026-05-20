@@ -34,9 +34,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	clear: both;
 	margin: 0 0 20px;
 	padding: 0;
-	color: <?php echo $default_text_color; ?>;
 	font-size: 22px;
-	line-height: 1.3;
 }
 
 .woocommerce-checkout .form-row {
