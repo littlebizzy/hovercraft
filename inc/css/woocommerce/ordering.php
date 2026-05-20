@@ -5,6 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // styles for woocommerce ordering
+$woocommerce_ordering_select_arrow_color = rawurlencode( $default_text_color );
 ?>
 
 form.woocommerce-ordering, .woocommerce form.woocommerce-ordering {
@@ -13,11 +14,18 @@ form.woocommerce-ordering, .woocommerce form.woocommerce-ordering {
 }
 
 form.woocommerce-ordering select, .woocommerce form.woocommerce-ordering select {
+	appearance: none !important;
+	-webkit-appearance: none !important;
+	-moz-appearance: none !important;
 	min-width: 220px !important;
 	height: 46px !important;
 	min-height: 46px !important;
 	padding: 10px 44px 10px 16px !important;
 	background-color: #ffffff !important;
+	background-image: url('data:image/svg+xml;utf8,<svg fill="<?php echo $woocommerce_ordering_select_arrow_color; ?>" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') !important;
+	background-position: right 14px center !important;
+	background-repeat: no-repeat !important;
+	background-size: 16px !important;
 	border: 0 !important;
 	border-radius: 4px !important;
 	box-shadow: inset 0 0 0 1px #e0e0e0 !important;
