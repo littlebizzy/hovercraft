@@ -188,7 +188,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	float: left;
 	margin: 0;
 	font-size: 22px;
-	line-height: 1.3;
 }
 
 .woocommerce-account .woocommerce-Address-title .edit {
