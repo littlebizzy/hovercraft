@@ -76,7 +76,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 .woocommerce div.product form.cart table.variations, .single-product .summary .variations_form table.variations {
 	width: 100% !important;
-	margin: 0 0 30px !important;
+	margin: 0 0 12px !important;
 	background: transparent !important;
 	border: 0;
 	border-collapse: collapse !important;
@@ -109,7 +109,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 .woocommerce div.product form.cart table.variations td.value, .single-product .summary .variations_form table.variations td.value {
-	padding-bottom: 16px !important;
+	padding-bottom: 0 !important;
 }
 
 .woocommerce div.product form.cart table.variations td.value select, .single-product .summary .variations_form table.variations td.value select {
