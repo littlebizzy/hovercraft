@@ -165,11 +165,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 .woocommerce div.product form.cart .single_variation, .woocommerce div.product form.cart .woocommerce-variation, div.single_variation_wrap {
 	clear: both;
-	margin: 0 0 20px;
+	margin: 0;
+}
+
+.woocommerce div.product form.cart .single_variation:empty, .woocommerce div.product form.cart .woocommerce-variation:empty {
+	display: none !important;
+	margin: 0 !important;
 }
 
 .woocommerce div.product form.cart .woocommerce-variation-price, .woocommerce div.product form.cart .woocommerce-variation-availability, .woocommerce div.product form.cart .woocommerce-variation-description {
-	margin: 0 0 15px;
+	margin: 0 0 12px;
 }
 
 .woocommerce div.product form.cart .woocommerce-variation-description p:last-child {
