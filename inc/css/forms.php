@@ -27,7 +27,7 @@ label {
 fieldset {
 	margin: 0 0 20px;
 	padding: 20px;
-	border: 1px solid <?php echo $default_text_color; ?>;
+	border: 1px solid #e0e0e0;
 	border-radius: 8px;
 }
 
@@ -50,7 +50,7 @@ input:not([type="button"]):not([type="checkbox"]):not([type="file"]):not([type="
 	background: #ffffff;
 	border: 0 !important;
 	border-radius: 4px;
-	box-shadow: inset 0 0 0 1px <?php echo $default_text_color; ?>;
+	box-shadow: inset 0 0 0 1px #e0e0e0;
 	color: <?php echo $default_text_color; ?>;
 	font-family: inherit;
 	font-size: 16px;
@@ -192,7 +192,7 @@ input::placeholder, textarea::placeholder {
 
 input:disabled, select:disabled, textarea:disabled, button:disabled, input[type="button"]:disabled, input[type="reset"]:disabled, input[type="submit"]:disabled {
 	background: <?php echo $search_bar_background_color; ?>;
-	box-shadow: inset 0 0 0 1px <?php echo $default_text_color; ?>;
+	box-shadow: inset 0 0 0 1px #e0e0e0;
 	color: <?php echo $default_text_color; ?>;
 	cursor: not-allowed;
 	opacity: 0.65;
@@ -200,7 +200,7 @@ input:disabled, select:disabled, textarea:disabled, button:disabled, input[type=
 
 input[readonly], textarea[readonly] {
 	background: <?php echo $search_bar_background_color; ?>;
-	box-shadow: inset 0 0 0 1px <?php echo $default_text_color; ?>;
+	box-shadow: inset 0 0 0 1px #e0e0e0;
 	color: <?php echo $default_text_color; ?>;
 }
 
