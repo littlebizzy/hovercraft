@@ -14,21 +14,26 @@ form.woocommerce-ordering, .woocommerce form.woocommerce-ordering {
 
 form.woocommerce-ordering select, .woocommerce form.woocommerce-ordering select {
 	min-width: 220px !important;
-	height: 44px !important;
-	padding: 0 44px 0 16px !important;
+	height: 46px !important;
+	min-height: 46px !important;
+	padding: 10px 44px 10px 16px !important;
 	background-color: #ffffff !important;
+	border: 0 !important;
 	border-radius: 4px !important;
-	box-shadow: inset 0 0 0 1px <?php echo $breadcrumbs_text_color; ?> !important;
+	box-shadow: inset 0 0 0 1px <?php echo $default_text_color; ?> !important;
 	color: <?php echo $default_text_color; ?> !important;
 	cursor: pointer !important;
 	font-size: 16px !important;
 	font-weight: 400 !important;
-	line-height: 44px !important;
+	line-height: 1.5 !important;
 	vertical-align: middle !important;
 }
 
 form.woocommerce-ordering select:active, form.woocommerce-ordering select:focus, .woocommerce form.woocommerce-ordering select:active, .woocommerce form.woocommerce-ordering select:focus {
-	box-shadow: inset 0 0 0 1px <?php echo $default_link_color; ?> !important;
+	background-color: #ffffff !important;
+	box-shadow: inset 0 0 0 2px <?php echo $default_link_color; ?> !important;
+	color: <?php echo $default_text_color; ?> !important;
+	outline: 0 !important;
 }
 
 .woocommerce .woocommerce-ordering::after {
