@@ -261,11 +261,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	border-radius: 4px 4px 0 0;
 	box-shadow: none;
 	list-style: none;
-	transition: none;
+	transition: background-color 0.15s ease-in-out;
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li:first-child {
 	margin-left: 0 !important;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li:not(.active):hover, .woocommerce div.product .woocommerce-tabs ul.tabs li:not(.active):focus-within {
+	background: rgba(0, 0, 0, 0.04);
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li.active {
@@ -274,6 +278,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	border-bottom: 0 !important;
 	box-shadow: 0 1px 0 #ffffff !important;
 	transition: none;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active:hover, .woocommerce div.product .woocommerce-tabs ul.tabs li.active:focus-within {
+	background: #ffffff !important;
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li a {
@@ -492,7 +500,11 @@ section.related, section.upsells, .woocommerce section.related, .woocommerce sec
 		border-bottom: 0 !important;
 		border-radius: 4px 4px 0 0 !important;
 		box-shadow: none !important;
-		transition: none !important;
+		transition: background-color 0.15s ease-in-out !important;
+	}
+
+	.woocommerce div.product .woocommerce-tabs ul.tabs li:not(.active):hover, .woocommerce div.product .woocommerce-tabs ul.tabs li:not(.active):focus-within {
+		background: rgba(0, 0, 0, 0.04) !important;
 	}
 
 	.woocommerce div.product .woocommerce-tabs ul.tabs li:first-child {
@@ -504,6 +516,10 @@ section.related, section.upsells, .woocommerce section.related, .woocommerce sec
 		border-bottom: 0 !important;
 		box-shadow: 0 1px 0 #ffffff !important;
 		transition: none !important;
+	}
+
+	.woocommerce div.product .woocommerce-tabs ul.tabs li.active:hover, .woocommerce div.product .woocommerce-tabs ul.tabs li.active:focus-within {
+		background: #ffffff !important;
 	}
 
 	.woocommerce div.product .woocommerce-tabs ul.tabs li a {
