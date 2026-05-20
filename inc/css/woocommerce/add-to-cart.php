@@ -118,32 +118,30 @@ if ( ! defined( 'ABSPATH' ) ) {
 	box-sizing: border-box !important;
 	width: 100% !important;
 	max-width: 100% !important;
-	height: 44px !important;
-	padding: 0 14px !important;
-	background: #ffffff !important;
-	border: 1px solid #d9d9d9 !important;
+	height: 46px !important;
+	min-height: 46px !important;
+	padding: 10px 16px !important;
+	background-color: #ffffff !important;
+	border: 0 !important;
 	border-radius: 4px !important;
-	box-shadow: none !important;
+	box-shadow: inset 0 0 0 1px <?php echo $default_text_color; ?> !important;
 	color: <?php echo $default_text_color; ?> !important;
 	cursor: pointer !important;
 	font-size: 16px !important;
 	font-weight: 400 !important;
-	line-height: 44px !important;
+	line-height: 1.5 !important;
 	vertical-align: middle !important;
-	appearance: auto !important;
 }
 
 .woocommerce div.product form.cart table.variations td.value select:hover, .single-product .summary .variations_form table.variations td.value select:hover {
-	background: #ffffff !important;
-	border-color: #bdbdbd !important;
-	box-shadow: none !important;
+	background-color: #ffffff !important;
+	box-shadow: inset 0 0 0 1px <?php echo $default_text_color; ?> !important;
 	color: <?php echo $default_text_color; ?> !important;
 }
 
 .woocommerce div.product form.cart table.variations td.value select:focus, .woocommerce div.product form.cart table.variations td.value select:active, .single-product .summary .variations_form table.variations td.value select:focus, .single-product .summary .variations_form table.variations td.value select:active {
-	background: #ffffff !important;
-	border-color: <?php echo $default_link_color; ?> !important;
-	box-shadow: inset 0 0 0 1px <?php echo $default_link_color; ?> !important;
+	background-color: #ffffff !important;
+	box-shadow: inset 0 0 0 2px <?php echo $default_link_color; ?> !important;
 	color: <?php echo $default_text_color; ?> !important;
 	outline: 0 !important;
 }
@@ -231,22 +229,30 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 input.qty {
 	width: 60px !important;
-	height: 44px !important;
+	height: 46px !important;
+	min-height: 46px !important;
 	margin: 0 !important;
-	padding: 0 !important;
+	padding: 10px 16px !important;
 	background: #ffffff !important;
-	border: 1px solid #d9d9d9 !important;
+	border: 0 !important;
 	border-radius: 4px !important;
-	box-shadow: none !important;
+	box-shadow: inset 0 0 0 1px <?php echo $default_text_color; ?> !important;
 	color: <?php echo $default_text_color; ?> !important;
 	font-size: 16px !important;
 	font-weight: 400 !important;
-	line-height: 44px !important;
+	line-height: 1.5 !important;
 	text-align: center !important;
 	vertical-align: middle !important;
 	appearance: textfield;
 	-moz-appearance: textfield;
 	-webkit-appearance: none;
+}
+
+input.qty:focus, input.qty:active {
+	background: #ffffff !important;
+	box-shadow: inset 0 0 0 2px <?php echo $default_link_color; ?> !important;
+	color: <?php echo $default_text_color; ?> !important;
+	outline: 0 !important;
 }
 
 input.qty::-webkit-outer-spin-button, input.qty::-webkit-inner-spin-button {
@@ -263,32 +269,31 @@ input.qty[type="number"] {
 	box-sizing: border-box !important;
 	width: 100% !important;
 	max-width: 100% !important;
-	height: 44px !important;
+	height: 46px !important;
+	min-height: 46px !important;
 	margin: 0 !important;
-	padding: 0 14px !important;
-	background: #ffffff !important;
-	border: 1px solid #d9d9d9 !important;
+	padding: 10px 16px !important;
+	background-color: #ffffff !important;
+	border: 0 !important;
 	border-radius: 4px !important;
-	box-shadow: none !important;
+	box-shadow: inset 0 0 0 1px <?php echo $default_text_color; ?> !important;
 	color: <?php echo $default_text_color; ?> !important;
 	cursor: pointer !important;
 	font-size: 16px !important;
 	font-weight: 400 !important;
-	line-height: 44px !important;
+	line-height: 1.5 !important;
 	text-align: center !important;
 	vertical-align: middle !important;
-	appearance: auto !important;
 }
 
 .quantity select.qty:hover, .hovercraft-quantity-select:hover {
-	background: #ffffff !important;
-	border-color: #bdbdbd !important;
+	background-color: #ffffff !important;
+	box-shadow: inset 0 0 0 1px <?php echo $default_text_color; ?> !important;
 }
 
 .quantity select.qty:focus, .quantity select.qty:active, .hovercraft-quantity-select:focus, .hovercraft-quantity-select:active {
-	background: #ffffff !important;
-	border-color: <?php echo $default_link_color; ?> !important;
-	box-shadow: inset 0 0 0 1px <?php echo $default_link_color; ?> !important;
+	background-color: #ffffff !important;
+	box-shadow: inset 0 0 0 2px <?php echo $default_link_color; ?> !important;
 	color: <?php echo $default_text_color; ?> !important;
 	outline: 0 !important;
 }
