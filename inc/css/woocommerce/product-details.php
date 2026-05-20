@@ -103,6 +103,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	position: relative;
 }
 
+/* woocommerce h1 reset */
+
 .woocommerce div.product .product_title {
 	clear: none;
 	padding: 0;
@@ -531,6 +533,8 @@ section.related, section.upsells, .woocommerce section.related, .woocommerce sec
 }
 
 @media screen and (min-width: 1200px) {
+	/* woocommerce breadcrumb fallback */
+
 	.single-product .woocommerce-breadcrumb, body.single-product.woocommerce .woocommerce-breadcrumb {
 		margin-bottom: 30px;
 	}
