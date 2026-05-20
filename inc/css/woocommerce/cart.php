@@ -117,12 +117,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 .woocommerce-cart .coupon input.input-text {
 	width: auto !important;
 	max-width: 100%;
-	padding: 10px;
-	border: 1px solid #e0e0e0 !important;
-	border-radius: 4px;
+	min-height: 46px;
+	padding: 10px 16px !important;
+	background: #ffffff !important;
+	border: 0 !important;
+	border-radius: 4px !important;
+	box-shadow: inset 0 0 0 1px <?php echo $default_text_color; ?> !important;
 	box-sizing: border-box;
+	color: <?php echo $default_text_color; ?> !important;
 	font-size: 16px;
 	line-height: 1.5;
+}
+
+.woocommerce-cart .coupon input.input-text:focus {
+	background: #ffffff !important;
+	box-shadow: inset 0 0 0 2px <?php echo $default_link_color; ?> !important;
+	color: <?php echo $default_text_color; ?> !important;
+	outline: 0 !important;
 }
 
 .woocommerce-cart .coupon .button, form.woocommerce-cart-form button[name="update_cart"] {
