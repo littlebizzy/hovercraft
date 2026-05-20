@@ -260,6 +260,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	border-radius: 4px 4px 0 0;
 	box-shadow: none;
 	list-style: none;
+	transition: none;
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li:first-child {
@@ -268,9 +269,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li.active {
 	z-index: 2;
-	background: #ffffff;
-	border-bottom: 0;
-	box-shadow: 0 1px 0 #ffffff;
+	background: #ffffff !important;
+	border-bottom: 0 !important;
+	box-shadow: 0 1px 0 #ffffff !important;
+	transition: none;
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li a {
@@ -283,6 +285,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	font-weight: 700;
 	line-height: 1.5;
 	text-decoration: none;
+	transition: none;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active a {
+	background: #ffffff !important;
+	box-shadow: none !important;
+	transition: none;
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li.active a, .woocommerce div.product .woocommerce-tabs ul.tabs li a:hover {
@@ -482,6 +491,7 @@ section.related, section.upsells, .woocommerce section.related, .woocommerce sec
 		border-bottom: 0 !important;
 		border-radius: 4px 4px 0 0 !important;
 		box-shadow: none !important;
+		transition: none !important;
 	}
 
 	.woocommerce div.product .woocommerce-tabs ul.tabs li:first-child {
@@ -492,6 +502,7 @@ section.related, section.upsells, .woocommerce section.related, .woocommerce sec
 		background: #ffffff !important;
 		border-bottom: 0 !important;
 		box-shadow: 0 1px 0 #ffffff !important;
+		transition: none !important;
 	}
 
 	.woocommerce div.product .woocommerce-tabs ul.tabs li a {
@@ -501,10 +512,16 @@ section.related, section.upsells, .woocommerce section.related, .woocommerce sec
 		box-shadow: none !important;
 		font-size: 14px !important;
 		line-height: 1.5 !important;
+		transition: none !important;
+	}
+
+	.woocommerce div.product .woocommerce-tabs ul.tabs li.active a {
+		background: #ffffff !important;
+		box-shadow: none !important;
+		transition: none !important;
 	}
 
 	.woocommerce div.product .woocommerce-tabs ul.tabs li.active a, .woocommerce div.product .woocommerce-tabs ul.tabs li a:hover {
-		background: transparent !important;
 		box-shadow: none !important;
 	}
 
