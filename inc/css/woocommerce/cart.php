@@ -175,9 +175,7 @@ form.woocommerce-cart-form button[name="update_cart"]:disabled, form.woocommerce
 	margin: 0 0 20px;
 	padding: 0 0 10px;
 	border-bottom: 1px solid #e0e0e0;
-	color: <?php echo $default_text_color; ?>;
 	font-size: 22px;
-	line-height: 1.3;
 }
 
 .woocommerce-cart .cart_totals table {
@@ -314,9 +312,7 @@ form.woocommerce-cart-form button[name="update_cart"]:disabled, form.woocommerce
 
 .woocommerce-cart .cross-sells h2 {
 	margin: 0 0 20px;
-	color: <?php echo $default_text_color; ?>;
 	font-size: 24px;
-	line-height: 1.3;
 }
 
 .woocommerce-cart .cross-sells ul.products {
