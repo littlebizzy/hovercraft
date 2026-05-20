@@ -54,11 +54,13 @@ Do not create empty breakpoint blocks or duplicate identical declarations just t
 
 ### Headings / Titles Policy
 
-H1 titles should stay visually consistent across the entire theme. Core WordPress pages, posts, archives, WooCommerce product pages, and bbPress views should use the global H1 typography system unless there is a strong structural reason to override it.
+H1 titles should use one consistent sitewide typography and spacing system across HoverCraft.
 
-Do not create separate H1 font sizes, font weights, or title scales for WooCommerce product titles just because they appear in the product summary column. Product titles are still true page H1 titles and should remain aligned with the global H1 Customizer settings.
+Core WordPress pages, posts, archives, WooCommerce product pages, and bbPress views should use the global H1 font family, font size, font weight, line height, margin, and spacing rules. Plugin-specific H1 selectors should not redefine H1 typography or spacing.
 
-Plugin-specific H1 selectors may clean up layout behavior such as margins, padding, floats, or clearing when needed, but they should not redefine the H1 typography scale. If H1 titles feel too large or too small across the site, adjust the global H1 defaults instead of special-casing product titles.
+Do not create separate H1 font sizes, font weights, margins, or title scales for WooCommerce product titles, bbPress titles, archive titles, or other template-specific H1 titles. Product titles and plugin titles are still true page H1 titles and should remain aligned with the global H1 Customizer settings.
+
+Plugin-specific CSS may only remove plugin defaults that interfere with the global H1 system, such as unwanted padding, floats, clearing, borders, pseudo-elements, or inherited plugin styling. If H1 titles feel too large, too small, too heavy, or too spaced out, adjust the global H1 defaults instead of special-casing one template.
 
 ### Corner Radius Policy
 
