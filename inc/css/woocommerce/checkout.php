@@ -112,7 +112,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 .woocommerce-checkout .woocommerce-validated input, .woocommerce-checkout .woocommerce-validated select, .woocommerce-checkout .woocommerce-validated textarea {
-	box-shadow: inset 0 0 0 1px <?php echo $default_text_color; ?> !important;
+	box-shadow: inset 0 0 0 1px #e0e0e0 !important;
 }
 
 .woocommerce-checkout .woocommerce-account-fields, .woocommerce-checkout .woocommerce-shipping-fields, .woocommerce-checkout .woocommerce-additional-fields {
