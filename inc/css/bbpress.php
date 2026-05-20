@@ -262,7 +262,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	text-shadow: none;
 }
 
-/* bbpress heading reset */
+/* bbpress heading fallback reset in case native plugin output leaks through */
 
 #bbpress-forums div.bbp-topic-content h1, #bbpress-forums div.bbp-topic-content h2, #bbpress-forums div.bbp-topic-content h3, #bbpress-forums div.bbp-topic-content h4, #bbpress-forums div.bbp-topic-content h5, #bbpress-forums div.bbp-topic-content h6, #bbpress-forums div.bbp-reply-content h1, #bbpress-forums div.bbp-reply-content h2, #bbpress-forums div.bbp-reply-content h3, #bbpress-forums div.bbp-reply-content h4, #bbpress-forums div.bbp-reply-content h5, #bbpress-forums div.bbp-reply-content h6 {
 	color: <?php echo $default_text_color; ?>;
@@ -391,7 +391,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	color: <?php echo $default_link_color; ?>;
 }
 
-/* bbpress breadcrumb fallback */
+/* bbpress breadcrumb fallback style in case native plugin output leaks through */
 
 div.bbp-breadcrumb, div.bbp-topic-tags, #bbp-topic-hot-tags, #bbpress-forums div.bbp-breadcrumb p, #bbpress-forums div.bbp-topic-tags, #bbpress-forums div.bbp-topic-tags p {
 	margin: 0 0 20px;
