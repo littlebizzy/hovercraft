@@ -77,7 +77,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 .woocommerce div.product form.cart table.variations, .single-product .summary .variations_form table.variations {
 	width: 100% !important;
 	margin: 0 0 30px !important;
-	background: #ffffff !important;
+	background: transparent !important;
 	border: 0;
 	border-collapse: collapse !important;
 	border-radius: 0;
@@ -86,6 +86,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 .woocommerce div.product form.cart table.variations tbody, .woocommerce div.product form.cart table.variations tr, .single-product .summary .variations_form table.variations tbody, .single-product .summary .variations_form table.variations tr {
 	display: block !important;
 	width: 100% !important;
+	background: transparent !important;
 }
 
 .woocommerce div.product form.cart table.variations th.label, .woocommerce div.product form.cart table.variations td.value, .single-product .summary .variations_form table.variations th.label, .single-product .summary .variations_form table.variations td.value {
@@ -95,7 +96,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	width: 100% !important;
 	margin: 0 !important;
 	padding: 0 !important;
-	background: #ffffff !important;
+	background: transparent !important;
 	border: 0 !important;
 	line-height: 1.5 !important;
 }
@@ -121,15 +122,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 	background: #ffffff !important;
 	border: 1px solid #cfcfcf !important;
 	border-radius: 4px;
+	box-shadow: none !important;
 	color: <?php echo $default_text_color; ?> !important;
 	line-height: 1.2;
+}
+
+.woocommerce div.product form.cart table.variations td.value select:hover, .single-product .summary .variations_form table.variations td.value select:hover {
+	background: #ffffff !important;
+	border-color: #bdbdbd !important;
+	box-shadow: none !important;
+	color: <?php echo $default_text_color; ?> !important;
 }
 
 .woocommerce div.product form.cart table.variations td.value select:focus, .woocommerce div.product form.cart table.variations td.value select:active, .single-product .summary .variations_form table.variations td.value select:focus, .single-product .summary .variations_form table.variations td.value select:active {
 	background: #ffffff !important;
 	border-color: <?php echo $default_link_color; ?> !important;
-	box-shadow: 0 0 0 2px rgba(0,0,0,0.05) inset !important;
+	box-shadow: inset 0 0 0 1px <?php echo $default_link_color; ?> !important;
 	color: <?php echo $default_text_color; ?> !important;
+	outline: 0 !important;
 }
 
 .woocommerce div.product form.cart .reset_variations, .single-product .summary .variations_form .reset_variations {
