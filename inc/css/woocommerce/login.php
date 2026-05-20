@@ -55,28 +55,29 @@ if ( ! defined( 'ABSPATH' ) ) {
 .woocommerce form.login input.input-text, .woocommerce form.register input.input-text, .woocommerce form.lost_reset_password input.input-text, .woocommerce .woocommerce-form-login input.input-text, .woocommerce .woocommerce-form-register input.input-text {
 	width: 100%;
 	max-width: 100%;
+	min-height: 46px;
 	box-sizing: border-box;
-	padding: 10px 12px !important;
+	padding: 10px 16px !important;
 	background: #ffffff !important;
-	border: 1px solid <?php echo $default_text_color; ?> !important;
+	border: 0 !important;
 	border-radius: 4px !important;
-	box-shadow: none !important;
+	box-shadow: inset 0 0 0 1px <?php echo $default_text_color; ?> !important;
 	color: <?php echo $default_text_color; ?> !important;
-	font-size: 18px !important;
+	font-size: 16px !important;
 	line-height: 1.5 !important;
 }
 
 .woocommerce form.login input.input-text:focus, .woocommerce form.register input.input-text:focus, .woocommerce form.lost_reset_password input.input-text:focus, .woocommerce .woocommerce-form-login input.input-text:focus, .woocommerce .woocommerce-form-register input.input-text:focus {
 	background: #ffffff !important;
-	border-color: <?php echo $default_link_color; ?> !important;
-	box-shadow: inset 0 0 0 1px <?php echo $default_link_color; ?> !important;
-	outline: none !important;
+	box-shadow: inset 0 0 0 2px <?php echo $default_link_color; ?> !important;
+	color: <?php echo $default_text_color; ?> !important;
+	outline: 0 !important;
 }
 
 .woocommerce form.login input[type="checkbox"], .woocommerce form.register input[type="checkbox"], .woocommerce .woocommerce-form-login input[type="checkbox"], .woocommerce .woocommerce-form-register input[type="checkbox"], .woocommerce-form__input-checkbox {
 	width: auto;
 	height: auto;
-	margin-right: 6px;
+	margin: 2px 10px 0 0;
 	box-shadow: none !important;
 	appearance: auto;
 	-webkit-appearance: auto;
