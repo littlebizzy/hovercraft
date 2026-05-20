@@ -62,6 +62,8 @@ Do not create separate H1 font sizes, font weights, margins, or title scales for
 
 Plugin-specific CSS may only remove plugin defaults that interfere with the global H1 system, such as unwanted padding, floats, clearing, borders, pseudo-elements, or inherited plugin styling. If H1 titles feel too large, too small, too heavy, or too spaced out, adjust the global H1 defaults instead of special-casing one template.
 
+Duplicate plugin-specific H1 reset CSS is allowed when it exists only to neutralize WooCommerce, bbPress, or other submodule/plugin defaults that could interfere with HoverCraft's global H1 system. These selectors may duplicate broader HoverCraft H1 coverage for fallback stability, but they should only reset disruptive plugin behavior such as clearing, padding, margins, borders, floats, pseudo-elements, or inherited plugin layout rules. They should not create separate WooCommerce, bbPress, or plugin-specific H1 typography, colors, weights, sizes, or title systems.
+
 ### Corner Radius Policy
 
 HoverCraft uses subtly softened corners as a core design standard. The goal is timeless, refined, lightly modern WordPress design: clean and professional, without looking bubbly, pill-heavy, app-like, or page-builder styled.
@@ -92,6 +94,8 @@ Primary calls to action may use stronger color, font weight, spacing, or border 
 HoverCraft uses one custom breadcrumb system for core WordPress, WooCommerce, and bbPress contexts.
 
 Native WooCommerce and bbPress breadcrumbs should remain disabled so breadcrumb markup, spacing, schema, colors, and typography stay uniform across the theme.
+
+Duplicate native breadcrumb reset CSS is allowed when it exists only to neutralize WooCommerce, bbPress, or other submodule/plugin breadcrumb defaults if native plugin breadcrumbs ever reappear because of a plugin update, filter change, template change, or third-party override. These selectors may duplicate broader HoverCraft breadcrumb coverage for fallback stability, but they should only preserve HoverCraft's unified breadcrumb spacing, colors, typography, and layout. They should not create a second breadcrumb design system.
 
 Breadcrumbs should support common contexts including:
 
