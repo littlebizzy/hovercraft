@@ -236,7 +236,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	gap: 0;
 	justify-content: flex-start;
 	margin: 0 0 24px !important;
-	padding: 1px 0 0 !important;
+	padding: 0 !important;
 	border: 0 !important;
 	box-shadow: inset 0 -1px 0 #e0e0e0;
 	list-style: none;
@@ -259,7 +259,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	border-radius: 4px 4px 0 0;
 	box-shadow: none;
 	list-style: none;
-	overflow: hidden;
 	transition: none;
 }
 
@@ -278,26 +277,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 .woocommerce div.product .woocommerce-tabs ul.tabs li a {
 	display: block;
 	padding: 10px 16px 11px;
-	background: transparent;
+	background: transparent !important;
 	border: 0;
 	border-radius: 4px 4px 0 0;
-	color: <?php echo $default_text_color; ?>;
+	box-shadow: none !important;
+	color: <?php echo $default_text_color; ?> !important;
 	font-size: 14px;
-	font-weight: 700;
+	font-weight: 600;
 	line-height: 1.5;
 	text-decoration: none;
 	transition: none;
 }
 
-.woocommerce div.product .woocommerce-tabs ul.tabs li.active a {
-	background: #ffffff !important;
-	border-radius: 4px 4px 0 0;
+.woocommerce div.product .woocommerce-tabs ul.tabs li a:hover, .woocommerce div.product .woocommerce-tabs ul.tabs li a:focus, .woocommerce div.product .woocommerce-tabs ul.tabs li a:active, .woocommerce div.product .woocommerce-tabs ul.tabs li.active a {
+	background: transparent !important;
 	box-shadow: none !important;
+	color: <?php echo $default_text_color; ?> !important;
+	font-weight: 600;
 	transition: none;
-}
-
-.woocommerce div.product .woocommerce-tabs ul.tabs li.active a, .woocommerce div.product .woocommerce-tabs ul.tabs li a:hover {
-	color: <?php echo $default_link_color; ?>;
 }
 
 .woocommerce div.product .woocommerce-tabs .panel {
@@ -478,7 +475,7 @@ section.related, section.upsells, .woocommerce section.related, .woocommerce sec
 		flex-wrap: nowrap !important;
 		overflow-x: auto;
 		margin: 0 0 20px !important;
-		padding: 1px 0 0 !important;
+		padding: 0 !important;
 		border: 0 !important;
 		box-shadow: inset 0 -1px 0 #e0e0e0 !important;
 		white-space: nowrap;
@@ -493,7 +490,6 @@ section.related, section.upsells, .woocommerce section.related, .woocommerce sec
 		border-bottom: 0 !important;
 		border-radius: 4px 4px 0 0 !important;
 		box-shadow: none !important;
-		overflow: hidden !important;
 		transition: none !important;
 	}
 
@@ -514,20 +510,19 @@ section.related, section.upsells, .woocommerce section.related, .woocommerce sec
 		border: 0 !important;
 		border-radius: 4px 4px 0 0 !important;
 		box-shadow: none !important;
+		color: <?php echo $default_text_color; ?> !important;
 		font-size: 14px !important;
+		font-weight: 600 !important;
 		line-height: 1.5 !important;
 		transition: none !important;
 	}
 
-	.woocommerce div.product .woocommerce-tabs ul.tabs li.active a {
-		background: #ffffff !important;
-		border-radius: 4px 4px 0 0 !important;
+	.woocommerce div.product .woocommerce-tabs ul.tabs li a:hover, .woocommerce div.product .woocommerce-tabs ul.tabs li a:focus, .woocommerce div.product .woocommerce-tabs ul.tabs li a:active, .woocommerce div.product .woocommerce-tabs ul.tabs li.active a {
+		background: transparent !important;
 		box-shadow: none !important;
+		color: <?php echo $default_text_color; ?> !important;
+		font-weight: 600 !important;
 		transition: none !important;
-	}
-
-	.woocommerce div.product .woocommerce-tabs ul.tabs li.active a, .woocommerce div.product .woocommerce-tabs ul.tabs li a:hover {
-		box-shadow: none !important;
 	}
 
 	.woocommerce #reviews #comments ol.commentlist li .comment-text {
