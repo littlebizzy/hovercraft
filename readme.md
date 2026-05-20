@@ -99,15 +99,17 @@ Forms should use one consistent sitewide control system across HoverCraft, WooCo
 
 Real form fields include text inputs, email inputs, URL inputs, password inputs, search inputs, telephone inputs, number inputs, selects, textareas, file inputs, range inputs, checkboxes, radio buttons, reset buttons, and submit buttons. These controls should feel like the same family unless a plugin requires a narrow compatibility override.
 
-Standard text fields, selects, and textareas should generally use a white background, the default text color, inherited font family, `16px` font size, `1.5` line height, `4px` radius, and a simple visible field boundary. Field borders should be implemented consistently so normal, focus, invalid, validated, readonly, and disabled states do not drift between core WordPress, WooCommerce, and bbPress.
+Standard text fields, selects, and textareas should use boring, modern defaults: white background, default text color, inherited font family, `16px` font size, `1.5` line height, `46px` minimum height, `10px 16px` padding, and `4px` radius. These values are intentional because they are readable, touch-friendly, visually calm, and not overly large for a simple WordPress theme.
 
-Focus states should be visible, consistent, and accessible. Text fields, selects, and textareas should use the default link color for focus emphasis. Checkbox and radio focus states may use browser-native controls with a simple outline instead of custom fake controls.
+Field boundaries should use one consistent visual model. HoverCraft currently prefers `border: 0` with an inset `box-shadow` boundary because it avoids layout shifts and makes normal, focus, invalid, validated, readonly, and disabled states easier to keep consistent. Do not mix physical borders and inset shadows for the same class of normal fields unless the whole shared field model is intentionally changed.
+
+Focus states should be visible, consistent, and accessible. Text fields, selects, and textareas should use a stronger inset boundary with the default link color, normally `2px`, rather than a glow effect or a separate one-off outline. Checkbox and radio focus states may use browser-native controls with a simple outline instead of custom fake controls.
 
 Checkboxes and radio buttons should remain native browser controls unless there is a clear reason to customize them. Avoid replacing them with complex custom UI, pseudo-elements, icon fonts, or JavaScript-only behavior. They should align cleanly with labels and keep normal keyboard behavior.
 
 Select fields should remain simple and reliable. Native selects are preferred for normal theme forms, WooCommerce variation selectors, quantity selectors, checkout fields, and account fields. Custom select libraries or plugin-generated select wrappers may receive compatibility styling, but they should not define a second visual system.
 
-Submit buttons, reset buttons, and real form buttons are part of the forms policy. They should use the normal button/control radius and should follow the default link color and hover color unless a specific plugin state requires a defensive override.
+Submit buttons, reset buttons, and real form buttons are part of the forms policy. They should generally use `16px` font size, `600` font weight, `12px 20px` padding, `4px` radius, the default link color, and the default hover color unless a specific plugin state requires a defensive override. They should look like clear form actions, not oversized marketing CTAs.
 
 Marketing calls to action are not covered by this forms policy. CTA links, hero buttons, product-card action links, banner buttons, and other non-form promotional controls may have their own presentation policy, but they should not accidentally redefine normal form submit/input behavior.
 
@@ -116,6 +118,8 @@ WooCommerce and bbPress form CSS may override layout, width, clearing, table wra
 Validation, readonly, disabled, hover, and focus states should use the same visual model as normal fields whenever possible. If the field boundary uses inset shadow, then plugin validation states should also use inset shadow rather than switching to physical borders. If the field boundary uses a real border in the future, validation states should follow that same model consistently.
 
 Do not create one-off field sizes, font sizes, border colors, border widths, shadows, padding systems, or select styles for individual templates unless the component has a real layout constraint. If one template's fields look wrong, first adjust the shared form baseline or add a narrow plugin reset that preserves the shared design.
+
+Header search bars, fullscreen search modals, and other visually integrated search experiences may use layout-specific dimensions when needed, but they should still preserve the same general field family unless there is a deliberate visual reason not to. These exceptions should stay narrow and should not leak back into normal form fields.
 
 ### Breadcrumb Policy
 
