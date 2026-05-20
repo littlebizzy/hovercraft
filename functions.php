@@ -5,7 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( ! defined( 'HOVERCRAFT_VERSION' ) ) {
-	define( 'HOVERCRAFT_VERSION', '0.3.101' );
+	define( 'HOVERCRAFT_VERSION', '0.3.102' );
 }
 
 // title tag
