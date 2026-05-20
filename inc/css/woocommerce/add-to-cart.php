@@ -126,7 +126,7 @@ $woocommerce_add_to_cart_select_arrow_color = rawurlencode( $default_text_color 
 	min-height: 46px !important;
 	padding: 10px 44px 10px 16px !important;
 	background-color: #ffffff !important;
-	background-image: url('data:image/svg+xml;utf8,<svg fill="<?php echo $woocommerce_add_to_cart_select_arrow_color; ?>" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') !important;
+	background-image: url('data:image/svg+xml;utf8,<svg height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M6 9l6 6 6-6" fill="none" stroke="<?php echo $woocommerce_add_to_cart_select_arrow_color; ?>" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>') !important;
 	background-position: right 14px center !important;
 	background-repeat: no-repeat !important;
 	background-size: 16px !important;
@@ -285,7 +285,7 @@ input.qty[type="number"] {
 	margin: 0 !important;
 	padding: 10px 44px 10px 16px !important;
 	background-color: #ffffff !important;
-	background-image: url('data:image/svg+xml;utf8,<svg fill="<?php echo $woocommerce_add_to_cart_select_arrow_color; ?>" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') !important;
+	background-image: url('data:image/svg+xml;utf8,<svg height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M6 9l6 6 6-6" fill="none" stroke="<?php echo $woocommerce_add_to_cart_select_arrow_color; ?>" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>') !important;
 	background-position: right 14px center !important;
 	background-repeat: no-repeat !important;
 	background-size: 16px !important;
