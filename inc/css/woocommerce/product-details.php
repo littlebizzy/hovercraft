@@ -105,7 +105,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 .woocommerce div.product .product_title {
 	clear: none;
-	margin: 0 0 20px;
 	padding: 0;
 }
 
