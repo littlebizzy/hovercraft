@@ -60,7 +60,9 @@ Core WordPress pages, posts, archives, WooCommerce product pages, and bbPress vi
 
 Do not create separate H1 font sizes, font weights, margins, or title scales for WooCommerce product titles, bbPress titles, archive titles, or other template-specific H1 titles. Product titles and plugin titles are still true page H1 titles and should remain aligned with the global H1 Customizer settings.
 
-Plugin-specific CSS may only remove plugin defaults that interfere with the global H1 system, such as unwanted padding, floats, clearing, borders, pseudo-elements, or inherited plugin styling. If H1 titles feel too large, too small, too heavy, or too spaced out, adjust the global H1 defaults instead of special-casing one template.
+Plugin-specific CSS may only remove plugin defaults that interfere with the global H1 system, such as unwanted padding, floats, clearing, borders, pseudo-elements, or inherited plugin styling. Reset-only H1 rules for plugin selectors are acceptable when clearly commented and when they preserve the global H1 system.
+
+If H1 titles feel too large, too small, too heavy, or too spaced out, adjust the global H1 defaults instead of special-casing one template.
 
 ### Corner Radius Policy
 
@@ -92,6 +94,8 @@ Primary calls to action may use stronger color, font weight, spacing, or border 
 HoverCraft uses one custom breadcrumb system for core WordPress, WooCommerce, and bbPress contexts.
 
 Native WooCommerce and bbPress breadcrumbs should remain disabled so breadcrumb markup, spacing, schema, colors, and typography stay uniform across the theme.
+
+Reset-only native breadcrumb CSS is acceptable when clearly commented and when it preserves HoverCraft's breadcrumb spacing and colors without creating a second breadcrumb system.
 
 Breadcrumbs should support common contexts including:
 
