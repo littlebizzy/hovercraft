@@ -31,3 +31,19 @@ function hovercraft_cart_cross_sells_columns( $columns ) {
 	return 2;
 }
 add_filter( 'woocommerce_cross_sells_columns', 'hovercraft_cart_cross_sells_columns' );
+
+// rename additional information tab
+function hovercraft_rename_woocommerce_additional_information_tab( $tabs ) {
+	if ( isset( $tabs['additional_information'] ) ) {
+		$tabs['additional_information']['title'] = __( 'Technical Info', 'hovercraft' );
+	}
+
+	return $tabs;
+}
+add_filter( 'woocommerce_product_tabs', 'hovercraft_rename_woocommerce_additional_information_tab', 20 );
+
+// rename additional information heading
+function hovercraft_rename_woocommerce_additional_information_heading() {
+	return __( 'Technical Info', 'hovercraft' );
+}
+add_filter( 'woocommerce_product_additional_information_heading', 'hovercraft_rename_woocommerce_additional_information_heading' );
