@@ -9,6 +9,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* widgets */
 
+.widget-wrapper .widget-title,
+.widget-wrapper .widgettitle,
+.widget-wrapper h1,
+.widget-wrapper h2,
+.widget-wrapper h3,
+.widget-wrapper h4,
+.widget-wrapper h5,
+.widget-wrapper h6 {
+	color: inherit;
+}
+
 .widget-wrapper ul li ul {
 	margin-left: 0 !important;
 }
