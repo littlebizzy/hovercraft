@@ -124,7 +124,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	background-color: #ffffff !important;
 	border: 0 !important;
 	border-radius: 4px !important;
-	box-shadow: inset 0 0 0 1px <?php echo $default_text_color; ?> !important;
+	box-shadow: inset 0 0 0 1px #e0e0e0 !important;
 	color: <?php echo $default_text_color; ?> !important;
 	cursor: pointer !important;
 	font-size: 16px !important;
@@ -135,7 +135,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 .woocommerce div.product form.cart table.variations td.value select:hover, .single-product .summary .variations_form table.variations td.value select:hover {
 	background-color: #ffffff !important;
-	box-shadow: inset 0 0 0 1px <?php echo $default_text_color; ?> !important;
+	box-shadow: inset 0 0 0 1px #e0e0e0 !important;
 	color: <?php echo $default_text_color; ?> !important;
 }
 
@@ -236,7 +236,7 @@ input.qty {
 	background: #ffffff !important;
 	border: 0 !important;
 	border-radius: 4px !important;
-	box-shadow: inset 0 0 0 1px <?php echo $default_text_color; ?> !important;
+	box-shadow: inset 0 0 0 1px #e0e0e0 !important;
 	color: <?php echo $default_text_color; ?> !important;
 	font-size: 16px !important;
 	font-weight: 400 !important;
@@ -276,7 +276,7 @@ input.qty[type="number"] {
 	background-color: #ffffff !important;
 	border: 0 !important;
 	border-radius: 4px !important;
-	box-shadow: inset 0 0 0 1px <?php echo $default_text_color; ?> !important;
+	box-shadow: inset 0 0 0 1px #e0e0e0 !important;
 	color: <?php echo $default_text_color; ?> !important;
 	cursor: pointer !important;
 	font-size: 16px !important;
@@ -288,7 +288,7 @@ input.qty[type="number"] {
 
 .quantity select.qty:hover, .hovercraft-quantity-select:hover {
 	background-color: #ffffff !important;
-	box-shadow: inset 0 0 0 1px <?php echo $default_text_color; ?> !important;
+	box-shadow: inset 0 0 0 1px #e0e0e0 !important;
 }
 
 .quantity select.qty:focus, .quantity select.qty:active, .hovercraft-quantity-select:focus, .hovercraft-quantity-select:active {
