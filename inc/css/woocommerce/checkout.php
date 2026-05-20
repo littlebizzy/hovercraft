@@ -108,11 +108,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 .woocommerce-checkout .woocommerce-invalid input, .woocommerce-checkout .woocommerce-invalid select, .woocommerce-checkout .woocommerce-invalid textarea {
-	border-color: #ff1744 !important;
+	box-shadow: inset 0 0 0 2px #ff1744 !important;
 }
 
 .woocommerce-checkout .woocommerce-validated input, .woocommerce-checkout .woocommerce-validated select, .woocommerce-checkout .woocommerce-validated textarea {
-	border-color: #e0e0e0 !important;
+	box-shadow: inset 0 0 0 1px <?php echo $default_text_color; ?> !important;
 }
 
 .woocommerce-checkout .woocommerce-account-fields, .woocommerce-checkout .woocommerce-shipping-fields, .woocommerce-checkout .woocommerce-additional-fields {
