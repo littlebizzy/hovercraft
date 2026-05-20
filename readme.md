@@ -52,6 +52,14 @@ Breakpoint-specific layout CSS should generally use both `max-width: 1199px` and
 
 Do not create empty breakpoint blocks or duplicate identical declarations just to satisfy the breakpoint convention. Prefer explicit mobile and desktop blocks when values differ, and shared base declarations when values are truly identical.
 
+### Headings / Titles Policy
+
+H1 titles should stay visually consistent across the entire theme. Core WordPress pages, posts, archives, WooCommerce product pages, and bbPress views should use the global H1 typography system unless there is a strong structural reason to override it.
+
+Do not create separate H1 font sizes, font weights, or title scales for WooCommerce product titles just because they appear in the product summary column. Product titles are still true page H1 titles and should remain aligned with the global H1 Customizer settings.
+
+Plugin-specific H1 selectors may clean up layout behavior such as margins, padding, floats, or clearing when needed, but they should not redefine the H1 typography scale. If H1 titles feel too large or too small across the site, adjust the global H1 defaults instead of special-casing product titles.
+
 ### Corner Radius Policy
 
 HoverCraft uses subtly softened corners as a core design standard. The goal is timeless, refined, lightly modern WordPress design: clean and professional, without looking bubbly, pill-heavy, app-like, or page-builder styled.
