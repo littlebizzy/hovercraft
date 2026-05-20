@@ -164,7 +164,7 @@ video.hero-background-video {
 }
 
 h1.full-hero-title {
-    font-weight: 700;
     margin-bottom: 30px;
     color: #ffffff;
+    font-weight: 700;
 }
