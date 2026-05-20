@@ -109,9 +109,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 h1.mini-hero-title {
-	font-weight: 700;
 	margin-bottom: 0;
 	color: #ffffff;
+	font-weight: 700;
 }
 
 .hero-main-mini .search-input {
