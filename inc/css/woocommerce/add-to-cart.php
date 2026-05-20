@@ -5,6 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // styles for woocommerce add to cart
+$woocommerce_add_to_cart_select_arrow_color = rawurlencode( $default_text_color );
 ?>
 
 .add_to_cart_button, .single_add_to_cart_button, .woocommerce .button.add_to_cart_button, .woocommerce a.add_to_cart_button, .woocommerce button.single_add_to_cart_button, .woocommerce input.single_add_to_cart_button {
@@ -114,14 +115,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 .woocommerce div.product form.cart table.variations td.value select, .single-product .summary .variations_form table.variations td.value select {
+	appearance: none !important;
+	-webkit-appearance: none !important;
+	-moz-appearance: none !important;
 	display: block !important;
 	box-sizing: border-box !important;
 	width: 100% !important;
 	max-width: 100% !important;
 	height: 46px !important;
 	min-height: 46px !important;
-	padding: 10px 16px !important;
+	padding: 10px 44px 10px 16px !important;
 	background-color: #ffffff !important;
+	background-image: url('data:image/svg+xml;utf8,<svg fill="<?php echo $woocommerce_add_to_cart_select_arrow_color; ?>" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') !important;
+	background-position: right 14px center !important;
+	background-repeat: no-repeat !important;
+	background-size: 16px !important;
 	border: 0 !important;
 	border-radius: 4px !important;
 	box-shadow: inset 0 0 0 1px #e0e0e0 !important;
@@ -265,6 +273,9 @@ input.qty[type="number"] {
 }
 
 .quantity select.qty, .hovercraft-quantity-select {
+	appearance: none !important;
+	-webkit-appearance: none !important;
+	-moz-appearance: none !important;
 	display: block !important;
 	box-sizing: border-box !important;
 	width: 100% !important;
@@ -272,8 +283,12 @@ input.qty[type="number"] {
 	height: 46px !important;
 	min-height: 46px !important;
 	margin: 0 !important;
-	padding: 10px 16px !important;
+	padding: 10px 44px 10px 16px !important;
 	background-color: #ffffff !important;
+	background-image: url('data:image/svg+xml;utf8,<svg fill="<?php echo $woocommerce_add_to_cart_select_arrow_color; ?>" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>') !important;
+	background-position: right 14px center !important;
+	background-repeat: no-repeat !important;
+	background-size: 16px !important;
 	border: 0 !important;
 	border-radius: 4px !important;
 	box-shadow: inset 0 0 0 1px #e0e0e0 !important;
