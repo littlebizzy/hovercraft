@@ -69,7 +69,7 @@ input:not([type="button"]):not([type="checkbox"]):not([type="file"]):not([type="
 
 select {
 	padding-right: 44px !important;
-	background-image: url('data:image/svg+xml;utf8,<svg fill="<?php echo $select_arrow_color; ?>" height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+	background-image: url('data:image/svg+xml;utf8,<svg height="20" viewBox="0 0 24 24" width="20" xmlns="http://www.w3.org/2000/svg"><path d="M6 9l6 6 6-6" fill="none" stroke="<?php echo $select_arrow_color; ?>" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/></svg>');
 	background-position: right 14px center;
 	background-repeat: no-repeat;
 	background-size: 16px;
