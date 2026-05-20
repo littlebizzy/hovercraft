@@ -259,6 +259,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	border-radius: 4px 4px 0 0;
 	box-shadow: none;
 	list-style: none;
+	overflow: hidden;
 	transition: none;
 }
 
@@ -279,6 +280,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	padding: 10px 16px 11px;
 	background: transparent;
 	border: 0;
+	border-radius: 4px 4px 0 0;
 	color: <?php echo $default_text_color; ?>;
 	font-size: 14px;
 	font-weight: 700;
@@ -289,6 +291,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li.active a {
 	background: #ffffff !important;
+	border-radius: 4px 4px 0 0;
 	box-shadow: none !important;
 	transition: none;
 }
@@ -490,6 +493,7 @@ section.related, section.upsells, .woocommerce section.related, .woocommerce sec
 		border-bottom: 0 !important;
 		border-radius: 4px 4px 0 0 !important;
 		box-shadow: none !important;
+		overflow: hidden !important;
 		transition: none !important;
 	}
 
@@ -508,6 +512,7 @@ section.related, section.upsells, .woocommerce section.related, .woocommerce sec
 		padding: 9px 14px 10px !important;
 		background: transparent !important;
 		border: 0 !important;
+		border-radius: 4px 4px 0 0 !important;
 		box-shadow: none !important;
 		font-size: 14px !important;
 		line-height: 1.5 !important;
@@ -516,6 +521,7 @@ section.related, section.upsells, .woocommerce section.related, .woocommerce sec
 
 	.woocommerce div.product .woocommerce-tabs ul.tabs li.active a {
 		background: #ffffff !important;
+		border-radius: 4px 4px 0 0 !important;
 		box-shadow: none !important;
 		transition: none !important;
 	}
