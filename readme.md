@@ -64,6 +64,8 @@ Plugin-specific CSS may only remove plugin defaults that interfere with the glob
 
 Duplicate plugin-specific H1 reset CSS is allowed when it exists only to neutralize WooCommerce, bbPress, or other submodule/plugin defaults that could interfere with HoverCraft's global H1 system. These selectors may duplicate broader HoverCraft H1 coverage for fallback stability, but they should only reset disruptive plugin behavior such as clearing, padding, margins, borders, floats, pseudo-elements, or inherited plugin layout rules. They should not create separate WooCommerce, bbPress, or plugin-specific H1 typography, colors, weights, sizes, or title systems.
 
+Hero H1 titles should use fixed presentation styling for readability and contrast. Hero H1 text should remain `#ffffff`, should use `font-weight: 700`, and may use hero-specific spacing because hero titles sit inside visual banner areas instead of normal article flow. These fixed hero styles are intentional and should not be treated as conflicts with the global page H1 system. Normal WordPress, WooCommerce, and bbPress page H1 titles should still follow the global H1 typography system.
+
 ### Corner Radius Policy
 
 HoverCraft uses subtly softened corners as a core design standard. The goal is timeless, refined, lightly modern WordPress design: clean and professional, without looking bubbly, pill-heavy, app-like, or page-builder styled.
