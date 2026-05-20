@@ -118,14 +118,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 	box-sizing: border-box !important;
 	width: 100% !important;
 	max-width: 100% !important;
-	height: 44px;
-	padding: 8px 12px;
+	height: 44px !important;
+	padding: 0 14px !important;
 	background: #ffffff !important;
-	border: 1px solid #cfcfcf !important;
-	border-radius: 4px;
+	border: 1px solid #d9d9d9 !important;
+	border-radius: 4px !important;
 	box-shadow: none !important;
 	color: <?php echo $default_text_color; ?> !important;
-	line-height: 1.2;
+	cursor: pointer !important;
+	font-size: 16px !important;
+	font-weight: 400 !important;
+	line-height: 44px !important;
+	vertical-align: middle !important;
+	appearance: auto !important;
 }
 
 .woocommerce div.product form.cart table.variations td.value select:hover, .single-product .summary .variations_form table.variations td.value select:hover {
