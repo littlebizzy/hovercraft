@@ -109,6 +109,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 .woocommerce div.product form.cart table.variations td.value, .single-product .summary .variations_form table.variations td.value {
+	position: relative;
 	padding-bottom: 0 !important;
 }
 
@@ -143,8 +144,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 .woocommerce div.product form.cart .reset_variations, .single-product .summary .variations_form .reset_variations {
+	position: absolute;
+	top: -28px;
+	right: 0;
 	display: inline-block !important;
-	margin-top: 6px !important;
+	margin: 0 !important;
 	color: <?php echo $default_link_color; ?>;
 	font-size: 13px;
 	line-height: 1.5;
