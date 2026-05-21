@@ -35,9 +35,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 		list-style: none;
 	}
 
+	#footer .widget-wrapper ul ul li:first-child {
+		border-top: 1px solid rgba(128, 128, 128, 0.25);
+	}
+
 	#footer .widget-wrapper ul li a {
 		display: block;
-		padding: 12px 0;
+		padding: 8px 0;
+	}
+
+	#footer .widget-wrapper ul ul li a {
+		padding-left: 16px;
 	}
 }
 
