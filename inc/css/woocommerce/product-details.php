@@ -257,7 +257,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	padding: 0 !important;
 	background: #f5f5f5;
 	border: 1px solid #e0e0e0;
-	border-bottom: 0;
+	border-bottom: 1px solid #e0e0e0;
 	border-radius: 4px 4px 0 0;
 	box-shadow: none;
 	list-style: none;
@@ -510,7 +510,7 @@ section.related, section.upsells, .woocommerce section.related, .woocommerce sec
 		margin: 0 4px 0 0 !important;
 		background: #f5f5f5 !important;
 		border: 1px solid #e0e0e0 !important;
-		border-bottom: 0 !important;
+		border-bottom: 1px solid #e0e0e0 !important;
 		border-radius: 4px 4px 0 0 !important;
 		box-shadow: none !important;
 		transition: background-color 0.15s ease-in-out !important;
