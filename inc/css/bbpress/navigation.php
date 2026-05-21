@@ -9,14 +9,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* bbpress breadcrumb fallback style in case native plugin output leaks through */
 
-div.bbp-breadcrumb, div.bbp-topic-tags, #bbp-topic-hot-tags, #bbpress-forums div.bbp-breadcrumb p, #bbpress-forums div.bbp-topic-tags, #bbpress-forums div.bbp-topic-tags p {
+.bbp-breadcrumb, div.bbp-breadcrumb, div.bbp-topic-tags, #bbp-topic-hot-tags, #bbpress-forums .bbp-breadcrumb, #bbpress-forums .bbp-breadcrumb p, #bbpress-forums div.bbp-topic-tags, #bbpress-forums div.bbp-topic-tags p {
 	margin: 0 0 20px;
 	color: <?php echo $default_text_color; ?>;
 	font-size: 12px;
 	line-height: 1.5;
 }
 
-div.bbp-breadcrumb a, div.bbp-topic-tags a, #bbp-topic-hot-tags a {
+.bbp-breadcrumb a, div.bbp-breadcrumb a, div.bbp-topic-tags a, #bbp-topic-hot-tags a, #bbpress-forums .bbp-breadcrumb a {
 	color: <?php echo $default_link_color; ?>;
 }
 
