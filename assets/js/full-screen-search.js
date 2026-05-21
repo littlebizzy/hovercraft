@@ -5,7 +5,7 @@ jQuery( function( $ ) {
 	$( '.search-icon-wrapper' ).on( 'click', function( event ) {
 		event.preventDefault();
 		$( '#full-screen-search' ).addClass( 'open' );
-		$( '#full-screen-search input' ).focus();
+		$( '#full-screen-search .search-input' ).focus();
 	} );
 
 	// close search overlay via button
