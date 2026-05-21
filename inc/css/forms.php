@@ -11,8 +11,8 @@ $select_arrow_color = rawurlencode( $default_text_color );
 /* forms */
 
 form {
-	margin: 0 !important;
-	padding: 0 !important;
+	margin: 0;
+	padding: 0;
 }
 
 label {
@@ -106,7 +106,7 @@ input[type="checkbox"]:focus, input[type="radio"]:focus {
 }
 
 input[type="file"] {
-	width: 100%;
+	width: 100%;	
 	padding: 10px 0 !important;
 	background: transparent;
 	box-shadow: none;
