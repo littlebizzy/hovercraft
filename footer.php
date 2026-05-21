@@ -123,19 +123,21 @@ if ( $hovercraft_copyright_width === 'full' ) {
 <div id="full-screen-search">
 	<?php $hovercraft_layout_icons = get_theme_mod( 'hovercraft_layout_icons', 'material_icons_classic' ); ?>
 	<?php if ( $hovercraft_layout_icons === 'material_icons_classic' ) : ?>
-		<button type="button" class="close"><i class="material-icons close">close</i></button>
+		<button type="button" class="close" aria-label="<?php esc_attr_e( 'Close search', 'hovercraft' ); ?>"><i class="material-icons close" aria-hidden="true">close</i></button>
 	<?php elseif ( $hovercraft_layout_icons === 'font_awesome_version_6' ) : ?>
-		<button type="button" class="close"><i class="fa-solid fa-x"></i></button>
+		<button type="button" class="close" aria-label="<?php esc_attr_e( 'Close search', 'hovercraft' ); ?>"><i class="fa-solid fa-x" aria-hidden="true"></i></button>
 	<?php endif; // end layout icons ?>
 
+	<?php $hovercraft_search_id = wp_unique_id( 'search-' ); ?>
 	<form role="search" method="get" class="searchform" action="<?php echo esc_url( home_url( '/' ) ); ?>">
+		<label class="screen-reader-text" for="<?php echo esc_attr( $hovercraft_search_id ); ?>"><?php esc_html_e( 'Search', 'hovercraft' ); ?></label>
 		<div class="input-container">
-			<input type="search" class="search-input" value="<?php echo esc_attr( get_search_query() ); ?>" name="s" placeholder="<?php esc_attr_e( 'Search entire website... ', 'hovercraft' ); ?>" />
-			<button type="submit" class="search-submit" name="submit">
+			<input id="<?php echo esc_attr( $hovercraft_search_id ); ?>" type="search" class="search-input" value="<?php echo esc_attr( get_search_query() ); ?>" name="s" placeholder="<?php esc_attr_e( 'Search entire website... ', 'hovercraft' ); ?>" />
+			<button type="submit" class="search-submit" name="submit" aria-label="<?php esc_attr_e( 'Submit search', 'hovercraft' ); ?>">
 				<?php if ( $hovercraft_layout_icons === 'material_icons_classic' ) : ?>
-					<i class="material-icons search">search</i>
+					<i class="material-icons search" aria-hidden="true">search</i>
 				<?php elseif ( $hovercraft_layout_icons === 'font_awesome_version_6' ) : ?>
-					<i class="fa-solid fa-search"></i>
+					<i class="fa-solid fa-search" aria-hidden="true"></i>
 				<?php endif; // end layout icons ?>
 			</button>
 		</div><!-- input-container -->
