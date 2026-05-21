@@ -49,7 +49,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<?php if ( $hovercraft_layout_icons === 'material_icons_classic' ) : ?>
 						<i class="material-icons search" aria-hidden="true">search</i>
 					<?php elseif ( $hovercraft_layout_icons === 'font_awesome_version_6' ) : ?>
-						<i class="fas fa-search" aria-hidden="true"></i>
+						<i class="fa-solid fa-search" aria-hidden="true"></i>
 					<?php endif; // end layout icons ?>
 				</button>
 				</div><!-- input-container -->
