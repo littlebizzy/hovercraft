@@ -21,6 +21,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 	clear: both;
 }
 
+.woocommerce .woocommerce-breadcrumb, .woocommerce-page .woocommerce-breadcrumb {
+	clear: both;
+	margin: 0 0 30px;
+	padding: 0;
+	color: <?php echo $breadcrumbs_text_color; ?>;
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+.woocommerce .woocommerce-breadcrumb a, .woocommerce-page .woocommerce-breadcrumb a, .woocommerce .woocommerce-breadcrumb a:hover, .woocommerce-page .woocommerce-breadcrumb a:hover {
+	color: <?php echo $breadcrumbs_link_color; ?>;
+}
+
 .woocommerce .blockUI.blockOverlay, .woocommerce-page .blockUI.blockOverlay {
 	background: #ffffff !important;
 	opacity: 0.6 !important;
