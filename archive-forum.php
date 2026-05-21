@@ -17,7 +17,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<div id="content-wide">
 				<?php get_template_part( 'template-parts/misc/breadcrumbs' ); ?>
 				<?php $forum_page = get_page_by_path( 'forum' ); ?>
-				<h1><?php echo esc_html( $forum_page instanceof WP_Post ? get_the_title( $forum_page ) : __( 'Forum', 'hovercraft' ) ); ?></h1>
+				<h1 class="archive-title"><?php echo esc_html( $forum_page instanceof WP_Post ? get_the_title( $forum_page ) : __( 'Forum', 'hovercraft' ) ); ?></h1>
 			                
 				<?php if ( $forum_page instanceof WP_Post ) : ?>
 					<?php
