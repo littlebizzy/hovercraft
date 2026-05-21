@@ -56,8 +56,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	height: 100%;
 }
 
-/* form content div */
-#full-screen-search form div {
+/* input container */
+#full-screen-search .input-container {
 	position: absolute;
 	width: 50%;
 	height: 100px;
@@ -67,7 +67,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /* input field */
-#full-screen-search form div input {
+#full-screen-search .search-input {
 	width: 100%;
 	height: 100px;
 	background: #ffffff;
@@ -79,7 +79,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /* input placeholder */
-#full-screen-search form div input::placeholder {
+#full-screen-search .search-input::placeholder {
 	color: #ccc;
 }
 
