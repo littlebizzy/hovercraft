@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	
 		<?php if ( is_singular() ) : ?>
 			<?php if ( is_page_template( 'page-templates/template-basic.php' ) || ! is_page_template() ) : ?>
-				<h1><?php echo esc_html( get_the_title() ); ?></h1>
+				<h1 class="entry-title"><?php echo esc_html( get_the_title() ); ?></h1>
 				<?php $url_featured_image = wp_get_attachment_url( get_post_thumbnail_id( get_the_ID() ), 'large' ); ?>
 
 				<?php if ( ! empty( $url_featured_image ) && ( ! is_singular( 'product' ) ) ) : ?>
