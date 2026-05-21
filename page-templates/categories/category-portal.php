@@ -18,12 +18,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 									
 			<div id="content-padded">
 		
-				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+				<?php if ( have_posts() ) : ?>
+					<?php while ( have_posts() ) : ?>
+						<?php the_post(); ?>
+
+						<article id="post-<?php the_ID(); ?>" <?php post_class( 'post-tease-archive' ); ?>>
+							<h4 class="entry-title"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php echo esc_html( get_the_title() ); ?></a></h4>
+							<div class="entry-summary"><?php the_excerpt(); ?></div>
+						</article><!-- post-tease-archive -->
 		
-				<h4><a href="<?php echo esc_url( get_permalink() ); ?>"><?php echo esc_html( get_the_title() ); ?></a></h4>
-				<?php the_excerpt(); ?>
-		
-				<?php endwhile; endif; ?><!-- end the loop -->
+					<?php endwhile; // end category portal posts ?>
+				<?php endif; ?><!-- end the loop -->
 					
 				<?php get_template_part( 'template-parts/content/pagination' ); ?>
 						
