@@ -269,7 +269,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li:not(.active):hover, .woocommerce div.product .woocommerce-tabs ul.tabs li:not(.active):focus-within {
-	background: rgba(0, 0, 0, 0.04);
+	background: rgba(0, 0, 0, 0.07);
 }
 
 .woocommerce div.product .woocommerce-tabs ul.tabs li.active {
@@ -517,7 +517,7 @@ section.related, section.upsells, .woocommerce section.related, .woocommerce sec
 	}
 
 	.woocommerce div.product .woocommerce-tabs ul.tabs li:not(.active):hover, .woocommerce div.product .woocommerce-tabs ul.tabs li:not(.active):focus-within {
-		background: rgba(0, 0, 0, 0.04) !important;
+		background: rgba(0, 0, 0, 0.07) !important;
 	}
 
 	.woocommerce div.product .woocommerce-tabs ul.tabs li:first-child {
