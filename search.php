@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
             
             <div id="content-padded">
         
-                <h1><?php esc_html_e( 'Search results for:', 'hovercraft' ); ?>&nbsp;<span class="search-query"><?php echo esc_html( get_search_query() ); ?></span></h1>
+                <h1 class="search-title"><?php esc_html_e( 'Search results for:', 'hovercraft' ); ?>&nbsp;<span class="search-query"><?php echo esc_html( get_search_query() ); ?></span></h1>
                 
                 <?php if ( have_posts() ) : ?>
 
