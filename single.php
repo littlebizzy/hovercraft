@@ -7,37 +7,37 @@ if ( ! defined( 'ABSPATH' ) ) {
  get_template_part( 'header' ); ?>
 <?php get_template_part( 'template-parts/header/header-basic' ); ?>
 
-<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<div id="main">
+<div class="inner">
+	
+	<?php
+	$show_sidebar = hovercraft_should_show_sidebar();
+	$hovercraft_primary_width = get_theme_mod( 'hovercraft_primary_width', 'narrow_centered' );
+	?>
 
-	<div id="main">
-	<div class="inner">
-    	
-		<?php
-		$show_sidebar = hovercraft_should_show_sidebar();
-		$hovercraft_primary_width = get_theme_mod( 'hovercraft_primary_width', 'narrow_centered' );
-		?>
-
-		<?php if ( $show_sidebar ) : ?>
-			<div id="primary">
-		<?php else : ?>
-			<?php if ( $hovercraft_primary_width === 'narrow_centered' ) : ?>
-				<div id="primary-center">
-			<?php elseif ( $hovercraft_primary_width === 'wide' ) : ?>
-				<div id="primary-wide">
-			<?php endif; // end primary width ?>
-		<?php endif; // end sidebar ?>
+	<?php if ( $show_sidebar ) : ?>
+		<div id="primary">
+	<?php else : ?>
+		<?php if ( $hovercraft_primary_width === 'narrow_centered' ) : ?>
+			<div id="primary-center">
+		<?php elseif ( $hovercraft_primary_width === 'wide' ) : ?>
+			<div id="primary-wide">
+		<?php endif; // end primary width ?>
+	<?php endif; // end sidebar ?>
+	
+	<div id="content-wrapper">
 		
-		<div id="content-wrapper">
-			
-			<?php if ( have_posts() ) : ?>
-				<?php while ( have_posts() ) : ?>
-					<?php the_post(); ?>
-			
+		<?php if ( have_posts() ) : ?>
+			<?php while ( have_posts() ) : ?>
+				<?php the_post(); ?>
+
+				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		
 					<?php $hovercraft_featured_image_position = get_theme_mod( 'hovercraft_featured_image_position', 'above_title' ); ?>
 					<?php if ( $hovercraft_featured_image_position === 'above_title' ) : ?>
-			
+		
 						<?php get_template_part( 'template-parts/content/featured-image' ); ?>
-			
+		
 						<div id="content-padded">
 
 						<?php get_template_part( 'template-parts/misc/breadcrumbs' ); ?>
@@ -54,9 +54,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<?php endif; // end social sharing ?>
 
 						<?php get_template_part( 'template-parts/content/byline-after' ); ?>
-			
+		
 					<?php else : ?>	
-			
+		
 						<div id="content-padded">
 
 						<?php get_template_part( 'template-parts/misc/breadcrumbs' ); ?>
@@ -78,32 +78,34 @@ if ( ! defined( 'ABSPATH' ) ) {
 							
 					<?php endif; // end featured image position ?>
 
-						<?php the_content(); ?>
-		
-					<?php endwhile; // end single post ?>
-			<?php endif; ?><!-- end the loop -->
+						<div class="entry-content"><?php the_content(); ?></div>
 
-					<?php get_template_part( 'template-parts/content/loop-after' ); ?>
+						<?php get_template_part( 'template-parts/content/loop-after' ); ?>
 
-					<?php
-					$hovercraft_social_sharing = get_theme_mod( 'hovercraft_social_sharing', 'bottom_of_post' );
-					?>
-					<?php if ( $hovercraft_social_sharing === 'bottom_of_post' || $hovercraft_social_sharing === 'top_and_bottom_of_post' ) : ?>
-						<?php get_template_part( 'template-parts/content/social-sharing' ); ?>
-					<?php endif; // end social sharing ?>
+						<?php
+						$hovercraft_social_sharing = get_theme_mod( 'hovercraft_social_sharing', 'bottom_of_post' );
+						?>
+						<?php if ( $hovercraft_social_sharing === 'bottom_of_post' || $hovercraft_social_sharing === 'top_and_bottom_of_post' ) : ?>
+							<?php get_template_part( 'template-parts/content/social-sharing' ); ?>
+						<?php endif; // end social sharing ?>
 
-					<?php get_template_part( 'template-parts/content/related-posts' ); ?>
-					
-					<?php get_template_part( 'template-parts/content/biography' ); ?>
+						<?php get_template_part( 'template-parts/content/related-posts' ); ?>
+						
+						<?php get_template_part( 'template-parts/content/biography' ); ?>
 
-					<?php get_template_part( 'template-parts/misc/tags' ); ?>
-					
-					<?php get_template_part( 'template-parts/content/link-pages' ); ?>
-					
-					<?php get_template_part( 'template-parts/content/pagination' ); ?>
+						<?php get_template_part( 'template-parts/misc/tags' ); ?>
+						
+						<?php get_template_part( 'template-parts/content/link-pages' ); ?>
+						
+						<?php get_template_part( 'template-parts/content/pagination' ); ?>
 			
-				</div><!-- content-padded -->
+					</div><!-- content-padded -->
+
+				</article><!-- post -->
 	
+			<?php endwhile; // end single post ?>
+		<?php endif; ?><!-- end the loop -->
+
 	<div class="clear"></div>
 	</div><!-- content-wrapper -->
 
@@ -113,13 +115,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="clear"></div>
 	</div><!-- primary -->
 
-		<?php if ( $show_sidebar ) : ?>
-			<?php get_template_part( 'sidebar' ); ?>
-		<?php endif; // end sidebar ?>
-		
-    	<div class="clear"></div>
-	</div><!-- inner -->
-	</div><!-- main -->	
-</div><!-- post -->
+	<?php if ( $show_sidebar ) : ?>
+		<?php get_template_part( 'sidebar' ); ?>
+	<?php endif; // end sidebar ?>
+	
+	<div class="clear"></div>
+</div><!-- inner -->
+</div><!-- main -->	
 
 <?php get_template_part( 'footer' ); ?>
