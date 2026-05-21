@@ -34,10 +34,6 @@ function hovercraft_breadcrumb() {
 
 // render one breadcrumb item
 function hovercraft_breadcrumb_item( $url, $name, $position, $is_current = false ) {
-	if ( $position > 1 ) {
-		hovercraft_breadcrumb_separator();
-	}
-
 	if ( is_wp_error( $url ) ) {
 		$url = '';
 	}
@@ -62,11 +58,6 @@ function hovercraft_breadcrumb_item( $url, $name, $position, $is_current = false
 
 	echo '<meta itemprop="position" content="' . intval( $position ) . '" />';
 	echo '</li>';
-}
-
-// render breadcrumb separator
-function hovercraft_breadcrumb_separator() {
-	echo '<li class="separator" aria-hidden="true">»</li>';
 }
 
 // render home breadcrumb item
