@@ -90,11 +90,7 @@ Small component titles are different from true content headings. Card titles, pr
 
 Hero H1 titles should use fixed presentation styling for readability and contrast. Hero H1 text should remain `#ffffff`, should use `font-weight: 700`, and may use hero-specific spacing because hero titles sit inside visual banner areas instead of normal article flow. These fixed hero styles are intentional and should not be treated as conflicts with the global page H1 system. Normal WordPress, WooCommerce, and bbPress page H1 titles should still follow the global H1 typography system.
 
-Use normal WordPress title and entry classes where they improve compatibility without changing the design. Singular content titles should use `entry-title`, archive titles should use `archive-title`, search result headings should use `search-title`, and error or static page headings may use `page-title` when appropriate. Loop item titles should usually keep their existing heading level but may add `entry-title` for standard hooks.
-
-Looped posts and search results should prefer `article` wrappers with `id="post-<?php the_ID(); ?>"` and `post_class( 'post-tease-archive' )` when the wrapper represents a real WordPress post. Excerpts in loops should use `entry-summary` alongside existing theme classes, and singular post/page content may use `entry-content` when the wrapper does not disrupt existing layout or styling.
-
-Do not add WordPress classes just to add markup noise. Use standard classes when they provide useful hooks for WordPress, plugins, SEO tools, accessibility tooling, or future audits. Preserve existing visual classes such as `post-tease-archive` and `post-excerpt-archive` so CSS behavior does not change.
+Use title classes only when they are useful hooks. Singular content titles should use `entry-title`, archive titles should use `archive-title`, search result headings should use `search-title`, and error or static page headings may use `page-title` when appropriate. Loop item titles should usually keep their existing heading level but may add `entry-title` for standard hooks.
 
 WooCommerce and bbPress own much of their internal title markup. Prefer narrow CSS fallback selectors for WooCommerce and bbPress title cleanup instead of replacing plugin templates unless a real template override is already justified. Plugin title fallbacks should align plugin output with HoverCraft's global heading system, not create alternate plugin title systems.
 
