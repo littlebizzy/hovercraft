@@ -88,6 +88,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<?php else : ?>
 						<p><?php esc_html_e( 'No posts found.', 'hovercraft' ); ?></p>
 					<?php endif; // end the loop ?>
+					<?php wp_reset_postdata(); ?>
 				<?php else : ?>
 					
 				<h1 class="archive-title"><?php echo esc_html( get_the_archive_title() ); ?></h1>
