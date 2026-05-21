@@ -52,6 +52,28 @@ Breakpoint-specific layout CSS should generally use both `max-width: 1199px` and
 
 Do not create empty breakpoint blocks or duplicate identical declarations just to satisfy the breakpoint convention. Prefer explicit mobile and desktop blocks when values differ, and shared base declarations when values are truly identical.
 
+### IDs / Classes / Markup Policy
+
+IDs, classes, and structural markup should make HoverCraft easier to style, audit, and extend without creating unnecessary theme-specific noise.
+
+Use semantic HTML elements when they clearly match the content structure. Real posts and search results should use `article` wrappers when the wrapper represents one WordPress entry. Breadcrumbs should use `nav` and ordered lists. Navigation should use `nav` when it represents site navigation. Do not replace clear existing layout wrappers with semantic elements just for novelty.
+
+Use WordPress standard classes and IDs when they provide useful compatibility hooks. Real WordPress entries may use `id="post-<?php the_ID(); ?>"`, `post_class()`, `entry-title`, `entry-summary`, and `entry-content` where appropriate. These hooks are useful for WordPress conventions, plugins, SEO tools, accessibility tooling, and future audits.
+
+Reserve WordPress entry classes for real WordPress entries and real page/post content. Normal posts, pages, archives, search results, category portal loops, and forum intro page content may use `entry-title`, `entry-summary`, `entry-content`, `article`, and `post_class()` when appropriate. Component output should stay custom unless it represents a real entry.
+
+Do not add `entry-title`, `entry-summary`, or `entry-content` to hero snippets, FAQ bullets, widget-style cards, navigation labels, related-posts section headings, mobile menu headings, or other compact UI components just because they contain a title, excerpt, or content-like text.
+
+Preserve existing visual classes when they control real theme styling. Custom classes such as `post-tease-archive` and `post-excerpt-archive` are acceptable because they are HoverCraft visual hooks. When adding WordPress standard classes, add them alongside existing visual classes unless the old class is truly unused and intentionally removed.
+
+Prefer classes for repeated styling hooks and IDs for unique page structure, anchor targets, JavaScript targets, accessibility relationships, or historically stable layout regions. Avoid adding IDs to repeated elements. Avoid duplicate IDs. Search forms, labels, and other repeated controls should use generated unique IDs when multiple copies may appear on the same page.
+
+Do not rename long-standing IDs or classes casually. IDs such as `main`, `primary`, `primary-wide`, `primary-center`, `content-wrapper`, `content-padded`, and `content-wide` are part of the theme's layout contract. Rename them only during a deliberate layout refactor with a full CSS/template scan.
+
+Do not add classes just to make markup look more complete. Add a class when it supports styling, plugin compatibility, accessibility, JavaScript behavior, WordPress standards, or future audits. If a component already has a clear custom class and does not represent a real WordPress entry, keep it custom.
+
+WooCommerce and bbPress own much of their internal markup. Prefer narrow CSS fallback selectors for plugin output unless a template override is already justified. Plugin fallback selectors should align plugin markup with HoverCraft's design system, not create a second class system.
+
 ### Headings / Titles Policy
 
 True content headings should use one consistent sitewide typography and spacing system across HoverCraft.
@@ -73,8 +95,6 @@ Use normal WordPress title and entry classes where they improve compatibility wi
 Looped posts and search results should prefer `article` wrappers with `id="post-<?php the_ID(); ?>"` and `post_class( 'post-tease-archive' )` when the wrapper represents a real WordPress post. Excerpts in loops should use `entry-summary` alongside existing theme classes, and singular post/page content may use `entry-content` when the wrapper does not disrupt existing layout or styling.
 
 Do not add WordPress classes just to add markup noise. Use standard classes when they provide useful hooks for WordPress, plugins, SEO tools, accessibility tooling, or future audits. Preserve existing visual classes such as `post-tease-archive` and `post-excerpt-archive` so CSS behavior does not change.
-
-Reserve WordPress entry classes for real WordPress entries and real page/post content. Normal posts, pages, archives, search results, category portal loops, and forum intro page content may use `entry-title`, `entry-summary`, `entry-content`, `article`, and `post_class()` when appropriate. Component output should stay custom unless it represents a real entry. Do not add `entry-title`, `entry-summary`, or `entry-content` to hero snippets, FAQ bullets, widget-style cards, navigation labels, related-posts section headings, mobile menu headings, or other compact UI components just because they contain a title, excerpt, or content-like text.
 
 WooCommerce and bbPress own much of their internal title markup. Prefer narrow CSS fallback selectors for WooCommerce and bbPress title cleanup instead of replacing plugin templates unless a real template override is already justified. Plugin title fallbacks should align plugin output with HoverCraft's global heading system, not create alternate plugin title systems.
 
