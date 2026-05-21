@@ -33,7 +33,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 }
 
-.breadcrumbs ul {
+.breadcrumbs ol {
 	display: inline;
 	margin: 0 !important;
 	padding: 0 !important;
@@ -41,14 +41,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	list-style-position: unset;
 }
 
-.breadcrumbs ul li {
+.breadcrumbs ol li {
 	display: inline;
 	margin: 0 5px 0 0;
 	padding: 0;
 	word-break: break-word;
 }
 
-.breadcrumbs ul li:last-child {
+.breadcrumbs ol li:last-child {
 	margin-right: 0;
 }
 
