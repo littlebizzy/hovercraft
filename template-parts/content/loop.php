@@ -4,6 +4,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
- if (have_posts()) : while (have_posts()) : the_post(); ?>
-    <?php the_content(); ?>
-<?php endwhile; endif; ?><!-- end the loop -->
+ if ( have_posts() ) : ?>
+	<?php while ( have_posts() ) : ?>
+		<?php the_post(); ?>
+		<div class="entry-content"><?php the_content(); ?></div>
+	<?php endwhile; // end posts ?>
+<?php endif; ?><!-- end the loop -->
