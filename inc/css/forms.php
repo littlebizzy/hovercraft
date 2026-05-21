@@ -106,7 +106,7 @@ input[type="checkbox"]:focus, input[type="radio"]:focus {
 }
 
 input[type="file"] {
-	width: 100%;	
+	width: 100%;
 	padding: 10px 0 !important;
 	background: transparent;
 	box-shadow: none;
