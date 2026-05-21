@@ -22,8 +22,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<?php if ( $forum_page instanceof WP_Post ) : ?>
 					<?php
 					$forum_page_content = apply_filters( 'the_content', $forum_page->post_content );
-					echo $forum_page_content;
 					?>
+					<div class="entry-content"><?php echo $forum_page_content; ?></div>
 				<?php endif; // end forum-page ?>
 				
 				<?php get_template_part( 'template-parts/content/pagination' ); ?>
