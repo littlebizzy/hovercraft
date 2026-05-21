@@ -82,8 +82,10 @@ $hovercraft_b = hexdec( substr( $hovercraft_hex, 4, 2 ) );
 	background: <?php echo $default_hover_color; ?>;
 }
 
-.search-submit svg {
+.search-submit svg, .search-submit i {
+	display: block;
 	width: 20px;
 	height: 20px;
-	display: block;
+	font-size: 20px;
+	line-height: 1;
 }
