@@ -90,7 +90,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<?php endif; // end the loop ?>
 				<?php else : ?>
 					
-				<h1><?php echo esc_html( get_the_archive_title() ); ?></h1>
+				<h1 class="archive-title"><?php echo esc_html( get_the_archive_title() ); ?></h1>
 				
 				<div class="category-description"><?php echo wp_kses_post( category_description() ); ?></div> 
 				
