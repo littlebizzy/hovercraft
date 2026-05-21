@@ -476,6 +476,19 @@ section.related, section.upsells, .woocommerce section.related, .woocommerce sec
 		width: 100%;
 	}
 
+	.single-product div.product div.images .woocommerce-product-gallery__image, body.single-product.woocommerce div.product div.images .woocommerce-product-gallery__image {
+		aspect-ratio: 4 / 3;
+		background: #ffffff;
+		overflow: hidden;
+	}
+
+	.single-product div.product div.images .woocommerce-product-gallery__image img, body.single-product.woocommerce div.product div.images .woocommerce-product-gallery__image img {
+		width: 100%;
+		height: 100%;
+		object-fit: contain;
+		object-position: center center;
+	}
+
 	.product_meta, .woocommerce div.product .product_meta {
 		margin: 20px 0;
 	}
