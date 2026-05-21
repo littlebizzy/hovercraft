@@ -65,7 +65,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<?php while ( $the_query->have_posts() ) : ?>
 							<?php $the_query->the_post(); ?>
 							
-							<div class="post-tease-archive">
+							<article id="post-<?php the_ID(); ?>" <?php post_class( 'post-tease-archive' ); ?>>
 						
 						<?php 
 						$hovercraft_primary_width = get_theme_mod( 'hovercraft_primary_width', 'wide' );
@@ -77,12 +77,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 						}
 						?>
 						
-						<h4><a href="<?php echo esc_url( get_permalink() ); ?>"><?php echo esc_html( get_the_title() ); ?></a></h4>
+						<h4 class="entry-title"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php echo esc_html( get_the_title() ); ?></a></h4>
 
 						<?php get_template_part( 'template-parts/content/byline-archive' ); ?>
 			
-						<div class="post-excerpt-archive"><?php the_excerpt(); ?></div>
-						</div><!-- post-tease-archive -->
+						<div class="entry-summary post-excerpt-archive"><?php the_excerpt(); ?></div>
+						</article><!-- post-tease-archive -->
 							
 							<?php endwhile; // end home posts ?>
 					<?php else : ?>
@@ -99,7 +99,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<?php the_post(); ?>
 
 		
-				<div class="post-tease-archive">
+				<article id="post-<?php the_ID(); ?>" <?php post_class( 'post-tease-archive' ); ?>>
 					
 				<?php 
 				$hovercraft_primary_width = get_theme_mod( 'hovercraft_primary_width', 'wide' );
@@ -111,12 +111,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 				}
 				?>
 				
-				<h4><a href="<?php echo esc_url( get_permalink() ); ?>"><?php echo esc_html( get_the_title() ); ?></a></h4>
+				<h4 class="entry-title"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php echo esc_html( get_the_title() ); ?></a></h4>
 
 				<?php get_template_part( 'template-parts/content/byline-archive' ); ?>
 		
-				<div class="post-excerpt-archive"><?php the_excerpt(); ?></div>
-				</div><!-- post-tease-archive -->
+				<div class="entry-summary post-excerpt-archive"><?php the_excerpt(); ?></div>
+				</article><!-- post-tease-archive -->
 		
 						<?php endwhile; // end archive posts ?>
 				<?php else : ?>
