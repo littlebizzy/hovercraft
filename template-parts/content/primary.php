@@ -36,7 +36,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<?php the_post(); ?>
 			
 				<?php if ( is_home() ) : ?>
-					<h4><a href="<?php echo esc_url( get_permalink() ); ?>"><?php echo esc_html( get_the_title() ); ?></a></h4>
+					<h4 class="entry-title"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php echo esc_html( get_the_title() ); ?></a></h4>
 					<?php the_excerpt(); ?>
 				<?php else : ?>
 					<?php the_content(); ?>
