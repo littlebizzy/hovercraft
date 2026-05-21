@@ -39,7 +39,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<h4 class="entry-title"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php echo esc_html( get_the_title() ); ?></a></h4>
 					<div class="entry-summary"><?php the_excerpt(); ?></div>
 				<?php else : ?>
-					<?php the_content(); ?>
+					<div class="entry-content"><?php the_content(); ?></div>
 				<?php endif; // end is_home ?>
 			
 				<?php endwhile; // end posts ?>
