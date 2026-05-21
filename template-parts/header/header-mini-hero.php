@@ -36,22 +36,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 		$portal_category = get_theme_mod( 'hovercraft_portal_category', 'none' );
 		if ( is_category( $portal_category ) ) :
 			$category_id = get_queried_object_id();
+			$cattitle = single_cat_title( '', false );
+			$hovercraft_search_id = wp_unique_id( 'search-' );
+			$hovercraft_layout_icons = get_theme_mod( 'hovercraft_layout_icons', 'material_icons_classic' );
 		?>
 		<br>
 		<form role="search" method="get" class="searchform" action="<?php echo esc_url( get_category_link( $category_id ) ); ?>">
+			<label class="screen-reader-text" for="<?php echo esc_attr( $hovercraft_search_id ); ?>"><?php echo esc_html( sprintf( __( 'Search %s', 'hovercraft' ), strtolower( $cattitle ) ) ); ?></label>
 			<div class="input-container">
-				<input type="search" class="search-input" value="<?php echo esc_attr( get_search_query() ); ?>" name="s" placeholder="<?php
-					$cattitle = single_cat_title( '', false );
-					echo esc_attr( 'Search ' . strtolower( $cattitle ) . '...' );
-				?>" />
-				<button type="submit" class="search-submit" name="submit"><?php
-					$hovercraft_layout_icons = get_theme_mod( 'hovercraft_layout_icons', 'material_icons_classic' );
-					if ( $hovercraft_layout_icons === 'material_icons_classic' ) {
-						echo '<i class="material-icons search">search</i>';
-					} elseif ( $hovercraft_layout_icons === 'font_awesome_version_6' ) {
-						echo '<i class="fas fa-search"></i>';
-					}
-				?></button>
+				<input id="<?php echo esc_attr( $hovercraft_search_id ); ?>" type="search" class="search-input" value="<?php echo esc_attr( get_search_query() ); ?>" name="s" placeholder="<?php echo esc_attr( 'Search ' . strtolower( $cattitle ) . '...' ); ?>" />
+				<button type="submit" class="search-submit" name="submit" aria-label="<?php esc_attr_e( 'Submit search', 'hovercraft' ); ?>">
+					<?php if ( $hovercraft_layout_icons === 'material_icons_classic' ) : ?>
+						<i class="material-icons search" aria-hidden="true">search</i>
+					<?php elseif ( $hovercraft_layout_icons === 'font_awesome_version_6' ) : ?>
+						<i class="fas fa-search" aria-hidden="true"></i>
+					<?php endif; // end layout icons ?>
+				</button>
 				</div><!-- input-container -->
 		</form><!-- searchform -->
 		<?php endif; // end category ?>
