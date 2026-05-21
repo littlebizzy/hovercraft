@@ -479,7 +479,6 @@ section.related, section.upsells, .woocommerce section.related, .woocommerce sec
 	.single-product div.product div.images .woocommerce-product-gallery__image, body.single-product.woocommerce div.product div.images .woocommerce-product-gallery__image {
 		aspect-ratio: 4 / 3;
 		background: #ffffff;
-		overflow: hidden;
 	}
 
 	.single-product div.product div.images .woocommerce-product-gallery__image img, body.single-product.woocommerce div.product div.images .woocommerce-product-gallery__image img {
