@@ -48,6 +48,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	word-break: break-word;
 }
 
+.breadcrumbs ol li + li::before {
+	content: "»";
+	margin-right: 5px;
+}
+
 .breadcrumbs ol li:last-child {
 	margin-right: 0;
 }
