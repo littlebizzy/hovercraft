@@ -20,6 +20,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 		padding: 20px 20px;
 		font-size: <?php echo $footer_mobile_font_size; ?>px;
 	}
+
+	#footer .widget-wrapper ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	#footer .widget-wrapper ul li {
+		display: block;
+		margin: 0;
+		padding: 0;
+		border-bottom: 1px solid rgba(128, 128, 128, 0.25);
+		list-style: none;
+	}
+
+	#footer .widget-wrapper ul li a {
+		display: block;
+		padding: 12px 0;
+	}
 }
 
 @media screen and (min-width: 1200px) {
