@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	
 	<div id="content-wrapper">
 	
-		<h1><?php esc_html_e( '404 Error (Not Found)', 'hovercraft' ); ?></h1>
+		<h1 class="page-title"><?php esc_html_e( '404 Error (Not Found)', 'hovercraft' ); ?></h1>
 		
 	<?php get_template_part( 'template-parts/content/loop' ); ?>
 	
