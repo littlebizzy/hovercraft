@@ -28,11 +28,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
                     <?php while ( have_posts() ) : the_post(); ?>
 
-                        <div class="post-tease-archive">
+                        <article id="post-<?php the_ID(); ?>" <?php post_class( 'post-tease-archive' ); ?>>
                             <?php get_template_part( 'template-parts/content/featured-image-archive' ); ?>
-                            <h4><a href="<?php echo esc_url( get_permalink() ); ?>"><?php echo esc_html( get_the_title() ); ?></a></h4>
-                            <div class="post-excerpt-archive"><?php the_excerpt(); ?></div>
-                        </div><!-- post-tease-archive -->
+                            <h4 class="entry-title"><a href="<?php echo esc_url( get_permalink() ); ?>"><?php echo esc_html( get_the_title() ); ?></a></h4>
+                            <div class="entry-summary post-excerpt-archive"><?php the_excerpt(); ?></div>
+                        </article><!-- post-tease-archive -->
 
 	                    <?php endwhile; // end search results ?>
 
