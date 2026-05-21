@@ -92,26 +92,51 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 .woocommerce-checkout .select2-container .select2-selection--single {
-	height: auto;
-	min-height: 42px;
+	min-height: 46px;
+	background: #ffffff;
+	border: 0;
 	border-radius: 4px;
+	box-shadow: inset 0 0 0 1px #e0e0e0;
+	color: <?php echo $default_text_color; ?>;
+	font-family: inherit;
+	font-size: 16px;
+	font-weight: 400;
 	line-height: 1.5;
+	transition: background-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, color 0.15s ease-in-out;
+}
+
+.woocommerce-checkout .select2-container .select2-selection--single:focus, .woocommerce-checkout .select2-container.select2-container--focus .select2-selection--single, .woocommerce-checkout .select2-container.select2-container--open .select2-selection--single {
+	background: #ffffff;
+	box-shadow: inset 0 0 0 2px <?php echo $default_link_color; ?>;
+	color: <?php echo $default_text_color; ?>;
+	outline: 0;
 }
 
 .woocommerce-checkout .select2-container .select2-selection--single .select2-selection__rendered {
-	padding: 8px 12px;
+	padding: 10px 44px 10px 16px;
+	color: <?php echo $default_text_color; ?>;
+	font-family: inherit;
+	font-size: 16px;
+	font-weight: 400;
 	line-height: 1.5;
 }
 
+.woocommerce-checkout .select2-container .select2-selection--single .select2-selection__placeholder {
+	color: <?php echo $default_text_color; ?>;
+	opacity: 0.65;
+}
+
 .woocommerce-checkout .select2-container .select2-selection--single .select2-selection__arrow {
+	top: 0;
+	right: 12px;
 	height: 100%;
 }
 
-.woocommerce-checkout .woocommerce-invalid input, .woocommerce-checkout .woocommerce-invalid select, .woocommerce-checkout .woocommerce-invalid textarea {
+.woocommerce-checkout .woocommerce-invalid input, .woocommerce-checkout .woocommerce-invalid select, .woocommerce-checkout .woocommerce-invalid textarea, .woocommerce-checkout .woocommerce-invalid .select2-container .select2-selection--single {
 	box-shadow: inset 0 0 0 2px #ff1744 !important;
 }
 
-.woocommerce-checkout .woocommerce-validated input, .woocommerce-checkout .woocommerce-validated select, .woocommerce-checkout .woocommerce-validated textarea {
+.woocommerce-checkout .woocommerce-validated input, .woocommerce-checkout .woocommerce-validated select, .woocommerce-checkout .woocommerce-validated textarea, .woocommerce-checkout .woocommerce-validated .select2-container .select2-selection--single {
 	box-shadow: inset 0 0 0 1px #e0e0e0 !important;
 }
 
