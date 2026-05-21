@@ -74,6 +74,8 @@ Looped posts and search results should prefer `article` wrappers with `id="post-
 
 Do not add WordPress classes just to add markup noise. Use standard classes when they provide useful hooks for WordPress, plugins, SEO tools, accessibility tooling, or future audits. Preserve existing visual classes such as `post-tease-archive` and `post-excerpt-archive` so CSS behavior does not change.
 
+Reserve WordPress entry classes for real WordPress entries and real page/post content. Normal posts, pages, archives, search results, category portal loops, and forum intro page content may use `entry-title`, `entry-summary`, `entry-content`, `article`, and `post_class()` when appropriate. Component output should stay custom unless it represents a real entry. Do not add `entry-title`, `entry-summary`, or `entry-content` to hero snippets, FAQ bullets, widget-style cards, navigation labels, related-posts section headings, mobile menu headings, or other compact UI components just because they contain a title, excerpt, or content-like text.
+
 WooCommerce and bbPress own much of their internal title markup. Prefer narrow CSS fallback selectors for WooCommerce and bbPress title cleanup instead of replacing plugin templates unless a real template override is already justified. Plugin title fallbacks should align plugin output with HoverCraft's global heading system, not create alternate plugin title systems.
 
 ### Corner Radius Policy
