@@ -9,7 +9,7 @@ add_filter( 'bbp_no_breadcrumb', '__return_true' );
 
 // render schema breadcrumb wrapper
 function hovercraft_breadcrumb() {
-	echo '<ul id="hovercraft-breadcrumb" class="hovercraft-breadcrumb breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">';
+	echo '<ol id="hovercraft-breadcrumb" class="hovercraft-breadcrumb breadcrumb-list" itemscope itemtype="https://schema.org/BreadcrumbList">';
 
 	hovercraft_breadcrumb_home();
 
@@ -29,7 +29,7 @@ function hovercraft_breadcrumb() {
 		hovercraft_breadcrumb_404();
 	}
 
-	echo '</ul>';
+	echo '</ol>';
 }
 
 // render one breadcrumb item
@@ -43,12 +43,14 @@ function hovercraft_breadcrumb_item( $url, $name, $position, $is_current = false
 	}
 
 	$class = 'item';
+	$current = '';
 
 	if ( $is_current ) {
 		$class = 'item-current item';
+		$current = ' aria-current="page"';
 	}
 
-	echo '<li class="' . esc_attr( $class ) . '" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">';
+	echo '<li class="' . esc_attr( $class ) . '" itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem"' . $current . '>';
 
 	if ( $url && ! $is_current ) {
 		echo '<a href="' . esc_url( $url ) . '" itemprop="item">';
@@ -64,7 +66,7 @@ function hovercraft_breadcrumb_item( $url, $name, $position, $is_current = false
 
 // render breadcrumb separator
 function hovercraft_breadcrumb_separator() {
-	echo '<li class="separator">»</li>';
+	echo '<li class="separator" aria-hidden="true">»</li>';
 }
 
 // render home breadcrumb item
