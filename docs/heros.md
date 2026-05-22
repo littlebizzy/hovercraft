@@ -10,7 +10,9 @@ Do not move the Full Hero header, preheader, or navigation outside the Full Hero
 
 Full Hero pages should use viewport flex layout instead of table layout or hardcoded header-height math.
 
-The page container owns the viewport height. The topbar keeps its natural height. The Full Hero container fills the remaining viewport height. The Full Hero header keeps its natural height, and the Full Hero body flexes to fill the remaining space below the header.
+The Full Hero viewport shell owns the first-screen viewport height. The topbar keeps its natural height. The Full Hero container fills the remaining viewport height. The Full Hero header keeps its natural height, and the Full Hero body flexes to fill the remaining space below the header.
+
+Open the Full Hero viewport shell before the topbar and close it immediately after the Full Hero container in each Full Hero page template. Do not let posthero, main content, sidebars, or footer content live inside the Full Hero viewport shell.
 
 Use `100svh` for Full Hero viewport alignment, with `100vh` as a fallback when useful.
 
