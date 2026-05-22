@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		$parent_style_path = get_template_directory() . '/style.css';
 		?>
 		<?php if ( is_readable( $parent_style_path ) ) : ?>
-			<style><?php readfile( $parent_style_path ); ?></style>
+			<style><?php echo file_get_contents( $parent_style_path ); ?></style>
 		<?php endif; // end parent-style-path ?>
 
 		<?php
@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		$child_style_path = get_stylesheet_directory() . '/style.css';
 		?>
 		<?php if ( is_readable( $child_style_path ) ) : ?>
-			<style><?php readfile( $child_style_path ); ?></style>
+			<style><?php echo file_get_contents( $child_style_path ); ?></style>
 		<?php endif; // end child-style-path ?>
 
 		<?php wp_head(); ?>
@@ -36,37 +36,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 		<div id="container"><!-- main container -->
 
-			<?php if ( is_active_sidebar( 'hovercraft_topbar_left' ) || is_active_sidebar( 'hovercraft_topbar_right' ) ) : ?>
-				<div id="topbar">
-					<div class="inner">
-
-						<?php
-						// disable widget titles for topbar
-						add_filter( 'widget_title', '__return_false' );
-
-						if ( is_active_sidebar( 'hovercraft_topbar_left' ) && is_active_sidebar( 'hovercraft_topbar_right' ) ) : ?>
-							<div class="topbar-left">
-								<?php dynamic_sidebar( 'hovercraft_topbar_left' ); ?>
-							</div><!-- topbar-left -->
-							<div class="topbar-right">
-								<?php dynamic_sidebar( 'hovercraft_topbar_right' ); ?>
-							</div><!-- topbar-right -->
-						<?php else : ?>
-							<div class="topbar-center">
-								<?php if ( is_active_sidebar( 'hovercraft_topbar_left' ) ) : ?>
-									<?php dynamic_sidebar( 'hovercraft_topbar_left' ); ?>
-								<?php else : ?>
-									<?php dynamic_sidebar( 'hovercraft_topbar_right' ); ?>
-								<?php endif; // end hovercraft-topbar-left sidebar ?>
-							</div><!-- topbar-center -->
-						<?php endif; // end topbar columns
-
-						// restore widget titles after topbar
-						remove_filter( 'widget_title', '__return_false' ); ?>
-
-						<div class="clear"></div><!-- clear floats -->
-
-					</div><!-- inner -->
-				</div><!-- topbar -->
-			<?php endif; // end topbar ?>
-
+			<?php get_template_part( 'template-parts/header/topbar' ); ?>
