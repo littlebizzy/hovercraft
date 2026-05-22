@@ -8,6 +8,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <?php get_template_part( 'header' ); ?>
 <?php get_template_part( 'template-parts/header/header-full-hero' ); ?>
+</div><!-- full-hero-viewport -->
 
 	<?php if ( hovercraft_should_show_posthero( 'full' ) ) : ?>
 		<?php get_template_part( 'template-parts/header/posthero' ); ?>
