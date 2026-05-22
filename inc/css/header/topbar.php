@@ -76,6 +76,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 @media screen and (min-width: 1200px) {
 	.topbar-left {
+		flex: 0 0 auto;
+		width: auto;
 		white-space: nowrap;
 		text-align: left;
 	}
@@ -91,6 +93,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 @media screen and (min-width: 1200px) {
 	.topbar-right {
+		flex: 1 1 auto;
+		width: 100%;
 		text-align: right;
 	}
 }
