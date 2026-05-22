@@ -58,24 +58,14 @@ function hovercraft_get_hero_background(
 	background: <?php echo $default_text_color; ?>;
 }
 
-body.page-template-full-hero-no-sidebar #container,
-body.page-template-full-hero-sidebar #container,
-body.page-template-full-hero-columns-no-sidebar #container,
-body.page-template-full-hero-gallery-no-sidebar #container,
-body.page-template-full-hero-tiles-no-sidebar #container,
-body.page-template-full-hero-tiles-sidebar #container {
+#full-hero-viewport {
 	min-height: 100vh;
 	min-height: 100svh;
 	display: flex;
 	flex-direction: column;
 }
 
-body.page-template-full-hero-no-sidebar #topbar,
-body.page-template-full-hero-sidebar #topbar,
-body.page-template-full-hero-columns-no-sidebar #topbar,
-body.page-template-full-hero-gallery-no-sidebar #topbar,
-body.page-template-full-hero-tiles-no-sidebar #topbar,
-body.page-template-full-hero-tiles-sidebar #topbar {
+#full-hero-viewport #topbar {
 	flex: 0 0 auto;
 }
 
