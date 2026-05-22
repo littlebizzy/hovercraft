@@ -27,6 +27,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 		font-size: <?php echo $copyright_mobile_font_size; ?>px;
 	}
 
+	#copyright i {
+		font-size: <?php echo $copyright_mobile_font_size; ?>px;
+	}
+
 	#copyright .inner {
 		max-width: none;
 	}
@@ -52,6 +56,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	#copyright {
 		display: table;
 		padding: 20px 0;
+		font-size: <?php echo $copyright_desktop_font_size; ?>px;
+	}
+
+	#copyright i {
 		font-size: <?php echo $copyright_desktop_font_size; ?>px;
 	}
 
@@ -88,7 +96,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* icons */
 #copyright i {
-	font-size: 1.15em;
 	margin-left: 20px !important;
 }
 
