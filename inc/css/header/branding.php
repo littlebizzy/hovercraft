@@ -8,7 +8,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 #branding {
-	display: table;
+	display: flex;
+	align-items: center;
 }
 
 #branding a {
@@ -16,20 +17,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 .branding-media {
-	display: table-cell;
-    vertical-align: middle;
-	height: inherit;
+	flex: 0 0 auto;
 	min-width: auto;
 	white-space: nowrap;
 }
 
-
 /* branding text */
 
 .branding-text {
-	display: table-cell;
-    vertical-align: middle;
-	height: inherit;
+	flex: 1 1 auto;
+	min-width: 0;
 	text-align: left;
-	width: 100%;
 }
