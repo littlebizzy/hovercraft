@@ -416,7 +416,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 @media screen and (min-width: 1200px) {
 	.woocommerce-checkout form.checkout {
 		display: grid;
-		grid-template-columns: minmax(0, 1fr) minmax(360px, 420px);
+		grid-template-columns: minmax(0, 1fr) minmax(420px, 460px);
 		column-gap: 30px;
 		align-items: start;
 	}
@@ -439,14 +439,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 		top: 30px;
 	}
 
-	.woocommerce-checkout .col2-set .col-1 {
-		float: left;
-		width: 48%;
+	.woocommerce-checkout #customer_details.col2-set .col-1, .woocommerce-checkout #customer_details.col2-set .col-2 {
+		float: none;
+		width: 100%;
 	}
 
-	.woocommerce-checkout .col2-set .col-2 {
-		float: right;
-		width: 48%;
+	.woocommerce-checkout #customer_details.col2-set .col-2 {
+		margin-top: 30px;
 	}
 
 	.woocommerce-checkout .form-row-first {
