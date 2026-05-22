@@ -6,14 +6,13 @@ Description: No maintenance WordPress theme
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 License: GPLv3
-License URI: http://www.gnu.org/licenses/gpl-3.0.html
-Tested up to: 6.9
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Tested up to: 7.0
 Text Domain: hovercraft
 Requires PHP: 7.0
 GitHub Theme URI: littlebizzy/hovercraft
 Primary Branch: master
 */
-
 
 /* css reset */
 
@@ -26,13 +25,30 @@ html, body, div, span, applet, object, iframe, main, h1, h2, h3, h4, h5, h6, p, 
 	vertical-align: baseline;
 }
 
+/* html5 elements */
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section {
+	display: block;
+}
+
+/* form elements */
+
+button, input, optgroup, select, textarea {
+	font: inherit;
+}
+
+/* responsive media */
+
+img, picture, video, canvas, svg {
+	max-width: 100%;
+	height: auto;
+}
 
 /* universal */
 
-* {
+*, *::before, *::after {
 	box-sizing: border-box;
 }
-
 
 /* devices */
 
