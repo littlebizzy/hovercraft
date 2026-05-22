@@ -13,7 +13,7 @@ function hovercraft_get_header_icon_style() {
 function hovercraft_header_search_icon() {
 	$header_icon_style = hovercraft_get_header_icon_style();
 	?>
-	<div class="search-icon-wrapper" role="button" tabindex="0" aria-label="<?php echo esc_attr__( 'Open search', 'hovercraft' ); ?>">
+	<div class="search-icon-wrapper" role="button" tabindex="0" aria-label="<?php echo esc_attr__( 'Open search', 'hovercraft' ); ?>" aria-controls="full-screen-search" aria-expanded="false">
 		<?php if ( 'material_icons_classic' === $header_icon_style ) : ?>
 			<i class="material-icons search" aria-hidden="true">search</i>
 		<?php elseif ( 'font_awesome_version_6' === $header_icon_style ) : ?>
