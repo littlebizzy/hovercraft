@@ -4,6 +4,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// render widget area without titles
+function hovercraft_dynamic_sidebar_without_title( $sidebar_id ) {
+	add_filter( 'widget_title', '__return_false' );
+	dynamic_sidebar( $sidebar_id );
+	remove_filter( 'widget_title', '__return_false' );
+}
+
 // register widget area
 function hovercraft_register_widget_area( $sidebar ) {
 	$before_title = '<h3 class="widget-title">';
