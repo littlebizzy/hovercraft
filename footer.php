@@ -31,16 +31,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 </div><!-- container -->
 
-<div id="full-screen-search">
-	<?php $hovercraft_layout_icons = get_theme_mod( 'hovercraft_layout_icons', 'material_icons_classic' ); ?>
-	<?php if ( $hovercraft_layout_icons === 'material_icons_classic' ) : ?>
-		<button type="button" class="close" aria-label="<?php esc_attr_e( 'Close search', 'hovercraft' ); ?>"><i class="material-icons close" aria-hidden="true">close</i></button>
-	<?php elseif ( $hovercraft_layout_icons === 'font_awesome_version_6' ) : ?>
-		<button type="button" class="close" aria-label="<?php esc_attr_e( 'Close search', 'hovercraft' ); ?>"><i class="fa-solid fa-x" aria-hidden="true"></i></button>
-	<?php endif; // end layout icons ?>
-
-	<?php get_search_form(); ?>
-</div><!-- full-screen-search -->
+<?php get_template_part( 'template-parts/misc/search-modal' ); ?>
 
 <?php wp_footer(); ?>
 
