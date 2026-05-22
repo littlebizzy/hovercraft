@@ -32,4 +32,18 @@
 
 <div id="container"><!-- main container -->
 
+	<?php
+	// open full hero viewport shell
+	if ( is_page_template( array(
+		'page-templates/full-hero-no-sidebar.php',
+		'page-templates/full-hero-sidebar.php',
+		'page-templates/full-hero-columns-no-sidebar.php',
+		'page-templates/full-hero-gallery-no-sidebar.php',
+		'page-templates/full-hero-tiles-no-sidebar.php',
+		'page-templates/full-hero-tiles-sidebar.php',
+	) ) ) :
+		?>
+		<div id="full-hero-viewport">
+	<?php endif; ?>
+
 	<?php get_template_part( 'template-parts/header/topbar' ); ?>
