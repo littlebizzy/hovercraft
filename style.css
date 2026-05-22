@@ -20,33 +20,46 @@ html, body, div, span, applet, object, iframe, main, h1, h2, h3, h4, h5, h6, p, 
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font: inherit;
 	font-size: 100%;
+	font: inherit;
 	vertical-align: baseline;
 }
+
+/* html5 elements */
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section {
 	display: block;
 }
 
-body {
-	line-height: 1;
+/* form elements */
+
+button, input, optgroup, select, textarea {
+	font: inherit;
 }
 
-ol, ul {
-	list-style: none;
+/* responsive media */
+
+img, picture, video, canvas, svg {
+	max-width: 100%;
+	height: auto;
 }
 
-blockquote, q {
-	quotes: none;
+/* universal */
+
+*, *::before, *::after {
+	box-sizing: border-box;
 }
 
-blockquote::before, blockquote::after, q::before, q::after {
-	content: '';
-	content: none;
+/* devices */
+
+@media screen and (max-width: 1199px) {
+	.desktop {
+		display: none !important;
+	}
 }
 
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
+@media screen and (min-width: 1200px) {
+	.mobile {
+		display: none !important;
+	}
 }
