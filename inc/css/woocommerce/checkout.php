@@ -259,6 +259,18 @@ body.woocommerce-checkout .breadcrumbs {
 	margin-bottom: 0;
 }
 
+.woocommerce-checkout-review-order-table .shipping li label {
+	display: inline-flex;
+	align-items: flex-start;
+	gap: 8px;
+	text-align: left;
+}
+
+.woocommerce-checkout-review-order-table .shipping input[type="radio"] {
+	float: none;
+	margin: 5px 0 0;
+}
+
 .woocommerce-checkout-review-order-table .order-total th, .woocommerce-checkout-review-order-table .order-total td {
 	font-size: 18px;
 	font-weight: 700;
