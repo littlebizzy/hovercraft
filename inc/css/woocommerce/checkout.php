@@ -12,7 +12,7 @@ body.woocommerce-checkout #header-basic,
 body.woocommerce-checkout #header-half-hero,
 body.woocommerce-checkout #header-mini-hero,
 body.woocommerce-checkout #header-full-hero,
-body.woocommerce-checkout #breadcrumbs {
+body.woocommerce-checkout .breadcrumbs {
 	display: none;
 }
 
