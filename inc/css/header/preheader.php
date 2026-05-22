@@ -22,7 +22,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 @media screen and (min-width: 1200px) {
 	#preheader {
 		padding: 0 0 40px 0;
-		display: table;
 	}
 }
 
@@ -30,10 +29,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 	margin-bottom: 0;
 }
 
+#preheader .inner {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 .preheader-left,
 .preheader-right,
 .preheader-center {
-	vertical-align: middle;
+	width: 100%;
 }
 
 .preheader-center {
@@ -41,45 +46,45 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 @media screen and (max-width: 1199px) {
+	#preheader .inner {
+		flex-direction: column;
+	}
+
 	.preheader-left,
 	.preheader-right {
 		text-align: center;
 	}
 }
 
+<?php if ( $mobile_preheader_widget == 'preheader_right' ) : ?>
 @media screen and (max-width: 1199px) {
 	.preheader-left {
-		<?php if ( $mobile_preheader_widget == 'preheader_right') { echo "display: none;"; } ?>
+		display: none;
 	}
 }
+<?php endif; ?>
 
 @media screen and (min-width: 1200px) {
 	.preheader-left {
-		display: table-cell;
-		height: inherit;
-		white-space: nowrap;
+		flex: 0 0 auto;
 		width: auto;
+		white-space: nowrap;
 		text-align: left;
 	}
 }
 
+<?php if ( $mobile_preheader_widget == 'preheader_left' ) : ?>
 @media screen and (max-width: 1199px) {
 	.preheader-right {
-		<?php if ( $mobile_preheader_widget == 'preheader_left') { echo "display: none;"; } ?>
+		display: none;
 	}
 }
+<?php endif; ?>
 
 @media screen and (min-width: 1200px) {
 	.preheader-right {
-		display: table-cell;
-		height: inherit;
-		text-align: right;
+		flex: 1 1 auto;
 		width: 100%;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-	.preheader-center {
-		height: inherit;
+		text-align: right;
 	}
 }
