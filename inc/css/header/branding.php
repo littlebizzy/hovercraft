@@ -29,3 +29,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	min-width: 0;
 	text-align: left;
 }
+
+@media screen and (max-width: 1199px) {
+	#branding {
+		column-gap: 10px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	#branding {
+		column-gap: 20px;
+	}
+}
