@@ -3,20 +3,25 @@
 <head>
 	<meta charset="<?php echo esc_attr( get_bloginfo( 'charset' ) ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<?php
 	// inline parent theme's stylesheet
 	$parent_style_path = get_template_directory() . '/style.css';
+
 	if ( is_readable( $parent_style_path ) ) {
 		?><style><?php readfile( $parent_style_path ); ?></style><?php
 	}
 	?>
+
 	<?php
 	// inline child theme's stylesheet
 	$child_style_path = get_stylesheet_directory() . '/style.css';
+
 	if ( is_child_theme() && is_readable( $child_style_path ) ) {
 		?><style><?php readfile( $child_style_path ); ?></style><?php
 	}
 	?>
+
 	<?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
