@@ -27,6 +27,17 @@ function hovercraft_resource_hints( $urls, $relation_type ) {
 }
 add_filter( 'wp_resource_hints', 'hovercraft_resource_hints', 10, 2 );
 
+// print an inline stylesheet
+function hovercraft_print_inline_stylesheet( $stylesheet_path ) {
+	if ( ! is_readable( $stylesheet_path ) ) {
+		return;
+	}
+
+	echo "\n<style>\n";
+	readfile( $stylesheet_path );
+	echo "\n</style>\n";
+}
+
 // enqueue optional header font assets
 function hovercraft_enqueue_header_assets() {
 	$material_icons_setting = get_theme_mod( 'hovercraft_material_icons', 'classic_only' );
