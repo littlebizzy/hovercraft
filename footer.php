@@ -26,32 +26,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php endif; // end is_front_page ?>
 
 <?php get_template_part( 'template-parts/footer/prefooter' ); ?>
-
-<?php if ( is_active_sidebar( 'hovercraft_footer_one' ) || is_active_sidebar( 'hovercraft_footer_two' ) || is_active_sidebar( 'hovercraft_footer_three' ) || is_active_sidebar( 'hovercraft_footer_four' ) || is_active_sidebar( 'hovercraft_footer_callout' ) ) : ?>
-	<div id="footer">
-		<div class="inner">
-
-			<?php
-			$hovercraft_footer_columns = get_theme_mod( 'hovercraft_footer_columns', 'four_weighted' );
-
-			if ( $hovercraft_footer_columns === 'four_equal' ) {
-				get_template_part( 'template-parts/footer/footer-four-columns-equal' );
-			} elseif ( $hovercraft_footer_columns === 'four_weighted' ) {
-				get_template_part( 'template-parts/footer/footer-four-columns-unequal' );
-			} elseif ( $hovercraft_footer_columns === 'three_equal' ) {
-				get_template_part( 'template-parts/footer/footer-three-columns-equal' );
-			} elseif ( $hovercraft_footer_columns === 'three_weighted' ) {
-				get_template_part( 'template-parts/footer/footer-three-columns-unequal' );
-			} else {
-				get_template_part( 'template-parts/footer/footer-four-columns-unequal' );
-			}
-			?>
-
-			<div class="clear"></div>
-		</div><!-- inner -->
-	</div><!-- footer -->
-<?php endif; // end footer widget areas ?>
-
+<?php get_template_part( 'template-parts/footer/footer-widgets' ); ?>
 <?php get_template_part( 'template-parts/footer/copyright' ); ?>
 
 </div><!-- container -->
