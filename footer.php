@@ -25,23 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</div><!-- home-postmain-bottom -->
 <?php endif; // end is_front_page ?>
 
-<?php if ( is_active_sidebar( 'hovercraft_prefooter_top' ) ) : ?>
-	<div id="prefooter-top">
-		<div class="inner">
-			<?php dynamic_sidebar( 'hovercraft_prefooter_top' ); ?>
-			<div class="clear"></div>
-		</div><!-- inner -->
-	</div><!-- prefooter-top -->
-<?php endif; // end hovercraft-prefooter-top sidebar ?>
-
-<?php if ( is_active_sidebar( 'hovercraft_prefooter_bottom' ) ) : ?>
-	<div id="prefooter-bottom">
-		<div class="inner">
-			<?php dynamic_sidebar( 'hovercraft_prefooter_bottom' ); ?>
-			<div class="clear"></div>
-		</div><!-- inner -->
-	</div><!-- prefooter-bottom -->
-<?php endif; // end hovercraft-prefooter-bottom sidebar ?>
+<?php get_template_part( 'template-parts/footer/prefooter' ); ?>
 
 <?php if ( is_active_sidebar( 'hovercraft_footer_one' ) || is_active_sidebar( 'hovercraft_footer_two' ) || is_active_sidebar( 'hovercraft_footer_three' ) || is_active_sidebar( 'hovercraft_footer_four' ) || is_active_sidebar( 'hovercraft_footer_callout' ) ) : ?>
 	<div id="footer">
