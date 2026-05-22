@@ -7,33 +7,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?>>
-	<head>
-		<meta charset="<?php echo esc_attr( get_bloginfo( 'charset' ) ); ?>">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<?php
-		// inline parent theme's stylesheet
-		$parent_style_path = get_template_directory() . '/style.css';
-		?>
-		<?php if ( is_readable( $parent_style_path ) ) : ?>
-			<style><?php readfile( $parent_style_path ); ?></style>
-		<?php endif; // end parent-style-path ?>
+<head>
+	<meta charset="<?php echo esc_attr( get_bloginfo( 'charset' ) ); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<?php hovercraft_print_inline_stylesheet( get_template_directory() . '/style.css' ); ?>
+	<?php if ( get_stylesheet_directory() !== get_template_directory() ) : ?>
+		<?php hovercraft_print_inline_stylesheet( get_stylesheet_directory() . '/style.css' ); ?>
+	<?php endif; // end child stylesheet ?>
+	<?php wp_head(); ?>
+</head>
+<body <?php body_class(); ?>>
 
-		<?php
-		// inline child theme's stylesheet
-		$child_style_path = get_stylesheet_directory() . '/style.css';
-		?>
-		<?php if ( is_readable( $child_style_path ) ) : ?>
-			<style><?php readfile( $child_style_path ); ?></style>
-		<?php endif; // end child-style-path ?>
+<?php wp_body_open(); ?>
 
-		<?php wp_head(); ?>
-	</head>
-	<body <?php body_class(); ?>>
+<?php get_template_part( 'template-parts/header/mobile-menu' ); ?>
 
-		<?php wp_body_open(); ?>
+<div id="container"><!-- main container -->
 
-		<?php get_template_part( 'template-parts/header/mobile-menu' ); ?>
-
-		<div id="container"><!-- main container -->
-
-			<?php get_template_part( 'template-parts/header/topbar' ); ?>
+	<?php get_template_part( 'template-parts/header/topbar' ); ?>
