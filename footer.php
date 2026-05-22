@@ -11,12 +11,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php get_template_part( 'template-parts/footer/prefooter' ); ?>
 <?php get_template_part( 'template-parts/footer/footer-widgets' ); ?>
 <?php get_template_part( 'template-parts/footer/copyright' ); ?>
-
-</div><!-- container -->
-
 <?php get_template_part( 'template-parts/misc/search-modal' ); ?>
 
 <?php wp_footer(); ?>
+
+</div><!-- container -->
 
 </body><!-- body -->
 </html><!-- html -->
