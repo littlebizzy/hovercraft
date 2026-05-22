@@ -47,6 +47,7 @@ require get_template_directory() . '/inc/menus/overlay-menu.php';
 require get_template_directory() . '/inc/header/custom-header.php';
 require get_template_directory() . '/inc/header/header-assets.php';
 require get_template_directory() . '/inc/header/header-cleanup.php';
+require get_template_directory() . '/inc/header/header-navigation.php';
 require get_template_directory() . '/inc/header/header-video.php';
 require get_template_directory() . '/inc/header/logo-alternative.php';
 require get_template_directory() . '/inc/header/logo-default.php';
