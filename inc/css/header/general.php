@@ -8,17 +8,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 .header-left {
-	display: table-cell;
-    vertical-align: middle;
-	height: inherit;
+	flex: 0 0 auto;
 	min-width: auto;
 	white-space: nowrap;
 }
 
 .header-right {
-	display: table-cell;
-    vertical-align: middle;
-	height: inherit;
+	flex: 1 1 auto;
+	min-width: 0;
 	text-align: right;
-	width: 100%;
 }
