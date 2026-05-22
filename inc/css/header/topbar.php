@@ -56,6 +56,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 @media screen and (max-width: 1199px) {
+	#topbar .inner {
+		flex-direction: column;
+	}
+
 	.topbar-left,
 	.topbar-right {
 		text-align: center;
