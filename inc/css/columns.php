@@ -5,6 +5,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // styles for columns
+$columns_across_count = max( 3, min( 6, absint( $columns_across ) ) );
 ?>
 
 /* columns */
@@ -22,15 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 @media screen and (min-width: 1200px) {
 	.columns {
 		display: grid;
-		<?php if ( $columns_across == '3' ) {
-			echo "grid-template-columns: repeat(3, 1fr);\n";
-		} elseif ( $columns_across == '4' ) {
-			echo "grid-template-columns: repeat(4, 1fr);\n";
-		} elseif ( $columns_across == '5' ) {
-			echo "grid-template-columns: repeat(5, 1fr);\n";
-		} elseif ( $columns_across == '6' ) {
-			echo "grid-template-columns: repeat(6, 1fr);\n";
-		} ?>
+		grid-template-columns: repeat(<?php echo $columns_across_count; ?>, 1fr);
 		gap: 30px;
 	}
 }
@@ -82,15 +75,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* postcolumns */
 
-.postcolumns-top {
+.postcolumns-top,
+.postcolumns-bottom {
 	width: 100%;
+}
+
+.postcolumns-top {
 	text-align: <?php echo $postcolumns_top_align; ?>;
 	background: <?php echo $postcolumns_top_background_color; ?>;
 	color: <?php echo $postcolumns_top_text_color; ?>;
 }
 
 .postcolumns-bottom {
-	width: 100%;
 	text-align: <?php echo $postcolumns_bottom_align; ?>;
 	background: <?php echo $postcolumns_bottom_background_color; ?>;
 	color: <?php echo $postcolumns_bottom_text_color; ?>;
