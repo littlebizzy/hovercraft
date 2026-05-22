@@ -9,7 +9,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div id="home-postmain-top">
 		<div class="inner">
 			<?php dynamic_sidebar( 'hovercraft_home_postmain_top' ); ?>
-			<div class="clear"></div>
 		</div><!-- inner -->
 	</div><!-- home-postmain-top -->
 <?php endif; // end is_front_page ?>
@@ -18,7 +17,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div id="home-postmain-bottom">
 		<div class="inner">
 			<?php dynamic_sidebar( 'hovercraft_home_postmain_bottom' ); ?>
-			<div class="clear"></div>
 		</div><!-- inner -->
 	</div><!-- home-postmain-bottom -->
 <?php endif; // end is_front_page ?>
