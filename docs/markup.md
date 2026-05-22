@@ -14,6 +14,24 @@ Navigation should use `nav` when it represents site navigation.
 
 Do not replace clear existing layout wrappers with semantic elements just for novelty.
 
+## Template Readability
+
+Template files should be easy to scan before they are clever.
+
+Use blank lines to separate meaningful template sections such as document metadata, inline asset blocks, WordPress hooks, major wrapper markup, and template-part calls.
+
+Avoid dense PHP and HTML switching when a few blank lines make the template easier to understand.
+
+Template PHP should prefer clear local variables when they make nearby markup easier to read.
+
+Do not move simple one-off template behavior into helpers just to reduce line count. A small readable block in the template is better than an abstract helper that hides obvious markup behavior.
+
+Inline comments are acceptable when they label a specific block of template behavior.
+
+Template files should read mostly like markup. Use functions and helpers for reusable logic, repeated behavior, or complex decisions.
+
+Keep simple template-specific output close to the markup that depends on it.
+
 ## WordPress Standard Hooks
 
 Use WordPress standard classes and IDs when they provide useful compatibility hooks.
