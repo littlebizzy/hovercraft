@@ -7,6 +7,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 // styles for woocommerce checkout
 ?>
 
+.woocommerce-checkout #topbar,
+.woocommerce-checkout #header-basic,
+.woocommerce-checkout #header-half-hero,
+.woocommerce-checkout #header-mini-hero,
+.woocommerce-checkout #header-full-hero {
+	display: none;
+}
+
 .woocommerce-checkout .woocommerce-notices-wrapper, .woocommerce-checkout form.checkout {
 	clear: both;
 }
