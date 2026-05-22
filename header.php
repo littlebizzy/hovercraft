@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		$parent_style_path = get_template_directory() . '/style.css';
 		?>
 		<?php if ( is_readable( $parent_style_path ) ) : ?>
-			<style><?php echo file_get_contents( $parent_style_path ); ?></style>
+			<style><?php readfile( $parent_style_path ); ?></style>
 		<?php endif; // end parent-style-path ?>
 
 		<?php
@@ -23,7 +23,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		$child_style_path = get_stylesheet_directory() . '/style.css';
 		?>
 		<?php if ( is_readable( $child_style_path ) ) : ?>
-			<style><?php echo file_get_contents( $child_style_path ); ?></style>
+			<style><?php readfile( $child_style_path ); ?></style>
 		<?php endif; // end child-style-path ?>
 
 		<?php wp_head(); ?>
