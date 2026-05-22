@@ -7,11 +7,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 // styles for woocommerce checkout
 ?>
 
-.woocommerce-checkout #topbar,
-.woocommerce-checkout #header-basic,
-.woocommerce-checkout #header-half-hero,
-.woocommerce-checkout #header-mini-hero,
-.woocommerce-checkout #header-full-hero {
+body.woocommerce-checkout #topbar,
+body.woocommerce-checkout #header-basic,
+body.woocommerce-checkout #header-half-hero,
+body.woocommerce-checkout #header-mini-hero,
+body.woocommerce-checkout #header-full-hero,
+body.woocommerce-checkout #breadcrumbs {
 	display: none;
 }
 
@@ -424,8 +425,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 @media screen and (min-width: 1200px) {
 	.woocommerce-checkout form.checkout {
 		display: grid;
-		grid-template-columns: minmax(0, 750px) minmax(390px, 420px);
-		column-gap: 30px;
+		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+		column-gap: 40px;
 		align-items: start;
 	}
 
