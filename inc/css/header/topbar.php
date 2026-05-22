@@ -27,7 +27,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	#topbar {
 		padding: 10px 0;
 		font-size: <?php echo $topbar_desktop_font_size; ?>px;
-		display: table;
 	}
 }
 
@@ -40,10 +39,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 	margin-bottom: 0;
 }
 
+#topbar .inner {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
 .topbar-left,
 .topbar-right,
 .topbar-center {
-	vertical-align: middle;
+	width: 100%;
 }
 
 .topbar-center {
@@ -57,40 +62,32 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 }
 
+<?php if ( $mobile_topbar_widget == 'topbar_right' ) : ?>
 @media screen and (max-width: 1199px) {
 	.topbar-left {
-		<?php if ( $mobile_topbar_widget == 'topbar_right') { echo "display: none;"; } ?>
+		display: none;
 	}
 }
+<?php endif; ?>
 
 @media screen and (min-width: 1200px) {
 	.topbar-left {
-		display: table-cell;
-		height: inherit;
 		white-space: nowrap;
-		width: auto;
 		text-align: left;
 	}
 }
 
+<?php if ( $mobile_topbar_widget == 'topbar_left' ) : ?>
 @media screen and (max-width: 1199px) {
 	.topbar-right {
-		<?php if ( $mobile_topbar_widget == 'topbar_left') { echo "display: none;"; } ?>
+		display: none;
 	}
 }
+<?php endif; ?>
 
 @media screen and (min-width: 1200px) {
 	.topbar-right {
-		display: table-cell;
-		height: inherit;
 		text-align: right;
-		width: 100%;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-	.topbar-center {
-		height: inherit;
 	}
 }
 
@@ -105,4 +102,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	list-style-type: none;
 	display: inline-block;
 	margin: 0 0 0 10px;
+}
+
+#topbar ul li:first-child {
+	margin-left: 0;
 }
