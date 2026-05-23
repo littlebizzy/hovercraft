@@ -441,10 +441,17 @@ body.woocommerce-checkout #content-wrapper {
 		width: 100%;
 	}
 
-	.woocommerce-checkout .form-row-first, .woocommerce-checkout .form-row-last {
-		clear: both !important;
-		float: none !important;
-		width: 100% !important;
+	.woocommerce-checkout .form-row-first {
+		clear: left;
+		float: left !important;
+		width: calc(50% - 8px) !important;
+		margin: 0 0 16px !important;
+	}
+
+	.woocommerce-checkout .form-row-last {
+		clear: right;
+		float: right !important;
+		width: calc(50% - 8px) !important;
 		margin: 0 0 16px !important;
 	}
 }
