@@ -111,7 +111,7 @@ require get_template_directory() . '/inc/meta/meta-box.php';
 require get_template_directory() . '/inc/meta/open-graph.php';
 
 // meta boxes
-require get_template_directory() . '/inc/admin/admin-meta-ui.php';
+require get_template_directory() . '/inc/meta-boxes/meta-box-collapse-assets.php';
 require get_template_directory() . '/inc/meta-boxes/meta-box-zigzag.php';
 
 // woocommerce
