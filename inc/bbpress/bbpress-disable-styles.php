@@ -5,6 +5,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// exit if bbpress is inactive
+if ( ! function_exists( 'bbpress' ) ) {
+	return;
+}
+
 // disable bbpress default styles
 function hovercraft_disable_bbpress_default_styles() {
 	wp_dequeue_style( 'bbp-default' );
