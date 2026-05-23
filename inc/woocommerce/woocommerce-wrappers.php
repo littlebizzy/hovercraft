@@ -1,30 +1,22 @@
 <?php
 
+// exit if accessed directly
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// woocommerce wrappers
-
+// exit if woocommerce is inactive
 if ( ! class_exists( 'WooCommerce' ) ) {
 	return;
 }
 
-remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
-remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
-remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
-remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
-add_action( 'woocommerce_before_main_content', 'hovercraft_woocommerce_header', 5 );
-add_action( 'woocommerce_before_main_content', 'hovercraft_main_start', 10 );
-add_action( 'woocommerce_after_main_content', 'hovercraft_main_end', 10 );
-
 // render woocommerce header
-function hovercraft_woocommerce_header() {
+function hovercraft_render_woocommerce_header() {
 	get_template_part( 'template-parts/header/header-basic' );
 }
 
 // open woocommerce main wrapper
-function hovercraft_main_start() {
+function hovercraft_open_woocommerce_main_wrapper() {
 	$show_sidebar = is_product() ? false : hovercraft_should_show_sidebar();
 
 	echo '<div id="main">';
@@ -43,7 +35,7 @@ function hovercraft_main_start() {
 }
 
 // close woocommerce main wrapper
-function hovercraft_main_end() {
+function hovercraft_close_woocommerce_main_wrapper() {
 	$show_sidebar = is_product() ? false : hovercraft_should_show_sidebar();
 
 	echo '<div class="clear"></div>';
@@ -60,3 +52,11 @@ function hovercraft_main_end() {
 	echo '</div><!-- inner -->';
 	echo '</div><!-- main -->';
 }
+
+remove_action( 'woocommerce_before_main_content', 'woocommerce_output_content_wrapper', 10 );
+remove_action( 'woocommerce_after_main_content', 'woocommerce_output_content_wrapper_end', 10 );
+remove_action( 'woocommerce_before_main_content', 'woocommerce_breadcrumb', 20 );
+remove_action( 'woocommerce_sidebar', 'woocommerce_get_sidebar', 10 );
+add_action( 'woocommerce_before_main_content', 'hovercraft_render_woocommerce_header', 5 );
+add_action( 'woocommerce_before_main_content', 'hovercraft_open_woocommerce_main_wrapper', 10 );
+add_action( 'woocommerce_after_main_content', 'hovercraft_close_woocommerce_main_wrapper', 10 );
