@@ -16,6 +16,10 @@ body.woocommerce-checkout .breadcrumbs {
 	display: none;
 }
 
+body.woocommerce-checkout #main {
+	background: #f5f7f8;
+}
+
 .woocommerce-checkout .woocommerce-notices-wrapper, .woocommerce-checkout form.checkout {
 	clear: both;
 }
