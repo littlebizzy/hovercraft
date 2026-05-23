@@ -134,6 +134,17 @@ body.woocommerce-checkout #content-wrapper {
 	outline: 0;
 }
 
+.woocommerce-checkout #order_comments {
+	border: 1px solid #e0e0e0 !important;
+	box-shadow: none !important;
+}
+
+.woocommerce-checkout #order_comments:focus {
+	border-color: <?php echo $default_link_color; ?> !important;
+	box-shadow: none !important;
+	outline: 0;
+}
+
 .woocommerce-checkout input[type="text"], .woocommerce-checkout input[type="email"], .woocommerce-checkout input[type="tel"], .woocommerce-checkout input[type="password"], .woocommerce-checkout select {
 	min-height: 46px;
 }
