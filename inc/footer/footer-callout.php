@@ -1,12 +1,13 @@
 <?php
 
+// exit if accessed directly
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
 // register footer callout widget area
-function hovercraft_footer_callout() {
-	$menu_cta_footer_callout = wp_nav_menu(
+function hovercraft_register_footer_callout_widget_area() {
+	$footer_callout_menu = wp_nav_menu(
 		array(
 			'theme_location' => 'cta-footer-callout',
 			'container_class' => 'cta-footer-callout',
@@ -16,7 +17,7 @@ function hovercraft_footer_callout() {
 		)
 	);
 
-	$footer_callout_array = array(
+	$footer_callout_widget_args = array(
 		'name' => esc_html__( 'Footer Callout', 'hovercraft' ),
 		'id' => 'hovercraft_footer_callout',
 		'before_widget' => '<div class="widget-footer-callout widget-wrapper">',
@@ -25,10 +26,10 @@ function hovercraft_footer_callout() {
 		'after_title' => '</h3>',
 	);
 
-	if ( ! empty( $menu_cta_footer_callout ) ) {
-		$footer_callout_array['after_widget'] = ' ' . $menu_cta_footer_callout . '</div>';
+	if ( ! empty( $footer_callout_menu ) ) {
+		$footer_callout_widget_args['after_widget'] = ' ' . $footer_callout_menu . '</div>';
 	}
 
-	register_sidebar( $footer_callout_array );
+	register_sidebar( $footer_callout_widget_args );
 }
-add_action( 'widgets_init', 'hovercraft_footer_callout' );
+add_action( 'widgets_init', 'hovercraft_register_footer_callout_widget_area' );
