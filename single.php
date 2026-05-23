@@ -110,7 +110,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</div><!-- content-wrapper -->
 
 	<!-- comments template outside of post content div -->
-	<?php get_template_part( 'template-parts/content/comments' ); ?>
+	<?php get_template_part( 'template-parts/comments/comments' ); ?>
 
 	<div class="clear"></div>
 	</div><!-- primary -->
