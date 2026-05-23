@@ -52,9 +52,3 @@ function hovercraft_customize_comment_form_defaults( $defaults ) {
 	return $defaults;
 }
 add_filter( 'comment_form_defaults', 'hovercraft_customize_comment_form_defaults' );
-
-// allow comment listing args to be filtered
-function hovercraft_filter_comments_args( $args ) {
-	return $args;
-}
-add_filter( 'hovercraft_comments_args', 'hovercraft_filter_comments_args' );
