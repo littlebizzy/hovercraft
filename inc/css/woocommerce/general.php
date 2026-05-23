@@ -100,6 +100,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	line-height: 1.5 !important;
 }
 
+.woocommerce-checkout-review-order-table .product-total, .woocommerce-checkout-review-order-table tfoot td {
+	color: <?php echo $default_text_color; ?>;
+	font-weight: 400;
+}
+
+.woocommerce-checkout-review-order-table .cart-subtotal th, .woocommerce-checkout-review-order-table .cart-subtotal td, .woocommerce-checkout-review-order-table .order-total th, .woocommerce-checkout-review-order-table .order-total td {
+	font-weight: 700;
+}
+
 @media screen and (max-width: 1199px) {
 	.woocommerce p.woocommerce-result-count, p.woocommerce-result-count {
 		display: block;
