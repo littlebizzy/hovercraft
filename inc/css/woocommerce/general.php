@@ -100,6 +100,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 	line-height: 1.5 !important;
 }
 
+.woocommerce-checkout #order_comments {
+	border: 0 !important;
+	box-shadow: inset 0 0 0 1px #e0e0e0 !important;
+}
+
+.woocommerce-checkout #order_comments:focus {
+	border: 0 !important;
+	box-shadow: inset 0 0 0 2px <?php echo $default_link_color; ?> !important;
+	outline: 0;
+}
+
 .woocommerce-checkout-review-order-table .product-total, .woocommerce-checkout-review-order-table tfoot td {
 	color: <?php echo $default_text_color; ?>;
 	font-weight: 400;
