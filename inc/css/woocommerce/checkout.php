@@ -451,7 +451,6 @@ body.woocommerce-checkout .breadcrumbs {
 		display: flex;
 		align-items: stretch;
 		gap: 16px;
-		max-width: calc((100% - 40px) / 2);
 	}
 
 	.woocommerce-checkout .checkout_coupon .form-row-first {
