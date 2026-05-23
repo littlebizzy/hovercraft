@@ -443,16 +443,14 @@ body.woocommerce-checkout #content-wrapper {
 
 	.woocommerce-checkout .form-row-first {
 		clear: left;
-		float: left !important;
+		float: left;
 		width: calc(50% - 8px) !important;
-		margin: 0 0 16px !important;
 	}
 
 	.woocommerce-checkout .form-row-last {
 		clear: right;
-		float: right !important;
+		float: right;
 		width: calc(50% - 8px) !important;
-		margin: 0 0 16px !important;
 	}
 }
 
