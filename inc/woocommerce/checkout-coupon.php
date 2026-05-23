@@ -12,6 +12,10 @@ if ( ! class_exists( 'WooCommerce' ) ) {
 
 // disable checkout coupon form
 function hovercraft_disable_woocommerce_checkout_coupon_form() {
+	if ( ! is_checkout() || is_order_received_page() ) {
+		return;
+	}
+
 	remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10 );
 }
 add_action( 'wp', 'hovercraft_disable_woocommerce_checkout_coupon_form' );
