@@ -227,11 +227,15 @@ body.woocommerce-checkout #content-wrapper {
 	border-spacing: 0;
 	border-radius: 8px;
 	overflow: hidden;
+	table-layout: fixed;
 }
 
-.woocommerce-checkout-review-order-table thead tr, .woocommerce-checkout-review-order-table .cart_item {
-	display: grid;
-	grid-template-columns: 75% 25%;
+.woocommerce-checkout-review-order-table .product-name {
+	width: 75%;
+}
+
+.woocommerce-checkout-review-order-table .product-total {
+	width: 25%;
 }
 
 .woocommerce-checkout-review-order-table .shipping {
@@ -268,12 +272,7 @@ body.woocommerce-checkout #content-wrapper {
 }
 
 .woocommerce-checkout-review-order-table .cart_item .product-name {
-	width: auto;
 	font-weight: 600;
-}
-
-.woocommerce-checkout-review-order-table .cart_item .product-total {
-	width: auto;
 }
 
 .woocommerce-checkout-review-order-table .product-quantity {
