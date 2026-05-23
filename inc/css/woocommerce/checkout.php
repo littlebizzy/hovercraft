@@ -244,6 +244,10 @@ body.woocommerce-checkout .breadcrumbs {
 	opacity: 0.75;
 }
 
+.woocommerce-checkout-review-order-table .shipping td {
+	text-align: left;
+}
+
 .woocommerce-checkout-review-order-table .shipping ul {
 	margin: 0;
 	padding: 0;
@@ -419,6 +423,11 @@ body.woocommerce-checkout .breadcrumbs {
 	}
 
 	.woocommerce-checkout .col2-set .col-1, .woocommerce-checkout .col2-set .col-2 {
+		float: none;
+		width: 100%;
+	}
+
+	.woocommerce-checkout .form-row-first, .woocommerce-checkout .form-row-last {
 		float: none;
 		width: 100%;
 	}
