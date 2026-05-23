@@ -1,38 +1,37 @@
 <?php
 
+// exit if accessed directly
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// modify default comment form fields
-add_filter( 'comment_form_default_fields', 'hovercraft_comment_fields' );
-
-// adjust comment form fields
-function hovercraft_comment_fields( $fields ) {
+// customize comment form fields
+function hovercraft_customize_comment_form_fields( $fields ) {
 	$commenter = wp_get_current_commenter();
-	$req = get_option( 'require_name_email' );
-	$aria_req = '';
-	$required = '';
+	$require_name_email = get_option( 'require_name_email' );
+	$required_attribute = '';
+	$required_markup = '';
 
-	if ( $req ) {
-		$aria_req = " aria-required='true' required";
-		$required = '<span class="required">*</span>';
+	// set required field markup
+	if ( $require_name_email ) {
+		$required_attribute = " aria-required='true' required";
+		$required_markup = '<span class="required">*</span>';
 	}
 
 	$fields['author'] = sprintf(
 		'<p class="comment-form-author"><label for="comment-author">%s</label> %s<input id="comment-author" name="author" type="text" value="%s" size="30"%s></p>',
 		esc_html__( 'Name', 'hovercraft' ),
-		$required,
+		$required_markup,
 		esc_attr( $commenter['comment_author'] ),
-		$aria_req
+		$required_attribute
 	);
 
 	$fields['email'] = sprintf(
 		'<p class="comment-form-email"><label for="comment-email">%s</label> %s<input id="comment-email" name="email" type="email" value="%s" size="30"%s></p>',
 		esc_html__( 'Email', 'hovercraft' ),
-		$required,
+		$required_markup,
 		esc_attr( $commenter['comment_author_email'] ),
-		$aria_req
+		$required_attribute
 	);
 
 	$fields['url'] = sprintf(
@@ -43,16 +42,19 @@ function hovercraft_comment_fields( $fields ) {
 
 	return $fields;
 }
+add_filter( 'comment_form_default_fields', 'hovercraft_customize_comment_form_fields' );
 
-// modify default comment form headings
-add_filter( 'comment_form_defaults', function ( $defaults ) {
+// customize comment form heading markup
+function hovercraft_customize_comment_form_defaults( $defaults ) {
 	$defaults['title_reply_before'] = '<h3 id="reply-title" class="comment-reply-title">';
-	$defaults['title_reply_after']  = '</h3>';
+	$defaults['title_reply_after'] = '</h3>';
+
 	return $defaults;
-});
+}
+add_filter( 'comment_form_defaults', 'hovercraft_customize_comment_form_defaults' );
 
-// allow child themes or plugins to override comment listing args
-add_filter( 'hovercraft_comments_args', function ( $args ) {
-	return $args; // return unmodified by default
-});
-
+// allow comment listing args to be filtered
+function hovercraft_filter_comments_args( $args ) {
+	return $args;
+}
+add_filter( 'hovercraft_comments_args', 'hovercraft_filter_comments_args' );
