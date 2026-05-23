@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	
 		<?php get_template_part( 'template-parts/content/content-wide' ); ?>
 	
-		<?php get_template_part( 'template-parts/content/comments' ); ?>
+		<?php get_template_part( 'template-parts/comments/comments' ); ?>
 
 		<div class="clear"></div>
 	</div><!-- primary-wide -->
