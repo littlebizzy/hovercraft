@@ -34,11 +34,7 @@ function hovercraft_customize_comment_form_fields( $fields ) {
 		$required_attribute
 	);
 
-	$fields['url'] = sprintf(
-		'<p class="comment-form-url"><label for="comment-url">%s</label><input id="comment-url" name="url" type="url" value="%s" size="30"></p>',
-		esc_html__( 'Website', 'hovercraft' ),
-		esc_attr( $commenter['comment_author_url'] )
-	);
+	unset( $fields['url'] );
 
 	return $fields;
 }
