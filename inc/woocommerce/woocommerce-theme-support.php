@@ -1,11 +1,16 @@
 <?php
 
+// exit if accessed directly
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// woocommerce theme support
+// exit if woocommerce is inactive
+if ( ! class_exists( 'WooCommerce' ) ) {
+	return;
+}
 
+// add woocommerce theme support
 function hovercraft_add_woocommerce_theme_support() {
 	add_theme_support( 'woocommerce' );
 	add_theme_support( 'wc-product-gallery-zoom' );
@@ -20,23 +25,26 @@ function hovercraft_remove_woocommerce_upsells() {
 }
 add_action( 'woocommerce_after_single_product_summary', 'hovercraft_remove_woocommerce_upsells', 1 );
 
-// limit cart cross-sells
-function hovercraft_limit_cart_cross_sells( $total ) {
+// set cart cross-sells total
+function hovercraft_set_woocommerce_cart_cross_sells_total( $total ) {
 	return 2;
 }
-add_filter( 'woocommerce_cross_sells_total', 'hovercraft_limit_cart_cross_sells' );
+add_filter( 'woocommerce_cross_sells_total', 'hovercraft_set_woocommerce_cart_cross_sells_total' );
 
-// set cart cross-sell columns
-function hovercraft_cart_cross_sells_columns( $columns ) {
+// set cart cross-sells columns
+function hovercraft_set_woocommerce_cart_cross_sells_columns( $columns ) {
 	return 2;
 }
-add_filter( 'woocommerce_cross_sells_columns', 'hovercraft_cart_cross_sells_columns' );
+add_filter( 'woocommerce_cross_sells_columns', 'hovercraft_set_woocommerce_cart_cross_sells_columns' );
 
 // rename additional information tab
 function hovercraft_rename_woocommerce_additional_information_tab( $tabs ) {
-	if ( isset( $tabs['additional_information'] ) ) {
-		$tabs['additional_information']['title'] = __( 'Product Specs', 'hovercraft' );
+	// exit if additional information tab is missing
+	if ( ! isset( $tabs['additional_information'] ) ) {
+		return $tabs;
 	}
+
+	$tabs['additional_information']['title'] = __( 'Product Specs', 'hovercraft' );
 
 	return $tabs;
 }
