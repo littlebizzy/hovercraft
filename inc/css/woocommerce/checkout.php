@@ -438,29 +438,21 @@ body.woocommerce-checkout .breadcrumbs {
 
 	.woocommerce-checkout #customer_details {
 		grid-column: 1;
-		grid-row: 1 / span 2;
+		grid-row: 1;
 		margin: 0;
 	}
 
 	.woocommerce-checkout #order_review_heading {
 		grid-column: 2;
 		grid-row: 1;
+		align-self: start;
 	}
 
 	.woocommerce-checkout #order_review {
-		display: contents;
-	}
-
-	.woocommerce-checkout #order_review .woocommerce-checkout-review-order-table {
 		grid-column: 2;
-		grid-row: 2;
-		margin: 0 0 30px;
-	}
-
-	.woocommerce-checkout #order_review .woocommerce-checkout-payment {
-		grid-column: 1 / -1;
-		grid-row: 3;
-		margin: 0;
+		grid-row: 1;
+		align-self: start;
+		margin: 50px 0 30px;
 	}
 
 	.woocommerce-checkout #customer_details.col2-set .col-1, .woocommerce-checkout #customer_details.col2-set .col-2 {
