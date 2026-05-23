@@ -257,7 +257,16 @@ body.woocommerce-checkout #content-wrapper {
 	text-align: left;
 }
 
+.woocommerce-checkout-review-order-table .shipping th {
+	width: 25%;
+}
+
+.woocommerce-checkout-review-order-table .shipping td {
+	width: 75%;
+}
+
 .woocommerce-checkout-review-order-table .shipping ul {
+	width: 100%;
 	margin: 0;
 	padding: 0;
 	list-style: none;
@@ -277,6 +286,7 @@ body.woocommerce-checkout #content-wrapper {
 }
 
 .woocommerce-checkout-review-order-table .shipping li label {
+	flex: 1 1 auto;
 	display: block;
 	text-align: left;
 }
