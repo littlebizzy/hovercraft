@@ -245,7 +245,12 @@ body.woocommerce-checkout #content-wrapper {
 }
 
 .woocommerce-checkout-review-order-table .cart_item .product-name {
+	width: 75%;
 	font-weight: 600;
+}
+
+.woocommerce-checkout-review-order-table .cart_item .product-total {
+	width: 25%;
 }
 
 .woocommerce-checkout-review-order-table .product-quantity {
