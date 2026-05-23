@@ -121,6 +121,19 @@ body.woocommerce-checkout #content-wrapper {
 	box-sizing: border-box;
 }
 
+.woocommerce-checkout input[type="text"], .woocommerce-checkout input[type="email"], .woocommerce-checkout input[type="tel"], .woocommerce-checkout input[type="password"], .woocommerce-checkout select, .woocommerce-checkout textarea {
+	background: #ffffff;
+	border: 0;
+	border-radius: 4px;
+	box-shadow: inset 0 0 0 1px #e0e0e0;
+	color: <?php echo $default_text_color; ?>;
+}
+
+.woocommerce-checkout input[type="text"]:focus, .woocommerce-checkout input[type="email"]:focus, .woocommerce-checkout input[type="tel"]:focus, .woocommerce-checkout input[type="password"]:focus, .woocommerce-checkout select:focus, .woocommerce-checkout textarea:focus {
+	box-shadow: inset 0 0 0 2px <?php echo $default_link_color; ?>;
+	outline: 0;
+}
+
 .woocommerce-checkout input[type="text"], .woocommerce-checkout input[type="email"], .woocommerce-checkout input[type="tel"], .woocommerce-checkout input[type="password"], .woocommerce-checkout select {
 	min-height: 46px;
 }
