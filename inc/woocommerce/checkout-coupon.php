@@ -5,10 +5,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// move checkout coupon form above checkout fields
+// move checkout coupon form above order notes
 function hovercraft_move_woocommerce_checkout_coupon_form() {
 	remove_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 10 );
-	add_action( 'woocommerce_before_checkout_form', 'woocommerce_checkout_coupon_form', 20 );
+	add_action( 'woocommerce_before_order_notes', 'woocommerce_checkout_coupon_form', 5 );
 }
 add_action( 'wp', 'hovercraft_move_woocommerce_checkout_coupon_form' );
 
