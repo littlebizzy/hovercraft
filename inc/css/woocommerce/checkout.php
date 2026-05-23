@@ -467,13 +467,13 @@ body.woocommerce-checkout .breadcrumbs {
 	.woocommerce-checkout .form-row-first {
 		clear: left;
 		float: left;
-		width: 48%;
+		width: calc(50% - 8px);
 	}
 
 	.woocommerce-checkout .form-row-last {
 		clear: right;
 		float: right;
-		width: 48%;
+		width: calc(50% - 8px);
 	}
 
 	.woocommerce-checkout .form-row-wide {
