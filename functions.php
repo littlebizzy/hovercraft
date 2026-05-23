@@ -117,6 +117,7 @@ require get_template_directory() . '/inc/meta-boxes/meta-box-zigzag.php';
 // woocommerce
 require get_template_directory() . '/inc/woocommerce/woocommerce-theme-support.php';
 require get_template_directory() . '/inc/woocommerce/checkout-coupon.php';
+require get_template_directory() . '/inc/woocommerce/checkout-order-summary.php';
 require get_template_directory() . '/inc/woocommerce/quantity-select.php';
 require get_template_directory() . '/inc/woocommerce/woocommerce-wrappers.php';
 
