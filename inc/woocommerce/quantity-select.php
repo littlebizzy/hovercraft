@@ -1,36 +1,38 @@
 <?php
 
+// exit if accessed directly
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// woocommerce quantity select
-
+// exit if woocommerce is inactive
 if ( ! class_exists( 'WooCommerce' ) ) {
 	return;
 }
 
-add_filter( 'woocommerce_quantity_input', 'hovercraft_quantity_select', 999, 3 );
-
-// replace quantity inputs with selects
-function hovercraft_quantity_select( $html, $args, $product ) {
+// replace quantity inputs with select fields
+function hovercraft_replace_woocommerce_quantity_input_with_select( $html, $args, $product ) {
 	$min_value = isset( $args['min_value'] ) && is_numeric( $args['min_value'] ) ? intval( $args['min_value'] ) : 1;
 	$max_value = isset( $args['max_value'] ) && is_numeric( $args['max_value'] ) ? intval( $args['max_value'] ) : 0;
 	$input_value = isset( $args['input_value'] ) && is_numeric( $args['input_value'] ) ? intval( $args['input_value'] ) : $min_value;
 	$step = isset( $args['step'] ) && is_numeric( $args['step'] ) ? absint( $args['step'] ) : 1;
 
+	// force sane minimum quantity
 	if ( 1 > $min_value ) {
 		$min_value = 1;
 	}
 
+	// force sane selected quantity
 	if ( 1 > $input_value ) {
 		$input_value = $min_value;
 	}
 
+	// force sane quantity step
 	if ( 1 > $step ) {
 		$step = 1;
 	}
 
+	// use a small default maximum for unlimited products
 	if ( $max_value < $min_value ) {
 		$max_value = 10;
 	}
@@ -38,13 +40,12 @@ function hovercraft_quantity_select( $html, $args, $product ) {
 	$max_value = min( $max_value, max( 10, $input_value ) );
 	$max_value = max( $max_value, $min_value, $input_value );
 
+	$input_id = isset( $args['input_id'] ) ? $args['input_id'] : uniqid( 'quantity_' );
+	$input_name = isset( $args['input_name'] ) ? $args['input_name'] : 'quantity';
 	$classes = isset( $args['classes'] ) && is_array( $args['classes'] ) ? $args['classes'] : array();
 	$classes[] = 'qty';
 	$classes[] = 'hovercraft-quantity-select';
 	$classes = array_unique( array_filter( $classes ) );
-
-	$input_id = isset( $args['input_id'] ) ? $args['input_id'] : uniqid( 'quantity_' );
-	$input_name = isset( $args['input_name'] ) ? $args['input_name'] : 'quantity';
 	$quantities = array();
 
 	for ( $quantity = $min_value; $quantity <= $max_value; $quantity += $step ) {
@@ -65,3 +66,4 @@ function hovercraft_quantity_select( $html, $args, $product ) {
 
 	return $output;
 }
+add_filter( 'woocommerce_quantity_input', 'hovercraft_replace_woocommerce_quantity_input_with_select', 999, 3 );
