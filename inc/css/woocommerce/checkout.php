@@ -26,7 +26,7 @@ body.woocommerce-checkout .breadcrumbs {
 	display: table;
 }
 
-.woocommerce-checkout .woocommerce-form-login, .woocommerce-checkout .checkout_coupon, .woocommerce-checkout .woocommerce-billing-fields, .woocommerce-checkout .woocommerce-account-fields, .woocommerce-checkout .woocommerce-shipping-fields, .woocommerce-checkout .woocommerce-additional-fields, .woocommerce-checkout #order_review {
+.woocommerce-checkout .woocommerce-form-login, .woocommerce-checkout .woocommerce-billing-fields, .woocommerce-checkout .woocommerce-account-fields, .woocommerce-checkout .woocommerce-shipping-fields, .woocommerce-checkout .woocommerce-additional-fields, .woocommerce-checkout #order_review {
 	clear: both;
 	padding: 30px;
 	margin: 0 0 30px;
@@ -35,16 +35,16 @@ body.woocommerce-checkout .breadcrumbs {
 	border-radius: 8px;
 }
 
-.woocommerce-checkout .woocommerce-form-login-toggle, .woocommerce-checkout .woocommerce-form-coupon-toggle {
+.woocommerce-checkout .woocommerce-form-login-toggle {
 	clear: both;
 	margin: 0 0 20px;
 }
 
-.woocommerce-checkout .woocommerce-form-login-toggle .woocommerce-info, .woocommerce-checkout .woocommerce-form-coupon-toggle .woocommerce-info {
+.woocommerce-checkout .woocommerce-form-login-toggle .woocommerce-info {
 	margin-bottom: 0 !important;
 }
 
-.woocommerce-checkout .woocommerce-form-login p:last-child, .woocommerce-checkout .checkout_coupon p:last-child, .woocommerce-checkout .woocommerce-billing-fields p:last-child, .woocommerce-checkout .woocommerce-account-fields p:last-child, .woocommerce-checkout .woocommerce-shipping-fields p:last-child, .woocommerce-checkout .woocommerce-additional-fields p:last-child {
+.woocommerce-checkout .woocommerce-form-login p:last-child, .woocommerce-checkout .woocommerce-billing-fields p:last-child, .woocommerce-checkout .woocommerce-account-fields p:last-child, .woocommerce-checkout .woocommerce-shipping-fields p:last-child, .woocommerce-checkout .woocommerce-additional-fields p:last-child {
 	margin-bottom: 0;
 }
 
@@ -403,21 +403,13 @@ body.woocommerce-checkout .breadcrumbs {
 	text-align: center;
 }
 
-.woocommerce-checkout .checkout_coupon .form-row {
-	margin-bottom: 0;
-}
-
-.woocommerce-checkout .checkout_coupon .button {
-	margin-top: 0;
-}
-
 #ppc-button-ppcp-applepay, #ppc-button-ppcp-googlepay {
 	clear: both;
 	margin: 16px 0 0;
 }
 
 @media screen and (max-width: 1199px) {
-	.woocommerce-checkout .woocommerce-form-login, .woocommerce-checkout .checkout_coupon, .woocommerce-checkout .woocommerce-billing-fields, .woocommerce-checkout .woocommerce-account-fields, .woocommerce-checkout .woocommerce-shipping-fields, .woocommerce-checkout .woocommerce-additional-fields, .woocommerce-checkout #order_review {
+	.woocommerce-checkout .woocommerce-form-login, .woocommerce-checkout .woocommerce-billing-fields, .woocommerce-checkout .woocommerce-account-fields, .woocommerce-checkout .woocommerce-shipping-fields, .woocommerce-checkout .woocommerce-additional-fields, .woocommerce-checkout #order_review {
 		padding: 20px;
 	}
 
@@ -434,37 +426,9 @@ body.woocommerce-checkout .breadcrumbs {
 		float: none;
 		width: 100%;
 	}
-
-	.woocommerce-checkout .checkout_coupon .form-row-first, .woocommerce-checkout .checkout_coupon .form-row-last {
-		float: none;
-		width: 100%;
-		margin: 0 0 16px;
-	}
-
-	.woocommerce-checkout .checkout_coupon .form-row-last {
-		margin-bottom: 0;
-	}
 }
 
 @media screen and (min-width: 1200px) {
-	.woocommerce-checkout .checkout_coupon {
-		display: flex;
-		align-items: stretch;
-		gap: 16px;
-	}
-
-	.woocommerce-checkout .checkout_coupon .form-row-first {
-		flex: 1 1 auto;
-		float: none;
-		width: auto;
-	}
-
-	.woocommerce-checkout .checkout_coupon .form-row-last {
-		flex: 0 0 auto;
-		float: none;
-		width: auto;
-	}
-
 	.woocommerce-checkout form.checkout {
 		display: grid;
 		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
