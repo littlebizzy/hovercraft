@@ -14,7 +14,7 @@ function hovercraft_customize_comment_form_fields( $fields ) {
 
 	// set required field markup
 	if ( $require_name_email ) {
-		$required_attribute = " aria-required='true' required";
+		$required_attribute = ' aria-required="true" required';
 		$required_markup = '<span class="required">*</span>';
 	}
 
