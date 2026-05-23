@@ -239,8 +239,8 @@ body.woocommerce-checkout #content-wrapper {
 }
 
 .woocommerce-checkout-review-order-table .shipping {
-	display: grid;
-	grid-template-columns: 25% 75%;
+	display: flex;
+	width: 100%;
 }
 
 .woocommerce-checkout-review-order-table th, .woocommerce-checkout-review-order-table td {
@@ -284,8 +284,15 @@ body.woocommerce-checkout #content-wrapper {
 	text-align: left;
 }
 
-.woocommerce-checkout-review-order-table .shipping th, .woocommerce-checkout-review-order-table .shipping td {
+.woocommerce-checkout-review-order-table .shipping th {
+	flex: 0 0 25%;
 	width: auto;
+}
+
+.woocommerce-checkout-review-order-table .shipping td {
+	flex: 1 1 75%;
+	width: auto;
+	min-width: 0;
 }
 
 .woocommerce-checkout-review-order-table .shipping ul {
