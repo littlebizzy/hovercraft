@@ -100,6 +100,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 	line-height: 1.5 !important;
 }
 
+.woocommerce-checkout #place_order {
+	background: <?php echo $default_link_color; ?> !important;
+	border: 0 !important;
+	box-shadow: none !important;
+	color: #ffffff !important;
+}
+
+.woocommerce-checkout #place_order:hover, .woocommerce-checkout #place_order:focus {
+	background: <?php echo $default_hover_color; ?> !important;
+	border: 0 !important;
+	box-shadow: none !important;
+	color: #ffffff !important;
+}
+
 .woocommerce-checkout #order_comments {
 	border: 0 !important;
 	box-shadow: inset 0 0 0 1px #e0e0e0 !important;
