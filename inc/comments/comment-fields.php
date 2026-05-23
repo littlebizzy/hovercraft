@@ -43,12 +43,3 @@ function hovercraft_customize_comment_form_fields( $fields ) {
 	return $fields;
 }
 add_filter( 'comment_form_default_fields', 'hovercraft_customize_comment_form_fields' );
-
-// customize comment form heading markup
-function hovercraft_customize_comment_form_defaults( $defaults ) {
-	$defaults['title_reply_before'] = '<h3 id="reply-title" class="comment-reply-title">';
-	$defaults['title_reply_after'] = '</h3>';
-
-	return $defaults;
-}
-add_filter( 'comment_form_defaults', 'hovercraft_customize_comment_form_defaults' );
