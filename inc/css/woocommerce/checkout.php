@@ -442,8 +442,10 @@ body.woocommerce-checkout #content-wrapper {
 	}
 
 	.woocommerce-checkout .form-row-first, .woocommerce-checkout .form-row-last {
-		float: none;
-		width: 100%;
+		clear: both !important;
+		float: none !important;
+		width: 100% !important;
+		margin: 0 0 16px !important;
 	}
 }
 
