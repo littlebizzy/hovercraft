@@ -25,7 +25,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<?php get_template_part( 'template-parts/content/title' ); ?>
 				<?php get_template_part( 'template-parts/content/loop' ); ?>
 				<?php get_template_part( 'template-parts/content/pagination' ); ?>
-				<?php get_template_part( 'template-parts/content/comments' ); ?>
+				<?php get_template_part( 'template-parts/comments/comments' ); ?>
 			<div class="clear"></div>
 			</div><!-- content-padded -->
 	
