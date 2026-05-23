@@ -442,15 +442,17 @@ body.woocommerce-checkout #content-wrapper {
 	}
 
 	.woocommerce-checkout .form-row-first {
-		clear: left;
-		float: left;
+		clear: left !important;
+		float: left !important;
 		width: calc(50% - 8px) !important;
+		margin: 0 0 16px !important;
 	}
 
 	.woocommerce-checkout .form-row-last {
-		clear: right;
-		float: right;
+		clear: right !important;
+		float: right !important;
 		width: calc(50% - 8px) !important;
+		margin: 0 0 16px !important;
 	}
 }
 
@@ -491,15 +493,17 @@ body.woocommerce-checkout #content-wrapper {
 	}
 
 	.woocommerce-checkout .form-row-first {
-		clear: left;
-		float: left;
+		clear: left !important;
+		float: left !important;
 		width: calc(50% - 8px) !important;
+		margin: 0 0 16px !important;
 	}
 
 	.woocommerce-checkout .form-row-last {
-		clear: right;
-		float: right;
+		clear: right !important;
+		float: right !important;
 		width: calc(50% - 8px) !important;
+		margin: 0 0 16px !important;
 	}
 
 	.woocommerce-checkout .form-row-wide {
