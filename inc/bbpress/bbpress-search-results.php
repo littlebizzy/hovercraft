@@ -1,27 +1,27 @@
 <?php
 
+// exit if accessed directly
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// bbpress search results
-
+// exit if bbpress is inactive
 if ( ! function_exists( 'bbpress' ) ) {
 	return;
 }
 
-// enable bbpress topic search
-function hovercraft_bbp_topic_search( $topic_search ) {
-	$topic_search['exclude_from_search'] = false;
+// include bbpress topics in search results
+function hovercraft_include_bbpress_topics_in_search( $post_type_args ) {
+	$post_type_args['exclude_from_search'] = false;
 
-	return $topic_search;
+	return $post_type_args;
 }
-add_filter( 'bbp_register_topic_post_type', 'hovercraft_bbp_topic_search' );
+add_filter( 'bbp_register_topic_post_type', 'hovercraft_include_bbpress_topics_in_search' );
 
-// enable bbpress reply search
-function hovercraft_bbp_reply_search( $reply_search ) {
-	$reply_search['exclude_from_search'] = false;
+// include bbpress replies in search results
+function hovercraft_include_bbpress_replies_in_search( $post_type_args ) {
+	$post_type_args['exclude_from_search'] = false;
 
-	return $reply_search;
+	return $post_type_args;
 }
-add_filter( 'bbp_register_reply_post_type', 'hovercraft_bbp_reply_search' );
+add_filter( 'bbp_register_reply_post_type', 'hovercraft_include_bbpress_replies_in_search' );
