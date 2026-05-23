@@ -10,7 +10,7 @@ if ( ! function_exists( 'bbpress' ) ) {
 	return;
 }
 
-// remove nested reply action links
+// remove bbpress reply action links
 function hovercraft_remove_bbpress_reply_links( $admin_links ) {
 	if ( isset( $admin_links['reply'] ) ) {
 		unset( $admin_links['reply'] );
