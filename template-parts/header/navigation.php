@@ -16,7 +16,7 @@ $hovercraft_mobile_menu = get_theme_mod( 'hovercraft_mobile_menu', 'accordion' )
 <?php endif; // end desktop header width ?>
 
 	<div class="header-left">
-		<?php get_template_part( 'template-parts/header/branding' ); ?>
+		<?php get_template_part( 'template-parts/header/header-branding' ); ?>
 	</div><!-- header-left -->
 
 	<div class="header-right">
