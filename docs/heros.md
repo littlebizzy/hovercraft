@@ -24,16 +24,18 @@ Full Hero snippets and hero windows should live inside the flexing hero body so 
 
 ## Half Hero Layout
 
-Half Hero pages should follow the same screen-aligned viewport pattern as Full Hero, but use a half-screen contract.
+Half Hero is a special hero layout because its topbar, preheader, and navigation stay visually separate above the hero image, while the hero image still fills the remaining first-screen space.
 
-The Half Hero viewport shell owns the first half-screen height. The topbar keeps its natural height. The Half Hero container fills the remaining half-screen height so the visible hero body aligns with the screen instead of adding the topbar height on top of the hero.
+Half Hero pages should use viewport flex layout instead of table layout or hardcoded header-height math.
+
+The Half Hero viewport shell owns the first-screen viewport height. The topbar keeps its natural height. The Half Hero header keeps its natural height. The Half Hero image body flexes to fill the remaining viewport height below those header elements.
 
 Open the Half Hero viewport shell before the topbar and close it immediately after the Half Hero container in each Half Hero page template. Do not let posthero, main content, sidebars, or footer content live inside the Half Hero viewport shell.
 
-Use `50svh` for Half Hero viewport alignment, with `50vh` as a fallback when useful.
+Use `100svh` for Half Hero viewport alignment, with `100vh` as a fallback when useful.
 
 Do not use JavaScript to calculate Half Hero height unless a future browser bug requires it.
 
 Do not hardcode topbar, preheader, navigation, or header heights into Half Hero CSS.
 
-Half Hero snippets and hero windows should live inside the flexing hero body so they do not change the first half-screen viewport contract. Captions and photo credits should be treated as overlay metadata inside the Half Hero body because they belong visually to the background and should not reserve structural layout height.
+Half Hero snippets and hero windows should live inside the flexing hero body so they do not change the first-screen viewport contract. Captions and photo credits should be treated as overlay metadata inside the Half Hero body because they belong visually to the background and should not reserve structural layout height.
