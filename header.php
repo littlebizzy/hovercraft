@@ -33,7 +33,7 @@
 <div id="container"><!-- main container -->
 
 	<?php
-	// open full hero viewport shell
+	// open screen-aligned hero viewport shell
 	if ( is_page_template( array(
 		'page-templates/full-hero-no-sidebar.php',
 		'page-templates/full-hero-sidebar.php',
@@ -44,6 +44,16 @@
 	) ) ) :
 		?>
 		<div id="full-hero-viewport">
+	<?php elseif ( is_page_template( array(
+		'page-templates/half-hero-no-sidebar.php',
+		'page-templates/half-hero-sidebar.php',
+		'page-templates/half-hero-columns-no-sidebar.php',
+		'page-templates/half-hero-gallery-no-sidebar.php',
+		'page-templates/half-hero-tiles-no-sidebar.php',
+		'page-templates/half-hero-tiles-sidebar.php',
+	) ) ) :
+		?>
+		<div id="half-hero-viewport">
 	<?php endif; ?>
 
 	<?php get_template_part( 'template-parts/header/topbar' ); ?>
