@@ -78,7 +78,7 @@ if ( $hovercraft_show_portal_search ) {
 				<?php // render hero snippet ?>
 				<?php if ( $hovercraft_show_hero_snippet ) : ?>
 					<div class="hero-snippet">
-						<?php get_template_part( 'template-parts/header/hero-snippet' ); ?>
+						<?php get_template_part( 'template-parts/hero/hero-snippet' ); ?>
 					</div><!-- hero-snippet -->
 				<?php endif; // end hero snippet ?>
 
