@@ -1,22 +1,20 @@
 <?php
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
-
-// render prefooter widget area
-function hovercraft_render_prefooter_widget_area( $sidebar_id, $wrapper_id ) {
-	if ( ! is_active_sidebar( $sidebar_id ) ) {
-		return;
-	}
-	?>
-	<div id="<?php echo esc_attr( $wrapper_id ); ?>">
+// render prefooter top widget area
+if ( is_active_sidebar( 'hovercraft_prefooter_top' ) ) : ?>
+	<div id="prefooter-top">
 		<div class="inner">
-			<?php dynamic_sidebar( $sidebar_id ); ?>
+			<?php dynamic_sidebar( 'hovercraft_prefooter_top' ); ?>
 		</div><!-- inner -->
-	</div><!-- <?php echo esc_html( $wrapper_id ); ?> -->
-	<?php
-}
+	</div><!-- prefooter-top -->
+<?php endif; // end prefooter top widget area ?>
 
-hovercraft_render_prefooter_widget_area( 'hovercraft_prefooter_top', 'prefooter-top' );
-hovercraft_render_prefooter_widget_area( 'hovercraft_prefooter_bottom', 'prefooter-bottom' );
+<?php
+// render prefooter bottom widget area
+if ( is_active_sidebar( 'hovercraft_prefooter_bottom' ) ) : ?>
+	<div id="prefooter-bottom">
+		<div class="inner">
+			<?php dynamic_sidebar( 'hovercraft_prefooter_bottom' ); ?>
+		</div><!-- inner -->
+	</div><!-- prefooter-bottom -->
+<?php endif; // end prefooter bottom widget area ?>
