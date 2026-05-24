@@ -20,7 +20,9 @@ $hovercraft_g = hexdec( substr( $hovercraft_hex, 2, 2 ) );
 $hovercraft_b = hexdec( substr( $hovercraft_hex, 4, 2 ) );
 ?>
 
-.input-container {
+.input-container,
+.wp-block-search__inside-wrapper,
+.woocommerce-product-search {
 	display: inline-flex;
 	align-items: stretch;
 	width: 100%;
@@ -29,22 +31,29 @@ $hovercraft_b = hexdec( substr( $hovercraft_hex, 4, 2 ) );
 	transition: box-shadow 0.18s ease;
 }
 
-.input-container:hover {
+.input-container:hover,
+.wp-block-search__inside-wrapper:hover,
+.woocommerce-product-search:hover {
 	box-shadow: 0 0 14px rgba(0, 0, 0, 0.10);
 }
 
-.input-container:focus-within {
+.input-container:focus-within,
+.wp-block-search__inside-wrapper:focus-within,
+.woocommerce-product-search:focus-within {
 	box-shadow: 0 0 16px rgba(<?php echo $hovercraft_r; ?>, <?php echo $hovercraft_g; ?>, <?php echo $hovercraft_b; ?>, 0.45);
 }
 
-.search-input {
+.search-input,
+.wp-block-search__input,
+.woocommerce-product-search .search-field {
 	flex: 1 1 auto;
 	min-width: 0;
 	height: 46px;
-	padding: 0 16px;
-	border: 1px solid <?php echo $search_bar_border_color; ?>;
-	border-right: 0;
-	border-radius: 4px 0 0 4px;
+	padding: 0 16px !important;
+	border: 1px solid <?php echo $search_bar_border_color; ?> !important;
+	border-right: 0 !important;
+	border-radius: 4px 0 0 4px !important;
+	box-shadow: none !important;
 	background: <?php echo $search_bar_background_color; ?>;
 	color: <?php echo $search_input_text_color; ?>;
 	font-size: 16px;
@@ -53,20 +62,31 @@ $hovercraft_b = hexdec( substr( $hovercraft_hex, 4, 2 ) );
 }
 
 .input-container:hover .search-input,
-.input-container:focus-within .search-input {
-	border-color: <?php echo $search_bar_border_color; ?>;
+.input-container:focus-within .search-input,
+.wp-block-search__inside-wrapper:hover .wp-block-search__input,
+.wp-block-search__inside-wrapper:focus-within .wp-block-search__input,
+.woocommerce-product-search:hover .search-field,
+.woocommerce-product-search:focus-within .search-field {
+	border-color: <?php echo $search_bar_border_color; ?> !important;
 }
 
-.search-input::placeholder {
+.search-input::placeholder,
+.wp-block-search__input::placeholder,
+.woocommerce-product-search .search-field::placeholder {
 	color: <?php echo $search_input_placeholder_color; ?>;
 	opacity: 1;
 }
 
-.search-submit {
+.search-submit,
+.wp-block-search__button,
+.woocommerce-product-search button {
 	flex: 0 0 64px;
+	width: auto;
 	height: 46px;
+	padding: 0 !important;
 	border: 0;
-	border-radius: 0 4px 4px 0;
+	border-radius: 0 4px 4px 0 !important;
+	box-shadow: none;
 	background: <?php echo $default_link_color; ?>;
 	color: #ffffff;
 	display: inline-flex;
@@ -78,11 +98,15 @@ $hovercraft_b = hexdec( substr( $hovercraft_hex, 4, 2 ) );
 	-webkit-appearance: none;
 }
 
-.search-submit:hover {
-	background: <?php echo $default_hover_color; ?>;
+.search-submit:hover,
+.wp-block-search__button:hover,
+.woocommerce-product-search button:hover {
+	background: <?php echo $default_hover_color; ?> !important;
 }
 
-.search-submit svg, .search-submit i {
+.search-submit svg, .search-submit i,
+.wp-block-search__button svg, .wp-block-search__button i,
+.woocommerce-product-search button svg, .woocommerce-product-search button i {
 	display: block;
 	width: 20px;
 	height: 20px;
