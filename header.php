@@ -56,4 +56,4 @@
 		<div id="half-hero-viewport">
 	<?php endif; ?>
 
-	<?php get_template_part( 'template-parts/header/topbar' ); ?>
+	<?php get_template_part( 'template-parts/header/header-topbar' ); ?>
