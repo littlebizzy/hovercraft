@@ -31,7 +31,7 @@ function hovercraft_register_header_video_control( $wp_customize ) {
 				'remove' => esc_html__( 'Remove', 'hovercraft' ),
 				'placeholder' => esc_html__( 'No video selected', 'hovercraft' ),
 				'frame_title' => esc_html__( 'Select Video', 'hovercraft' ),
-				'frame_button' => esc_html__( 'Choose Video', 'hovercraft' ),
+				'frame_button' => esc_html__( 'Select Video', 'hovercraft' ),
 			),
 		)
 	) );
