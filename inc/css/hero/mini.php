@@ -4,6 +4,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+$mini_hero_mobile_vertical_padding = isset( $mini_hero_mobile_vertical_padding ) ? absint( $mini_hero_mobile_vertical_padding ) : absint( get_theme_mod( 'hovercraft_mini_hero_mobile_vertical_padding', '60' ) );
+
 // styles for mini hero
 ?>
 
@@ -46,7 +48,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 @media screen and (max-width: 1199px) {
 	.hero-main-mini {
-		padding: 60px 20px;
+		padding: <?php echo $mini_hero_mobile_vertical_padding; ?>px 20px;
 	}
 }
 
