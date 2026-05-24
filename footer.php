@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php get_template_part( 'template-parts/home/home-postmain' ); ?>
 <?php get_template_part( 'template-parts/footer/prefooter' ); ?>
 <?php get_template_part( 'template-parts/footer/footer-widgets' ); ?>
-<?php get_template_part( 'template-parts/footer/copyright' ); ?>
+<?php get_template_part( 'template-parts/footer/footer-copyright' ); ?>
 
 </div><!-- container -->
 
