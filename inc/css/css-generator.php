@@ -122,7 +122,6 @@ function hovercraft_generate_css(){
 	$hero_gradient_mid_color_length = get_theme_mod( 'hovercraft_hero_gradient_mid_color_length', '30' );
 	$hero_gradient_stop_color_length = get_theme_mod( 'hovercraft_hero_gradient_stop_color_length', '100' );
 	$hero_content_width_desktop = get_theme_mod( 'hovercraft_hero_content_width_desktop', '900px' );
-	$url_hero_video = wp_get_attachment_url( get_theme_mod( 'hovercraft_video' ) ); 
 	$url_header_image = esc_url( get_header_image() );
 	$url_featured_image = wp_get_attachment_url( get_post_thumbnail_id(), 'large' ); 
 	
