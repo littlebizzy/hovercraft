@@ -1,10 +1,5 @@
 <?php
 
-// block direct access
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
-
 // limit output to front page
 if ( ! is_front_page() ) {
 	return;
