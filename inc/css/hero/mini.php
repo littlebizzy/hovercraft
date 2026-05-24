@@ -56,6 +56,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 }
 
+#hero-mini .hero-image-caption {
+	z-index: 2;
+}
+
 #header-mini-hero {
 	width: 100%;
 	display: block;
@@ -85,30 +89,6 @@ h1.mini-hero-title {
 .hero-main-mini .search-input {
 	background: #ffffff !important;
 	box-shadow: inset 0 0 0 1px #ffffff !important;
-}
-
-.mini-hero-caption {
-	position: absolute;
-	bottom: 0;
-	right: 0;
-	background: rgba(0, 0, 0, 0.5);
-	border-radius: 4px 0 0 0;
-	color: #ffffff;
-	padding: 5px 10px;
-	z-index: 10;
-	text-align: right;
-}
-
-@media screen and (max-width: 1199px) {
-	.mini-hero-caption {
-		font-size: 12px;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-	.mini-hero-caption {
-		font-size: 14px;
-	}
 }
 
 @media screen and (max-width: 1199px) {
