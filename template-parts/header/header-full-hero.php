@@ -84,7 +84,7 @@ if ( 'everywhere_possible' === $hovercraft_h1_divider_display ) {
 										add_filter( 'widget_title', '__return_false' );
 										dynamic_sidebar( 'hovercraft_hero_window' );
 										remove_filter( 'widget_title', '__return_false' );
-					agext						?>
+										?>
 									<?php else : ?>
 										<?php // render hero window excerpt ?>
 										<?php the_excerpt(); ?>
