@@ -16,6 +16,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 #half-hero-viewport {
+	min-height: 100vh;
+	min-height: 100svh;
 	display: flex;
 	flex-direction: column;
 }
@@ -28,13 +30,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	width: 100%;
 	padding: 0;
 	position: relative;
+	flex: 1 1 auto;
+	min-height: 0;
 	display: flex;
 	flex-direction: column;
 }
 
 .hero-half-wrapper {
-	min-height: 50vh;
-	min-height: 50svh;
+	flex: 1 1 auto;
+	min-height: 0;
 	display: flex;
 }
 
