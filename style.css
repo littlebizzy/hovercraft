@@ -1,7 +1,7 @@
 /*
 Theme Name: HoverCraft
 Theme URI: https://hovercraft.vip
-Version: 0.3.148
+Version: 0.3.149
 Description: No maintenance WordPress theme
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
@@ -16,50 +16,48 @@ Primary Branch: master
 
 /* css reset */
 
-html, body, div, span, applet, object, iframe, main, h1, h2, h3, h4, h5, h6, p, hr, blockquote, pre, a, abbr, acronym, address, big, button, cite, code, del, dfn, em, img, input, ins, kbd, label, legend, mark, meter, optgroup, option, output, progress, q, s, samp, select, small, source, strike, strong, sub, summary, sup, table, tbody, td, template, textarea, tfoot, th, thead, time, tr, tt, u, ul, var, video, article, aside, audio, canvas, caption, center, details, dialog, embed, fieldset, figcaption, figure, footer, form, header, hgroup, li, menu, nav, ol, picture, ruby, section {
+html, body, div, span, applet, object, iframe, main, h1, h2, h3, h4, h5, h6, p, hr, blockquote, pre, a, abbr, acronym, address, big, button, cite, code, del, dfn, em, img, input, ins, kbd, label, legend, mark, meter, optgroup, option, output, progress, q, s, samp, select, small, source, strike, strong, sub, summary, sup, table, tbody, td, template, textarea, tfoot, th, thead, time, tr, tt, u, var, video, ol, ul, li, dl, dt, dd, form, fieldset, caption, article, aside, canvas, details, embed, figure, figcaption, footer, header, nav, section, audio {
 	margin: 0;
 	padding: 0;
 	border: 0;
+	outline: 0;
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
 }
 
-/* html5 elements */
+/* html5 display */
 
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section {
+article, aside, details, figcaption, figure, footer, header, main, nav, section {
 	display: block;
 }
 
-/* form elements */
+/* body baseline */
 
-button, input, optgroup, select, textarea {
-	font: inherit;
+body {
+	line-height: 1;
 }
 
-/* responsive media */
+/* lists */
 
-img, picture, video, canvas, svg {
-	max-width: 100%;
-	height: auto;
+ol, ul {
+	list-style: none;
 }
 
-/* universal */
+/* quotes */
 
-*, *::before, *::after {
-	box-sizing: border-box;
+blockquote, q {
+	quotes: none;
 }
 
-/* devices */
-
-@media screen and (max-width: 1199px) {
-	.desktop {
-		display: none !important;
-	}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
 }
 
-@media screen and (min-width: 1200px) {
-	.mobile {
-		display: none !important;
-	}
+/* tables */
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
 }
