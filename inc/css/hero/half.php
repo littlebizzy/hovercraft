@@ -16,8 +16,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 #half-hero-viewport {
-	min-height: 50vh;
-	min-height: 50svh;
 	display: flex;
 	flex-direction: column;
 }
@@ -30,21 +28,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 	width: 100%;
 	padding: 0;
 	position: relative;
-	flex: 1 1 auto;
-	min-height: 0;
 	display: flex;
 	flex-direction: column;
 }
 
 .hero-half-wrapper {
-	flex: 1 1 auto;
-	min-height: 0;
+	min-height: 50vh;
+	min-height: 50svh;
 	display: flex;
 }
 
 .hero-half {
 	width: 100%;
 	position: relative;
+	flex: 1 1 auto;
+	min-height: 0;
 	display: flex;
 	align-items: center;
 }
