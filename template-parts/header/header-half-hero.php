@@ -88,7 +88,7 @@ if ( 'everywhere_possible' === $hovercraft_h1_divider_display ) {
 			</div><!-- inner -->
 
 			<?php // render hero caption ?>
-			<?php get_template_part( 'template-parts/header/hero-caption' ); ?>
+			<?php get_template_part( 'template-parts/hero/hero-caption' ); ?>
 		</div><!-- hero-half -->
 	</div><!-- hero-half-wrapper -->
 
