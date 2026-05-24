@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div id="header-mini-hero">
 
-	<?php get_template_part( 'template-parts/header/preheader' ); ?>
+	<?php get_template_part( 'template-parts/header/header-preheader' ); ?>
 	<?php get_template_part( 'template-parts/header/navigation' ); ?>
 	</div><!-- header-mini-hero -->
 
