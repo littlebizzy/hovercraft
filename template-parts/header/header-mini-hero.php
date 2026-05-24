@@ -83,7 +83,7 @@ if ( $hovercraft_show_portal_search ) {
 				<?php endif; // end hero snippet ?>
 
 				<?php // render hero cta ?>
-				<?php get_template_part( 'template-parts/header/hero-cta' ); ?>
+				<?php get_template_part( 'template-parts/hero/hero-cta' ); ?>
 			</div><!-- title-wrapper -->
 
 			<?php // render hero caption ?>
