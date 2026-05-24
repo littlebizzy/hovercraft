@@ -143,6 +143,25 @@ $wp_customize->add_control( new WP_Customize_Control(
 	)
 ) );
 
+// mobile mini hero vertical padding setting
+$wp_customize->add_setting( 'hovercraft_mini_hero_mobile_vertical_padding', array(
+	'default' => '60',
+	'sanitize_callback' => 'absint',
+) );
+
+// mobile mini hero vertical padding control
+$wp_customize->add_control( new WP_Customize_Control(
+	$wp_customize,
+	'hovercraft_mini_hero_mobile_vertical_padding',
+	array(
+		'label' => __( 'Mini Hero Padding (Mobile)', 'hovercraft' ),
+		'description' => __( 'Specify mini hero vertical padding on mobile in pixels.', 'hovercraft' ),
+		'section' => 'hovercraft_hero_styling',
+		'settings' => 'hovercraft_mini_hero_mobile_vertical_padding',
+		'type' => 'number',
+	)
+) );
+
 // hero gradient angle setting
 $wp_customize->add_setting( 'hovercraft_hero_gradient_angle', array(
 	'default' => '60deg',
