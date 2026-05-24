@@ -82,6 +82,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 #sidebar .widget-wrapper ul li {
 	margin-bottom: 5px;
+	line-height: 2;
 }
 
 #sidebar .widget-wrapper ol {
