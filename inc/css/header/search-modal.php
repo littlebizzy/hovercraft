@@ -49,10 +49,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	text-decoration: none !important;
 }
 
-#sidebar ul li {
-	line-height: 2;
-}
-
 body.search-modal-open {
 	overflow: hidden;
 }
@@ -203,7 +199,7 @@ body.search-modal-open {
 	line-height: 1;
 }
 
-@media (max-width: 1199px) {
+@media screen and (max-width: 1199px) {
 	#full-screen-search {
 		padding: 20px;
 	}
@@ -229,7 +225,7 @@ body.search-modal-open {
 	}
 }
 
-@media (min-width: 1200px) {
+@media screen and (min-width: 1200px) {
 	#full-screen-search {
 		padding: 40px;
 	}
