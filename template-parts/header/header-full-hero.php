@@ -95,7 +95,7 @@ if ( 'everywhere_possible' === $hovercraft_h1_divider_display ) {
 						<?php endif; // end front page hero content ?>
 
 						<?php // render hero cta ?>
-						<?php get_template_part( 'template-parts/header/hero-cta' ); ?>
+						<?php get_template_part( 'template-parts/hero/hero-cta' ); ?>
 
 					<?php if ( $hovercraft_is_front_page ) : ?>
 						</div><!-- welcome-wrapper -->
