@@ -5,8 +5,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// register header video control
-function hovercraft_register_header_video_control( $wp_customize ) {
+// register full hero video control
+function hovercraft_register_full_hero_video_control( $wp_customize ) {
 	$wp_customize->add_setting( 'hovercraft_video', array(
 		'default' => '',
 		'transport' => 'refresh',
@@ -18,8 +18,8 @@ function hovercraft_register_header_video_control( $wp_customize ) {
 		$wp_customize,
 		'hovercraft_video',
 		array(
-			'label' => esc_html__( 'Header Video', 'hovercraft' ),
-			'description' => esc_html__( 'Upload or select a background video for the site header.', 'hovercraft' ),
+			'label' => esc_html__( 'Full Hero Video', 'hovercraft' ),
+			'description' => esc_html__( 'Upload or select a background video for Full Hero layouts.', 'hovercraft' ),
 			'section' => 'header_image',
 			'mime_type' => 'video',
 			'settings' => 'hovercraft_video',
@@ -36,4 +36,4 @@ function hovercraft_register_header_video_control( $wp_customize ) {
 		)
 	) );
 }
-add_action( 'customize_register', 'hovercraft_register_header_video_control' );
+add_action( 'customize_register', 'hovercraft_register_full_hero_video_control' );
