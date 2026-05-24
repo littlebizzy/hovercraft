@@ -15,24 +15,38 @@ if ( ! defined( 'ABSPATH' ) ) {
 	color: <?php echo $half_hero_header_link_color; ?>;
 }
 
-#hero-half-container {
-	width: 100%; /* correct */
-	height: 100%; /* correct */
+#half-hero-viewport {
 	min-height: 50vh;
-	padding: 0; /* correct */
-	display: table; /* correct */
-	position: relative; /* required to keep video background from escaping esp on mobile */
+	min-height: 50svh;
+	display: flex;
+	flex-direction: column;
+}
+
+#half-hero-viewport #topbar {
+	flex: 0 0 auto;
+}
+
+#hero-half-container {
+	width: 100%;
+	padding: 0;
+	position: relative;
+	flex: 1 1 auto;
+	min-height: 0;
+	display: flex;
+	flex-direction: column;
 }
 
 .hero-half-wrapper {
-	display: table-row; /* correct */
+	flex: 1 1 auto;
+	min-height: 0;
+	display: flex;
 }
 
 .hero-half {
 	width: 100%;
-	height: 100%;
-	display: table-cell;
-	vertical-align: middle;
+	position: relative;
+	display: flex;
+	align-items: center;
 }
 
 .hero-half {
@@ -56,14 +70,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 		echo "rgba({$r2}, {$g2}, {$b2}, {$hero_gradient_stop_color_transparency})"; 
 		?> <?php echo $hero_gradient_stop_color_length; ?>%)<?php if ( ! empty( $hero_image ) ) : ?>, url(<?php echo $hero_image; ?>)<?php endif; // end hero image ?>;
 <?php endif; // end hero-gradient-tones ?>
-	background-position: <?php $halfpos = str_replace('_',' ',$half_hero_background_position); echo $halfpos; ?>;
+	background-position: <?php echo str_replace( '_', ' ', $half_hero_background_position ); ?>;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
 
+.hero-half .hero-caption {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
+}
+
 #header-half-hero {
 	width: 100%;
-	display: table;
+	flex: 0 0 auto;
 	background: <?php echo $half_hero_background_color; ?>;
 	color: <?php echo $half_hero_text_color; ?>;
 }
