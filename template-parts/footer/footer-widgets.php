@@ -17,23 +17,16 @@ $hovercraft_footer_columns = get_theme_mod( 'hovercraft_footer_columns', 'four_w
 
 		<?php
 		// render footer column layout
-		switch ( $hovercraft_footer_columns ) {
-			case 'four_equal':
-				get_template_part( 'template-parts/footer/footer-four-columns-equal' );
-				break;
-
-			case 'three_equal':
-				get_template_part( 'template-parts/footer/footer-three-columns-equal' );
-				break;
-
-			case 'three_weighted':
-				get_template_part( 'template-parts/footer/footer-three-columns-unequal' );
-				break;
-
-			case 'four_weighted':
-			default:
-				get_template_part( 'template-parts/footer/footer-four-columns-unequal' );
-				break;
+		if ( 'four_equal' === $hovercraft_footer_columns ) {
+			get_template_part( 'template-parts/footer/footer-four-columns-equal' );
+		} elseif ( 'four_weighted' === $hovercraft_footer_columns ) {
+			get_template_part( 'template-parts/footer/footer-four-columns-unequal' );
+		} elseif ( 'three_equal' === $hovercraft_footer_columns ) {
+			get_template_part( 'template-parts/footer/footer-three-columns-equal' );
+		} elseif ( 'three_weighted' === $hovercraft_footer_columns ) {
+			get_template_part( 'template-parts/footer/footer-three-columns-unequal' );
+		} else {
+			get_template_part( 'template-parts/footer/footer-four-columns-unequal' );
 		}
 		?>
 
