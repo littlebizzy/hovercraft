@@ -108,6 +108,7 @@ function hovercraft_generate_css(){
 	/* heros */
 	$hero_gradient_tones = get_theme_mod( 'hovercraft_hero_gradient_tones', 'two_tones' );
 	$mini_hero_vertical_padding = get_theme_mod( 'hovercraft_mini_hero_vertical_padding', '80' );
+	$mini_hero_mobile_vertical_padding = get_theme_mod( 'hovercraft_mini_hero_mobile_vertical_padding', '60' );
 	$full_hero_background_position = get_theme_mod( 'hovercraft_full_hero_background_position', 'center_center' );
 	$half_hero_background_position = get_theme_mod( 'hovercraft_half_hero_background_position', 'center_center' );
 	$mini_hero_background_position = get_theme_mod( 'hovercraft_mini_hero_background_position', 'center_center' );
