@@ -27,6 +27,18 @@ Normal images should remain square. Avatar and identity photos are the exception
 
 Do not use arbitrary one-off radius values. If a new component looks like a button or form control, use `4px`. If it looks like a visible card, widget, panel, or island, use `8px`. If it is an image, table, structural edge, plain article-flow section, or document-style content area, use `0px`. If it is an intentionally circular element such as an avatar, identity photo, badge, counter, range slider thumb, or small icon-only control, use `999px`.
 
+## Joined Controls
+
+Joined controls should look like one continuous component, not separate rounded boxes pushed together.
+
+Search forms are the main pattern. The shared search input and submit button should use `4px` only on the outside corners. The touching seam between the input and submit button should stay square and flush.
+
+For left-to-right search forms, the input should use `4px 0 0 4px` and the submit button should use `0 4px 4px 0`.
+
+The wrapper around joined controls may use `4px` and `overflow: hidden` to clip inner edges cleanly. Individual child controls must still declare their own seam-aware radius so generic form styles, browser defaults, or plugin styles do not reintroduce rounded inner corners.
+
+Do not allow both controls in a joined pair to keep full `4px` radius on all corners, because that creates a visible notch or double-rounded seam between the input and button.
+
 ## Special Cases
 
 Tabs should use `4px` on the top corners when they visually connect to a tab panel or tab boundary. Bottom tab corners should stay square when needed to preserve the tab seam.
