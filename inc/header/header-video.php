@@ -19,7 +19,7 @@ function hovercraft_register_full_hero_video_control( $wp_customize ) {
 		'hovercraft_video',
 		array(
 			'label' => esc_html__( 'Full Hero Video', 'hovercraft' ),
-			'description' => esc_html__( 'Upload or select a background video for Full Hero layouts.', 'hovercraft' ),
+			'description' => esc_html__( 'Upload or select a background video used only by Full Hero layouts.', 'hovercraft' ),
 			'section' => 'header_image',
 			'mime_type' => 'video',
 			'settings' => 'hovercraft_video',
