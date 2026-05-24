@@ -4,19 +4,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-?>
-<?php if ( is_active_sidebar( 'hovercraft_home_postmain_top' ) && is_front_page() ) : ?>
+if ( ! is_front_page() ) {
+	return;
+}
+
+// home postmain top
+if ( is_active_sidebar( 'hovercraft_home_postmain_top' ) ) : ?>
 	<div id="home-postmain-top">
 		<div class="inner">
 			<?php dynamic_sidebar( 'hovercraft_home_postmain_top' ); ?>
 		</div><!-- inner -->
 	</div><!-- home-postmain-top -->
-<?php endif; // end is_front_page ?>
+<?php endif; // end home postmain top ?>
 
-<?php if ( is_active_sidebar( 'hovercraft_home_postmain_bottom' ) && is_front_page() ) : ?>
+<?php
+// home postmain bottom
+if ( is_active_sidebar( 'hovercraft_home_postmain_bottom' ) ) : ?>
 	<div id="home-postmain-bottom">
 		<div class="inner">
 			<?php dynamic_sidebar( 'hovercraft_home_postmain_bottom' ); ?>
 		</div><!-- inner -->
 	</div><!-- home-postmain-bottom -->
-<?php endif; // end is_front_page ?>
+<?php endif; // end home postmain bottom ?>
