@@ -87,7 +87,7 @@ if ( $hovercraft_show_portal_search ) {
 			</div><!-- title-wrapper -->
 
 			<?php // render hero caption ?>
-			<?php get_template_part( 'template-parts/header/hero-caption' ); ?>
+			<?php get_template_part( 'template-parts/hero/hero-caption' ); ?>
 
 			<div class="clear"></div>
 		</div><!-- inner -->
