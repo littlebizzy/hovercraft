@@ -30,6 +30,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <div class="clear"></div>
 </div><!-- inner -->
-</div><!-- main -->	
-<?php endif; // end main content ?>	
+</div><!-- main -->
+	
+<?php endif; // end main content ?>
+	
 <?php get_template_part( 'footer' ); ?>
