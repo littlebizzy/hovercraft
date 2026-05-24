@@ -71,7 +71,7 @@ if ( 'everywhere_possible' === $hovercraft_h1_divider_display ) {
 									<?php if ( $hovercraft_show_snippet_title ) : ?>
 										<h1 class="<?php echo esc_attr( $hovercraft_full_hero_title_class ); ?>"><?php echo esc_html( single_post_title( '', false ) ); ?></h1>
 									<?php endif; // end snippet title ?>
-									<?php get_template_part( 'template-parts/header/hero-snippet' ); ?>
+									<?php get_template_part( 'template-parts/hero/hero-snippet' ); ?>
 								</div><!-- hero-snippet -->
 							<?php endif; // end hero snippet ?>
 
