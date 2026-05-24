@@ -84,4 +84,6 @@ If one template's fields look wrong, first adjust the shared form baseline or ad
 
 Header search bars, fullscreen search modals, and other visually integrated search experiences may use layout-specific dimensions when needed, but they should still preserve the same general field family unless there is a deliberate visual reason not to.
 
+Fullscreen search modal field overrides should be scoped under the modal wrapper. Do not make generic `.input-container`, `.search-input`, or `.search-submit` rules behave like modal-only layout rules.
+
 These exceptions should stay narrow and should not leak back into normal form fields.
