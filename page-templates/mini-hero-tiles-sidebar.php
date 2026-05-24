@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php get_template_part( 'template-parts/header/header-mini-hero' ); ?>
 
 	<?php if ( hovercraft_should_show_posthero( 'mini' ) ) : ?>
-		<?php get_template_part( 'template-parts/header/posthero' ); ?>
+		<?php get_template_part( 'template-parts/hero/hero-posthero' ); ?>
 	<?php endif; // end posthero ?>
 
 <?php if ( hovercraft_should_show_main_content() ) : ?>
