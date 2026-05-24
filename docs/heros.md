@@ -39,3 +39,17 @@ Do not use JavaScript to calculate Half Hero height unless a future browser bug 
 Do not hardcode topbar, preheader, navigation, or header heights into Half Hero CSS.
 
 Half Hero snippets and hero windows should live inside the flexing hero body so they do not change the first-screen viewport contract. Captions and photo credits should be treated as overlay metadata inside the Half Hero body because they belong visually to the background and should not reserve structural layout height.
+
+## Mini Hero Layout
+
+Mini Hero is a compact hero layout for pages and category templates that need a branded title, search, snippet, or call-to-action area without taking over the first screen.
+
+Mini Hero should not use viewport height, screen-height math, or JavaScript height calculation. It should be controlled by vertical padding so the layout remains intentionally compact and predictable.
+
+The Mini Hero wrapper should be a normal block-level container. The image and gradient background should live on the Mini Hero body, not on both the outer wrapper and the body.
+
+Mini Hero desktop vertical padding is controlled by the Customizer. Mobile vertical padding may also be controlled by the Customizer if mobile-specific tuning is needed.
+
+Do not hardcode topbar, preheader, navigation, or header heights into Mini Hero CSS.
+
+Mini Hero captions should be treated as overlay metadata inside the Mini Hero body because they belong visually to the background and should not reserve structural layout height.
