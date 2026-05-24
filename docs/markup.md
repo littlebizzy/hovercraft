@@ -64,6 +64,8 @@ Avoid duplicate IDs.
 
 Search forms, labels, and other repeated controls should use generated unique IDs when multiple copies may appear on the same page.
 
+Modal toggles and close controls should use real `<button type="button">` elements instead of clickable `<div>` elements with ARIA button roles. Modal wrappers should expose their dialog state with stable ARIA attributes, while repeated styling hooks should stay class-based.
+
 Do not rename long-standing IDs or classes casually.
 
 IDs such as `main`, `primary`, `primary-wide`, `primary-center`, `content-wrapper`, `content-padded`, and `content-wide` are part of the theme's layout contract.
