@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 </div><!-- half-hero-viewport -->
 
 	<?php if ( hovercraft_should_show_posthero( 'half' ) ) : ?>
-		<?php get_template_part( 'template-parts/header/posthero' ); ?>
+		<?php get_template_part( 'template-parts/hero/hero-posthero' ); ?>
 	<?php endif; // end posthero ?>
 
 <?php if ( hovercraft_should_show_main_content() ) : ?>
