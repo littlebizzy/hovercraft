@@ -75,12 +75,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	background-repeat: no-repeat;
 }
 
-.hero-half .hero-caption {
-	position: absolute;
-	right: 0;
-	bottom: 0;
-	left: 0;
-	z-index: 1;
+#hero-half-container .hero-image-caption {
+	z-index: 2;
 }
 
 #header-half-hero {
