@@ -1,31 +1,31 @@
 <?php
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
-
-// renders hero image caption when available
-$hero_caption = '';
+// get featured image caption
+$hovercraft_hero_caption = '';
 
 if ( has_post_thumbnail() ) {
-	$hero_caption = get_the_post_thumbnail_caption();
+	$hovercraft_hero_caption = get_the_post_thumbnail_caption();
 }
 
-if ( empty( $hero_caption ) ) {
-	$custom_header = get_custom_header();
-	$custom_header_attachment_id = 0;
+// get custom header image caption
+if ( empty( $hovercraft_hero_caption ) ) {
+	$hovercraft_custom_header = get_custom_header();
+	$hovercraft_custom_header_attachment_id = 0;
 
-	if ( isset( $custom_header->attachment_id ) ) {
-		$custom_header_attachment_id = absint( $custom_header->attachment_id );
+	if ( isset( $hovercraft_custom_header->attachment_id ) ) {
+		$hovercraft_custom_header_attachment_id = absint( $hovercraft_custom_header->attachment_id );
 	}
 
-	if ( ! empty( $custom_header_attachment_id ) ) {
-		$hero_caption = wp_get_attachment_caption( $custom_header_attachment_id );
+	if ( ! empty( $hovercraft_custom_header_attachment_id ) ) {
+		$hovercraft_hero_caption = wp_get_attachment_caption( $hovercraft_custom_header_attachment_id );
 	}
 }
 
-if ( empty( $hero_caption ) ) {
+// skip empty hero caption
+if ( empty( $hovercraft_hero_caption ) ) {
 	return;
 }
+
+// render hero caption
 ?>
-<div class="hero-image-caption"><?php echo esc_html( $hero_caption ); ?></div>
+<div class="hero-image-caption"><?php echo esc_html( $hovercraft_hero_caption ); ?></div>
