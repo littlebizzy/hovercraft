@@ -51,7 +51,9 @@ require get_template_directory() . '/inc/header/header-navigation.php';
 require get_template_directory() . '/inc/header/header-video.php';
 require get_template_directory() . '/inc/header/logo-alternative.php';
 require get_template_directory() . '/inc/header/logo-default.php';
-require get_template_directory() . '/inc/header/posthero.php';
+
+// hero
+require get_template_directory() . '/inc/hero/hero-posthero.php';
 
 // content
 require get_template_directory() . '/inc/content/main-content.php';
