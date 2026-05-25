@@ -54,6 +54,7 @@ The theme should remain boring, explicit, and easy to maintain. New features sho
 - [Widget areas](docs/widget-areas.md)
 - [CSS organization](docs/css.md)
 - [Structured data](docs/structured-data.md)
+- [Translations](docs/translations.md)
 - [Comments](docs/comments.md)
 - [Page builders](docs/page-builders.md)
 - [Refactoring](docs/refactoring.md)
