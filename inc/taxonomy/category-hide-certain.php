@@ -1,11 +1,11 @@
 <?php
 
+// block direct access
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
 // hidden category rules
-
 add_action( 'pre_get_posts', 'hovercraft_hide_certain_categories' );
 
 // hide selected categories from queries
