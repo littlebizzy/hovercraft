@@ -1,6 +1,3 @@
-<?php
-
-?>
 <div id="hovercraft-overlay-menu" class="overlay">
 
 	<button type="button" class="closebtn" onclick="hovercraftCloseNav()">
@@ -26,4 +23,3 @@
 	</div><!-- hovercraft-offcanvas-menu -->
 
 <div class="hovercraft-offcanvas-overlay"></div>
-
