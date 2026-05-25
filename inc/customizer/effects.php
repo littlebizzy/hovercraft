@@ -1,5 +1,6 @@
 <?php
 
+// block direct access
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
@@ -30,7 +31,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 		'default' => 'Default',
 		'cerulean' => 'Cerulean',
 		'cosmo' => 'Cosmo',
-		'cyborg' => 'cyborg',
+		'cyborg' => 'Cyborg',
 		),
 	)
 ) );
@@ -55,7 +56,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 		'default' => 'Default',
 		'cerulean' => 'Cerulean',
 		'cosmo' => 'Cosmo',
-		'cyborg' => 'cyborg',
+		'cyborg' => 'Cyborg',
 		),
 	)
 ) );
