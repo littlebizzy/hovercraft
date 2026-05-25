@@ -1,23 +1,21 @@
 // accordion menu
 jQuery( function( $ ) {
+	$( '.menu-toggle' ).on( 'click', function( event ) {
+		event.preventDefault();
 
-	// initialize accordion navigation
-	var accordionNav = $( function() {
-		$( '.menu-toggle' ).on( 'click', function( e ) {
-			e.preventDefault();
-			var toggleButton = $( this );
+		var $toggle = $( this );
+		var $submenu = $toggle.next( '.sub-menu' );
+		var $menu = $toggle.closest( 'ul' );
 
-			if ( toggleButton.next().hasClass( 'active' ) ) {
-				toggleButton.next().removeClass( 'active' ).slideUp( 400 );
-				toggleButton.removeClass( 'rotate' );
-			} else {
-				toggleButton.parent().parent().find( 'li .sub-menu' ).removeClass( 'active' ).slideUp( 400 );
-				toggleButton.parent().parent().find( '.menu-toggle' ).removeClass( 'rotate' );
-				toggleButton.next().toggleClass( 'active' ).slideToggle( 400 );
-				toggleButton.toggleClass( 'rotate' );
-			}
-		} );
+		if ( $submenu.hasClass( 'active' ) ) {
+			$submenu.removeClass( 'active' ).slideUp( 400 );
+			$toggle.removeClass( 'rotate' );
+			return;
+		}
+
+		$menu.find( '.sub-menu.active' ).removeClass( 'active' ).slideUp( 400 );
+		$menu.find( '.menu-toggle.rotate' ).removeClass( 'rotate' );
+		$submenu.addClass( 'active' ).slideDown( 400 );
+		$toggle.addClass( 'rotate' );
 	} );
-
 } );
-
