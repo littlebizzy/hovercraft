@@ -1,5 +1,6 @@
 <?php
 
+// block direct access
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
@@ -22,7 +23,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 	'hovercraft_homepage_html_title',
 	array(
 		'label' => __( 'Homepage HTML Title', 'hovercraft' ),
-		'description' => __( 'How should the homepage HTML title tag be generated? Note: Page Title options only work if homepage set to use static page.', 'hovercraft' ),
+		'description' => __( 'Choose how the homepage HTML title tag should be generated. Page Title options only work when the homepage uses a static page.', 'hovercraft' ),
 		'section' => 'hovercraft_seo',
 		'settings' => 'hovercraft_homepage_html_title',
 		'type' => 'select',
@@ -49,7 +50,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 	'hovercraft_faq_posts_noindex',
 	array(
 		'label' => __( 'Noindex FAQ Posts', 'hovercraft' ),
-		'description' => __( 'Do you want to noindex the FAQ posts? Note: We recommend keep noindex enabled for FAQ posts if you are displaying all FAQ post text on the FAQ category page.', 'hovercraft' ),
+		'description' => __( 'Noindex FAQ posts when full FAQ content is already displayed on the FAQ category page.', 'hovercraft' ),
 		'section' => 'hovercraft_seo',
 		'settings' => 'hovercraft_faq_posts_noindex',
 		'type' => 'select',
