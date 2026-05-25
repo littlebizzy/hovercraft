@@ -1,9 +1,11 @@
 <?php
 
+// block direct access
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// check posthero visibility
 function hovercraft_should_show_posthero( $hero_type ) {
 	// skip inactive posthero widget area
 	if ( ! is_active_sidebar( 'hovercraft_posthero' ) ) {
