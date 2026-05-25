@@ -10,12 +10,15 @@ if ( ! class_exists( 'WooCommerce' ) ) {
 	return;
 }
 
-// replace quantity inputs with select fields
-function hovercraft_replace_woocommerce_quantity_input_with_select( $html, $args, $product ) {
+// render quantity select markup
+function hovercraft_get_woocommerce_quantity_select( $args = array() ) {
 	$min_value = isset( $args['min_value'] ) && is_numeric( $args['min_value'] ) ? intval( $args['min_value'] ) : 1;
 	$max_value = isset( $args['max_value'] ) && is_numeric( $args['max_value'] ) ? intval( $args['max_value'] ) : 0;
 	$input_value = isset( $args['input_value'] ) && is_numeric( $args['input_value'] ) ? intval( $args['input_value'] ) : $min_value;
 	$step = isset( $args['step'] ) && is_numeric( $args['step'] ) ? absint( $args['step'] ) : 1;
+	$input_id = isset( $args['input_id'] ) && $args['input_id'] ? $args['input_id'] : uniqid( 'quantity_' );
+	$input_name = isset( $args['input_name'] ) && $args['input_name'] ? $args['input_name'] : 'quantity';
+	$classes = isset( $args['classes'] ) && is_array( $args['classes'] ) ? $args['classes'] : array();
 
 	// force sane minimum quantity
 	if ( 1 > $min_value ) {
@@ -39,10 +42,6 @@ function hovercraft_replace_woocommerce_quantity_input_with_select( $html, $args
 
 	$max_value = min( $max_value, max( 10, $input_value ) );
 	$max_value = max( $max_value, $min_value, $input_value );
-
-	$input_id = isset( $args['input_id'] ) ? $args['input_id'] : uniqid( 'quantity_' );
-	$input_name = isset( $args['input_name'] ) ? $args['input_name'] : 'quantity';
-	$classes = isset( $args['classes'] ) && is_array( $args['classes'] ) ? $args['classes'] : array();
 	$classes[] = 'qty';
 	$classes[] = 'hovercraft-quantity-select';
 	$classes = array_unique( array_filter( $classes ) );
@@ -68,5 +67,10 @@ function hovercraft_replace_woocommerce_quantity_input_with_select( $html, $args
 	$output .= '</div>';
 
 	return $output;
+}
+
+// replace quantity inputs with select fields
+function hovercraft_replace_woocommerce_quantity_input_with_select( $html, $args, $product ) {
+	return hovercraft_get_woocommerce_quantity_select( $args );
 }
 add_filter( 'woocommerce_quantity_input', 'hovercraft_replace_woocommerce_quantity_input_with_select', 999, 3 );
