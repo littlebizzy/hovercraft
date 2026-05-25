@@ -129,7 +129,7 @@ require get_template_directory() . '/inc/bbpress/bbpress-quick-tags.php';
 require get_template_directory() . '/inc/bbpress/bbpress-search-results.php';
 
 // shortcodes
-require get_template_directory() . '/inc/shortcodes/theme-shortcodes.php';
+require get_template_directory() . '/inc/misc/shortcodes.php';
 
 // license
 require_once get_template_directory() . '/inc/misc/license.php';
