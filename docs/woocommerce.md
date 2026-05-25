@@ -46,6 +46,8 @@ The usual problem on multi-option variable products is row-to-row crowding, not 
 
 Prefer CSS-only fixes for WooCommerce variation spacing. Do not override WooCommerce variation templates unless CSS cannot solve the layout problem cleanly.
 
+Add to cart buttons must have a visibly disabled state for unavailable or incomplete variable-product selections. Disabled buttons should not keep the active accent color on hover, focus, or active states.
+
 ## Product Tabs
 
 WooCommerce product tabs should feel like HoverCraft tabs, not plugin defaults.
