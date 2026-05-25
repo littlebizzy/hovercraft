@@ -1,13 +1,14 @@
 <?php
 
+// block direct access
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// theme shortcodes
-
+// render button shortcode
 function hovercraft_button_shortcode( $atts, $content = '' ) {
-	$atts = shortcode_atts(
+	// get button shortcode attributes
+	$hovercraft_button_atts = shortcode_atts(
 		array(
 			'url' => '#',
 			'target' => '_self',
@@ -19,36 +20,42 @@ function hovercraft_button_shortcode( $atts, $content = '' ) {
 		'hovercraft_button'
 	);
 
-	$allowed_targets = array( '_self', '_blank', '_parent', '_top' );
-	$target = '_self';
+	// get button target
+	$hovercraft_allowed_targets = array( '_self', '_blank', '_parent', '_top' );
+	$hovercraft_button_target = '_self';
 
-	if ( in_array( $atts['target'], $allowed_targets, true ) ) {
-		$target = $atts['target'];
+	if ( in_array( $hovercraft_button_atts['target'], $hovercraft_allowed_targets, true ) ) {
+		$hovercraft_button_target = $hovercraft_button_atts['target'];
 	}
 
-	$style_class = 'button-primary';
+	// get button style class
+	$hovercraft_button_style_class = 'button-primary';
 
-	if ( 'secondary' === $atts['style'] ) {
-		$style_class = 'button-secondary';
+	if ( 'secondary' === $hovercraft_button_atts['style'] ) {
+		$hovercraft_button_style_class = 'button-secondary';
 	}
 
-	$custom_class = sanitize_html_class( $atts['class'] );
-	$class_attr = trim( $style_class . ' ' . $custom_class );
-	$rel = sanitize_text_field( $atts['rel'] );
+	// get button class attribute
+	$hovercraft_button_custom_class = sanitize_html_class( $hovercraft_button_atts['class'] );
+	$hovercraft_button_class_attr = trim( $hovercraft_button_style_class . ' ' . $hovercraft_button_custom_class );
 
-	if ( '_blank' === $target && empty( $rel ) ) {
-		$rel = 'noopener noreferrer';
+	// get button rel attribute
+	$hovercraft_button_rel = sanitize_text_field( $hovercraft_button_atts['rel'] );
+
+	if ( '_blank' === $hovercraft_button_target && empty( $hovercraft_button_rel ) ) {
+		$hovercraft_button_rel = 'noopener noreferrer';
 	}
 
-	$rel_attr = '';
+	$hovercraft_button_rel_attr = '';
 
-	if ( $rel ) {
-		$rel_attr = ' rel="' . esc_attr( $rel ) . '"';
+	if ( ! empty( $hovercraft_button_rel ) ) {
+		$hovercraft_button_rel_attr = ' rel="' . esc_attr( $hovercraft_button_rel ) . '"';
 	}
 
-	$button_content = wp_kses_post( do_shortcode( $content ) );
+	// get button content
+	$hovercraft_button_content = wp_kses_post( do_shortcode( $content ) );
 
-	return '<a href="' . esc_url( $atts['url'] ) . '" target="' . esc_attr( $target ) . '" class="' . esc_attr( $class_attr ) . '"' . $rel_attr . '>' . $button_content . '</a>';
+	return '<a href="' . esc_url( $hovercraft_button_atts['url'] ) . '" target="' . esc_attr( $hovercraft_button_target ) . '" class="' . esc_attr( $hovercraft_button_class_attr ) . '"' . $hovercraft_button_rel_attr . '>' . $hovercraft_button_content . '</a>';
 }
 add_shortcode( 'button', 'hovercraft_button_shortcode' );
 add_shortcode( 'hovercraft_button', 'hovercraft_button_shortcode' );
