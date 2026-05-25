@@ -147,55 +147,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	margin-bottom: 0;
 }
 
-.woocommerce div.product form.cart {
-	clear: both;
-	margin: 0 0 30px;
-}
-
-.woocommerce div.product form.cart::after {
-	clear: both;
-	content: "";
-	display: table;
-}
-
-.woocommerce div.product form.cart .variations {
-	width: 100%;
-	margin: 0 0 20px;
-	border: 0;
-}
-
-.woocommerce div.product form.cart .variations th, .woocommerce div.product form.cart .variations td {
-	padding: 0 0 10px;
-	background: transparent;
-	border: 0;
-	text-align: left;
-	vertical-align: top;
-}
-
-.woocommerce div.product form.cart .variations label {
-	margin: 0;
-	font-weight: 600;
-}
-
-.woocommerce div.product form.cart .variations select {
-	max-width: 100%;
-}
-
-.woocommerce div.product form.cart .reset_variations {
-	display: inline-block;
-	margin-top: 8px;
-	font-size: 12px;
-}
-
-.woocommerce div.product form.cart .single_variation {
-	clear: both;
-	margin: 0 0 20px;
-}
-
-.woocommerce div.product form.cart .woocommerce-variation-description p:last-child {
-	margin-bottom: 0;
-}
-
 .woocommerce .summary ul, .woocommerce div.product .summary ul {
 	margin-left: 0 !important;
 }
