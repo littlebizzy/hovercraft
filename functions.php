@@ -107,13 +107,11 @@ require get_template_directory() . '/inc/fonts/google-fonts.php';
 require get_template_directory() . '/inc/ui/back-to-top.php';
 require get_template_directory() . '/inc/ui/full-screen-search.php';
 
-// meta
-require get_template_directory() . '/inc/meta/meta-box.php';
-
 // metadata
 require get_template_directory() . '/inc/metadata/metadata-open-graph.php';
 
 // meta boxes
+require get_template_directory() . '/inc/meta-boxes/meta-box.php';
 require get_template_directory() . '/inc/meta-boxes/meta-box-collapse-assets.php';
 require get_template_directory() . '/inc/meta-boxes/meta-box-zigzag.php';
 
