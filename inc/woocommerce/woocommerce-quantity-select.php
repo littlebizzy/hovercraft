@@ -56,13 +56,16 @@ function hovercraft_replace_woocommerce_quantity_input_with_select( $html, $args
 	$quantities = array_unique( array_filter( array_map( 'absint', $quantities ) ) );
 	sort( $quantities, SORT_NUMERIC );
 
-	$output = '<select id="' . esc_attr( $input_id ) . '" class="' . esc_attr( implode( ' ', $classes ) ) . '" name="' . esc_attr( $input_name ) . '" title="' . esc_attr__( 'Qty', 'hovercraft' ) . '">';
+	$output = '<div class="quantity">';
+	$output .= '<label class="screen-reader-text" for="' . esc_attr( $input_id ) . '">' . esc_html__( 'Quantity', 'hovercraft' ) . '</label>';
+	$output .= '<select id="' . esc_attr( $input_id ) . '" class="' . esc_attr( implode( ' ', $classes ) ) . '" name="' . esc_attr( $input_name ) . '" title="' . esc_attr__( 'Qty', 'hovercraft' ) . '">';
 
 	foreach ( $quantities as $quantity ) {
 		$output .= '<option value="' . esc_attr( $quantity ) . '"' . selected( $quantity, $input_value, false ) . '>' . esc_html( $quantity ) . '</option>';
 	}
 
 	$output .= '</select>';
+	$output .= '</div>';
 
 	return $output;
 }
