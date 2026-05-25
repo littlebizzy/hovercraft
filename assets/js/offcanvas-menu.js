@@ -1,19 +1,25 @@
-// mobile menu
+// offcanvas menu
 jQuery( function( $ ) {
+	var $body = $( 'body' );
+	var $menu = $( '#hovercraft-offcanvas-menu' );
+	var $overlay = $( '.hovercraft-offcanvas-overlay' );
+	var $trigger = $( '.hovercraft-offcanvas-trigger' );
 
-	// toggle menu open and overlay
-	$( '.hovercraft-offcanvas-trigger' ).on( 'click', function() {
-		$( '#hovercraft-offcanvas-menu' ).toggleClass( 'active' );
-		$( 'body' ).toggleClass( 'frozen' );
-		$( '.hovercraft-offcanvas-overlay' ).toggleClass( 'active' );
+	if ( ! $menu.length || ! $overlay.length || ! $trigger.length ) {
+		return;
+	}
+
+	// toggle offcanvas menu
+	$trigger.on( 'click', function() {
+		$menu.toggleClass( 'active' );
+		$body.toggleClass( 'frozen' );
+		$overlay.toggleClass( 'active' );
 	} );
 
-	// close menu when overlay is clicked
-	$( '.hovercraft-offcanvas-overlay' ).on( 'click', function() {
-		$( '#hovercraft-offcanvas-menu' ).removeClass( 'active' );
-		$( 'body' ).removeClass( 'frozen' );
-		$( '.hovercraft-offcanvas-overlay' ).removeClass( 'active' );
+	// close offcanvas menu
+	$overlay.on( 'click', function() {
+		$menu.removeClass( 'active' );
+		$body.removeClass( 'frozen' );
+		$overlay.removeClass( 'active' );
 	} );
-
 } );
-
