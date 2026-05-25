@@ -39,7 +39,7 @@ function hovercraft_customizer( $wp_customize ) {
 	require get_template_directory() . '/inc/customizer/footer/footer.php';
 	require get_template_directory() . '/inc/customizer/effects.php';
 	require get_template_directory() . '/inc/customizer/link-styling.php';
-	require get_template_directory() . '/inc/customizer/icons.php';
+	require get_template_directory() . '/inc/customizer/icons/icons.php';
 	require get_template_directory() . '/inc/customizer/hero/hero-styling.php';
 	require get_template_directory() . '/inc/customizer/misc/license-key.php';
 
