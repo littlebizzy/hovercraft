@@ -8,9 +8,6 @@ if ( ! defined( 'HOVERCRAFT_VERSION' ) ) {
 	define( 'HOVERCRAFT_VERSION', '0.3.157' );
 }
 
-// title tag
-add_theme_support( 'title-tag' );
-
 // rss feeds
 add_theme_support( 'automatic-feed-links' );
 
