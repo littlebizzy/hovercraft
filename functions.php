@@ -84,9 +84,12 @@ require get_template_directory() . '/inc/widgets/widget-areas.php';
 require get_template_directory() . '/inc/widgets/widget-tiles.php';
 require get_template_directory() . '/inc/widgets/widget-columns.php';
 require get_template_directory() . '/inc/widgets/widget-zigzag.php';
-require get_template_directory() . '/inc/footer/footer-callout.php';
 require get_template_directory() . '/inc/sidebar/sidebar-callout.php';
 require get_template_directory() . '/inc/sidebar/sidebar-display.php';
+
+// footer
+require get_template_directory() . '/inc/footer/footer-back-to-top.php';
+require get_template_directory() . '/inc/footer/footer-callout.php';
 
 // customizer
 require get_template_directory() . '/inc/customizer/customizer.php';
@@ -104,7 +107,6 @@ require get_template_directory() . '/inc/css/css-generator.php';
 require get_template_directory() . '/inc/fonts/google-fonts.php';
 
 // ui
-require get_template_directory() . '/inc/ui/back-to-top.php';
 require get_template_directory() . '/inc/ui/full-screen-search.php';
 
 // metadata
