@@ -329,6 +329,10 @@ input.qty[type="number"] {
 	margin: 0 0 12px !important;
 }
 
+.single-product form.cart .hovercraft-quantity-select {
+	margin: 0 0 12px !important;
+}
+
 .single-product form.cart button.single_add_to_cart_button {
 	width: 100% !important;
 	height: 44px !important;
