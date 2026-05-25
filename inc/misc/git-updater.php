@@ -1,7 +1,8 @@
 <?php
 
+// block direct access
 if ( ! defined( 'ABSPATH' ) ) {
-    exit;
+	exit;
 }
 
 // display git updater admin notice

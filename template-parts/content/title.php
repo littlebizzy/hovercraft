@@ -1,9 +1,5 @@
 <?php
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
-
 // content title display
 
 if ( ! hovercraft_is_title_hidden() ) : ?>

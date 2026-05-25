@@ -1,9 +1,5 @@
 <?php
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
-
 $hovercraft_breadcrumbs = get_theme_mod( 'hovercraft_breadcrumbs', 'sitewide' );
 $hovercraft_show_breadcrumbs = false;
 

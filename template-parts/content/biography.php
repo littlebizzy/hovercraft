@@ -1,9 +1,5 @@
 <?php
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
-
 $hovercraft_biography = get_theme_mod( 'hovercraft_biography', 'native_posts_only' );
 ?>
 

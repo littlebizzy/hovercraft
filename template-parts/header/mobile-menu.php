@@ -1,9 +1,5 @@
 <?php
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
-
 ?>
 <div id="hovercraft-overlay-menu" class="overlay">
 

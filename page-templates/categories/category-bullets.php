@@ -1,9 +1,5 @@
 <?php
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
-
 // category bullets page template
 
  get_template_part( 'header' ); ?>

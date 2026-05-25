@@ -1,9 +1,5 @@
 <?php
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
-
 // author template fallback
 
  get_template_part( 'header' ); ?>

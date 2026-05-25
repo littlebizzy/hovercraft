@@ -1,10 +1,6 @@
 <?php
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
-
- get_template_part( 'header' ); ?>
+get_template_part( 'header' ); ?>
 <?php get_template_part( 'template-parts/header/header-basic' ); ?>
 
 <?php if ( hovercraft_should_show_main_content() ) : ?>

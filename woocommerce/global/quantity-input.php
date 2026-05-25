@@ -1,9 +1,5 @@
 <?php
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
-
 $min_value = isset( $min_value ) && is_numeric( $min_value ) ? intval( $min_value ) : 1;
 $max_value = isset( $max_value ) && is_numeric( $max_value ) ? intval( $max_value ) : 0;
 $input_value = isset( $input_value ) && is_numeric( $input_value ) ? intval( $input_value ) : $min_value;

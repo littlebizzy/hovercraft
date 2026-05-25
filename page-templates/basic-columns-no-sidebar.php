@@ -1,10 +1,6 @@
 <?php
 /* Template Name: Basic Columns (No Sidebar) */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
-
 // basic columns page template
 
 ?>

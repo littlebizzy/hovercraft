@@ -1,9 +1,5 @@
 <?php
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
-
 ?>
 <div class="gallery-narrow-wrapper">
 <?php echo do_shortcode( '[gallery size="medium" columns="0" link="none"]' ); ?>

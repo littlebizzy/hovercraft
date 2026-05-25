@@ -1,10 +1,11 @@
 <?php
 
+// block direct access
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-	// first font family setting
+// first font family setting
 	$wp_customize->add_setting( 'hovercraft_first_font_family', array(
 		'default'           => 'noto_sans',
 		'sanitize_callback' => 'hovercraft_sanitize_select',

@@ -1,10 +1,6 @@
 <?php
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
-
- if ( is_active_sidebar('hovercraft_after_loop')) : ?>
+if ( is_active_sidebar('hovercraft_after_loop')) : ?>
     <div class="after-loop">
         <?php add_filter('widget_title', '__return_false');
 		// output hovercraft_after_loop sidebar

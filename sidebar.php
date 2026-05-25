@@ -1,9 +1,5 @@
 <?php
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
-
 ?>
 <div id="sidebar">
     <?php dynamic_sidebar( 'hovercraft_callout' ); ?>

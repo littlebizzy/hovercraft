@@ -1,9 +1,5 @@
 <?php
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
-
 $hovercraft_desktop_header_width = get_theme_mod( 'hovercraft_desktop_header_width', 'fixed' );
 $search_icon_status = get_theme_mod( 'hovercraft_search_icon', 'desktop_only' );
 $hovercraft_mobile_menu = get_theme_mod( 'hovercraft_mobile_menu', 'accordion' );

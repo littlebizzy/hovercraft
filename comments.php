@@ -1,9 +1,5 @@
 <?php
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
-
 // exit if post is password-protected
 if ( post_password_required() ) {
     return;

@@ -1,10 +1,6 @@
 <?php
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
-
- if ( hovercraft_should_show_sidebar() ) : ?>
+if ( hovercraft_should_show_sidebar() ) : ?>
 	<div id="primary">
 <?php else : ?>
 	<div id="primary-wide">
