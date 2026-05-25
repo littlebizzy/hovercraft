@@ -1,11 +1,11 @@
 <?php
 
+// block direct access
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// back to top link
-
+// enqueue back to top script
 function hovercraft_back_to_top() {
 	wp_enqueue_script(
 		'hovercraft_back_to_top',
