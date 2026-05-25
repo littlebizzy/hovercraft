@@ -36,7 +36,7 @@ function hovercraft_customizer( $wp_customize ) {
 	require get_template_directory() . '/inc/customizer/fonts/fonts.php';
 	require get_template_directory() . '/inc/customizer/colors/colors.php';
 	require get_template_directory() . '/inc/customizer/sidebar/sidebar.php';
-	require get_template_directory() . '/inc/customizer/footer.php';
+	require get_template_directory() . '/inc/customizer/footer/footer.php';
 	require get_template_directory() . '/inc/customizer/effects.php';
 	require get_template_directory() . '/inc/customizer/link-styling.php';
 	require get_template_directory() . '/inc/customizer/icons.php';
