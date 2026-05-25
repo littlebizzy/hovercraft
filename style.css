@@ -1,7 +1,7 @@
 /*
 Theme Name: HoverCraft
 Theme URI: https://hovercraft.vip
-Version: 0.3.159
+Version: 0.3.160
 Description: No maintenance WordPress theme
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
@@ -14,11 +14,13 @@ GitHub Theme URI: littlebizzy/hovercraft
 Primary Branch: master
 */
 
-/* css reset */
+/* root */
 
 html {
 	scrollbar-gutter: stable;
 }
+
+/* css reset */
 
 html, body, div, span, applet, object, iframe, main, h1, h2, h3, h4, h5, h6, p, hr, blockquote, pre, a, abbr, acronym, address, big, button, cite, code, del, dfn, em, img, input, ins, kbd, label, legend, mark, meter, optgroup, option, output, progress, q, s, samp, select, small, source, strike, strong, sub, summary, sup, table, tbody, td, template, textarea, tfoot, th, thead, time, tr, tt, u, ul, var, video, article, aside, audio, canvas, caption, center, details, dialog, embed, fieldset, figcaption, figure, footer, form, header, hgroup, li, menu, nav, ol, picture, ruby, section {
 	margin: 0;
