@@ -46,12 +46,12 @@ $hovercraft_scroll_to_top = get_theme_mod( 'hovercraft_scroll_to_top', 'mobile_o
 			</div><!-- copyright-right -->
 		<?php endif; // end copyright widget area ?>
 
-		<?php // render scroll to top link ?>
+		<?php // render scroll to top button ?>
 		<?php if ( 'none' !== $hovercraft_scroll_to_top ) : ?>
 			<div class="scrollup-wrapper">
-				<span class="scrollup-link"><?php esc_html_e( 'Back to top', 'hovercraft' ); ?></span>
+				<button type="button" class="scrollup-link"><?php esc_html_e( 'Back to top', 'hovercraft' ); ?></button>
 			</div><!-- scrollup-wrapper -->
-		<?php endif; // end scroll to top link ?>
+		<?php endif; // end scroll to top button ?>
 
 		<div class="clear"></div>
 	</div><!-- inner -->
