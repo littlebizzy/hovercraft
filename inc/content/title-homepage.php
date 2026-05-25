@@ -4,8 +4,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// homepage title display
-
+// filter homepage document title
 function hovercraft_homepage_title( $title ) {
 	if ( ! is_front_page() ) {
 		return $title;
@@ -50,4 +49,4 @@ function hovercraft_homepage_title( $title ) {
 
 	return $title;
 }
-add_filter( 'pre_get_document_title', 'hovercraft_homepage_title', 10, 2 );
+add_filter( 'pre_get_document_title', 'hovercraft_homepage_title' );
