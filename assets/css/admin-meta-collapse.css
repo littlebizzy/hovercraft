@@ -1,19 +1,25 @@
 /* admin meta collapse */
+
 .hovercraft-meta-group {
-	border: 1px solid #ccd0d4;
-	margin-bottom: 12px;
+	margin: 0 0 12px;
+	border: 1px solid #c3c4c7;
+	border-radius: 4px;
 	background: #fff;
+	overflow: hidden;
 }
 
 .hovercraft-meta-group-header {
-	padding: 10px 12px;
-	background: #f6f7f7;
-	border-bottom: 1px solid #ccd0d4;
-	cursor: pointer;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	gap: 12px;
+	padding: 10px 12px;
+	background: #f6f7f7;
+	border-bottom: 1px solid #c3c4c7;
+	color: #1d2327;
 	font-weight: 600;
+	cursor: pointer;
+	user-select: none;
 }
 
 .hovercraft-meta-group-header:hover {
@@ -21,11 +27,27 @@
 }
 
 .hovercraft-meta-group-toggle {
+	flex: 0 0 auto;
+	color: #50575e;
 	font-size: 18px;
 	line-height: 1;
 }
 
 .hovercraft-meta-group-body {
-	padding: 12px;
 	display: none;
+	padding: 12px;
+}
+
+.hovercraft-meta-group-body p:first-child {
+	margin-top: 0;
+}
+
+.hovercraft-meta-group-body p:last-child {
+	margin-bottom: 0;
+}
+
+.hovercraft-meta-group-body label {
+	display: inline-block;
+	margin-bottom: 4px;
+	font-weight: 600;
 }
