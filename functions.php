@@ -86,7 +86,7 @@ require get_template_directory() . '/inc/widgets/widget-columns.php';
 require get_template_directory() . '/inc/widgets/widget-zigzag.php';
 require get_template_directory() . '/inc/footer/footer-callout.php';
 require get_template_directory() . '/inc/sidebar/sidebar-callout.php';
-require get_template_directory() . '/inc/sidebar/sidebar-layout.php';
+require get_template_directory() . '/inc/sidebar/sidebar-display.php';
 
 // customizer
 require get_template_directory() . '/inc/customizer/customizer.php';
