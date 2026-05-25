@@ -1,13 +1,11 @@
 // main menu
 jQuery( function( $ ) {
-
-	// check menu exists
 	var $menu = $( '.menu-desktop' );
+
 	if ( ! $menu.length ) {
 		return;
 	}
 
-	// submenu delays
 	var delayIn = 100;
 	var delayOut = 150;
 
@@ -75,13 +73,12 @@ jQuery( function( $ ) {
 		} );
 	} );
 
-	// close dropdowns with esc key
+	// close dropdowns with escape key
 	$( document ).on( 'keydown', function( event ) {
-		if ( event.key === 'Escape' ) {
+		if ( 'Escape' === event.key ) {
 			$menu.find( 'li.open' ).each( function() {
 				closeMenuItem( $( this ) );
 			} );
 		}
 	} );
 } );
-
