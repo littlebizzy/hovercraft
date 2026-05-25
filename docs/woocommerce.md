@@ -36,11 +36,13 @@ Mobile changes should preserve normal WooCommerce behavior unless there is a cle
 
 WooCommerce product forms should keep the first purchase control close to the short product description so simple products and single-option variable products do not feel unnecessarily stretched.
 
-Variable products with multiple option rows may add spacing between sibling variation rows only.
+Variable products with multiple option rows may add spacing between sibling variation rows only. The current baseline is `12px` top margin on variation rows that follow another variation row.
 
 Do not add extra top margin to the whole variations table just to fix crowded multi-option products, because that also pushes the first option farther away from the short description.
 
-Do not add extra label bottom spacing unless the label is visually detached from its own field. The usual problem on multi-option variable products is row-to-row crowding, not label-to-field spacing.
+Do not add extra label bottom spacing unless the label is visually detached from its own field. The current baseline is `6px` bottom margin between a variation label and its own field.
+
+The usual problem on multi-option variable products is row-to-row crowding, not label-to-field spacing.
 
 Prefer CSS-only fixes for WooCommerce variation spacing. Do not override WooCommerce variation templates unless CSS cannot solve the layout problem cleanly.
 
