@@ -1,11 +1,11 @@
 <?php
 
+// block direct access
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
 // category bullets helpers
-
 add_filter( 'template_include', 'hovercraft_bullets_category_template', 99 );
 
 // load bullets category template
