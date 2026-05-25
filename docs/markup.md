@@ -12,6 +12,10 @@ Breadcrumbs should use `nav` and ordered lists.
 
 Navigation should use `nav` when it represents site navigation.
 
+Interactive controls should use real buttons when they trigger behavior instead of navigation.
+
+Do not use fake anchors or fragment-only links for behavior that should not change the current URL.
+
 Do not replace clear existing layout wrappers with semantic elements just for novelty.
 
 ## Template Readability
@@ -77,6 +81,14 @@ Do not add classes just to make markup look more complete.
 Add a class when it supports styling, plugin compatibility, accessibility, JavaScript behavior, WordPress standards, or future audits.
 
 If a component already has a clear custom class and does not represent a real WordPress entry, keep it custom.
+
+## JavaScript Markup
+
+JavaScript-triggered controls should keep the URL clean unless navigation is the intended behavior.
+
+Back-to-top controls should use a real button with native smooth scroll instead of a `#top` anchor, empty hash link, or jQuery animation.
+
+Avoid adding anchor targets solely for JavaScript behavior.
 
 ## Plugin Markup
 
