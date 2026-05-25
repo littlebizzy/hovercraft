@@ -48,8 +48,8 @@ require get_template_directory() . '/inc/header/custom-header.php';
 require get_template_directory() . '/inc/header/header-assets.php';
 require get_template_directory() . '/inc/header/header-cleanup.php';
 require get_template_directory() . '/inc/header/header-navigation.php';
-require get_template_directory() . '/inc/header/logo-alternative.php';
-require get_template_directory() . '/inc/header/logo-default.php';
+require get_template_directory() . '/inc/header/header-logo-alternative.php';
+require get_template_directory() . '/inc/header/header-logo-default.php';
 
 // hero
 require get_template_directory() . '/inc/hero/hero-posthero.php';
