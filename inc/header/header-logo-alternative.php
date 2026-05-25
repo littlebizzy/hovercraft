@@ -6,19 +6,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 // get header logo url
 function hovercraft_get_header_logo_url() {
-	$default_logo = wp_get_attachment_url( get_theme_mod( 'custom_logo' ) );
-	$alternative_logo = get_theme_mod( 'hovercraft_logo_alternative' );
-	$logo_setting = get_theme_mod( 'hovercraft_logo_alternative_location', 'none' );
+	$default_logo_url = wp_get_attachment_url( get_theme_mod( 'custom_logo' ) );
+	$alternative_logo_url = get_theme_mod( 'hovercraft_logo_alternative' );
+	$alternative_logo_location = get_theme_mod( 'hovercraft_logo_alternative_location', 'none' );
 	$template_slug = get_page_template_slug();
 
 	if ( ! is_string( $template_slug ) || '' === $template_slug ) {
 		$template_slug = 'basic';
 	}
 
-	$logo_url = $default_logo;
-
-	if ( ! $alternative_logo || 'none' === $logo_setting ) {
-		return $logo_url;
+	if ( ! $alternative_logo_url || 'none' === $alternative_logo_location ) {
+		return $default_logo_url;
 	}
 
 	$logo_locations = array(
@@ -39,21 +37,20 @@ function hovercraft_get_header_logo_url() {
 		'full_and_half_and_mini_hero_and_basic_header' => array( 'full-hero', 'half-hero', 'mini-hero', 'basic' ),
 	);
 
-	if ( ! isset( $logo_locations[ $logo_setting ] ) ) {
-		return $logo_url;
+	if ( ! isset( $logo_locations[ $alternative_logo_location ] ) ) {
+		return $default_logo_url;
 	}
 
-	foreach ( $logo_locations[ $logo_setting ] as $match ) {
-		if ( false !== strpos( $template_slug, $match ) ) {
-			$logo_url = $alternative_logo;
-			break;
+	foreach ( $logo_locations[ $alternative_logo_location ] as $location_slug ) {
+		if ( false !== strpos( $template_slug, $location_slug ) ) {
+			return $alternative_logo_url;
 		}
 	}
 
-	return $logo_url;
+	return $default_logo_url;
 }
 
-// add alternative logo setting to customizer
+// add alternative logo setting
 function hovercraft_logo_alternative( $wp_customize ) {
 	$wp_customize->add_setting(
 		'hovercraft_logo_alternative',
@@ -77,20 +74,19 @@ function hovercraft_logo_alternative( $wp_customize ) {
 }
 add_action( 'customize_register', 'hovercraft_logo_alternative' );
 
-// sanitize uploaded image file
+// sanitize image upload
 function hovercraft_sanitize_image( $file, $setting ) {
-	$mimes = array(
+	$image_mimes = array(
 		'jpg|jpeg' => 'image/jpeg',
 		'png' => 'image/png',
 		'gif' => 'image/gif',
 	);
 
-	$file_ext = wp_check_filetype( $file, $mimes );
+	$file_type = wp_check_filetype( $file, $image_mimes );
 
-	if ( ! empty( $file_ext['ext'] ) ) {
+	if ( ! empty( $file_type['ext'] ) ) {
 		return $file;
 	}
 
 	return $setting->default;
 }
-
