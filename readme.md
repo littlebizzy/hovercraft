@@ -42,6 +42,7 @@ The theme should remain boring, explicit, and easy to maintain. New features sho
 
 - [Layout](docs/layout.md)
 - [Markup](docs/markup.md)
+- [File guards](docs/file-guards.md)
 - [Heros](docs/heros.md)
 - [Headings](docs/headings.md)
 - [Corner radius](docs/corner-radius.md)
