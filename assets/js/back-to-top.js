@@ -1,15 +1,16 @@
 // back to top
-jQuery( function( $ ) {
-	var $link = $( '.scrollup-link' );
+document.addEventListener( 'DOMContentLoaded', function() {
+	var link = document.querySelector( '.scrollup-link' );
 
-	if ( ! $link.length ) {
+	if ( ! link ) {
 		return;
 	}
 
 	// scroll to top
-	$link.on( 'click', function( event ) {
-		event.preventDefault();
-
-		$( 'html, body' ).stop( true ).animate( { scrollTop: 0 }, 300, 'swing' );
+	link.addEventListener( 'click', function() {
+		window.scrollTo( {
+			top: 0,
+			behavior: 'smooth'
+		} );
 	} );
 } );
