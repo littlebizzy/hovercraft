@@ -29,6 +29,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	width: 100%;
 	cursor: pointer;
 	text-transform: <?php echo $back_to_top_text_transform; ?>;
+	font-family: inherit;
 	font-weight: <?php echo $back_to_top_font_weight; ?>;
 	line-height: 1;
 	padding: 10px 0;
@@ -39,7 +40,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	vertical-align: middle;
 	background: rgba(0, 0, 0, 0.1);
 	background: <?php echo $back_to_top_background_color; ?>;
+	border: 0;
 	border-radius: 4px;
+	appearance: none;
 }
 
 @media screen and (max-width: 1199px) {
