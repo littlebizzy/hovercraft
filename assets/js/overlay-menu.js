@@ -14,11 +14,3 @@ function hovercraftCloseNav() {
 		menu.style.height = '0%';
 	}
 }
-
-document.addEventListener( 'DOMContentLoaded', function() {
-	var closeButton = document.querySelector( '.hovercraft-overlay-close' );
-
-	if ( closeButton ) {
-		closeButton.addEventListener( 'click', hovercraftCloseNav );
-	}
-} );
