@@ -1,11 +1,13 @@
 <?php
 
+// block direct access
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
 // add remote font resource hints
 function hovercraft_resource_hints( $urls, $relation_type ) {
+	// add font preconnect hints
 	if ( 'preconnect' === $relation_type ) {
 		$urls[] = array(
 			'href' => 'https://fonts.googleapis.com',
@@ -18,6 +20,7 @@ function hovercraft_resource_hints( $urls, $relation_type ) {
 		);
 	}
 
+	// add font dns prefetch hints
 	if ( 'dns-prefetch' === $relation_type ) {
 		$urls[] = '//fonts.googleapis.com';
 		$urls[] = '//fonts.gstatic.com';
@@ -29,9 +32,11 @@ add_filter( 'wp_resource_hints', 'hovercraft_resource_hints', 10, 2 );
 
 // enqueue optional header font assets
 function hovercraft_enqueue_header_assets() {
-	$material_icons_setting = get_theme_mod( 'hovercraft_material_icons', 'classic_only' );
+	// get material icons setting
+	$hovercraft_material_icons_setting = get_theme_mod( 'hovercraft_material_icons', 'classic_only' );
 
-	$material_icons_map = array(
+	// get material icons options
+	$hovercraft_material_icons_options = array(
 		'classic_only' => array(
 			'Material+Icons',
 		),
@@ -46,18 +51,21 @@ function hovercraft_enqueue_header_assets() {
 		),
 	);
 
-	if ( 'none' !== $material_icons_setting && isset( $material_icons_map[ $material_icons_setting ] ) ) {
-		foreach ( $material_icons_map[ $material_icons_setting ] as $material_icons_family ) {
-			$material_icons_handle = 'hovercraft_material_icons_' . sanitize_key( $material_icons_family );
-			$material_icons_url = 'https://fonts.googleapis.com/icon?family=' . $material_icons_family . '&display=block';
+	// enqueue material icons
+	if ( 'none' !== $hovercraft_material_icons_setting && isset( $hovercraft_material_icons_options[ $hovercraft_material_icons_setting ] ) ) {
+		foreach ( $hovercraft_material_icons_options[ $hovercraft_material_icons_setting ] as $hovercraft_material_icons_family ) {
+			$hovercraft_material_icons_handle = 'hovercraft_material_icons_' . sanitize_key( $hovercraft_material_icons_family );
+			$hovercraft_material_icons_url = 'https://fonts.googleapis.com/icon?family=' . $hovercraft_material_icons_family . '&display=block';
 
-			wp_enqueue_style( $material_icons_handle, esc_url_raw( $material_icons_url ), array(), HOVERCRAFT_VERSION );
+			wp_enqueue_style( $hovercraft_material_icons_handle, esc_url_raw( $hovercraft_material_icons_url ), array(), HOVERCRAFT_VERSION );
 		}
 	}
 
-	$font_awesome_setting = get_theme_mod( 'hovercraft_font_awesome', 'none' );
+	// get font awesome setting
+	$hovercraft_font_awesome_setting = get_theme_mod( 'hovercraft_font_awesome', 'none' );
 
-	$font_awesome_map = array(
+	// get font awesome options
+	$hovercraft_font_awesome_options = array(
 		'version_6' => array(
 			'url' => 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css',
 			'version' => '6.7.2',
@@ -72,8 +80,9 @@ function hovercraft_enqueue_header_assets() {
 		),
 	);
 
-	if ( 'none' !== $font_awesome_setting && isset( $font_awesome_map[ $font_awesome_setting ] ) ) {
-		wp_enqueue_style( 'hovercraft_font_awesome', esc_url_raw( $font_awesome_map[ $font_awesome_setting ]['url'] ), array(), $font_awesome_map[ $font_awesome_setting ]['version'] );
+	// enqueue font awesome
+	if ( 'none' !== $hovercraft_font_awesome_setting && isset( $hovercraft_font_awesome_options[ $hovercraft_font_awesome_setting ] ) ) {
+		wp_enqueue_style( 'hovercraft_font_awesome', esc_url_raw( $hovercraft_font_awesome_options[ $hovercraft_font_awesome_setting ]['url'] ), array(), $hovercraft_font_awesome_options[ $hovercraft_font_awesome_setting ]['version'] );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'hovercraft_enqueue_header_assets' );
