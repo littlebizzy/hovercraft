@@ -1,11 +1,11 @@
 <?php
 
+// block direct access
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
 // main menu setup
-
 function hovercraft_main_menu() {
 	wp_enqueue_script(
 		'hovercraft_main_menu',
