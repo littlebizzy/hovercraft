@@ -1,10 +1,16 @@
-// open overlay mobile menu
+// overlay menu
 function hovercraftOpenNav() {
-	document.getElementById( 'hovercraft-overlay-menu' ).style.height = '100%';
+	var menu = document.getElementById( 'hovercraft-overlay-menu' );
+
+	if ( menu ) {
+		menu.style.height = '100%';
+	}
 }
 
-// close overlay mobile menu
 function hovercraftCloseNav() {
-	document.getElementById( 'hovercraft-overlay-menu' ).style.height = '0%';
-}
+	var menu = document.getElementById( 'hovercraft-overlay-menu' );
 
+	if ( menu ) {
+		menu.style.height = '0%';
+	}
+}
