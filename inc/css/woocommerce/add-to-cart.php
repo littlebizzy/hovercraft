@@ -91,6 +91,10 @@ $woocommerce_add_to_cart_select_arrow_color = rawurlencode( $default_text_color 
 	background: transparent !important;
 }
 
+.woocommerce div.product form.cart table.variations tr + tr, .single-product .summary .variations_form table.variations tr + tr {
+	margin-top: 12px !important;
+}
+
 .woocommerce div.product form.cart table.variations th.label, .woocommerce div.product form.cart table.variations td.value, .single-product .summary .variations_form table.variations th.label, .single-product .summary .variations_form table.variations td.value {
 	display: block !important;
 	clear: both !important;
