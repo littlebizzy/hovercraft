@@ -1,5 +1,6 @@
 <?php
 
+// block direct access
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
@@ -10,7 +11,7 @@ $wp_customize->add_section( 'hovercraft_fonts', array(
 	'priority' => 43,
 ) );
 
-// font controls
+// load font controls
 require get_template_directory() . '/inc/customizer/fonts/font-families.php';
 require get_template_directory() . '/inc/customizer/fonts/font-base.php';
 require get_template_directory() . '/inc/customizer/fonts/font-menus.php';
