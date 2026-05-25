@@ -1,10 +1,11 @@
 <?php
 
+// block direct access
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// color controls
+// load color controls
 require get_template_directory() . '/inc/customizer/colors/color-base.php';
 require get_template_directory() . '/inc/customizer/colors/color-header-hero.php';
 require get_template_directory() . '/inc/customizer/colors/color-content-widgets.php';
