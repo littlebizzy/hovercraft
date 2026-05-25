@@ -33,6 +33,13 @@ $woocommerce_add_to_cart_select_arrow_color = rawurlencode( $default_text_color 
 	color: #ffffff !important;
 }
 
+.single_add_to_cart_button.disabled, .single_add_to_cart_button:disabled, .single_add_to_cart_button[disabled], .woocommerce button.single_add_to_cart_button.disabled, .woocommerce button.single_add_to_cart_button:disabled, .woocommerce button.single_add_to_cart_button[disabled], .woocommerce input.single_add_to_cart_button.disabled, .woocommerce input.single_add_to_cart_button:disabled, .woocommerce input.single_add_to_cart_button[disabled] {
+	background: #bdbdbd !important;
+	color: #ffffff !important;
+	cursor: not-allowed !important;
+	opacity: 0.75 !important;
+}
+
 .add_to_cart_button, .woocommerce .button.add_to_cart_button, .woocommerce a.add_to_cart_button {
 	background: #e0e0e0 !important;
 	color: <?php echo $default_text_color; ?> !important;
