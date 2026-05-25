@@ -1,22 +1,27 @@
 <?php
 
+// block direct access
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
 // check sidebar display status
 function hovercraft_should_show_sidebar() {
-	$sidebar_status = get_theme_mod( 'hovercraft_sidebar_status', null );
+	// get sidebar display setting
+	$hovercraft_sidebar_status = get_theme_mod( 'hovercraft_sidebar_status', null );
 
-	if ( $sidebar_status === null || $sidebar_status === '' ) {
-		$sidebar_status = get_theme_mod( 'hovercraft_sidebar_appears', 'everywhere' );
+	// get legacy sidebar display setting
+	if ( null === $hovercraft_sidebar_status || '' === $hovercraft_sidebar_status ) {
+		$hovercraft_sidebar_status = get_theme_mod( 'hovercraft_sidebar_appears', 'everywhere' );
 	}
 
-	if ( $sidebar_status === 'none' || $sidebar_status === '0' || $sidebar_status === 0 || $sidebar_status === false ) {
+	// skip disabled sidebar
+	if ( 'none' === $hovercraft_sidebar_status || '0' === $hovercraft_sidebar_status || 0 === $hovercraft_sidebar_status || false === $hovercraft_sidebar_status ) {
 		return false;
 	}
 
-	if ( $sidebar_status === 'posts_only' && ! is_singular( 'post' ) ) {
+	// skip posts-only sidebar outside posts
+	if ( 'posts_only' === $hovercraft_sidebar_status && ! is_singular( 'post' ) ) {
 		return false;
 	}
 
