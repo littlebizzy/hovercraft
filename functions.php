@@ -106,9 +106,6 @@ require get_template_directory() . '/inc/css/css-generator.php';
 // fonts
 require get_template_directory() . '/inc/fonts/google-fonts.php';
 
-// ui
-require get_template_directory() . '/inc/ui/full-screen-search.php';
-
 // metadata
 require get_template_directory() . '/inc/metadata/metadata-open-graph.php';
 
@@ -132,6 +129,9 @@ require get_template_directory() . '/inc/bbpress/bbpress-search-results.php';
 
 // shortcodes
 require get_template_directory() . '/inc/misc/shortcodes.php';
+
+// search
+require get_template_directory() . '/inc/misc/full-screen-search.php';
 
 // license
 require_once get_template_directory() . '/inc/misc/license.php';
