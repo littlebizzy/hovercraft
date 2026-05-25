@@ -74,7 +74,6 @@ require get_template_directory() . '/inc/navigation/pagination.php';
 require get_template_directory() . '/inc/taxonomy/category-bullets.php';
 require get_template_directory() . '/inc/taxonomy/category-portal.php';
 require get_template_directory() . '/inc/taxonomy/category-hide-certain.php';
-require get_template_directory() . '/inc/taxonomy/tags-list.php';
 
 // comments
 require get_template_directory() . '/inc/comments/comment-fields.php';
@@ -132,6 +131,9 @@ require get_template_directory() . '/inc/misc/shortcodes.php';
 
 // search
 require get_template_directory() . '/inc/misc/full-screen-search.php';
+
+// tags
+require get_template_directory() . '/inc/misc/tags-list.php';
 
 // license
 require_once get_template_directory() . '/inc/misc/license.php';
