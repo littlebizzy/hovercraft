@@ -1,13 +1,15 @@
 // back to top
 jQuery( function( $ ) {
+	var $link = $( '.scrollup-link' );
 
-	// click to scroll to top
-	$( '.scrollup-link' ).on( 'click', function( e ) {
-		// prevent default link behavior
-		e.preventDefault();
+	if ( ! $link.length ) {
+		return;
+	}
 
-		// stop current animations and scroll to top
+	// scroll to top
+	$link.on( 'click', function( event ) {
+		event.preventDefault();
+
 		$( 'html, body' ).stop( true ).animate( { scrollTop: 0 }, 300, 'swing' );
 	} );
 } );
-
