@@ -1,5 +1,6 @@
 <?php
 
+// block direct access
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
@@ -451,7 +452,7 @@ function hovercraft_breadcrumb_current_title() {
 	return wp_get_document_title();
 }
 
-// render custom post type fallback breadcrumb
+// get custom post type fallback breadcrumb
 function hovercraft_breadcrumb_cpt_fallback( $post_type ) {
 	$fallback = array(
 		'book' => array( 'url' => '/library/', 'label' => 'Library' ),
