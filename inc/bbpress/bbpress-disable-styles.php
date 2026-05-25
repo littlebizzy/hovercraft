@@ -1,6 +1,6 @@
 <?php
 
-// exit if accessed directly
+// block direct access
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
