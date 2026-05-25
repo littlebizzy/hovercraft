@@ -1,15 +1,20 @@
 // full screen search
 jQuery( function( $ ) {
+	var $body = $( 'body' );
 	var $modal = $( '#full-screen-search' );
 	var $toggle = $( '.search-modal-toggle' );
 	var $lastFocused = $();
+
+	if ( ! $modal.length || ! $toggle.length ) {
+		return;
+	}
 
 	// open search overlay
 	function openSearchOverlay() {
 		$lastFocused = $( document.activeElement );
 		$modal.addClass( 'open' ).attr( 'aria-hidden', 'false' );
 		$toggle.attr( 'aria-expanded', 'true' );
-		$( 'body' ).addClass( 'search-modal-open' );
+		$body.addClass( 'search-modal-open' );
 
 		window.setTimeout( function() {
 			$modal.find( '.search-input' ).trigger( 'focus' );
@@ -24,37 +29,36 @@ jQuery( function( $ ) {
 
 		$modal.removeClass( 'open' ).attr( 'aria-hidden', 'true' );
 		$toggle.attr( 'aria-expanded', 'false' );
-		$( 'body' ).removeClass( 'search-modal-open' );
+		$body.removeClass( 'search-modal-open' );
 
 		if ( $lastFocused.length ) {
 			$lastFocused.trigger( 'focus' );
 		}
 	}
 
-	// open search overlay via click
+	// open search overlay
 	$toggle.on( 'click', function( event ) {
 		event.preventDefault();
 		openSearchOverlay();
 	} );
 
-	// close search overlay via button
+	// close search overlay button
 	$modal.find( '.search-modal-close' ).on( 'click', function( event ) {
 		event.preventDefault();
 		closeSearchOverlay();
 	} );
 
-	// close search overlay via backdrop
+	// close search overlay backdrop
 	$modal.on( 'click', function( event ) {
 		if ( event.target === this ) {
 			closeSearchOverlay();
 		}
 	} );
 
-	// close search overlay via esc key
+	// close search overlay keyboard
 	$( document ).on( 'keydown', function( event ) {
-		if ( event.key === 'Escape' ) {
+		if ( 'Escape' === event.key ) {
 			closeSearchOverlay();
 		}
 	} );
-
 } );
