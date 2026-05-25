@@ -4,17 +4,46 @@ jQuery( function( $ ) {
 	var $modal = $( '#full-screen-search' );
 	var $toggle = $( '.search-modal-toggle' );
 	var $lastFocused = $();
+	var originalBodyPaddingRight = '';
 
 	if ( ! $modal.length || ! $toggle.length ) {
 		return;
 	}
 
+	// lock page scroll
+	function lockPageScroll() {
+		var body = $body.get( 0 );
+		var scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+		var currentPaddingRight = parseFloat( $body.css( 'padding-right' ) ) || 0;
+
+		originalBodyPaddingRight = body.style.paddingRight;
+
+		if ( 0 < scrollbarWidth ) {
+			body.style.paddingRight = currentPaddingRight + scrollbarWidth + 'px';
+		}
+
+		$body.addClass( 'search-modal-open' );
+	}
+
+	// unlock page scroll
+	function unlockPageScroll() {
+		var body = $body.get( 0 );
+
+		$body.removeClass( 'search-modal-open' );
+		body.style.paddingRight = originalBodyPaddingRight;
+		originalBodyPaddingRight = '';
+	}
+
 	// open search overlay
 	function openSearchOverlay() {
+		if ( $modal.hasClass( 'open' ) ) {
+			return;
+		}
+
 		$lastFocused = $( document.activeElement );
+		lockPageScroll();
 		$modal.addClass( 'open' ).attr( 'aria-hidden', 'false' );
 		$toggle.attr( 'aria-expanded', 'true' );
-		$body.addClass( 'search-modal-open' );
 
 		window.setTimeout( function() {
 			$modal.find( '.search-input' ).trigger( 'focus' );
@@ -29,7 +58,7 @@ jQuery( function( $ ) {
 
 		$modal.removeClass( 'open' ).attr( 'aria-hidden', 'true' );
 		$toggle.attr( 'aria-expanded', 'false' );
-		$body.removeClass( 'search-modal-open' );
+		unlockPageScroll();
 
 		if ( $lastFocused.length ) {
 			$lastFocused.trigger( 'focus' );
