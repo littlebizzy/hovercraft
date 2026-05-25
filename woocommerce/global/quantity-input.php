@@ -48,8 +48,11 @@ $quantities[] = $input_value;
 $quantities = array_unique( array_filter( array_map( 'absint', $quantities ) ) );
 sort( $quantities, SORT_NUMERIC );
 ?>
-<select id="<?php echo esc_attr( $input_id ); ?>" class="<?php echo esc_attr( implode( ' ', $classes ) ); ?>" name="<?php echo esc_attr( $input_name ); ?>" title="<?php echo esc_attr__( 'Qty', 'hovercraft' ); ?>">
-	<?php foreach ( $quantities as $quantity ) : ?>
-		<option value="<?php echo esc_attr( $quantity ); ?>" <?php selected( $quantity, $input_value ); ?>><?php echo esc_html( $quantity ); ?></option>
-	<?php endforeach; ?>
-</select>
+<div class="quantity">
+	<label class="screen-reader-text" for="<?php echo esc_attr( $input_id ); ?>"><?php esc_html_e( 'Quantity', 'hovercraft' ); ?></label>
+	<select id="<?php echo esc_attr( $input_id ); ?>" class="<?php echo esc_attr( implode( ' ', $classes ) ); ?>" name="<?php echo esc_attr( $input_name ); ?>" title="<?php echo esc_attr__( 'Qty', 'hovercraft' ); ?>">
+		<?php foreach ( $quantities as $quantity ) : ?>
+			<option value="<?php echo esc_attr( $quantity ); ?>" <?php selected( $quantity, $input_value ); ?>><?php echo esc_html( $quantity ); ?></option>
+		<?php endforeach; ?>
+	</select>
+</div><!-- quantity -->
