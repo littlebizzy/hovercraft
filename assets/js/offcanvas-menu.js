@@ -14,14 +14,22 @@ jQuery( function( $ ) {
 	function openOffcanvasMenu() {
 		$lastFocused = $( document.activeElement );
 		$menu.addClass( 'active' );
+		$menu.removeAttr( 'inert' );
+		$menu.attr( 'aria-hidden', 'false' );
 		$body.addClass( 'frozen' );
 		$overlay.addClass( 'active' );
 		$trigger.attr( 'aria-expanded', 'true' );
+
+		window.setTimeout( function() {
+			$menu.trigger( 'focus' );
+		}, 50 );
 	}
 
 	// close offcanvas menu
 	function closeOffcanvasMenu() {
 		$menu.removeClass( 'active' );
+		$menu.attr( 'inert', '' );
+		$menu.attr( 'aria-hidden', 'true' );
 		$body.removeClass( 'frozen' );
 		$overlay.removeClass( 'active' );
 		$trigger.attr( 'aria-expanded', 'false' );
