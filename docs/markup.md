@@ -18,6 +18,14 @@ Do not use fake anchors or fragment-only links for behavior that should not chan
 
 Do not replace clear existing layout wrappers with semantic elements just for novelty.
 
+## Accessibility Markup
+
+Output the skip-to-content link immediately after `wp_body_open()` so keyboard users can bypass repeated header and navigation content.
+
+The skip link should target the stable `#main` region used by HoverCraft templates.
+
+Skip-link styling belongs with focus styles, not layout templates.
+
 ## Template Readability
 
 Template files should be easy to scan before they are clever.
