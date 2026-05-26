@@ -52,7 +52,7 @@ The theme should remain boring, explicit, and easy to maintain. New features sho
 - [Forms](docs/forms.md)
 - [Breadcrumbs](docs/breadcrumbs.md)
 - [Comments](docs/comments.md)
-- [Widget areas](docs/widget-areas.md)
+- [Widgets](docs/widget-areas.md)
 - [Meta boxes](docs/meta-boxes.md)
 - [WooCommerce](docs/woocommerce.md)
 - [Structured data](docs/structured-data.md)
