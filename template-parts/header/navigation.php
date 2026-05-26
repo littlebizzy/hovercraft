@@ -26,9 +26,9 @@ $hovercraft_mobile_menu = get_theme_mod( 'hovercraft_mobile_menu', 'accordion' )
 				<?php hovercraft_header_cart_icon(); ?>
 
 				<?php if ( 'overlay' === $hovercraft_mobile_menu ) : ?>
-					<button type="button" class="nav-icon mobile-menu-trig" aria-label="<?php echo esc_attr__( 'Open menu', 'hovercraft' ); ?>" aria-expanded="false" onclick="hovercraftOpenNav()">
+					<button type="button" class="nav-icon mobile-menu-trig" aria-label="<?php echo esc_attr__( 'Open menu', 'hovercraft' ); ?>" aria-controls="hovercraft-overlay-menu" aria-expanded="false" onclick="hovercraftOpenNav()">
 				<?php else : ?>
-					<button type="button" class="nav-icon mobile-menu-trig hovercraft-offcanvas-trigger" aria-label="<?php echo esc_attr__( 'Open menu', 'hovercraft' ); ?>" aria-expanded="false">
+					<button type="button" class="nav-icon mobile-menu-trig hovercraft-offcanvas-trigger" aria-label="<?php echo esc_attr__( 'Open menu', 'hovercraft' ); ?>" aria-controls="hovercraft-offcanvas-menu" aria-expanded="false">
 				<?php endif; // end hovercraft-mobile-menu ?>
 					<?php hovercraft_header_menu_icon(); ?>
 				</button>
