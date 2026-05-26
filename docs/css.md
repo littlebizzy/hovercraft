@@ -2,6 +2,8 @@
 
 HoverCraft CSS should stay modular, predictable, and easy to audit.
 
+For broader keyboard, ARIA, focus, overlay, modal, and menu behavior policy, see `docs/accessibility.md`.
+
 CSS files should be grouped by real theme area when that improves maintainability. Footer CSS belongs in a footer-focused location. WooCommerce CSS belongs in WooCommerce-focused files. Generic form controls, headings, breadcrumbs, and layout rules should stay in shared files when they are truly global.
 
 Avoid mixing unrelated policy areas in one CSS file just because selectors are nearby. Layout rules, widget area rendering, Customizer output, forms, and plugin compatibility can interact, but the files should still make the purpose of each rule obvious.
@@ -17,6 +19,8 @@ Keep selector grouping readable. Selectors that share the same rules may stay on
 Generated CSS should avoid janky ordering, missing files, duplicate includes, and mismatched module paths. When CSS files are moved into subfolders, the generator should be updated in the same patch so the generated output remains complete and deterministic.
 
 ## Focus And Accessibility Styles
+
+Keep focus and accessibility CSS aligned with `docs/accessibility.md`.
 
 Keyboard focus styles should be visible, predictable, and centralized in the focus CSS partial when practical.
 
