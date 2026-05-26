@@ -20,7 +20,7 @@ Do not duplicate Customizer-controlled colors, fonts, spacing, widths, radii, la
 
 Do not maintain parallel design settings in Gutenberg/block-editor configuration files unless a specific compatibility issue makes that unavoidable.
 
-If modern CSS tokens are useful, generate them from the existing Customizer/PHP CSS system instead of introducing a separate block-editor settings layer.
+Do not create a CSS token layer as a second presentation settings map. Customizer/PHP-generated CSS should remain direct unless CSS custom properties become necessary for WordPress compatibility, browser expectations, or a concrete maintenance problem.
 
 ## Visibility
 
