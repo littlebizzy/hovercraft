@@ -38,7 +38,8 @@ pre,
 	white-space: pre;
 }
 
-pre:has(> code) {
+pre:has(> code),
+.pre:has(> code) {
 	padding: 0;
 	overflow: hidden;
 }
@@ -51,7 +52,8 @@ pre code,
 	box-shadow: none;
 }
 
-pre > code {
+pre > code,
+.pre > code {
 	display: block;
 	padding: 16px 20px;
 	overflow-x: auto;
