@@ -24,6 +24,10 @@ Inline `code` should use a `4px` radius so short technical values are visually d
 
 Block-level `pre` and `.pre` code containers should use an `8px` radius and allow horizontal scrolling for long lines.
 
+Code snippets should remain easy to copy by allowing normal text selection. Use `user-select: text` for code elements, but do not use `user-select: all` globally because users may need to select only part of a snippet.
+
+Do not inject global copy buttons into code blocks by default. Copy buttons add JavaScript, translated labels, focus behavior, and edge cases that belong in a specific documentation feature, not basic theme styling.
+
 Do not remove code block radius just because native horizontal scrollbars may make the bottom edge look less rounded in some browsers. That is normal browser scrollbar rendering, not a theme bug.
 
 Avoid custom scrollbar styling or wrapper-heavy markup unless a specific template needs a more polished code block layout. Generic theme CSS should stay simple and compatible with normal WordPress content output.
