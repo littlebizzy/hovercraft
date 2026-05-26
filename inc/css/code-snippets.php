@@ -38,12 +38,25 @@ pre,
 	white-space: pre;
 }
 
+pre:has(> code) {
+	padding: 0;
+	overflow: hidden;
+}
+
 pre code,
 .pre code {
 	padding: 0;
 	background: transparent;
 	border-radius: 0;
 	box-shadow: none;
+}
+
+pre > code {
+	display: block;
+	padding: 16px 20px;
+	overflow-x: auto;
+	overflow-y: hidden;
+	white-space: pre;
 }
 
 @media screen and (max-width: 1199px) {
