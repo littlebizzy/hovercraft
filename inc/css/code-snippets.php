@@ -33,6 +33,7 @@ pre,
 	border-radius: 8px;
 	box-shadow: inset 0 0 0 1px <?php echo $default_text_color; ?>;
 	overflow-x: auto;
+	overflow-y: hidden;
 	white-space: pre;
 }
 
