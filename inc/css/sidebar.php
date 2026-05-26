@@ -26,6 +26,42 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 }
 
+/* desktop sidebar flex layout */
+
+@supports selector(:has(*)) {
+	@media screen and (min-width: 1200px) {
+		#main > .inner:has(> #sidebar) {
+			display: flex;
+			align-items: flex-start;
+			flex-wrap: wrap;
+			gap: 0 40px;
+		}
+
+		#main > .inner:has(> #sidebar) > #primary,
+		#main > .inner:has(> #sidebar) > #sidebar {
+			float: none;
+		}
+
+		#main > .inner:has(> #sidebar) > #primary {
+			flex: 0 0 768px;
+		}
+
+		#main > .inner:has(> #sidebar) > #sidebar {
+			box-sizing: border-box;
+			flex: 0 0 392px;
+			margin-left: 0;
+		}
+
+		#main > .inner:has(> #sidebar) > .navigation {
+			flex: 0 0 100%;
+		}
+
+		#main > .inner:has(> #sidebar) > .clear {
+			display: none;
+		}
+	}
+}
+
 #sidebar .widget-wrapper {
 	width: 100%;
 	padding: 40px 40px;
