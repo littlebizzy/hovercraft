@@ -31,7 +31,7 @@
 		<?php get_template_part( 'template-parts/comments/comments' ); ?>
 
 		<div class="clear"></div>
-	</div><!-- primary -->
+	</div><!-- primary-wide -->
 
 	<div class="clear"></div>
 
