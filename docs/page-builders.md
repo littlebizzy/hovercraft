@@ -16,6 +16,8 @@ Hero type, header type, sidebar intent, and major page layout should not be hidd
 
 Hardcoded template-part calls are appropriate when they make the template's purpose obvious. For example, a Mini Hero template should visibly load the Mini Hero header template part instead of delegating that choice to a broad helper.
 
+A small global header navigation layout setting is acceptable when it switches between explicit template parts instead of introducing a generic header builder. Header layout choices should remain few, documented, and tied to real client-site needs.
+
 Shared helpers or template parts are acceptable for boring repeated wrapper markup, repeated content loops, or complex reusable logic, but they should not obscure the template's hero/header identity.
 
 Prefer clear, explicit page templates over clever abstractions when the template structure is central to HoverCraft's design approach.

@@ -34,6 +34,30 @@ $wp_customize->add_control( new WP_Customize_Control(
 	)
 ) );
 
+// header layout setting
+$wp_customize->add_setting( 'hovercraft_header_layout', array(
+	'default' => 'inline',
+	'sanitize_callback' => 'hovercraft_sanitize_select',
+) );
+
+// header layout control
+$wp_customize->add_control( new WP_Customize_Control(
+	$wp_customize,
+	'hovercraft_header_layout',
+	array(
+		'label' => __( 'Header Layout', 'hovercraft' ),
+		'description' => __( 'Inline keeps branding and navigation on one desktop row. Stacked places branding above desktop navigation. Mobile behavior stays unchanged.', 'hovercraft' ),
+		'section' => 'hovercraft_general',
+		'settings' => 'hovercraft_header_layout',
+		'type' => 'select',
+		'choices' => array(
+		'inline' => 'Inline Header',
+		'stacked' => 'Stacked Header',
+		),
+	)
+) );
+
+
 // mobile menu setting
 $wp_customize->add_setting( 'hovercraft_mobile_menu', array(
 	'default' => 'accordion',

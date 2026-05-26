@@ -58,6 +58,8 @@ Hero type, header type, sidebar intent, and major layout should remain explicit 
 
 Do not hide hero or header selection behind broad helpers, database-selected layouts, or generic renderer arrays when a direct `get_template_part()` call is clearer.
 
+Small global header layout dispatchers are acceptable when each real layout keeps its own explicit template part. For example, `template-parts/header/navigation.php` may dispatch to `navigation-inline.php` or `navigation-stacked.php` while page templates still keep their hero and header type visible.
+
 Shared template parts are appropriate for repeated wrapper markup, repeated content regions, and boring structural output, but they should not make page templates harder to understand at a glance.
 
 A page template may be slightly repetitive when that repetition preserves clarity about the page's hero, header, and layout purpose.

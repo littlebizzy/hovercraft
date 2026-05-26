@@ -22,6 +22,14 @@ Do not maintain parallel design settings in Gutenberg/block-editor configuration
 
 Do not create a CSS token layer as a second presentation settings map. Customizer/PHP-generated CSS should remain direct unless CSS custom properties become necessary for WordPress compatibility, browser expectations, or a concrete maintenance problem.
 
+## Layout Options
+
+Customizer layout options are appropriate when they control a real site-wide presentation pattern. Header layout options may switch between approved global header structures when the markup stays explicit and the default preserves existing sites.
+
+The `hovercraft_header_layout` setting uses `inline` as the default and `stacked` as the alternate layout. `inline` keeps branding and desktop navigation on one row. `stacked` separates branding and desktop navigation into two rows while keeping mobile behavior conservative.
+
+Do not add speculative header layout choices. New layout choices should support real client patterns and should not turn the header into a page-builder system.
+
 ## Visibility
 
 Customizer visibility toggles are appropriate for theme regions such as the topbar, preheader, footer areas, or other reusable layout zones.

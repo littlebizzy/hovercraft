@@ -44,6 +44,16 @@ Do not create empty breakpoint blocks or duplicate identical declarations just t
 
 Prefer explicit mobile and desktop blocks when values differ, and shared base declarations when values are truly identical.
 
+## Header Layouts
+
+HoverCraft supports a small set of global header layout patterns through the Customizer. Header layouts should solve real navigation and branding needs without becoming a page-builder-style header system.
+
+The `hovercraft_header_layout` setting currently supports `inline` and `stacked`. The default `inline` layout keeps branding and desktop navigation on one row for existing sites. The `stacked` layout keeps branding on the top row and places desktop navigation on a separate full navigation row below it for larger menus and more functional store headers.
+
+Header layout template parts should stay explicit and easy to audit. The shared dispatcher is `template-parts/header/navigation.php`, while the actual layout markup lives in `template-parts/header/navigation-inline.php` and `template-parts/header/navigation-stacked.php`.
+
+Mobile behavior should stay conservative when adding desktop header layout options. A desktop layout option should not unexpectedly redesign mobile headers unless that mobile behavior is intentionally planned and documented.
+
 ## Header Strips
 
 Header strips such as topbar and preheader should use consistent structure and behavior.

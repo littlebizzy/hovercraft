@@ -31,3 +31,32 @@ if ( ! defined( 'ABSPATH' ) ) {
 	min-width: 0;
 	text-align: right;
 }
+
+.header-layout-stacked-bottom {
+	justify-content: flex-start;
+}
+
+.header-layout-stacked-bottom .menu-desktop {
+	width: 100%;
+	text-align: left;
+}
+
+.header-layout-stacked-bottom .menu-desktop > .main-menu ul {
+	text-align: left;
+}
+
+.header-layout-stacked-bottom .menu-desktop > .main-menu > ul > li:first-child > a {
+	padding-left: 0;
+}
+
+@media screen and (max-width: 1199px) {
+	.header-layout-stacked-bottom {
+		display: none !important;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.header-layout-stacked-bottom {
+		margin-top: 20px;
+	}
+}
