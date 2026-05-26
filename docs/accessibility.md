@@ -66,7 +66,7 @@ Overlay and offcanvas mobile menus should use the same practical accessibility b
 
 The overlay menu should expose dialog semantics, keep `aria-hidden` synchronized with visible state, update opener `aria-expanded`, freeze body scrolling while open, close on Escape, focus the close button on open, and return focus to the opener when closed.
 
-The offcanvas menu should update opener `aria-expanded`, freeze body scrolling while open, close from its backdrop, close on Escape, and return focus to the opener when closed.
+The offcanvas menu should expose dialog semantics, keep `aria-hidden` synchronized with visible state, update opener `aria-expanded`, freeze body scrolling while open, close from its backdrop, close on Escape, move focus into the panel on open, and return focus to the opener when closed.
 
 ## CSS Behavior
 
