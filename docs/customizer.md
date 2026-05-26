@@ -12,6 +12,16 @@ Keep Customizer controls understandable. Prefer simple booleans, text fields, co
 
 Do not add Customizer settings speculatively. Add them when they control a real global theme behavior or a repeated layout pattern that is likely to matter across client sites.
 
+## Source Of Truth
+
+The Customizer is HoverCraft's source of truth for designer-selected presentation settings.
+
+Do not duplicate Customizer-controlled colors, fonts, spacing, widths, radii, layout choices, or presentation defaults in `theme.json`.
+
+Do not maintain parallel design settings in Gutenberg/block-editor configuration files unless a specific compatibility issue makes that unavoidable.
+
+If modern CSS tokens are useful, generate them from the existing Customizer/PHP CSS system instead of introducing a separate block-editor settings layer.
+
 ## Visibility
 
 Customizer visibility toggles are appropriate for theme regions such as the topbar, preheader, footer areas, or other reusable layout zones.
