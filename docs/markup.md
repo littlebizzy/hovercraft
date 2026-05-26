@@ -26,6 +26,22 @@ The skip link should target the stable `#main` region used by HoverCraft templat
 
 Skip-link styling belongs with focus styles, not layout templates.
 
+Interactive icons that are decorative should use `aria-hidden="true"`. The accessible name should live on the surrounding button or link with `aria-label` or visible text.
+
+Buttons that open or close menus, dialogs, overlays, search panels, or offcanvas panels should be real `<button type="button">` elements.
+
+Controls that open hidden regions should expose the relationship with `aria-controls` when the controlled region has a stable ID.
+
+Controls that toggle hidden regions should update `aria-expanded` when JavaScript opens or closes the region.
+
+Overlay and modal-style regions should expose their dialog state with stable ARIA attributes such as `role="dialog"`, `aria-modal="true"`, and `aria-hidden` when appropriate.
+
+JavaScript should keep ARIA state synchronized with the visible state. Do not add ARIA attributes that JavaScript never updates.
+
+When a full-screen or offcanvas panel opens, focus should move into the panel when practical. When it closes, focus should return to the control that opened it.
+
+Escape-key close behavior is preferred for overlays, modals, offcanvas panels, and full-screen menus when it can be implemented without adding fragile JavaScript.
+
 ## Template Readability
 
 Template files should be easy to scan before they are clever.
@@ -109,6 +125,10 @@ JavaScript-triggered controls should keep the URL clean unless navigation is the
 Back-to-top controls should use a real button with native smooth scroll instead of a `#top` anchor, empty hash link, or jQuery animation.
 
 Avoid adding anchor targets solely for JavaScript behavior.
+
+Menu, search, overlay, modal, and offcanvas JavaScript should keep visible state, body scroll state, ARIA state, and focus behavior in sync.
+
+Avoid adding focus traps unless they are tested and necessary. Basic focus movement, Escape close, and focus return are preferred first because they are simpler to maintain.
 
 ## Plugin Markup
 
