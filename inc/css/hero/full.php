@@ -105,6 +105,7 @@ video.hero-background-video {
 	top: 0;
 	left: 0;
 	z-index: 0;
+	pointer-events: none;
 }
 
 .hero-background-video-overlay {
@@ -115,6 +116,7 @@ video.hero-background-video {
 	top: 0;
 	left: 0;
 	z-index: 0;
+	pointer-events: none;
 	background: <?php echo hovercraft_get_hero_background(
 		$hero_gradient_tones,
 		$hero_gradient_angle,
@@ -165,7 +167,7 @@ video.hero-background-video {
 	width: 100%;
 	background: <?php list( $r1, $g1, $b1 ) = sscanf( $full_hero_header_background_color, "#%02x%02x%02x" ); echo "rgba({$r1}, {$g1}, {$b1}, {$full_hero_header_background_transparency})"; ?>;
 	position: relative;
-	z-index: 1;
+	z-index: 3;
 	flex: 0 0 auto;
 	color: #ffffff;
 }
