@@ -37,6 +37,10 @@ function hovercraftCloseNav() {
 		return;
 	}
 
+	if ( hovercraftOverlayLastFocused && 'function' === typeof hovercraftOverlayLastFocused.focus ) {
+		hovercraftOverlayLastFocused.focus();
+	}
+
 	menu.classList.remove( 'active' );
 	menu.setAttribute( 'inert', '' );
 	menu.setAttribute( 'aria-hidden', 'true' );
@@ -44,10 +48,6 @@ function hovercraftCloseNav() {
 
 	if ( trigger ) {
 		trigger.setAttribute( 'aria-expanded', 'false' );
-	}
-
-	if ( hovercraftOverlayLastFocused && 'function' === typeof hovercraftOverlayLastFocused.focus ) {
-		hovercraftOverlayLastFocused.focus();
 	}
 }
 
