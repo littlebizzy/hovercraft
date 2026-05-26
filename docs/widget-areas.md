@@ -1,28 +1,48 @@
-# Widget Area Policy
+# Widgets Policy
 
-HoverCraft widget areas should stay tied to real theme locations and predictable reusable content zones.
+HoverCraft uses widget areas as practical reusable content zones, not as a page-builder system.
+
+Widget areas should stay tied to real theme locations, predictable reusable sections, or repeated client-site patterns. They should make simple sites easier to build and maintain without turning the theme into a generic drag-and-drop layout builder.
+
+Modern CSS makes widget areas more useful than they were when WordPress originally introduced widgets. Flexbox, grid, responsive media queries, and predictable wrapper classes let HoverCraft turn simple widget output into columns, tiles, footer sections, header utilities, and WooCommerce support areas without requiring a page builder plugin.
+
+This is part of HoverCraft's classic-theme philosophy: use normal WordPress features, explicit PHP templates, generated CSS, and focused widget areas before adding heavier layout systems.
 
 ## Purpose
 
 Widget areas are for reusable content zones and simple layout regions. They should remain predictable and tied to real theme locations.
 
-Do not add widget areas speculatively. Add them only when they support a known theme location, template, layout, or reusable client pattern.
+Do not add widget areas speculatively. Add them only when they support a known theme location, template, layout, WooCommerce location, or reusable client pattern.
 
-Widget areas should not become page-builder slots or a content modeling system.
+Widget areas should not become page-builder slots, a content modeling system, or a replacement for custom post types.
 
 Repeated visual sections should prefer one reusable widget area that renders each widget as an item, instead of many numbered widget areas.
 
-## Template Usage
+## Registration Pattern
 
-Widget-area template code should be easy to scan.
+Normal widget areas should use `hovercraft_register_widget_area()` from `inc/widgets/widget-areas.php`.
 
-Cache repeated `is_active_sidebar()` checks into clear variables when a template needs multiple layout branches.
+Use this naming pattern:
 
-When only one of a left/right widget pair is active, render it in a centered branch instead of duplicating left/right layout markup unnecessarily.
+| Field | Pattern | Example |
+|---|---|---|
+| Name | Human-readable location name | `After Add To Cart` |
+| ID | `hovercraft_` prefix with underscores | `hovercraft_after_add_to_cart` |
+| Class | `widget-` prefix with dashes | `widget-after-add-to-cart` |
 
-When a widget area should render without widget titles, use a shared helper instead of repeating `add_filter( 'widget_title', '__return_false' )`, `dynamic_sidebar()`, and `remove_filter()` in templates.
+The sidebar ID should use the `hovercraft_` namespace. The widget wrapper class should stay short and readable, following the existing `widget-*` pattern.
 
-Widget area output should avoid unnecessary wrapper markup when the area is disabled or empty. If a widget area has no active widgets, it should not render visible layout spacing just because the location exists.
+Use separate widget files under `inc/widgets/` when a widget area has special registration, rendering, fallback, migration, or hook behavior. Keep widget-area files in the widgets tree even when they render into WooCommerce or another theme area.
+
+## Rendering Pattern
+
+Widget-area output should avoid unnecessary wrapper markup when the area is disabled or empty. If a widget area has no active widgets, it should not render visible layout spacing just because the location exists.
+
+When a widget area should render without widget titles, use `hovercraft_dynamic_sidebar_without_title()` instead of repeating `add_filter( 'widget_title', '__return_false' )`, `dynamic_sidebar()`, and `remove_filter()` in templates.
+
+When a widget area renders into a plugin hook, keep the registration and render helper in `inc/widgets/` unless the behavior truly belongs to a plugin-specific system.
+
+For WooCommerce add-to-cart output, render widget areas after the cart form rather than inside the form. This avoids invalid form markup and keeps arbitrary widget HTML, shortcodes, scripts, trust badges, payment messages, or sale notices safer.
 
 ## Visibility
 
@@ -41,3 +61,63 @@ Compact header widget regions may normalize basic `ul` and `li` output because m
 For compact header strips, removing default list margin, bullets, and first-item spacing is acceptable when the region is intended for inline utility content.
 
 Do not apply compact list cleanup broadly to normal article content, sidebar widgets, footer widgets, or long-form widget areas where vertical lists may be expected.
+
+## Supported Widget Areas
+
+### Global And Layout Areas
+
+| Name | ID | Class |
+|---|---|---|
+| Topbar Left | `hovercraft_topbar_left` | `widget-topbar-left` |
+| Topbar Right | `hovercraft_topbar_right` | `widget-topbar-right` |
+| Preheader Left | `hovercraft_preheader_left` | `widget-preheader-left` |
+| Preheader Right | `hovercraft_preheader_right` | `widget-preheader-right` |
+| Hero Snippet | `hovercraft_hero_snippet` | `widget-hero-snippet` |
+| Hero Window | `hovercraft_hero_window` | `widget-hero-window` |
+| Posthero (Adjust in Customizer) | `hovercraft_posthero` | `widget-posthero` |
+| Home Premain Top | `hovercraft_home_premain_top` | `widget-home-premain-top` |
+| Home Premain Bottom | `hovercraft_home_premain_bottom` | `widget-home-premain-bottom` |
+| Home Postmain Top | `hovercraft_home_postmain_top` | `widget-home-postmain-top` |
+| Home Postmain Bottom | `hovercraft_home_postmain_bottom` | `widget-home-postmain-bottom` |
+| Sidebar | `hovercraft_sidebar` | `widget-sidebar` |
+| Prefooter Top | `hovercraft_prefooter_top` | `widget-prefooter-top` |
+| Prefooter Bottom | `hovercraft_prefooter_bottom` | `widget-prefooter-bottom` |
+| Footer Column #1 | `hovercraft_footer_one` | `widget-footer-one` |
+| Footer Column #2 | `hovercraft_footer_two` | `widget-footer-two` |
+| Footer Column #3 | `hovercraft_footer_three` | `widget-footer-three` |
+| Footer Column #4 | `hovercraft_footer_four` | `widget-footer-four` |
+| Copyright | `hovercraft_copyright` | `widget-copyright` |
+| Postcolumns Top | `hovercraft_postcolumns_top` | `widget-postcolumns-top` |
+| Postcolumns Bottom | `hovercraft_postcolumns_bottom` | `widget-postcolumns-bottom` |
+| After Byline | `hovercraft_after_byline` | `widget-after-byline` |
+| After Loop | `hovercraft_after_loop` | `widget-after-loop` |
+
+### WooCommerce Areas
+
+| Name | ID | Class |
+|---|---|---|
+| After Add To Cart | `hovercraft_after_add_to_cart` | `widget-after-add-to-cart` |
+
+The `After Add To Cart` widget area renders below the WooCommerce add-to-cart form through the `woocommerce_after_add_to_cart_form` hook.
+
+### Repeating Layout Areas
+
+| Name | ID | Wrapper Class |
+|---|---|---|
+| Tiles | `hovercraft_tiles` | `tile` |
+| Columns | `hovercraft_columns` | `column` |
+| ZigZag | `hovercraft_zigzag` | `zigzag-section widget-wrapper` or `zigzag-section-reverse widget-wrapper` |
+
+Tiles, Columns, and ZigZag are preferred single widget areas that render each widget as a repeated visual item. This keeps modern layouts easier to maintain than many numbered widget areas.
+
+### Legacy Widget Areas
+
+Legacy widget areas are supported for migration and backward compatibility. Empty legacy areas should be hidden from the admin, and active legacy areas should be labeled as legacy so content can be moved into the preferred single-area pattern.
+
+| Legacy Group | IDs |
+|---|---|
+| Tiles | `hovercraft_tile_one` through `hovercraft_tile_twenty` |
+| Columns | `hovercraft_column_one` through `hovercraft_column_five` |
+| ZigZag | `hovercraft_widget_area_zigzag`, `hovercraft_zigzag_one` through `hovercraft_zigzag_eleven` |
+
+Legacy Tiles #1 through #12 are still rendered as a fallback when the preferred `hovercraft_tiles` area is empty. Tile #13 through Tile #20 are registered for migration visibility only.
