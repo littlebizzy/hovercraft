@@ -16,6 +16,18 @@ Keep selector grouping readable. Selectors that share the same rules may stay on
 
 Generated CSS should avoid janky ordering, missing files, duplicate includes, and mismatched module paths. When CSS files are moved into subfolders, the generator should be updated in the same patch so the generated output remains complete and deterministic.
 
+## Focus And Accessibility Styles
+
+Keyboard focus styles should be visible, predictable, and centralized in the focus CSS partial when practical.
+
+Do not hide outlines globally without providing a clear replacement focus style.
+
+Skip-link reveal styles belong with focus styles, not with layout templates or header-specific CSS.
+
+Overlay, modal, offcanvas, and menu CSS should not fight JavaScript-managed ARIA state. CSS should reflect the visible state while JavaScript keeps attributes such as `aria-hidden` and `aria-expanded` synchronized.
+
+Avoid advanced focus-trap styling or pointer-event tricks unless the matching JavaScript behavior is already implemented and tested.
+
 ## CSS Custom Properties
 
 HoverCraft should not maintain a CSS token layer by default.
