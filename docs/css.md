@@ -15,3 +15,11 @@ Do not create empty media query blocks. Do not duplicate identical declarations 
 Keep selector grouping readable. Selectors that share the same rules may stay on one line when that keeps the CSS compact and easy to scan. Each declaration inside a rule block should stay on its own line.
 
 Generated CSS should avoid janky ordering, missing files, duplicate includes, and mismatched module paths. When CSS files are moved into subfolders, the generator should be updated in the same patch so the generated output remains complete and deterministic.
+
+## Design Tokens
+
+Customizer output and PHP-generated CSS may expose reusable CSS custom properties when that reduces duplication and improves maintainability.
+
+CSS custom properties should be generated from HoverCraft's existing theme settings instead of being duplicated in `theme.json`.
+
+Do not introduce a second design-token source just because block themes or Gutenberg examples use one. HoverCraft's front-end CSS and Customizer output should remain the canonical presentation layer.
