@@ -18,6 +18,16 @@ Keep selector grouping readable. Selectors that share the same rules may stay on
 
 Generated CSS should avoid janky ordering, missing files, duplicate includes, and mismatched module paths. When CSS files are moved into subfolders, the generator should be updated in the same patch so the generated output remains complete and deterministic.
 
+## Code Snippets
+
+Inline `code` should keep a small radius so short technical values are visually distinct without looking like buttons.
+
+Block-level `pre` and `.pre` code containers should keep a slightly larger radius and allow horizontal scrolling for long lines.
+
+Do not remove code block radius just because native horizontal scrollbars may make the bottom edge look less rounded in some browsers. That is normal browser scrollbar rendering, not a theme bug.
+
+Avoid custom scrollbar styling or wrapper-heavy markup unless a specific template needs a more polished code block layout. Generic theme CSS should stay simple and compatible with normal WordPress content output.
+
 ## Focus And Accessibility Styles
 
 Keep focus and accessibility CSS aligned with `docs/accessibility.md`.
