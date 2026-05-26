@@ -13,7 +13,8 @@ function hovercraftOpenNav() {
 	hovercraftOverlayLastFocused = document.activeElement;
 	closeButton = menu.querySelector( '.closebtn' );
 
-	menu.style.height = '100%';
+	menu.classList.add( 'active' );
+	menu.removeAttribute( 'inert' );
 	menu.setAttribute( 'aria-hidden', 'false' );
 	document.body.classList.add( 'frozen' );
 
@@ -36,7 +37,8 @@ function hovercraftCloseNav() {
 		return;
 	}
 
-	menu.style.height = '0%';
+	menu.classList.remove( 'active' );
+	menu.setAttribute( 'inert', '' );
 	menu.setAttribute( 'aria-hidden', 'true' );
 	document.body.classList.remove( 'frozen' );
 
