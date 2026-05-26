@@ -2,6 +2,8 @@
 
 IDs, classes, and structural markup should make HoverCraft easier to style, audit, and extend without creating unnecessary theme-specific noise.
 
+For broader keyboard, ARIA, focus, overlay, modal, and menu behavior policy, see `docs/accessibility.md`.
+
 ## Semantic Markup
 
 Use semantic HTML elements when they clearly match the content structure.
@@ -20,27 +22,15 @@ Do not replace clear existing layout wrappers with semantic elements just for no
 
 ## Accessibility Markup
 
+Keep accessibility-specific markup policy aligned with `docs/accessibility.md`.
+
 Output the skip-to-content link immediately after `wp_body_open()` so keyboard users can bypass repeated header and navigation content.
 
 The skip link should target the stable `#main` region used by HoverCraft templates.
 
-Skip-link styling belongs with focus styles, not layout templates.
-
 Interactive icons that are decorative should use `aria-hidden="true"`. The accessible name should live on the surrounding button or link with `aria-label` or visible text.
 
 Buttons that open or close menus, dialogs, overlays, search panels, or offcanvas panels should be real `<button type="button">` elements.
-
-Controls that open hidden regions should expose the relationship with `aria-controls` when the controlled region has a stable ID.
-
-Controls that toggle hidden regions should update `aria-expanded` when JavaScript opens or closes the region.
-
-Overlay and modal-style regions should expose their dialog state with stable ARIA attributes such as `role="dialog"`, `aria-modal="true"`, and `aria-hidden` when appropriate.
-
-JavaScript should keep ARIA state synchronized with the visible state. Do not add ARIA attributes that JavaScript never updates.
-
-When a full-screen or offcanvas panel opens, focus should move into the panel when practical. When it closes, focus should return to the control that opened it.
-
-Escape-key close behavior is preferred for overlays, modals, offcanvas panels, and full-screen menus when it can be implemented without adding fragile JavaScript.
 
 ## Template Readability
 
