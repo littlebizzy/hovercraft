@@ -20,9 +20,9 @@ Generated CSS should avoid janky ordering, missing files, duplicate includes, an
 
 ## Code Snippets
 
-Inline `code` should keep a small radius so short technical values are visually distinct without looking like buttons.
+Inline `code` should use a `4px` radius so short technical values are visually distinct without looking like buttons.
 
-Block-level `pre` and `.pre` code containers should keep a slightly larger radius and allow horizontal scrolling for long lines.
+Block-level `pre` and `.pre` code containers should use an `8px` radius and allow horizontal scrolling for long lines.
 
 Do not remove code block radius just because native horizontal scrollbars may make the bottom edge look less rounded in some browsers. That is normal browser scrollbar rendering, not a theme bug.
 
