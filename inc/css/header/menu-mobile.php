@@ -112,9 +112,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 	bottom: 0;
 	left: 0;
 	height: 0;
+	visibility: hidden;
 	z-index: 999999;
 	background-color: rgba(0,0,0, 0.9);
-	transition: height 0.5s ease;
+	transition: height 0.5s ease, visibility 0.5s ease;
+}
+
+.overlay.active {
+	height: 100%;
+	visibility: visible;
 }
 
 .overlay-content {
@@ -202,10 +208,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	color: <?php echo $default_text_color; ?>;
 	height: 100%;
 	position: fixed;
+	visibility: hidden;
 	z-index: 9997;
 	overflow-y: auto;
 	transform: translate3d(0, 0, 205px);
-	transition: left 500ms ease-in-out, transform 500ms ease-in-out;
+	transition: left 500ms ease-in-out, transform 500ms ease-in-out, visibility 500ms ease-in-out;
 	padding: 20px 0 0 0;
 }
 
@@ -294,6 +301,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 #hovercraft-offcanvas-menu.active {
 	left: 0;
+	visibility: visible;
 	transform: translate3d(0, 0, 0);
 }
 
