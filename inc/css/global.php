@@ -8,10 +8,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 // styles for global styles
 ?>
 
-<?php include get_template_directory() . '/inc/css/tokens.php'; ?>
-
-/* global styles */
-
 html, body {
 	height: 100%;
 	font-family: <?php echo hovercraft_format_css_font_family( $default_font_family, $first_font_family ); ?>;
