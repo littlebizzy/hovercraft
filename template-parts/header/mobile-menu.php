@@ -14,12 +14,12 @@
 
 	<div class="overlay-content">
 		<?php hovercraft_mobile_menu_output(); ?>
-		</div><!-- overlay-content -->
+	</div><!-- overlay-content -->
 </div><!-- hovercraft-overlay-menu -->
 
 <div id="hovercraft-offcanvas-menu" role="dialog" aria-modal="true" aria-hidden="true" aria-label="<?php esc_attr_e( 'Mobile menu', 'hovercraft' ); ?>" tabindex="-1" inert>
 	<h4 class="sitename-offcanvas"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></h4>
 	<?php hovercraft_mobile_menu_output(); ?>
-	</div><!-- hovercraft-offcanvas-menu -->
+</div><!-- hovercraft-offcanvas-menu -->
 
 <div class="hovercraft-offcanvas-overlay" aria-hidden="true"></div>
