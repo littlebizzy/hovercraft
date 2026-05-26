@@ -27,16 +27,16 @@ jQuery( function( $ ) {
 
 	// close offcanvas menu
 	function closeOffcanvasMenu() {
+		if ( $lastFocused.length ) {
+			$lastFocused.trigger( 'focus' );
+		}
+
 		$menu.removeClass( 'active' );
 		$menu.attr( 'inert', '' );
 		$menu.attr( 'aria-hidden', 'true' );
 		$body.removeClass( 'frozen' );
 		$overlay.removeClass( 'active' );
 		$trigger.attr( 'aria-expanded', 'false' );
-
-		if ( $lastFocused.length ) {
-			$lastFocused.trigger( 'focus' );
-		}
 	}
 
 	// toggle offcanvas menu
