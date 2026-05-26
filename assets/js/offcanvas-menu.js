@@ -14,6 +14,7 @@ jQuery( function( $ ) {
 		$menu.toggleClass( 'active' );
 		$body.toggleClass( 'frozen' );
 		$overlay.toggleClass( 'active' );
+		$trigger.attr( 'aria-expanded', $menu.hasClass( 'active' ) ? 'true' : 'false' );
 	} );
 
 	// close offcanvas menu
@@ -21,5 +22,6 @@ jQuery( function( $ ) {
 		$menu.removeClass( 'active' );
 		$body.removeClass( 'frozen' );
 		$overlay.removeClass( 'active' );
+		$trigger.attr( 'aria-expanded', 'false' );
 	} );
 } );
