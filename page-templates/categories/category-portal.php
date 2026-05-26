@@ -1,6 +1,3 @@
-<?php
-
-?>
 <?php get_template_part( 'header' ); ?>
 <?php get_template_part( 'template-parts/header/header-mini-hero' ); ?>
 
