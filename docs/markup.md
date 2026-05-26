@@ -36,6 +36,18 @@ Template files should read mostly like markup. Use functions and helpers for reu
 
 Keep simple template-specific output close to the markup that depends on it.
 
+## Page Template Identity
+
+Page templates should keep their major identity obvious from the file itself.
+
+Hero type, header type, sidebar intent, and major layout should remain explicit in page template files.
+
+Do not hide hero or header selection behind broad helpers, database-selected layouts, or generic renderer arrays when a direct `get_template_part()` call is clearer.
+
+Shared template parts are appropriate for repeated wrapper markup, repeated content regions, and boring structural output, but they should not make page templates harder to understand at a glance.
+
+A page template may be slightly repetitive when that repetition preserves clarity about the page's hero, header, and layout purpose.
+
 ## WordPress Standard Hooks
 
 Use WordPress standard classes and IDs when they provide useful compatibility hooks.
