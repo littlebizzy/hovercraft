@@ -26,7 +26,7 @@ Block-level `pre` and `.pre` code containers should use an `8px` radius and allo
 
 When normal WordPress code blocks use `pre > code`, the outer `pre` should own the rounded visual container and clipping, while the inner `code` should own the horizontal scrolling and internal padding. Custom `.pre > code` blocks should follow the same pattern.
 
-Bare `pre` and `.pre` blocks should keep direct horizontal scrolling as a fallback because not all user content or plugins output nested `pre > code` or `.pre > code` markup.
+Bare `pre` and `.pre` blocks should still own their own padding, `8px` radius, and direct horizontal scrolling because not all user content or plugins output nested `pre > code` or `.pre > code` markup.
 
 Code snippets should remain easy to copy by allowing normal text selection. Use `user-select: text` for code elements, but do not use `user-select: all` globally because users may need to select only part of a snippet.
 
