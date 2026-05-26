@@ -16,6 +16,7 @@ pre,
 	font-family: ui-monospace, SFMono-Regular, Consolas, 'Liberation Mono', Menlo, monospace;
 	font-weight: 400;
 	color: <?php echo $default_text_color; ?>;
+	user-select: text;
 }
 
 code {
