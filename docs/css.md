@@ -16,10 +16,14 @@ Keep selector grouping readable. Selectors that share the same rules may stay on
 
 Generated CSS should avoid janky ordering, missing files, duplicate includes, and mismatched module paths. When CSS files are moved into subfolders, the generator should be updated in the same patch so the generated output remains complete and deterministic.
 
-## Design Tokens
+## CSS Custom Properties
 
-Customizer output and PHP-generated CSS may expose reusable CSS custom properties when that reduces duplication and improves maintainability.
+HoverCraft should not maintain a CSS token layer by default.
 
-CSS custom properties should be generated from HoverCraft's existing theme settings instead of being duplicated in `theme.json`.
+Do not add a dedicated tokens file, broad `:root` variable map, or design-token abstraction merely because modern CSS, block themes, or Gutenberg examples use custom properties.
 
-Do not introduce a second design-token source just because block themes or Gutenberg examples use one. HoverCraft's front-end CSS and Customizer output should remain the canonical presentation layer.
+Customizer/PHP-generated CSS should remain direct and easy to audit unless there is a specific compatibility need that cannot be handled cleanly otherwise.
+
+CSS custom properties may be considered only if they become critical to WordPress compatibility, browser expectations, or a concrete maintenance problem that direct generated CSS cannot solve.
+
+If CSS custom properties are ever introduced, they should be minimal, generated from existing Customizer/PHP settings, and documented as an exception rather than a default architecture pattern.
