@@ -9,11 +9,10 @@
 
 <div id="main">
 <div class="inner">
-	
 	<div id="primary">
-		
+
 		<div id="content-wrapper">
-			
+
 			<div id="content-padded">
 				<?php get_template_part( 'template-parts/misc/breadcrumbs' ); ?>
 				<?php get_template_part( 'template-parts/content/title' ); ?>
@@ -21,20 +20,22 @@
 				<?php get_template_part( 'template-parts/content/tiles-narrow' ); ?>
 				<?php get_template_part( 'template-parts/content/pagination' ); ?>
 				<?php get_template_part( 'template-parts/comments/comments' ); ?>
-			<div class="clear"></div>
+
+				<div class="clear"></div>
 			</div><!-- content-padded -->
-			
+
 		</div><!-- content-wrapper -->
 
-	<div class="clear"></div>
+		<div class="clear"></div>
 	</div><!-- primary -->
-	
+
 	<?php get_template_part( 'sidebar' ); ?>
-		
-<div class="clear"></div>
+
+	<div class="clear"></div>
+
 </div><!-- inner -->
 </div><!-- main -->
 
-<?php endif; // end is_front_page ?>
+<?php endif; // end main content ?>
 
 <?php get_template_part( 'footer' ); ?>
