@@ -8,6 +8,18 @@ Do not add generic layout builders, reusable section builders, or page-builder-s
 
 New features should improve repeatable client work without turning HoverCraft into a generic layout builder, content modeling system, or SEO/schema plugin.
 
+## Page Template Policy
+
+HoverCraft page templates should keep their major layout identity explicit and file-visible.
+
+Hero type, header type, sidebar intent, and major page layout should not be hidden behind a generic layout renderer or selected from database settings as the primary source of truth.
+
+Hardcoded template-part calls are appropriate when they make the template's purpose obvious. For example, a Mini Hero template should visibly load the Mini Hero header template part instead of delegating that choice to a broad helper.
+
+Shared helpers or template parts are acceptable for boring repeated wrapper markup, repeated content loops, or complex reusable logic, but they should not obscure the template's hero/header identity.
+
+Prefer clear, explicit page templates over clever abstractions when the template structure is central to HoverCraft's design approach.
+
 ## Block Editor Policy
 
 HoverCraft may remain compatible with normal WordPress content, but it should not add features merely to support Gutenberg layout workflows.
