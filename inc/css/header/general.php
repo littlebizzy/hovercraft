@@ -59,10 +59,6 @@ $navbar_background_color = get_theme_mod( 'hovercraft_navbar_background_color', 
 	text-align: left;
 }
 
-.header-layout-stacked-bottom .menu-desktop > .main-menu > ul > li:first-child > a {
-	padding-left: 0;
-}
-
 @media screen and (max-width: 1199px) {
 	.header-layout-stacked-bottom {
 		display: none;
@@ -97,7 +93,13 @@ $navbar_background_color = get_theme_mod( 'hovercraft_navbar_background_color', 
 		min-width: 0;
 	}
 
-	.header-layout-stacked-bottom .menu-desktop > .main-menu > ul > li > a:hover {
+	.header-layout-stacked-bottom .menu-desktop > .main-menu > ul > li > a {
+		padding: 12px 15px;
+		transition: background-color 0.2s ease;
+	}
+
+	.header-layout-stacked-bottom .menu-desktop > .main-menu > ul > li:hover > a,
+	.header-layout-stacked-bottom .menu-desktop > .main-menu > ul > li.open > a {
 		background: rgba(0, 0, 0, 0.08);
 	}
 
