@@ -40,24 +40,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 	margin-bottom: 0;
 }
 
-#topbar .inner {
+#topbar .inner,
+#topbar .full {
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
 }
 
 .topbar-left,
-.topbar-right,
-.topbar-center {
+.topbar-right {
 	width: 100%;
 }
 
-.topbar-center {
-	text-align: center;
-}
-
 @media screen and (max-width: 1199px) {
-	#topbar .inner {
+	#topbar .inner,
+	#topbar .full {
 		flex-direction: column;
 	}
 
