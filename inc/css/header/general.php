@@ -93,13 +93,17 @@ $navbar_background_color = get_theme_mod( 'hovercraft_navbar_background_color', 
 		min-width: 0;
 	}
 
-	.header-layout-stacked-bottom .menu-desktop > .main-menu > ul > li > a {
-		padding: 12px 15px;
+	.header-layout-stacked-bottom .menu-desktop > .main-menu > ul > li {
 		transition: background-color 0.2s ease;
 	}
 
-	.header-layout-stacked-bottom .menu-desktop > .main-menu > ul > li:hover > a,
-	.header-layout-stacked-bottom .menu-desktop > .main-menu > ul > li.open > a {
+	.header-layout-stacked-bottom .menu-desktop > .main-menu > ul > li > a {
+		display: block;
+		padding: 12px 18px;
+	}
+
+	.header-layout-stacked-bottom .menu-desktop > .main-menu > ul > li:hover,
+	.header-layout-stacked-bottom .menu-desktop > .main-menu > ul > li.open {
 		background: rgba(0, 0, 0, 0.08);
 	}
 
