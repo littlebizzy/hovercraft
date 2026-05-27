@@ -117,6 +117,11 @@ a.button-primary:hover {
 }
 
 .header-layout-stacked-bottom .cta-header-primary,
+.header-layout-stacked-bottom .cta-header-secondary {
+	margin-left: 0;
+}
+
+.header-layout-stacked-bottom .cta-header-primary,
 .header-layout-stacked-bottom .cta-header-secondary,
 .header-layout-stacked-bottom .cta-header-primary ul,
 .header-layout-stacked-bottom .cta-header-secondary ul,
