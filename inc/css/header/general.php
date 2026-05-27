@@ -53,11 +53,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 	text-align: left;
 }
 
-.header-layout-stacked-bottom .menu-desktop > .main-menu ul {
+.header-layout-stacked-bottom .menu-desktop > .main-menu ul,
+.header-layout-stacked-bottom .menu-desktop-left > .main-menu ul {
 	text-align: left;
 }
 
-.header-layout-stacked-bottom .menu-desktop > .main-menu > ul > li:first-child > a {
+.header-layout-stacked-bottom .menu-desktop > .main-menu > ul > li:first-child > a,
+.header-layout-stacked-bottom .menu-desktop-left > .main-menu > ul > li:first-child > a {
 	padding-left: 0;
 }
 
@@ -80,5 +82,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 	.header-layout-stacked-bottom {
 		margin-top: 20px;
 		box-shadow: inset 0 1px 0 0 #e0e0e0, inset 0 -1px 0 0 #e0e0e0;
+	}
+
+	.header-layout-stacked-bottom .menu-desktop {
+		display: flex;
+		align-items: center;
+		gap: 30px;
+	}
+
+	.header-layout-stacked-bottom .menu-desktop-left {
+		flex: 1 1 auto;
+		min-width: 0;
+	}
+
+	.header-layout-stacked-bottom .menu-desktop-right {
+		flex: 0 0 auto;
+		margin-left: auto;
+		text-align: right;
+		white-space: nowrap;
 	}
 }
