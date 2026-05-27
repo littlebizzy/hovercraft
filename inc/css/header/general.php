@@ -5,6 +5,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+$navbar_background_color = get_theme_mod( 'hovercraft_navbar_background_color', '' );
+
 // styles for general header stuff
 ?>
 
@@ -79,6 +81,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	.header-layout-stacked-bottom {
 		margin-top: 20px;
+		<?php if ( ! empty( $navbar_background_color ) ) : ?>
+			background: <?php echo $navbar_background_color; ?>;
+		<?php endif; ?>
 		box-shadow: inset 0 1px 0 0 #e0e0e0, inset 0 -1px 0 0 #e0e0e0;
 	}
 
