@@ -376,7 +376,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 	'hovercraft_search_icon',
 	array(
 		'label' => __( 'Search Icon Display', 'hovercraft' ),
-		'description' => __( 'On which devices should the search icon be displayed in the header?', 'hovercraft' ),
+		'description' => __( 'On which devices should the search icon be displayed in the header? Desktop display applies only to the Inline Header layout. The Stacked Header layout removes the desktop search icon.', 'hovercraft' ),
 		'section' => 'hovercraft_general',
 		'settings' => 'hovercraft_search_icon',
 		'type' => 'select',
