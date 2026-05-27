@@ -16,7 +16,11 @@ if ( 'full' === $hovercraft_desktop_header_width ) {
 			<?php get_template_part( 'template-parts/header/header-branding' ); ?>
 		</div><!-- header-left -->
 
+		<?php hovercraft_header_center_widget_area(); ?>
+
 		<div class="header-right">
+			<?php hovercraft_header_aside_widget_area(); ?>
+
 			<div class="menu-choose">
 
 				<div class="menu-mobile-wrapper">
