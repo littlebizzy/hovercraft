@@ -18,6 +18,30 @@ Keep selector grouping readable. Selectors that share the same rules may stay on
 
 Generated CSS should avoid janky ordering, missing files, duplicate includes, and mismatched module paths. When CSS files are moved into subfolders, the generator should be updated in the same patch so the generated output remains complete and deterministic.
 
+## Visual Separators And Pseudo Borders
+
+HoverCraft should generally prefer inset `box-shadow` rules for thin visual outlines, separator lines, and pseudo-border treatments when the line is decorative rather than structural.
+
+Use `box-shadow` pseudo borders when a component needs a visible edge but the edge should not affect dimensions, layout math, box sizing, wrapping, or alignment. This keeps spacing and layout behavior more predictable, especially for forms, cards, header bars, WooCommerce controls, and stacked layout sections.
+
+Avoid the `border` property for decorative separator lines when an inset shadow can produce the same visual result without changing the element's physical box. This helps prevent subtle layout shifts, height changes, width changes, and browser/plugin conflicts.
+
+Use real `border` only when the border is part of the expected native element behavior, semantic structure, or an existing component pattern where changing to `box-shadow` would be more confusing than helpful.
+
+For one-pixel visual outlines, use the established HoverCraft pattern:
+
+```css
+box-shadow: inset 0 0 0 1px #e0e0e0;
+```
+
+For top and bottom visual separator lines, use separate inset shadows:
+
+```css
+box-shadow: inset 0 1px 0 0 #e0e0e0, inset 0 -1px 0 0 #e0e0e0;
+```
+
+Keep pseudo-border colors subtle and consistent with nearby controls. Do not introduce one-off separator colors unless the component has a clear design reason.
+
 ## Code Snippets
 
 Inline `code` should use a `4px` radius so short technical values are visually distinct without looking like buttons.
