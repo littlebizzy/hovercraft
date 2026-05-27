@@ -81,6 +81,8 @@ require get_template_directory() . '/inc/widgets/widget-areas.php';
 require get_template_directory() . '/inc/widgets/widget-tiles.php';
 require get_template_directory() . '/inc/widgets/widget-columns.php';
 require get_template_directory() . '/inc/widgets/widget-zigzag.php';
+require get_template_directory() . '/inc/widgets/widget-header-center.php';
+require get_template_directory() . '/inc/widgets/widget-header-aside.php';
 require get_template_directory() . '/inc/widgets/widget-after-add-to-cart.php';
 require get_template_directory() . '/inc/sidebar/sidebar-callout.php';
 require get_template_directory() . '/inc/sidebar/sidebar-display.php';
