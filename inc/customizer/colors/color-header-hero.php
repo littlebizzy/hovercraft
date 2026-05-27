@@ -179,6 +179,17 @@ $hovercraft_header_hero_color_groups = array(
 			),
 		),
 	),
+	array(
+		'divider' => 'hovercraft_divider_navbar_colors',
+		'controls' => array(
+			array(
+				'id' => 'hovercraft_navbar_background_color',
+				'label' => 'Navbar Background Color',
+				'default' => '',
+				'description' => 'Applies to the stacked header navigation bar when a color is selected.',
+			),
+		),
+	),
 );
 
 // register header hero color controls
