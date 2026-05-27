@@ -26,7 +26,7 @@ Do not create a CSS token layer as a second presentation settings map. Customize
 
 Customizer layout options are appropriate when they control a real site-wide presentation pattern. Header layout options may switch between approved global header structures when the markup stays explicit and the default preserves existing sites.
 
-The `hovercraft_header_layout` setting uses `inline` as the default and `stacked` as the alternate layout. `inline` keeps branding and desktop navigation on one row. `stacked` separates branding and desktop navigation into two rows while keeping mobile behavior conservative.
+The `hovercraft_header_layout` setting uses `inline` as the default and `stacked` as the alternate layout. `inline` keeps branding and desktop navigation on one row. `stacked` separates branding and desktop navigation into two full-width desktop rows while keeping mobile behavior conservative.
 
 Do not add speculative header layout choices. New layout choices should support real client patterns and should not turn the header into a page-builder system.
 
@@ -36,7 +36,7 @@ Customizer visibility toggles are appropriate for theme regions such as the topb
 
 Hiding a section through the Customizer should avoid rendering the section on the front end while preserving any saved widget content or settings whenever practical.
 
-Use the Customizer for reversible presentation decisions. A site owner should be able to disable a region without deleting its saved content, then re-enable it later without rebuilding the area.
+Use the Customizer for reversible presentation decisions. A site owner should be able to disable a region without deleting it from the widget area.
 
 Display settings should preserve user content whenever practical. Hiding a section through CSS or conditional rendering is preferable to requiring users to delete widget content just to disable a section temporarily.
 
