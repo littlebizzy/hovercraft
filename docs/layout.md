@@ -36,7 +36,7 @@ Do not add `<div class="clear"></div>` or similar markup for new layout work. If
 
 Keep mobile and desktop behavior explicit.
 
-Breakpoint-specific layout CSS should generally use both `max-width: 1199px` and `min-width: 1200px` blocks so mobile and desktop behavior stay easy to audit.
+Breakpoint-specific layout CSS should generally use both `max-width: 1199px` and `min-width: 1200px` blocks so mobile and desktop behavior stay easy to scan.
 
 Shared values may live outside breakpoint blocks when that makes the CSS cleaner, lighter, and does not hide meaningful mobile or desktop differences.
 
@@ -50,9 +50,11 @@ HoverCraft supports a small set of global header layout patterns through the Cus
 
 The `hovercraft_header_layout` setting currently supports `inline` and `stacked`. The default `inline` layout keeps branding and desktop navigation on one row for existing sites. The `stacked` layout uses two full-width desktop header rows: a top branding row and a separate full-width navigation row below it for larger menus and more functional store headers.
 
-Header layout template parts should stay explicit and easy to audit. The shared dispatcher is `template-parts/header/navigation.php`, while the actual layout markup lives in `template-parts/header/navigation-inline.php` and `template-parts/header/navigation-stacked.php`. The stacked layout should keep its row wrappers full-width so future branding-side content and the desktop navigation bar can each read as their own horizontal sections.
+Header layout template parts should stay explicit and easy to audit. The shared dispatcher is `template-parts/header/navigation.php`, while the actual layout markup lives in `template-parts/header/navigation-inline.php` and `template-parts/header/navigation-stacked.php`. The stacked layout should keep its row wrappers full-width so branding-side content and the desktop navigation bar can each read as their own horizontal sections.
 
-In the stacked desktop navigation row, primary navigation/search/cart content should align left, while header CTA menus should align right inside the active header-width container. If the Customizer header width is fixed, CTAs should align to the right edge of the 1200px container. If the header width is full, CTAs should align to the full-width container edge.
+In the stacked desktop branding row, branding remains the primary identity area. Header Center and Header Aside are optional desktop widget areas for larger functional or visual header content. They should not replace topbar or preheader utility roles such as phone numbers, email links, login links, customer service links, social links, or simple text notices.
+
+In the stacked desktop navigation row, primary navigation and cart content should align left, while header CTA menus should align right inside the active header-width container. If the Customizer header width is fixed, CTAs should align to the right edge of the 1200px container. If the header width is full, CTAs should align to the full-width container edge.
 
 Mobile behavior should stay conservative when adding desktop header layout options. A desktop layout option should not unexpectedly redesign mobile headers unless that mobile behavior is intentionally planned and documented.
 
