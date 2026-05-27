@@ -186,7 +186,7 @@ $hovercraft_header_hero_color_groups = array(
 				'id' => 'hovercraft_navbar_background_color',
 				'label' => 'Navbar Background Color',
 				'default' => '',
-				'description' => 'Applies to the stacked header navigation bar when a color is selected.',
+				'description' => 'Reserved for future use. Stacked navbar colors currently follow the active header layout automatically.',
 			),
 		),
 	),
