@@ -30,20 +30,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 	margin-bottom: 0;
 }
 
-#preheader .inner {
+#preheader .inner,
+#preheader .full {
 	display: flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
 }
 
 .preheader-left,
-.preheader-right,
-.preheader-center {
+.preheader-right {
 	width: 100%;
-}
-
-.preheader-center {
-	text-align: center;
 }
 
 <?php if ( $mobile_preheader_widget == 'none' ) : ?>
@@ -55,7 +51,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php endif; ?>
 
 @media screen and (max-width: 1199px) {
-	#preheader .inner {
+	#preheader .inner,
+	#preheader .full {
 		flex-direction: column;
 	}
 
