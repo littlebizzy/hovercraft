@@ -85,6 +85,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 		 0 10px 14px rgba(0, 0, 0, 0.045);
 }
 
+.menu-desktop > .main-menu li:hover > ul,
+.menu-desktop > .main-menu li:focus-within > ul,
 .menu-desktop > .main-menu li.open > ul {
 	display: block;
 	z-index: 100;
@@ -119,6 +121,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	transform: rotate(0deg);
 }
 
+.menu-desktop > .main-menu .menu-item-has-children:hover > a .toggle,
+.menu-desktop > .main-menu .menu-item-has-children:focus-within > a .toggle,
 .menu-desktop > .main-menu .menu-item-has-children.open > a .toggle {
 	transform: rotate(180deg);
 }
