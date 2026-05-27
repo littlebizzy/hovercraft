@@ -79,5 +79,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	.header-layout-stacked-bottom {
 		margin-top: 20px;
+		box-shadow: inset 0 1px 0 0 #e0e0e0, inset 0 -1px 0 0 #e0e0e0;
 	}
 }
