@@ -52,6 +52,8 @@ The `hovercraft_header_layout` setting currently supports `inline` and `stacked`
 
 Header layout template parts should stay explicit and easy to audit. The shared dispatcher is `template-parts/header/navigation.php`, while the actual layout markup lives in `template-parts/header/navigation-inline.php` and `template-parts/header/navigation-stacked.php`. The stacked layout should keep its row wrappers full-width so future branding-side content and the desktop navigation bar can each read as their own horizontal sections.
 
+In the stacked desktop navigation row, primary navigation/search/cart content should align left, while header CTA menus should align right inside the active header-width container. If the Customizer header width is fixed, CTAs should align to the right edge of the 1200px container. If the header width is full, CTAs should align to the full-width container edge.
+
 Mobile behavior should stay conservative when adding desktop header layout options. A desktop layout option should not unexpectedly redesign mobile headers unless that mobile behavior is intentionally planned and documented.
 
 ## Header Strips
