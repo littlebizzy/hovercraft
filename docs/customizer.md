@@ -30,6 +30,14 @@ The `hovercraft_header_layout` setting uses `inline` as the default and `stacked
 
 Do not add speculative header layout choices. New layout choices should support real client patterns and should not turn the header into a page-builder system.
 
+## Color Options
+
+Color options should describe the visible theme region being styled, not only the internal template structure.
+
+Navbar color settings should use the `hovercraft_navbar_...` namespace because the navbar is the theme navigation bar even when it currently renders as the lower row of the stacked header layout.
+
+The `hovercraft_navbar_background_color` setting controls the stacked desktop navbar background when a color is selected. It should not force a default override when left empty, so existing header-specific colors remain unchanged.
+
 ## Visibility
 
 Customizer visibility toggles are appropriate for theme regions such as the topbar, preheader, footer areas, or other reusable layout zones.
@@ -66,4 +74,4 @@ Avoid echoing partial declarations inside otherwise empty selectors when a whole
 
 Generated CSS should not emit empty selectors. If a Customizer option does not need a rule, skip the entire rule block.
 
-Customizer variables should be read once in the CSS generator and used by focused CSS partials.
+Customizer variables should be read once in the CSS generator and used by focused CSS partials when practical.
