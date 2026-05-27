@@ -89,7 +89,6 @@ $navbar_background_color = get_theme_mod( 'hovercraft_navbar_background_color', 
 
 	.header-aside {
 		display: inline-block;
-		margin-right: 30px;
 		vertical-align: middle;
 	}
 
