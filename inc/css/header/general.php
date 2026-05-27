@@ -53,13 +53,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	text-align: left;
 }
 
-.header-layout-stacked-bottom .menu-desktop > .main-menu ul,
-.header-layout-stacked-bottom .menu-desktop-left > .main-menu ul {
+.header-layout-stacked-bottom .menu-desktop > .main-menu ul {
 	text-align: left;
 }
 
-.header-layout-stacked-bottom .menu-desktop > .main-menu > ul > li:first-child > a,
-.header-layout-stacked-bottom .menu-desktop-left > .main-menu > ul > li:first-child > a {
+.header-layout-stacked-bottom .menu-desktop > .main-menu > ul > li:first-child > a {
 	padding-left: 0;
 }
 
@@ -90,7 +88,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		gap: 30px;
 	}
 
-	.header-layout-stacked-bottom .menu-desktop-left {
+	.header-layout-stacked-bottom .menu-desktop > .main-menu {
 		flex: 1 1 auto;
 		min-width: 0;
 	}
