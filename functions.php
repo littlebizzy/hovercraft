@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( ! defined( 'HOVERCRAFT_VERSION' ) ) {
-	define( 'HOVERCRAFT_VERSION', '0.3.172' );
+	define( 'HOVERCRAFT_VERSION', '0.3.173' );
 }
 
 // rss feeds
