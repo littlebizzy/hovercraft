@@ -10,12 +10,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 #header-basic > .inner,
 #header-basic > .full,
+#header-basic > .header-layout-stacked > .inner,
+#header-basic > .header-layout-stacked > .full,
 #header-mini-hero > .inner,
 #header-mini-hero > .full,
+#header-mini-hero > .header-layout-stacked > .inner,
+#header-mini-hero > .header-layout-stacked > .full,
 #header-half-hero > .inner,
 #header-half-hero > .full,
+#header-half-hero > .header-layout-stacked > .inner,
+#header-half-hero > .header-layout-stacked > .full,
 #header-full-hero > .inner,
-#header-full-hero > .full {
+#header-full-hero > .full,
+#header-full-hero > .header-layout-stacked > .inner,
+#header-full-hero > .header-layout-stacked > .full {
 	display: flex;
 	align-items: center;
 }
@@ -32,7 +40,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	text-align: right;
 }
 
-.header-layout-stacked-bottom {
+.header-layout-stacked {
+	width: 100%;
+}
+
+.header-layout-stacked-bottom .header-layout-stacked-inner {
 	justify-content: flex-start;
 }
 
@@ -51,11 +63,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 @media screen and (max-width: 1199px) {
 	.header-layout-stacked-bottom {
-		display: none !important;
+		display: none;
 	}
 }
 
 @media screen and (min-width: 1200px) {
+	.header-layout-stacked {
+		display: block;
+	}
+
+	.header-layout-stacked-top,
+	.header-layout-stacked-bottom {
+		width: 100%;
+	}
+
 	.header-layout-stacked-bottom {
 		margin-top: 20px;
 	}
