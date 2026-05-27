@@ -121,19 +121,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 		background: transparent;
 	}
 
-	#header-basic .header-layout-stacked-bottom,
-	#header-half-hero .header-layout-stacked-bottom,
-	#header-mini-hero .header-layout-stacked-bottom {
-		background: <?php echo $default_text_color; ?>;
+	#header-basic .header-layout-stacked-bottom {
+		background: <?php echo $header_basic_hero_background_color; ?>;
 	}
 
-	#header-basic .header-layout-stacked-bottom .menu-desktop > .main-menu > ul > li > a,
-	#header-half-hero .header-layout-stacked-bottom .menu-desktop > .main-menu > ul > li > a,
-	#header-mini-hero .header-layout-stacked-bottom .menu-desktop > .main-menu > ul > li > a,
-	#header-basic .header-layout-stacked-bottom .cart-icon-wrapper,
-	#header-half-hero .header-layout-stacked-bottom .cart-icon-wrapper,
-	#header-mini-hero .header-layout-stacked-bottom .cart-icon-wrapper {
-		color: #ffffff;
+	#header-half-hero .header-layout-stacked-bottom {
+		background: <?php echo $half_hero_background_color; ?>;
+	}
+
+	#header-mini-hero .header-layout-stacked-bottom {
+		background: <?php echo $mini_hero_background_color; ?>;
 	}
 
 	.header-layout-stacked-bottom .menu-desktop {
