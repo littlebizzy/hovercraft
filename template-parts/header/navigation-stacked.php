@@ -10,45 +10,49 @@ if ( 'full' === $hovercraft_desktop_header_width ) {
 }
 ?>
 
-<div class="<?php echo esc_attr( $hovercraft_header_container_class ); ?> header-layout-stacked header-layout-stacked-top">
-	<div class="header-left">
-		<?php get_template_part( 'template-parts/header/header-branding' ); ?>
-	</div><!-- header-left -->
+<div class="header-layout-stacked header-layout-stacked-top">
+	<div class="<?php echo esc_attr( $hovercraft_header_container_class ); ?> header-layout-stacked-inner">
+		<div class="header-left">
+			<?php get_template_part( 'template-parts/header/header-branding' ); ?>
+		</div><!-- header-left -->
 
-	<div class="header-right">
-		<div class="menu-choose">
+		<div class="header-right">
+			<div class="menu-choose">
 
-			<div class="menu-mobile-wrapper">
-				<?php if ( in_array( $search_icon_status, array( 'mobile_only', 'desktop_and_mobile' ), true ) ) : ?>
-					<?php hovercraft_header_search_icon(); ?>
-				<?php endif; // end search-icon-status ?>
+				<div class="menu-mobile-wrapper">
+					<?php if ( in_array( $search_icon_status, array( 'mobile_only', 'desktop_and_mobile' ), true ) ) : ?>
+						<?php hovercraft_header_search_icon(); ?>
+					<?php endif; // end search-icon-status ?>
 
-				<?php hovercraft_header_cart_icon(); ?>
+					<?php hovercraft_header_cart_icon(); ?>
 
-				<?php if ( 'overlay' === $hovercraft_mobile_menu ) : ?>
-					<button type="button" class="nav-icon mobile-menu-trig" aria-label="<?php echo esc_attr__( 'Open menu', 'hovercraft' ); ?>" aria-controls="hovercraft-overlay-menu" aria-expanded="false" onclick="hovercraftOpenNav()">
-				<?php else : ?>
-					<button type="button" class="nav-icon mobile-menu-trig hovercraft-offcanvas-trigger" aria-label="<?php echo esc_attr__( 'Open menu', 'hovercraft' ); ?>" aria-controls="hovercraft-offcanvas-menu" aria-expanded="false">
-				<?php endif; // end hovercraft-mobile-menu ?>
-					<?php hovercraft_header_menu_icon(); ?>
-				</button>
-			</div><!-- menu-mobile-wrapper -->
+					<?php if ( 'overlay' === $hovercraft_mobile_menu ) : ?>
+						<button type="button" class="nav-icon mobile-menu-trig" aria-label="<?php echo esc_attr__( 'Open menu', 'hovercraft' ); ?>" aria-controls="hovercraft-overlay-menu" aria-expanded="false" onclick="hovercraftOpenNav()">
+					<?php else : ?>
+						<button type="button" class="nav-icon mobile-menu-trig hovercraft-offcanvas-trigger" aria-label="<?php echo esc_attr__( 'Open menu', 'hovercraft' ); ?>" aria-controls="hovercraft-offcanvas-menu" aria-expanded="false">
+					<?php endif; // end hovercraft-mobile-menu ?>
+						<?php hovercraft_header_menu_icon(); ?>
+					</button>
+				</div><!-- menu-mobile-wrapper -->
 
-		</div><!-- menu-choose -->
-	</div><!-- header-right -->
+			</div><!-- menu-choose -->
+		</div><!-- header-right -->
+	</div><!-- header-layout-stacked-inner -->
 </div><!-- header-layout-stacked-top -->
 
-<div class="<?php echo esc_attr( $hovercraft_header_container_class ); ?> header-layout-stacked header-layout-stacked-bottom">
-	<div class="menu-desktop">
-		<?php hovercraft_header_main_menu(); ?>
+<div class="header-layout-stacked header-layout-stacked-bottom">
+	<div class="<?php echo esc_attr( $hovercraft_header_container_class ); ?> header-layout-stacked-inner">
+		<div class="menu-desktop">
+			<?php hovercraft_header_main_menu(); ?>
 
-		<?php if ( in_array( $search_icon_status, array( 'desktop_only', 'desktop_and_mobile' ), true ) ) : ?>
-			<?php hovercraft_header_search_icon(); ?>
-		<?php endif; // end search-icon-status ?>
+			<?php if ( in_array( $search_icon_status, array( 'desktop_only', 'desktop_and_mobile' ), true ) ) : ?>
+				<?php hovercraft_header_search_icon(); ?>
+			<?php endif; // end search-icon-status ?>
 
-		<?php hovercraft_header_cart_icon(); ?>
+			<?php hovercraft_header_cart_icon(); ?>
 
-		<?php hovercraft_header_cta_menu( 'cta-header-secondary', 'cta-header-secondary' ); ?>
-		<?php hovercraft_header_cta_menu( 'cta-header-primary', 'cta-header-primary' ); ?>
-	</div><!-- menu-desktop -->
+			<?php hovercraft_header_cta_menu( 'cta-header-secondary', 'cta-header-secondary' ); ?>
+			<?php hovercraft_header_cta_menu( 'cta-header-primary', 'cta-header-primary' ); ?>
+		</div><!-- menu-desktop -->
+	</div><!-- header-layout-stacked-inner -->
 </div><!-- header-layout-stacked-bottom -->
