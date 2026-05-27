@@ -84,7 +84,6 @@ $navbar_background_color = get_theme_mod( 'hovercraft_navbar_background_color', 
 		<?php if ( ! empty( $navbar_background_color ) ) : ?>
 			background: <?php echo $navbar_background_color; ?>;
 		<?php endif; ?>
-		box-shadow: inset 0 1px 0 0 #e0e0e0, inset 0 -1px 0 0 #e0e0e0;
 	}
 
 	.header-layout-stacked-bottom .menu-desktop {
