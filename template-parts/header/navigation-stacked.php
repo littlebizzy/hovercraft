@@ -43,15 +43,13 @@ if ( 'full' === $hovercraft_desktop_header_width ) {
 <div class="header-layout-stacked header-layout-stacked-bottom">
 	<div class="<?php echo esc_attr( $hovercraft_header_container_class ); ?> header-layout-stacked-inner">
 		<div class="menu-desktop">
-			<div class="menu-desktop-left">
-				<?php hovercraft_header_main_menu(); ?>
+			<?php hovercraft_header_main_menu(); ?>
 
-				<?php if ( in_array( $search_icon_status, array( 'desktop_only', 'desktop_and_mobile' ), true ) ) : ?>
-					<?php hovercraft_header_search_icon(); ?>
-				<?php endif; // end search-icon-status ?>
+			<?php if ( in_array( $search_icon_status, array( 'desktop_only', 'desktop_and_mobile' ), true ) ) : ?>
+				<?php hovercraft_header_search_icon(); ?>
+			<?php endif; // end search-icon-status ?>
 
-				<?php hovercraft_header_cart_icon(); ?>
-			</div><!-- menu-desktop-left -->
+			<?php hovercraft_header_cart_icon(); ?>
 
 			<div class="menu-desktop-right">
 				<?php hovercraft_header_cta_menu( 'cta-header-secondary', 'cta-header-secondary' ); ?>
