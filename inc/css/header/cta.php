@@ -110,8 +110,27 @@ a.button-primary:hover {
 	box-shadow: inset 0 0 0 1px #263238;
 }
 
+.header-layout-stacked-bottom .menu-desktop-right {
+	align-self: stretch;
+	display: flex;
+	align-items: stretch;
+}
+
+.header-layout-stacked-bottom .cta-header-primary,
+.header-layout-stacked-bottom .cta-header-secondary,
+.header-layout-stacked-bottom .cta-header-primary ul,
+.header-layout-stacked-bottom .cta-header-secondary ul,
+.header-layout-stacked-bottom .cta-header-primary ul li,
+.header-layout-stacked-bottom .cta-header-secondary ul li {
+	display: flex;
+	align-items: stretch;
+}
+
 .header-layout-stacked-bottom .cta-header-primary ul li a,
 .header-layout-stacked-bottom .cta-header-secondary ul li a {
+	display: flex;
+	align-items: center;
+	padding: 12px 20px;
 	border-radius: 0;
 }
 
