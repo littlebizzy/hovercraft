@@ -22,7 +22,7 @@ This includes blockquotes, after-byline areas, post meta areas, plain widget-are
 
 ### 0px: Square Elements
 
-Use `0px` for images, thumbnails, galleries, HTML tables, table cells, horizontal rules, separators, full-width bars, embedded media, iframe embeds, structural content edges, normal article-flow sections that are not intended to read as cards, and nested `code` elements inside block-level code containers.
+Use `0px` for images, thumbnails, galleries, HTML tables, table cells, horizontal rules, separators, full-width bars, embedded media, iframe embeds, structural content edges, normal article-flow sections that are not intended to read as cards, nested `code` elements inside block-level code containers, and header calls to action that sit inside full-width stacked navigation bars.
 
 ### 4px: Compact Controls
 
@@ -74,7 +74,9 @@ Tabs should use `4px` on the top corners when they visually connect to a tab pan
 
 ### Calls To Action
 
-Primary calls to action may use stronger color, font weight, spacing, or border treatment, but should still use the same `4px` radius as normal buttons and form controls.
+Primary calls to action may use stronger color, font weight, spacing, or pseudo-border treatment, but should usually use the same `4px` radius as normal buttons and form controls.
+
+Header calls to action inside the lower stacked header row should use `0px` radius so they align cleanly with the full-width navigation bar and do not visually clash with the row's top and bottom pseudo-border separators.
 
 ### Code Snippets
 
