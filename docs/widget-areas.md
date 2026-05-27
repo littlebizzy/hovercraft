@@ -56,11 +56,13 @@ Do not require users to delete widget content just to temporarily hide a section
 
 ## Compact Header Widgets
 
-Compact header widget regions may normalize basic `ul` and `li` output because menus, social links, and simple link lists are common widget content in these locations.
+Compact header widget regions may normalize basic `ul` and `li` output because menus, social links, switchers, and simple inline widget output are common content in these locations.
 
 For compact header strips, removing default list margin, bullets, and first-item spacing is acceptable when the region is intended for inline utility content.
 
 Do not apply compact list cleanup broadly to normal article content, sidebar widgets, footer widgets, or long-form widget areas where vertical lists may be expected.
+
+Header Center and Header Aside are optional desktop widget areas in the stacked header branding row. They are intended for larger functional or visual header content such as search forms, mini cart summaries, language/currency/location switchers, trust badges, promo banners, countdowns, or similar compact commerce-focused widgets. General text utility content such as phone numbers, email links, login links, customer service links, social links, and text-only notices usually belongs in the topbar or preheader widget areas instead.
 
 ## Supported Widget Areas
 
@@ -72,6 +74,8 @@ Do not apply compact list cleanup broadly to normal article content, sidebar wid
 | Topbar Right | `hovercraft_topbar_right` | `widget-topbar-right` |
 | Preheader Left | `hovercraft_preheader_left` | `widget-preheader-left` |
 | Preheader Right | `hovercraft_preheader_right` | `widget-preheader-right` |
+| Header Center | `hovercraft_header_center` | `widget-header-center` |
+| Header Aside | `hovercraft_header_aside` | `widget-header-aside` |
 | Hero Snippet | `hovercraft_hero_snippet` | `widget-hero-snippet` |
 | Hero Window | `hovercraft_hero_window` | `widget-hero-window` |
 | Posthero (Adjust in Customizer) | `hovercraft_posthero` | `widget-posthero` |
@@ -91,6 +95,8 @@ Do not apply compact list cleanup broadly to normal article content, sidebar wid
 | Postcolumns Bottom | `hovercraft_postcolumns_bottom` | `widget-postcolumns-bottom` |
 | After Byline | `hovercraft_after_byline` | `widget-after-byline` |
 | After Loop | `hovercraft_after_loop` | `widget-after-loop` |
+
+Header Center and Header Aside render only in the stacked header layout. They do not render in the inline header layout.
 
 ### WooCommerce Areas
 
