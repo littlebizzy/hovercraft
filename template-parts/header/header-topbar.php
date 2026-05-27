@@ -10,31 +10,29 @@ if ( ! $hovercraft_has_topbar_widgets ) {
 	return;
 }
 
-// get centered topbar widget area
-if ( $hovercraft_topbar_left_active ) {
-	$hovercraft_topbar_center_sidebar = 'hovercraft_topbar_left';
-} else {
-	$hovercraft_topbar_center_sidebar = 'hovercraft_topbar_right';
+// get desktop header width
+$hovercraft_desktop_header_width = get_theme_mod( 'hovercraft_desktop_header_width', 'fixed' );
+$hovercraft_topbar_container_class = 'inner';
+
+if ( 'full' === $hovercraft_desktop_header_width ) {
+	$hovercraft_topbar_container_class = 'full';
 }
 
 ?>
 <div id="topbar">
-	<div class="inner">
+	<div class="<?php echo esc_attr( $hovercraft_topbar_container_class ); ?>">
 
-		<?php // render split topbar widget areas ?>
-		<?php if ( $hovercraft_topbar_left_active && $hovercraft_topbar_right_active ) : ?>
-			<div class="topbar-left">
+		<?php if ( $hovercraft_topbar_left_active ) : ?>
+			<div class="topbar-left<?php echo $hovercraft_topbar_right_active ? '' : ' topbar-single'; ?>">
 				<?php hovercraft_dynamic_sidebar_without_title( 'hovercraft_topbar_left' ); ?>
 			</div><!-- topbar-left -->
-			<div class="topbar-right">
+		<?php endif; // end topbar-left-active ?>
+
+		<?php if ( $hovercraft_topbar_right_active ) : ?>
+			<div class="topbar-right<?php echo $hovercraft_topbar_left_active ? '' : ' topbar-single'; ?>">
 				<?php hovercraft_dynamic_sidebar_without_title( 'hovercraft_topbar_right' ); ?>
 			</div><!-- topbar-right -->
-		<?php else : ?>
-			<?php // render centered topbar widget area ?>
-			<div class="topbar-center">
-				<?php hovercraft_dynamic_sidebar_without_title( $hovercraft_topbar_center_sidebar ); ?>
-			</div><!-- topbar-center -->
-		<?php endif; // end topbar widget areas ?>
+		<?php endif; // end topbar-right-active ?>
 
-	</div><!-- inner -->
+	</div><!-- <?php echo esc_attr( $hovercraft_topbar_container_class ); ?> -->
 </div><!-- topbar -->
