@@ -10,9 +10,17 @@ if ( ! $hovercraft_has_preheader_widgets ) {
 	return;
 }
 
+// get desktop header width
+$hovercraft_desktop_header_width = get_theme_mod( 'hovercraft_desktop_header_width', 'fixed' );
+$hovercraft_preheader_container_class = 'inner';
+
+if ( 'full' === $hovercraft_desktop_header_width ) {
+	$hovercraft_preheader_container_class = 'full';
+}
+
 ?>
 <div id="preheader">
-	<div class="inner">
+	<div class="<?php echo esc_attr( $hovercraft_preheader_container_class ); ?>">
 
 		<?php if ( $hovercraft_preheader_left_active ) : ?>
 			<div class="preheader-left<?php echo $hovercraft_preheader_right_active ? '' : ' preheader-single'; ?>">
@@ -26,5 +34,5 @@ if ( ! $hovercraft_has_preheader_widgets ) {
 			</div><!-- preheader-right -->
 		<?php endif; // end preheader-right-active ?>
 
-	</div><!-- inner -->
+	</div><!-- <?php echo esc_attr( $hovercraft_preheader_container_class ); ?> -->
 </div><!-- preheader -->
