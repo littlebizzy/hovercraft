@@ -97,6 +97,10 @@ $navbar_background_color = get_theme_mod( 'hovercraft_navbar_background_color', 
 		min-width: 0;
 	}
 
+	.header-layout-stacked-bottom .menu-desktop > .main-menu > ul > li > a:hover {
+		background: rgba(0, 0, 0, 0.08);
+	}
+
 	.header-layout-stacked-bottom .menu-desktop-right {
 		flex: 0 0 auto;
 		margin-left: auto;
