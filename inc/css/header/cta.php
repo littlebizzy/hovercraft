@@ -110,6 +110,11 @@ a.button-primary:hover {
 	box-shadow: inset 0 0 0 1px #263238;
 }
 
+.header-layout-stacked-bottom .cta-header-primary ul li a,
+.header-layout-stacked-bottom .cta-header-secondary ul li a {
+	border-radius: 0;
+}
+
 #header-full-hero .cta-header-secondary ul li a:hover {
 	background: #ffffff;
 	color: <?php echo $default_text_color; ?> !important;
