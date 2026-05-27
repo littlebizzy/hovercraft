@@ -5,8 +5,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-$navbar_background_color = get_theme_mod( 'hovercraft_navbar_background_color', '' );
-
 // styles for general header stuff
 ?>
 
@@ -117,9 +115,25 @@ $navbar_background_color = get_theme_mod( 'hovercraft_navbar_background_color', 
 
 	.header-layout-stacked-bottom {
 		margin-top: 20px;
-		<?php if ( ! empty( $navbar_background_color ) ) : ?>
-			background: <?php echo $navbar_background_color; ?>;
-		<?php endif; ?>
+	}
+
+	#header-full-hero .header-layout-stacked-bottom {
+		background: transparent;
+	}
+
+	#header-basic .header-layout-stacked-bottom,
+	#header-half-hero .header-layout-stacked-bottom,
+	#header-mini-hero .header-layout-stacked-bottom {
+		background: <?php echo $default_text_color; ?>;
+	}
+
+	#header-basic .header-layout-stacked-bottom .menu-desktop > .main-menu > ul > li > a,
+	#header-half-hero .header-layout-stacked-bottom .menu-desktop > .main-menu > ul > li > a,
+	#header-mini-hero .header-layout-stacked-bottom .menu-desktop > .main-menu > ul > li > a,
+	#header-basic .header-layout-stacked-bottom .cart-icon-wrapper,
+	#header-half-hero .header-layout-stacked-bottom .cart-icon-wrapper,
+	#header-mini-hero .header-layout-stacked-bottom .cart-icon-wrapper {
+		color: #ffffff;
 	}
 
 	.header-layout-stacked-bottom .menu-desktop {
