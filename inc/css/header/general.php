@@ -123,14 +123,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	#header-basic .header-layout-stacked-bottom {
 		background: <?php echo $header_basic_hero_background_color; ?>;
+		border-top: 1px solid rgba(0, 0, 0, 0.08);
 	}
 
 	#header-half-hero .header-layout-stacked-bottom {
 		background: <?php echo $half_hero_background_color; ?>;
+		border-top: 1px solid rgba(0, 0, 0, 0.08);
 	}
 
 	#header-mini-hero .header-layout-stacked-bottom {
 		background: <?php echo $mini_hero_background_color; ?>;
+		border-top: 1px solid rgba(0, 0, 0, 0.08);
 	}
 
 	.header-layout-stacked-bottom .menu-desktop {
@@ -144,18 +147,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 		min-width: 0;
 	}
 
-	.header-layout-stacked-bottom .menu-desktop > .main-menu > ul > li {
-		transition: background-color 0.2s ease;
-	}
-
 	.header-layout-stacked-bottom .menu-desktop > .main-menu > ul > li > a {
 		display: block;
 		padding: 12px 18px;
 	}
 
-	.header-layout-stacked-bottom .menu-desktop > .main-menu > ul > li:hover,
-	.header-layout-stacked-bottom .menu-desktop > .main-menu > ul > li.open {
-		background: rgba(0, 0, 0, 0.08);
+	.header-layout-stacked-bottom .menu-desktop > .main-menu > ul > li:first-child > a {
+		padding-left: 0;
 	}
 
 	.header-layout-stacked-bottom .menu-desktop-right {
