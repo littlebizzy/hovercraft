@@ -66,6 +66,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 @media screen and (min-width: 1200px) {
+	#header-basic:has(.header-layout-stacked),
+	#header-mini-hero:has(.header-layout-stacked) {
+		padding-bottom: 0;
+	}
+
 	.header-layout-stacked {
 		display: block;
 	}
