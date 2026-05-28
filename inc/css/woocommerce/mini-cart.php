@@ -42,8 +42,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	color: <?php echo $default_text_color; ?>;
 	font-weight: 600;
 	text-align: center;
+	text-decoration: none;
+}
+
+.widget_shopping_cart_content .hovercraft-mini-cart-count:hover {
+	color: <?php echo $default_hover_color; ?>;
 }
 
 .widget_shopping_cart_content .hovercraft-mini-cart-subtotal {
@@ -105,11 +111,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 .widget-header-center .widget_shopping_cart_content,
 .widget-header-aside .widget_shopping_cart_content {
 	display: grid;
-	grid-template-columns: 1fr 1.2fr 1.4fr;
+	grid-template-columns: 1fr 1.2fr 1fr;
 	gap: 8px;
-	width: 520px;
-	min-width: 520px;
-	max-width: 520px;
+	width: 480px;
+	min-width: 480px;
+	max-width: 480px;
 	padding: 0;
 	background: transparent;
 	border-radius: 0;
