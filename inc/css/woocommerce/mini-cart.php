@@ -42,6 +42,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	gap: 7px;
 	width: 100%;
 	height: 100%;
 	color: <?php echo $default_text_color; ?>;
@@ -54,6 +55,28 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 .widget_shopping_cart_content .hovercraft-mini-cart-count:hover {
 	color: <?php echo $default_hover_color; ?>;
+}
+
+.widget_shopping_cart_content .hovercraft-mini-cart-count-number {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 26px;
+	height: 24px;
+	padding: 0 7px;
+	background-color: #f44336;
+	border-radius: 4px;
+	color: #ffffff;
+	font-size: 12px;
+	font-weight: 700;
+	line-height: 24px;
+	text-align: center;
+	white-space: nowrap;
+}
+
+.widget_shopping_cart_content .hovercraft-mini-cart-count-label {
+	display: inline-block;
+	line-height: 1.25;
 }
 
 .widget_shopping_cart_content .hovercraft-mini-cart-subtotal {
