@@ -100,6 +100,18 @@ function hovercraft_register_sidebars() {
 			'class' => 'widget-preheader-right',
 		),
 
+		// header widgets
+		array(
+			'name' => 'Header Center',
+			'id' => 'hovercraft_header_center',
+			'class' => 'widget-header-center',
+		),
+		array(
+			'name' => 'Header Aside',
+			'id' => 'hovercraft_header_aside',
+			'class' => 'widget-header-aside',
+		),
+
 		// hero widgets
 		array(
 			'name' => 'Hero Snippet',
