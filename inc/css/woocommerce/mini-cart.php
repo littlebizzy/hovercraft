@@ -54,7 +54,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 .widget_shopping_cart_content .hovercraft-mini-cart-count:hover {
-	color: <?php echo $default_hover_color; ?>;
+	background: rgba(0, 0, 0, 0.065);
+	color: <?php echo $default_text_color; ?>;
+}
+
+.widget_shopping_cart_content .hovercraft-mini-cart-count:hover .hovercraft-mini-cart-count-number {
+	color: #ffffff;
 }
 
 .widget_shopping_cart_content .hovercraft-mini-cart-count-number {
