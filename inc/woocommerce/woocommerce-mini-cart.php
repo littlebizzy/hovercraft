@@ -7,15 +7,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 // keep mini cart buttons limited to checkout
 function hovercraft_reset_woocommerce_mini_cart_buttons() {
-	if ( ! function_exists( 'woocommerce_widget_shopping_cart_proceed_to_checkout' ) ) {
-		return;
+	if ( function_exists( 'woocommerce_widget_shopping_cart_button_view_cart' ) ) {
+		remove_action( 'woocommerce_widget_shopping_cart_buttons', 'woocommerce_widget_shopping_cart_button_view_cart', 10 );
 	}
-
-	remove_all_actions( 'woocommerce_widget_shopping_cart_buttons' );
-
-	add_action( 'woocommerce_widget_shopping_cart_buttons', 'woocommerce_widget_shopping_cart_proceed_to_checkout', 20 );
 }
 add_action( 'wp_loaded', 'hovercraft_reset_woocommerce_mini_cart_buttons', 100 );
+
+// version woocommerce cart hash storage key
+function hovercraft_woocommerce_cart_hash_key( $cart_hash_key ) {
+	return $cart_hash_key . '_' . HOVERCRAFT_VERSION;
+}
+add_filter( 'woocommerce_cart_hash_key', 'hovercraft_woocommerce_cart_hash_key', 100 );
+
+// version woocommerce cart fragment storage key
+function hovercraft_woocommerce_cart_fragment_name( $cart_fragment_name ) {
+	return $cart_fragment_name . '_' . HOVERCRAFT_VERSION;
+}
+add_filter( 'woocommerce_cart_fragment_name', 'hovercraft_woocommerce_cart_fragment_name', 100 );
 
 // refresh mini cart fragment with theme template
 function hovercraft_refresh_woocommerce_mini_cart_fragment( $fragments ) {
@@ -32,18 +40,3 @@ function hovercraft_refresh_woocommerce_mini_cart_fragment( $fragments ) {
 	return $fragments;
 }
 add_filter( 'woocommerce_add_to_cart_fragments', 'hovercraft_refresh_woocommerce_mini_cart_fragment', 100 );
-
-// clear stale woocommerce cart fragments after theme updates
-function hovercraft_clear_stale_woocommerce_cart_fragments() {
-	if ( ! wp_script_is( 'wc-cart-fragments', 'enqueued' ) ) {
-		return;
-	}
-
-	$script = sprintf(
-		'try{var hovercraftVersion=%s;var hovercraftKey="hovercraft_wc_fragments_version";var hovercraftClear=function(storage){if(!storage){return;}Object.keys(storage).forEach(function(key){if(key.indexOf("wc_fragments_")===0||key.indexOf("wc_cart_hash_")===0||key==="woocommerce_cart_hash"){storage.removeItem(key);}});};if(window.localStorage&&window.localStorage.getItem(hovercraftKey)!==hovercraftVersion){hovercraftClear(window.localStorage);hovercraftClear(window.sessionStorage);window.localStorage.setItem(hovercraftKey,hovercraftVersion);}}catch(error){}',
-		wp_json_encode( HOVERCRAFT_VERSION )
-	);
-
-	wp_add_inline_script( 'wc-cart-fragments', $script, 'before' );
-}
-add_action( 'wp_enqueue_scripts', 'hovercraft_clear_stale_woocommerce_cart_fragments', 100 );
