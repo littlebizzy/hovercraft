@@ -9,7 +9,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 ?>
 
 .widget_shopping_cart_content {
-	width: 100%;	max-width: 100%;
+	width: 100%;
+	max-width: 100%;
 }
 
 .widget_shopping_cart_content .woocommerce-mini-cart,
@@ -22,30 +23,37 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 .widget_shopping_cart_content .hovercraft-mini-cart-summary {
-	display: block;
-	width: 100%;
-	margin: 0;
-	padding: 0;
+	display: contents;
 	color: <?php echo $default_text_color; ?>;
 	font-size: 12px;
 	line-height: 1.35;
 }
 
+.widget_shopping_cart_content .hovercraft-mini-cart-count,
+.widget_shopping_cart_content .hovercraft-mini-cart-subtotal,
+.widget_shopping_cart_content .woocommerce-mini-cart__buttons {
+	min-height: 54px;
+	margin: 0;
+	padding: 8px 10px;
+	background: rgba(0, 0, 0, 0.035);
+}
+
 .widget_shopping_cart_content .hovercraft-mini-cart-count {
-	margin: 0 0 6px 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	font-weight: 600;
-	text-align: right;
+	text-align: center;
 }
 
 .widget_shopping_cart_content .hovercraft-mini-cart-subtotal {
 	display: flex;
-	justify-content: space-between;
+	flex-direction: column;
 	align-items: center;
-	gap: 12px;
-	margin: 0;
-	padding: 7px 0 0;
-	border-top: 1px solid rgba(0, 0, 0, 0.10);
+	justify-content: center;
+	gap: 3px;
 	font-weight: 600;
+	text-align: center;
 }
 
 .widget_shopping_cart_content .hovercraft-mini-cart-subtotal .amount {
@@ -56,8 +64,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 .widget_shopping_cart_content .woocommerce-mini-cart__buttons {
 	clear: both;
 	display: flex;
-	gap: 8px;
-	margin: 10px 0 0;
+	align-items: stretch;
+	gap: 6px;
 }
 
 .widget_shopping_cart_content .woocommerce-mini-cart__buttons:has(#ppc-button-minicart) {
@@ -75,11 +83,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 .widget_shopping_cart_content .woocommerce-mini-cart__buttons .button {
 	flex: 1 1 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 	margin: 0;
-	padding: 7px 10px;
-	font-size: 12px;
+	padding: 7px 8px;
+	font-size: 11px;
 	font-weight: 600;
-	line-height: 1.35;
+	line-height: 1.25;
 	text-align: center;
 	text-decoration: none;
 }
@@ -93,11 +104,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 .widget-header-center .widget_shopping_cart_content,
 .widget-header-aside .widget_shopping_cart_content {
-	width: 280px;
-	min-width: 280px;
-	max-width: 280px;
-	padding: 12px;
-	background: #ffffff;
+	display: grid;
+	grid-template-columns: 1fr 1.2fr 1.4fr;
+	gap: 8px;
+	width: 520px;
+	min-width: 520px;
+	max-width: 520px;
+	padding: 0;
+	background: transparent;
 	border-radius: 0;
 	box-shadow: none;
 }
