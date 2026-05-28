@@ -42,10 +42,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	width: 100%;
+	height: 100%;
 	color: <?php echo $default_text_color; ?>;
 	font-weight: 600;
 	text-align: center;
 	text-decoration: none;
+	cursor: pointer;
+	user-select: none;
 }
 
 .widget_shopping_cart_content .hovercraft-mini-cart-count:hover {
