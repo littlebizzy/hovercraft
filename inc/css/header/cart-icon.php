@@ -24,6 +24,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 	padding-left: 30px;
 	text-align: center;
 	vertical-align: middle;
+	user-select: none;
+}
+
+/* desktop: cart icon link */
+.cart-icon-wrapper > a {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 44px;
+	min-height: 44px;
+	line-height: 1;
+	text-decoration: none !important;
+	cursor: pointer;
+	user-select: none;
 }
 
 /* desktop: cart icon */
@@ -32,6 +46,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	padding: 10px 0;
 	line-height: 1;
 	text-decoration: none !important;
+	pointer-events: none;
+	user-select: none;
 }
 
 /* cart notification dots */
@@ -53,6 +69,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	line-height: 18px;
 	text-align: center;
 	white-space: nowrap;
+	pointer-events: none;
+	user-select: none;
 }
 
 .notification-dot {
