@@ -10,14 +10,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <?php if ( ! WC()->cart->is_empty() ) : ?>
 
+	<?php $hovercraft_cart_count = WC()->cart->get_cart_contents_count(); ?>
+
 	<div class="hovercraft-mini-cart-summary">
 		<a class="hovercraft-mini-cart-count" href="<?php echo esc_url( wc_get_cart_url() ); ?>">
-			<?php
-			printf(
-				esc_html( _n( '%s item in cart', '%s items in cart', WC()->cart->get_cart_contents_count(), 'woocommerce' ) ),
-				esc_html( WC()->cart->get_cart_contents_count() )
-			);
-			?>
+			<span class="hovercraft-mini-cart-count-number"><?php echo esc_html( $hovercraft_cart_count ); ?></span>
+			<span class="hovercraft-mini-cart-count-label">
+				<?php echo esc_html( _n( 'item in cart', 'items in cart', $hovercraft_cart_count, 'woocommerce' ) ); ?>
+			</span><!-- hovercraft-mini-cart-count-label -->
 		</a><!-- hovercraft-mini-cart-count -->
 
 		<div class="hovercraft-mini-cart-subtotal">
