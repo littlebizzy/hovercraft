@@ -11,14 +11,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 <?php if ( ! WC()->cart->is_empty() ) : ?>
 
 	<div class="hovercraft-mini-cart-summary">
-		<div class="hovercraft-mini-cart-count">
+		<a class="hovercraft-mini-cart-count" href="<?php echo esc_url( wc_get_cart_url() ); ?>">
 			<?php
 			printf(
 				esc_html( _n( '%s item in cart', '%s items in cart', WC()->cart->get_cart_contents_count(), 'woocommerce' ) ),
 				esc_html( WC()->cart->get_cart_contents_count() )
 			);
 			?>
-		</div><!-- hovercraft-mini-cart-count -->
+		</a><!-- hovercraft-mini-cart-count -->
 
 		<div class="hovercraft-mini-cart-subtotal">
 			<span><?php esc_html_e( 'Subtotal:', 'woocommerce' ); ?></span>
@@ -27,10 +27,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	</div><!-- hovercraft-mini-cart-summary -->
 
 	<p class="woocommerce-mini-cart__buttons buttons hovercraft-mini-cart-buttons">
-		<a href="<?php echo esc_url( wc_get_cart_url() ); ?>" class="button wc-forward">
-			<?php esc_html_e( 'View cart', 'woocommerce' ); ?>
-		</a>
-
 		<a href="<?php echo esc_url( wc_get_checkout_url() ); ?>" class="button checkout wc-forward">
 			<?php esc_html_e( 'Checkout', 'woocommerce' ); ?>
 		</a>
