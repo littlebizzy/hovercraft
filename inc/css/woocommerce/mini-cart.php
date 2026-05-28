@@ -60,6 +60,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	margin: 8px 0 0;
 }
 
+.widget_shopping_cart_content .woocommerce-mini-cart__buttons:has(#ppc-button-minicart) {
+	display: none !important;
+}
+
+.widget_shopping_cart_content #ppc-button-minicart {
+	display: none !important;
+}
+
 .widget_shopping_cart_content .woocommerce-mini-cart__buttons::after {
 	display: none !important;
 	content: none !important;
