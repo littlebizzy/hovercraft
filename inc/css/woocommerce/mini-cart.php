@@ -106,6 +106,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	gap: 6px;
 }
 
+.widget_shopping_cart_content .woocommerce-mini-cart__buttons:hover {
+	background: rgba(0, 0, 0, 0.065);
+}
+
 .widget_shopping_cart_content .woocommerce-mini-cart__buttons:has(#ppc-button-minicart) {
 	display: none !important;
 }
