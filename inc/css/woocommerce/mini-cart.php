@@ -130,11 +130,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 	justify-content: center;
 	margin: 0;
 	padding: 7px 8px;
+	background: transparent !important;
+	box-shadow: none !important;
+	color: <?php echo $default_text_color; ?> !important;
 	font-size: 11px;
 	font-weight: 600;
 	line-height: 1.25;
 	text-align: center;
 	text-decoration: none;
+}
+
+.widget_shopping_cart_content .woocommerce-mini-cart__buttons .checkout:hover {
+	background: transparent !important;
+	color: <?php echo $default_text_color; ?> !important;
 }
 
 .widget_shopping_cart_content .woocommerce-mini-cart__empty-message {
