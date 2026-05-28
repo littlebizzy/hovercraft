@@ -87,7 +87,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	content: none !important;
 }
 
-.widget_shopping_cart_content .woocommerce-mini-cart__buttons .button {
+.widget_shopping_cart_content .woocommerce-mini-cart__buttons .button:not(.checkout) {
+	display: none !important;
+}
+
+.widget_shopping_cart_content .woocommerce-mini-cart__buttons .checkout {
 	flex: 1 1 0;
 	display: flex;
 	align-items: center;
