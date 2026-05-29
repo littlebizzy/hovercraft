@@ -180,9 +180,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	display: grid;
 	grid-template-columns: minmax(0, 1fr) auto;
 	gap: 0;
-	width: 410px;
-	min-width: 410px;
-	max-width: 410px;
+	width: 196px;
+	min-width: 196px;
+	max-width: 196px;
 	padding: 0;
 	background: rgba(0, 0, 0, 0.035);
 	border-radius: 4px;
