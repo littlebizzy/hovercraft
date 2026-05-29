@@ -176,6 +176,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 	line-height: 1.35;
 }
 
+#header-basic .widget_shopping_cart_content .hovercraft-mini-cart-summary, #header-basic .widget_shopping_cart_content .hovercraft-mini-cart-summary:hover, #header-basic .widget_shopping_cart_content .woocommerce-mini-cart__buttons .checkout, #header-basic .widget_shopping_cart_content .woocommerce-mini-cart__buttons .checkout:hover, #header-basic .widget_shopping_cart_content .woocommerce-mini-cart__empty-message, #header-basic .widget_shopping_cart_content .hovercraft-mini-cart-subtotal .amount {
+	color: <?php echo $header_basic_hero_text_color; ?> !important;
+}
+
+#header-mini-hero .widget_shopping_cart_content .hovercraft-mini-cart-summary, #header-mini-hero .widget_shopping_cart_content .hovercraft-mini-cart-summary:hover, #header-mini-hero .widget_shopping_cart_content .woocommerce-mini-cart__buttons .checkout, #header-mini-hero .widget_shopping_cart_content .woocommerce-mini-cart__buttons .checkout:hover, #header-mini-hero .widget_shopping_cart_content .woocommerce-mini-cart__empty-message, #header-mini-hero .widget_shopping_cart_content .hovercraft-mini-cart-subtotal .amount {
+	color: <?php echo $mini_hero_header_text_color; ?> !important;
+}
+
+#header-half-hero .widget_shopping_cart_content .hovercraft-mini-cart-summary, #header-half-hero .widget_shopping_cart_content .hovercraft-mini-cart-summary:hover, #header-half-hero .widget_shopping_cart_content .woocommerce-mini-cart__buttons .checkout, #header-half-hero .widget_shopping_cart_content .woocommerce-mini-cart__buttons .checkout:hover, #header-half-hero .widget_shopping_cart_content .woocommerce-mini-cart__empty-message, #header-half-hero .widget_shopping_cart_content .hovercraft-mini-cart-subtotal .amount {
+	color: <?php echo $half_hero_text_color; ?> !important;
+}
+
+#header-full-hero .widget_shopping_cart_content .hovercraft-mini-cart-summary, #header-full-hero .widget_shopping_cart_content .hovercraft-mini-cart-summary:hover, #header-full-hero .widget_shopping_cart_content .woocommerce-mini-cart__buttons .checkout, #header-full-hero .widget_shopping_cart_content .woocommerce-mini-cart__buttons .checkout:hover, #header-full-hero .widget_shopping_cart_content .woocommerce-mini-cart__empty-message, #header-full-hero .widget_shopping_cart_content .hovercraft-mini-cart-subtotal .amount {
+	color: #ffffff !important;
+}
+
 .widget-header-center .widget_shopping_cart_content, .widget-header-aside .widget_shopping_cart_content {
 	display: grid;
 	grid-template-columns: minmax(0, 1fr) auto;
