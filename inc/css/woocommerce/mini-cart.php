@@ -154,8 +154,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	background: transparent !important;
 	box-shadow: none !important;
 	color: <?php echo $default_text_color; ?> !important;
-	font-size: 11px;
-	font-weight: 700;
+	font-size: 12px;
+	font-weight: 800;
+	letter-spacing: 0.01em;
 	line-height: 1.25;
 	text-align: center;
 	text-decoration: none;
@@ -196,10 +197,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 .widget-header-center .widget_shopping_cart_content .woocommerce-mini-cart__buttons, .widget-header-aside .widget_shopping_cart_content .woocommerce-mini-cart__buttons {
-	background: rgba(0, 0, 0, 0.035);
-	border-left: 1px solid rgba(0, 0, 0, 0.06);
+	background: rgba(0, 0, 0, 0.09);
+	border-left: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .widget-header-center .widget_shopping_cart_content .woocommerce-mini-cart__buttons:hover, .widget-header-aside .widget_shopping_cart_content .woocommerce-mini-cart__buttons:hover {
-	background: rgba(0, 0, 0, 0.065);
+	background: rgba(0, 0, 0, 0.13);
 }
