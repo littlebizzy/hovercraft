@@ -202,7 +202,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	padding: 0;
 	background: rgba(0, 0, 0, 0.035);
 	border-radius: 4px;
-	box-shadow: none;
+	box-shadow: inset 0 0 0 1px #e0e0e0;
 	overflow: hidden;
 }
 
