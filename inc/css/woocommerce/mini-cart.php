@@ -155,7 +155,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	box-shadow: none !important;
 	color: <?php echo $default_text_color; ?> !important;
 	font-family: <?php echo hovercraft_format_css_font_family( $main_menu_font_family, $default_font_family ); ?>;
-	font-size: <?php echo $main_menu_desktop_font_size; ?>px;
+	font-size: 16px;
 	font-weight: 700;
 	line-height: 1.25;
 	text-align: center;
