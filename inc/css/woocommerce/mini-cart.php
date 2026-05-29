@@ -28,8 +28,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	flex-direction: column;
 	align-items: flex-start;
 	justify-content: center;
-	gap: 4px;
-	padding: 7px 12px;
+	gap: 3px;
+	padding: 6px 12px;
 	color: <?php echo $default_text_color; ?>;
 	font-size: 12px;
 	line-height: 1.25;
@@ -86,6 +86,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	justify-content: flex-start;
 	gap: 4px;
 	width: 100%;
+	margin-top: 1px;
+	padding-top: 5px;
+	border-top: 1px solid rgba(0, 0, 0, 0.08);
 	font-size: 11px;
 	font-weight: 600;
 	line-height: 1.2;
@@ -94,6 +97,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 .widget_shopping_cart_content .hovercraft-mini-cart-subtotal-label {
 	display: inline-block;
+	font-size: inherit;
+	line-height: inherit;
+}
+
+.widget_shopping_cart_content .hovercraft-mini-cart-subtotal strong, .widget_shopping_cart_content .hovercraft-mini-cart-subtotal .amount, .widget_shopping_cart_content .hovercraft-mini-cart-subtotal .woocommerce-Price-currencySymbol {
+	font-size: inherit;
+	line-height: inherit;
+}
+
+.widget_shopping_cart_content .hovercraft-mini-cart-subtotal strong {
+	display: inline-flex;
+	align-items: baseline;
 }
 
 .widget_shopping_cart_content .hovercraft-mini-cart-subtotal .amount {
