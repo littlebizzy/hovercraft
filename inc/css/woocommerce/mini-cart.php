@@ -145,21 +145,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 .widget_shopping_cart_content .woocommerce-mini-cart__buttons .checkout {
-	flex: 1 1 0;
+	flex: 1 1 auto;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	margin: 0;
-	padding: 7px 12px;
+	padding: 10px 20px;
 	background: transparent !important;
 	box-shadow: none !important;
 	color: <?php echo $default_text_color; ?> !important;
-	font-size: 12px;
-	font-weight: 800;
-	letter-spacing: 0.01em;
+	font-family: <?php echo hovercraft_format_css_font_family( $main_menu_font_family, $default_font_family ); ?>;
+	font-size: <?php echo $main_menu_desktop_font_size; ?>px;
+	font-weight: 700;
 	line-height: 1.25;
 	text-align: center;
 	text-decoration: none;
+	text-transform: <?php echo $main_menu_text_transform; ?>;
+	white-space: nowrap;
 }
 
 .widget_shopping_cart_content .woocommerce-mini-cart__buttons .checkout:hover {
@@ -176,7 +178,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 .widget-header-center .widget_shopping_cart_content, .widget-header-aside .widget_shopping_cart_content {
 	display: grid;
-	grid-template-columns: minmax(0, 1fr) 126px;
+	grid-template-columns: minmax(0, 1fr) auto;
 	gap: 0;
 	width: 410px;
 	min-width: 410px;
