@@ -1,7 +1,7 @@
 /*
 Theme Name: HoverCraft
 Theme URI: https://hovercraft.vip
-Version: 0.3.202
+Version: 0.3.203
 Description: No maintenance WordPress theme
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
@@ -31,32 +31,86 @@ html, body, div, span, applet, object, iframe, main, h1, h2, h3, h4, h5, h6, p, 
 	vertical-align: baseline;
 }
 
-/* html5 elements */
-
-article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section {
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 
-/* form elements */
-
-button, input, optgroup, select, textarea {
-	font: inherit;
-}
-
-/* responsive media */
-
-img, picture, video, canvas, svg {
-	max-width: 100%;
-	height: auto;
-}
-
-/* universal */
-
-*, *::before, *::after {
+html {
 	box-sizing: border-box;
 }
 
-/* devices */
+*, *::before, *::after {
+	box-sizing: inherit;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote::before, blockquote::after, q::before, q::after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+button, input, select, textarea {
+	font: inherit;
+}
+
+button {
+	cursor: pointer;
+}
+
+img, picture, video, canvas, svg {
+	display: block;
+	max-width: 100%;
+}
+
+.screen-reader-text {
+	position: absolute !important;
+	width: 1px !important;
+	height: 1px !important;
+	margin: -1px !important;
+	padding: 0 !important;
+	border: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important;
+	clip-path: inset(50%) !important;
+	overflow: hidden !important;
+	word-wrap: normal !important;
+}
+
+.screen-reader-text:focus {
+	top: 5px;
+	left: 5px;
+	z-index: 100000;
+	width: auto !important;
+	height: auto !important;
+	padding: 15px 23px 14px;
+	background: #ffffff;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	clip-path: none !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: normal;
+	outline: none;
+	text-decoration: none;
+}
 
 @media screen and (max-width: 1199px) {
 	.desktop {
