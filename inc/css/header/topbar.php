@@ -19,14 +19,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 @media screen and (max-width: 1199px) {
 	#topbar {
-		padding: 10px 20px;
+		padding: 8px 20px;
 		font-size: <?php echo $topbar_mobile_font_size; ?>px;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 	#topbar {
-		padding: 10px 0;
+		padding: 8px 0;
 		font-size: <?php echo $topbar_desktop_font_size; ?>px;
 	}
 }
@@ -107,7 +107,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 #topbar ul li {
 	list-style-type: none;
 	display: inline-block;
-	margin: 0 0 0 10px;
+	margin: 0 0 0 8px;
 }
 
 #topbar ul li:first-child {
