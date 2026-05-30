@@ -95,7 +95,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	display: flex;
 	align-items: center;
 	gap: 8px;
-	padding: 12px 20px;
+	padding: 12px 16px;
 	background: transparent;
 	border-radius: 0;
 	color: <?php echo $default_text_color; ?> !important;
