@@ -48,6 +48,7 @@ if ( 'full' === $hovercraft_desktop_header_width ) {
 			<?php hovercraft_header_main_menu(); ?>
 
 			<div class="menu-desktop-right">
+				<?php hovercraft_header_cart_nav_item(); ?>
 				<?php hovercraft_header_cta_menu( 'cta-header-secondary', 'cta-header-secondary' ); ?>
 				<?php hovercraft_header_cta_menu( 'cta-header-primary', 'cta-header-primary' ); ?>
 			</div><!-- menu-desktop-right -->
