@@ -68,6 +68,8 @@ Header Center and Header Aside are optional desktop widget areas in the stacked 
 
 Header Center and Header Aside should not be required to make WooCommerce cart access work. If WooCommerce is active, the theme should provide basic cart access through header template logic. Header widgets may add extra commerce messaging or optional store content, but they should not carry critical store navigation by themselves.
 
+The WooCommerce header cart link should be hardcoded in approved header navigation layouts instead of depending on a cart widget. Its red notification pill should always render when WooCommerce cart access is available, including when the cart count is `0`, so the store cart entry remains visually consistent.
+
 ## Supported Widget Areas
 
 ### Global And Layout Areas
