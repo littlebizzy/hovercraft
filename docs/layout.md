@@ -50,6 +50,8 @@ HoverCraft spacing is still being standardized, but new layout work should start
 
 Prefer common spacing values such as `4px`, `8px`, `12px`, `16px`, `24px`, `32px`, and `40px` when setting padding, margin, gap, and compact layout offsets.
 
+Use `4px` only for extra-tight supporting UI where `8px` feels visibly too airy, such as preheader vertical padding.
+
 Use `8px` for tight utility spacing, small gaps, and compact header-strip rhythm.
 
 Use `12px` for compact vertical padding in buttons, CTAs, navigation items, and other controls where `8px` feels too tight and `16px` feels too tall.
@@ -73,6 +75,12 @@ HoverCraft supports a small set of global header layout patterns through the Cus
 The `hovercraft_header_layout` setting currently supports `inline` and `stacked`. The default `inline` layout keeps branding and desktop navigation on one row for existing sites. The `stacked` layout uses two full-width desktop header rows: a top branding row and a separate full-width navigation row below it for larger menus and more functional store headers.
 
 Header layout template parts should stay explicit and easy to audit. The shared dispatcher is `template-parts/header/navigation.php`, while the actual layout markup lives in `template-parts/header/navigation-inline.php` and `template-parts/header/navigation-stacked.php`. The stacked layout should keep its row wrappers full-width so branding-side content and the desktop navigation bar can each read as their own horizontal sections.
+
+Header parent wrappers such as `#header-basic`, `#header-mini-hero`, `#header-half-hero`, and `#header-full-hero` should mostly own background and text color, not vertical spacing. Header spacing should live on the actual layout rows such as `.header-layout-inline` and `.header-layout-stacked-inner`, so preheader content can sit at the true top of the header area when enabled.
+
+Each header strip or row should own its own spacing. Topbar uses tight strip spacing, preheader uses extra-tight supporting-strip spacing, the logo/search header row uses normal compact spacing, and stacked navbar links own their own control padding. Avoid duplicate spacing between adjacent header sections.
+
+Current desktop header spacing should remain simple: topbar `8px` vertical padding, preheader `4px` vertical padding, logo/search row `16px` vertical padding, stacked navbar top gap `0`, and stacked navbar links `12px` vertical padding.
 
 In the stacked desktop branding row, branding remains the primary identity area. Header Center and Header Aside are optional desktop widget areas for larger functional or visual header content. They should not replace topbar or preheader utility roles such as phone numbers, email links, login links, customer service links, social links, or simple text notices.
 
