@@ -106,14 +106,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 @media screen and (max-width: 1199px) {
 	#header-half-hero {
-		padding: 10px 20px;
+		padding: 16px 20px;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 	#header-half-hero {
 		margin: 0 auto;
-		padding: 20px 0;
+		padding: 24px 0;
 	}
 }
 
