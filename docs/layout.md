@@ -54,6 +54,8 @@ Use `8px` for tight utility spacing, small gaps, and compact header-strip rhythm
 
 Use `16px` for normal compact spacing, especially on mobile or inside small components.
 
+Use `20px` intentionally for mobile left and right gutters. It is not a formal spacing-rhythm value, but it is a common practical convention for keeping mobile content away from screen edges.
+
 Use `24px` or `32px` for medium breathing room between related sections.
 
 Use `40px` only when the spacing is intentionally more structural, such as primary content/sidebar math or larger section rhythm. Avoid using `40px` as casual padding inside small utility sections.
