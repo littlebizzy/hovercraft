@@ -16,13 +16,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 @media screen and (max-width: 1199px) {
 	#preheader {
-		padding: 0 20px 20px 20px;
+		padding: 0 20px 16px 20px;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 	#preheader {
-		padding: 0 0 40px 0;
+		padding: 0 0 24px 0;
 	}
 }
 
@@ -105,7 +105,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 #preheader ul li {
 	list-style-type: none;
 	display: inline-block;
-	margin: 0 0 0 10px;
+	margin: 0 0 0 8px;
 }
 
 #preheader ul li:first-child {
