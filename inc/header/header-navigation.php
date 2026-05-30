@@ -49,6 +49,31 @@ function hovercraft_header_cart_icon() {
 	<?php
 }
 
+// render header cart nav item
+function hovercraft_header_cart_nav_item() {
+	// skip missing woocommerce cart
+	if ( ! class_exists( 'WooCommerce' ) || ! function_exists( 'WC' ) || ! WC()->cart ) {
+		return;
+	}
+
+	$hovercraft_cart_count = WC()->cart->get_cart_contents_count();
+	$hovercraft_cart_aria_label = sprintf(
+		_n( 'View cart, %d item', 'View cart, %d items', $hovercraft_cart_count, 'hovercraft' ),
+		$hovercraft_cart_count
+	);
+	?>
+	<div class="header-cart-nav-item">
+		<a href="<?php echo esc_url( wc_get_cart_url() ); ?>" aria-label="<?php echo esc_attr( $hovercraft_cart_aria_label ); ?>">
+			<span class="header-cart-nav-label"><?php esc_html_e( 'Cart', 'hovercraft' ); ?></span>
+
+			<?php if ( $hovercraft_cart_count > 0 ) : ?>
+				<span class="header-cart-nav-count"><?php echo esc_html( $hovercraft_cart_count ); ?></span>
+			<?php endif; // end cart count ?>
+		</a>
+	</div><!-- header-cart-nav-item -->
+	<?php
+}
+
 // render header menu icon
 function hovercraft_header_menu_icon() {
 	// get header icon style
