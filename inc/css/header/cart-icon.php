@@ -96,12 +96,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	align-items: center;
 	gap: 8px;
 	padding: 12px 20px;
-	background: #f44336;
+	background: transparent;
 	border-radius: 0;
-	color: #ffffff !important;
+	color: <?php echo $default_text_color; ?> !important;
 	font-family: <?php echo hovercraft_format_css_font_family( $main_menu_font_family, $default_font_family ); ?>;
 	font-size: <?php echo $main_menu_desktop_font_size; ?>px;
-	font-weight: 700;
+	font-weight: <?php echo $main_menu_font_weight; ?>;
 	line-height: 1.25;
 	text-align: center;
 	text-decoration: none !important;
@@ -110,7 +110,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 .header-cart-nav-item a:hover {
-	background: #d32f2f;
+	background: transparent;
+	color: <?php echo $default_text_color; ?> !important;
+}
+
+#header-basic .header-cart-nav-item a, #header-basic .header-cart-nav-item a:hover {
+	color: <?php echo $header_basic_hero_text_color; ?> !important;
+}
+
+#header-mini-hero .header-cart-nav-item a, #header-mini-hero .header-cart-nav-item a:hover {
+	color: <?php echo $mini_hero_header_text_color; ?> !important;
+}
+
+#header-half-hero .header-cart-nav-item a, #header-half-hero .header-cart-nav-item a:hover {
+	color: <?php echo $half_hero_text_color; ?> !important;
+}
+
+#header-full-hero .header-cart-nav-item a, #header-full-hero .header-cart-nav-item a:hover {
 	color: #ffffff !important;
 }
 
@@ -121,7 +137,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	min-width: 18px;
 	height: 18px;
 	padding: 0 5px;
-	background: rgba(255, 255, 255, 0.22);
+	background: #f44336;
 	border-radius: 999px;
 	color: #ffffff;
 	font-size: 11px;
