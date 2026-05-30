@@ -47,7 +47,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 .menu-desktop > .main-menu a {
 	display: inline-block;
-	padding-left: 30px;
+	padding-left: 32px;
 	font-family: <?php echo hovercraft_format_css_font_family( $main_menu_font_family, $default_font_family ); ?>;
 	font-size: <?php echo $main_menu_desktop_font_size; ?>px;
 	font-weight: <?php echo $main_menu_font_weight; ?>;
@@ -67,8 +67,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	width: max-content;
 	padding: 0;
 	box-shadow:
-		-1px 10px 16px rgba(0, 0, 0, 0.04),
-		 1px 10px 16px rgba(0, 0, 0, 0.04),
+		-1px 8px 16px rgba(0, 0, 0, 0.04),
+		 1px 8px 16px rgba(0, 0, 0, 0.04),
 		 0 12px 16px rgba(0, 0, 0, 0.05);
 }
 
@@ -80,9 +80,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	width: max-content;
 	padding: 0;
 	box-shadow:
-		-1px 8px 14px rgba(0, 0, 0, 0.035),
-		 1px 8px 14px rgba(0, 0, 0, 0.035),
-		 0 10px 14px rgba(0, 0, 0, 0.045);
+		-1px 8px 16px rgba(0, 0, 0, 0.035),
+		 1px 8px 16px rgba(0, 0, 0, 0.035),
+		 0 8px 16px rgba(0, 0, 0, 0.045);
 }
 
 .menu-desktop > .main-menu li:hover > ul,
@@ -100,7 +100,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 .menu-desktop > .main-menu ul ul a {
 	display: block;
-	padding: 15px 30px;
+	padding: 16px 32px;
 	line-height: 1.5;
 	transition: background-color 0.2s ease;
 }
@@ -113,7 +113,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 .menu-desktop > .main-menu .menu-item-has-children > a .toggle {
 	display: inline-block;
-	margin-left: 10px;
+	margin-left: 8px;
 	font-family: FontAwesome;
 	font-size: 0.75em;
 	pointer-events: none;
