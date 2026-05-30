@@ -72,14 +72,14 @@ $mini_hero_mobile_vertical_padding = isset( $mini_hero_mobile_vertical_padding )
 
 @media screen and (max-width: 1199px) {
 	#header-mini-hero {
-		padding: 16px 20px;
+		padding: 0;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 	#header-mini-hero {
 		margin: 0 auto;
-		padding: 24px 0;
+		padding: 0;
 	}
 }
 
