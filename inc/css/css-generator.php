@@ -183,21 +183,31 @@ function hovercraft_generate_css(){
 	$half_hero_link_color = get_theme_mod( 'hovercraft_header_half_hero_link_color', '#263238' ); 
 	$half_hero_header_text_color = get_theme_mod( 'hovercraft_header_half_hero_text_color', '#263238' ); 
 	$half_hero_header_link_color = get_theme_mod( 'hovercraft_header_half_hero_link_color', '#263238' ); 
-	$basic_hero_header_text_color = get_theme_mod( 'hovercraft_header_basic_text_color', '#263238' ); 
-	$basic_hero_header_link_color = get_theme_mod( 'hovercraft_header_basic_link_color', '#263238' );
-	$header_basic_hero_text_color = get_theme_mod( 'hovercraft_header_basic_text_color', '#263238' );
-	$header_basic_hero_link_color = get_theme_mod( 'hovercraft_header_basic_link_color', '#263238' );
-	$full_hero_header_text_color = get_theme_mod( 'hovercraft_header_full_hero_text_color', '#ffffff' ); 
-	$full_hero_header_link_color = get_theme_mod( 'hovercraft_header_full_hero_link_color', '#ffffff' );
-	$after_byline_border_color = get_theme_mod( 'hovercraft_after_byline_border_color', '#fff8e1' );
-	$welcome_background_color = get_theme_mod( 'hovercraft_welcome_background_color', '#ffffff' );
-	$welcome_border_color = get_theme_mod( 'hovercraft_welcome_border_color', '#ffffff' );
-	$welcome_text_color = get_theme_mod( 'hovercraft_welcome_text_color', '#263238' );
-	$welcome_link_color = get_theme_mod( 'hovercraft_welcome_link_color', '#5C6BC0' );
-	$posthero_background_color = get_theme_mod( 'hovercraft_posthero_background_color', '#ffffff' );
-	$posthero_border_color = get_theme_mod( 'hovercraft_posthero_border_color', '#ffffff' );
+	$hero_gradient_start_color = get_theme_mod( 'hovercraft_hero_gradient_start_color', '#37474f' );
+	$hero_gradient_mid_color = get_theme_mod( 'hovercraft_hero_gradient_mid_color', '#37474f' );
+	$hero_gradient_stop_color = get_theme_mod( 'hovercraft_hero_gradient_stop_color', '#ffffff' );
+	$offcanvas_background_color = get_theme_mod( 'hovercraft_offcanvas_background_color', '#ffffff' );
+	$offcanvas_toggle_background_color = get_theme_mod( 'hovercraft_offcanvas_toggle_background_color', '#eceff1' );
+	$breadcrumbs_text_color = get_theme_mod( 'hovercraft_breadcrumbs_text_color', '#607D8B' );
+	$breadcrumbs_link_color = get_theme_mod( 'hovercraft_breadcrumbs_link_color', '#607D8B' );
+	$hero_snippet_text_color = get_theme_mod( 'hovercraft_hero_snippet_text_color', '#ffffff' );
+	$hero_snippet_link_color = get_theme_mod( 'hovercraft_hero_snippet_link_color', '#ffffff' );
+	$search_input_placeholder_color = get_theme_mod( 'hovercraft_search_input_placeholder_color', '#757575' );
+	$search_input_text_color = get_theme_mod( 'hovercraft_search_input_text_color', '#263238' );
+	$sidebar_widget_title_text_color = get_theme_mod( 'hovercraft_sidebar_widget_title_text_color', '#263238' );
+
+	// new
+	$header_basic_hero_background_color = get_theme_mod( 'hovercraft_header_basic_background_color', '#ffffff' );
+	$header_basic_hero_text_color = get_theme_mod( 'hovercraft_basic_hero_header_text_color', '#263238' );
+	$header_basic_hero_link_color = get_theme_mod( 'hovercraft_basic_hero_header_link_color', '#263238' );
+
+	$posthero_background_color = get_theme_mod( 'hovercraft_posthero_background_color', '#eceff1' );
 	$posthero_text_color = get_theme_mod( 'hovercraft_posthero_text_color', '#263238' );
 	$posthero_link_color = get_theme_mod( 'hovercraft_posthero_link_color', '#5C6BC0' );
+	$postcolumns_top_background_color = get_theme_mod( 'hovercraft_postcolumns_top_background_color', '#eceff1' );
+	$postcolumns_top_text_color = get_theme_mod( 'hovercraft_postcolumns_top_text_color', '#263238' );
+	$postcolumns_bottom_background_color = get_theme_mod( 'hovercraft_postcolumns_bottom_background_color', '#eceff1' );
+	$postcolumns_bottom_text_color = get_theme_mod( 'hovercraft_postcolumns_bottom_text_color', '#263238' );
 	$footer_callout_background_color = get_theme_mod( 'hovercraft_footer_callout_background_color', '#283593' );
 	$footer_callout_border_color = get_theme_mod( 'hovercraft_footer_callout_border_color', '#283593' );
 	$footer_callout_text_color = get_theme_mod( 'hovercraft_footer_callout_text_color', '#ffffff' );
