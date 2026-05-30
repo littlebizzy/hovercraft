@@ -64,9 +64,9 @@ For compact header strips, removing default list margin, bullets, and first-item
 
 Do not apply compact list cleanup broadly to normal article content, sidebar widgets, footer widgets, or long-form widget areas where vertical lists may be expected.
 
-Header Center and Header Aside are optional desktop widget areas in the stacked header branding row. They are intended for larger functional or visual header content such as search forms, mini cart summaries, language/currency/location switchers, trust badges, promo banners, countdowns, or similar compact commerce-focused widgets. General text utility content such as phone numbers, email links, login links, customer service links, social links, and text-only notices usually belongs in the topbar or preheader widget areas instead.
+Header Center and Header Aside are optional desktop widget areas in the stacked header branding row. They are intended for larger functional or visual header content such as search forms, language/currency/location switchers, trust badges, promo banners, countdowns, or similar compact commerce-focused widgets. General text utility content such as phone numbers, email links, login links, customer service links, social links, and text-only notices usually belongs in the topbar or preheader widget areas instead.
 
-Header Center and Header Aside should not be required to make WooCommerce cart access work. If WooCommerce is active, the theme should provide basic cart access through header template logic. Header widgets may add extra commerce messaging or optional summary content, but they should not carry critical store navigation by themselves.
+Header Center and Header Aside should not be required to make WooCommerce cart access work. If WooCommerce is active, the theme should provide basic cart access through header template logic. Header widgets may add extra commerce messaging or optional store content, but they should not carry critical store navigation by themselves.
 
 ## Supported Widget Areas
 
