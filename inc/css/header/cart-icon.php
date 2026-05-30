@@ -21,7 +21,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	justify-content: center;
 	min-width: 44px;
 	min-height: 44px;
-	padding-left: 30px;
+	padding-left: 32px;
 	text-align: center;
 	vertical-align: middle;
 	user-select: none;
@@ -43,7 +43,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /* desktop: cart icon */
 .cart-icon-wrapper i {
 	font-size: 24px;
-	padding: 10px 0;
+	padding: 8px 0;
 	line-height: 1;
 	text-decoration: none !important;
 	pointer-events: none;
@@ -59,7 +59,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	justify-content: center;
 	min-width: 18px;
 	height: 18px;
-	padding: 0 5px;
+	padding: 0 4px;
 	background-color: #f44336;
 	border-radius: 999px;
 	box-shadow: 0 0 0 2px #ffffff;
@@ -75,11 +75,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 .notification-dot {
 	top: 4px;
-	right: -6px;
+	right: -8px;
 }
 
 .notification-dot-offcanvas {
-	top: 5px;
+	top: 4px;
 	right: 12px;
 }
 
@@ -140,7 +140,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	justify-content: center;
 	min-width: 18px;
 	height: 18px;
-	padding: 0 5px;
+	padding: 0 4px;
 	background: #f44336;
 	border-radius: 999px;
 	color: #ffffff;
@@ -169,7 +169,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	text-align: center;
 	font-size: 18px;
 	font-weight: 700;
-	padding: 10px 44px;
+	padding: 8px 44px;
 	color: #ffffff;
 	background: transparent;
 	border-radius: 4px;
@@ -180,7 +180,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* mobile: cart icon inside button */
 .cart-button-offcanvas i {
-	padding-right: 10px !important;
+	padding-right: 8px !important;
 	line-height: 1;
 	text-decoration: none !important;
 }
