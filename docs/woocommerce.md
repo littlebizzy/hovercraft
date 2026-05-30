@@ -8,9 +8,11 @@ WooCommerce CSS should align plugin markup with HoverCraft's shared design syste
 
 ## Header Cart
 
-When WooCommerce is active and cart access is available, HoverCraft should render a hardcoded cart icon or cart link inside approved header navigation layouts.
+When WooCommerce is active and cart access is available, HoverCraft should render hardcoded cart access inside approved header navigation layouts.
 
 The header cart should not depend on a WooCommerce cart widget, mini cart widget, header widget area, or manually assigned menu item. Basic cart access is core store navigation and should work automatically through theme template logic.
+
+Inline header and mobile header areas may use the compact cart icon with the red notification pill. Stacked desktop header navigation should use the readable `Shopping Cart` text link with the red notification pill and no cart icon.
 
 The red cart notification pill should always render with the current cart count, including `0` for an empty cart. Keeping the pill visible avoids layout jumping and makes the cart affordance consistent across empty and non-empty cart states.
 
