@@ -56,6 +56,8 @@ In the stacked desktop branding row, branding remains the primary identity area.
 
 In the stacked desktop navigation row, primary navigation and cart content should align left, while header CTA menus should align right inside the active header-width container. If the Customizer header width is fixed, CTAs should align to the right edge of the 1200px container. If the header width is full, CTAs should align to the full-width container edge.
 
+WooCommerce cart access should be automatic when WooCommerce is active. A visible cart link or cart icon should be rendered by the theme header itself and should not depend on a widget area, menu assignment, shortcode, page builder, or other manually configured content. Changing between supported header layouts should not accidentally remove basic cart access.
+
 Mobile behavior should stay conservative when adding desktop header layout options. A desktop layout option should not unexpectedly redesign mobile headers unless that mobile behavior is intentionally planned and documented.
 
 ## Header Strips
