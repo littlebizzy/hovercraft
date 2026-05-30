@@ -16,6 +16,8 @@ Do not add widget areas speculatively. Add them only when they support a known t
 
 Widget areas should not become page-builder slots, a content modeling system, or a replacement for custom post types.
 
+Widget areas should not be required for critical theme, WooCommerce, navigation, cart, checkout, accessibility, login, search, or other basic functionality. Core features should work automatically through theme templates, hooks, and explicit PHP logic. Widgets are for additional content, supporting messages, reusable blocks, and optional enhancements.
+
 Repeated visual sections should prefer one reusable widget area that renders each widget as an item, instead of many numbered widget areas.
 
 ## Registration Pattern
@@ -64,6 +66,8 @@ Do not apply compact list cleanup broadly to normal article content, sidebar wid
 
 Header Center and Header Aside are optional desktop widget areas in the stacked header branding row. They are intended for larger functional or visual header content such as search forms, mini cart summaries, language/currency/location switchers, trust badges, promo banners, countdowns, or similar compact commerce-focused widgets. General text utility content such as phone numbers, email links, login links, customer service links, social links, and text-only notices usually belongs in the topbar or preheader widget areas instead.
 
+Header Center and Header Aside should not be required to make WooCommerce cart access work. If WooCommerce is active, the theme should provide basic cart access through header template logic. Header widgets may add extra commerce messaging or optional summary content, but they should not carry critical store navigation by themselves.
+
 ## Supported Widget Areas
 
 ### Global And Layout Areas
@@ -105,6 +109,8 @@ Header Center and Header Aside render only in the stacked header layout. They do
 | After Add To Cart | `hovercraft_after_add_to_cart` | `widget-after-add-to-cart` |
 
 The `After Add To Cart` widget area renders below the WooCommerce add-to-cart form through the `woocommerce_after_add_to_cart_form` hook.
+
+WooCommerce widget areas are optional support areas for extra content such as trust messages, payment notices, shipping notes, shortcodes, sale notices, and reusable product-page messages. They should not be required for core store behavior such as cart access, checkout access, product purchasing, variation selection, or add-to-cart behavior.
 
 ### Repeating Layout Areas
 
