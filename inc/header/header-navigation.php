@@ -35,9 +35,13 @@ function hovercraft_header_cart_icon() {
 	// get header cart icon state
 	$hovercraft_header_icon_style = hovercraft_get_header_icon_style();
 	$hovercraft_cart_count = WC()->cart->get_cart_contents_count();
+	$hovercraft_cart_aria_label = sprintf(
+		_n( 'View cart, %d item', 'View cart, %d items', $hovercraft_cart_count, 'hovercraft' ),
+		$hovercraft_cart_count
+	);
 	?>
 	<div class="cart-icon-wrapper">
-		<a href="<?php echo esc_url( wc_get_cart_url() ); ?>" aria-label="<?php echo esc_attr__( 'View cart', 'hovercraft' ); ?>">
+		<a href="<?php echo esc_url( wc_get_cart_url() ); ?>" aria-label="<?php echo esc_attr( $hovercraft_cart_aria_label ); ?>">
 			<?php if ( 'material_icons_classic' === $hovercraft_header_icon_style ) : ?>
 				<i class="material-icons shopping_cart" aria-hidden="true">shopping_cart</i>
 			<?php elseif ( 'font_awesome_version_6' === $hovercraft_header_icon_style ) : ?>
@@ -75,9 +79,7 @@ function hovercraft_header_cart_nav_item() {
 
 			<span class="header-cart-nav-label"><?php esc_html_e( 'Cart', 'hovercraft' ); ?></span>
 
-			<?php if ( $hovercraft_cart_count > 0 ) : ?>
-				<span class="header-cart-nav-count"><?php echo esc_html( $hovercraft_cart_count ); ?></span>
-			<?php endif; // end cart count ?>
+			<span class="header-cart-nav-count" aria-hidden="true"><?php echo esc_html( $hovercraft_cart_count ); ?></span><!-- header-cart-nav-count -->
 		</a>
 	</div><!-- header-cart-nav-item -->
 	<?php
