@@ -35,7 +35,7 @@ $hovercraft_b = hexdec( substr( $hovercraft_hex, 4, 2 ) );
 .input-container:hover,
 .wp-block-search__inside-wrapper:hover,
 .woocommerce-product-search:hover {
-	box-shadow: 0 0 14px rgba(0, 0, 0, 0.10);
+	box-shadow: 0 0 16px rgba(0, 0, 0, 0.10);
 }
 
 .input-container:focus-within,
@@ -49,7 +49,7 @@ $hovercraft_b = hexdec( substr( $hovercraft_hex, 4, 2 ) );
 .woocommerce-product-search .search-field {
 	flex: 1 1 auto;
 	min-width: 0;
-	height: 46px;
+	height: 48px;
 	padding: 0 16px !important;
 	border: 1px solid <?php echo $search_bar_border_color; ?> !important;
 	border-right: 0 !important;
@@ -83,7 +83,7 @@ $hovercraft_b = hexdec( substr( $hovercraft_hex, 4, 2 ) );
 .woocommerce-product-search button {
 	flex: 0 0 64px;
 	width: auto;
-	height: 46px;
+	height: 48px;
 	padding: 0 !important;
 	border: 0;
 	border-radius: 0 4px 4px 0 !important;
