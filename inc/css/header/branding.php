@@ -33,12 +33,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 @media screen and (max-width: 1199px) {
 	#branding {
-		column-gap: 10px;
+		column-gap: 8px;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 	#branding {
-		column-gap: 20px;
+		column-gap: 16px;
 	}
 }
