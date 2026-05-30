@@ -85,12 +85,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	#header-half-hero > .header-layout-stacked-top > .header-layout-stacked-inner,
 	#header-full-hero > .header-layout-inline,
 	#header-full-hero > .header-layout-stacked-top > .header-layout-stacked-inner {
-		padding: 24px 0;
-	}
-
-	#preheader + .header-layout-inline,
-	#preheader + .header-layout-stacked-top > .header-layout-stacked-inner {
-		padding-top: 0;
+		padding: 16px 0;
 	}
 
 	#header-basic:has(.header-layout-stacked),
@@ -146,7 +141,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 
 	.header-layout-stacked-bottom {
-		margin-top: 24px;
+		margin-top: 16px;
 	}
 
 	#header-full-hero .header-layout-stacked-bottom {
