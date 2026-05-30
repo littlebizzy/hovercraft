@@ -81,7 +81,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 
 	.header-layout-stacked-top .header-layout-stacked-inner {
-		gap: 30px;
+		gap: 32px;
 	}
 
 	.header-center {
@@ -110,7 +110,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	.header-aside ul li {
 		list-style-type: none;
 		display: inline-block;
-		margin: 0 0 0 10px;
+		margin: 0 0 0 8px;
 	}
 
 	.header-center ul li:first-child,
@@ -119,7 +119,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 
 	.header-layout-stacked-bottom {
-		margin-top: 20px;
+		margin-top: 24px;
 	}
 
 	#header-full-hero .header-layout-stacked-bottom {
@@ -144,7 +144,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	.header-layout-stacked-bottom .menu-desktop {
 		display: flex;
 		align-items: center;
-		gap: 30px;
+		gap: 32px;
 	}
 
 	.header-layout-stacked-bottom .menu-desktop > .main-menu {
@@ -154,7 +154,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 	.header-layout-stacked-bottom .menu-desktop > .main-menu > ul > li > a {
 		display: block;
-		padding: 12px 18px;
+		padding: 12px 16px;
 	}
 
 	.header-layout-stacked-bottom .menu-desktop > .main-menu > ul > li:first-child > a {
