@@ -85,6 +85,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 	#header-half-hero > .header-layout-stacked-top > .header-layout-stacked-inner,
 	#header-full-hero > .header-layout-inline,
 	#header-full-hero > .header-layout-stacked-top > .header-layout-stacked-inner {
+		padding: 16px 0;
+	}
+
+	#header-basic > .header-layout-inline.full,
+	#header-basic > .header-layout-stacked-top > .header-layout-stacked-inner.full,
+	#header-mini-hero > .header-layout-inline.full,
+	#header-mini-hero > .header-layout-stacked-top > .header-layout-stacked-inner.full,
+	#header-half-hero > .header-layout-inline.full,
+	#header-half-hero > .header-layout-stacked-top > .header-layout-stacked-inner.full,
+	#header-full-hero > .header-layout-inline.full,
+	#header-full-hero > .header-layout-stacked-top > .header-layout-stacked-inner.full {
 		padding: 16px 40px;
 	}
 
