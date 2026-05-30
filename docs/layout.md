@@ -48,9 +48,11 @@ Prefer explicit mobile and desktop blocks when values differ, and shared base de
 
 HoverCraft spacing is still being standardized, but new layout work should start from a simple 4px and 8px rhythm instead of arbitrary values.
 
-Prefer common spacing values such as `4px`, `8px`, `16px`, `24px`, `32px`, and `40px` when setting padding, margin, gap, and compact layout offsets.
+Prefer common spacing values such as `4px`, `8px`, `12px`, `16px`, `24px`, `32px`, and `40px` when setting padding, margin, gap, and compact layout offsets.
 
 Use `8px` for tight utility spacing, small gaps, and compact header-strip rhythm.
+
+Use `12px` for compact vertical padding in buttons, CTAs, navigation items, and other controls where `8px` feels too tight and `16px` feels too tall.
 
 Use `16px` for normal compact spacing, especially on mobile or inside small components.
 
