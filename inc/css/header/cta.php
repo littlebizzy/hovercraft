@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 .cta-header-primary {
 	display: inline-block;
-	margin-left: 30px;
+	margin-left: 32px;
 }
 
 .cta-header-primary ul li {
@@ -30,7 +30,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	font-weight: 700;
 	text-transform: <?php echo $main_menu_text_transform; ?>;
 	display: inline-block;
-	padding: 10px 20px;
+	padding: 12px 16px;
 	background: <?php echo $default_link_color; ?>;
 	border-radius: 4px;
 	text-decoration: none !important;
@@ -50,7 +50,7 @@ a.button-primary {
 	font-weight: 700;
 	text-transform: <?php echo $main_menu_text_transform; ?>;
 	display: inline-block;
-	padding: 10px 20px;
+	padding: 12px 16px;
 	background: <?php echo $default_link_color; ?>;
 	border-radius: 4px;
 	text-decoration: none !important;
@@ -68,7 +68,7 @@ a.button-primary:hover {
 
 .cta-header-secondary {
 	display: inline-block;
-	margin-left: 30px;
+	margin-left: 32px;
 }
 
 .cta-header-secondary ul li {
@@ -86,7 +86,7 @@ a.button-primary:hover {
 	font-weight: 400;
 	text-transform: <?php echo $main_menu_text_transform; ?>;
 	display: inline-block;
-	padding: 10px 20px;
+	padding: 12px 16px;
 	background: transparent;
 	border-radius: 4px;
 	text-decoration: none;
@@ -102,7 +102,7 @@ a.button-primary:hover {
 	font-weight: 400;
 	text-transform: <?php echo $main_menu_text_transform; ?>;
 	display: inline-block;
-	padding: 10px 20px;
+	padding: 12px 16px;
 	background: transparent;
 	border-radius: 4px;
 	text-decoration: none;
@@ -135,7 +135,7 @@ a.button-primary:hover {
 .header-layout-stacked-bottom .cta-header-secondary ul li a {
 	display: flex;
 	align-items: center;
-	padding: 12px 20px;
+	padding: 12px 16px;
 	border-radius: 0;
 }
 
