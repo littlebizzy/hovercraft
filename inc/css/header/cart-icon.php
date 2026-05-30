@@ -109,9 +109,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 	white-space: nowrap;
 }
 
+.header-layout-stacked-bottom .header-cart-nav-item:last-child a {
+	padding-right: 0;
+}
+
 .header-cart-nav-item a:hover {
 	background: transparent;
 	color: <?php echo $default_text_color; ?> !important;
+}
+
+.header-cart-nav-icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 1;
+}
+
+.header-cart-nav-icon i {
+	font-size: 1em;
+	line-height: 1;
 }
 
 #header-basic .header-cart-nav-item a, #header-basic .header-cart-nav-item a:hover {
