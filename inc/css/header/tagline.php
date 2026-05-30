@@ -22,11 +22,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 @media screen and (min-width: 1200px) {
 	.tagline {
 		<?php if ( $tagline_display == 'right_of_site_title' ) { 
-			echo "margin-left: 30px;\n"; 
+			echo "margin-left: 32px;\n"; 
 		} else { 
 			echo "margin-left: 0;\n"; 
 		}  ?>
-		padding-top: 10px;
+		padding-top: 8px;
 		<?php if ( $tagline_display == 'right_of_site_title' ) { 
 			echo "display: inline-block;\n";
 		} elseif ( $tagline_display == 'below_site_title' ) {
