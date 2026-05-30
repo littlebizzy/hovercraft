@@ -44,6 +44,24 @@ Do not create empty breakpoint blocks or duplicate identical declarations just t
 
 Prefer explicit mobile and desktop blocks when values differ, and shared base declarations when values are truly identical.
 
+## Spacing Rhythm
+
+HoverCraft spacing is still being standardized, but new layout work should start from a simple 4px and 8px rhythm instead of arbitrary values.
+
+Prefer common spacing values such as `4px`, `8px`, `16px`, `24px`, `32px`, and `40px` when setting padding, margin, gap, and compact layout offsets.
+
+Use `8px` for tight utility spacing, small gaps, and compact header-strip rhythm.
+
+Use `16px` for normal compact spacing, especially on mobile or inside small components.
+
+Use `24px` or `32px` for medium breathing room between related sections.
+
+Use `40px` only when the spacing is intentionally more structural, such as primary content/sidebar math or larger section rhythm. Avoid using `40px` as casual padding inside small utility sections.
+
+Avoid new one-off spacing values such as `10px` unless there is a clear visual or compatibility reason.
+
+When modernizing old inline list spacing, prefer `gap` on flex containers when the markup already supports flex. Existing inline-block lists may continue using margin until the related component is being cleaned up.
+
 ## Header Layouts
 
 HoverCraft supports a small set of global header layout patterns through the Customizer. Header layouts should solve real navigation and branding needs without becoming a page-builder-style header system.
