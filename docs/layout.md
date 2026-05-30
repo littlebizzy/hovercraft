@@ -54,7 +54,7 @@ Header layout template parts should stay explicit and easy to audit. The shared 
 
 In the stacked desktop branding row, branding remains the primary identity area. Header Center and Header Aside are optional desktop widget areas for larger functional or visual header content. They should not replace topbar or preheader utility roles such as phone numbers, email links, login links, customer service links, social links, or simple text notices.
 
-In the stacked desktop navigation row, primary navigation and cart content should align left, while header CTA menus should align right inside the active header-width container. If the Customizer header width is fixed, CTAs should align to the right edge of the 1200px container. If the header width is full, CTAs should align to the full-width container edge.
+In the stacked desktop navigation row, primary navigation and the automatic cart link should align left, while header CTA menus should align right inside the active header-width container. If the Customizer header width is fixed, CTAs should align to the right edge of the 1200px container. If the header width is full, CTAs should align to the full-width container edge.
 
 WooCommerce cart access should be automatic when WooCommerce is active. A visible cart link or cart icon should be rendered by the theme header itself and should not depend on a widget area, menu assignment, shortcode, page builder, or other manually configured content. Changing between supported header layouts should not accidentally remove basic cart access.
 
