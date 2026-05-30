@@ -178,14 +178,14 @@ video.hero-background-video {
 
 @media screen and (max-width: 1199px) {
 	#header-full-hero {
-		padding: 10px 20px;
+		padding: 16px 20px;
 	}
 }
 
 @media screen and (min-width: 1200px) {
 	#header-full-hero {
 		margin: 0 auto;
-		padding: 20px 0;
+		padding: 24px 0;
 	}
 }
 
