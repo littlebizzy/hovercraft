@@ -83,6 +83,53 @@ if ( ! defined( 'ABSPATH' ) ) {
 	right: 12px;
 }
 
+/* desktop: header cart nav item */
+.header-cart-nav-item {
+	display: inline-flex;
+	align-items: stretch;
+	margin-left: 0;
+	vertical-align: middle;
+}
+
+.header-cart-nav-item a {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 12px 20px;
+	background: #f44336;
+	border-radius: 0;
+	color: #ffffff !important;
+	font-family: <?php echo hovercraft_format_css_font_family( $main_menu_font_family, $default_font_family ); ?>;
+	font-size: <?php echo $main_menu_desktop_font_size; ?>px;
+	font-weight: 700;
+	line-height: 1.25;
+	text-align: center;
+	text-decoration: none !important;
+	text-transform: <?php echo $main_menu_text_transform; ?>;
+	white-space: nowrap;
+}
+
+.header-cart-nav-item a:hover {
+	background: #d32f2f;
+	color: #ffffff !important;
+}
+
+.header-cart-nav-count {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 18px;
+	height: 18px;
+	padding: 0 5px;
+	background: rgba(255, 255, 255, 0.22);
+	border-radius: 999px;
+	color: #ffffff;
+	font-size: 11px;
+	font-weight: 700;
+	line-height: 18px;
+	text-align: center;
+}
+
 /* mobile: cart button wrapper */
 .cart-button-offcanvas-wrapper {
 	width: 100%;
