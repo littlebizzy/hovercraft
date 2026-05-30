@@ -118,7 +118,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 h1.half-hero-title {
-	margin-bottom: 30px;
+	margin-bottom: 32px;
 	color: #ffffff;
 	font-weight: 700;
 }
