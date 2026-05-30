@@ -22,7 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 @media screen and (min-width: 1200px) {
 	#preheader {
-		padding: 8px 0 0 0;
+		padding: 0;
 	}
 }
 
