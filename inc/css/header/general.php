@@ -85,7 +85,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	#header-half-hero > .header-layout-stacked-top > .header-layout-stacked-inner,
 	#header-full-hero > .header-layout-inline,
 	#header-full-hero > .header-layout-stacked-top > .header-layout-stacked-inner {
-		padding: 16px 0;
+		padding: 16px 40px;
 	}
 
 	#header-basic:has(.header-layout-stacked),
