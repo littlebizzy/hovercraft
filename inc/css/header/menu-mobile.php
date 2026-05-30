@@ -66,7 +66,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		display: inline-flex;
 		justify-content: center;
 		align-items: center;
-		padding: 10px;
+		padding: 8px;
 		min-width: 44px;
 		min-height: 44px;
 		text-align: right;
@@ -139,7 +139,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 .overlay ul a {
 	display: block;
-	padding: 5px 0;
+	padding: 8px 0;
 	font-size: 18px;
 }
 
@@ -236,9 +236,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 #hovercraft-offcanvas-menu a {
 	color: rgba(0, 0, 0, 0.701961);
-	padding: 7px 0 7px 20px;
+	padding: 8px 0 8px 20px;
 	display: inline-block;
-	width: calc(100% - 50px);
+	width: calc(100% - 48px);
 	text-decoration: none;
 	vertical-align: middle;
 }
@@ -257,7 +257,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 #hovercraft-offcanvas-menu a.menu-toggle {
 	position: relative;
-	width: 50px;
+	width: 48px;
 	text-align: center;
 	vertical-align: middle;
 	background: <?php echo $offcanvas_toggle_background_color; ?>;
@@ -322,4 +322,3 @@ if ( ! defined( 'ABSPATH' ) ) {
 	visibility: visible;
 	opacity: 1;
 }
-
