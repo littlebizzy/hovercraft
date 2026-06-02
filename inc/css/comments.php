@@ -142,8 +142,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /* comment form */
 #respond textarea,
 #respond input[type="text"],
-#respond input[type="email"],
-#respond input[type="url"] {
+#respond input[type="email"] {
 	max-width: 100%;
 	border-radius: 4px;
 	width: 100%;
