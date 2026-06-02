@@ -10,6 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* comments */
 
+/* remove bullets from comment lists */
 .comment-list,
 .comment-list .children {
 	list-style: none;
@@ -17,14 +18,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	padding: 0;
 }
 
-.comment-list .children {
-	border-left: 1px solid rgba(0, 0, 0, 0.08);
-	border-radius: 0;
-	margin-left: 2rem;
-	margin-top: 1rem;
-	padding-left: 1rem;
+.comment-list > li,
+.comment-list .children > li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
 }
 
+/* comment body styling */
 .comment-body {
 	border-bottom: 1px solid rgba(0, 0, 0, 0.12);
 	border-radius: 0;
@@ -32,17 +33,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 	padding-bottom: 20px;
 }
 
+/* author name */
 .comment-author {
 	font-weight: 600;
 	margin-bottom: 4px;
 }
 
+/* comment meta */
 .comment-meta {
 	color: rgba(0, 0, 0, 0.62);
 	font-size: 14px;
 	margin-bottom: 10px;
 }
 
+/* comment content */
 .comment-content {
 	font-size: 16px;
 	line-height: 1.6;
@@ -67,6 +71,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	padding: 0;
 }
 
+/* reply link */
 .comment-reply-link,
 #cancel-comment-reply-link {
 	border-radius: 0;
@@ -84,6 +89,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 	text-decoration: underline;
 }
 
+/* nested comments */
+.comment-list .children {
+	border-left: 1px solid rgba(0, 0, 0, 0.08);
+	border-radius: 0;
+	margin-left: 2rem;
+	margin-top: 1rem;
+	padding-left: 1rem;
+}
+
+/* comment anchors */
 .comment-list .comment,
 .comment-list .pingback,
 .comment-list .trackback,
@@ -91,6 +106,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	scroll-margin-top: 120px;
 }
 
+/* pagination */
 .comment-navigation {
 	font-size: 14px;
 	margin-top: 20px;
@@ -111,16 +127,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 	text-align: right;
 }
 
+/* moderation notice */
 .comment-awaiting-moderation {
 	font-style: italic;
 	margin-bottom: 10px;
 }
 
+/* post author comments */
 .bypostauthor .comment-body {
 	border-left: 3px solid rgba(0, 0, 0, 0.12);
 	padding-left: 16px;
 }
 
+/* comment form */
 #respond textarea,
 #respond input[type="text"],
 #respond input[type="email"] {
