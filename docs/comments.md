@@ -21,6 +21,8 @@ The public comment form should collect only practical identity fields by default
 
 HoverCraft intentionally disables the public website URL field. The URL field is legacy blog-era behavior and is commonly used for spam or low-value promotional links.
 
+HoverCraft should also display comment author names as plain text, not links, so old or imported comment author URL values do not render publicly.
+
 When the website URL field is disabled, any comment cookie consent text should mention only the fields HoverCraft actually saves, such as name and email.
 
 Keep WordPress's required field behavior for name and email. If WordPress requires name and email, HoverCraft may show a simple required indicator and add the matching `required` and `aria-required` attributes.
@@ -41,11 +43,13 @@ Comment navigation should use WordPress core helpers where possible instead of m
 
 Comment CSS should target `.comment-list` generically instead of assuming only `ul.comment-list` or only `ol.comment-list`.
 
+Comment CSS should not include selectors for disabled URL fields.
+
 Comment list reset rules should not remove bullets, numbers, spacing, or padding from user-written lists inside `.comment-content`.
 
 Comment anchor targets may use `scroll-margin-top` so jumps to comments and reply forms are not hidden behind fixed browser or theme chrome.
 
-HoverCraft should declare WordPress HTML5 support for comment forms and comment lists while keeping HoverCraft-specific choices like disabling the URL field.
+HoverCraft should declare WordPress HTML5 support for comment forms and comment lists while keeping HoverCraft-specific choices like disabling the URL field and comment author URL output.
 
 ## Template Closers
 
