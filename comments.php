@@ -2,70 +2,62 @@
 
 // exit if post is password-protected
 if ( post_password_required() ) {
-    return;
+	return;
 }
 
 // exit if comments are closed and none exist
 if ( ! comments_open() && ! get_comments_number() ) {
-    return;
+	return;
 }
 ?>
 
 <div id="comments" class="comments-area">
 
-    <?php if ( have_comments() ) : ?>
+	<?php if ( have_comments() ) : ?>
 
-        <h3 class="comments-title">
-            <?php
-            // display comment count with post title
-            comments_number(
-                esc_html__( 'No comments yet on', 'hovercraft' ),
-                esc_html__( 'One comment on', 'hovercraft' ),
-                esc_html__( '% comments on', 'hovercraft' )
-            );
-            echo ' ' . esc_html( get_the_title() );
-            ?>
-        </h3>
+		<h3 class="comments-title">
+			<?php
+			$hovercraft_comment_count = get_comments_number();
 
-        <ol class="comment-list">
-            <?php
-            // output comments using overridable args
-            wp_list_comments( apply_filters( 'hovercraft_comments_args', array(
-                'style'       => 'ol',
-                'short_ping'  => true,
-                'avatar_size' => 74,
-            ) ) );
-            ?>
-        </ol><!-- comment-list -->
+			if ( 1 === (int) $hovercraft_comment_count ) {
+				printf(
+					esc_html__( 'One comment on %s', 'hovercraft' ),
+					'<span>' . esc_html( get_the_title() ) . '</span>'
+				);
+			} else {
+				printf(
+					esc_html( _nx( '%1$s comment on %2$s', '%1$s comments on %2$s', $hovercraft_comment_count, 'comments title', 'hovercraft' ) ),
+					number_format_i18n( $hovercraft_comment_count ),
+					'<span>' . esc_html( get_the_title() ) . '</span>'
+				);
+			}
+			?>
+		</h3>
 
-        <?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : ?>
-            <nav class="comment-navigation" aria-label="<?php esc_attr_e( 'Comment Navigation', 'hovercraft' ); ?>">
-                <p class="screen-reader-text">
-                    <?php esc_html_e( 'Comment Navigation', 'hovercraft' ); ?>
-                </p>
-                <div class="comment-nav-prev">
-                    <?php previous_comments_link( esc_html__( '&larr; Older Comments', 'hovercraft' ) ); ?>
-                </div><!-- comment-nav-prev -->
-                <div class="comment-nav-next">
-                    <?php next_comments_link( esc_html__( 'Newer Comments &rarr;', 'hovercraft' ) ); ?>
-                </div><!-- comment-nav-next -->
-            </nav><!-- comment-navigation -->
-        <?php endif; // end comment pagination ?>
+		<?php the_comments_navigation(); ?>
 
-    <?php endif; // end have_comments ?>
+		<ol class="comment-list">
+			<?php
+			wp_list_comments( apply_filters( 'hovercraft_comments_args', array(
+				'style'      => 'ol',
+				'short_ping' => true,
+			) ) );
+			?>
+		</ol><!-- comment-list -->
 
-    <?php if ( ! comments_open() && get_comments_number() ) : ?>
-        <p class="no-comments">
-            <?php esc_html_e( 'Comments are closed.', 'hovercraft' ); ?>
-        </p>
-    <?php endif; // end comments_open ?>
+		<?php the_comments_navigation(); ?>
 
-    <?php
-    // display the comment form
-    comment_form();
-    ?>
+	<?php endif; // end have_comments ?>
+
+	<?php if ( ! comments_open() && get_comments_number() ) : ?>
+		<p class="no-comments">
+			<?php esc_html_e( 'Comments are closed.', 'hovercraft' ); ?>
+		</p>
+	<?php endif; // end comments_open ?>
+
+	<?php
+	// display the comment form
+	comment_form();
+	?>
 
 </div><!-- comments -->
-
-<?php
-?>
