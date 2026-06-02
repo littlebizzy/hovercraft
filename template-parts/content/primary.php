@@ -47,7 +47,9 @@ if ( hovercraft_should_show_sidebar() ) : ?>
 	<div class="clear"></div>
 	</div><!-- content-wrapper -->
 	
-	<?php comments_template(); ?> 
+	<?php if ( is_singular() ) : ?>
+		<?php comments_template(); ?>
+	<?php endif; // end singular comments ?>
 
 	<div class="clear"></div>
 </div><!-- primary -->
