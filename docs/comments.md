@@ -19,9 +19,13 @@ HoverCraft should keep WordPress comment functionality simple, low-friction, and
 
 The public comment form should collect only practical identity fields by default: name, email, and comment text.
 
-Do not show the website URL field in the public comment form by default. The URL field is legacy blog-era behavior and is commonly used for spam or low-value promotional links.
+HoverCraft intentionally disables the public website URL field. The URL field is legacy blog-era behavior and is commonly used for spam or low-value promotional links.
+
+When the website URL field is disabled, any comment cookie consent text should mention only the fields HoverCraft actually saves, such as name and email.
 
 Keep WordPress's required field behavior for name and email. If WordPress requires name and email, HoverCraft may show a simple required indicator and add the matching `required` and `aria-required` attributes.
+
+Keep useful WordPress core field attributes when overriding comment fields, including maxlength, autocomplete, and aria helper attributes where applicable.
 
 Keep WordPress's expected field `name` attributes for comment submission. Custom IDs are acceptable when they avoid anchor conflicts, such as reserving `#author` for the author box and using `#comment-author` for the comment form name field.
 
@@ -31,9 +35,17 @@ Comment listing args may remain filterable through HoverCraft-specific filters w
 
 Threaded comments should load WordPress core reply handling only on singular views when comments are open and nested comments are enabled.
 
+Comment templates should only be loaded on singular views. Archive templates should not display the comment form or comments from whichever post happens to be active in the loop.
+
 Comment navigation should use WordPress core helpers where possible instead of manually rebuilding previous and next links.
 
 Comment CSS should target `.comment-list` generically instead of assuming only `ul.comment-list` or only `ol.comment-list`.
+
+Comment list reset rules should not remove bullets, numbers, spacing, or padding from user-written lists inside `.comment-content`.
+
+Comment anchor targets may use `scroll-margin-top` so jumps to comments and reply forms are not hidden behind fixed browser or theme chrome.
+
+HoverCraft should declare WordPress HTML5 support for comment forms and comment lists while keeping HoverCraft-specific choices like disabling the URL field.
 
 ## Template Closers
 
