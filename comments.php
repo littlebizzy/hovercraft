@@ -39,8 +39,7 @@ if ( ! comments_open() && ! get_comments_number() ) {
 		<ol class="comment-list">
 			<?php
 			wp_list_comments( apply_filters( 'hovercraft_comments_args', array(
-				'style'      => 'ol',
-				'short_ping' => true,
+				'style' => 'ol',
 			) ) );
 			?>
 		</ol><!-- comment-list -->
