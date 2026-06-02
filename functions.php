@@ -6,11 +6,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( ! defined( 'HOVERCRAFT_VERSION' ) ) {
-	define( 'HOVERCRAFT_VERSION', '0.3.210' );
+	define( 'HOVERCRAFT_VERSION', '0.3.211' );
 }
 
 // rss feeds
 add_theme_support( 'automatic-feed-links' );
+
+// html5 markup
+add_theme_support( 'html5', array(
+	'comment-form',
+	'comment-list',
+	'search-form',
+	'gallery',
+	'caption',
+	'script',
+	'style',
+) );
 
 // page excerpts
 add_post_type_support( 'page', 'excerpt' );
