@@ -15,24 +15,9 @@ if ( ! comments_open() && ! get_comments_number() ) {
 
 	<?php if ( have_comments() ) : ?>
 
-		<h3 class="comments-title">
-			<?php
-			$hovercraft_comment_count = get_comments_number();
-
-			if ( 1 === (int) $hovercraft_comment_count ) {
-				printf(
-					esc_html__( 'One comment on %s', 'hovercraft' ),
-					'<span>' . esc_html( get_the_title() ) . '</span>'
-				);
-			} else {
-				printf(
-					esc_html( _nx( '%1$s comment on %2$s', '%1$s comments on %2$s', $hovercraft_comment_count, 'comments title', 'hovercraft' ) ),
-					number_format_i18n( $hovercraft_comment_count ),
-					'<span>' . esc_html( get_the_title() ) . '</span>'
-				);
-			}
-			?>
-		</h3>
+		<h2 class="comments-title">
+			<?php comments_number(); ?>
+		</h2>
 
 		<?php the_comments_navigation(); ?>
 
@@ -54,9 +39,6 @@ if ( ! comments_open() && ! get_comments_number() ) {
 		</p>
 	<?php endif; // end comments_open ?>
 
-	<?php
-	// display the comment form
-	comment_form();
-	?>
+	<?php comment_form(); ?>
 
 </div><!-- comments -->
