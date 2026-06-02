@@ -12,10 +12,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* remove bullets from comment lists */
 .comment-list,
-.comment-list ol,
-.comment-list ul,
-.comment-list .children,
-.comment-list li {
+.comment-list .children {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.comment-list > li,
+.comment-list .children > li {
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -48,6 +52,25 @@ if ( ! defined( 'ABSPATH' ) ) {
 	line-height: 1.6;
 }
 
+.comment-content ul,
+.comment-content ol {
+	margin: 0 0 1.5em 1.5em;
+	padding-left: 1.5em;
+}
+
+.comment-content ul {
+	list-style: disc;
+}
+
+.comment-content ol {
+	list-style: decimal;
+}
+
+.comment-content li {
+	margin-bottom: 0.5em;
+	padding: 0;
+}
+
 /* reply link */
 .comment-reply-link,
 #cancel-comment-reply-link {
@@ -73,6 +96,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	margin-left: 2rem;
 	margin-top: 1rem;
 	padding-left: 1rem;
+}
+
+/* comment anchors */
+.comment-list .comment,
+.comment-list .pingback,
+.comment-list .trackback,
+#respond {
+	scroll-margin-top: 120px;
 }
 
 /* pagination */
@@ -121,4 +152,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 #respond input[type="submit"] {
 	border-radius: 4px;
 	cursor: pointer;
+}
+
+.comment-form-cookies-consent {
+	display: flex;
+	align-items: flex-start;
+	gap: 8px;
+}
+
+.comment-form-cookies-consent input[type="checkbox"] {
+	margin-top: 0.35em;
+}
+
+.comment-form-cookies-consent label {
+	display: inline;
 }
