@@ -10,13 +10,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* comments */
 
-/* remove bullets from all comment lists */
-ul.comments-list,
-ul.comment-list,
-ul.comment-list ul,
-ul.children,
-ul.comment-list .children,
-ul.comment-list li {
+/* remove bullets from comment lists */
+.comment-list,
+.comment-list ol,
+.comment-list ul,
+.comment-list .children,
+.comment-list li {
 	list-style: none;
 	margin: 0;
 	padding: 0;
@@ -50,7 +49,8 @@ ul.comment-list li {
 }
 
 /* reply link */
-.comment-reply-link {
+.comment-reply-link,
+#cancel-comment-reply-link {
 	border-radius: 0;
 	color: <?php echo $default_link_color; ?>;
 	display: inline-block;
@@ -60,7 +60,8 @@ ul.comment-list li {
 	transition: color 0.2s ease;
 }
 
-.comment-reply-link:hover {
+.comment-reply-link:hover,
+#cancel-comment-reply-link:hover {
 	color: <?php echo $default_hover_color; ?>;
 	text-decoration: underline;
 }
@@ -76,20 +77,35 @@ ul.comment-list li {
 
 /* pagination */
 .comment-navigation {
-	display: flex;
 	font-size: 14px;
-	gap: 20px;
-	justify-content: space-between;
 	margin-top: 20px;
 }
 
-.comment-nav-prev,
-.comment-nav-next {
+.comment-navigation .nav-links {
+	display: flex;
+	gap: 20px;
+	justify-content: space-between;
+}
+
+.comment-navigation .nav-previous,
+.comment-navigation .nav-next {
 	flex: 1;
 }
 
-.comment-nav-next {
+.comment-navigation .nav-next {
 	text-align: right;
+}
+
+/* moderation notice */
+.comment-awaiting-moderation {
+	font-style: italic;
+	margin-bottom: 10px;
+}
+
+/* post author comments */
+.bypostauthor .comment-body {
+	border-left: 3px solid rgba(0, 0, 0, 0.12);
+	padding-left: 16px;
 }
 
 /* comment form */
