@@ -85,6 +85,7 @@ require get_template_directory() . '/inc/taxonomy/category-portal.php';
 require get_template_directory() . '/inc/taxonomy/category-hide-certain.php';
 
 // comments
+require get_template_directory() . '/inc/comments/comment-author-url.php';
 require get_template_directory() . '/inc/comments/comment-fields.php';
 require get_template_directory() . '/inc/comments/comment-reply.php';
 
