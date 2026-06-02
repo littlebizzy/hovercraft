@@ -6,7 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 if ( ! defined( 'HOVERCRAFT_VERSION' ) ) {
-	define( 'HOVERCRAFT_VERSION', '0.3.209' );
+	define( 'HOVERCRAFT_VERSION', '0.3.210' );
 }
 
 // rss feeds
@@ -75,6 +75,7 @@ require get_template_directory() . '/inc/taxonomy/category-hide-certain.php';
 
 // comments
 require get_template_directory() . '/inc/comments/comment-fields.php';
+require get_template_directory() . '/inc/comments/comment-reply.php';
 
 // widgets
 require get_template_directory() . '/inc/widgets/widget-areas.php';
