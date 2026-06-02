@@ -29,6 +29,12 @@ Do not duplicate WordPress core comment form defaults unless HoverCraft intentio
 
 Comment listing args may remain filterable through HoverCraft-specific filters where useful, but do not add no-op callbacks that simply return the same args.
 
+Threaded comments should load WordPress core reply handling only on singular views when comments are open and nested comments are enabled.
+
+Comment navigation should use WordPress core helpers where possible instead of manually rebuilding previous and next links.
+
+Comment CSS should target `.comment-list` generically instead of assuming only `ul.comment-list` or only `ol.comment-list`.
+
 ## Template Closers
 
 Trailing comments are acceptable on major template closers, including major HTML closing tags and PHP `endif`, `endwhile`, `endforeach`, `endfor`, and `endswitch` closers.
