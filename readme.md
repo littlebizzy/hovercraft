@@ -46,6 +46,7 @@ The theme should remain boring, explicit, and easy to maintain. New features sho
 - [CSS organization](docs/css.md)
 - [Customizer](docs/customizer.md)
 - [Page builders](docs/page-builders.md)
+- [Cloudflare](docs/cloudflare.md)
 - [Heros](docs/heros.md)
 - [Headings](docs/headings.md)
 - [Corner radius](docs/corner-radius.md)
