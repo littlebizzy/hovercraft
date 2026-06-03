@@ -37,6 +37,8 @@ Comment listing args may remain filterable through HoverCraft-specific filters w
 
 Threaded comments should load WordPress core reply handling only on singular views when comments are open and nested comments are enabled.
 
+When Cloudflare Rocket Loader is active, the WordPress core `comment-reply` script should be excluded from Rocket Loader by adding `data-cfasync="false"` to that script tag only. This belongs in `inc/comments/comment-reply.php` because it preserves core reply behavior without replacing it.
+
 Comment templates should only be loaded on singular views. Archive templates should not display the comment form or comments from whichever post happens to be active in the loop.
 
 Comment navigation should use WordPress core helpers where possible instead of manually rebuilding previous and next links.
@@ -48,6 +50,8 @@ Comment CSS should not include selectors for disabled URL fields.
 Comment list reset rules should not remove bullets, numbers, spacing, or padding from user-written lists inside `.comment-content`.
 
 Comment anchor targets may use `scroll-margin-top` so jumps to comments and reply forms are not hidden behind fixed browser or theme chrome.
+
+HoverCraft may keep global smooth scrolling. If reply links only nudge the page toward `#respond`, debug whether `comment-reply` executed before removing smooth scrolling or adding custom reply JavaScript.
 
 HoverCraft should declare WordPress HTML5 support for comment forms and comment lists while keeping HoverCraft-specific choices like disabling the URL field and comment author URL output.
 
