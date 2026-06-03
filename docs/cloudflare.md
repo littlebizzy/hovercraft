@@ -14,6 +14,14 @@ HoverCraft prevents this by adding `data-cfasync="false"` only to the `comment-r
 
 The compatibility code belongs in `inc/comments/comment-reply.php`, not in `functions.php`, because it is specific to comment reply behavior.
 
+## Comment Reply Script Loading
+
+WordPress may output `comment-reply` with loading attributes such as `async`, `data-wp-strategy="async"`, or `fetchpriority="low"`.
+
+HoverCraft currently strips those attributes from the `comment-reply` script tag only. This keeps the core reply handler available before users click Reply and avoids intermittent fallback to plain `#respond` anchor behavior.
+
+This is a targeted compatibility workaround, not a general rule against async scripts. If a future WordPress version or real-world testing shows that these attributes are harmless for `comment-reply`, this part can be reverted while keeping the documented Rocket Loader exclusion.
+
 ## Smooth Scrolling
 
 HoverCraft may keep global smooth scrolling for normal anchor navigation.
@@ -33,3 +41,4 @@ If the element is missing, check moderation, comment pagination, page cache, and
 - Do not remove smooth scrolling as a workaround for broken replies.
 - Do not manually reimplement WordPress comment reply behavior.
 - Keep Cloudflare compatibility fixes targeted to the smallest affected script or feature.
+- Treat the async-removal behavior for `comment-reply` as reversible if future testing proves it unnecessary.
