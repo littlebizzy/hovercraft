@@ -39,6 +39,8 @@ Threaded comments should load WordPress core reply handling only on singular vie
 
 When Cloudflare Rocket Loader is active, the WordPress core `comment-reply` script should be excluded from Rocket Loader by adding `data-cfasync="false"` to that script tag only. This belongs in `inc/comments/comment-reply.php` because it preserves core reply behavior without replacing it.
 
+HoverCraft may also strip `async`, `data-wp-strategy="async"`, and `fetchpriority="low"` from the `comment-reply` script tag only. This is a targeted compatibility workaround for intermittent reply failures and can be reverted later if future testing proves it unnecessary.
+
 Comment templates should only be loaded on singular views. Archive templates should not display the comment form or comments from whichever post happens to be active in the loop.
 
 Comment navigation should use WordPress core helpers where possible instead of manually rebuilding previous and next links.
