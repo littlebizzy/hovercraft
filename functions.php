@@ -44,6 +44,12 @@ add_filter( 'use_default_gallery_style', '__return_false' );
 // disable archive title prefixes
 add_filter( 'get_the_archive_title_prefix', '__return_false' );
 
+// font helpers
+require get_template_directory() . '/inc/customizer/fonts/google-fonts.php';
+require get_template_directory() . '/inc/customizer/fonts/google-fonts-multilingual.php';
+require get_template_directory() . '/inc/customizer/fonts/font-helpers.php';
+require get_template_directory() . '/inc/fonts/google-fonts.php';
+
 // menus
 require get_template_directory() . '/inc/menus/menu-locations.php';
 require get_template_directory() . '/inc/menus/main-menu.php';
@@ -80,82 +86,70 @@ require get_template_directory() . '/inc/navigation/breadcrumbs.php';
 require get_template_directory() . '/inc/navigation/pagination.php';
 
 // metadata
-require get_template_directory() . '/inc/metadata/metadata.php';
+require get_template_directory() . '/inc/metadata/metadata-open-graph.php';
 
 // comments
+require get_template_directory() . '/inc/comments/comment-author-url.php';
 require get_template_directory() . '/inc/comments/comment-fields.php';
-require get_template_directory() . '/inc/comments/comment-form.php';
 require get_template_directory() . '/inc/comments/comment-reply.php';
-require get_template_directory() . '/inc/comments/comment-output.php';
-require get_template_directory() . '/inc/comments/comment-navigation.php';
 
 // misc
-require get_template_directory() . '/inc/misc/accessibility.php';
-require get_template_directory() . '/inc/misc/aria-labels.php';
-require get_template_directory() . '/inc/misc/back-to-top.php';
-require get_template_directory() . '/inc/misc/search-form.php';
-require get_template_directory() . '/inc/misc/search-modal.php';
+require get_template_directory() . '/inc/misc/custom-post-test.php';
+require get_template_directory() . '/inc/misc/full-screen-search.php';
+require get_template_directory() . '/inc/misc/git-updater.php';
+require get_template_directory() . '/inc/misc/license.php';
 require get_template_directory() . '/inc/misc/shortcodes.php';
-require get_template_directory() . '/inc/misc/social-media.php';
-require get_template_directory() . '/inc/misc/svg-icons.php';
+require get_template_directory() . '/inc/misc/tags-list.php';
+
+// taxonomy
+require get_template_directory() . '/inc/taxonomy/category-bullets.php';
+require get_template_directory() . '/inc/taxonomy/category-hide-certain.php';
+require get_template_directory() . '/inc/taxonomy/category-portal.php';
+
+// sidebar
+require get_template_directory() . '/inc/sidebar/sidebar-callout.php';
+require get_template_directory() . '/inc/sidebar/sidebar-display.php';
+
+// footer
+require get_template_directory() . '/inc/footer/footer-back-to-top.php';
+require get_template_directory() . '/inc/footer/footer-callout.php';
 
 // customizer
-require get_template_directory() . '/inc/customizer/active-callbacks.php';
-require get_template_directory() . '/inc/customizer/sanitize-callbacks.php';
-require get_template_directory() . '/inc/customizer/register.php';
-require get_template_directory() . '/inc/customizer/output-css.php';
-require get_template_directory() . '/inc/customizer/output-js.php';
+require get_template_directory() . '/inc/customizer/customizer.php';
+require get_template_directory() . '/inc/customizer/categories/category-blog.php';
+require get_template_directory() . '/inc/customizer/categories/category-faq.php';
+require get_template_directory() . '/inc/customizer/categories/category-portal.php';
 
 // css
-require get_template_directory() . '/inc/css/accessibility.php';
-require get_template_directory() . '/inc/css/back-to-top.php';
-require get_template_directory() . '/inc/css/base.php';
-require get_template_directory() . '/inc/css/comments.php';
-require get_template_directory() . '/inc/css/content.php';
-require get_template_directory() . '/inc/css/custom-header.php';
-require get_template_directory() . '/inc/css/footer.php';
-require get_template_directory() . '/inc/css/forms.php';
-require get_template_directory() . '/inc/css/global.php';
-require get_template_directory() . '/inc/css/headings.php';
-require get_template_directory() . '/inc/css/heros.php';
-require get_template_directory() . '/inc/css/images.php';
-require get_template_directory() . '/inc/css/menus.php';
-require get_template_directory() . '/inc/css/metadata.php';
-require get_template_directory() . '/inc/css/pagination.php';
-require get_template_directory() . '/inc/css/search-modal.php';
-require get_template_directory() . '/inc/css/search.php';
-require get_template_directory() . '/inc/css/sidebar.php';
-require get_template_directory() . '/inc/css/widgets.php';
-
-// javascript
-require get_template_directory() . '/inc/javascript/back-to-top.php';
-require get_template_directory() . '/inc/javascript/main-menu-toggle.php';
-require get_template_directory() . '/inc/javascript/offcanvas-menu.php';
-require get_template_directory() . '/inc/javascript/overlay-menu.php';
-require get_template_directory() . '/inc/javascript/search-modal.php';
-
-// admin
-require get_template_directory() . '/inc/admin/admin-bar.php';
-require get_template_directory() . '/inc/admin/license-notice.php';
+require get_template_directory() . '/inc/css/css-generator.php';
 
 // widgets
 require get_template_directory() . '/inc/widgets/widget-areas.php';
+require get_template_directory() . '/inc/widgets/widget-after-add-to-cart.php';
+require get_template_directory() . '/inc/widgets/widget-columns.php';
+require get_template_directory() . '/inc/widgets/widget-header-aside.php';
+require get_template_directory() . '/inc/widgets/widget-header-center.php';
+require get_template_directory() . '/inc/widgets/widget-tiles.php';
+require get_template_directory() . '/inc/widgets/widget-zigzag.php';
 
 // meta boxes
-require get_template_directory() . '/inc/meta-boxes/register.php';
-require get_template_directory() . '/inc/meta-boxes/output.php';
-require get_template_directory() . '/inc/meta-boxes/save.php';
+require get_template_directory() . '/inc/meta-boxes/meta-box.php';
+require get_template_directory() . '/inc/meta-boxes/meta-box-collapse-assets.php';
+require get_template_directory() . '/inc/meta-boxes/meta-box-zigzag.php';
 
 // woocommerce
 if ( class_exists( 'WooCommerce' ) ) {
-	require get_template_directory() . '/inc/woocommerce/woocommerce.php';
-	require get_template_directory() . '/inc/woocommerce/woocommerce-cart.php';
-	require get_template_directory() . '/inc/woocommerce/woocommerce-css.php';
-	require get_template_directory() . '/inc/woocommerce/woocommerce-sidebar.php';
+	require get_template_directory() . '/inc/woocommerce/woocommerce-checkout-coupon.php';
+	require get_template_directory() . '/inc/woocommerce/woocommerce-checkout-order-summary.php';
+	require get_template_directory() . '/inc/woocommerce/woocommerce-quantity-select.php';
+	require get_template_directory() . '/inc/woocommerce/woocommerce-theme-support.php';
+	require get_template_directory() . '/inc/woocommerce/woocommerce-wrappers.php';
 }
 
 // bbpress
-if ( class_exists( 'bbPress' ) ) {
-	require get_template_directory() . '/inc/bbpress/bbpress.php';
-	require get_template_directory() . '/inc/bbpress/bbpress-css.php';
+if ( function_exists( 'bbpress' ) ) {
+	require get_template_directory() . '/inc/bbpress/bbpress-disable-reply-links.php';
+	require get_template_directory() . '/inc/bbpress/bbpress-disable-styles.php';
+	require get_template_directory() . '/inc/bbpress/bbpress-quick-tags.php';
+	require get_template_directory() . '/inc/bbpress/bbpress-search-results.php';
 }
