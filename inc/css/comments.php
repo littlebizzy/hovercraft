@@ -89,6 +89,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 	text-decoration: underline;
 }
 
+/* reply title */
+.comment-reply-title small {
+	display: inline-block;
+	font-size: 14px;
+	font-weight: 400;
+	margin-left: 8px;
+}
+
+.comment-reply-title #cancel-comment-reply-link {
+	margin-top: 0;
+	vertical-align: baseline;
+}
+
 /* nested comments */
 .comment-list .children {
 	border-left: 1px solid rgba(0, 0, 0, 0.08);
