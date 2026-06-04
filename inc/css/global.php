@@ -13,7 +13,6 @@ html, body {
 	font-family: <?php echo hovercraft_format_css_font_family( $default_font_family, $first_font_family ); ?>;
 	line-height: 1.5;
 	color: <?php echo $default_text_color; ?>;
-	scroll-behavior: smooth;
 }
 
 @media screen and (max-width: 1199px) {
