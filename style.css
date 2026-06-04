@@ -1,7 +1,7 @@
 /*
 Theme Name: HoverCraft
 Theme URI: https://hovercraft.vip
-Version: 0.3.214
+Version: 0.3.215
 Description: No maintenance WordPress theme
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
@@ -31,41 +31,62 @@ html, body, div, span, applet, object, iframe, main, h1, h2, h3, h4, h5, h6, p, 
 	vertical-align: baseline;
 }
 
-/* html5 elements */
+html {
+	touch-action: manipulation;
+	-webkit-text-size-adjust: 100%;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
 
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section {
 	display: block;
 }
 
-/* form elements */
-
 button, input, optgroup, select, textarea {
-	font: inherit;
+	font-family: inherit;
 }
 
-/* responsive media */
+button, input[type="button"], input[type="reset"], input[type="submit"] {
+	appearance: none;
+	-webkit-appearance: none;
+	border-radius: 0;
+	cursor: pointer;
+}
 
-img, picture, video, canvas, svg {
+button::-moz-focus-inner, input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+img, iframe, audio, video, canvas, embed, object {
 	max-width: 100%;
+}
+
+img {
 	height: auto;
 }
 
-/* universal */
-
-*, *::before, *::after {
-	box-sizing: border-box;
+ol, ul, menu {
+	list-style: none;
 }
 
-/* devices */
-
-@media screen and (max-width: 1199px) {
-	.desktop {
-		display: none !important;
-	}
+blockquote, q {
+	quotes: none;
 }
 
-@media screen and (min-width: 1200px) {
-	.mobile {
-		display: none !important;
-	}
+blockquote::before, blockquote::after, q::before, q::after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+hr {
+	border: 0;
 }
