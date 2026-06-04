@@ -24,9 +24,11 @@ This is a targeted compatibility workaround, not a general rule against async sc
 
 ## Smooth Scrolling
 
-HoverCraft may keep global smooth scrolling for normal anchor navigation.
+HoverCraft should not enable global smooth scrolling by default.
 
-Smooth scrolling should not be removed just to fix comment replies. If Reply links only nudge the page toward `#respond`, the likely problem is that `comment-reply` did not execute, not that smooth scrolling exists.
+Native browser anchor behavior is easier to debug and more predictable for comments, reply links, comment pagination, skip links, post-submit redirects, and cached pages.
+
+Back-to-top behavior should also avoid forced smooth scrolling while comment anchor behavior is being tested.
 
 ## Comment Anchors
 
@@ -38,7 +40,7 @@ If the element is missing, check moderation, comment pagination, page cache, and
 
 - Do not add broad Cloudflare-specific JavaScript patches.
 - Do not disable Rocket Loader globally from the theme.
-- Do not remove smooth scrolling as a workaround for broken replies.
+- Do not add global smooth scrolling as a workaround for anchor behavior.
 - Do not manually reimplement WordPress comment reply behavior.
 - Keep Cloudflare compatibility fixes targeted to the smallest affected script or feature.
 - Treat the async-removal behavior for `comment-reply` as reversible if future testing proves it unnecessary.
