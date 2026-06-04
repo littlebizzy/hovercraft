@@ -9,8 +9,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
 	// scroll to top
 	link.addEventListener( 'click', function() {
 		window.scrollTo( {
-			top: 0,
-			behavior: 'smooth'
+			top: 0
 		} );
 	} );
 } );
