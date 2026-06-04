@@ -153,6 +153,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /* comment form */
+.logged-in-as,
+.comment-notes {
+	font-size: 14px;
+}
+
+.logged-in-as .required-field-message,
+.comment-notes .required-field-message {
+	display: block;
+	margin-top: 4px;
+}
+
 #respond textarea,
 #respond input[type="text"],
 #respond input[type="email"] {
