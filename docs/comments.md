@@ -53,7 +53,7 @@ Comment list reset rules should not remove bullets, numbers, spacing, or padding
 
 Comment anchor targets may use `scroll-margin-top` so jumps to comments and reply forms are not hidden behind fixed browser or theme chrome.
 
-HoverCraft may keep global smooth scrolling. If reply links only nudge the page toward `#respond`, debug whether `comment-reply` executed before removing smooth scrolling or adding custom reply JavaScript.
+HoverCraft should use native browser anchor behavior for comments. Avoid global smooth scrolling while comment anchors, reply links, comment pagination, or post-submit redirects are being debugged.
 
 HoverCraft should declare WordPress HTML5 support for comment forms and comment lists while keeping HoverCraft-specific choices like disabling the URL field and comment author URL output.
 
