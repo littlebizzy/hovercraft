@@ -114,7 +114,9 @@ If a component already has a clear custom class and does not represent a real Wo
 
 JavaScript-triggered controls should keep the URL clean unless navigation is the intended behavior.
 
-Back-to-top controls should use a real button with native smooth scroll instead of a `#top` anchor, empty hash link, or jQuery animation.
+Back-to-top controls should use a real button instead of a `#top` anchor, empty hash link, or jQuery animation.
+
+Back-to-top controls should use native instant browser scrolling while comment anchor behavior is being tested.
 
 Avoid adding anchor targets solely for JavaScript behavior.
 
