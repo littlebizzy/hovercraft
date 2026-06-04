@@ -10,6 +10,18 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* comments */
 
+@media screen and (max-width: 1199px) {
+	.comments-area {
+		margin-top: 20px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.comments-area {
+		margin-top: 30px;
+	}
+}
+
 /* remove bullets from comment lists */
 .comment-list,
 .comment-list .children {
