@@ -135,7 +135,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 
 // byline date setting
 $wp_customize->add_setting( 'hovercraft_byline_date', array(
-	'default' => 'updated_date_only',
+	'default' => 'published_date_only',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
 ) );
 
@@ -145,14 +145,14 @@ $wp_customize->add_control( new WP_Customize_Control(
 	'hovercraft_byline_date',
 	array(
 		'label' => __( 'Post Byline Date', 'hovercraft' ),
-		'description' => __( 'Which date should appear next to the post author name (in the byline)? Note: for SEO reasons, most sites should probably use the Updated Date Only option to keep things cleaner.', 'hovercraft' ),
+		'description' => __( 'Which date should appear next to the post author name in the byline? Most sites should use Published Date Only unless posts are intentionally maintained and significantly updated.', 'hovercraft' ),
 		'section' => 'hovercraft_blog',
 		'settings' => 'hovercraft_byline_date',
 		'type' => 'select',
 		'choices' => array(
 		'none' => 'None (Disabled)',
-		'updated_date_only' => 'Updated Date Only',
 		'published_date_only' => 'Published Date Only',
+		'updated_date_only' => 'Updated Date Only',
 		'updated_and_published_dates' => 'Updated & Published Dates',
 		),
 	)
