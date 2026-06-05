@@ -51,7 +51,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /* cart notification dots */
-.notification-dot {
+.notification-dot,
+.notification-dot-offcanvas {
 	position: absolute;
 	display: inline-flex;
 	align-items: center;
@@ -75,6 +76,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 .notification-dot {
 	top: 4px;
 	right: -8px;
+}
+
+.notification-dot-offcanvas {
+	top: 4px;
+	right: 12px;
 }
 
 /* desktop: header cart nav item */
@@ -142,6 +148,41 @@ if ( ! defined( 'ABSPATH' ) ) {
 	font-weight: 700;
 	line-height: 18px;
 	text-align: center;
+}
+
+/* mobile: cart button wrapper */
+.cart-button-offcanvas-wrapper {
+	width: 100%;
+	padding: 0 20px;
+	margin-bottom: 20px;
+}
+
+/* mobile: cart button */
+.cart-button-offcanvas {
+	position: relative;
+	width: 100%;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: 44px;
+	box-sizing: border-box;
+	text-align: center;
+	font-size: 18px;
+	font-weight: 700;
+	padding: 8px 44px;
+	color: #ffffff;
+	background: transparent;
+	border-radius: 4px;
+	box-shadow: inset 0 0 0 1px #ffffff;
+	text-decoration: none;
+	vertical-align: middle;
+}
+
+/* mobile: cart icon inside button */
+.cart-button-offcanvas i {
+	padding-right: 8px !important;
+	line-height: 1;
+	text-decoration: none !important;
 }
 
 @media screen and (max-width: 1199px) {
