@@ -89,21 +89,28 @@ body.search-modal-open {
 }
 
 #full-screen-search .input-container {
+	position: relative;
 	display: flex;
 	align-items: stretch;
 	width: 100%;
+	border: 0;
 	border-radius: 4px;
-	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
+	box-shadow: none;
 	overflow: hidden;
-	transition: box-shadow 0.15s ease;
 }
 
-#full-screen-search .input-container:hover {
-	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+#full-screen-search .input-container::after {
+	content: "";
+	pointer-events: none;
+	position: absolute;
+	inset: 0;
+	border-radius: 4px;
+	box-shadow: inset 0 0 0 1px <?php echo $search_bar_border_color; ?>;
+	transition: box-shadow 0.15s ease-in-out;
 }
 
-#full-screen-search .input-container:focus-within {
-	box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28), 0 0 0 2px <?php echo $default_link_color; ?>;
+#full-screen-search .input-container:focus-within::after {
+	box-shadow: inset 0 0 0 2px <?php echo $default_link_color; ?>;
 }
 
 #full-screen-search .search-input {
