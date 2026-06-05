@@ -32,6 +32,19 @@ $hovercraft_b = hexdec( substr( $hovercraft_hex, 4, 2 ) );
 	transition: box-shadow 0.18s ease;
 }
 
+/* header center search */
+
+@media screen and (min-width: 1200px) {
+	.header-center .input-container,
+	.header-center .wp-block-search__inside-wrapper,
+	.header-center .woocommerce-product-search {
+		width: 100%;
+		max-width: 392px;
+		margin-right: auto;
+		margin-left: auto;
+	}
+}
+
 .input-container:hover,
 .wp-block-search__inside-wrapper:hover,
 .woocommerce-product-search:hover {
