@@ -95,6 +95,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	transition: color 0.2s ease;
 }
 
+/* cancel reply link */
+#cancel-comment-reply-link {
+	text-decoration: <?php echo $default_link_decoration; ?>;
+}
+
 .comment-reply-link:hover,
 #cancel-comment-reply-link:hover {
 	color: <?php echo $default_hover_color; ?>;
