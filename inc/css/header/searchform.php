@@ -45,6 +45,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	.header-center .input-container,
 	.header-center .wp-block-search__inside-wrapper,
 	.header-center .woocommerce-product-search {
+		display: flex;
 		width: 100%;
 		max-width: 392px;
 		margin-right: auto;
