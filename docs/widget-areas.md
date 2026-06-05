@@ -66,6 +66,8 @@ Do not apply compact list cleanup broadly to normal article content, sidebar wid
 
 Header Center and Header Aside are optional desktop widget areas in the stacked header branding row. They are intended for larger functional or visual header content such as search forms, language/currency/location switchers, trust badges, promo banners, countdowns, or similar compact commerce-focused widgets. General text utility content such as phone numbers, email links, login links, customer service links, social links, and text-only notices usually belongs in the topbar or preheader widget areas instead.
 
+Header Center search forms should use the compact sidebar/control width and align toward the branding area by default. A future Customizer option should support Header Center alignment choices, such as left, center, or right, without requiring custom CSS.
+
 Header Center and Header Aside should not be required to make WooCommerce cart access work. If WooCommerce is active, the theme should provide basic cart access through header template logic. Header widgets may add extra commerce messaging or optional store content, but they should not carry critical store navigation by themselves.
 
 The WooCommerce header cart link should be hardcoded in approved header navigation layouts instead of depending on a cart widget. Its red notification pill should always render when WooCommerce cart access is available, including when the cart count is `0`, so the store cart entry remains visually consistent.
