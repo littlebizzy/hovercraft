@@ -91,13 +91,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	display: inline-block;
 	font-size: 14px;
 	margin-top: 10px;
-	text-decoration: none;
-	transition: color 0.2s ease;
-}
-
-/* cancel reply link */
-#cancel-comment-reply-link {
 	text-decoration: <?php echo $default_link_decoration; ?>;
+	transition: color 0.2s ease;
 }
 
 .comment-reply-link:hover,
