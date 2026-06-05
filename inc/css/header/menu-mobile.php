@@ -60,7 +60,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 }
 
-/* hamburger icon wrapper with touch-safe area */
+/* mobile menu wrapper */
 @media screen and (max-width: 1199px) {
 	.menu-mobile-wrapper {
 		display: inline-flex;
@@ -74,20 +74,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 }
 
-/* hide hamburger wrapper on desktop */
+/* hide mobile menu wrapper on desktop */
 @media screen and (min-width: 1200px) {
 	.menu-mobile-wrapper {
 		display: none;
 	}
-}
-
-/* menu icon styling for font awesome and material icons */
-#header-full-hero .menu-mobile-wrapper i,
-#header-full-hero .menu-mobile-wrapper .material-icons,
-#header-full-hero .menu-mobile-wrapper .fa,
-#header-full-hero .menu-mobile-wrapper .fa-solid {
-	font-size: 28px;
-	color: #ffffff;
 }
 
 /* start mobile menu overlay */
@@ -96,6 +87,28 @@ if ( ! defined( 'ABSPATH' ) ) {
 	border: 0;
 	border-radius: 4px;
 	padding: 0;
+}
+
+@media screen and (max-width: 1199px) {
+	.mobile-menu-trig {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 44px;
+		height: 44px;
+		color: inherit;
+		line-height: 1;
+	}
+
+	.mobile-menu-trig i,
+	.mobile-menu-trig .material-icons,
+	.mobile-menu-trig .fa,
+	.mobile-menu-trig .fa-solid {
+		display: block;
+		font-size: 32px;
+		line-height: 1;
+		color: inherit;
+	}
 }
 
 .mobile-menu-trig:hover {
@@ -193,7 +206,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 
 	.mobile-menu-trig {
-		display: inline;
+		display: inline-flex;
 	}
 }
 
