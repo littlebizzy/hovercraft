@@ -15,7 +15,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
-	padding: 0 0 0 30px !important;
+	padding: 0 0 0 32px !important;
 	background: transparent !important;
 	border: 0;
 	border-radius: 0;
@@ -44,7 +44,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 .search-icon-wrapper i {
 	display: block;
-	padding: 10px 0;
+	padding: 8px 0;
 	font-size: 24px;
 	line-height: 1;
 	text-decoration: none !important;
