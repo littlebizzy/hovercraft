@@ -94,14 +94,6 @@ h1.mini-hero-title {
 	box-shadow: inset 0 0 0 1px #ffffff !important;
 }
 
-@media screen and (max-width: 1199px) {
-	#header-mini-hero .menu-mobile-wrapper i {
-		margin-left: 20px;
-		font-size: 36px;
-		color: <?php echo $mini_hero_header_text_color; ?>;
-	}
-}
-
 #header-mini-hero a {
 	color: <?php echo $mini_hero_header_link_color; ?>;
 }
