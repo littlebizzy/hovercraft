@@ -84,6 +84,8 @@ Current desktop header spacing should remain simple: topbar `8px` vertical paddi
 
 In the stacked desktop branding row, branding remains the primary identity area. Header Center and Header Aside are optional desktop widget areas for larger functional or visual header content. They should not replace topbar or preheader utility roles such as phone numbers, email links, login links, customer service links, social links, or simple text notices.
 
+The header branding row uses internal layout wrappers and widget areas, but they are not all the same type. `.header-left` is an internal wrapper for branding. `.header-center` is an internal wrapper that exists when the Header Center widget area renders. `.header-right` is an internal wrapper for right-side controls and, in stacked headers, the Header Aside widget area. Header Center and Header Aside are the user-facing WordPress widget areas.
+
 Header Center is a compact content area that sits after branding with the normal `32px` flex gap. Its desktop width should follow the 392px sidebar/control width so search forms and similar controls feel intentional instead of drifting across the middle of the header. Header Center may shrink if space is tight, but it should not grow across the remaining row.
 
 Header Aside is the user-facing widget area rendered on the right side of the stacked branding row. The internal `.header-right` wrapper is not a widget area; it is the layout bucket that contains Header Aside and header controls. `.header-right` should stay content-width and use `margin-left: auto` so the right-side content sticks to the far right edge of the active header container.
