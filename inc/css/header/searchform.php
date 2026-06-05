@@ -41,7 +41,7 @@ $hovercraft_b = hexdec( substr( $hovercraft_hex, 4, 2 ) );
 		width: 100%;
 		max-width: 392px;
 		margin-right: auto;
-		margin-left: auto;
+		margin-left: 0;
 	}
 }
 
