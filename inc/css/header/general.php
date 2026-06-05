@@ -118,9 +118,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 
 	.header-center {
-		flex: 1 1 auto;
+		flex: 0 1 392px;
 		min-width: 0;
-		text-align: center;
+		text-align: left;
 	}
 
 	.header-aside {
