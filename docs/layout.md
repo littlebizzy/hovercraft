@@ -78,11 +78,17 @@ Header layout template parts should stay explicit and easy to audit. The shared 
 
 Header parent wrappers such as `#header-basic`, `#header-mini-hero`, `#header-half-hero`, and `#header-full-hero` should mostly own background and text color, not vertical spacing. Header spacing should live on the actual layout rows such as `.header-layout-inline` and `.header-layout-stacked-inner`, so preheader content can sit at the true top of the header area when enabled.
 
-Each header strip or row should own its own spacing. Topbar uses tight strip spacing, preheader uses extra-tight supporting-strip spacing, the logo/search header row uses normal compact spacing, and stacked navbar links own their own control padding. Avoid duplicate spacing between adjacent header sections.
+Each header strip or row should own its own spacing. Topbar uses tight strip spacing, preheader uses tight supporting-strip spacing, the logo/search header row uses normal compact spacing, and stacked navbar links own their own control padding. Avoid duplicate spacing between adjacent header sections.
 
-Current desktop header spacing should remain simple: topbar `8px` vertical padding, preheader `4px` vertical padding, logo/search row `16px` vertical padding, stacked navbar top gap `0`, and stacked navbar links `12px` vertical padding.
+Current desktop header spacing should remain simple: topbar `8px` vertical padding, preheader `8px` vertical padding, logo/search row `16px` vertical padding, stacked navbar top gap `0`, and stacked navbar links `12px` vertical padding.
 
 In the stacked desktop branding row, branding remains the primary identity area. Header Center and Header Aside are optional desktop widget areas for larger functional or visual header content. They should not replace topbar or preheader utility roles such as phone numbers, email links, login links, customer service links, social links, or simple text notices.
+
+Header Center is a compact content area that sits after branding with the normal `32px` flex gap. Its desktop width should follow the 392px sidebar/control width so search forms and similar controls feel intentional instead of drifting across the middle of the header. Header Center may shrink if space is tight, but it should not grow across the remaining row.
+
+Header Aside is the user-facing widget area rendered on the right side of the stacked branding row. The internal `.header-right` wrapper is not a widget area; it is the layout bucket that contains Header Aside and header controls. `.header-right` should stay content-width and use `margin-left: auto` so the right-side content sticks to the far right edge of the active header container.
+
+Do not max-width `.header-right` globally, because it is shared by header layouts and can contain navigation controls, search/cart icons, CTA buttons, and mobile menu controls. Do not max-width Header Aside by default either, because right-side widget content should usually fit its own content. If a specific Header Aside widget becomes too wide, cap that widget or `.header-aside` later instead of constraining the shared `.header-right` wrapper.
 
 In the stacked desktop navigation row, primary navigation and the automatic cart link should align left, while header CTA menus should align right inside the active header-width container. If the Customizer header width is fixed, CTAs should align to the right edge of the 1200px container. If the header width is full, CTAs should align to the full-width container edge.
 
