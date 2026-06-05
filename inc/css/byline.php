@@ -19,18 +19,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 .byline-photo {
+	border-radius: 999px;
 	display: inline-block;
+	height: 25px;
 	margin-right: 5px;
+	overflow: hidden;
 	vertical-align: middle;
 	width: 25px;
-	height: 25px;
 }
 
+.byline-photo img,
 .byline-avatar {
-	width: 100%;
-	height: 100%;
 	border-radius: 999px;
+	display: block;
+	height: 100%;
 	object-fit: cover;
+	width: 100%;
 }
 
 .avatar {
