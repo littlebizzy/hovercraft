@@ -153,7 +153,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 
 	.header-layout-stacked-bottom {
-		margin-top: 16px;
+		margin-top: 0;
 	}
 
 	#header-full-hero .header-layout-stacked-bottom {
