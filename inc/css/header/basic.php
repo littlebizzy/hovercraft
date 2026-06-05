@@ -34,15 +34,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 }
 
-/* mobile: mobile icon */
-@media screen and (max-width: 1199px) {
-	#header-basic .menu-mobile-wrapper i {
-		margin-left: 20px;
-		font-size: 36px;
-		color: <?php echo $header_basic_hero_text_color; ?>;
-	}
-}
-
 /* general anchor color */
 #header-basic a {
 	color: <?php echo $header_basic_hero_link_color; ?>;
