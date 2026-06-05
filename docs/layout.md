@@ -50,9 +50,9 @@ HoverCraft spacing is still being standardized, but new layout work should start
 
 Prefer common spacing values such as `4px`, `8px`, `12px`, `16px`, `24px`, `32px`, and `40px` when setting padding, margin, gap, and compact layout offsets.
 
-Use `4px` only for extra-tight supporting UI where `8px` feels visibly too airy, such as preheader vertical padding.
+Use `4px` only for extra-tight supporting UI where `8px` feels visibly too airy, such as small icon offsets, focus offsets, badge positioning, or other micro-adjustments.
 
-Use `8px` for tight utility spacing, small gaps, and compact header-strip rhythm.
+Use `8px` for tight utility spacing, small gaps, compact header-strip rhythm, and topbar or preheader vertical padding.
 
 Use `12px` for compact vertical padding in buttons, CTAs, navigation items, and other controls where `8px` feels too tight and `16px` feels too tall.
 
