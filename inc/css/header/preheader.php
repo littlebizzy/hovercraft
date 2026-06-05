@@ -16,7 +16,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 @media screen and (max-width: 1199px) {
 	#preheader {
-		padding: 0 20px 16px 20px;
+		padding: 8px 20px;
 	}
 }
 
