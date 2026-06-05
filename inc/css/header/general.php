@@ -35,8 +35,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 .header-right {
-	flex: 1 1 auto;
+	flex: 0 0 auto;
 	min-width: 0;
+	margin-left: auto;
 	text-align: right;
 }
 
