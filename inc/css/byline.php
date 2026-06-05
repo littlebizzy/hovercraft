@@ -8,52 +8,59 @@ if ( ! defined( 'ABSPATH' ) ) {
 // styles for byline
 ?>
 
+/* post byline */
+
 .post-byline {
-	margin-bottom: 30px;
-	line-height: 16px;
+	margin-bottom: 24px;
 }
 
 .post-byline-archive {
-	margin-bottom: 20px;
-	line-height: 1;
+	margin-bottom: 24px;
 }
+
+/* byline photo */
 
 .byline-photo {
 	border-radius: 999px;
 	display: inline-block;
-	height: 25px;
-	margin-right: 5px;
+	height: 24px;
+	line-height: 0;
+	margin-right: 4px;
 	overflow: hidden;
 	vertical-align: middle;
-	width: 25px;
+	width: 24px;
 }
 
 .byline-photo img,
 .byline-avatar {
-	border-radius: 999px;
+	border-radius: inherit;
 	display: inline-block;
 	height: 100%;
 	object-fit: cover;
-	vertical-align: top;
 	width: 100%;
 }
 
-.avatar {
-	border-radius: 999px;
-}
+/* post author */
 
 .post-author {
 	display: inline;
 }
 
+/* avatars */
+
+.avatar {
+	border-radius: 999px;
+}
+
+/* author name */
+
 .author-name {
 	font-weight: 600;
 }
 
-.date-published {
-	display: inline;
-}
+/* byline dates */
 
+.date-published,
 .date-updated {
 	display: inline;
 }
