@@ -44,6 +44,7 @@ The theme should remain boring, explicit, and easy to maintain. New features sho
 - [Layout](docs/layout.md)
 - [Markup](docs/markup.md)
 - [CSS organization](docs/css.md)
+- [Style.css policy](docs/style-css.md)
 - [Customizer](docs/customizer.md)
 - [Page builders](docs/page-builders.md)
 - [Cloudflare](docs/cloudflare.md)
