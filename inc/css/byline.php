@@ -31,9 +31,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 .byline-photo img,
 .byline-avatar {
 	border-radius: 999px;
-	display: block;
+	display: inline-block;
 	height: 100%;
 	object-fit: cover;
+	vertical-align: top;
 	width: 100%;
 }
 
