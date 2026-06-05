@@ -89,12 +89,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	color: <?php echo $half_hero_text_color; ?>;
 }
 
-#header-half-hero .menu-mobile-wrapper i {
-	margin-left: 20px;
-	font-size: 36px;
-	color: <?php echo $default_text_color; ?>;
-}
-
 #header-half-hero .main-menu ul li a {
 	text-decoration: none;
 	color: <?php echo $half_hero_link_color; ?>;
