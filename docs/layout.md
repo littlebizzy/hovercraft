@@ -46,25 +46,25 @@ Prefer explicit mobile and desktop blocks when values differ, and shared base de
 
 ## Spacing Rhythm
 
-HoverCraft spacing is still being standardized, but new layout work should start from a simple 4px and 8px rhythm instead of arbitrary values.
+HoverCraft uses a practical 4px-based spacing system with an 8px layout bias. This is not a strict mathematical scale. It is a simple modern web spacing system that keeps most layout values predictable while still allowing compact UI exceptions.
 
-Prefer common spacing values such as `4px`, `8px`, `12px`, `16px`, `24px`, `32px`, `40px`, and `48px` when setting padding, margin, gap, and compact layout offsets.
+Prefer 8px multiples for normal layout spacing, especially `8px`, `16px`, `24px`, `32px`, and `48px`.
 
-Use `4px` only for extra-tight supporting UI where `8px` feels visibly too airy, such as small icon offsets, focus offsets, badge positioning, or other micro-adjustments.
+Use `4px` only for extra-tight supporting UI where `8px` feels visibly too airy, such as small icon offsets, focus offsets, badge positioning, tight topbar vertical padding, or other micro-adjustments.
 
-Use `8px` for tight utility spacing, small gaps, compact header-strip rhythm, and topbar or preheader vertical padding.
+Use `8px` for tight utility spacing, small gaps, compact header-strip rhythm, preheader vertical padding, and separator spacing between inline preheader items.
 
-Use `12px` for compact vertical padding in buttons, CTAs, navigation items, and other controls where `8px` feels too tight and `16px` feels too tall.
+Use `12px` as a compact control exception for buttons, CTAs, navigation items, and similar elements where `8px` feels too tight and `16px` feels too tall.
 
 Use `16px` for normal compact spacing, especially on mobile or inside small components.
 
-Use `20px` intentionally for mobile left and right gutters. It is not a formal spacing-rhythm value, but it is a common practical convention for keeping mobile content away from screen edges.
+Use `20px` intentionally for mobile left and right gutters. It is not part of the main spacing rhythm, but it is a common practical mobile convention for keeping content away from screen edges without making narrow screens feel cramped.
 
 Use `24px` or `32px` for medium breathing room between related sections.
 
-Use `40px` only when the spacing is intentionally more structural, such as primary content/sidebar math or larger section rhythm. Avoid using `40px` as casual padding inside small utility sections.
+Use `40px` only when the value is tied to layout math or a deliberate structural relationship, such as the desktop content/sidebar formula. Avoid using `40px` as casual padding inside small utility sections.
 
-Use `48px` for larger desktop-only breathing room between major header or layout areas where `32px` feels visually tight.
+Use `48px` for larger desktop-only breathing room between major header or layout areas where `32px` feels visually tight. It stays on the 8px grid and should be used more sparingly than `24px` or `32px`.
 
 Avoid new one-off spacing values such as `10px` unless there is a clear visual or compatibility reason.
 
@@ -80,9 +80,9 @@ Header layout template parts should stay explicit and easy to audit. The shared 
 
 Header parent wrappers such as `#header-basic`, `#header-mini-hero`, `#header-half-hero`, and `#header-full-hero` should mostly own background and text color, not vertical spacing. Header spacing should live on the actual layout rows such as `.header-layout-inline` and `.header-layout-stacked-inner`, so preheader content can sit at the true top of the header area when enabled.
 
-Each header strip or row should own its own spacing. Topbar uses tight strip spacing, preheader uses tight supporting-strip spacing, the logo/search header row uses normal compact spacing, and stacked navbar links own their own control padding. Avoid duplicate spacing between adjacent header sections.
+Each header strip or row should own its own spacing. Topbar uses extra-tight strip spacing, preheader uses tight supporting-strip spacing, the logo/search header row uses normal compact spacing, and stacked navbar links own their own control padding. Avoid duplicate spacing between adjacent header sections.
 
-Current desktop header spacing should remain simple: topbar `8px` vertical padding, preheader `8px` vertical padding, logo/search row `16px` vertical padding, stacked branding row internal gap `48px`, stacked navbar top gap `0`, and stacked navbar links `12px` vertical padding.
+Current desktop header spacing should remain simple: topbar `4px` vertical padding, preheader `8px` vertical padding, logo/search row `16px` vertical padding, stacked branding row internal gap `48px`, stacked navbar top gap `0`, and stacked navbar links `12px` vertical padding.
 
 In the stacked desktop branding row, branding remains the primary identity area. Header Center and Header Aside are optional desktop widget areas for larger functional or visual header content. They should not replace topbar or preheader utility roles such as phone numbers, email links, login links, customer service links, social links, or simple text notices.
 
