@@ -72,6 +72,25 @@ Header Center and Header Aside should not be required to make WooCommerce cart a
 
 The WooCommerce header cart link should be hardcoded in approved header navigation layouts instead of depending on a cart widget. Its red notification pill should always render when WooCommerce cart access is available, including when the cart count is `0`, so the store cart entry remains visually consistent.
 
+## Preheader Separators
+
+The Preheader Menu Separator Customizer setting controls separators for WordPress menus rendered inside the Preheader Left and Preheader Right widget areas.
+
+Supported values are `none`, `dot`, and `pipe`. The default should remain `none` to preserve existing sites. The generated CSS lives in `inc/css/header/preheader.php` and should keep separator spacing on the normal HoverCraft rhythm with `margin: 0 8px`.
+
+The separator also supports explicit inline Custom HTML items through the `preheader-item` class. This is intended for short preheader snippets that need menu-style spacing without using dummy `#` menu links.
+
+Example Custom HTML widget:
+
+```html
+<span class="preheader-item">Serving Divers Worldwide</span>
+<span class="preheader-item"><a href="tel:+15198603474"><strong>+1 (519) 860-3474</strong></a></span>
+```
+
+Do not target arbitrary `span` elements inside preheader widgets. Only `.preheader-item` should receive this behavior, so custom HTML widgets can still contain icons, badges, wrappers, shortcodes, scripts, or other markup without unexpected separators.
+
+Do not type separators manually between `.preheader-item` elements. The Customizer setting should choose the separator character, and the generated CSS should apply consistent spacing for both `.menu > li` items and `.preheader-item` elements.
+
 ## Supported Widget Areas
 
 ### Global And Layout Areas
