@@ -5,9 +5,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-if ( ! defined( 'HOVERCRAFT_VERSION' ) ) {
-	define( 'HOVERCRAFT_VERSION', '0.3.222' );
-}
+// version
+require get_template_directory() . '/inc/version.php';
 
 // rss feeds
 add_theme_support( 'automatic-feed-links' );
