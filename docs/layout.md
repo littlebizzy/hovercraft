@@ -48,7 +48,7 @@ Prefer explicit mobile and desktop blocks when values differ, and shared base de
 
 HoverCraft spacing is still being standardized, but new layout work should start from a simple 4px and 8px rhythm instead of arbitrary values.
 
-Prefer common spacing values such as `4px`, `8px`, `12px`, `16px`, `24px`, `32px`, and `40px` when setting padding, margin, gap, and compact layout offsets.
+Prefer common spacing values such as `4px`, `8px`, `12px`, `16px`, `24px`, `32px`, `40px`, and `48px` when setting padding, margin, gap, and compact layout offsets.
 
 Use `4px` only for extra-tight supporting UI where `8px` feels visibly too airy, such as small icon offsets, focus offsets, badge positioning, or other micro-adjustments.
 
@@ -63,6 +63,8 @@ Use `20px` intentionally for mobile left and right gutters. It is not a formal s
 Use `24px` or `32px` for medium breathing room between related sections.
 
 Use `40px` only when the spacing is intentionally more structural, such as primary content/sidebar math or larger section rhythm. Avoid using `40px` as casual padding inside small utility sections.
+
+Use `48px` for larger desktop-only breathing room between major header or layout areas where `32px` feels visually tight.
 
 Avoid new one-off spacing values such as `10px` unless there is a clear visual or compatibility reason.
 
@@ -80,13 +82,13 @@ Header parent wrappers such as `#header-basic`, `#header-mini-hero`, `#header-ha
 
 Each header strip or row should own its own spacing. Topbar uses tight strip spacing, preheader uses tight supporting-strip spacing, the logo/search header row uses normal compact spacing, and stacked navbar links own their own control padding. Avoid duplicate spacing between adjacent header sections.
 
-Current desktop header spacing should remain simple: topbar `8px` vertical padding, preheader `8px` vertical padding, logo/search row `16px` vertical padding, stacked navbar top gap `0`, and stacked navbar links `12px` vertical padding.
+Current desktop header spacing should remain simple: topbar `8px` vertical padding, preheader `8px` vertical padding, logo/search row `16px` vertical padding, stacked branding row internal gap `48px`, stacked navbar top gap `0`, and stacked navbar links `12px` vertical padding.
 
 In the stacked desktop branding row, branding remains the primary identity area. Header Center and Header Aside are optional desktop widget areas for larger functional or visual header content. They should not replace topbar or preheader utility roles such as phone numbers, email links, login links, customer service links, social links, or simple text notices.
 
 The header branding row uses internal layout wrappers and widget areas, but they are not all the same type. `.header-left` is an internal wrapper for branding. `.header-center` is an internal wrapper that exists when the Header Center widget area renders. `.header-right` is an internal wrapper for right-side controls and, in stacked headers, the Header Aside widget area. Header Center and Header Aside are the user-facing WordPress widget areas.
 
-Header Center is a compact content area that sits after branding with the normal `32px` flex gap. Its desktop width should follow the 392px sidebar/control width so search forms and similar controls feel intentional instead of drifting across the middle of the header. Header Center may shrink if space is tight, but it should not grow across the remaining row.
+Header Center is a compact content area that sits after branding with a larger desktop `48px` flex gap. Its desktop width should follow the 392px sidebar/control width so search forms and similar controls feel intentional instead of drifting across the middle of the header. Header Center may shrink if space is tight, but it should not grow across the remaining row.
 
 Header Aside is the user-facing widget area rendered on the right side of the stacked branding row. The internal `.header-right` wrapper is not a widget area; it is the layout bucket that contains Header Aside and header controls. `.header-right` should stay content-width and use `margin-left: auto` so the right-side content sticks to the far right edge of the active header container.
 
