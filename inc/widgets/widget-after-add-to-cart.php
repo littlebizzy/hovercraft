@@ -27,4 +27,4 @@ function hovercraft_render_after_add_to_cart_sidebar() {
 	dynamic_sidebar( 'hovercraft_after_add_to_cart' );
 	echo '</div><!-- hovercraft-after-add-to-cart -->';
 }
-add_action( 'woocommerce_after_add_to_cart_form', 'hovercraft_render_after_add_to_cart_sidebar' );
+add_action( 'woocommerce_after_add_to_cart_button', 'hovercraft_render_after_add_to_cart_sidebar', 1 );
