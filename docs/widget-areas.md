@@ -83,8 +83,8 @@ The separator also supports explicit inline Custom HTML items through the `prehe
 Example Custom HTML widget:
 
 ```html
-<span class="preheader-item">Serving Divers Worldwide</span>
-<span class="preheader-item"><a href="tel:+15198603474"><strong>+1 (519) 860-3474</strong></a></span>
+<span class="preheader-item">Free Shipping</span>
+<span class="preheader-item"><a href="/contact/"><strong>Contact Us</strong></a></span>
 ```
 
 Do not target arbitrary `span` elements inside preheader widgets. Only `.preheader-item` should receive this behavior, so custom HTML widgets can still contain icons, badges, wrappers, shortcodes, scripts, or other markup without unexpected separators.
