@@ -122,7 +122,7 @@ $preheader_menu_separator = get_theme_mod( 'hovercraft_preheader_menu_separator'
 
 #preheader .menu > li:not(:last-child)::after {
 	display: inline-block;
-	margin: 0 6px;
+	margin: 0 8px;
 }
 <?php endif; ?>
 
