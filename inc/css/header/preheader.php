@@ -120,20 +120,23 @@ $preheader_menu_separator = get_theme_mod( 'hovercraft_preheader_menu_separator'
 	margin-left: 0;
 }
 
-#preheader .menu > li:not(:last-child)::after {
+#preheader .menu > li:not(:last-child)::after,
+#preheader .preheader-item:not(:last-child)::after {
 	display: inline-block;
 	margin: 0 8px;
 }
 <?php endif; ?>
 
 <?php if ( 'dot' === $preheader_menu_separator ) : ?>
-#preheader .menu > li:not(:last-child)::after {
+#preheader .menu > li:not(:last-child)::after,
+#preheader .preheader-item:not(:last-child)::after {
 	content: "\00b7";
 }
 <?php endif; ?>
 
 <?php if ( 'pipe' === $preheader_menu_separator ) : ?>
-#preheader .menu > li:not(:last-child)::after {
+#preheader .menu > li:not(:last-child)::after,
+#preheader .preheader-item:not(:last-child)::after {
 	content: "|";
 }
 <?php endif; ?>
