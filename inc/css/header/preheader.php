@@ -5,6 +5,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// get preheader menu separator
+$preheader_menu_separator = get_theme_mod( 'hovercraft_preheader_menu_separator', 'none' );
+
 // styles for preheader
 ?>
 
@@ -111,3 +114,26 @@ if ( ! defined( 'ABSPATH' ) ) {
 #preheader ul li:first-child {
 	margin-left: 0;
 }
+
+<?php if ( 'none' !== $preheader_menu_separator ) : ?>
+#preheader .menu > li {
+	margin-left: 0;
+}
+
+#preheader .menu > li:not(:last-child)::after {
+	display: inline-block;
+	margin: 0 6px;
+}
+<?php endif; ?>
+
+<?php if ( 'dot' === $preheader_menu_separator ) : ?>
+#preheader .menu > li:not(:last-child)::after {
+	content: "\00b7";
+}
+<?php endif; ?>
+
+<?php if ( 'pipe' === $preheader_menu_separator ) : ?>
+#preheader .menu > li:not(:last-child)::after {
+	content: "|";
+}
+<?php endif; ?>
