@@ -54,6 +54,13 @@ $hovercraft_widget_area_align_choices = array(
 	'left' => 'Left',
 );
 
+// preheader menu separator choices
+$hovercraft_preheader_menu_separator_choices = array(
+	'none' => 'None',
+	'dot' => 'Dot',
+	'pipe' => 'Pipe',
+);
+
 // widget area column controls
 $hovercraft_widget_area_column_controls = array(
 	array(
@@ -165,3 +172,14 @@ foreach ( $hovercraft_widget_area_align_controls as $hovercraft_widget_area_alig
 		$hovercraft_widget_area_align_choices
 	);
 }
+
+// register preheader menu separator control
+hovercraft_add_widget_area_select_control(
+	$wp_customize,
+	'hovercraft_preheader_menu_separator',
+	__( 'Preheader Menu Separator', 'hovercraft' ),
+	__( 'Choose a separator between menu links in the preheader widget areas.', 'hovercraft' ),
+	'none',
+	'hovercraft_sanitize_select',
+	$hovercraft_preheader_menu_separator_choices
+);
