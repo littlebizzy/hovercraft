@@ -130,7 +130,7 @@ $preheader_menu_separator = get_theme_mod( 'hovercraft_preheader_menu_separator'
 <?php if ( 'dot' === $preheader_menu_separator ) : ?>
 #preheader .menu > li:not(:last-child)::after,
 #preheader .preheader-item:not(:last-child)::after {
-	content: "\00b7";
+	content: "·";
 }
 <?php endif; ?>
 
