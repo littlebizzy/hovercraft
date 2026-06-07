@@ -28,6 +28,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	align-items: center;
 }
 
+#header-full-hero {
+	background: <?php list( $r1, $g1, $b1 ) = sscanf( $full_hero_header_background_color, "#%02x%02x%02x" ); echo "rgba({$r1}, {$g1}, {$b1}, " . max( 0.08, (float) $full_hero_header_background_transparency ) . ")"; ?>;
+}
+
 .header-left {
 	flex: 0 0 auto;
 	min-width: auto;
