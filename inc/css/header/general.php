@@ -115,7 +115,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 
 	.header-layout-stacked-top .header-layout-stacked-inner {
-		gap: 32px;
+		gap: 48px;
 	}
 
 	.header-center {
