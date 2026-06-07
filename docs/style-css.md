@@ -21,8 +21,16 @@ Do not move WordPress alignment, caption, typography, layout, focus, accessibili
 The only approved edit is changing this line during a version bump:
 
 ```css
-Version: 0.3.216
+Version: 0.3.222
 ```
+
+The matching PHP version constant is stored in `inc/version.php`:
+
+```php
+define( 'HOVERCRAFT_VERSION', '0.3.222' );
+```
+
+Do not edit `functions.php` for routine version bumps. The `functions.php` file loads `inc/version.php`, and the version partial exists so release bumps only need to touch `style.css` and `inc/version.php`.
 
 ## Required File Contents
 
@@ -35,7 +43,7 @@ Theme URI: https://hovercraft.vip
 Author: LittleBizzy
 Author URI: https://www.littlebizzy.com
 Description: No maintenance WordPress theme
-Version: 0.3.216
+Version: 0.3.222
 Requires at least: 6.0
 Tested up to: 7.0
 Requires PHP: 7.0
