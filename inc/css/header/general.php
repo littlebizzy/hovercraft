@@ -157,9 +157,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 
 	#header-full-hero .header-layout-stacked-bottom {
-		background: transparent;
+		background: rgba(0, 0, 0, 0.08);
 		border-top: 1px solid rgba(255, 255, 255, 0.24);
-		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
 	}
 
 	#header-basic .header-layout-stacked-bottom {
