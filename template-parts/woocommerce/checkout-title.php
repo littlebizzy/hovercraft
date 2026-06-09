@@ -17,8 +17,6 @@ if ( $h1_divider_display === 'everywhere_possible' || $h1_divider_display === 'e
 	<h1 class="<?php echo esc_attr( implode( ' ', $hovercraft_title_classes ) ); ?>"><?php echo esc_html( get_the_title() ); ?></h1>
 
 	<?php if ( $hovercraft_logo_url ) : ?>
-		<a href="<?php echo esc_url( home_url() ); ?>" class="checkout-logo-link" rel="home" aria-label="<?php echo esc_attr( $hovercraft_site_name ); ?>">
-			<img class="site-logo checkout-logo custom-logo" src="<?php echo esc_url( $hovercraft_logo_url ); ?>" alt="<?php echo esc_attr( $hovercraft_site_name ); ?> logo" />
-		</a>
+		<img class="site-logo checkout-logo custom-logo" src="<?php echo esc_url( $hovercraft_logo_url ); ?>" alt="<?php echo esc_attr( $hovercraft_site_name ); ?> logo" />
 	<?php endif; ?>
 </div><!-- checkout-title-row -->
