@@ -21,15 +21,38 @@ html {
 	scrollbar-gutter: stable;
 }
 
-/* universal */
+/* css reset */
 
-*, *::before, *::after {
-	box-sizing: border-box;
+:where(html, body, div, span, main, h1, h2, h3, h4, h5, h6, p, hr, blockquote, pre, a, abbr, acronym, address, big, button, cite, code, del, dfn, dl, dt, dd, em, img, input, ins, kbd, label, legend, mark, meter, optgroup, option, output, progress, q, s, samp, select, small, source, strike, strong, sub, summary, sup, table, tbody, td, template, textarea, tfoot, th, thead, time, tr, tt, u, ul, var, video, article, aside, audio, canvas, caption, center, details, dialog, embed, fieldset, figcaption, figure, footer, form, header, hgroup, li, menu, nav, ol, picture, ruby, section) {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* html5 elements */
+
+:where(article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section) {
+	display: block;
+}
+
+/* form elements */
+
+:where(button, input, optgroup, select, textarea) {
+	font: inherit;
 }
 
 /* responsive media */
 
-img, picture, video, canvas, svg {
+:where(img, picture, video, canvas, svg) {
 	max-width: 100%;
 	height: auto;
+}
+
+/* universal */
+
+*, *::before, *::after {
+	box-sizing: border-box;
 }
