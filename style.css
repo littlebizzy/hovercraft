@@ -56,3 +56,17 @@ html {
 *, *::before, *::after {
 	box-sizing: border-box;
 }
+
+/* devices */
+
+@media screen and (max-width: 1199px) {
+	.desktop {
+		display:none!important;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.mobile {
+		display:none!important;
+	}
+}
