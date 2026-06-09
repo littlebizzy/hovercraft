@@ -383,9 +383,15 @@ body.woocommerce-checkout #content-wrapper {
 	border-radius: 0;
 }
 
+body.woocommerce-checkout #payment {
+	background: transparent;
+	border-radius: 0;
+}
+
 body.woocommerce-checkout #payment ul.payment_methods {
 	margin: 0 0 24px;
 	padding: 0;
+	border-bottom: 0;
 	list-style: none;
 }
 
@@ -435,6 +441,10 @@ body.woocommerce-checkout #payment .payment_box {
 	border-radius: 8px;
 	color: <?php echo $default_text_color; ?>;
 	line-height: 1.5;
+}
+
+body.woocommerce-checkout #payment .payment_box::before {
+	display: none;
 }
 
 .woocommerce-checkout-payment .payment_box p {
@@ -509,16 +519,18 @@ body.woocommerce-checkout #payment .wc-stripe-upe-element, body.woocommerce-chec
 	line-height: 1.5;
 }
 
-.woocommerce-checkout-payment .place-order {
+body.woocommerce-checkout #payment .place-order {
 	clear: both;
 	margin: 24px 0 0;
-	padding: 0;
+	padding: 24px 0 0;
+	background: transparent;
+	border-top: 1px solid #e0e0e0;
 }
 
 .woocommerce-checkout-payment .place-order .woocommerce-terms-and-conditions-wrapper {
-	margin: 0 0 20px;
-	padding: 20px 0 0;
-	border-top: 1px solid #e0e0e0;
+	margin: 0 0 16px;
+	padding: 0;
+	border-top: 0;
 }
 
 .woocommerce-checkout-payment .place-order .woocommerce-privacy-policy-text {
@@ -549,7 +561,12 @@ body.woocommerce-checkout #payment .wc-stripe-upe-element, body.woocommerce-chec
 
 #ppc-button-ppcp-applepay, #ppc-button-ppcp-googlepay {
 	clear: both;
+	width: 100%;
 	margin: 16px 0 0;
+}
+
+#ppc-button-ppcp-applepay iframe, #ppc-button-ppcp-googlepay iframe {
+	max-width: 100%;
 }
 
 #ppc-button-ppcp-applepay:empty, #ppc-button-ppcp-googlepay:empty {
