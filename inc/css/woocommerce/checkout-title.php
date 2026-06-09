@@ -29,12 +29,6 @@ body.woocommerce-checkout .checkout-title-row .entry-title.divide:after {
 	display: none;
 }
 
-body.woocommerce-checkout .checkout-title-row .checkout-logo-link {
-	flex: 0 0 auto;
-	display: inline-block;
-	margin-top: 4px;
-}
-
 body.woocommerce-checkout .checkout-title-row .checkout-logo {
 	display: block;
 	width: auto;
