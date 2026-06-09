@@ -30,10 +30,6 @@ function hovercraft_open_woocommerce_main_wrapper() {
 
 	get_template_part( 'template-parts/misc/breadcrumbs' );
 
-	if ( is_checkout() && ! is_order_received_page() ) {
-		get_template_part( 'template-parts/woocommerce/checkout-branding' );
-	}
-
 	echo '<div id="content-wrapper">';
 	echo '<div id="content-padded">';
 }
