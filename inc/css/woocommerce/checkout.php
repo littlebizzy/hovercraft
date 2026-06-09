@@ -26,22 +26,6 @@ body.woocommerce-checkout #content-wrapper {
 	border-radius: 0;
 }
 
-body.woocommerce-checkout .checkout-branding {
-	display: flex;
-	justify-content: flex-end;
-	margin: 0 0 20px;
-}
-
-body.woocommerce-checkout .checkout-logo-link {
-	display: inline-block;
-}
-
-body.woocommerce-checkout .checkout-logo {
-	display: block;
-	max-height: 48px;
-	width: auto;
-}
-
 .woocommerce-checkout .woocommerce-notices-wrapper, .woocommerce-checkout form.checkout {
 	clear: both;
 }
