@@ -398,7 +398,7 @@ body.woocommerce-checkout #payment ul.payment_methods {
 body.woocommerce-checkout #payment ul.payment_methods li {
 	clear: both;
 	margin: 0 0 12px;
-	padding: 16px;
+	padding: 12px;
 	background: #ffffff;
 	border: 1px solid #e0e0e0;
 	border-radius: 4px;
@@ -434,8 +434,8 @@ body.woocommerce-checkout #payment ul.payment_methods label {
 
 body.woocommerce-checkout #payment .payment_box {
 	clear: both;
-	padding: 16px;
-	margin: 16px 0 0;
+	padding: 12px;
+	margin: 12px 0 0;
 	background: #f5f7f8;
 	border: 1px solid #e0e0e0;
 	border-radius: 4px;
@@ -483,7 +483,7 @@ body.woocommerce-checkout #payment .payment_box::before {
 body.woocommerce-checkout #payment .wc-stripe-upe-element, body.woocommerce-checkout #payment .StripeElement {
 	width: 100%;
 	min-height: 46px;
-	padding: 12px 16px;
+	padding: 8px 12px;
 	background: #ffffff;
 	border-radius: 4px;
 	box-shadow: inset 0 0 0 1px #e0e0e0;
@@ -494,7 +494,7 @@ body.woocommerce-checkout #payment .wc-stripe-upe-element, body.woocommerce-chec
 	display: flex;
 	align-items: flex-start;
 	gap: 8px;
-	margin: 16px 0 0;
+	margin: 12px 0 0;
 	padding: 0;
 }
 
@@ -521,14 +521,14 @@ body.woocommerce-checkout #payment .wc-stripe-upe-element, body.woocommerce-chec
 
 body.woocommerce-checkout #payment .place-order {
 	clear: both;
-	margin: 24px 0 0;
-	padding: 24px 0 0;
+	margin: 16px 0 0;
+	padding: 16px 0 0;
 	background: transparent;
 	border-top: 1px solid #e0e0e0;
 }
 
 .woocommerce-checkout-payment .place-order .woocommerce-terms-and-conditions-wrapper {
-	margin: 0 0 16px;
+	margin: 0 0 12px;
 	padding: 0;
 	border-top: 0;
 }
@@ -552,7 +552,7 @@ body.woocommerce-checkout #payment .place-order {
 	float: none;
 	width: 100%;
 	margin: 0;
-	padding: 16px 24px;
+	padding: 12px 24px;
 	font-size: 18px;
 	font-weight: 700;
 	line-height: 1.2;
