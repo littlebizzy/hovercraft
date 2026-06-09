@@ -6,4 +6,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // theme version
-define( 'HOVERCRAFT_VERSION', '0.3.237' );
+define( 'HOVERCRAFT_VERSION', '0.3.238' );
