@@ -397,14 +397,20 @@ body.woocommerce-checkout #payment ul.payment_methods {
 
 body.woocommerce-checkout #payment ul.payment_methods li {
 	clear: both;
-	margin: 0 0 12px;
-	padding: 12px;
-	background: #ffffff;
-	border: 1px solid #e0e0e0;
-	border-radius: 4px;
+	margin: 0;
+	padding: 16px 0;
+	background: transparent;
+	border: 0;
+	border-top: 1px solid #e0e0e0;
+	border-radius: 0;
 	color: <?php echo $default_text_color; ?>;
 	list-style: none;
 	line-height: 1.5;
+}
+
+body.woocommerce-checkout #payment ul.payment_methods li:first-child {
+	padding-top: 0;
+	border-top: 0;
 }
 
 body.woocommerce-checkout #payment ul.payment_methods li:last-child {
@@ -434,11 +440,11 @@ body.woocommerce-checkout #payment ul.payment_methods label {
 
 body.woocommerce-checkout #payment .payment_box {
 	clear: both;
-	padding: 12px;
+	padding: 12px 0 0 24px;
 	margin: 12px 0 0;
-	background: #f5f7f8;
-	border: 1px solid #e0e0e0;
-	border-radius: 4px;
+	background: transparent;
+	border: 0;
+	border-radius: 0;
 	color: <?php echo $default_text_color; ?>;
 	line-height: 1.5;
 }
