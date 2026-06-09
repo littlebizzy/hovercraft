@@ -11,7 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 body.woocommerce-checkout .checkout-title-row {
 	display: flex;
 	align-items: flex-start;
-	gap: 20px;
+	gap: 24px;
 }
 
 body.woocommerce-checkout .checkout-title-row .entry-title {
@@ -22,7 +22,7 @@ body.woocommerce-checkout .checkout-title-row .entry-title {
 body.woocommerce-checkout .checkout-title-row .checkout-logo-link {
 	flex: 0 0 auto;
 	display: inline-block;
-	margin-top: 6px;
+	margin-top: 4px;
 }
 
 body.woocommerce-checkout .checkout-title-row .checkout-logo {
