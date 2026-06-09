@@ -363,6 +363,7 @@ $hovercraft_css_files = array(
 	'/inc/css/pagination.php',
 	'/inc/css/woocommerce/cart.php',
 	'/inc/css/woocommerce/checkout.php',
+	'/inc/css/woocommerce/checkout-title.php',
 	'/inc/css/woocommerce/general.php',
 	'/inc/css/woocommerce/ordering.php',
 	'/inc/css/woocommerce/products.php',
