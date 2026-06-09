@@ -15,8 +15,8 @@ body.woocommerce-checkout .checkout-title-row {
 }
 
 body.woocommerce-checkout .checkout-title-row.divide {
-	margin-bottom: 30px;
-	padding-bottom: 15px;
+	margin-bottom: 32px;
+	padding-bottom: 16px;
 	border-bottom: 2px solid <?php echo $title_divider_background_color; ?>;
 }
 
@@ -44,8 +44,8 @@ body.woocommerce-checkout .checkout-title-row .checkout-logo {
 	}
 
 	body.woocommerce-checkout .checkout-title-row.divide {
-		margin-bottom: 20px;
-		padding-bottom: 10px;
+		margin-bottom: 24px;
+		padding-bottom: 12px;
 	}
 
 	body.woocommerce-checkout .checkout-title-row .checkout-logo {
