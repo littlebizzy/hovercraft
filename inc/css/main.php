@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 @media screen and (min-width: 1200px) {
 	#main {
-		padding: 40px 0;
+		padding: 32px 0;
 	}
 }
 
