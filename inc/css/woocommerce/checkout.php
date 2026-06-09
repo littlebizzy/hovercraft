@@ -232,12 +232,12 @@ body.woocommerce-checkout #content-wrapper {
 
 .woocommerce-checkout-review-order-table {
 	width: 100%;
-	margin: 0 0 24px;
+	margin: 0 0 16px;
 	background: #ffffff;
 	border: 1px solid #e0e0e0;
 	border-collapse: separate;
 	border-spacing: 0;
-	border-radius: 8px;
+	border-radius: 4px;
 	overflow: hidden;
 	table-layout: fixed;
 }
@@ -389,7 +389,7 @@ body.woocommerce-checkout #payment {
 }
 
 body.woocommerce-checkout #payment ul.payment_methods {
-	margin: 0 0 24px;
+	margin: 0 0 16px;
 	padding: 0;
 	border-bottom: 0;
 	list-style: none;
@@ -401,7 +401,7 @@ body.woocommerce-checkout #payment ul.payment_methods li {
 	padding: 16px;
 	background: #ffffff;
 	border: 1px solid #e0e0e0;
-	border-radius: 8px;
+	border-radius: 4px;
 	color: <?php echo $default_text_color; ?>;
 	list-style: none;
 	line-height: 1.5;
@@ -438,7 +438,7 @@ body.woocommerce-checkout #payment .payment_box {
 	margin: 16px 0 0;
 	background: #f5f7f8;
 	border: 1px solid #e0e0e0;
-	border-radius: 8px;
+	border-radius: 4px;
 	color: <?php echo $default_text_color; ?>;
 	line-height: 1.5;
 }
