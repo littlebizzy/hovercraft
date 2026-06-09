@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 body.woocommerce-checkout .checkout-title-row {
 	display: flex;
-	align-items: flex-start;
+	align-items: center;
 	gap: 24px;
 }
 
@@ -38,9 +38,9 @@ body.woocommerce-checkout .checkout-title-row .checkout-logo-link {
 body.woocommerce-checkout .checkout-title-row .checkout-logo {
 	display: block;
 	width: auto;
-	max-width: 160px;
+	max-width: 192px;
 	height: auto;
-	max-height: 48px;
+	max-height: 64px;
 	object-fit: contain;
 }
 
@@ -55,7 +55,7 @@ body.woocommerce-checkout .checkout-title-row .checkout-logo {
 	}
 
 	body.woocommerce-checkout .checkout-title-row .checkout-logo {
-		max-width: 120px;
-		max-height: 40px;
+		max-width: 144px;
+		max-height: 48px;
 	}
 }
