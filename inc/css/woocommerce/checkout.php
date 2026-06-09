@@ -38,8 +38,8 @@ body.woocommerce-checkout #content-wrapper {
 
 .woocommerce-checkout .woocommerce-form-login, .woocommerce-checkout .woocommerce-billing-fields, .woocommerce-checkout .woocommerce-account-fields, .woocommerce-checkout .woocommerce-shipping-fields, .woocommerce-checkout .woocommerce-additional-fields, .woocommerce-checkout #order_review {
 	clear: both;
-	padding: 30px;
-	margin: 0 0 30px;
+	padding: 24px;
+	margin: 0 0 24px;
 	background: #ffffff;
 	border: 1px solid #e0e0e0;
 	border-radius: 8px;
@@ -60,8 +60,8 @@ body.woocommerce-checkout #content-wrapper {
 
 .woocommerce-checkout h3, .woocommerce-checkout #order_review_heading {
 	clear: both;
-	margin: 0 0 20px;
-	padding: 0 0 14px;
+	margin: 0 0 16px;
+	padding: 0 0 12px;
 	border-bottom: 1px solid #e0e0e0;
 	font-size: 22px;
 	font-weight: 600;
@@ -232,7 +232,7 @@ body.woocommerce-checkout #content-wrapper {
 
 .woocommerce-checkout-review-order-table {
 	width: 100%;
-	margin: 0 0 30px;
+	margin: 0 0 24px;
 	background: #ffffff;
 	border: 1px solid #e0e0e0;
 	border-collapse: separate;
@@ -383,13 +383,13 @@ body.woocommerce-checkout #content-wrapper {
 	border-radius: 0;
 }
 
-.woocommerce-checkout-payment ul.payment_methods {
+body.woocommerce-checkout #payment ul.payment_methods {
 	margin: 0 0 24px;
 	padding: 0;
 	list-style: none;
 }
 
-.woocommerce-checkout-payment ul.payment_methods li {
+body.woocommerce-checkout #payment ul.payment_methods li {
 	clear: both;
 	margin: 0 0 12px;
 	padding: 16px;
@@ -401,22 +401,22 @@ body.woocommerce-checkout #content-wrapper {
 	line-height: 1.5;
 }
 
-.woocommerce-checkout-payment ul.payment_methods li:last-child {
+body.woocommerce-checkout #payment ul.payment_methods li:last-child {
 	margin-bottom: 0;
 }
 
-.woocommerce-checkout-payment ul.payment_methods li::after {
+body.woocommerce-checkout #payment ul.payment_methods li::after {
 	clear: both;
 	content: "";
 	display: table;
 }
 
-.woocommerce-checkout-payment ul.payment_methods input[type="radio"] {
+body.woocommerce-checkout #payment ul.payment_methods input[type="radio"] {
 	float: none;
 	margin: 5px 8px 0 0;
 }
 
-.woocommerce-checkout-payment ul.payment_methods label {
+body.woocommerce-checkout #payment ul.payment_methods label {
 	display: inline-flex;
 	align-items: flex-start;
 	gap: 8px;
@@ -426,14 +426,13 @@ body.woocommerce-checkout #content-wrapper {
 	line-height: 1.5;
 }
 
-.woocommerce-checkout-payment .payment_box {
+body.woocommerce-checkout #payment .payment_box {
 	clear: both;
-	padding: 16px 0 0;
+	padding: 16px;
 	margin: 16px 0 0;
-	background: transparent;
-	border: 0;
-	border-top: 1px solid #e0e0e0;
-	border-radius: 0;
+	background: #f5f7f8;
+	border: 1px solid #e0e0e0;
+	border-radius: 8px;
 	color: <?php echo $default_text_color; ?>;
 	line-height: 1.5;
 }
@@ -471,7 +470,7 @@ body.woocommerce-checkout #content-wrapper {
 	border-radius: 0;
 }
 
-.woocommerce-checkout-payment .wc-stripe-upe-element, .woocommerce-checkout-payment .StripeElement {
+body.woocommerce-checkout #payment .wc-stripe-upe-element, body.woocommerce-checkout #payment .StripeElement {
 	width: 100%;
 	min-height: 46px;
 	padding: 12px 16px;
@@ -560,11 +559,9 @@ body.woocommerce-checkout #content-wrapper {
 @media screen and (max-width: 1199px) {
 	.woocommerce-checkout .woocommerce-form-login, .woocommerce-checkout .woocommerce-billing-fields, .woocommerce-checkout .woocommerce-account-fields, .woocommerce-checkout .woocommerce-shipping-fields, .woocommerce-checkout .woocommerce-additional-fields, .woocommerce-checkout #order_review {
 		padding: 20px;
+		margin-bottom: 24px;
 	}
 
-	.woocommerce-checkout .woocommerce-checkout-payment {
-		padding: 16px;
-	}
 
 	.woocommerce-checkout .col2-set .col-1, .woocommerce-checkout .col2-set .col-2 {
 		float: none;
@@ -590,7 +587,7 @@ body.woocommerce-checkout #content-wrapper {
 	.woocommerce-checkout form.checkout {
 		display: grid;
 		grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
-		column-gap: 40px;
+		column-gap: 32px;
 		align-items: start;
 	}
 
@@ -610,7 +607,7 @@ body.woocommerce-checkout #content-wrapper {
 		grid-column: 2;
 		grid-row: 1;
 		align-self: start;
-		margin: 50px 0 30px;
+		margin: 44px 0 24px;
 	}
 
 	.woocommerce-checkout #customer_details.col2-set .col-1, .woocommerce-checkout #customer_details.col2-set .col-2 {
@@ -619,7 +616,7 @@ body.woocommerce-checkout #content-wrapper {
 	}
 
 	.woocommerce-checkout #customer_details.col2-set .col-2 {
-		margin-top: 30px;
+		margin-top: 24px;
 	}
 
 	.woocommerce-checkout .form-row-first {
