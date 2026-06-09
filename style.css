@@ -14,3 +14,22 @@ Text Domain: hovercraft
 GitHub Theme URI: littlebizzy/hovercraft
 Primary Branch: master
 */
+
+/* root */
+
+html {
+	scrollbar-gutter: stable;
+}
+
+/* universal */
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+/* responsive media */
+
+img, picture, video, canvas, svg {
+	max-width: 100%;
+	height: auto;
+}
