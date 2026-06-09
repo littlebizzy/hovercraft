@@ -1,10 +1,5 @@
 <?php
 
-// block direct access
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
-
 // get logo
 $hovercraft_logo_url = hovercraft_get_header_logo_url();
 $hovercraft_site_name = get_bloginfo( 'name' );
