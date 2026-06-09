@@ -496,6 +496,14 @@ body.woocommerce-checkout #payment .wc-stripe-upe-element, body.woocommerce-chec
 	box-sizing: border-box;
 }
 
+body.woocommerce-checkout #payment #wc-stripe-upe-form .wc-stripe-upe-element, body.woocommerce-checkout #payment #wc-stripe-upe-form .StripeElement {
+	min-height: 0;
+	padding: 0;
+	background: transparent;
+	border-radius: 0;
+	box-shadow: none;
+}
+
 .woocommerce-checkout-payment .woocommerce-SavedPaymentMethods-saveNew {
 	display: flex;
 	align-items: flex-start;
