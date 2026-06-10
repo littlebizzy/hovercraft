@@ -549,8 +549,8 @@ body.woocommerce-checkout #payment .place-order {
 
 .woocommerce-checkout-payment .place-order .woocommerce-privacy-policy-text {
 	color: <?php echo $default_text_color; ?>;
-	font-size: 14px;
-	line-height: 1.6;
+	font-size: 12px;
+	line-height: 1.5;
 }
 
 .woocommerce-checkout-payment .place-order .woocommerce-privacy-policy-text p {
