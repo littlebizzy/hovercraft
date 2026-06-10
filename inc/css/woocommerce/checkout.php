@@ -440,7 +440,7 @@ body.woocommerce-checkout #payment ul.payment_methods label {
 
 body.woocommerce-checkout #payment .payment_box {
 	clear: both;
-	padding: 12px 0 0 24px;
+	padding: 12px 0 0;
 	margin: 12px 0 0;
 	background: transparent;
 	border: 0;
