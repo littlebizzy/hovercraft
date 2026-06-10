@@ -521,7 +521,8 @@ body.woocommerce-checkout #payment #wc-stripe-upe-form .wc-stripe-upe-element, b
 	flex: 1 1 auto;
 	display: block !important;
 	margin: 0;
-	font-weight: 400;
+	font-size: 14px;
+	font-weight: 400 !important;
 	line-height: 1.5;
 }
 
