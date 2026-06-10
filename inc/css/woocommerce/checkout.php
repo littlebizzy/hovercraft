@@ -507,7 +507,7 @@ body.woocommerce-checkout #payment #wc-stripe-upe-form .wc-stripe-upe-element, b
 .woocommerce-checkout-payment .woocommerce-SavedPaymentMethods-saveNew {
 	display: flex;
 	align-items: center;
-	gap: 8px;
+	gap: 0;
 	margin: 12px 0 0;
 	padding: 0;
 }
