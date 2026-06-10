@@ -22,6 +22,7 @@ body.woocommerce-checkout .checkout-title-row.divide {
 
 body.woocommerce-checkout .checkout-title-row .entry-title {
 	flex: 1 1 auto;
+	align-self: flex-end;
 	margin-bottom: 0;
 	line-height: 1 !important;
 }
