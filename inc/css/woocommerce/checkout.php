@@ -512,9 +512,9 @@ body.woocommerce-checkout #payment #wc-stripe-upe-form .wc-stripe-upe-element, b
 	padding: 0;
 }
 
-.woocommerce-checkout-payment .woocommerce-SavedPaymentMethods-saveNew input[type="checkbox"] {
+body.woocommerce-checkout #payment .woocommerce-SavedPaymentMethods-saveNew input[type="checkbox"] {
 	flex: 0 0 auto;
-	margin: 5px 0 0;
+	margin: 0;
 }
 
 .woocommerce-checkout-payment .woocommerce-SavedPaymentMethods-saveNew label {
