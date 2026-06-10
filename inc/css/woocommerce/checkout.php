@@ -163,6 +163,8 @@ body.woocommerce-checkout #content-wrapper {
 	appearance: auto;
 	-webkit-appearance: auto;
 	-moz-appearance: auto;
+	background: transparent;
+	box-shadow: none !important;
 }
 
 .woocommerce-checkout .select2-container {
@@ -210,11 +212,11 @@ body.woocommerce-checkout #content-wrapper {
 	height: 100%;
 }
 
-.woocommerce-checkout .woocommerce-invalid input, .woocommerce-checkout .woocommerce-invalid select, .woocommerce-checkout .woocommerce-invalid textarea, .woocommerce-checkout .woocommerce-invalid .select2-container .select2-selection--single {
+.woocommerce-checkout .woocommerce-invalid input[type="text"], .woocommerce-checkout .woocommerce-invalid input[type="email"], .woocommerce-checkout .woocommerce-invalid input[type="tel"], .woocommerce-checkout .woocommerce-invalid input[type="password"], .woocommerce-checkout .woocommerce-invalid select, .woocommerce-checkout .woocommerce-invalid textarea, .woocommerce-checkout .woocommerce-invalid .select2-container .select2-selection--single {
 	box-shadow: inset 0 0 0 2px #ff1744 !important;
 }
 
-.woocommerce-checkout .woocommerce-validated input, .woocommerce-checkout .woocommerce-validated select, .woocommerce-checkout .woocommerce-validated textarea, .woocommerce-checkout .woocommerce-validated .select2-container .select2-selection--single {
+.woocommerce-checkout .woocommerce-validated input[type="text"], .woocommerce-checkout .woocommerce-validated input[type="email"], .woocommerce-checkout .woocommerce-validated input[type="tel"], .woocommerce-checkout .woocommerce-validated input[type="password"], .woocommerce-checkout .woocommerce-validated select, .woocommerce-checkout .woocommerce-validated textarea, .woocommerce-checkout .woocommerce-validated .select2-container .select2-selection--single {
 	box-shadow: inset 0 0 0 1px #e0e0e0 !important;
 }
 
