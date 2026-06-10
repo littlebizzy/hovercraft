@@ -504,7 +504,7 @@ body.woocommerce-checkout #payment #wc-stripe-upe-form .wc-stripe-upe-element, b
 	box-shadow: none;
 }
 
-.woocommerce-checkout-payment .woocommerce-SavedPaymentMethods-saveNew {
+body.woocommerce-checkout #payment p.form-row.woocommerce-SavedPaymentMethods-saveNew {
 	display: flex;
 	align-items: center;
 	gap: 0;
@@ -517,10 +517,11 @@ body.woocommerce-checkout #payment .woocommerce-SavedPaymentMethods-saveNew inpu
 	margin: 0;
 }
 
-.woocommerce-checkout-payment .woocommerce-SavedPaymentMethods-saveNew label {
+body.woocommerce-checkout #payment .woocommerce-SavedPaymentMethods-saveNew label {
 	flex: 1 1 auto;
 	display: block !important;
 	margin: 0;
+	padding-left: 8px;
 	font-size: 14px;
 	font-weight: 400 !important;
 	line-height: 1.5;
