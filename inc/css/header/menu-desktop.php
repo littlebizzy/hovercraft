@@ -112,13 +112,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 .menu-desktop > .main-menu .menu-item-has-children > a .toggle {
-	display: inline-block;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 	margin-left: 8px;
-	font-family: FontAwesome;
-	font-size: 0.75em;
 	pointer-events: none;
 	transition: transform 0.2s ease;
 	transform: rotate(0deg);
+	vertical-align: middle;
+}
+
+.menu-desktop > .main-menu .menu-item-has-children > a .toggle svg {
+	display: block;
+	width: 12px;
+	height: 12px;
 }
 
 .menu-desktop > .main-menu .menu-item-has-children:hover > a .toggle,
