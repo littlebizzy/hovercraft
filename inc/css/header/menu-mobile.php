@@ -313,8 +313,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 #hovercraft-offcanvas-menu a.menu-toggle svg {
 	display: block;
-	width: 20px;
-	height: 20px;
+	width: 24px;
+	height: 24px;
 }
 
 #hovercraft-offcanvas-menu a.menu-toggle:focus,
