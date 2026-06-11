@@ -299,10 +299,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	position: relative;
 	display: inline-flex;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-end;
 	width: 48px;
 	min-width: 48px;
-	padding: 0;
+	padding: 0 20px 0 0;
 	text-align: center;
 	vertical-align: middle;
 	background: transparent;
