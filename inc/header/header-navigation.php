@@ -5,11 +5,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// get header icon style
-function hovercraft_get_header_icon_style() {
-	return get_theme_mod( 'hovercraft_layout_icons', 'material_icons_classic' );
-}
-
 // render header search icon
 function hovercraft_header_search_icon() {
 	?>
