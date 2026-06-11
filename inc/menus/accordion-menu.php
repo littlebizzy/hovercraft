@@ -25,7 +25,7 @@ function hovercraft_accordion_menu_toggle( $item_output, $item, $depth, $args ) 
 		'mobile-menu' === $args->theme_location &&
 		in_array( 'menu-item-has-children', $item->classes, true )
 	) {
-		$arrow = '<a href="#" class="menu-toggle"></a>';
+		$arrow = '<a href="#" class="menu-toggle" aria-label="' . esc_attr__( 'Toggle submenu', 'hovercraft' ) . '">' . hovercraft_icon( 'chevron-down' ) . '</a>';
 		$item_output = str_replace( '</a>', '</a>' . $arrow, $item_output );
 	}
 
