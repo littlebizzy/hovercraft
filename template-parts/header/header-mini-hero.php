@@ -35,7 +35,6 @@ if ( $hovercraft_show_portal_search ) {
 	$hovercraft_category_id = get_queried_object_id();
 	$hovercraft_category_title = single_cat_title( '', false );
 	$hovercraft_search_id = wp_unique_id( 'search-' );
-	$hovercraft_layout_icons = get_theme_mod( 'hovercraft_layout_icons', 'material_icons_classic' );
 }
 
 ?>
@@ -65,11 +64,7 @@ if ( $hovercraft_show_portal_search ) {
 						<div class="input-container">
 							<input id="<?php echo esc_attr( $hovercraft_search_id ); ?>" type="search" class="search-input" value="<?php echo esc_attr( get_search_query() ); ?>" name="s" placeholder="<?php echo esc_attr( 'Search ' . strtolower( $hovercraft_category_title ) . '...' ); ?>" />
 							<button type="submit" class="search-submit" name="submit" aria-label="<?php esc_attr_e( 'Submit search', 'hovercraft' ); ?>">
-								<?php if ( 'material_icons_classic' === $hovercraft_layout_icons ) : ?>
-									<i class="material-icons search" aria-hidden="true">search</i>
-								<?php elseif ( 'font_awesome_version_6' === $hovercraft_layout_icons ) : ?>
-									<i class="fa-solid fa-search" aria-hidden="true"></i>
-								<?php endif; // end layout icons ?>
+								<?php echo hovercraft_icon( 'search' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 							</button>
 						</div><!-- input-container -->
 					</form><!-- searchform -->
