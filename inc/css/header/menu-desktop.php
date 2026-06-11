@@ -124,8 +124,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 .menu-desktop > .main-menu .menu-item-has-children > a .toggle svg {
 	display: block;
-	width: 20px;
-	height: 20px;
+	width: 24px;
+	height: 24px;
 }
 
 .menu-desktop > .main-menu .menu-item-has-children:hover > a .toggle,
