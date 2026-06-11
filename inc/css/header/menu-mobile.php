@@ -230,7 +230,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 #hovercraft-offcanvas-menu .mobile-menu-search {
-	padding-top: 0;
+	padding: 0 20px 24px;
 }
 
 #hovercraft-offcanvas-menu .mobile-menu-search .input-container {
@@ -251,7 +251,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	overflow-y: auto;
 	transform: translate3d(0, 0, 205px);
 	transition: left 500ms ease-in-out, transform 500ms ease-in-out, visibility 500ms ease-in-out;
-	padding: 20px 0 0 0;
+	padding: 24px 0 0 0;
 }
 
 #hovercraft-offcanvas-menu ul {
@@ -340,7 +340,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	text-transform: <?php echo $offcanvas_submenu_text_transform; ?>;
 	font-weight: <?php echo $offcanvas_font_weight; ?>;
 	font-size: <?php echo $offcanvas_submenu_font_size; ?>px;
-	background: <?php echo $offcanvas_toggle_background_color; ?>;
+	background: transparent;
 }
 
 #hovercraft-offcanvas-menu ul.sub-menu li {
