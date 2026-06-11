@@ -201,9 +201,10 @@ body.search-modal-open {
 	outline: 0;
 }
 
-#full-screen-search .search-modal-close i {
+#full-screen-search .search-modal-close svg {
 	display: block;
-	font-size: 32px;
+	width: 32px;
+	height: 32px;
 	line-height: 1;
 }
 
