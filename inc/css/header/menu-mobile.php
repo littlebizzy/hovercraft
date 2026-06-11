@@ -101,6 +101,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 
 	.mobile-menu-trig i,
+	.mobile-menu-trig svg,
 	.mobile-menu-trig .material-icons,
 	.mobile-menu-trig .fa,
 	.mobile-menu-trig .fa-solid {
@@ -108,6 +109,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 		font-size: 32px;
 		line-height: 1;
 		color: inherit;
+	}
+
+	.mobile-menu-trig svg {
+		width: 32px;
+		height: 32px;
 	}
 }
 
