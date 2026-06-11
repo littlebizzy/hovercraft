@@ -78,17 +78,7 @@ function hovercraft_header_cart_nav_item() {
 
 // render header menu icon
 function hovercraft_header_menu_icon() {
-	$hovercraft_menu_icon = hovercraft_icon( 'menu' );
-
-	if ( ! empty( $hovercraft_menu_icon ) ) {
-		echo $hovercraft_menu_icon; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-		return;
-	}
-
-	// fallback icon
-	?>
-	<i class="material-icons menu" aria-hidden="true">menu</i>
-	<?php
+	echo hovercraft_icon( 'menu' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 }
 
 // render header main menu
