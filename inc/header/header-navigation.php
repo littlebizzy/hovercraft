@@ -26,8 +26,6 @@ function hovercraft_header_cart_icon() {
 		return;
 	}
 
-	// get header cart icon state
-	$hovercraft_header_icon_style = hovercraft_get_header_icon_style();
 	$hovercraft_cart_count = WC()->cart->get_cart_contents_count();
 	$hovercraft_cart_aria_label = sprintf(
 		_n( 'View cart, %d item', 'View cart, %d items', $hovercraft_cart_count, 'hovercraft' ),
@@ -36,11 +34,7 @@ function hovercraft_header_cart_icon() {
 	?>
 	<div class="cart-icon-wrapper">
 		<a href="<?php echo esc_url( wc_get_cart_url() ); ?>" aria-label="<?php echo esc_attr( $hovercraft_cart_aria_label ); ?>">
-			<?php if ( 'material_icons_classic' === $hovercraft_header_icon_style ) : ?>
-				<i class="material-icons shopping_cart" aria-hidden="true">shopping_cart</i>
-			<?php elseif ( 'font_awesome_version_6' === $hovercraft_header_icon_style ) : ?>
-				<i class="fas fa-shopping-cart" aria-hidden="true"></i>
-			<?php endif; // end header icon style ?>
+			<?php echo hovercraft_icon( 'cart' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 		</a>
 		<div class="notification-dot" aria-hidden="true"><?php echo esc_html( $hovercraft_cart_count ); ?></div><!-- notification-dot -->
 	</div><!-- cart-icon-wrapper -->
