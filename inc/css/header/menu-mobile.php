@@ -278,7 +278,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	color: rgba(0, 0, 0, 0.701961);
 	padding: 8px 0 8px 20px;
 	display: inline-block;
-	width: calc(100% - 68px);
+	width: calc(100% - 44px);
 	text-decoration: none;
 	vertical-align: middle;
 }
@@ -299,9 +299,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	position: relative;
 	display: inline-flex;
 	align-items: center;
-	justify-content: flex-end;
-	width: 48px;
-	min-width: 48px;
+	justify-content: center;
+	width: 24px;
+	min-width: 24px;
 	margin-right: 20px;
 	padding: 0;
 	text-align: center;
@@ -312,7 +312,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 	opacity: 0.75;
 }
 
+#hovercraft-offcanvas-menu a.menu-toggle::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: -24px;
+}
+
 #hovercraft-offcanvas-menu a.menu-toggle svg {
+	position: relative;
 	display: block;
 	width: 24px;
 	height: 24px;
