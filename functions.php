@@ -8,6 +8,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 // version
 require get_template_directory() . '/inc/version.php';
 
+// icons
+require get_template_directory() . '/inc/icons.php';
+
 // rss feeds
 add_theme_support( 'automatic-feed-links' );
 
