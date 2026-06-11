@@ -301,6 +301,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 #hovercraft-offcanvas-menu a.menu-toggle {
 	position: relative;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
 	width: 48px;
 	min-width: 48px;
 	padding: 0;
@@ -312,15 +315,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	opacity: 0.75;
 }
 
-#hovercraft-offcanvas-menu a.menu-toggle:after {
-	position: relative;
-	right: 0;
-	text-align: center;
-	vertical-align: middle;
-	font-family: FontAwesome;
-	font-size: 13px;
-	line-height: 1;
-	content: "\f078";
+#hovercraft-offcanvas-menu a.menu-toggle svg {
+	display: block;
+	width: 20px;
+	height: 20px;
 }
 
 #hovercraft-offcanvas-menu a.menu-toggle:focus,
