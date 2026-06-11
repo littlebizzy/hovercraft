@@ -78,14 +78,17 @@ function hovercraft_header_cart_nav_item() {
 
 // render header menu icon
 function hovercraft_header_menu_icon() {
-	// get header icon style
-	$hovercraft_header_icon_style = hovercraft_get_header_icon_style();
+	$hovercraft_menu_icon = hovercraft_icon( 'menu' );
 
-	if ( 'material_icons_classic' === $hovercraft_header_icon_style ) : ?>
-		<i class="material-icons menu" aria-hidden="true">menu</i>
-	<?php elseif ( 'font_awesome_version_6' === $hovercraft_header_icon_style ) : ?>
-		<i class="fa-solid fa-bars" aria-hidden="true"></i>
-	<?php endif; // end header icon style
+	if ( ! empty( $hovercraft_menu_icon ) ) {
+		echo $hovercraft_menu_icon; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+		return;
+	}
+
+	// fallback icon
+	?>
+	<i class="material-icons menu" aria-hidden="true">menu</i>
+	<?php
 }
 
 // render header main menu
