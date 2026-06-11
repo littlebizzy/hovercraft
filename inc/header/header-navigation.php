@@ -12,15 +12,9 @@ function hovercraft_get_header_icon_style() {
 
 // render header search icon
 function hovercraft_header_search_icon() {
-	// get header icon style
-	$hovercraft_header_icon_style = hovercraft_get_header_icon_style();
 	?>
 	<button type="button" class="search-icon-wrapper search-modal-toggle" aria-label="<?php echo esc_attr__( 'Open search', 'hovercraft' ); ?>" aria-controls="full-screen-search" aria-expanded="false">
-		<?php if ( 'material_icons_classic' === $hovercraft_header_icon_style ) : ?>
-			<i class="material-icons search" aria-hidden="true">search</i>
-		<?php elseif ( 'font_awesome_version_6' === $hovercraft_header_icon_style ) : ?>
-			<i class="fas fa-search" aria-hidden="true"></i>
-		<?php endif; // end header icon style ?>
+		<?php echo hovercraft_icon( 'search' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 	</button><!-- search-icon-wrapper -->
 	<?php
 }
