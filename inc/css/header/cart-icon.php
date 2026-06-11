@@ -8,11 +8,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 // styles for cart icon
 ?>
 
-/* shopping cart icon mobile */
-.menu-mobile-wrapper i.shopping_cart {
-	font-size: 36px;
-}
-
 /* desktop: cart icon wrapper */
 .cart-icon-wrapper {
 	position: relative;
@@ -41,8 +36,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /* desktop: cart icon */
-.cart-icon-wrapper i {
-	font-size: 24px;
+.cart-icon-wrapper svg {
+	display: block;
+	width: 24px;
+	height: 24px;
 	padding: 8px 0;
 	line-height: 1;
 	text-decoration: none !important;
@@ -194,8 +191,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 		overflow: visible;
 	}
 
-	.menu-mobile-wrapper .cart-icon-wrapper i {
-		font-size: 32px;
+	.menu-mobile-wrapper .cart-icon-wrapper svg {
+		width: 32px;
+		height: 32px;
 	}
 
 	.menu-mobile-wrapper .notification-dot {
