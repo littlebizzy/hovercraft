@@ -276,7 +276,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 #hovercraft-offcanvas-menu li.menu-item-has-children {
 	display: grid;
-	grid-template-columns: 1fr 48px 8px;
+	grid-template-columns: 1fr 56px;
 	align-items: center;
 }
 
@@ -306,12 +306,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 	display: inline-flex;
 	grid-column: 2;
 	align-items: center;
-	justify-content: center;
-	width: 48px;
-	min-width: 48px;
+	justify-content: flex-end;
+	width: 56px;
+	min-width: 56px;
 	height: 48px;
 	margin: 0;
-	padding: 0;
+	padding: 0 20px 0 0;
 	text-align: center;
 	vertical-align: middle;
 	background: transparent;
