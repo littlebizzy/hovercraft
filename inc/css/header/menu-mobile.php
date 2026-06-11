@@ -278,7 +278,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	color: rgba(0, 0, 0, 0.701961);
 	padding: 8px 0 8px 20px;
 	display: inline-block;
-	width: calc(100% - 48px);
+	width: calc(100% - 68px);
 	text-decoration: none;
 	vertical-align: middle;
 }
@@ -302,7 +302,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	justify-content: flex-end;
 	width: 48px;
 	min-width: 48px;
-	padding: 0 20px 0 0;
+	margin-right: 20px;
+	padding: 0;
 	text-align: center;
 	vertical-align: middle;
 	background: transparent;
