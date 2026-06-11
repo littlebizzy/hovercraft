@@ -212,6 +212,31 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* end mobile menu overlay */
 
+.mobile-menu-search {
+	padding: 0 20px 20px;
+}
+
+.mobile-menu-search .searchform {
+	width: 100%;
+}
+
+.overlay .mobile-menu-search {
+	padding: 72px 20px 0;
+}
+
+.overlay .mobile-menu-search + .mobile-menu ul.menu,
+.overlay .mobile-menu-search + ul.menu {
+	padding-top: 24px;
+}
+
+#hovercraft-offcanvas-menu .mobile-menu-search {
+	padding-top: 0;
+}
+
+#hovercraft-offcanvas-menu .mobile-menu-search .input-container {
+	display: flex;
+}
+
 #hovercraft-offcanvas-menu {
 	top: 0;
 	left: -100%;

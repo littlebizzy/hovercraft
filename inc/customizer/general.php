@@ -366,7 +366,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 
 // search icon setting
 $wp_customize->add_setting( 'hovercraft_search_icon', array(
-	'default' => 'desktop_only',
+	'default' => 'desktop_icon_mobile_menu',
 	'sanitize_callback' => 'hovercraft_sanitize_select',
 ) );
 
@@ -375,16 +375,18 @@ $wp_customize->add_control( new WP_Customize_Control(
 	$wp_customize,
 	'hovercraft_search_icon',
 	array(
-		'label' => __( 'Search Icon Display', 'hovercraft' ),
-		'description' => __( 'On which devices should the search icon be displayed in the header? Desktop display applies only to the Inline Header layout. The Stacked Header layout removes the desktop search icon.', 'hovercraft' ),
+		'label' => __( 'Search Display', 'hovercraft' ),
+		'description' => __( 'Choose where site search appears. Header icons open the search modal. Mobile menu search displays a search form inside the mobile menu. Desktop icon display applies only to the Inline Header layout.', 'hovercraft' ),
 		'section' => 'hovercraft_general',
 		'settings' => 'hovercraft_search_icon',
 		'type' => 'select',
 		'choices' => array(
 		'none' => 'None (Disabled)',
-		'desktop_only' => 'Desktop Only',
-		'desktop_and_mobile' => 'Desktop &amp; Mobile',
-		'mobile_only' => 'Mobile Only',
+		'desktop_only' => 'Desktop Icon Only',
+		'desktop_icon_mobile_menu' => 'Desktop Icon + Mobile Menu Search',
+		'desktop_and_mobile' => 'Desktop + Mobile Icons',
+		'mobile_only' => 'Mobile Icon Only',
+		'mobile_menu_only' => 'Mobile Menu Search Only',
 		),
 	)
 ) );

@@ -2,7 +2,7 @@
 
 $hovercraft_desktop_header_width = get_theme_mod( 'hovercraft_desktop_header_width', 'fixed' );
 $hovercraft_header_container_class = 'inner';
-$search_icon_status = get_theme_mod( 'hovercraft_search_icon', 'desktop_only' );
+$search_icon_status = get_theme_mod( 'hovercraft_search_icon', 'desktop_icon_mobile_menu' );
 $hovercraft_mobile_menu = get_theme_mod( 'hovercraft_mobile_menu', 'accordion' );
 
 if ( 'full' === $hovercraft_desktop_header_width ) {
