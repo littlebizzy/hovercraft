@@ -100,20 +100,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 		line-height: 1;
 	}
 
-	.mobile-menu-trig i,
-	.mobile-menu-trig svg,
-	.mobile-menu-trig .material-icons,
-	.mobile-menu-trig .fa,
-	.mobile-menu-trig .fa-solid {
-		display: block;
-		font-size: 32px;
-		line-height: 1;
-		color: inherit;
-	}
-
 	.mobile-menu-trig svg {
+		display: block;
 		width: 32px;
 		height: 32px;
+		line-height: 1;
+		color: inherit;
 	}
 }
 
@@ -186,23 +178,27 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 .overlay .closebtn {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	z-index: 999999;
 	background: transparent;
 	border: 0;
 	border-radius: 4px;
 	cursor: pointer;
 	padding: 0;
+	color: inherit;
 }
 
-.overlay .closebtn i {
-	position: absolute;
-	top: 20px;
-	right: 20px;
-	font-size: 36px;
-	z-index: 999999;
+.overlay .closebtn svg {
+	display: block;
+	width: 36px;
+	height: 36px;
+	line-height: 1;
 }
 
-.overlay .closebtn i:hover,
-.overlay .closebtn i:focus {
+.overlay .closebtn:hover,
+.overlay .closebtn:focus {
 	text-decoration: none;
 }
 
