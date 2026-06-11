@@ -9,6 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 function hovercraft_icon( $icon_name ) {
 	$icons = array(
 		'arrow-down'   => 'arrow-down.svg',
+		'cart'         => 'cart.svg',
 		'chevron-down' => 'chevron-down.svg',
 		'chevron-right' => 'chevron-right.svg',
 		'close'        => 'close.svg',
