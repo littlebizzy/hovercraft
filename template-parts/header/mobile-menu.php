@@ -7,15 +7,7 @@ $show_mobile_menu_search = in_array( $search_icon_status, array( 'desktop_icon_m
 <div id="hovercraft-overlay-menu" class="overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-label="<?php esc_attr_e( 'Mobile menu', 'hovercraft' ); ?>" tabindex="-1" inert>
 
 	<button type="button" class="closebtn" aria-label="<?php esc_attr_e( 'Close menu', 'hovercraft' ); ?>" onclick="hovercraftCloseNav()">
-		<?php
-		// choose icon set
-		$hovercraft_layout_icons = get_theme_mod( 'hovercraft_layout_icons', 'material_icons_classic' );
-		?>
-		<?php if ( 'material_icons_classic' === $hovercraft_layout_icons ) : ?>
-			<i class="material-icons close" aria-hidden="true">close</i>
-		<?php elseif ( 'font_awesome_version_6' === $hovercraft_layout_icons ) : ?>
-			<i class="fa-solid fa-x" aria-hidden="true"></i>
-		<?php endif; // end layout icons ?>
+		<?php echo hovercraft_icon( 'close' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 	</button>
 
 	<div class="overlay-content">
