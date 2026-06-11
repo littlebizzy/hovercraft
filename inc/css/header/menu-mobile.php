@@ -274,11 +274,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 	padding: 0;
 }
 
+#hovercraft-offcanvas-menu li.menu-item-has-children {
+	display: grid;
+	grid-template-columns: 1fr 48px 8px;
+	align-items: center;
+}
+
 #hovercraft-offcanvas-menu a {
 	color: rgba(0, 0, 0, 0.701961);
 	padding: 8px 0 8px 20px;
-	display: inline-block;
-	width: calc(100% - 56px);
+	display: block;
+	width: 100%;
 	text-decoration: none;
 	vertical-align: middle;
 }
@@ -298,11 +304,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 #hovercraft-offcanvas-menu a.menu-toggle {
 	position: relative;
 	display: inline-flex;
+	grid-column: 2;
 	align-items: center;
 	justify-content: center;
 	width: 48px;
 	min-width: 48px;
-	margin-right: 8px;
+	height: 48px;
+	margin: 0;
 	padding: 0;
 	text-align: center;
 	vertical-align: middle;
@@ -344,6 +352,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	font-weight: <?php echo $offcanvas_font_weight; ?>;
 	font-size: <?php echo $offcanvas_submenu_font_size; ?>px;
 	background: transparent;
+}
+
+#hovercraft-offcanvas-menu li.menu-item-has-children > ul.sub-menu {
+	grid-column: 1 / -1;
 }
 
 #hovercraft-offcanvas-menu ul.sub-menu li {
