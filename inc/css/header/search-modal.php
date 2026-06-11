@@ -42,11 +42,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	outline-offset: 4px;
 }
 
-.search-icon-wrapper i {
+.search-icon-wrapper svg {
 	display: block;
+	width: 24px;
+	height: 24px;
 	padding: 8px 0;
-	font-size: 24px;
-	line-height: 1;
 	text-decoration: none !important;
 }
 
