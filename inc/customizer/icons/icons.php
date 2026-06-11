@@ -5,9 +5,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-// icons section
+// icon libraries section
 $wp_customize->add_section( 'hovercraft_icons', array(
-	'title' => 'Icons',
+	'title' => 'Icon Libraries',
 	'priority' => 102,
 ) );
 
