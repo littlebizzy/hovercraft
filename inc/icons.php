@@ -11,6 +11,7 @@ function hovercraft_icon( $icon_name ) {
 		'arrow-down'   => 'arrow-down.svg',
 		'chevron-down' => 'chevron-down.svg',
 		'chevron-right' => 'chevron-right.svg',
+		'close'        => 'close.svg',
 		'menu'         => 'menu.svg',
 		'search'       => 'search.svg',
 	);
