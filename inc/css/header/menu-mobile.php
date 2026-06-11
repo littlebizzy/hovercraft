@@ -315,6 +315,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	display: block;
 	width: 24px;
 	height: 24px;
+	transition: transform 0.2s ease;
+	transform: rotate(0deg);
 }
 
 #hovercraft-offcanvas-menu a.menu-toggle:focus,
@@ -331,7 +333,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	text-decoration: none;
 }
 
-#hovercraft-offcanvas-menu a.menu-toggle.rotate {
+#hovercraft-offcanvas-menu a.menu-toggle.rotate svg {
 	transform: rotate(180deg);
 }
 
