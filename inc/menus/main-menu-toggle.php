@@ -12,7 +12,7 @@ function hovercraft_main_menu_toggle( $item_output, $item, $depth, $args ) {
 		'main-menu' === $args->theme_location &&
 		in_array( 'menu-item-has-children', $item->classes, true )
 	) {
-		$toggle = '<span class="toggle" aria-hidden="true">&#xf078;</span>';
+		$toggle = '<span class="toggle" aria-hidden="true">' . hovercraft_icon( 'chevron-down' ) . '</span>';
 		$item_output = str_replace( '</a>', $toggle . '</a>', $item_output );
 	}
 
