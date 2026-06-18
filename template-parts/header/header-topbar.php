@@ -22,17 +22,23 @@ if ( 'full' === $hovercraft_desktop_header_width ) {
 <div id="topbar">
 	<div class="<?php echo esc_attr( $hovercraft_topbar_container_class ); ?>">
 
-		<?php if ( $hovercraft_topbar_left_active ) : ?>
-			<div class="topbar-left<?php echo $hovercraft_topbar_right_active ? '' : ' topbar-single'; ?>">
+		<?php if ( $hovercraft_topbar_left_active && $hovercraft_topbar_right_active ) : ?>
+			<div class="topbar-left">
 				<?php hovercraft_dynamic_sidebar_without_title( 'hovercraft_topbar_left' ); ?>
 			</div><!-- topbar-left -->
-		<?php endif; // end topbar-left-active ?>
 
-		<?php if ( $hovercraft_topbar_right_active ) : ?>
-			<div class="topbar-right<?php echo $hovercraft_topbar_left_active ? '' : ' topbar-single'; ?>">
+			<div class="topbar-right">
 				<?php hovercraft_dynamic_sidebar_without_title( 'hovercraft_topbar_right' ); ?>
 			</div><!-- topbar-right -->
-		<?php endif; // end topbar-right-active ?>
+		<?php elseif ( $hovercraft_topbar_left_active ) : ?>
+			<div class="topbar-center">
+				<?php hovercraft_dynamic_sidebar_without_title( 'hovercraft_topbar_left' ); ?>
+			</div><!-- topbar-center -->
+		<?php elseif ( $hovercraft_topbar_right_active ) : ?>
+			<div class="topbar-center">
+				<?php hovercraft_dynamic_sidebar_without_title( 'hovercraft_topbar_right' ); ?>
+			</div><!-- topbar-center -->
+		<?php endif; // end topbar widget checks ?>
 
 	</div><!-- <?php echo esc_attr( $hovercraft_topbar_container_class ); ?> -->
 </div><!-- topbar -->
