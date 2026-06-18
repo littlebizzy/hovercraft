@@ -23,13 +23,13 @@ if ( 'full' === $hovercraft_desktop_header_width ) {
 	<div class="<?php echo esc_attr( $hovercraft_preheader_container_class ); ?>">
 
 		<?php if ( $hovercraft_preheader_left_active ) : ?>
-			<div class="preheader-left<?php echo $hovercraft_preheader_right_active ? '' : ' preheader-single'; ?>">
+			<div class="preheader-left">
 				<?php hovercraft_dynamic_sidebar_without_title( 'hovercraft_preheader_left' ); ?>
 			</div><!-- preheader-left -->
 		<?php endif; // end preheader-left-active ?>
 
 		<?php if ( $hovercraft_preheader_right_active ) : ?>
-			<div class="preheader-right<?php echo $hovercraft_preheader_left_active ? '' : ' preheader-single'; ?>">
+			<div class="preheader-right">
 				<?php hovercraft_dynamic_sidebar_without_title( 'hovercraft_preheader_right' ); ?>
 			</div><!-- preheader-right -->
 		<?php endif; // end preheader-right-active ?>
