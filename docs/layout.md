@@ -102,12 +102,12 @@ Mobile behavior should stay conservative when adding desktop header layout optio
 
 ## Header Strips
 
-Header strips such as topbar and preheader should use consistent structure and behavior.
+Header strips such as topbar and preheader should use consistent wrapper structure and clear positional behavior.
 
-Use a wrapper ID for the unique region, an `.inner` container for the width and alignment boundary, and side-specific child classes for layout.
+Use a wrapper ID for the unique region, an `.inner` container for the width and alignment boundary, and child classes that describe the actual rendered layout.
 
-For two-column header strips on desktop, the left side should usually fit its content and the right side should fill the remaining space.
+Topbar is announcement-friendly. When both topbar widget areas are active on desktop, render true `.topbar-left` and `.topbar-right` columns. When only one topbar widget area is active, render that widget as `.topbar-center` instead of pretending it is a left or right column.
 
-For one-column header strips, the single active widget area should render centered instead of pretending to be a left or right column.
+Preheader is utility-friendly. It should stay positional for account links, login links, language switchers, social links, and similar utility content. A single active preheader widget should still render as `.preheader-left` or `.preheader-right` based on the source widget area.
 
-Do not rename stable public selectors casually. Existing selectors such as `#topbar`, `.topbar-left`, `.topbar-right`, `.topbar-center`, `#preheader`, `.preheader-left`, `.preheader-right`, and `.preheader-center` should remain stable unless there is a deliberate breaking refactor.
+Do not rename stable public selectors casually. Existing selectors such as `#topbar`, `.topbar-left`, `.topbar-right`, `.topbar-center`, `#preheader`, `.preheader-left`, and `.preheader-right` should remain stable unless there is a deliberate breaking refactor.
