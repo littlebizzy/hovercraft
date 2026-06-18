@@ -48,6 +48,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 .topbar-left,
+.topbar-center,
 .topbar-right {
 	width: 100%;
 }
@@ -59,6 +60,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 
 	.topbar-left,
+	.topbar-center,
 	.topbar-right {
 		text-align: center;
 	}
@@ -78,6 +80,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 		width: auto;
 		white-space: nowrap;
 		text-align: left;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.topbar-center {
+		flex: 1 1 100%;
+		width: 100%;
+		text-align: center;
 	}
 }
 
