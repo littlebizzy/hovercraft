@@ -18,6 +18,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	.menu-desktop {
 		display: block;
 	}
+
+	.header-layout-inline .menu-desktop {
+		display: inline-flex;
+		align-items: center;
+	}
 }
 
 /* main menu container */
