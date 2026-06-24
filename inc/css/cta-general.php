@@ -19,6 +19,12 @@ button {
 	cursor: pointer;
 }
 
+ul.cta {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
 .button {
 	border: 0 !important;
 	border-radius: 4px !important;
