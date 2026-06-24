@@ -24,7 +24,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 @media screen and (min-width: 1200px) {
 	.cta-hero-primary {
 		display: inline-block;
-		margin-right: 30px;
+		margin-right: 32px;
 	}
 }
 
