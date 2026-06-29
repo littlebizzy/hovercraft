@@ -40,7 +40,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	display: block;
 	width: 24px;
 	height: 24px;
-	padding: 8px 0;
+	padding: 0;
 	line-height: 1;
 	text-decoration: none !important;
 	pointer-events: none;
