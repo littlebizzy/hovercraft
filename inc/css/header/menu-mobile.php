@@ -315,8 +315,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 	text-align: center;
 	vertical-align: middle;
 	background: transparent;
+	border: 0;
 	border-radius: 0;
 	color: inherit;
+	cursor: pointer;
 	opacity: 0.75;
 }
 
