@@ -337,9 +337,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 #hovercraft-offcanvas-menu .menu-toggle:focus,
-#hovercraft-offcanvas-menu .menu-toggle:hover,
-#hovercraft-offcanvas-menu .menu-toggle:visited,
-#hovercraft-offcanvas-menu .menu-toggle:link {
+#hovercraft-offcanvas-menu .menu-toggle:hover {
 	border-bottom: 0;
 	text-decoration: none;
 }
