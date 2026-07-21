@@ -58,9 +58,9 @@ Prefer CSS-only fixes for WooCommerce variation spacing. Do not override WooComm
 
 Add to cart buttons must have a visibly disabled state for unavailable or incomplete variable-product selections. Disabled buttons should not keep the active accent color on hover, focus, or active states.
 
-The `After Add To Cart` widget area should render immediately after the WooCommerce add-to-cart button through the `woocommerce_after_add_to_cart_button` hook at early priority. This keeps purchase reassurance content above express checkout buttons that render after the cart form.
+The `After Add To Cart` widget area intentionally renders through `woocommerce_after_add_to_cart_button` at priority `1`. WooCommerce fires this hook immediately after the button and before closing the cart form, keeping the widget inside HoverCraft's tested purchase-control width, stacking, and spacing.
 
-Because this widget area renders inside the WooCommerce cart form, it should only contain non-form reassurance content such as trust messages, shipping notes, warranty notes, return notes, payment notices, badges, icons, and short text. Do not place forms or other nested form markup in this widget area.
+This area should contain only non-form reassurance content such as trust messages, shipping notes, warranty notes, return notes, payment notices, badges, icons, and short text. Do not place forms or nested form markup inside it, and do not change the hook without visually retesting simple, variable, and grouped products on desktop and mobile.
 
 ## Product Widget Areas
 
