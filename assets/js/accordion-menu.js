@@ -9,13 +9,13 @@ jQuery( function( $ ) {
 
 		if ( $submenu.hasClass( 'active' ) ) {
 			$submenu.removeClass( 'active' ).slideUp( 400 );
-			$toggle.removeClass( 'rotate' );
+			$toggle.removeClass( 'rotate' ).attr( 'aria-expanded', 'false' );
 			return;
 		}
 
 		$menu.find( '.sub-menu.active' ).removeClass( 'active' ).slideUp( 400 );
-		$menu.find( '.menu-toggle.rotate' ).removeClass( 'rotate' );
+		$menu.find( '.menu-toggle.rotate' ).removeClass( 'rotate' ).attr( 'aria-expanded', 'false' );
 		$submenu.addClass( 'active' ).slideDown( 400 );
-		$toggle.addClass( 'rotate' );
+		$toggle.addClass( 'rotate' ).attr( 'aria-expanded', 'true' );
 	} );
 } );
