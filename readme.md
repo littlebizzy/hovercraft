@@ -43,6 +43,7 @@ The theme should remain boring, explicit, and easy to maintain. New features sho
 - [Accessibility](docs/accessibility.md)
 - [Layout](docs/layout.md)
 - [Markup](docs/markup.md)
+- [Navigation](docs/navigation.md)
 - [CSS organization](docs/css.md)
 - [Style.css policy](docs/style-css.md)
 - [Customizer](docs/customizer.md)
