@@ -301,7 +301,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	font-weight: 400;
 }
 
-#hovercraft-offcanvas-menu a.menu-toggle {
+#hovercraft-offcanvas-menu .menu-toggle {
 	position: relative;
 	display: inline-flex;
 	grid-column: 2;
@@ -320,7 +320,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	opacity: 0.75;
 }
 
-#hovercraft-offcanvas-menu a.menu-toggle svg {
+#hovercraft-offcanvas-menu .menu-toggle svg {
 	display: block;
 	width: 24px;
 	height: 24px;
@@ -328,21 +328,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 	transform: rotate(0deg);
 }
 
-#hovercraft-offcanvas-menu a.menu-toggle:focus,
-#hovercraft-offcanvas-menu a.menu-toggle:hover {
+#hovercraft-offcanvas-menu .menu-toggle:focus,
+#hovercraft-offcanvas-menu .menu-toggle:hover {
 	background: transparent;
 	opacity: 1;
 }
 
-#hovercraft-offcanvas-menu a.menu-toggle:focus,
-#hovercraft-offcanvas-menu a.menu-toggle:hover,
-#hovercraft-offcanvas-menu a.menu-toggle:visited,
-#hovercraft-offcanvas-menu a.menu-toggle:link {
+#hovercraft-offcanvas-menu .menu-toggle:focus,
+#hovercraft-offcanvas-menu .menu-toggle:hover,
+#hovercraft-offcanvas-menu .menu-toggle:visited,
+#hovercraft-offcanvas-menu .menu-toggle:link {
 	border-bottom: 0;
 	text-decoration: none;
 }
 
-#hovercraft-offcanvas-menu a.menu-toggle.rotate svg {
+#hovercraft-offcanvas-menu .menu-toggle.rotate svg {
 	transform: rotate(180deg);
 }
 
