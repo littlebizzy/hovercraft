@@ -44,6 +44,7 @@ function hovercraft_mobile_menu_output() {
 				'theme_location' => 'main-menu',
 				'menu_class' => 'menu',
 				'container_class' => 'main-menu',
+				'hovercraft_mobile_menu' => true,
 			)
 		);
 		return;
