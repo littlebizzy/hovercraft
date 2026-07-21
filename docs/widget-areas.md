@@ -44,7 +44,7 @@ When a widget area should render without widget titles, use `hovercraft_dynamic_
 
 When a widget area renders into a plugin hook, keep the registration and render helper in `inc/widgets/` unless the behavior truly belongs to a plugin-specific system.
 
-For WooCommerce add-to-cart output, render widget areas after the cart form rather than inside the form. This avoids invalid form markup and keeps arbitrary widget HTML, shortcodes, scripts, trust badges, payment messages, or sale notices safer.
+The WooCommerce `After Add To Cart` area intentionally renders inside the cart form. See `docs/woocommerce.md` for its placement and content restrictions.
 
 ## Visibility
 
@@ -131,7 +131,7 @@ Header Center and Header Aside render only in the stacked header layout. They do
 |---|---|---|
 | After Add To Cart | `hovercraft_after_add_to_cart` | `widget-after-add-to-cart` |
 
-The `After Add To Cart` widget area renders below the WooCommerce add-to-cart form through the `woocommerce_after_add_to_cart_form` hook.
+The `After Add To Cart` widget area intentionally renders immediately after the WooCommerce add-to-cart button and inside the cart form. See `docs/woocommerce.md` for its placement and content restrictions.
 
 WooCommerce widget areas are optional support areas for extra content such as trust messages, payment notices, shipping notes, shortcodes, sale notices, and reusable product-page messages. They should not be required for core store behavior such as cart access, checkout access, product purchasing, variation selection, or add-to-cart behavior.
 
