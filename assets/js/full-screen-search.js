@@ -1,66 +1,85 @@
 // full screen search
-jQuery( function( $ ) {
-	var $body = $( 'body' );
-	var $modal = $( '#full-screen-search' );
-	var $toggle = $( '.search-modal-toggle' );
-	var $lastFocused = $();
+document.addEventListener( 'DOMContentLoaded', function() {
+	var modal = document.getElementById( 'full-screen-search' );
+	var toggles = document.querySelectorAll( '.search-modal-toggle' );
+	var closeButton;
+	var searchInput;
+	var lastFocused = null;
 
-	if ( ! $modal.length || ! $toggle.length ) {
+	if ( ! modal || ! toggles.length ) {
 		return;
+	}
+
+	closeButton = modal.querySelector( '.search-modal-close' );
+	searchInput = modal.querySelector( '.search-input' );
+
+	// update trigger states
+	function setToggleState( expanded ) {
+		toggles.forEach( function( toggle ) {
+			toggle.setAttribute( 'aria-expanded', expanded );
+		} );
 	}
 
 	// open search overlay
 	function openSearchOverlay() {
-		if ( $modal.hasClass( 'open' ) ) {
+		if ( modal.classList.contains( 'open' ) ) {
 			return;
 		}
 
-		$lastFocused = $( document.activeElement );
-		$modal.addClass( 'open' ).attr( 'aria-hidden', 'false' );
-		$toggle.attr( 'aria-expanded', 'true' );
-		$body.addClass( 'search-modal-open' );
+		lastFocused = document.activeElement;
+		modal.classList.add( 'open' );
+		modal.setAttribute( 'aria-hidden', 'false' );
+		setToggleState( 'true' );
+		document.body.classList.add( 'search-modal-open' );
 
 		window.setTimeout( function() {
-			$modal.find( '.search-input' ).trigger( 'focus' );
+			if ( modal.classList.contains( 'open' ) && searchInput ) {
+				searchInput.focus();
+			}
 		}, 50 );
 	}
 
 	// close search overlay
 	function closeSearchOverlay() {
-		if ( ! $modal.hasClass( 'open' ) ) {
+		if ( ! modal.classList.contains( 'open' ) ) {
 			return;
 		}
 
-		$modal.removeClass( 'open' ).attr( 'aria-hidden', 'true' );
-		$toggle.attr( 'aria-expanded', 'false' );
-		$body.removeClass( 'search-modal-open' );
+		modal.classList.remove( 'open' );
+		modal.setAttribute( 'aria-hidden', 'true' );
+		setToggleState( 'false' );
+		document.body.classList.remove( 'search-modal-open' );
 
-		if ( $lastFocused.length ) {
-			$lastFocused.trigger( 'focus' );
+		if ( lastFocused && document.contains( lastFocused ) && 'function' === typeof lastFocused.focus ) {
+			lastFocused.focus();
 		}
 	}
 
 	// open search overlay
-	$toggle.on( 'click', function( event ) {
-		event.preventDefault();
-		openSearchOverlay();
+	toggles.forEach( function( toggle ) {
+		toggle.addEventListener( 'click', function( event ) {
+			event.preventDefault();
+			openSearchOverlay();
+		} );
 	} );
 
 	// close search overlay button
-	$modal.find( '.search-modal-close' ).on( 'click', function( event ) {
-		event.preventDefault();
-		closeSearchOverlay();
-	} );
+	if ( closeButton ) {
+		closeButton.addEventListener( 'click', function( event ) {
+			event.preventDefault();
+			closeSearchOverlay();
+		} );
+	}
 
 	// close search overlay backdrop
-	$modal.on( 'click', function( event ) {
-		if ( event.target === this ) {
+	modal.addEventListener( 'click', function( event ) {
+		if ( event.target === modal ) {
 			closeSearchOverlay();
 		}
 	} );
 
 	// close search overlay keyboard
-	$( document ).on( 'keydown', function( event ) {
+	document.addEventListener( 'keydown', function( event ) {
 		if ( 'Escape' === event.key ) {
 			closeSearchOverlay();
 		}
