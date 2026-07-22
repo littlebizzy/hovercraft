@@ -10,7 +10,7 @@ function hovercraft_main_menu() {
 	wp_enqueue_script(
 		'hovercraft_main_menu',
 		esc_url_raw( get_template_directory_uri() . '/assets/js/main-menu.js' ),
-		array( 'jquery' ),
+		array(),
 		HOVERCRAFT_VERSION,
 		true
 	);
