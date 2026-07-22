@@ -8,6 +8,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 // overlay menu assets
 
 function hovercraft_overlay_menu() {
+	if ( 'overlay' !== get_theme_mod( 'hovercraft_mobile_menu', 'accordion' ) ) {
+		return;
+	}
+
 	wp_enqueue_script(
 		'hovercraft_overlay_menu',
 		esc_url_raw( get_template_directory_uri() . '/assets/js/overlay-menu.js' ),
@@ -17,4 +21,3 @@ function hovercraft_overlay_menu() {
 	);
 }
 add_action( 'wp_enqueue_scripts', 'hovercraft_overlay_menu' );
-
