@@ -12,7 +12,7 @@ CTA menu locations should remain limited to one top-level item. They are focused
 
 ## Desktop Dropdowns
 
-Desktop dropdowns should use short open and close delays so normal pointer movement does not trigger abrupt menu changes. The established timing is `100ms` to open and `150ms` to close.
+CSS should show desktop dropdowns immediately on hover and keyboard focus. JavaScript adds the persistent `.open` state after `100ms` and removes it after `150ms`, helping nested pointer movement without delaying visible opening.
 
 Hover and keyboard focus should open the same menu branch. Opening a nested item should preserve its ancestor branch while closing unrelated open branches.
 
@@ -44,6 +44,6 @@ Semantic markup changes should preserve the established toggle dimensions, align
 
 Navigation changes should be checked with both a dedicated Mobile Menu and the Main Menu fallback.
 
-Test desktop dropdowns with pointer hover, keyboard focus, nested branches, Escape closing, delayed opening and closing, and synchronized `aria-expanded` state.
+Test desktop dropdowns with immediate pointer hover, keyboard focus, nested branches, Escape closing, brief delayed closing, and synchronized `aria-expanded` state.
 
 Test both `Overlay Simple` and `Accordion Push`. Confirm that only the selected menu exists in the page markup and only its matching scripts load. For Accordion Push, test parent links, nested submenus, keyboard activation, visible icon rotation, synchronized `aria-expanded` state, and sibling submenu closing. Mobile submenu changes should not alter desktop navigation markup or positioning.
