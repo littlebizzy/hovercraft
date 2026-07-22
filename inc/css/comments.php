@@ -13,6 +13,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 @media screen and (max-width: 1199px) {
 	.comments-area {
 		margin-top: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
 	}
 }
 
