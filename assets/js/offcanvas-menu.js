@@ -3,7 +3,7 @@ jQuery( function( $ ) {
 	var $body = $( 'body' );
 	var $menu = $( '#hovercraft-offcanvas-menu' );
 	var $overlay = $( '.offcanvas-overlay' );
-	var $trigger = $( '.hovercraft-offcanvas-trigger' );
+	var $trigger = $( '.offcanvas-trigger' );
 	var $lastFocused = $();
 
 	if ( ! $menu.length || ! $overlay.length || ! $trigger.length ) {
