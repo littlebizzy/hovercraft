@@ -35,5 +35,5 @@ $hovercraft_mobile_menu = get_theme_mod( 'hovercraft_mobile_menu', 'accordion' )
 		<?php hovercraft_mobile_menu_output(); ?>
 	</div><!-- hovercraft-offcanvas-menu -->
 
-	<div class="hovercraft-offcanvas-overlay" aria-hidden="true"></div>
+	<div class="offcanvas-overlay" aria-hidden="true"></div>
 <?php endif; // end hovercraft-mobile-menu ?>
