@@ -284,7 +284,7 @@ input.qty[type="number"] {
 	-moz-appearance: textfield !important;
 }
 
-.quantity select.qty, .hovercraft-quantity-select {
+.quantity select.qty {
 	appearance: none !important;
 	-webkit-appearance: none !important;
 	-moz-appearance: none !important;
@@ -313,12 +313,12 @@ input.qty[type="number"] {
 	vertical-align: middle !important;
 }
 
-.quantity select.qty:hover, .hovercraft-quantity-select:hover {
+.quantity select.qty:hover {
 	background-color: #ffffff !important;
 	box-shadow: inset 0 0 0 1px #e0e0e0 !important;
 }
 
-.quantity select.qty:focus, .quantity select.qty:active, .hovercraft-quantity-select:focus, .hovercraft-quantity-select:active {
+.quantity select.qty:focus, .quantity select.qty:active {
 	background-color: #ffffff !important;
 	box-shadow: inset 0 0 0 2px <?php echo $default_link_color; ?> !important;
 	color: <?php echo $default_text_color; ?> !important;
