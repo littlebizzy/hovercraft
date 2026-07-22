@@ -3,7 +3,7 @@ var hovercraftOverlayLastFocused = null;
 
 function hovercraftOpenNav() {
 	var menu = document.getElementById( 'hovercraft-overlay-menu' );
-	var trigger = document.querySelector( '.mobile-menu-trig:not(.hovercraft-offcanvas-trigger)' );
+	var trigger = document.querySelector( '.mobile-menu-trig:not(.offcanvas-trigger)' );
 	var closeButton;
 
 	if ( ! menu ) {
@@ -31,7 +31,7 @@ function hovercraftOpenNav() {
 
 function hovercraftCloseNav() {
 	var menu = document.getElementById( 'hovercraft-overlay-menu' );
-	var trigger = document.querySelector( '.mobile-menu-trig:not(.hovercraft-offcanvas-trigger)' );
+	var trigger = document.querySelector( '.mobile-menu-trig:not(.offcanvas-trigger)' );
 
 	if ( ! menu ) {
 		return;
