@@ -53,10 +53,10 @@ document.addEventListener( 'DOMContentLoaded', function() {
 
 		submenu.style.height = currentHeight + 'px';
 		animation = submenu.animate(
-			array(
+			[
 				{ height: currentHeight + 'px' },
 				{ height: targetHeight + 'px' }
-			),
+			],
 			{
 				duration: duration,
 				easing: 'ease'
@@ -99,10 +99,10 @@ document.addEventListener( 'DOMContentLoaded', function() {
 		submenu.style.overflow = 'hidden';
 		submenu.style.height = currentHeight + 'px';
 		animation = submenu.animate(
-			array(
+			[
 				{ height: currentHeight + 'px' },
 				{ height: '0px' }
-			),
+			],
 			{
 				duration: duration,
 				easing: 'ease'
