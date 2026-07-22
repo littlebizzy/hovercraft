@@ -43,7 +43,6 @@ function hovercraft_get_woocommerce_quantity_select( $args = array() ) {
 	$max_value = min( $max_value, max( 10, $input_value ) );
 	$max_value = max( $max_value, $min_value, $input_value );
 	$classes[] = 'qty';
-	$classes[] = 'hovercraft-quantity-select';
 	$classes = array_unique( array_filter( $classes ) );
 	$quantities = array();
 
