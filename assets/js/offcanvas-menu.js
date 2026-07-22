@@ -1,62 +1,68 @@
 // offcanvas menu
-jQuery( function( $ ) {
-	var $body = $( 'body' );
-	var $menu = $( '#hovercraft-offcanvas-menu' );
-	var $overlay = $( '.offcanvas-overlay' );
-	var $trigger = $( '.offcanvas-trigger' );
-	var $lastFocused = $();
+document.addEventListener( 'DOMContentLoaded', function() {
+	var menu = document.getElementById( 'hovercraft-offcanvas-menu' );
+	var overlay = document.querySelector( '.offcanvas-overlay' );
+	var triggers = document.querySelectorAll( '.offcanvas-trigger' );
+	var lastFocused = null;
 
-	if ( ! $menu.length || ! $overlay.length || ! $trigger.length ) {
+	if ( ! menu || ! overlay || ! triggers.length ) {
 		return;
+	}
+
+	// update trigger states
+	function setTriggerState( expanded ) {
+		triggers.forEach( function( trigger ) {
+			trigger.setAttribute( 'aria-expanded', expanded );
+		} );
 	}
 
 	// open offcanvas menu
 	function openOffcanvasMenu() {
-		$lastFocused = $( document.activeElement );
-		$menu.addClass( 'active' );
-		$menu.removeAttr( 'inert' );
-		$menu.attr( 'aria-hidden', 'false' );
-		$body.addClass( 'frozen' );
-		$overlay.addClass( 'active' );
-		$trigger.attr( 'aria-expanded', 'true' );
+		lastFocused = document.activeElement;
+		menu.classList.add( 'active' );
+		menu.removeAttribute( 'inert' );
+		menu.setAttribute( 'aria-hidden', 'false' );
+		document.body.classList.add( 'frozen' );
+		overlay.classList.add( 'active' );
+		setTriggerState( 'true' );
 
 		window.setTimeout( function() {
-			$menu.trigger( 'focus' );
+			if ( 'false' === menu.getAttribute( 'aria-hidden' ) ) {
+				menu.focus();
+			}
 		}, 50 );
 	}
 
 	// close offcanvas menu
 	function closeOffcanvasMenu() {
-		if ( $lastFocused.length ) {
-			$lastFocused.trigger( 'focus' );
-		}
+		menu.classList.remove( 'active' );
+		menu.setAttribute( 'inert', '' );
+		menu.setAttribute( 'aria-hidden', 'true' );
+		document.body.classList.remove( 'frozen' );
+		overlay.classList.remove( 'active' );
+		setTriggerState( 'false' );
 
-		$menu.removeClass( 'active' );
-		$menu.attr( 'inert', '' );
-		$menu.attr( 'aria-hidden', 'true' );
-		$body.removeClass( 'frozen' );
-		$overlay.removeClass( 'active' );
-		$trigger.attr( 'aria-expanded', 'false' );
+		if ( lastFocused && document.contains( lastFocused ) && 'function' === typeof lastFocused.focus ) {
+			lastFocused.focus();
+		}
 	}
 
-	// toggle offcanvas menu
-	$trigger.on( 'click', function() {
-		if ( $menu.hasClass( 'active' ) ) {
-			closeOffcanvasMenu();
-			return;
-		}
+	// bind offcanvas controls
+	triggers.forEach( function( trigger ) {
+		trigger.addEventListener( 'click', function() {
+			if ( menu.classList.contains( 'active' ) ) {
+				closeOffcanvasMenu();
+				return;
+			}
 
-		openOffcanvasMenu();
+			openOffcanvasMenu();
+		} );
 	} );
+	overlay.addEventListener( 'click', closeOffcanvasMenu );
 
-	// close offcanvas menu
-	$overlay.on( 'click', function() {
-		closeOffcanvasMenu();
-	} );
-
-	// close offcanvas menu keyboard
-	$( document ).on( 'keydown', function( event ) {
-		if ( 'Escape' === event.key && $menu.hasClass( 'active' ) ) {
+	// close offcanvas menu with escape key
+	document.addEventListener( 'keydown', function( event ) {
+		if ( 'Escape' === event.key && menu.classList.contains( 'active' ) ) {
 			closeOffcanvasMenu();
 		}
 	} );
