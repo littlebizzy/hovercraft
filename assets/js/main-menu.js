@@ -1,84 +1,91 @@
 // main menu
-jQuery( function( $ ) {
-	var $menu = $( '.menu-desktop' );
-
-	if ( ! $menu.length ) {
-		return;
-	}
-
+document.addEventListener( 'DOMContentLoaded', function() {
+	var menu = document.querySelector( '.menu-desktop' );
 	var delayIn = 100;
 	var delayOut = 150;
 
-	// setup submenu accessibility
-	$menu.find( '.menu-item-has-children > a' ).attr( 'aria-expanded', 'false' );
-
-	// open menu item
-	function openMenuItem( $li ) {
-		$menu.find( 'li.open' ).not( $li.parents() ).each( function() {
-			closeMenuItem( $( this ) );
-		} );
-
-		$li.addClass( 'open' );
-		$li.children( 'a' ).attr( 'aria-expanded', 'true' );
+	if ( ! menu ) {
+		return;
 	}
 
+	// setup submenu accessibility
+	menu.querySelectorAll( '.menu-item-has-children > a' ).forEach( function( link ) {
+		link.setAttribute( 'aria-expanded', 'false' );
+	} );
+
 	// close menu item
-	function closeMenuItem( $li ) {
-		$li.removeClass( 'open' );
-		$li.find( '.menu-item-has-children > a' ).attr( 'aria-expanded', 'false' );
+	function closeMenuItem( item ) {
+		item.classList.remove( 'open' );
+		item.querySelectorAll( '.menu-item-has-children > a' ).forEach( function( link ) {
+			link.setAttribute( 'aria-expanded', 'false' );
+		} );
+	}
+
+	// open menu item
+	function openMenuItem( item ) {
+		var link = item.querySelector( ':scope > a' );
+
+		menu.querySelectorAll( 'li.open' ).forEach( function( openItem ) {
+			if ( ! openItem.contains( item ) ) {
+				closeMenuItem( openItem );
+			}
+		} );
+
+		item.classList.add( 'open' );
+
+		if ( link ) {
+			link.setAttribute( 'aria-expanded', 'true' );
+		}
 	}
 
 	// bind hover and focus events
-	$menu.find( '.menu-item-has-children' ).each( function() {
-		var $li = $( this );
+	menu.querySelectorAll( '.menu-item-has-children' ).forEach( function( item ) {
 		var openTimer;
 		var closeTimer;
 
 		// mouse enter
-		$li.on( 'mouseenter', function() {
-			clearTimeout( openTimer );
-			clearTimeout( closeTimer );
+		item.addEventListener( 'mouseenter', function() {
+			window.clearTimeout( openTimer );
+			window.clearTimeout( closeTimer );
 
-			openTimer = setTimeout( function() {
-				openMenuItem( $li );
+			openTimer = window.setTimeout( function() {
+				openMenuItem( item );
 			}, delayIn );
 		} );
 
 		// mouse leave
-		$li.on( 'mouseleave', function() {
-			clearTimeout( openTimer );
-			clearTimeout( closeTimer );
+		item.addEventListener( 'mouseleave', function() {
+			window.clearTimeout( openTimer );
+			window.clearTimeout( closeTimer );
 
-			closeTimer = setTimeout( function() {
-				closeMenuItem( $li );
+			closeTimer = window.setTimeout( function() {
+				closeMenuItem( item );
 			}, delayOut );
 		} );
 
 		// keyboard focus in
-		$li.on( 'focusin', function() {
-			clearTimeout( openTimer );
-			clearTimeout( closeTimer );
-			openMenuItem( $li );
+		item.addEventListener( 'focusin', function() {
+			window.clearTimeout( openTimer );
+			window.clearTimeout( closeTimer );
+			openMenuItem( item );
 		} );
 
 		// keyboard focus out
-		$li.on( 'focusout', function() {
-			clearTimeout( closeTimer );
+		item.addEventListener( 'focusout', function() {
+			window.clearTimeout( closeTimer );
 
-			closeTimer = setTimeout( function() {
-				if ( ! $li.find( ':focus' ).length ) {
-					closeMenuItem( $li );
+			closeTimer = window.setTimeout( function() {
+				if ( ! item.contains( document.activeElement ) ) {
+					closeMenuItem( item );
 				}
 			}, delayOut );
 		} );
 	} );
 
 	// close dropdowns with escape key
-	$( document ).on( 'keydown', function( event ) {
+	document.addEventListener( 'keydown', function( event ) {
 		if ( 'Escape' === event.key ) {
-			$menu.find( 'li.open' ).each( function() {
-				closeMenuItem( $( this ) );
-			} );
+			menu.querySelectorAll( 'li.open' ).forEach( closeMenuItem );
 		}
 	} );
 } );
