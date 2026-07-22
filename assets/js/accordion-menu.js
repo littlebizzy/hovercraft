@@ -3,62 +3,44 @@ document.addEventListener( 'DOMContentLoaded', function() {
 	var toggles = document.querySelectorAll( '.offcanvas-menu .menu-toggle' );
 	var animations = new WeakMap();
 	var reduceMotion = window.matchMedia && window.matchMedia( '(prefers-reduced-motion: reduce)' ).matches;
-	var duration = 400;
 
 	if ( ! toggles.length ) {
 		return;
 	}
 
-	// stop an active submenu animation at its current height
-	function stopAnimation( submenu ) {
-		var animation = animations.get( submenu );
-		var currentHeight;
-
-		if ( ! animation ) {
-			return null;
-		}
-
-		currentHeight = submenu.getBoundingClientRect().height;
-		animation.cancel();
-		animations.delete( submenu );
-		submenu.style.height = currentHeight + 'px';
-
-		return currentHeight;
-	}
-
-	// reset submenu animation styles
-	function resetSubmenuStyles( submenu ) {
-		submenu.style.height = '';
-		submenu.style.overflow = '';
-	}
-
-	// slide submenu open
-	function slideDown( submenu ) {
-		var currentHeight = stopAnimation( submenu );
-		var targetHeight;
+	// animate a submenu from its current height
+	function animateSubmenu( submenu, open ) {
+		var runningAnimation = animations.get( submenu );
+		var startHeight = submenu.getBoundingClientRect().height;
+		var endHeight;
 		var animation;
 
-		submenu.style.display = 'block';
-		submenu.style.overflow = 'hidden';
-		targetHeight = submenu.scrollHeight;
-
-		if ( null === currentHeight ) {
-			currentHeight = 0;
+		if ( runningAnimation ) {
+			runningAnimation.cancel();
+			animations.delete( submenu );
 		}
 
-		if ( reduceMotion || 'function' !== typeof submenu.animate || currentHeight === targetHeight ) {
-			resetSubmenuStyles( submenu );
+		if ( open ) {
+			submenu.style.display = 'block';
+		}
+
+		endHeight = open ? submenu.scrollHeight : 0;
+
+		if ( reduceMotion || 'function' !== typeof submenu.animate || startHeight === endHeight ) {
+			submenu.style.display = open ? 'block' : 'none';
+			submenu.style.overflow = '';
 			return;
 		}
 
-		submenu.style.height = currentHeight + 'px';
+		submenu.style.display = 'block';
+		submenu.style.overflow = 'hidden';
 		animation = submenu.animate(
 			[
-				{ height: currentHeight + 'px' },
-				{ height: targetHeight + 'px' }
+				{ height: startHeight + 'px' },
+				{ height: endHeight + 'px' }
 			],
 			{
-				duration: duration,
+				duration: 400,
 				easing: 'ease'
 			}
 		);
@@ -70,60 +52,8 @@ document.addEventListener( 'DOMContentLoaded', function() {
 			}
 
 			animations.delete( submenu );
-			resetSubmenuStyles( submenu );
-		};
-
-		animation.oncancel = function() {
-			if ( animations.get( submenu ) === animation ) {
-				animations.delete( submenu );
-			}
-		};
-	}
-
-	// slide submenu closed
-	function slideUp( submenu ) {
-		var currentHeight = stopAnimation( submenu );
-		var animation;
-
-		if ( null === currentHeight ) {
-			currentHeight = submenu.getBoundingClientRect().height;
-		}
-
-		if ( reduceMotion || 'function' !== typeof submenu.animate || ! currentHeight ) {
-			submenu.style.display = 'none';
-			resetSubmenuStyles( submenu );
-			return;
-		}
-
-		submenu.style.display = 'block';
-		submenu.style.overflow = 'hidden';
-		submenu.style.height = currentHeight + 'px';
-		animation = submenu.animate(
-			[
-				{ height: currentHeight + 'px' },
-				{ height: '0px' }
-			],
-			{
-				duration: duration,
-				easing: 'ease'
-			}
-		);
-		animations.set( submenu, animation );
-
-		animation.onfinish = function() {
-			if ( animations.get( submenu ) !== animation ) {
-				return;
-			}
-
-			animations.delete( submenu );
-			submenu.style.display = 'none';
-			resetSubmenuStyles( submenu );
-		};
-
-		animation.oncancel = function() {
-			if ( animations.get( submenu ) === animation ) {
-				animations.delete( submenu );
-			}
+			submenu.style.display = open ? 'block' : 'none';
+			submenu.style.overflow = '';
 		};
 	}
 
@@ -143,13 +73,13 @@ document.addEventListener( 'DOMContentLoaded', function() {
 				submenu.classList.remove( 'active' );
 				toggle.classList.remove( 'rotate' );
 				toggle.setAttribute( 'aria-expanded', 'false' );
-				slideUp( submenu );
+				animateSubmenu( submenu, false );
 				return;
 			}
 
 			menu.querySelectorAll( '.sub-menu.active' ).forEach( function( activeSubmenu ) {
 				activeSubmenu.classList.remove( 'active' );
-				slideUp( activeSubmenu );
+				animateSubmenu( activeSubmenu, false );
 			} );
 			menu.querySelectorAll( '.menu-toggle.rotate' ).forEach( function( activeToggle ) {
 				activeToggle.classList.remove( 'rotate' );
@@ -159,7 +89,7 @@ document.addEventListener( 'DOMContentLoaded', function() {
 			submenu.classList.add( 'active' );
 			toggle.classList.add( 'rotate' );
 			toggle.setAttribute( 'aria-expanded', 'true' );
-			slideDown( submenu );
+			animateSubmenu( submenu, true );
 		} );
 	} );
 } );
