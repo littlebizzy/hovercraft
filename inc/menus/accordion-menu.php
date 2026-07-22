@@ -34,7 +34,7 @@ function hovercraft_accordion_menu_toggle( $item_output, $item, $depth, $args ) 
 		in_array( 'menu-item-has-children', $item->classes, true )
 	) {
 		$arrow = '<button type="button" class="menu-toggle" aria-expanded="false" aria-label="' . esc_attr__( 'Toggle submenu', 'hovercraft' ) . '">' . hovercraft_icon( 'chevron-down' ) . '</button>';
-		$item_output = str_replace( '</a>', '</a>' . $arrow, $item_output );
+		$item_output .= $arrow;
 	}
 
 	return $item_output;
