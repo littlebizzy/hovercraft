@@ -2,7 +2,7 @@
 jQuery( function( $ ) {
 	var $body = $( 'body' );
 	var $menu = $( '#hovercraft-offcanvas-menu' );
-	var $overlay = $( '.hovercraft-offcanvas-overlay' );
+	var $overlay = $( '.offcanvas-overlay' );
 	var $trigger = $( '.hovercraft-offcanvas-trigger' );
 	var $lastFocused = $();
 
