@@ -23,7 +23,7 @@ $hovercraft_mobile_menu = get_theme_mod( 'hovercraft_mobile_menu', 'accordion' )
 		</div><!-- overlay-content -->
 	</div><!-- hovercraft-overlay-menu -->
 <?php else : ?>
-	<div id="hovercraft-offcanvas-menu" role="dialog" aria-modal="true" aria-hidden="true" aria-label="<?php esc_attr_e( 'Mobile menu', 'hovercraft' ); ?>" tabindex="-1" inert>
+	<div id="hovercraft-offcanvas-menu" class="offcanvas-menu" role="dialog" aria-modal="true" aria-hidden="true" aria-label="<?php esc_attr_e( 'Mobile menu', 'hovercraft' ); ?>" tabindex="-1" inert>
 		<h4 class="sitename-offcanvas"><?php echo esc_html( get_bloginfo( 'name' ) ); ?></h4>
 
 		<?php if ( $show_mobile_menu_search ) : ?>
