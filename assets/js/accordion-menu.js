@@ -1,6 +1,6 @@
 // accordion menu
 jQuery( function( $ ) {
-	$( '.menu-toggle' ).on( 'click', function( event ) {
+	$( '.offcanvas-menu .menu-toggle' ).on( 'click', function( event ) {
 		event.preventDefault();
 
 		var $toggle = $( this );
