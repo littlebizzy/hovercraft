@@ -1,62 +1,60 @@
 // overlay menu
-var hovercraftOverlayLastFocused = null;
-
-function hovercraftOpenNav() {
+document.addEventListener( 'DOMContentLoaded', function() {
 	var menu = document.getElementById( 'hovercraft-overlay-menu' );
-	var trigger = document.querySelector( '.mobile-menu-trig:not(.offcanvas-trigger)' );
-	var closeButton;
+	var triggers = document.querySelectorAll( '.overlay-trigger' );
+	var closeButton = menu ? menu.querySelector( '.overlay-close' ) : null;
+	var lastFocused = null;
 
-	if ( ! menu ) {
+	if ( ! menu || ! triggers.length || ! closeButton ) {
 		return;
 	}
 
-	hovercraftOverlayLastFocused = document.activeElement;
-	closeButton = menu.querySelector( '.closebtn' );
-
-	menu.classList.add( 'active' );
-	menu.removeAttribute( 'inert' );
-	menu.setAttribute( 'aria-hidden', 'false' );
-	document.body.classList.add( 'frozen' );
-
-	if ( trigger ) {
-		trigger.setAttribute( 'aria-expanded', 'true' );
+	// update trigger states
+	function setTriggerState( expanded ) {
+		triggers.forEach( function( trigger ) {
+			trigger.setAttribute( 'aria-expanded', expanded );
+		} );
 	}
 
-	if ( closeButton ) {
+	// open overlay menu
+	function openOverlayMenu() {
+		lastFocused = document.activeElement;
+		menu.classList.add( 'active' );
+		menu.removeAttribute( 'inert' );
+		menu.setAttribute( 'aria-hidden', 'false' );
+		document.body.classList.add( 'frozen' );
+		setTriggerState( 'true' );
+
 		window.setTimeout( function() {
-			closeButton.focus();
+			if ( 'false' === menu.getAttribute( 'aria-hidden' ) ) {
+				closeButton.focus();
+			}
 		}, 50 );
 	}
-}
 
-function hovercraftCloseNav() {
-	var menu = document.getElementById( 'hovercraft-overlay-menu' );
-	var trigger = document.querySelector( '.mobile-menu-trig:not(.offcanvas-trigger)' );
+	// close overlay menu
+	function closeOverlayMenu() {
+		menu.classList.remove( 'active' );
+		menu.setAttribute( 'inert', '' );
+		menu.setAttribute( 'aria-hidden', 'true' );
+		document.body.classList.remove( 'frozen' );
+		setTriggerState( 'false' );
 
-	if ( ! menu ) {
-		return;
+		if ( lastFocused && document.contains( lastFocused ) && 'function' === typeof lastFocused.focus ) {
+			lastFocused.focus();
+		}
 	}
 
-	if ( hovercraftOverlayLastFocused && 'function' === typeof hovercraftOverlayLastFocused.focus ) {
-		hovercraftOverlayLastFocused.focus();
-	}
+	// bind overlay controls
+	triggers.forEach( function( trigger ) {
+		trigger.addEventListener( 'click', openOverlayMenu );
+	} );
+	closeButton.addEventListener( 'click', closeOverlayMenu );
 
-	menu.classList.remove( 'active' );
-	menu.setAttribute( 'inert', '' );
-	menu.setAttribute( 'aria-hidden', 'true' );
-	document.body.classList.remove( 'frozen' );
-
-	if ( trigger ) {
-		trigger.setAttribute( 'aria-expanded', 'false' );
-	}
-}
-
-document.addEventListener( 'keydown', function( event ) {
-	var menu = document.getElementById( 'hovercraft-overlay-menu' );
-
-	if ( ! menu || 'Escape' !== event.key || 'false' !== menu.getAttribute( 'aria-hidden' ) ) {
-		return;
-	}
-
-	hovercraftCloseNav();
+	// close overlay menu with escape key
+	document.addEventListener( 'keydown', function( event ) {
+		if ( 'Escape' === event.key && 'false' === menu.getAttribute( 'aria-hidden' ) ) {
+			closeOverlayMenu();
+		}
+	} );
 } );
