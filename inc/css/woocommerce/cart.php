@@ -105,7 +105,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	margin: 0;
 }
 
-.woocommerce-cart .shop_table .quantity input.qty, .woocommerce-cart .shop_table .quantity select.qty, .woocommerce-cart .shop_table .quantity .hovercraft-quantity-select {
+.woocommerce-cart .shop_table .quantity input.qty, .woocommerce-cart .shop_table .quantity select.qty {
 	width: 90px !important;
 	max-width: 90px !important;
 	text-align: center;
