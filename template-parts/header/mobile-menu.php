@@ -8,7 +8,7 @@ $hovercraft_mobile_menu = get_theme_mod( 'hovercraft_mobile_menu', 'accordion' )
 <?php if ( 'overlay' === $hovercraft_mobile_menu ) : ?>
 	<div id="hovercraft-overlay-menu" class="overlay" role="dialog" aria-modal="true" aria-hidden="true" aria-label="<?php esc_attr_e( 'Mobile menu', 'hovercraft' ); ?>" tabindex="-1" inert>
 
-		<button type="button" class="closebtn" aria-label="<?php esc_attr_e( 'Close menu', 'hovercraft' ); ?>" onclick="hovercraftCloseNav()">
+		<button type="button" class="closebtn overlay-close" aria-label="<?php esc_attr_e( 'Close menu', 'hovercraft' ); ?>">
 			<?php echo hovercraft_icon( 'close' ); // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?>
 		</button>
 
