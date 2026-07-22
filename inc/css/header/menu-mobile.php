@@ -368,7 +368,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	transform: translate3d(0, 0, 0);
 }
 
-.hovercraft-offcanvas-overlay {
+.offcanvas-overlay {
 	background-color: #000000c2;
 	position: absolute;
 	visibility: hidden;
@@ -381,7 +381,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	z-index: 99;
 }
 
-.hovercraft-offcanvas-overlay.active {
+.offcanvas-overlay.active {
 	visibility: visible;
 	opacity: 1;
 }
