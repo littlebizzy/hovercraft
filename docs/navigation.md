@@ -10,6 +10,14 @@ When no Mobile Menu is assigned, mobile navigation should fall back to the assig
 
 CTA menu locations should remain limited to one top-level item. They are focused action locations, not general navigation areas.
 
+## Desktop Dropdowns
+
+Desktop dropdowns should use short open and close delays so normal pointer movement does not trigger abrupt menu changes. The established timing is `100ms` to open and `150ms` to close.
+
+Hover and keyboard focus should open the same menu branch. Opening a nested item should preserve its ancestor branch while closing unrelated open branches.
+
+Parent links with submenus should keep `aria-expanded` synchronized with the visible dropdown state. Pressing Escape should close all open desktop dropdowns.
+
 ## Mobile Menu Styles
 
 Only the selected mobile menu style should render its markup and load its matching JavaScript.
@@ -35,5 +43,7 @@ Semantic markup changes should preserve the established toggle dimensions, align
 ## Testing
 
 Navigation changes should be checked with both a dedicated Mobile Menu and the Main Menu fallback.
+
+Test desktop dropdowns with pointer hover, keyboard focus, nested branches, Escape closing, delayed opening and closing, and synchronized `aria-expanded` state.
 
 Test both `Overlay Simple` and `Accordion Push`. Confirm that only the selected menu exists in the page markup and only its matching scripts load. For Accordion Push, test parent links, nested submenus, keyboard activation, visible icon rotation, synchronized `aria-expanded` state, and sibling submenu closing. Mobile submenu changes should not alter desktop navigation markup or positioning.
