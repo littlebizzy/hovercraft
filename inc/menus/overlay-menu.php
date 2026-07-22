@@ -15,7 +15,7 @@ function hovercraft_overlay_menu() {
 	wp_enqueue_script(
 		'hovercraft_overlay_menu',
 		esc_url_raw( get_template_directory_uri() . '/assets/js/overlay-menu.js' ),
-		array( 'jquery' ),
+		array(),
 		HOVERCRAFT_VERSION,
 		true
 	);
