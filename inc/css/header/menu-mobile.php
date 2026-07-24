@@ -84,8 +84,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 /* start mobile menu overlay */
 .mobile-menu-trig {
 	background: transparent;
-	border: 1px solid currentColor;
+	border: 0;
 	border-radius: 4px;
+	box-shadow: inset 0 0 0 1px currentColor;
 	padding: 0;
 }
 
