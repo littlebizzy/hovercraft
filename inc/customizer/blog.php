@@ -145,7 +145,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 	'hovercraft_byline_date',
 	array(
 		'label' => __( 'Post Byline Date', 'hovercraft' ),
-		'description' => __( 'Which date should appear next to the post author name in the byline? Most sites should use Published Date Only unless posts are intentionally maintained and significantly updated.', 'hovercraft' ),
+		'description' => __( 'Which date should appear next to the post author name? Published Date Only shows the original publication date without a label. Updated dates are labelled for clarity.', 'hovercraft' ),
 		'section' => 'hovercraft_blog',
 		'settings' => 'hovercraft_byline_date',
 		'type' => 'select',
@@ -153,7 +153,7 @@ $wp_customize->add_control( new WP_Customize_Control(
 		'none' => 'None (Disabled)',
 		'published_date_only' => 'Published Date Only',
 		'updated_date_only' => 'Updated Date Only',
-		'updated_and_published_dates' => 'Updated & Published Dates',
+		'updated_and_published_dates' => 'Published & Updated Dates',
 		),
 	)
 ) );
