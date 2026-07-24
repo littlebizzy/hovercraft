@@ -7,7 +7,7 @@ if ( is_singular( 'product' ) ) {
 ?>
 
 <div class="post-byline">
-    <span class="post-author" itemprop="author" itemscope itemtype="https://schema.org/Person">
+    <span class="post-author">
         <?php
         $author_id = get_the_author_meta( 'ID' );
         $author_name = get_the_author_meta( 'display_name', $author_id );
@@ -16,15 +16,15 @@ if ( is_singular( 'product' ) ) {
         $hovercraft_byline_photo = get_theme_mod( 'hovercraft_byline_photo', 'none' );
         if ( $hovercraft_byline_photo === 'byline_only' || $hovercraft_byline_photo === 'byline_and_biography' ) : ?>
             <span class="byline-photo">
-                <img class="avatar byline-avatar" src="<?php echo esc_url( $author_avatar_url ); ?>" alt="<?php echo esc_attr( $author_name ); ?>" itemprop="image">
+                <img class="avatar byline-avatar" src="<?php echo esc_url( $author_avatar_url ); ?>" alt="<?php echo esc_attr( $author_name ); ?>">
             </span>
         <?php endif; // end hovercraft-byline-photo
 
         $hovercraft_biography = get_theme_mod( 'hovercraft_biography', 'native_posts_only' );
         if ( $hovercraft_biography === 'native_posts_only' || $hovercraft_biography === 'all_post_types' ) : ?>
-            <a href="#author" rel="author"><span class="author-name" itemprop="name"><?php echo esc_html( $author_name ); ?></span></a>
+            <a href="#author" rel="author"><span class="author-name"><?php echo esc_html( $author_name ); ?></span></a>
         <?php else : ?>
-            <span class="author-name" itemprop="name"><?php echo esc_html( $author_name ); ?></span>
+            <span class="author-name"><?php echo esc_html( $author_name ); ?></span>
         <?php endif; // end biography setting ?>
     </span><!-- post-author -->
 			
