@@ -33,24 +33,25 @@ if ( is_singular( 'product' ) ) {
 
     if ( $hovercraft_byline_date === 'published_date_only' ) : ?>
         <span class="byline-separator">|</span>
-        <span class="date-published" itemprop="datePublished">
-            <?php echo esc_html__( 'Published on', 'hovercraft' ) . ' ' . esc_html( get_the_date( 'M j, Y' ) ); ?>
-        </span>
+        <time class="date-published" datetime="<?php echo esc_attr( get_the_date( DATE_W3C ) ); ?>" itemprop="datePublished">
+            <?php echo esc_html( get_the_date( 'M j, Y' ) ); ?>
+        </time>
 
     <?php elseif ( $hovercraft_byline_date === 'updated_date_only' ) : ?>
         <span class="byline-separator">|</span>
-        <span class="date-updated" itemprop="dateModified">
-            <?php echo esc_html__( 'Updated on', 'hovercraft' ) . ' ' . esc_html( get_the_modified_date( 'M j, Y' ) ); ?>
-        </span>
+        <time class="date-updated" datetime="<?php echo esc_attr( get_the_modified_date( DATE_W3C ) ); ?>" itemprop="dateModified">
+            <?php echo esc_html__( 'Updated', 'hovercraft' ) . ' ' . esc_html( get_the_modified_date( 'M j, Y' ) ); ?>
+        </time>
 
     <?php elseif ( $hovercraft_byline_date === 'updated_and_published_dates' ) : ?>
         <span class="byline-separator">|</span>
-        <span class="date-published" itemprop="datePublished">
-            <?php echo esc_html__( 'Published on', 'hovercraft' ) . ' ' . esc_html( get_the_date( 'M j, Y' ) ); ?>
-        </span>
-        <span class="date-updated" itemprop="dateModified">
-            <?php echo esc_html__( 'Updated on', 'hovercraft' ) . ' ' . esc_html( get_the_modified_date( 'M j, Y' ) ); ?>
-        </span>
+        <time class="date-published" datetime="<?php echo esc_attr( get_the_date( DATE_W3C ) ); ?>" itemprop="datePublished">
+            <?php echo esc_html( get_the_date( 'M j, Y' ) ); ?>
+        </time>
+        <span class="byline-date-separator" aria-hidden="true">&middot;</span>
+        <time class="date-updated" datetime="<?php echo esc_attr( get_the_modified_date( DATE_W3C ) ); ?>" itemprop="dateModified">
+            <?php echo esc_html__( 'Updated', 'hovercraft' ) . ' ' . esc_html( get_the_modified_date( 'M j, Y' ) ); ?>
+        </time>
     <?php endif; // end byline date ?>
 </div><!-- post-byline -->
 
