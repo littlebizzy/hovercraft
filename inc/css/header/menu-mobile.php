@@ -83,11 +83,22 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /* start mobile menu overlay */
 .mobile-menu-trig {
+	position: relative;
 	background: transparent;
 	border: 0;
 	border-radius: 4px;
-	box-shadow: inset 0 0 0 1px currentColor;
+	box-shadow: none;
 	padding: 0;
+}
+
+.mobile-menu-trig::before {
+	content: "";
+	pointer-events: none;
+	position: absolute;
+	inset: 0;
+	border-radius: inherit;
+	box-shadow: inset 0 0 0 1px currentColor;
+	opacity: 0.25;
 }
 
 @media screen and (max-width: 1199px) {
