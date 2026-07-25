@@ -39,7 +39,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	box-shadow: inset 0 0 0 2px <?php echo $default_link_color; ?>;
 }
 
-/* header center search */
+/* header widget searches */
 
 @media screen and (min-width: 1200px) {
 	.header-center .input-container,
@@ -50,6 +50,12 @@ if ( ! defined( 'ABSPATH' ) ) {
 		max-width: 392px;
 		margin-right: auto;
 		margin-left: 0;
+	}
+
+	.header-aside .searchform,
+	.header-aside .wp-block-search,
+	.header-aside .woocommerce-product-search {
+		width: 392px;
 	}
 }
 
