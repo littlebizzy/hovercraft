@@ -18,21 +18,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	margin: 0;
 }
 
-img.featured-image-archive {
-	height: auto;
+img.featured-image-archive,
+img.featured-image-archive-large {
 	display: block;
+	width: 100%;
+	height: auto;
 	margin-bottom: 20px;
 	border-radius: 0;
-}
-
-@media screen and (max-width: 1199px) {
-	img.featured-image-archive {
-		width: 100%;
-	}
-}
-
-@media screen and (min-width: 1200px) {
-	img.featured-image-archive {
-		width: 768px;
-	}
 }
