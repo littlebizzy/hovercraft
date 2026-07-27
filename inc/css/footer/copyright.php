@@ -49,6 +49,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 		vertical-align: top;
 		text-align: center;
 	}
+
+	.widget-copyright {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		gap: 20px;
+	}
+
+	.widget-copyright i,
+	.widget-copyright svg,
+	#copyright ul li {
+		margin-left: 0 !important;
+	}
 }
 
 /* desktop */
