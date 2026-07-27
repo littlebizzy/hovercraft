@@ -96,12 +96,23 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /* icons */
-#copyright i {
-	font-size: 16px;
+#copyright i,
+#copyright svg {
 	margin-left: 20px !important;
 }
 
-#copyright i:first-child {
+#copyright i {
+	font-size: 16px;
+}
+
+#copyright svg {
+	width: 16px;
+	height: 16px;
+	vertical-align: middle;
+}
+
+#copyright i:first-child,
+#copyright svg:first-child {
 	margin-left: 0;
 }
 
