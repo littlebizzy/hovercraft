@@ -57,8 +57,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 		gap: 20px;
 	}
 
-	.widget-copyright i,
-	.widget-copyright svg,
+	#copyright .widget-copyright i,
+	#copyright .widget-copyright svg,
 	#copyright ul li {
 		margin-left: 0 !important;
 	}
