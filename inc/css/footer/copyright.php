@@ -50,7 +50,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		text-align: center;
 	}
 
-	.widget-copyright {
+	.widget-copyright ul {
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -132,6 +132,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 /* lists */
 #copyright ul {
 	margin: 0;
+	padding: 0;
 	list-style-type: none;
 }
 
