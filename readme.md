@@ -2,7 +2,7 @@
 
 # HoverCraft
 
-No maintenance WordPress theme
+HoverCraft is a free, no-maintenance WordPress theme built for content sites and WooCommerce stores, without any page builders or bloated add-ons.
 
 ## Changelog
 
