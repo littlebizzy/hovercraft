@@ -51,6 +51,29 @@ if ( ! defined( 'ABSPATH' ) ) {
 	}
 }
 
+<?php if ( $gallery_captions == 'none' ) : ?>
 .gallery-caption {
-	<?php if ( $gallery_captions == 'none') { echo "display: none;"; } ?>
+	display: none;
 }
+<?php elseif ( $gallery_captions == 'inside_image' ) : ?>
+.gallery .gallery-item {
+	position: relative;
+	margin-bottom: 20px;
+}
+
+.gallery .gallery-item img {
+	margin-bottom: 0;
+}
+
+.gallery .gallery-caption {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: 0;
+	padding: 8px 12px;
+	background: rgba(0, 0, 0, 0.65);
+	color: #ffffff;
+	text-align: left;
+}
+<?php endif; ?>
