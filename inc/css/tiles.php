@@ -97,7 +97,7 @@ $tiles_across_count = max( 2, min( 12, absint( $tiles_across ) ) );
 }
 
 <?php if ( $tiles_captions == 'none' ) : ?>
-.tile p.wp-caption-text {
+.tile .wp-caption-text {
 	display: none;
 }
 <?php elseif ( $tiles_captions == 'inside_image' ) : ?>
@@ -105,7 +105,7 @@ $tiles_across_count = max( 2, min( 12, absint( $tiles_across ) ) );
 	position: relative;
 }
 
-.tile .wp-caption p.wp-caption-text {
+.tile .wp-caption .wp-caption-text {
 	position: absolute;
 	right: 0;
 	bottom: 0;
