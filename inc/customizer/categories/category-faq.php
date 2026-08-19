@@ -74,7 +74,7 @@ function hovercraft_register_bullets_category( $wp_customize ) {
 		'hovercraft_faq_permalinks',
 	array(
 		'label'       => __( 'FAQ Permalinks', 'hovercraft' ),
-		'description' => __( 'Do you want to link to child FAQ pages from the main FAQ page? Note: For SEO reasons, we suggest limiting characters (below) using the FAQ Character Count setting if you enable FAQ Permalinks, to avoid duplicate content.', 'hovercraft' ),
+		'description' => __( 'Do you want to link to child FAQ pages from the main FAQ page? Note: For SEO reasons, we suggest limiting words (below) using the FAQ Word Count setting if you enable FAQ Permalinks, to avoid duplicate content.', 'hovercraft' ),
 		'section'     => 'hovercraft_category_layouts',
 		'settings'    => 'hovercraft_faq_permalinks',
 		'type'        => 'select',
@@ -96,8 +96,8 @@ function hovercraft_register_bullets_category( $wp_customize ) {
 		$wp_customize,
 		'hovercraft_faq_character_count',
 	array(
-		'label'       => __( 'FAQ Character Count', 'hovercraft' ),
-		'description' => __( 'How many characters of each FAQ post should appear on the main FAQ page?', 'hovercraft' ),
+		'label'       => __( 'FAQ Word Count', 'hovercraft' ),
+		'description' => __( 'How many words of each FAQ post should appear on the main FAQ page?', 'hovercraft' ),
 		'section'     => 'hovercraft_category_layouts',
 		'settings'    => 'hovercraft_faq_character_count',
 		'type'        => 'text',
