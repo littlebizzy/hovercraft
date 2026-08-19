@@ -18,11 +18,13 @@ $home_postmain_bottom_column_count = max( 1, min( 12, absint( $home_postmain_bot
 #home-postmain-top {
 	background: <?php echo $postmain_top_background_color; ?>;
 	color: <?php echo $postmain_top_text_color; ?>;
+	text-align: <?php echo $home_postmain_top_align; ?>;
 }
 
 #home-postmain-bottom {
 	background: <?php echo $postmain_bottom_background_color; ?>;
 	color: <?php echo $postmain_bottom_text_color; ?>;
+	text-align: <?php echo $home_postmain_bottom_align; ?>;
 }
 
 #home-postmain-top .inner,
