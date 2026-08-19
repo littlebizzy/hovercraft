@@ -361,7 +361,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 #hovercraft-offcanvas-menu ul.sub-menu {
 	display: none;
 	text-transform: <?php echo $offcanvas_submenu_text_transform; ?>;
-	font-weight: <?php echo $offcanvas_font_weight; ?>;
+	font-weight: <?php echo $offcanvas_submenu_font_weight; ?>;
 	font-size: <?php echo $offcanvas_submenu_font_size; ?>px;
 	background: transparent;
 }
