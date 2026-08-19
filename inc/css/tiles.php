@@ -6,6 +6,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 // styles for tiles
+$tiles_across_count = max( 2, min( 12, absint( $tiles_across ) ) );
 ?>
 
 #tiles, #tiles-wide, #tiles-narrow {
@@ -21,11 +22,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 @media screen and (min-width: 1200px) {
 	#tiles {
 		display: grid;
-		<?php if ( $tiles_across == '3' ) { 
-			echo "grid-template-columns: repeat(3, 1fr);\n"; 
-		} elseif ( $tiles_across == '4' ) { 
-			echo "grid-template-columns: repeat(4, 1fr);\n"; 
-		} ?>
+		grid-template-columns: repeat(<?php echo $tiles_across_count; ?>, minmax(0, 1fr));
 		gap: 30px;
 	}
 }
@@ -39,11 +36,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 @media screen and (min-width: 1200px) {
 	#tiles-wide {
 		display: grid;
-		<?php if ( $tiles_across == '3' ) { 
-			echo "grid-template-columns: repeat(3, minmax(200px, 1fr));\n";
-		} elseif ( $tiles_across == '4' ) { 
-			echo "grid-template-columns: repeat(4, minmax(200px, 1fr));\n";
-		} ?>
+		grid-template-columns: repeat(<?php echo $tiles_across_count; ?>, minmax(0, 1fr));
 		gap: 30px;
 	}
 }
