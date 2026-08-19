@@ -310,7 +310,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 #hovercraft-offcanvas-menu li.current-menu-item ul a {
-	font-weight: 400;
+	font-weight: <?php echo $offcanvas_submenu_font_weight; ?>;
 }
 
 #hovercraft-offcanvas-menu .menu-toggle {
