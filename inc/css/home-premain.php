@@ -18,11 +18,13 @@ $home_premain_bottom_column_count = max( 1, min( 12, absint( $home_premain_botto
 #home-premain-top {
 	background: <?php echo $premain_top_background_color; ?>;
 	color: <?php echo $premain_top_text_color; ?>;
+	text-align: <?php echo $home_premain_top_align; ?>;
 }
 
 #home-premain-bottom {
 	background: <?php echo $premain_bottom_background_color; ?>;
 	color: <?php echo $premain_bottom_text_color; ?>;
+	text-align: <?php echo $home_premain_bottom_align; ?>;
 }
 
 #home-premain-top .inner,
