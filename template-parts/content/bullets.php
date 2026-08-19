@@ -9,9 +9,14 @@
                     <div id="bullets">
 
                         <?php
-                        // get subcategories of the 'faq' category
+                        // get selected faq category
+                        $faq_category_slug = get_theme_mod( 'hovercraft_bullets_category', 'none' );
+                        $faq_category = get_category_by_slug( $faq_category_slug );
+                        $faq_category_id = $faq_category ? $faq_category->term_id : 0;
+
+                        // get subcategories of the selected faq category
                         $faq_subcategories = get_categories(array(
-                            'parent' => get_cat_ID('faq'),
+                            'parent' => $faq_category_id,
                             'hide_empty' => true,
                         ));
 
@@ -72,9 +77,9 @@
 
                         <!-- query for faqs without subcategories -->
                         <?php
-                        // query all faq posts first
+                        // query all selected faq posts first
                         $faq_query_args = array(
-                            'category_name' => 'faq',
+                            'category_name' => $faq_category_slug,
                             'post_status' => 'publish',
                             'posts_per_page' => 999,
                         );
