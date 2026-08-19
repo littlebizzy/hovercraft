@@ -326,7 +326,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	padding: 0 20px 0 0;
 	text-align: center;
 	vertical-align: middle;
-	background: transparent;
+	background: <?php echo $offcanvas_toggle_background_color; ?>;
 	border: 0;
 	border-radius: 0;
 	color: inherit;
@@ -344,7 +344,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 #hovercraft-offcanvas-menu .menu-toggle:focus,
 #hovercraft-offcanvas-menu .menu-toggle:hover {
-	background: transparent;
+	background: <?php echo $offcanvas_toggle_background_color; ?>;
 	opacity: 1;
 }
 
