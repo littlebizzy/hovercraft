@@ -10,7 +10,7 @@ $hovercraft_title_hidden = hovercraft_is_title_hidden();
 // get title display state
 $hovercraft_show_title = ! $hovercraft_title_hidden;
 $hovercraft_show_hero_snippet = $hovercraft_hero_snippet_active || $hovercraft_has_excerpt;
-$hovercraft_show_hero_window = $hovercraft_hero_window_active || $hovercraft_has_excerpt;
+$hovercraft_show_hero_window = $hovercraft_hero_window_active;
 
 // get title class
 $hovercraft_h1_divider_display = get_theme_mod( 'hovercraft_h1_divider_display', 'none' );
