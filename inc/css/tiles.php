@@ -96,6 +96,24 @@ $tiles_across_count = max( 2, min( 12, absint( $tiles_across ) ) );
 	margin-bottom: 0;
 }
 
+<?php if ( $tiles_captions == 'none' ) : ?>
 .tile p.wp-caption-text {
-	<?php if ( $tiles_captions == 'none') { echo "display: none;"; } ?>
+	display: none;
 }
+<?php elseif ( $tiles_captions == 'inside_image' ) : ?>
+.tile .wp-caption {
+	position: relative;
+}
+
+.tile .wp-caption p.wp-caption-text {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	margin: 0;
+	padding: 8px 12px;
+	background: rgba(0, 0, 0, 0.65);
+	color: #ffffff;
+	text-align: left;
+}
+<?php endif; ?>
