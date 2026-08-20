@@ -31,7 +31,7 @@ function hovercraft_register_blog_category( $wp_customize ) {
 		'hovercraft_blog_category',
 	array(
 		'label'       => __( 'Feed Category', 'hovercraft' ),
-		'description' => __( 'Which post category should be displayed as the default feed and/or Posts page?', 'hovercraft' ),
+		'description' => __( 'Which post category should be displayed on the Posts page?', 'hovercraft' ),
 		'section'     => 'hovercraft_category_layouts',
 		'settings'    => 'hovercraft_blog_category',
 		'type'        => 'select',
