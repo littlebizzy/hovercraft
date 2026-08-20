@@ -5,6 +5,16 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
+// register tags for Pages when enabled
+function hovercraft_register_page_tags() {
+	$hovercraft_post_tags = get_theme_mod( 'hovercraft_post_tags', 'native_posts_only' );
+
+	if ( 'native_posts_and_pages' === $hovercraft_post_tags || 'native_posts_and_pages_and_custom_posts' === $hovercraft_post_tags ) {
+		register_taxonomy_for_object_type( 'post_tag', 'page' );
+	}
+}
+add_action( 'init', 'hovercraft_register_page_tags' );
+
 // get linked post tags
 function hovercraft_show_tags() {
 	$post_tags = get_the_tags();
