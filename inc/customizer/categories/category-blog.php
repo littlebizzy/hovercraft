@@ -41,3 +41,19 @@ function hovercraft_register_blog_category( $wp_customize ) {
 }
 
 add_action( 'customize_register', 'hovercraft_register_blog_category' );
+
+// filter Posts page by selected category
+function hovercraft_filter_posts_page_category( $query ) {
+	if ( is_admin() || ! $query->is_main_query() || $query->is_feed() || ! $query->is_home() ) {
+		return;
+	}
+
+	$blog_category = get_theme_mod( 'hovercraft_blog_category', 'none' );
+
+	if ( 'none' === $blog_category ) {
+		return;
+	}
+
+	$query->set( 'category_name', $blog_category );
+}
+add_action( 'pre_get_posts', 'hovercraft_filter_posts_page_category' );
