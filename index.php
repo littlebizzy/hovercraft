@@ -27,39 +27,10 @@ get_template_part( 'header' ); ?>
 								
 				<?php get_template_part( 'template-parts/misc/breadcrumbs' ); ?>
 
-				<?php
-				
-				// hovercraft blog category
-				$blog_category = get_theme_mod( 'hovercraft_blog_category', 'none' );
-				?>
-
 				<?php if ( is_home() ) : ?>
-					<?php
-					
-        			// the query
-					if ( $blog_category !== 'none' ) {
-        				$the_query = new WP_Query(array(
-            				'category_name' => $blog_category,
-							'post_type' => 'post',
-            				'post_status' => 'publish',
-							'paged' => get_query_var( 'paged' )
-							)
-						); 
-					} else {
-						$the_query = new WP_Query(array(
-							'post_type' => 'post',
-            				'post_status' => 'publish',
-							'paged' => get_query_var( 'paged' )
-							)
-						); 					
-					} // end else if hovercraft blog category not defined
-					
-					// custom query syntax for is_home
-					?>
-
-					<?php if ( $the_query->have_posts() ) : ?>
-						<?php while ( $the_query->have_posts() ) : ?>
-							<?php $the_query->the_post(); ?>
+					<?php if ( have_posts() ) : ?>
+						<?php while ( have_posts() ) : ?>
+							<?php the_post(); ?>
 							
 							<article id="post-<?php the_ID(); ?>" <?php post_class( 'post-tease-archive' ); ?>>
 						
@@ -80,11 +51,10 @@ get_template_part( 'header' ); ?>
 						<div class="entry-summary post-excerpt-archive"><?php the_excerpt(); ?></div>
 						</article><!-- post-tease-archive -->
 							
-							<?php endwhile; // end home posts ?>
+						<?php endwhile; // end home posts ?>
 					<?php else : ?>
 						<p><?php esc_html_e( 'No posts found.', 'hovercraft' ); ?></p>
 					<?php endif; // end the loop ?>
-					<?php wp_reset_postdata(); ?>
 				<?php else : ?>
 					
 				<h1 class="archive-title"><?php echo esc_html( get_the_archive_title() ); ?></h1>
