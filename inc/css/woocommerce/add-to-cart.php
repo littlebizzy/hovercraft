@@ -348,6 +348,12 @@ input.qty[type="number"] {
 	vertical-align: middle !important;
 }
 
+.single-product .hovercraft-after-add-to-cart {
+	clear: both;
+	display: block;
+	width: 100%;
+}
+
 .single-product .summary form.variations_form.cart {
 	display: block !important;
 	flex-direction: column !important;
