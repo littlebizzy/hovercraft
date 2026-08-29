@@ -350,7 +350,7 @@ input.qty[type="number"] {
 
 .single-product .hovercraft-after-add-to-cart {
 	clear: both;
-	display: block;
+	display: flow-root;
 	width: 100%;
 }
 
