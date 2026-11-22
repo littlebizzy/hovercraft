@@ -418,18 +418,39 @@ function hovercraft_breadcrumb_woocommerce_product( &$position ) {
 	$terms = wc_get_product_terms( get_the_ID(), 'product_cat' );
 
 	if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
-		$primary = $terms[0];
-		$ancestors = array_reverse( get_ancestors( $primary->term_id, 'product_cat' ) );
+		$primary = false;
+		$primary_depth = -1;
 
-		foreach ( $ancestors as $ancestor_id ) {
-			$ancestor = get_term( $ancestor_id, 'product_cat' );
+		foreach ( $terms as $term ) {
+			if ( ! isset( $term->term_id, $term->name ) ) {
+				continue;
+			}
 
-			if ( $ancestor && ! is_wp_error( $ancestor ) && isset( $ancestor->name ) ) {
-				hovercraft_breadcrumb_item( get_term_link( $ancestor ), $ancestor->name, $position++ );
+			$depth = count( get_ancestors( $term->term_id, 'product_cat' ) );
+
+			if (
+				false === $primary ||
+				$depth > $primary_depth ||
+				( $depth === $primary_depth && (int) $term->term_id < (int) $primary->term_id )
+			) {
+				$primary = $term;
+				$primary_depth = $depth;
 			}
 		}
 
-		hovercraft_breadcrumb_item( get_term_link( $primary ), $primary->name, $position++ );
+		if ( $primary ) {
+			$ancestors = array_reverse( get_ancestors( $primary->term_id, 'product_cat' ) );
+
+			foreach ( $ancestors as $ancestor_id ) {
+				$ancestor = get_term( $ancestor_id, 'product_cat' );
+
+				if ( $ancestor && ! is_wp_error( $ancestor ) && isset( $ancestor->name ) ) {
+					hovercraft_breadcrumb_item( get_term_link( $ancestor ), $ancestor->name, $position++ );
+				}
+			}
+
+			hovercraft_breadcrumb_item( get_term_link( $primary ), $primary->name, $position++ );
+		}
 	}
 
 	hovercraft_breadcrumb_item( '', get_the_title(), $position++, true );
