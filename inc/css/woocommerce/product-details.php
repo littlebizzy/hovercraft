@@ -48,7 +48,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	clear: both;
 	display: grid;
 	grid-template-columns: repeat(4, minmax(0, 1fr));
-	gap: 5px;
+	gap: 8px;
 	margin: 10px 0 0;
 	padding: 0;
 	list-style: none;
@@ -66,6 +66,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	display: block;
 	width: 100%;
 	height: auto;
+	aspect-ratio: 1 / 1;
+	object-fit: contain;
 	border-radius: 0;
 	opacity: 0.75;
 }
