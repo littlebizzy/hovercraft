@@ -24,6 +24,12 @@ Breadcrumbs should support common bbPress contexts including forum archives, for
 
 Unknown plugin or extension endpoints should fall back to a safe current-page breadcrumb instead of failing silently.
 
+## WooCommerce Trail Rules
+
+When the WooCommerce shop page exists, product category, tag, attribute, taxonomy, and single-product trails should include it after Home. Product taxonomy trails should continue through the term's ancestors before the current term.
+
+For single products assigned to multiple product categories, use the deepest assigned category and its ancestors. If multiple assigned categories have the same depth, use the category with the lowest term ID. Products without a product category should retain the Shop-to-product trail.
+
 ## Icons
 
 Breadcrumb icons are not part of the current HoverCraft breadcrumb system. Breadcrumbs should remain text-based unless a future design decision intentionally restores icons.
